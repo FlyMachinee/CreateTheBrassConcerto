@@ -1,0 +1,811 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "661B548D54269ECF"
+	group: "6B818C6F92D84205"
+	icon: {
+		Count: 1
+		id: "kubejs:chargeable_battery"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "661B548D54269ECF"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"现在我们开始学习电力系统吧!"
+				""
+				"电线和电动机可以取代长长的传动杆和一个个转速控制器"
+				""
+				"蒸汽发电机可以提供大量的电能、太阳能将成为优质的清洁能源、戴斯管道也能取代复杂且低效的流体管道..."
+				""
+				"并且，你将可以进行一些高级的电化学内容"
+				""
+				"不过它十分复杂且需要一些化工前置，希望你能有所准备!"
+			]
+			id: "58D7E8930489D5FD"
+			shape: "gear"
+			tasks: [{
+				id: "29D732D41766F022"
+				title: "欢迎来到机械动力！"
+				type: "checkmark"
+			}]
+			title: "化工与电密不可分"
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["15296D819BEF5B05"]
+			description: ["电动马达经过改进后，每台可以将 360 FE/t的电力转化为 49152 su的应力"]
+			id: "7593C5153F529F36"
+			tasks: [{
+				id: "795184544CAAF494"
+				item: "createaddition:electric_motor"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7593C5153F529F36"]
+			description: ["交流发电机经过改进后，每台可以将 49152 su的应力100%转化为360 FE/t的电力"]
+			id: "5B6636DB1CC71A84"
+			tasks: [{
+				id: "57457038D3A04CC1"
+				item: "createaddition:alternator"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["397EF2796AFDDC8F"]
+			description: [
+				"传输电力的最优选择"
+				""
+				"小型连接器最高可以传输 &e16384 FE/t&r"
+				""
+				"而大型可以传输 &e80000 FE/t&r"
+			]
+			id: "300DE2D659186A4B"
+			rewards: [
+				{
+					count: 64
+					id: "2867D97C3E776C9B"
+					item: "createaddition:small_light_connector"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "7F2240AC3A532962"
+					item: "createaddition:festive_spool"
+					type: "item"
+				}
+				{
+					id: "28FADE8D93446F2F"
+					item: "createaddition:redstone_relay"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "363F3A60397AF024"
+					item: "createaddition:connector"
+					type: "item"
+				}
+				{
+					id: "2584502CE640B3A6"
+					item: "createaddition:large_connector"
+					type: "item"
+				}
+				{
+					id: "5DF09A061D58166F"
+					item: "createaddition:copper_spool"
+					type: "item"
+				}
+				{
+					id: "29DC1E1AF0DC555E"
+					item: "createaddition:gold_spool"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1A876B9FF13A849A"]
+			description: [
+				"特斯拉线圈可以为电池充电"
+				""
+				"也可以用来杀死怪物"
+				""
+				"特斯拉线圈在执行配方时的效率为2048FE/t"
+			]
+			id: "27C11E3488319964"
+			tasks: [{
+				id: "636F80293D040C8E"
+				item: "createaddition:tesla_coil"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5B6636DB1CC71A84"]
+			description: [
+				"蓄电池可以存储大量的电能"
+				"你可以建造最大5*5*8的蓄电池"
+			]
+			id: "6A89CAAFA8528425"
+			tasks: [{
+				id: "7BB42EEC0847C364"
+				item: "createaddition:modular_accumulator"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["352EAAE5E2400827"]
+			description: [
+				"电池插槽能作为较为简单的电量存储方式"
+				""
+				"除此以外，它还能用于快速为用电设备充电"
+			]
+			id: "1A876B9FF13A849A"
+			tasks: [{
+				id: "4EE104014C84BEC3"
+				item: "kubejs:battery_slot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1A876B9FF13A849A"]
+			description: [
+				"一次性电池可以作为临时的能源——它用完便会损坏"
+				""
+				"它可以用于电解器的自动循环，但也许直接制作大型电解池是更好的选择！"
+				""
+				"也许还有一个更好的选择——使用它来发电！"
+			]
+			id: "7A97A798409EF5C5"
+			tasks: [{
+				id: "654EF41C98356279"
+				item: {
+					Count: 1
+					id: "kubejs:disposable_battery"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["27C11E3488319964"]
+			description: ["可充电电池可以使用特斯拉线圈进行充电并在电池插槽中进行供电"]
+			id: "75DBFD1BCAA75563"
+			rewards: [{
+				count: 6
+				id: "03169D93799A210E"
+				item: "kubejs:battery_slot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C675B4D31E337F3"
+				item: {
+					Count: 1
+					id: "kubejs:chargeable_battery"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["352EAAE5E2400827"]
+			description: [
+				"只需阳光就能获得 60 FE/t的电力！"
+				""
+				"&c它只有在白天且上方无遮挡的情况下才能对外输出电能！&r"
+				""
+				"值得一提的是，大部分的行星轨道都能被视为永昼！"
+			]
+			id: "5EF70A0F5F31C254"
+			tasks: [{
+				id: "6BE889814FE3714B"
+				item: "kubejs:solar_panel"
+				type: "item"
+			}]
+			title: "绿色能源"
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			description: [
+				"这是最简单的发电方式"
+				""
+				"一台燃煤发电机可以产生50FE/t的电力"
+			]
+			id: "397EF2796AFDDC8F"
+			tasks: [{
+				id: "74B85DAFE5F333F9"
+				item: "ad_astra:coal_generator"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["27C11E3488319964"]
+			description: [
+				"现在你可以进行电化学配方了！"
+				""
+				"使用特斯拉线圈为电解器充电需要消耗21600FE"
+				""
+				"电解器在许多配方上有着50%的电解效率"
+				""
+				"在未来，你可以使用大型电解池来取代它！"
+			]
+			id: "322ACA6256D0AD6A"
+			rewards: [{
+				count: 11
+				id: "422EB050B54A3A00"
+				item: "kubejs:electrolyzer"
+				type: "item"
+			}]
+			tasks: [{
+				id: "67306D32C45DEB63"
+				item: "kubejs:electrolyzer"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["352EAAE5E2400827"]
+			description: [
+				"这是稍微高级一些的电路板，可以用来制作一些更复杂的机器！"
+				""
+				"你应该如何批量获取品红色染料和蓝色染料呢？"
+				""
+				"也许花朵和水晶会给出答案！"
+				""
+				"你可以通过骨粉催熟大型花的方式增产大型花，或者通过氮肥增殖所有种类的花！"
+			]
+			id: "15296D819BEF5B05"
+			tasks: [{
+				id: "040E210CE94B5EBC"
+				item: "kubejs:magenta_circuit_board"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["300DE2D659186A4B"]
+			description: ["电容可以用于制作许多电学元件，也许以后可以考虑量产它！"]
+			id: "352EAAE5E2400827"
+			rewards: [{
+				count: 11
+				id: "19EF6A6CFB58D7A5"
+				item: "createaddition:capacitor"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6A4B21D061391E23"
+				item: "createaddition:capacitor"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["12791AC9AE74A060"]
+			description: [
+				"黄绿色电路板是一种高级电路板"
+				"许多高级元件都需要它来处理复杂的工作信息！"
+				""
+				"使用它制作成的控制芯片可以制作诸如可编程脉冲发生器等高效物件！"
+				""
+				"你可以使用异彩原虫、粉碎植物等各种方式获取黄绿色染料！"
+			]
+			id: "6E7FC2ED970229C2"
+			rewards: [
+				{
+					count: 12
+					id: "33AC6A3FFD4D65EF"
+					item: "createaddition:modular_accumulator"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "37D1DC98B2E6C3F8"
+					item: {
+						Count: 1
+						id: "kubejs:matrix_2"
+						tag: {
+							ascii: 1
+							display: {
+								Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+							}
+							matrix: [
+								[
+									[
+										1
+										3
+									]
+									[
+										-2
+										95
+									]
+								]
+								[
+									[
+										-1
+										4
+									]
+									[
+										1
+										-124
+									]
+								]
+								[
+									[
+										1
+										-3
+									]
+									[
+										3
+										103
+									]
+								]
+								[
+									[
+										-1
+										2
+									]
+									[
+										-2
+										-93
+									]
+								]
+								[
+									[
+										1
+										4
+									]
+									[
+										-1
+										106
+									]
+								]
+								[
+									[
+										-1
+										-2
+									]
+									[
+										3
+										-94
+									]
+								]
+								[
+									[
+										-5
+										2
+									]
+									[
+										1
+										-16
+									]
+								]
+								[
+									[
+										10
+										-3
+									]
+									[
+										7
+										8
+									]
+								]
+								[
+									[
+										-4
+										5
+									]
+									[
+										4
+										-34
+									]
+								]
+								[
+									[
+										3
+										-7
+									]
+									[
+										4
+										4
+									]
+								]
+								[
+									[
+										2
+										13
+									]
+									[
+										5
+										83
+									]
+								]
+								[
+									[
+										-6
+										4
+									]
+									[
+										5
+										-23
+									]
+								]
+								[
+									[
+										11
+										3
+									]
+									[
+										3
+										10
+									]
+								]
+								[
+									[
+										8
+										-5
+									]
+									[
+										6
+										10
+									]
+								]
+								[
+									[
+										9
+										2
+									]
+									[
+										5
+										14
+									]
+								]
+								[
+									[
+										10
+										7
+									]
+									[
+										2
+										6
+									]
+								]
+								[
+									[
+										11
+										4
+									]
+									[
+										5
+										12
+									]
+								]
+								[
+									[
+										12
+										5
+									]
+									[
+										12
+										14
+									]
+								]
+								[
+									[
+										13
+										6
+									]
+									[
+										-1
+										7
+									]
+								]
+								[
+									[
+										5
+										3
+									]
+									[
+										3
+										26
+									]
+								]
+								[
+									[
+										6
+										5
+									]
+									[
+										5
+										21
+									]
+								]
+								[
+									[
+										7
+										8
+									]
+									[
+										5
+										22
+									]
+								]
+								[
+									[
+										8
+										9
+									]
+									[
+										7
+										13
+									]
+								]
+							]
+							no_copy: 1
+						}
+					}
+					team_reward: true
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "063A39D222647CCC"
+				item: "kubejs:lime_circuit_board"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			description: [
+				"飞行基座可以让你在它附近飞行！"
+				""
+				"需要注意的是，由于它的仪式是基于主世界时空特征的，所以它只在主世界生效"
+			]
+			id: "71166EB5F9627B08"
+			tasks: [{
+				id: "6FBF5A6B23A5491A"
+				item: "balancedflight:flight_anchor"
+				type: "item"
+			}]
+			title: "芜湖，起飞！"
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["322ACA6256D0AD6A"]
+			description: ["激光可以用于更加精细的加工场景，你同时需要为它提供应力和电力"]
+			id: "12791AC9AE74A060"
+			rewards: [{
+				count: 8
+				id: "72DD5A229EB2E884"
+				item: "kubejs:magenta_circuit_board"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2A498C2A2D543E98"
+				item: "vintageimprovements:laser"
+				type: "item"
+			}]
+			title: "激光加工"
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["15296D819BEF5B05"]
+			description: [
+				"激光传输是一种既方便又不方便的物流方式"
+				"一方面，建造和配置激光传输线路的流程非常繁琐"
+				"一方面，这种物流方式的效率又非常高"
+				""
+				"或许只在短程大量运输时使用它是个较为明智的选择"
+			]
+			id: "75E9C57B2B0D8949"
+			rewards: [
+				{
+					id: "1F4831B90E886FE6"
+					item: "laserio:laser_wrench"
+					type: "item"
+				}
+				{
+					id: "26F32C127AF8B969"
+					item: "laserio:card_item"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "59622CC977661401"
+					item: "laserio:laser_connector"
+					type: "item"
+				}
+				{
+					id: "65EA91C777414D32"
+					item: "laserio:laser_node"
+					type: "item"
+				}
+			]
+			title: "快速物流"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["15296D819BEF5B05"]
+			description: [
+				"&e无限取液池是一种多方块机器！&r你需要在核心附近建造指定的结构来使用它！"
+				""
+				"利用无限取液池，你可以通过电力更简便地获得可无限流体（如岩浆、盐水和冷冻剂）"
+				""
+				"在思索中查看使用方式！"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！&r"
+			]
+			id: "486F536060C96F52"
+			rewards: [{
+				id: "35E5DF73FEAF2296"
+				item: {
+					Count: 1
+					id: "minecraft:barrel"
+					tag: {
+						BlockEntityTag: {
+							Items: [
+								{
+									Count: 4b
+									Slot: 0b
+									id: "design_decor:industrial_iron_boiler"
+								}
+								{
+									Count: 4b
+									Slot: 1b
+									id: "design_decor:andesite_floodlight"
+								}
+								{
+									Count: 4b
+									Slot: 2b
+									id: "design_decor:diagonal_girder"
+								}
+								{
+									Count: 4b
+									Slot: 3b
+									id: "design_decor:diagonal_metal_support"
+								}
+								{
+									Count: 12b
+									Slot: 4b
+									id: "create:industrial_iron_block"
+								}
+								{
+									Count: 12b
+									Slot: 5b
+									id: "design_decor:brass_railing"
+								}
+								{
+									Count: 1b
+									Slot: 6b
+									id: "design_decor:brass_boiler_large"
+								}
+								{
+									Count: 9b
+									Slot: 7b
+									id: "createaddition:modular_accumulator"
+								}
+							]
+							id: "minecraft:barrel"
+						}
+						display: {
+							Name: "{\"translate\":\"block.kubejs.infinity_fetching_pool\",\"italic\":false}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "71B24B5F1250B22B"
+				item: "kubejs:infinity_fetching_pool"
+				type: "item"
+			}]
+			title: "更方便的取液！"
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5B6636DB1CC71A84"]
+			description: [
+				"&e蒸汽发电机是一种独特的机器！&r你需要在核心附近按照要求设计并建造对应的结构！"
+				""
+				"利用它，你可以将&d加压蒸汽&r（并非过热蒸汽！）转化为大量电能。什么？怎么生产蒸汽？你不妨看看&e能源与动力之页&r"
+				""
+				"蒸汽发电机的效率将取决于你如何设计它附近的结构！你能否实现让它以最高效率运行呢？"
+				""
+				"&a在思索中查看具体设计要求！&r"
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！&r"
+				""
+				"蒸汽发电机工作时产生的电磁场将使附近的某些生物产出一些独特的资源！"
+				""
+				"在没有大气或者极度高温的地方，你不必担心水结冰的问题——蒸汽会直接被消耗而不会产生水！"
+			]
+			id: "7CD2F5D780C10A8F"
+			tasks: [{
+				id: "72A8AC7048D006C2"
+				item: "kubejs:steam_generator"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5EF70A0F5F31C254"]
+			description: [
+				"戴斯管道不需要提供应力就能运行！"
+				""
+				"不过，它也许并没有你想象中那么好用！"
+			]
+			id: "3CCFBFA3B6D70AFF"
+			tasks: [{
+				id: "0C8228CBFE946776"
+				item: "ad_astra:desh_fluid_pipe"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6A89CAAFA8528425"]
+			description: ["激光炮塔可以自动清剿来犯之敌！"]
+			id: "51AFDDAC977AC355"
+			tasks: [{
+				id: "3C07E3964DADDCF9"
+				item: "creategbd:basic_laser_turret"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7593C5153F529F36"]
+			description: ["能量接口可以让你快速转移极其大量的电能！"]
+			id: "3C9C547112CCDD92"
+			tasks: [{
+				id: "3B13D27101B4BDBC"
+				item: "createaddition:portable_energy_interface"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.0d
+		}
+	]
+	subtitle: ["涌动的电流"]
+	title: "\"电\"亮世界"
+}

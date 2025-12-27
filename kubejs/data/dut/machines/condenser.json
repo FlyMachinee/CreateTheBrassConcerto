@@ -1,0 +1,87 @@
+{
+    "name": "block.kubejs.condenser",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/condenser"
+        },
+        "running": {
+            "block": "kubejs:machine/condenser"
+        },
+        "errored": {
+            "block": "kubejs:machine/condenser"
+        },
+        "paused": {
+            "block": "kubejs:machine/condenser"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.multiblock_mech",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.multiblock_mech1",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 4000,
+            "id": "cryogen_tank",
+            "maxInput": 4000,
+            "maxOutput": 4000,
+            "filter": [
+                "kubejs:cryogen"
+            ],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 1000,
+            "id": "sim_fluid",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "mode": "output",
+            "filter": ["kubejs:air_fluid","kubejs:nether_air_fluid","kubejs:end_air_fluid","kubejs:slimeria_air_fluid","kubejs:muriatic_acid"],
+            "whitelist": true
+        }
+    ],
+    "jei": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:progress",
+            "x": 125,
+            "y": 40
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 101,
+            "y": 40,
+            "id": "cryogen_tank",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 155,
+            "y": 40,
+            "id": "sim_fluid",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "text": "block.kubejs.alloy_furnace",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        }
+    ]
+}

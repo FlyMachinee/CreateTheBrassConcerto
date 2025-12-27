@@ -1,0 +1,12 @@
+minecraft:overworld
+minecraft:the_nether
+ad_astra:earth_orbit
+ad_astra:moon
+ad_astra:glacio
+ad_astra:venus
+ad_astra:mercury
+ad_astra:mars
+minecraft:the_end
+dut:slimeria_orbit
+dut:slimeria
+ad_astra:moon_orbit

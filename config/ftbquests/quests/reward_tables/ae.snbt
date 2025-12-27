@@ -1,0 +1,138 @@
+{
+	icon: "ae2:interface"
+	id: "305F0BDAECBA268B"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{
+			item: {
+				Count: 1
+				id: "minecraft:barrel"
+				tag: {
+					BlockEntityTag: {
+						Items: [
+							{
+								Count: 64b
+								Slot: 0b
+								id: "ae2:crystal_resonance_generator"
+							}
+							{
+								Count: 64b
+								Slot: 1b
+								id: "expatternprovider:ex_pattern_provider"
+							}
+							{
+								Count: 64b
+								Slot: 2b
+								id: "ae2:storage_bus"
+							}
+							{
+								Count: 64b
+								Slot: 3b
+								id: "ae2:crafting_terminal"
+							}
+							{
+								Count: 64b
+								Slot: 4b
+								id: "ae2:white_smart_cable"
+							}
+							{
+								Count: 64b
+								Slot: 5b
+								id: "ae2:white_smart_cable"
+							}
+							{
+								Count: 64b
+								Slot: 6b
+								id: "ae2:white_smart_cable"
+							}
+							{
+								Count: 64b
+								Slot: 7b
+								id: "ae2:controller"
+							}
+							{
+								Count: 64b
+								Slot: 8b
+								id: "ae2:drive"
+							}
+							{
+								Count: 64b
+								Slot: 9b
+								id: "expatternprovider:ex_interface"
+							}
+							{
+								Count: 1b
+								Slot: 10b
+								id: "ae2:item_storage_cell_256k"
+								tag: { }
+							}
+							{
+								Count: 1b
+								Slot: 11b
+								id: "ae2:fluid_storage_cell_256k"
+								tag: { }
+							}
+							{
+								Count: 1b
+								Slot: 12b
+								id: "expatternprovider:infinity_cell"
+								tag: {
+									record: {
+										"#c": "ae2:f"
+										id: "minecraft:water"
+									}
+								}
+							}
+							{
+								Count: 1b
+								Slot: 13b
+								id: "expatternprovider:infinity_cell"
+								tag: {
+									record: {
+										"#c": "ae2:i"
+										id: "minecraft:cobblestone"
+									}
+								}
+							}
+							{
+								Count: 64b
+								Slot: 14b
+								id: "ae2:wireless_booster"
+							}
+							{
+								Count: 64b
+								Slot: 15b
+								id: "ae2:export_bus"
+							}
+							{
+								Count: 64b
+								Slot: 16b
+								id: "ae2:import_bus"
+							}
+							{
+								Count: 64b
+								Slot: 17b
+								id: "ae2:wireless_access_point"
+							}
+							{
+								Count: 1b
+								Slot: 18b
+								id: "ae2:wireless_crafting_terminal"
+								tag: {
+									internalCurrentPower: 1600000.0d
+								}
+							}
+						]
+						id: "minecraft:barrel"
+					}
+					display: {
+						Name: "{\"text\":\"AE2作弊组件-AE2 Cheat Component\",\"italic\":false}"
+					}
+				}
+			}
+		}
+		{ item: "kubejs:slime_cola_can" }
+	]
+	title: "AE2"
+}

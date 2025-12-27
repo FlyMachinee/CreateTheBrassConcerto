@@ -1,0 +1,1262 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "73C5DB4BEDBD323A"
+	group: "6EA46263F86F561F"
+	icon: "create:crafting_blueprint"
+	id: "73C5DB4BEDBD323A"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"你不知道该做些什么？那么也许你需要一些小指引"
+				""
+				"这里为你梳理了一些较为基础的生产线的树状图，并且为你简单分析了不同路线之间的优劣"
+				""
+				"&e这一节中出现的所有机器效率默认为机器满转速且原料供应充足状态下的工作效率！&r"
+				""
+				"&e——需要注意的是，我不可能一直帮你完成这一部分的工作，在未来，你总是要学会如何分析需要建造什么产线、如何分析不同路线之间的优劣......&r"
+				""
+				"&a如果一些材料没有在这里出现，那么或许代表着你暂时不需要完全自动化（比如只需要半自动产线生产一批就足够暂时使用很久的滚珠轴承），也或许代表着你暂时完全不需要生产它&r"
+				""
+				"在这里的一部分产线也并非必须，但它们可以一定程度上让你发展更加顺畅！"
+				""
+				"还有一些现阶段其实不需要完全自动化的物品也放入了这里——它们的任务不需要提交物品"
+				""
+				"你可能会发现一些其它章节的材料——时刻记住，章节之间没有较强的线性关系！"
+			]
+			id: "0A2725742D4BE8A2"
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "48EB7F20128B20A5"
+				type: "checkmark"
+			}]
+			title: "我不知道该做什么"
+			x: -7.5d
+			y: -0.625d
+		}
+		{
+			description: [
+				"木屑可以代替&e木板&r、&e原木&r或&e去皮原木&r进行合成——用于制作&a木棍、齿轮、箱子、机壳、木炭&r..."
+				""
+				"甚至于说，它本身就可以被压制为各种类型的木板，或是车削为各种类型的原木！"
+				""
+				"&a特别的，粉碎木屑块可以获得比原料更多的木屑！&r"
+			]
+			id: "09F84DC709422089"
+			rewards: [
+				{
+					count: 8
+					id: "265EF498E6D56F24"
+					item: "create:controls"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "413335DD900BB726"
+					item: "create:track_signal"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 4096L
+				id: "0A92601B2D640F51"
+				item: "createdieselgenerators:chip_wood_block"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 6.5d
+		}
+		{
+			description: [
+				"种子和农产品可以用于制作种子油、乙醇、生物质"
+				""
+				"我推荐你使用&d喷灌器&r配合&d骨粉稀释液&r建造全自动农场！"
+				"[ \"如果你感兴趣的话，你可以查看右侧\", { \"text\": \"骨粉\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"6DCA5199790871D9\" } }, \"相关的任务，或是直接点击横线跳转（所有横线都是能点击跳转的！）\" ]"
+				""
+				"此外，相比其它作物，我更推荐你在前期种植小麦和土豆"
+				""
+				"在未来，你可以更进一步通过氮肥进行无土栽培，到时也许会有更合适的作物！"
+				""
+				"在没有&e时运&r魔咒的情况下——"
+				"&a1株小麦&r平均产出&e2.71小麦种子&r+&e1小麦&r"
+				"&a1株马铃薯&r平均产出&e3.71马铃薯&r+&e0.02毒马铃薯&r"
+				"&a1株甜菜&r平均产出&e2.71甜菜种子&r+&e1甜菜根&r"
+				"&a1株胡萝卜&r平均产出&e2.71胡萝卜&r"
+				""
+				"{@pagebreak}"
+				"并且前人还总结出了如下公式用于计算普通植株的生长速度："
+				"&e-记生长速度g的初始值为1"
+				"&e-若作物下方为湿润的耕地，生长速度+3；若为干燥的耕地，生长速度+1"
+				"&e-对耕地周围的8个方块，若为湿润的耕地，生长速度+3/4；若为干燥的耕地，生长速度+1/4；若为其他方块，保持不变"
+				"&e-如果作物的东南、东北、西南、西北侧毗邻方块有至少一棵同种作物，或东西方向、南北方向毗邻方块各有至少一棵同种作物，生长速度÷2&r"
+				""
+				"在以上情况下，若亮度至少为9，作物每tick有&a3/(4096*floor(1+(25/g))*)&r的概率提升一级生长等级"
+				""
+				"植株在种下时或收割后的生长等级为0，生长等级达到最高时成熟"
+				"小麦、胡萝卜、马铃薯的最高生长等级为7；甜菜的最高生长等级为4，但提升生长等级的概率还需要乘以2/3；西瓜和南瓜则是在成熟后以提升生长等级的概率产生果实"
+			]
+			id: "28F4B4206A2C4875"
+			rewards: [
+				{
+					count: 12
+					id: "471DE75ABAEB87F7"
+					item: "create:track_station"
+					type: "item"
+				}
+				{
+					id: "0816B6F58A48B7B2"
+					item: "minecraft:cocoa_beans"
+					type: "item"
+				}
+				{
+					id: "6649F626445F5727"
+					item: "minecraft:bamboo"
+					type: "item"
+				}
+				{
+					id: "2A9CB108FAB48296"
+					item: "minecraft:sea_pickle"
+					type: "item"
+				}
+				{
+					id: "48994553D18958AD"
+					item: "minecraft:cactus"
+					type: "item"
+				}
+				{
+					id: "34E7FE4931CDCBBE"
+					item: "minecraft:beetroot_seeds"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.0d
+			tasks: [{
+				consume_items: true
+				count: 512L
+				id: "395F3539235258CC"
+				item: "minecraft:wheat_seeds"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["261F377F113598D4"]
+			description: [
+				"安山合金至少有6种生产方式（这里大部分流程写到安山岩为止）："
+				""
+				""
+				"&a-1.(推荐)&r使用&e方块注液&r，通过熔融铁或熔融工业铁直接获取安山合金；具体请查看安山合金的思索！"
+				"&e使用这种方式可以无需额外生产安山岩就能非常方便地获取大量安山合金！这一条路线在建造出合金炉之后还会获得进一步升级——合金炉可以比工作盆熔融更快地生产熔融金属"
+				""
+				"&c-2.(不推荐)&r圆石粉碎产生砂砾；"
+				"从地狱抽取岩浆/无限岩浆池(最佳)获得岩浆；"
+				"岩浆+砂砾+圆石压块为安山岩；"
+				"&e这一条路线已经过时了，现在已经没有多少工程师会使用它"
+				""
+				"&c-3.(不推荐)&r紫水晶注液增殖；"
+				"紫水晶碎片粉碎可得石英；"
+				"石英+圆石合成闪长岩；"
+				"闪长岩+圆石合成安山岩；"
+				"&e这一条路线比第四条更为复杂，但是生产效率并没有第四条高！"
+				""
+				"&c-4.(不推荐)&r圆石粉碎/研磨变为砂砾；"
+				"从地狱抽取岩浆/无限岩浆池(最佳)获得岩浆；"
+				"砂砾粉碎/研磨/洗涤获得燧石；"
+				"岩浆+砂砾+燧石压块为安山岩；"
+				"&e这一条路线已经过时了，在很久以前才会有工程师使用它！"
+				""
+				"&c-5.(不推荐)&r使用矿机从安山岩矿脉中挖掘安山岩"
+				"&e这一条路线你现在应该还无法选择！并且，当你有能力开发安山岩矿脉时，你应该也早就不需要使用安山岩来制作安山合金了"
+				""
+				"&c-6.(不推荐)&r使用方块注液直接获取安山岩"
+				"&e这一条路线有大量的副产物！"
+			]
+			id: "5F5A767FA46F447C"
+			rewards: [
+				{
+					count: 64
+					id: "45AAFEF9D92BE693"
+					item: "create:basin"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "091909C44604918E"
+					item: "create:rotation_speed_controller"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: true
+				count: 512L
+				id: "204B39EDF01B6C1B"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			description: [
+				"&e笼子&r可以将鸡关起来——"
+				"关在笼子里的鸡就是单纯的产蛋机器！"
+				"&a使用机械手手持薯条喂食笼子中的鸡就可以立即产生一个蛋！&r"
+				""
+				"鸡蛋在缠魂为烂鸡蛋后可以用于制作硫粉和骨粉——当然你以后也可以使用其它方式来制作"
+				""
+				"或者你也可以单纯拿来吃"
+			]
+			id: "4ACCEA3F60D65059"
+			rewards: [{
+				count: 16
+				id: "474A95A4B71D6A2C"
+				item: "create:railway_casing"
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "66BEC8629EA5E8C9"
+				item: "minecraft:egg"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			description: [
+				"紫水晶是重要的电子工业原料，可以用于制作单晶硅板"
+				""
+				"&e可以通过注液的方式令之增殖，然后使用振动的方式来分解水晶簇&r"
+				""
+				"在未来，你能够无限制造盐水以后，你可以使用更为高效的加热加压方式来获取水晶簇！"
+				""
+				"除此以外，它还可以用于生产紫色染料或者石英"
+			]
+			id: "3A89BFFFB39F5297"
+			rewards: [
+				{
+					count: 32
+					id: "598F9665F001236B"
+					item: "create:andesite_funnel"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "46242752589444E8"
+					item: "create:encased_chain_drive"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "46BCEEC54A5FA7EF"
+				item: "minecraft:amethyst_shard"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 3.5d
+		}
+		{
+			description: [
+				"可以使用矿车结构收集海带，海带也可以用于制糖"
+				""
+				"然后使用鼓风机批量烟熏获得干海带"
+				""
+				"你需要海带来制作传送带、漏斗、隧道、软管滑轮......它们都是你工厂的重要组件！"
+				""
+				"不仅如此，干海带还将是化学工业的重要原料！但也许你可以通过某些方式来大幅减少干海带的需求！"
+			]
+			id: "1D3F143AEE15CCBC"
+			rewards: [{
+				count: 64
+				id: "3633B28729244C20"
+				item: "create:copper_casing"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "077ED83F6D1F2CE1"
+				item: "minecraft:dried_kelp"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3A89BFFFB39F5297"]
+			description: [
+				"石英可以用来制作玫瑰石英、&e经验颗粒&r等物品"
+				""
+				"可以通过&e粉碎紫水晶&r、石英增殖（与岩浆搅拌）、洗涤粉碎金矿等方式获得它"
+				""
+				"显然，紫水晶是最好的来源"
+			]
+			id: "4C8F9302F1673F2E"
+			rewards: [{
+				count: 32
+				id: "255CDEC5F088E2E8"
+				item: "create:brass_tunnel"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "013271A7AE097106"
+				item: "minecraft:quartz"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"5F5A767FA46F447C"
+				"09F84DC709422089"
+			]
+			description: [
+				"安山机壳当然是需要量产的！"
+				""
+				"在你能够批量生产工业铁之前，最好的方案是使用&e木屑块&r与安山合金来制作它！"
+			]
+			id: "241467A9149EFB99"
+			rewards: [
+				{
+					count: 12
+					id: "6850695C32079800"
+					item: "create:track_signal"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "4CBCCAA7C27676E6"
+					item: "kubejs:electric_gear"
+					type: "item"
+				}
+			]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "6D72D8C0CA71BD14"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["7D452424A8C15F35"]
+			description: [
+				"沙子可以通过粉碎砂砾获得，并且还可以额外获取你需要的泥土！"
+				""
+				"注意，研磨砂砾并不能产出沙子，它产出的是燧石"
+				""
+				"[ \"你需要沙子来使用\", { \"text\": \"蓝图构筑站\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"56F4799B252FC6AE\" } } ,\"制造多方块机器的材料包\"]"
+			]
+			id: "7D8B20E711BD8E8A"
+			rewards: [{
+				count: 32
+				id: "45DEE59EA5910A75"
+				item: "create:brass_funnel"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "60954EC3ACC8AF12"
+				item: "minecraft:sand"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1A115EF233394340"]
+			description: [
+				"圆石是工业的食粮！"
+				""
+				"&e你可以通过在工作盆中搅拌岩浆和水的方式方便地获得大量的圆石！&r"
+				""
+				"如果你还没有计算过的话，那么以下数据或许会帮到你："
+				""
+				"&e一台满效率的动力搅拌器每小时能够生产约67765个圆石！&r"
+			]
+			id: "234B8765235D4601"
+			rewards: [
+				{
+					count: 32
+					id: "168458EBD5510F18"
+					item: "create:gearbox"
+					type: "item"
+				}
+				{
+					id: "17C472416E1FF3A9"
+					item: "create:rotation_speed_controller"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 2048L
+				id: "13D773E978B698B7"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["234B8765235D4601"]
+			description: [
+				"砂砾可以通过粉碎/研磨圆石获得"
+				""
+				"考虑到效率（因为你也许需要大量的砂砾！），你更应该选择通过粉碎进行生产！"
+			]
+			id: "7D452424A8C15F35"
+			rewards: [{
+				count: 32
+				id: "67247CB6AA6237A4"
+				item: "create:smart_chute"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 1024L
+				id: "280C1E0FCBA01948"
+				item: "minecraft:gravel"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["241467A9149EFB99"]
+			description: [
+				"机械核心是制作各种机械元件的基础——"
+				""
+				"对于那些常用的机械元件，你最好能够制作它们的自动化——不需要多高的产量，只需要有即可！这种生产模式有一个很有趣的名字：超市"
+				""
+				"超市指的就是对于一些常用的杂七杂八的物品，将它们的生产整合到一起（&e并不追求效率，能全自动或半自动生产即可&r）作为一个较为独立的工厂（或者说，黑盒），&a不输出给其它产线，而单纯供给给你手工使用。&r这种工厂的产物存储数量也往往不多，以避免过度消耗材料"
+				""
+				"使用这种模式生产常用的生产线建设部件并额外生产一些常用的合成材料是非常好的选择，&e可以节省你修建产线时大量的前期材料准备时间！&r"
+			]
+			id: "2462E9E2A019A8A6"
+			rewards: [{
+				count: 4
+				id: "6D01056D60A66956"
+				item: "create_connected:sequenced_pulse_generator"
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "500A28F97DE74C3D"
+				item: "kubejs:mechanical_core"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["7D452424A8C15F35"]
+			description: [
+				"泥土可以通过一个简单的循环来增殖！"
+				""
+				"2泥土+2砂砾=4砂土"
+				""
+				"4砂土可以搅拌或者使用锄头翻地变为4泥土，从而实现了泥土翻倍"
+				""
+				"或者，你可以考虑使用岩浆与盐水接触来直接产生砂土！"
+				""
+				"在未来，你还可以利用类似的方式快速生产泥巴并进一步生产泥坯，随后应用于工业中！"
+			]
+			id: "0B2C98F57F6557DE"
+			rewards: [{
+				count: 32
+				id: "235043D6E7D90913"
+				item: "create:brass_funnel"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "3BDFC34CF13FCEB3"
+				item: "minecraft:dirt"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7D452424A8C15F35"]
+			description: [
+				"这四种金属（尤其是前三种）可以说是工厂建设的基石，你肯定需要批量生产它们！"
+				""
+				"[ \"你可以在\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"中看到生产方式，点击横线部分即可跳转！\" ]"
+				""
+				"除此以外，你也许可以考虑使用第二乐章的方式来生产！"
+				""
+				"&e积极探索其它乐章的生产方式！有时你会发现一些虽然复杂一些，但现阶段也是可用的，并且效率极大幅提高的生产方式！&r"
+			]
+			id: "261F377F113598D4"
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "7663E1BB66CD5A2A"
+					item: "create:crimsite"
+					type: "item"
+				}
+				{
+					id: "788D57889E885DEC"
+					item: "create:veridium"
+					type: "item"
+				}
+				{
+					id: "654EA69603878F3C"
+					item: "create:asurine"
+					type: "item"
+				}
+				{
+					id: "392542F971BB18D2"
+					item: "create:ochrum"
+					type: "item"
+				}
+			]
+			title: "金属生产"
+			x: 0.0d
+			y: 4.375d
+		}
+		{
+			dependencies: ["7D452424A8C15F35"]
+			description: [
+				"锡是制作许多多方块所必须的一种材料，你需要用它来制作锡制机械硬盘"
+				""
+				"[ \"你可以在\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"中看到生产方式，点击横线部分即可跳转！\" ]"
+			]
+			id: "114A5ADC379C607D"
+			tasks: [{
+				id: "160CC4BA1093A74E"
+				item: "kubejs:raw_tin"
+				type: "item"
+			}]
+			title: "大型机械的准备"
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["28F4B4206A2C4875"]
+			description: [
+				"种子油拥有大量的用途！"
+				""
+				"除了作为润滑油的下位替代、生产生物柴油、红石、生物质以外，它还可以用于制作原油、作为还说的过去的柴油机燃料以及用来炸薯条！"
+				""
+				"虽然你有许多方式生产种子油，但你现在多半还无法制作黄铜培养仓也无法获取酵母菌，也没有大量的盐水可以使用"
+				""
+				"于是只有两种路线可供选择——动力辊压机辊压种子或是动力搅拌器加热搅拌种子"
+				""
+				"动力辊压机虽然不需要加热，但是产量更低"
+				""
+				"动力搅拌器虽然需要加热，但是产量更高"
+				""
+				"一般而言，我会推荐加热搅拌，但你也可以自行考量"
+			]
+			id: "1D582DE321203330"
+			tasks: [{
+				id: "1EEA45148F6DD745"
+				item: "createaddition:seed_oil_bucket"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["28F4B4206A2C4875"]
+			description: [
+				"除了生产生物柴油外，乙醇还可以用于制作红石和乙烯！"
+				""
+				"虽然你有许多方式生产乙醇，但你现在多半还无法制作黄铜培养仓也无法获取酵母菌"
+				""
+				"通过简单的查阅就可以发现，使用&e小麦粉/土豆+木屑+水来发酵乙醇&r是现阶段对农业生产要求最低的方式！这也是为什么我推荐你种植小麦与土豆！"
+				""
+				"&a该配方的运行时长为恒定的25秒，你可以根据这个数值来计算你需要多少发酵盆，以及需要多大的农田&r"
+			]
+			id: "0648CDB30F0B2F70"
+			tasks: [{
+				id: "020BF6A674E7278C"
+				item: "createdieselgenerators:ethanol_bucket"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"1D582DE321203330"
+				"0648CDB30F0B2F70"
+			]
+			description: [
+				"对于现阶段而言，你应当使用种子油与乙醇制作生物柴油——在未来你也许可以使用汽油代替种子油"
+				""
+				"你有两种方式将种子油与乙醇制作成生物柴油——搅拌或是加热加压"
+				""
+				"明显地，加热加压的方式可以用更少的原料提供更多的生物柴油"
+				""
+				"{@pagebreak}"
+				"还记得小麦植株的产出数据吗？2.71小麦种子与1小麦！"
+				""
+				"通过粉碎，产出将变为2.96小麦种子与1.5小麦粉"
+				""
+				"使用&e加热搅拌&r获取种子油、&e小麦粉木屑发酵&r获取乙醇，产出将变为&a370mB种子油与300mB乙醇&r"
+				""
+				"如果你把这些产物优先用于制作生物柴油，那么还会有70mB的种子油盈余可以用于制作其它材料——但我不建议这样做"
+				""
+				"通过查看JEI页面可以知道，&e1B生物柴油可以提供6分钟的超级加热&r——这意味着如果你不需要制作萤石或者用生物柴油制作红石的话，你暂时并不需要太高的生物柴油生产量！你完全可以将这些原料另做它用！"
+			]
+			id: "253A7891D47C41D2"
+			rewards: [{
+				count: 64
+				id: "4A71849865DCB9BF"
+				item: "createoreexcavation:raw_redstone"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1FD251F86B786A3B"
+				item: "createdieselgenerators:biodiesel_bucket"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["261F377F113598D4"]
+			description: [
+				"至少就目前的阶段而言，我认为这两种金属板是应当有自动生产的"
+				""
+				"大量的配方需要铁板，此外你需要大量的铜板用于制作管道和储罐"
+				""
+				"一个很简单的自动生产——比如一台动力辊压机和一个木桶——就能满足你的大部分需求，并节省你大量的时间！"
+			]
+			id: "16700765BEF18DE8"
+			rewards: [{
+				count: 8
+				id: "3F7CA84F3A11B0CC"
+				item: "create_connected:brass_gearbox"
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					count: 256L
+					id: "28E24DAB299F5291"
+					item: "create:iron_sheet"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 256L
+					id: "2D70231E39B1FD04"
+					item: "create:copper_sheet"
+					type: "item"
+				}
+			]
+			title: "金属板材"
+			x: -1.5d
+			y: 5.0d
+		}
+		{
+			description: [
+				"你可以通过粉碎下界岩来生产余烬面粉——在未来还可以使用合金炉"
+				""
+				"余烬面粉可以注液岩浆而重新成为下界岩——或者你也可以直接注液圆石来获取下界岩"
+				""
+				"你需要余烬面粉来生产红石，进一步生产荧石粉"
+				""
+				"当然，你也可以使用洗涤碎矿的方式来生产它们——不过那相对更低效"
+				""
+				"你可以注意到，使用种子油和乙醇制作红石是较为低效的——而生物柴油一桶可以产出40个红石！"
+			]
+			id: "0E8312316BE02AE0"
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "15DD86948E874952"
+				item: "create:cinder_flour"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A89BFFFB39F5297"]
+			description: [
+				"单晶硅板是制作电路板的必备材料——除此以外，你还可以用它来制作碳化硅等材料"
+				""
+				"它的生产十分简单，在此便不赘述"
+			]
+			id: "2F4AD170B3648627"
+			rewards: [{
+				count: 24
+				id: "5FFC70B1FC10E6B0"
+				item: "create:spout"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "2FD7AD9485511CA3"
+				item: "kubejs:silicon_plate"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0E8312316BE02AE0"]
+			description: [
+				"余烬面粉只需要注入部分燃料，就可以变为红石！"
+				""
+				"对于工厂早期阶段而言，可选的选择无非是种子油、乙醇、生物柴油、氢气"
+				""
+				"在没有电解以前，你生产氢气非常困难（水的热解），可以首先排除"
+				""
+				"种子油与乙醇虽然简单，但你可以发现这样的需求量非常巨大——一桶种子油只能制作8个红石，而一桶乙醇只能制作6.67个红石！"
+				""
+				"所以，你应当使用生物柴油——一桶生物柴油就能制作40个红石！"
+				""
+				"或者，你也可以跳过红石的生产，请查看玫瑰石英的方块注液！"
+			]
+			id: "186B9689DA623C63"
+			rewards: [{
+				id: "648C802FA7430D14"
+				item: {
+					Count: 1
+					id: "fluiddrawerslegacy:fluiddrawer"
+					tag: { }
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "54F7901031E4EF65"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["00A004E672F8FD67"]
+			description: [
+				"你有许多选择来生产磨制玫瑰石英！"
+				""
+				"如果你从玫瑰石英出发，那么你可以选择砂纸打磨、砂带磨床、碳化硅打磨——它们都是你现在可以选择的路线！"
+				""
+				"砂带磨床体积更小，不过需要控制转速，并且效率低下"
+				""
+				"砂纸打磨速度最快，但是体积相对较大"
+				""
+				"碳化硅打磨介于两者之间——较为简单，效率也还可以"
+				""
+				"在未来，你可以使用更为高效的自动化组装机来代替它们"
+			]
+			id: "4C0F977C66E23537"
+			rewards: [{
+				count: 8
+				id: "6A4F3D59DFFC15CB"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 128L
+				id: "5E4FAB53ED9BEE3B"
+				item: "create:polished_rose_quartz"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"4C0F977C66E23537"
+				"16700765BEF18DE8"
+			]
+			description: [
+				"制作电子管是一件稀松平常的事——无聊的磨制玫瑰石英与铁板组装"
+				""
+				"不过，有另一种思路也是可用的——使用机床将磨制玫瑰石英车削为电子管"
+			]
+			id: "7BA9CFF9B5FC09E0"
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "6A62DB8FDCAF9C35"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"7BA9CFF9B5FC09E0"
+				"4C0F977C66E23537"
+				"2F4AD170B3648627"
+			]
+			description: [
+				"在起步阶段，你有两种集成电路板的生产方式可以选择："
+				""
+				"&e1.铜板+磨制玫瑰石英+种子油&r"
+				""
+				"&e2.黄铜板+电子管+冷冻剂&r"
+				""
+				"第一条路线较为简单，但是对玫瑰石英的需求更大，而且需要大量种子油"
+				""
+				"第二条路线更为高效，但是需要更多其它的材料"
+				""
+				"你并不一定要现在就制作集成电路板的完全自动化，一个半自动的产线便已经暂时足够使用！"
+				""
+				"如果你希望现在就进行完全自动化的话，那么我认为使用第一条路线，并通过方块注液获取玫瑰石英是较好的选择！"
+			]
+			id: "7D030EAF311A861E"
+			shape: "rsquare"
+			tasks: [{
+				id: "23EFF55EC38CE702"
+				item: "kubejs:circuit_board"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"7BA9CFF9B5FC09E0"
+				"7FB10775D5107426"
+				"071CB4D05F53F81F"
+			]
+			description: [
+				"电气齿轮组需要滚珠轴承、大齿轮与电子管"
+				""
+				"你完全可以先使用一个半自动化的产线"
+				""
+				"在未来，你可以首先将大齿轮替换为工业大齿轮——接着用自动化组装机来代替序列组装！"
+			]
+			id: "73D8518A5C102402"
+			shape: "rsquare"
+			tasks: [{
+				id: "154A1EDEA393A233"
+				item: "kubejs:electric_gear"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"2462E9E2A019A8A6"
+				"1D3F143AEE15CCBC"
+			]
+			description: [
+				"在上一个任务节点，我已经向你描述过超市的概念，那么这是我认为在现阶段你应当整合进入超市进行生产（你可以自行判断哪些适合全自动，哪些适合半自动）的零部件！"
+				""
+				"除此以外，在获得车床后，你也许可以考虑将流体储罐也加入其中！"
+				""
+				"&a你可以使用机械手或是物流集合来简单地生产它们！&r"
+				""
+				"至于合成原料，我推荐你将&e铁板、铜板、坚固板、滚珠轴承、电气齿轮组、集成电路板&r也半自动地整合进超市（并没有太多做成全自动的必要）"
+				""
+				"下面是一个早期版本的超市示例："
+				""
+				"{image:kubejs:textures/ftb/market.png width:180 height:80 align:center}"
+				"{image:kubejs:textures/ftb/market1.png width:100 height:80 align:center}"
+			]
+			id: "7FB10775D5107426"
+			rewards: [
+				{
+					count: 8
+					id: "76BEC962130ABA94"
+					item: "kubejs:coin_gold"
+					type: "item"
+				}
+				{
+					id: "70890F897CD022EA"
+					item: "sophisticatedbackpacks:advanced_pickup_upgrade"
+					team_reward: false
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "7A00CFF3EEC4E220"
+					item: "create:belt_connector"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "2E073E4AD9D45B6A"
+					item: { Count: 64, id: "create:copper_casing" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "06B96D7937C93B05"
+					item: { Count: 64, id: "create:brass_casing" }
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "4D2C2498ED3FEEA5"
+					item: { Count: 64, id: "kubejs:io_mechanism" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "34B7BDD79FB318B4"
+					item: { Count: 8, id: "kubejs:fluid_mechanism" }
+					type: "item"
+				}
+			]
+			title: "自动化的好帮手——超市"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["4ACCEA3F60D65059"]
+			description: [
+				"硫粉可以制作为二氧化硫、三氧化硫与硫酸，还可以用于制作人工橡胶；二氧化硫可以用于无土栽培诡异菌、绯红菌、下界疣、枪药珠，并进一步获得二氧化氮、火药、染料"
+				""
+				"在未来，它将参与大量的化工配方"
+				""
+				"对于现在的你而言，它可以用于制作硫酸，从而制作乙烯！"
+				""
+				"不过，这种用途实际上并不消耗硫酸，产出的二氧化硫可以重新制作为硫酸！"
+				""
+				"除了使用烂鸡蛋以外，你还可以通过焦黑熔渣来自动化获取硫粉，未来你还可以使用甲烷或矿脉"
+			]
+			id: "6576248CA7273C50"
+			rewards: [{
+				id: "7369AACAD686FC52"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				count: 64L
+				id: "7B21076F769A544F"
+				item: "kubejs:sulphur"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			description: [
+				"&a你可以通过平凡的药水将骨粉变为骨头，从而生产骨粉&r——或者，你也可以通过粉碎石灰岩、粉碎方解石等方式！"
+				""
+				"骨粉在与水搅拌后能生产出可以用于批量催熟作物的&d骨粉稀释液&r，或者你也可以直接让机械手来催熟作物，具体&e请查看喷灌器的思索！&r"
+				""
+				"或者，你也可以超级加热它来获取盐与二氧化碳——从而制取盐水和甲烷"
+			]
+			id: "6DCA5199790871D9"
+			rewards: [{
+				count: 8
+				id: "66105811AA701AC6"
+				item: "create_things_and_misc:sprinkler"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "34881CE0279C596F"
+				item: "minecraft:bone_meal"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6DCA5199790871D9"]
+			description: [
+				"盐也可以从海带中获取"
+				""
+				"你可以用盐生产薯条，或是为化工做准备！"
+			]
+			id: "11B3D102810496A2"
+			rewards: [{
+				id: "79DDF8459C71F6B9"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "17EA8A7570CCE078"
+				item: { Count: 64, id: "kubejs:salt" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"5F5A767FA46F447C"
+				"16700765BEF18DE8"
+			]
+			description: [
+				"对于现在阶段来说，你生产滚珠轴承的方法只有两种，一是铁板、安山合金、铁/锌粒、种子油；二是使用动力轴承进行加工！"
+				""
+				"它并不复杂，只需要一些最基础的操作"
+				""
+				"你可以直接修建全自动的产线，或者先使用半自动产线获取一些"
+				""
+				"在未来，你可以使用工业铁和润滑油来生产，也可以用自动化组装机来代替序列组装！"
+			]
+			id: "071CB4D05F53F81F"
+			shape: "rsquare"
+			tasks: [{
+				id: "5859D95D89553854"
+				item: "kubejs:bearing"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"7D030EAF311A861E"
+				"59E7BBE6A1611092"
+			]
+			description: [
+				"精密构件应该是你目前能接触到的工序最多的元件"
+				""
+				"但是你暂时并不会用到那么多！"
+				""
+				"在未来，你可以用自动化构筑站来快速生产它"
+				""
+				"就目前而言，精密构件最可观的用途是制造机床、分馏塔控制器等重要元件！"
+			]
+			id: "7E7AE206A66030D8"
+			rewards: [
+				{
+					id: "4B55C320915A902C"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					id: "7230A66B93349E2B"
+					item: "minecraft:beetroot_seeds"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			tasks: [{
+				id: "0CA0A30FD2795877"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["26F5F19A7327F11A"]
+			description: [
+				"坚固板的生产是较为简单的——你目前也不需要太多的坚固板"
+				""
+				"在未来，你可以用自动化组装机来生产它"
+			]
+			id: "59E7BBE6A1611092"
+			rewards: [{
+				count: 36
+				id: "729090E97B03B0D8"
+				item: "create_connected:item_silo"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "6E9FBD677C927518"
+				item: "create:sturdy_sheet"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			description: [
+				"无限岩浆是你工业区的基石之一！"
+				""
+				"它可以生产出无穷无尽的石材"
+				""
+				"它可以生产出无穷无尽的金属"
+				""
+				"它可以生产出无穷无尽的黑曜石与下界岩"
+				""
+				"它可以为烈焰人燃烧室提供无限的普通加热燃料"
+				""
+				"建造一个512立方的无限岩浆池以获取无限燃料！"
+				""
+				"&e或者，主世界的地下和地狱都拥有许多大型的岩浆池甚至岩浆海！&r"
+				""
+				"（推荐大小：8*8*8）"
+				"[ \"在\", { \"text\": \"史莱姆的乐谱\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"35F0C3FF989DA797\" } }, \"中查看可以无限抽取的流体列表！\" ]"
+				""
+				"如果你还不知道的话，横线部分是可以点击跳转到对应位置的！"
+			]
+			id: "1A115EF233394340"
+			rewards: [{
+				count: 12
+				id: "75F9995FA9380B84"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "create:hose_pulley_lava"
+				criterion: ""
+				id: "31BA222CC86B30DD"
+				type: "advancement"
+			}]
+			x: -1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"4C8F9302F1673F2E"
+				"186B9689DA623C63"
+				"0648CDB30F0B2F70"
+			]
+			description: [
+				"你可以使用常规的方式——搅拌红石和石英来生成玫瑰石英"
+				""
+				"但是目前而言，你的红石产量应该不大"
+				""
+				"&a所以，你可以考虑使用方块注液的方式来制作它！具体请查看思索！&r"
+			]
+			id: "00A004E672F8FD67"
+			rewards: [{
+				count: 4
+				id: "0CFF751A5C052D72"
+				item: "create:sequenced_gearshift"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 128L
+				id: "2BD28253FBB3AB6B"
+				item: "create:rose_quartz"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			description: [
+				"通过粉碎黑曜石可以获得黑曜石粉末"
+				""
+				"而生产黑曜石的方法很多——"
+				""
+				"你可以用水将岩浆源转化为黑曜石"
+				""
+				"你可以用冷冻剂与岩浆接触生成黑曜石"
+				""
+				"你可以用冷冻剂与岩浆搅拌获取黑曜石"
+				""
+				"你可以向黑曜石粉注入水和岩浆获取黑曜石"
+				""
+				"你应该很容易就能分辨它们之间的优劣！"
+			]
+			id: "26F5F19A7327F11A"
+			shape: "gear"
+			size: 1.1d
+			tasks: [{
+				id: "386BA3F7E4FA4222"
+				item: "minecraft:obsidian"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["114A5ADC379C607D"]
+			description: [
+				"如果你需要建造多方块，那么你显然需要硬盘！"
+				""
+				"你暂时完全不必自动化生产它！"
+			]
+			id: "69DFF2C19952AC52"
+			shape: "rsquare"
+			tasks: [{
+				id: "5A1E845A484C457E"
+				item: {
+					Count: 1
+					id: "kubejs:tin_hard_disk"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			description: [
+				"&a一般来说，同一物品的每种配方相较于其它配方而言至多满足以下四个条件之中的三者：&r"
+				"&61.效率高"
+				"&62.易于设计"
+				"&63.原料少"
+				"&64.科技要求低"
+				""
+				"&e如果有配方同时满足这四者，那么多半是你看错了"
+				""
+				"&e我们抉择配方就是根据我们所需要制作的物品的性质来平衡这四种条件之间的权重"
+				""
+				"科技要求往往只会对我们产生临时性的影响，所以我们往往不去考虑它。一般来说，我们都会把效率高和易于设计排在最前面。但是如果它的每个原料都十分昂贵，那么我们也许会把原料少排在更前"
+				""
+				"你可以参考这样的思路，并进一步推导出诸如“如果效率最低的配方效率都可以接受，那么效率的权重就可以忽视”这样的配方选取原则！"
+				""
+				"&e或者你也可以始终以一种要素作为最高优先级——这方面并没有绝对的优劣，因为你不需要去和它人比较&r"
+			]
+			id: "7260D809852A0860"
+			rewards: [{
+				id: "403261AA3550D2ED"
+				item: "kubejs:slime_cola_can"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6AA92FEF7D4B43CD"
+				title: "判断配方的一般方法"
+				type: "checkmark"
+			}]
+			x: -3.0d
+			y: -0.5d
+		}
+	]
+	subtitle: ["基础工厂的生产树！"]
+	title: "乐谱-工厂的脉络"
+}

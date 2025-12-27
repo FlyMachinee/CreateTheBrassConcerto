@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 12.0,
+  "amountMin": 4.0,
+  "biomeWhitelist": "dut_create:sulphur",
+  "icon": {
+    "item": "createloveandwar:sulphur"
+  },
+  "name": "{\"translate\":\"item.createloveandwar.sulphur\"}",
+  "placement": {
+    "salt": 1486764,
+    "separation": 24,
+    "spacing": 96
+  },
+  "priority": 1
+}

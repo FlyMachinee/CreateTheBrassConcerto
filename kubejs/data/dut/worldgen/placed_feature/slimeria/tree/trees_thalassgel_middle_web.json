@@ -1,0 +1,9 @@
+{
+  "feature": "dut:slimeria/tree/trees_thalassgel_middle_web",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

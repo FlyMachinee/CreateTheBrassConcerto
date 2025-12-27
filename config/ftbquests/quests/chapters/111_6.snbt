@@ -1,0 +1,106 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "111_6"
+	group: "62FF2E225AA2A9EF"
+	icon: {
+		Count: 1
+		id: "kubejs:space_elevator"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "501EA51D27EB7064"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&a众所周知，在Release2.3的黄铜协奏曲中，太空电梯运输的自动化可以被视为毕业标志——那么你最短能用时多久能开始实现它呢？&r"
+				""
+				"&e在生存模式，困难难度下，不得开启作弊，不得额外更改FTB模组设置，不得额外添加模组，不得调整随机刻速度，不得开启流动岩浆转化为岩浆源，以发射一次太空电梯（电梯实体出现为准）为结束标志&r"
+				""
+				"将存档向作者提交或在B站等平台提供全程录像，你的纪录将被放入此处！此挑战不接收时长超过25小时的纪录！以下是通关列表:"
+				""
+				"&a1.suring_ice&r "
+				"-&6RSG&r&e-版本Release2.3，21:53:10&r"
+			]
+			icon: "kubejs:electro_hydro_capacitor"
+			id: "00AE99549A203B21"
+			tasks: [{
+				id: "79ADA4AB43F4CDA5"
+				title: "连接"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"&6纪录信息：&r"
+				""
+				"&a规则：&r&eRSG&r "
+				""
+				"&a版本：&r&eRelease2.3&r"
+				""
+				"&a附加规则：&r&e无&r"
+				""
+				"&a时长：&r&e21:53:03&r"
+				""
+				"&a留言：&r&e&r"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:player_head"
+				tag: {
+					SkullOwner: {
+						Id: [I;
+							-1031115882
+							1349141854
+							-2132915619
+							-1015659082
+						]
+						Name: "suring_ice"
+						Properties: {
+							textures: [{
+								Signature: "dl/bKUTpRLGLqj8AZXbUWpuBMNd/zYN4gbxDRA/5hvkeXzOqbPQIvPB9GhF0eChTmOcmoMpUV63YuFVBOucj05hC6zzPVSd44yowBF1omVwmh5aUpI1iyWAUJFKYsLUNu33eSXZOKniDaP1fq/wiRCA/OQ56Ltarkej8LRUKu/GPgU+ALWwsbULnq3Ui6B2OIB+mfnTJx5FR78VUsbsfxx2cgaGTxsLGq04x3CzhxRnxEDEza35E6ME19gLhy8DQRcJKWm1hH+h/YcvW7jqJGBBFQUuG7LPXEtiu+eQgbsupk0KU8NRjvOj3EGOW+1OuxKtCpZOMbi0aZwoP9aEG0WsximYOphTmiHQJlbcHUMZ6QUWTcnuTZIY+9TbN9PwDp4u8geYkhcl+RWQzea94AI6lUF8bPqKsQA3F90otTP3NxSH1I9giuwj7BA0xKkkxC9G3AAbGmJ8HhjiRwlENorwVECmpPxpswVm+rrq+ZCHpaNI9om7fdWk657tc9wmRInnLn0IeTCL06cqlY7XPGU9Gu8wUa8HOkqE+fetkxK4rvWrUpZAT8aYdya0P1plos1R+9JIxnfiWUgmiADoS4vG/HwtxBqsVtMDs6gPytfK1xqcxkOy0WYL6OVw32jLQsiSwDjjNwiyU+S/AwRdhuPIW7eip7Hy7TvF2LPJZFLo="
+								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk5NDYxNjIwMiwKICAicHJvZmlsZUlkIiA6ICJjMjhhNmI5NjUwNmE0NTVlODBkZTRhNWRjMzc2NDViNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJzdXJpbmdfaWNlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E2Mjk5MDhhZDY4NmNiMjIyMjZiZjdlYjRjMDRiYTRjYmViNGVkZGYzZjQwM2Q5NzA2OTJmZjhjYjIxNWRhZGMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZDlkODJhYjE3ZmQ5MjAyMmRiZDRhODZjZGU0YzM4MmE3NTQwZTExN2ZhZTdiOWEyODUzNjU4NTA1YTgwNjI1IgogICAgfQogIH0KfQ=="
+							}]
+						}
+					}
+				}
+			}
+			id: "13612039C27DDC81"
+			size: 1.25d
+			tasks: [{
+				id: "4313ED77BACD3737"
+				item: {
+					Count: 1
+					id: "minecraft:player_head"
+					tag: {
+						SkullOwner: {
+							Id: [I;
+								-1031115882
+								1349141854
+								-2132915619
+								-1015659082
+							]
+							Name: "suring_ice"
+							Properties: {
+								textures: [{
+									Signature: "dl/bKUTpRLGLqj8AZXbUWpuBMNd/zYN4gbxDRA/5hvkeXzOqbPQIvPB9GhF0eChTmOcmoMpUV63YuFVBOucj05hC6zzPVSd44yowBF1omVwmh5aUpI1iyWAUJFKYsLUNu33eSXZOKniDaP1fq/wiRCA/OQ56Ltarkej8LRUKu/GPgU+ALWwsbULnq3Ui6B2OIB+mfnTJx5FR78VUsbsfxx2cgaGTxsLGq04x3CzhxRnxEDEza35E6ME19gLhy8DQRcJKWm1hH+h/YcvW7jqJGBBFQUuG7LPXEtiu+eQgbsupk0KU8NRjvOj3EGOW+1OuxKtCpZOMbi0aZwoP9aEG0WsximYOphTmiHQJlbcHUMZ6QUWTcnuTZIY+9TbN9PwDp4u8geYkhcl+RWQzea94AI6lUF8bPqKsQA3F90otTP3NxSH1I9giuwj7BA0xKkkxC9G3AAbGmJ8HhjiRwlENorwVECmpPxpswVm+rrq+ZCHpaNI9om7fdWk657tc9wmRInnLn0IeTCL06cqlY7XPGU9Gu8wUa8HOkqE+fetkxK4rvWrUpZAT8aYdya0P1plos1R+9JIxnfiWUgmiADoS4vG/HwtxBqsVtMDs6gPytfK1xqcxkOy0WYL6OVw32jLQsiSwDjjNwiyU+S/AwRdhuPIW7eip7Hy7TvF2LPJZFLo="
+									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk5NDYxNjIwMiwKICAicHJvZmlsZUlkIiA6ICJjMjhhNmI5NjUwNmE0NTVlODBkZTRhNWRjMzc2NDViNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJzdXJpbmdfaWNlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E2Mjk5MDhhZDY4NmNiMjIyMjZiZjdlYjRjMDRiYTRjYmViNGVkZGYzZjQwM2Q5NzA2OTJmZjhjYjIxNWRhZGMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZDlkODJhYjE3ZmQ5MjAyMmRiZDRhODZjZGU0YzM4MmE3NTQwZTExN2ZhZTdiOWEyODUzNjU4NTA1YTgwNjI1IgogICAgfQogIH0KfQ=="
+								}]
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "RSG纪录保持者"
+			x: 0.0d
+			y: 0.5d
+		}
+	]
+	title: "太空电梯速通挑战"
+}

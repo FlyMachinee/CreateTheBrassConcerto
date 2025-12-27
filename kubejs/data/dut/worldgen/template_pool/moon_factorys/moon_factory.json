@@ -1,0 +1,303 @@
+{
+  "name": "dut:moon_factorys/moon_factory",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_wind_generator",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_oil_small",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_construction_site",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_bearing_1",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_culture",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_lube_oil",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_ethylene",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_woodchip_1",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_moon_solid",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_oil",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_chest",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_chest_1",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_chest_2",
+        "projection": "rigid",
+        "processors": "dut:random6"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_chest_3",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_chest_4",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_chest_5",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_andesite_alloy",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_biomass",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_andesite_alloy_1",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_3dprinter",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_cannon_factory",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_electron_tube",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_reaping_machine",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_stone_factory",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_diesel_engine",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_wood_chip_machine",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_bearing",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_andesite_parts",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_sequenced",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_stone_material",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_stone",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_geburah_metal_factory",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_factorys/moon_factory_certus_quartz",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "37FF8E49F08E5881"
+	group: "26D57AC038FF3413"
+	icon: "kubejs:shaft_furnace"
+	id: "37FF8E49F08E5881"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"你也许在疑惑多方块机器应当如何使用，蓝图中的标注是什么含义——那么这份乐谱应当会帮到你！"
+				""
+				"&e除此以外，你应当认真查看多方块机器的思索！&r"
+			]
+			id: "4FB506D4FED99495"
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "675E2EB706ABC846"
+				title: "欢迎来到工程之页！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: [
+				"多方块机器的许多配方需求会显示在配方的左下角！"
+				""
+				"比如：结构需求、应力需求（提供大于等于指定值的应力）、红石需求（提供指定范围强度的红石信号）、群系需求、维度需求、实体需求（检查实体数量、检查实体总血量、消耗若干实体、扣除实体的若干血量等）等"
+				""
+				"在鼠标移上去之后就会显示详情！"
+				"{image:kubejs:textures/ftb/entity_requirement.png width:100 height:50 align:center}"
+				"{image:kubejs:textures/ftb/biome_requirement.png width:100 height:50 align:center}"
+				"{image:kubejs:textures/ftb/rpm_requirement.png width:100 height:60 align:center}"
+				"{image:kubejs:textures/ftb/redstone_requirement.png width:100 height:60 align:center}"
+				"{image:kubejs:textures/ftb/dimension_requirement.png width:100 height:40 align:center}"
+			]
+			icon: "minecraft:structure_block"
+			id: "5CC1B824ED95A60F"
+			shape: "hexagon"
+			tasks: [{
+				id: "58D9E3A730E5B3FD"
+				title: "如何查看多方块机器的结构、群系、应力等需求？"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			description: [
+				"有时，多方块机器会有电力、流体、经验需求！&e这两种需求具有两种消耗模式，一种为总量消耗（只消耗一次），一种为每tick消耗&r"
+				""
+				"&a将鼠标移至机器的流体槽和电力槽上即可查看消耗，如果是tick消耗，那么会同时显示消耗总量（下图中的737280FE）和每tick消耗量（下图中的24576FE/t）&r"
+				"{image:kubejs:textures/ftb/electric_requirement.png width:100 height:100 align:center}"
+				"{image:kubejs:textures/ftb/fluid_requirement.png width:100 height:70 align:center}"
+			]
+			icon: "kubejs:electrolytic_cell"
+			id: "2752283572F49213"
+			shape: "hexagon"
+			tasks: [{
+				id: "23AA44B294C1B4C6"
+				title: "如何查看多方块机器的流体和电力需求？"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: 0.5d
+		}
+		{
+			description: [
+				"有时你会遇到多方块机器中消耗物品耐久或增加物品耐久的配方"
+				""
+				"你可以将鼠标挪至对应的物品上来查看耐久的消耗/增加量&e（一个特例是，货运火箭的耐久消耗并不会显示在配方中！）&r"
+				"{image:kubejs:textures/ftb/damage_requirement.png width:100 height:50 align:center}"
+			]
+			icon: "kubejs:satellite_station"
+			id: "1CA2E8E0E22128A6"
+			shape: "hexagon"
+			tasks: [{
+				id: "6B75E3599BA89698"
+				title: "如何查看多方块机器的耐久消耗配方？"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			description: [
+				"多方块机器的蓝图名字标注了它们所对应的朝向"
+				""
+				"&c需要注意的是：所有的多方块机器核心基本都具有方向性！核心方向应与结构匹配！&r"
+				""
+				"一般的命名格式为"
+				"“【CBC】多方块机器名字-蓝图朝向&r.nbt”"
+				""
+				"&e蓝图朝向标注为&r&a“全向”&r&e代表此多方块机器的蓝图可以旋转或是无需旋转而只需调整核心位置和朝向就可搭建不同方向的机器&r"
+				""
+				"&e蓝图朝向标注为&r&a“无方向”&r&e代表此多方块机器的蓝图无需/不能旋转，而核心的朝向是任意的&r"
+				""
+				"&a此外的蓝图朝向标注&r&e代表此多方块机器的蓝图不能旋转，需要根据所需的朝向来选择蓝图！&r"
+			]
+			icon: "create:schematic_and_quill"
+			id: "4AE6C73814FB22DA"
+			shape: "hexagon"
+			tasks: [{
+				id: "691141D76ED7EEEE"
+				title: "如何看懂蓝图的名字？"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"许多多方块的结构十分复杂——这时候你需要一些更方便的方式来检查多方块结构！"
+				""
+				"&a第一种方式：&r"
+				"&e你可以点击机器配方左下角的结构方块，在退出与JEI仪式的链接后，你就可以在世界中看到核心显示的结构虚影和错误标注——如果缺少了某些方块或是有错误的方块的话&r"
+				"{image:kubejs:textures/ftb/structure.png width:100 height:120 align:center}"
+				"{image:kubejs:textures/ftb/shadow.png width:100 height:100 align:center}"
+				"{@pagebreak}"
+				"&a第二种方式：&r"
+				"&e你可以将多方块核心放在副手——或是在装备了工程师护目镜的前提下看向多方块核心(必须选中该核心)并按下&r[Alt]&e——这同样可以显示结构虚影！&r"
+				"{image:kubejs:textures/ftb/offhand.png width:130 height:100 align:center}"
+				"{image:kubejs:textures/ftb/goggles.png width:130 height:88 align:center}"
+				"{@pagebreak}"
+				"&a第三种方式：&r"
+				"&e能够加载区块的多方块机器具有空转配方——在满足多方块结构的基本需求（可能包括电力消耗和维度、群系需求）后，机器便会进入空转状态，查看多方块机器的核心即可看到！&r"
+				"{image:kubejs:textures/ftb/empty_recipe.png width:140 height:100 align:center}"
+			]
+			icon: "create:crafting_blueprint"
+			id: "44BB55331CD79D87"
+			shape: "hexagon"
+			tasks: [{
+				id: "79D4D0F81D2959A9"
+				title: "如何查看多方块机器的结构是否搭建成功？"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"&a1. 我的合金炉为什么不输出液体到储罐？&r"
+				"&e因为合金炉、大型电解池、无限取液池、高炉等机器的工作方式是在对应区域产生流体方块，而非将流体输出到对应区域内的容器！&r"
+				""
+				"&a2. 我的巨型粉碎机/爆破压缩机的集装箱为何无法使用?&r"
+				"&e由于遗留的一些技术问题，蓝图炮在打印集装箱时可能出现错误——此时你需要拆除集装箱重新手动放置！&r"
+				""
+				"&a3. 我的高炉为什么不吸取氧气/其它流体？&r"
+				"&e首先，高炉必须处于结构完整且燃烧室超级加热的状态才能吸收氧气/其它流体；其次，你应当将流体在指定位置泵出到世界中变为流体方块！高炉只吸收来自世界中的流体方块！&r"
+				""
+				"&a3.为什么机器吞我材料？&r"
+				"&e当机器由于配方条件不满足（比如电力供应不足，结构被破坏等）而配方失败时，已经被消耗的材料不能被正确加工从而变为了无法再次利用的废料——因此你必须重新供应材料！&r"
+				""
+				"&a4.为什么打印自动化组装机、自动化构筑站时出现了问题？&r"
+				"&e由于Simibubi遗留的一些技术问题，蓝图炮在打印动力臂、注液器时可能出现错误——&r&6你只需要在打印时背过身去不观看它，就不会出现这样的问题！&r"
+			]
+			icon: "create:schematicannon"
+			id: "21D2C19AAECEEC59"
+			shape: "hexagon"
+			tasks: [{
+				id: "58D5FA5CE2E8B779"
+				title: "多方块机器常见问题"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: -0.5d
+		}
+	]
+	title: "工程之页"
+}

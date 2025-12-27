@@ -1,0 +1,9 @@
+#34D minecraft:deep_lukewarm_ocean
+#008 minecraft:desert
+#614 minecraft:eroded_badlands
+#79A minecraft:lukewarm_ocean
+#782 ad_astra:lunar_wastelands
+#3DC minecraft:plains
+#67B minecraft:savanna
+#51A minecraft:stony_shore
+#2B7 minecraft:warm_ocean

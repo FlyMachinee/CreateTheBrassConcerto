@@ -1,0 +1,2 @@
+summon armor_stand ~ ~ ~ {DisabledSlots:4144896,NoGravity:1b,Invulnerable:1b,Invisible:1b,ArmorItems:[{Count:1b,id:"stone",tag:{Items:[]}},{},{},{Count:1b,id:"kubejs:satellite",tag:{}}],Tags:["dut_satellite0","dut_satellite_up"],Pose:{Head:[0f,0f,0.001f]}}
+execute as @e[tag=dut_satellite0] at @s run function dut:satellite/set_satellite_1

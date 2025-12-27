@@ -1,0 +1,11 @@
+{
+    "type": "flowing_block",
+    "flowing": "#minecraft:lava",
+    "blocks_nearby": [
+        "kubejs:cryogen"
+    ],
+    "result": {
+        "type": "block",
+        "block": "minecraft:obsidian"
+    }
+}

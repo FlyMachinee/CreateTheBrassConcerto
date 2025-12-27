@@ -1,0 +1,9 @@
+{
+  "feature": "dut:slimeria/tree/mushroom_chromatic_large",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

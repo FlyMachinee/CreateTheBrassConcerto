@@ -1,0 +1,108 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "18033D11954266E2"
+	group: "62FF2E225AA2A9EF"
+	icon: "create:steam_engine"
+	id: "18033D11954266E2"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&a众所周知，在黄铜协奏曲中，九级锅炉是一种&r&6《前期要花很久才能搞出来的东西》&r&a——那么你最短能用时多久能开始实现它呢？&r"
+				""
+				"&e在生存模式，困难难度下，不得开启作弊，不得额外更改FTB模组设置，不得额外添加模组，不得调整随机刻速度，不得开启流动岩浆转化为岩浆源，不得使用蓝图炮打印带吸管的燃烧室，以建造一台可稳定运行的九级锅炉为结束标志&r"
+				""
+				"将存档向作者提交或在B站等平台提供全程录像，你的纪录将被放入此处！此挑战不接收时长超过30分钟的纪录！以下是通关列表:"
+				""
+				"&a1.ShiroishiKaori&r "
+				"-&6RSG&r&e-版本Beta0.7.0，00:13:48&r"
+			]
+			icon: "supplementaries:faucet"
+			id: "2BC66362B16161D4"
+			subtitle: "看到神秘评论绷不住了，于是有此挑战"
+			tasks: [{
+				id: "0BA27E8299EB355A"
+				title: "连接"
+				type: "checkmark"
+			}]
+			title: "《前期锅炉都要搞很久》"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"&6纪录信息：&r"
+				""
+				"&a规则：&r&eRSG&r "
+				""
+				"&a版本：&r&eBeta0.7.0&r"
+				""
+				"&a附加规则：&r&e无&r"
+				""
+				"&a时长：&r&e00:13:48&r"
+				""
+				"&a留言：&r&e你包前期做锅炉太难了😭😭😭&r"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:player_head"
+				tag: {
+					BlockEntityTag: {
+						id: "minecraft:skull"
+					}
+					SkullOwner: {
+						Id: [I;
+							533719536
+							809910477
+							-1875772702
+							-1149295883
+						]
+						Name: "ShiroishiKaori"
+						Properties: {
+							textures: [{
+								Signature: "UQIuIpRE/4h4mDK8C5mgbAbpyllvcODjnM3SLFpYSSuB+Ts9EivnQLdVCk22xlWSBVaOWJwNlnWumXijDa2veFFu0oQ0PL/Rupprt4EZJXhXxl4sIw5FatAMo4pH7C2I23gugBCn8o7+B3HNBrPzWfsMUWLdn+Iis34/cZynre0G1/4MYwOo2JbXSL/4zkyE1n4l/rR6Rehjc0oQxDWZH0RYwL1ovuhaSdO2E2q9a03m/hdhoBNFzxvNiOCMW0KD4DdDVjowvqvNRLKQafYxWa5N6oXxpw8s4izRBT3xCxavRp0GQX+GgoGNqsolGQonpGHe7+i1GFD/VlHBJO2Zzc1s7iWwDVsgJ1oL+ZWyt4M2YnlUmUXKgVOnXXrbsUTYT2HuQ/PvEbZwBD3yX0ZDwAFVS/gWlMMWGzZeCL5qJ8p6h+zzSDBAPSmxNpwNDad8/uVCzsxOBZRh7158YdaFbOISiRRTMqhy7KUtBHkFqUM9ncKfebDBplltdf6ssZLaULo0nhtqStbMjBQI81sciHrTJihvLJe27NWQt+Xd9+1B2KGVUwGNvbjWx39WD47Vmm509C8G84NEMnYJd/gcl8tkbC+QpKXc/HQCpZg2+kWgfW6zeQs2o1yJWn8X+QpZA9ItEK/6RZPYmY1uVRa3GsPVgbBJQI07NE5cZz329Qs="
+								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2NjIzODU3NTI0MSwKICAicHJvZmlsZUlkIiA6ICIxZmNmZTlmMDMwNDY0MGNkOTAzMWZhZTJiYjdmMjJmNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaGlyb2lzaGlLYW9yaSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iNzBkNmQ4Njg3OWM3NDMyZWYxZDgwOGJiZDczY2E4Mzc0YTBjY2E4Y2U1MDY1OTFhOWUyOWYyMjg1MjMxNWY1IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="
+							}]
+						}
+					}
+				}
+			}
+			id: "59452E3FE8C4AE81"
+			size: 1.25d
+			tasks: [{
+				id: "712C173F0BFA5A21"
+				item: {
+					Count: 1
+					id: "minecraft:player_head"
+					tag: {
+						BlockEntityTag: {
+							id: "minecraft:skull"
+						}
+						SkullOwner: {
+							Id: [I;
+								533719536
+								809910477
+								-1875772702
+								-1149295883
+							]
+							Name: "ShiroishiKaori"
+							Properties: {
+								textures: [{
+									Signature: "UQIuIpRE/4h4mDK8C5mgbAbpyllvcODjnM3SLFpYSSuB+Ts9EivnQLdVCk22xlWSBVaOWJwNlnWumXijDa2veFFu0oQ0PL/Rupprt4EZJXhXxl4sIw5FatAMo4pH7C2I23gugBCn8o7+B3HNBrPzWfsMUWLdn+Iis34/cZynre0G1/4MYwOo2JbXSL/4zkyE1n4l/rR6Rehjc0oQxDWZH0RYwL1ovuhaSdO2E2q9a03m/hdhoBNFzxvNiOCMW0KD4DdDVjowvqvNRLKQafYxWa5N6oXxpw8s4izRBT3xCxavRp0GQX+GgoGNqsolGQonpGHe7+i1GFD/VlHBJO2Zzc1s7iWwDVsgJ1oL+ZWyt4M2YnlUmUXKgVOnXXrbsUTYT2HuQ/PvEbZwBD3yX0ZDwAFVS/gWlMMWGzZeCL5qJ8p6h+zzSDBAPSmxNpwNDad8/uVCzsxOBZRh7158YdaFbOISiRRTMqhy7KUtBHkFqUM9ncKfebDBplltdf6ssZLaULo0nhtqStbMjBQI81sciHrTJihvLJe27NWQt+Xd9+1B2KGVUwGNvbjWx39WD47Vmm509C8G84NEMnYJd/gcl8tkbC+QpKXc/HQCpZg2+kWgfW6zeQs2o1yJWn8X+QpZA9ItEK/6RZPYmY1uVRa3GsPVgbBJQI07NE5cZz329Qs="
+									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2NjIzODU3NTI0MSwKICAicHJvZmlsZUlkIiA6ICIxZmNmZTlmMDMwNDY0MGNkOTAzMWZhZTJiYjdmMjJmNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaGlyb2lzaGlLYW9yaSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iNzBkNmQ4Njg3OWM3NDMyZWYxZDgwOGJiZDczY2E4Mzc0YTBjY2E4Y2U1MDY1OTFhOWUyOWYyMjg1MjMxNWY1IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="
+								}]
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "RSG纪录保持者"
+			x: 0.0d
+			y: 2.5d
+		}
+	]
+	title: "锅炉速通挑战"
+}

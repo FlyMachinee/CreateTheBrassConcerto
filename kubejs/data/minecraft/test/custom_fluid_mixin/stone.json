@@ -1,0 +1,10 @@
+{
+    "jei_only": false,
+    "type": "block_transform",
+    "flowing": "#minecraft:lava",
+    "block_to_transform": "minecraft:water",
+    "result": {
+        "type": "block",
+        "block": "minecraft:smooth_basalt"
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "name": "block.kubejs.redstone_radar",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/redstone_radar/redstone_radar"
+        },
+        "running": {
+            "block": "kubejs:machine/redstone_radar/redstone_radar"
+        },
+        "errored": {
+            "block": "kubejs:machine/redstone_radar/redstone_radar"
+        },
+        "paused": {
+            "block": "kubejs:machine/redstone_radar/redstone_radar"
+        },
+        "shape":[[0.07,0.07,0.07,0.93,0.5,0.93]]
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.chunkloader",
+            "color": "green"
+        }
+    ],
+    "processor": {
+        "type": "custommachinery:machine",
+        "cooldown": 1
+    },
+    "components": [
+        {
+            "type": "custommachinery:chunkload",
+            "radius": 1
+        },
+        {
+            "type": "custommachinery:redstone",
+            "powertopause": 16
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 50,
+            "mode":"both",
+            "id": "tank",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": ["kubejs:kibibyte"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 50,
+            "mode":"both",
+            "id": "tank1",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": ["kubejs:mebibyte"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "position_data",
+            "mode": "both",
+            "variant": "custommachinery:filter",
+            "whitelist": true,
+            "filter": [
+                "kubejs:position_data"
+            ],
+            "locked": false
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "text": "block.kubejs.redstone_radar",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 47,
+            "id": "position_data",
+            "texture": "kubejs:textures/gui/pos_data_slot.png"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+summon armor_stand ~ ~ ~ {DisabledSlots:4144896,NoGravity:1b,Invulnerable:1b,Invisible:1b,ArmorItems:[{Count:1b,id:"stone",tag:{Items:[]}},{},{},{Count:1b,id:"kubejs:carrier_rocket",tag:{}}],Tags:["dut_carrier_rocket0","dut_carrier_rocket_up"],Pose:{Head:[0f,0f,0.001f]}}
+execute as @e[tag=dut_carrier_rocket0] at @s run function dut:carrier_rocket/set_rocket_1

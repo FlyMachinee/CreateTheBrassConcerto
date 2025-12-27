@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 8.0,
+  "amountMin": 1.0,
+  "biomeWhitelist": "minecraft:is_overworld",
+  "icon": {
+    "item": "createdieselgenerators:crude_oil_bucket"
+  },
+  "name": "{\"translate\":\"kubejs.vein_id.crude_oil\"}",
+  "placement": {
+    "salt": 189335,
+    "separation": 16,
+    "spacing": 64
+  },
+  "priority": 5
+}

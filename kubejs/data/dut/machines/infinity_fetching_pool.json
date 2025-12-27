@@ -1,0 +1,163 @@
+{
+    "name": "block.kubejs.infinity_fetching_pool",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/infinity_fetching_pool"
+        },
+        "running": {
+            "block": "kubejs:machine/infinity_fetching_pool"
+        },
+        "errored": {
+            "block": "kubejs:machine/infinity_fetching_pool"
+        },
+        "paused": {
+            "block": "kubejs:machine/infinity_fetching_pool"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.multiblock_mech",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.multiblock_mech1",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:item",
+            "id": "filter",
+            "mode": "both",
+            "variant": "custommachinery:filter",
+            "locked": false,
+            "whitelist": true,
+            "filter": [
+                "#dut_create:infinity_fluid_bucket"
+            ]
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 1000,
+            "id": "fluid",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": [ "kubejs:hydrofluid"],
+            "whitelist": true,
+            "config":{
+                "default": "none"
+            }
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 14400,
+            "maxInput": 1440,
+            "maxOutput": 1440,
+            "mode": "input",
+            "id": "fe",
+            "config": {
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade1",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade2",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 110,
+            "y": 75,
+            "id": "upgrade1",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 128,
+            "y": 75,
+            "id": "upgrade2",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:energy",
+            "id": "fe",
+            "x": 50,
+            "y": 20
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 30,
+            "id": "filter",
+            "texture": "kubejs:textures/gui/filter_slot.png"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        },
+        {
+            "text": "block.kubejs.infinity_fetching_pool",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        }
+    ],
+    "jei": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:energy",
+            "id": "fe",
+            "x": 50,
+            "y": 20
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 30,
+            "id": "filter",
+            "texture": "kubejs:textures/gui/filter_slot.png"
+        },
+        {
+            "text": "block.kubejs.infinity_fetching_pool",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        }
+    ]
+}

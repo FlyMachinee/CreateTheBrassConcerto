@@ -1,0 +1,3 @@
+#010 minecraft:forest
+#706 minecraft:savanna_plateau
+#421 minecraft:stony_peaks

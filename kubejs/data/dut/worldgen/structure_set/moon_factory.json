@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spread_type": "linear",
+    "salt": 7278678,
+    "spacing": 8,
+    "separation": 4
+  },
+  "structures": [
+    {
+      "structure": "dut:moon_factory",
+      "weight": 1
+    }
+  ]
+}

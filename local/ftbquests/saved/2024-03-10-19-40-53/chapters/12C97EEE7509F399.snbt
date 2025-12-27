@@ -1,0 +1,156 @@
+{
+	consume_items: true
+	default_hide_dependency_lines: true
+	default_quest_shape: "rsquare"
+	default_repeatable_quest: true
+	filename: "12C97EEE7509F399"
+	group: "13182EA939D9B58C"
+	icon: "minecraft:barrier"
+	id: "12C97EEE7509F399"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["70292FD3035C9590"]
+			description: [
+				"这里只售卖那些永恒的东西——"
+				"我们讨厌修理和损坏，"
+				"我们唾弃有限和短暂，"
+				"赞美无尽永恒！"
+			]
+			id: "3F868A9BBEC762C8"
+			subtitle: "刹那永恒"
+			tasks: [{
+				id: "59E69642301B72B7"
+				title: "欢迎来到永恒领域！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F868A9BBEC762C8"]
+			icon: {
+				Count: 1b
+				id: "cuisinedelight:cuisine_skillet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "67AD5A80593B6AD0"
+			rewards: [{
+				id: "3AABEF20822DDA3C"
+				item: {
+					Count: 1b
+					id: "cuisinedelight:cuisine_skillet"
+					tag: {
+						Damage: 0
+						Unbreakable: 1b
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "06FD5AF403D95F4D"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "永恒锅"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3F868A9BBEC762C8"]
+			icon: {
+				Count: 1b
+				id: "create:red_sand_paper"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "4F75E76D2182199E"
+			rewards: [{
+				id: "2B1A05D3B152D98B"
+				item: {
+					Count: 1b
+					id: "create:red_sand_paper"
+					tag: {
+						Damage: 0
+						Unbreakable: 1b
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4300624D7E6BB88D"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "永恒砂纸"
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3F868A9BBEC762C8"]
+			icon: {
+				Count: 1b
+				id: "expatternprovider:infinity_cell"
+				tag: {
+					record: {
+						"#c": "ae2:i"
+						id: "minecraft:cobblestone"
+					}
+				}
+			}
+			id: "2086EA80FAB43822"
+			rewards: [{
+				id: "2A3ECB2D1FFBB965"
+				item: {
+					Count: 1b
+					id: "expatternprovider:infinity_cell"
+					tag: {
+						record: {
+							"#c": "ae2:i"
+							id: "minecraft:cobblestone"
+						}
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "16D9CB271FA0F9A6"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "无限圆石单元"
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3F868A9BBEC762C8"]
+			icon: "storagedrawers:creative_storage_upgrade"
+			id: "471D1B2E47D70109"
+			rewards: [{
+				id: "4D00E997259CC5E9"
+				item: "storagedrawers:creative_storage_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "62331CD9C525EF53"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "无量"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3F868A9BBEC762C8"]
+			id: "7F1EC0D9FC9CAF82"
+			title: "永恒"
+			x: 2.0d
+			y: 0.0d
+		}
+	]
+	title: "永恒商店"
+}

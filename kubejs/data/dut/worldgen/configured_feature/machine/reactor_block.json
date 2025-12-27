@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:simple_block",
+    "config": {
+        "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+                {
+                    "data": {
+                        "Name": "minecraft:bedrock"
+                    },
+                    "weight": 19
+                },
+                {
+                    "data": {
+                        "Name": "minecraft:sculk"
+                    },
+                    "weight": 7
+                },
+                {
+                    "data": {
+                        "Name": "minecraft:moss_block"
+                    },
+                    "weight": 1
+                },
+                {
+                    "data": {
+                        "Name": "minecraft:sculk_catalyst"
+                    },
+                    "weight": 3
+                },
+                {
+                    "data": {
+                        "Name": "minecraft:lava"
+                    },
+                    "weight": 3
+                },
+                {
+                    "data": {
+                        "Name": "kubejs:covariant_heat"
+                    },
+                    "weight": 1
+                }
+            ]
+        }
+    }
+}

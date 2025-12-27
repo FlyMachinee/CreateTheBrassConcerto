@@ -1,0 +1,6 @@
+{
+    "jei.create_optical.required_beam_type.gamma": "需要伽马射线",
+    "jei.create_optical.required_beam_type.radio": "需要无线电波",
+    "jei.create_optical.required_beam_type.visible": "需要可见光",
+    "jei.create_optical.required_beam_type.microwave": "需要微波"
+}

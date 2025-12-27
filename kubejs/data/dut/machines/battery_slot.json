@@ -1,0 +1,99 @@
+{
+    "name": "block.kubejs.battery_slot",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block":"kubejs:machine/battery_slot_with_battery"
+        },
+        "running": {
+            "block":"kubejs:machine/battery_slot_with_battery"
+        },
+        "errored": {
+            "block":"kubejs:machine/battery_slot"
+        },
+        "paused": {
+            "block":"kubejs:machine/battery_slot"
+        }
+    },
+    "components": [
+        {
+            "type": "custommachinery:energy",
+            "capacity": 4800000,
+            "maxInput": 288000,
+            "maxOutput": 288000,
+            "mode": "both",
+            "id": "slot1",
+            "config": {
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input",
+            "filter": [
+                "#dut_create:battery"
+            ],
+            "whitelist": true,
+            "mode": "input",
+            "variant": "custommachinery:energy"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output",
+            "filter": [
+                "#dut_create:battery"
+            ],
+            "whitelist": false,
+            "mode": "output",
+            "variant": "custommachinery:energy"
+        },
+        {
+            "type": "custommachinery:redstone",
+            "erroredpoweroutput": 14,
+            "comparatorinputtype": "custommachinery:energy",
+            "comparatorinputid": "input"
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:energy",
+            "x": 50,
+            "y": 30,
+            "width": 18,
+            "height": 36
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 30,
+            "id": "input",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 48,
+            "id": "output",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        },
+        {
+            "text": "block.kubejs.battery_slot",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        }
+    ]
+}

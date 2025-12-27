@@ -1,0 +1,8 @@
+{
+	chapter_groups: [
+		{ id: "13182EA939D9B58C", title: "DUT商店" }
+		{ id: "6EE28B02E436C44F", title: "生存核心" }
+		{ id: "674BA78EA6B62857", title: "机械动力-齿轮和传动杆" }
+		{ id: "65CB835C29C0BE3B", title: "冒险与魔法" }
+	]
+}

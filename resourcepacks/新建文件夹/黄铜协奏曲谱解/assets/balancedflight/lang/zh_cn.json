@@ -1,0 +1,6 @@
+{
+    "tooltip.balancedflight.flight_anchor": "飞行信标根据输入的应力转速来在附近提供创造模式飞行\n不过需要注意的是它只能在主世界使用",
+    "tooltip.balancedflight.ascended_flight_ring": "飞行戒指提供真正的自由飞行！\n你可以自由使用鞘翅飞行和创造模式飞行，并且不会再有摔落及撞击伤害！",
+    "item.balancedflight.ascended_flight_ring": "飞行戒指",
+    "block.balancedflight.flight_anchor": "飞行信标"
+}

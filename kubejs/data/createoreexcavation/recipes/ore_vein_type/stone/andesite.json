@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 12.0,
+  "amountMin": 2.0,
+  "biomeWhitelist": "dut_create:stone",
+  "icon": {
+    "item": "minecraft:andesite"
+  },
+  "name": "{\"translate\":\"block.minecraft.andesite\"}",
+  "placement": {
+    "salt": 15448576,
+    "separation": 12,
+    "spacing": 96
+  },
+  "priority": 0
+}

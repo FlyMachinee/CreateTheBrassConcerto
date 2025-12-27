@@ -1,0 +1,14 @@
+{
+    "feature": "dut:machine/reactor_block",
+    "placement": [
+        {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+                "type": "minecraft:not",
+                "predicate": {
+                    "type": "minecraft:replaceable"
+                }
+            }
+        }
+    ]
+}

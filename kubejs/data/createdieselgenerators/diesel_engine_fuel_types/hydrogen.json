@@ -1,0 +1,19 @@
+{
+  "fluid": "#forge:hydrogen",
+  "sound_speed": 0,
+  "normal": {
+    "speed": 96.0,
+    "strength": 49152.0,
+    "burn_rate": 48
+  },
+  "modular": {
+    "speed": 96.0,
+    "strength": 49152.0,
+    "burn_rate": 48
+  },
+  "huge": {
+    "speed": 128.0,
+    "strength": 73728.0,
+    "burn_rate": 64
+  }
+}

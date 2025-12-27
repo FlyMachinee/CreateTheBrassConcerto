@@ -1,0 +1,9 @@
+{
+  "feature": "dut:slimeria/tree/tree_chromatic_middle",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

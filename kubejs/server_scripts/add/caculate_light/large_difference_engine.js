@@ -1,0 +1,387 @@
+
+ServerEvents.recipes(event => {
+  const LargeDifferenceEngineStructure =
+  {
+    "type": "custommachinery:structure",
+    "pattern": [
+      [
+        " KKK ",
+        "CKEKC",
+        "CKKKC",
+        "MUUUM",
+        "GUUUG",
+        "GUUUG",
+        "GUUUG",
+        "MUUUM",
+        "CKKKC",
+        "CKEKC",
+        " KKK "
+      ],
+      [
+        "     ",
+        "FCGCF",
+        "LONOL",
+        "WUNUW",
+        "WUNUW",
+        "WUNUW",
+        "WUNUW",
+        "WXXXW",
+        "LBBBL",
+        "FCBCF",
+        "  m  "
+      ],
+      [
+        "     ",
+        " FHF ",
+        " HQH ",
+        " XXX ",
+        " HQH ",
+        " XXX ",
+        " HQH ",
+        "  H  ",
+        " BBB ",
+        " CCC ",
+        "     "
+      ],
+      [
+        "     ",
+        "  I  ",
+        " IQI ",
+        " Y Y ",
+        " IQI ",
+        " Y Y ",
+        " IQI ",
+        "  I  ",
+        " BBB ",
+        " YAY ",
+        " BBB "
+      ],
+      [
+        "     ",
+        "     ",
+        "  Q  ",
+        " Y Y ",
+        "  Q  ",
+        " Y Y ",
+        "  Q  ",
+        "     ",
+        " BBB ",
+        " AYA ",
+        " BBB "
+      ],
+      [
+        "     ",
+        "  I  ",
+        " IQI ",
+        " Y Y ",
+        " IQI ",
+        " Y Y ",
+        " IQI ",
+        "  I  ",
+        " BBB ",
+        " YAY ",
+        " BBB "
+      ],
+      [
+        "     ",
+        "     ",
+        "  R  ",
+        " Z Z ",
+        "  R  ",
+        " Z Z ",
+        "  R  ",
+        "     ",
+        "     ",
+        "     ",
+        "     "
+      ],
+      [
+        "     ",
+        "     ",
+        "  S  ",
+        "     ",
+        "  S  ",
+        "     ",
+        "  S  ",
+        "     ",
+        "     ",
+        "     ",
+        "     "
+      ]
+    ],
+    "keys": {
+      "A": "create:shaft",
+      "H": "create:depot",
+      "K": "design_decor:brass_boiler_structure",
+      "U": "create:brass_casing",
+      "O": "design_decor:industrial_iron_boiler",
+      "M": "create_things_and_misc:brass_brick_stairs",
+      "I": "#dut_create:brass_funnel",
+      "L": "design_decor:brass_boiler",
+      "Z": "design_decor:industrial_gear",
+      "X": "create_connected:encased_chain_cogwheel",
+      "Q": "design_decor:ochrum_crushing_wheel",
+      "W": "design_decor:copper_railing",
+      "E": "design_decor:brass_boiler_large",
+      "F": "create_things_and_misc:brass_brick_slab[type=bottom]",
+      "G": "create_things_and_misc:brass_brick_slab[type=top]",
+      "C": "create_things_and_misc:brass_bricks",
+      "N": "create:gearbox",
+      "Y": "create:cogwheel",
+      "S": "design_decor:andesite_floodlight",
+      "B": "create:encased_chain_drive",
+      "R": "design_decor:industrial_gear_large"
+    },
+    "jei": true
+  }
+  const LargeDifferenceEngineStress = {
+    "type": "custommachinery:contraption",
+    "mode": "input",
+    "speed": 64
+  }
+  function LargeDifferenceEngineFluid(fluid, amount, mode) {
+    return ({
+      "type": "custommachinery:fluid",
+      "mode": mode,
+      "fluid": fluid,
+      "amount": amount
+    })
+  }
+  function LargeDifferenceEngineItem(item, amount) {
+    return ({
+      "type": "custommachinery:durability",
+      "mode": "output",
+      "item": item,
+      "amount": amount
+    })
+  }
+  function LargeDifferenceEngineFluidPerTick(fluid, mode, amount) {
+    return ({
+      "type": "custommachinery:fluid_per_tick",
+      "mode": mode,
+      "fluid": fluid,
+      "amount": amount
+    })
+  }
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 20,
+    "priority": 10,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineStress,
+      LargeDifferenceEngineFluidPerTick("kubejs:kibibyte", "output", 128)
+    ],
+  }).id("dut_create:large_difference_engine/common_1")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 20,
+    "priority": 10,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineStress,
+      LargeDifferenceEngineFluidPerTick("kubejs:mebibyte", "output", 64)
+    ],
+  }).id("dut_create:large_difference_engine/common_0")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 20,
+    "priority": 11,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineStress,
+      LargeDifferenceEngineFluidPerTick("kubejs:mebibyte", "output", 128),
+      LargeDifferenceEngineFluidPerTick("kubejs:kibibyte", "output", 128)
+    ],
+  }).id("dut_create:large_difference_engine/common")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 8,
+    "priority": 10,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineStress,
+      LargeDifferenceEngineFluid("kubejs:gibibyte", 1, "output")
+    ],
+  }).id("dut_create:large_difference_engine/common_gib")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 20,
+    "priority": 12,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineStress,
+      LargeDifferenceEngineFluidPerTick("kubejs:pressurized_steam", "input", 10),
+      LargeDifferenceEngineFluidPerTick("kubejs:mebibyte", "output", 256),
+      LargeDifferenceEngineFluidPerTick("kubejs:kibibyte", "output", 256)
+    ],
+  }).id("dut_create:large_difference_engine/steam")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 8,
+    "priority": 16,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineStress,
+      LargeDifferenceEngineFluidPerTick("kubejs:pressurized_steam", "input", 10),
+      LargeDifferenceEngineFluidPerTick("kubejs:gibibyte", "output", 1)
+    ],
+  }).id("dut_create:large_difference_engine/steam1")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 1,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:kibibyte", 1, "input"),
+      LargeDifferenceEngineItem("kubejs:tin_hard_disk", 1)
+    ],
+  }).id("dut_create:large_difference_engine/tin")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 2,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:kibibyte", 8, "input"),
+      LargeDifferenceEngineItem("kubejs:tin_hard_disk", 8)
+    ],
+  }).id("dut_create:large_difference_engine/tin_1")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 20,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:kibibyte", 1024, "input"),
+      LargeDifferenceEngineItem("kubejs:tin_hard_disk", 1024)
+    ],
+  }).id("dut_create:large_difference_engine/tin_2")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 20,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:mebibyte", 1, "input"),
+      LargeDifferenceEngineItem("kubejs:tin_hard_disk", 1024)
+    ],
+  }).id("dut_create:large_difference_engine/tin_3")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 1,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:mebibyte", 32, "input"),
+      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 32)
+    ],
+  }).id("dut_create:large_difference_engine/aluminum")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 2,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:mebibyte", 64, "input"),
+      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 64)
+    ],
+  }).id("dut_create:large_difference_engine/aluminum_1")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 21,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:mebibyte", 1024, "input"),
+      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 1024)
+    ],
+  }).id("dut_create:large_difference_engine/aluminum_2")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 20,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:gibibyte", 1, "input"),
+      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 1024)
+    ],
+  }).id("dut_create:large_difference_engine/aluminum_3")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 1,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:gibibyte", 1, "input"),
+      LargeDifferenceEngineItem("kubejs:brass_hard_disk", 1)
+    ],
+  }).id("dut_create:large_difference_engine/brass")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 2,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:gibibyte", 8, "input"),
+      LargeDifferenceEngineItem("kubejs:brass_hard_disk", 8)
+    ],
+  }).id("dut_create:large_difference_engine/brass_1")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:large_difference_engine",
+    "time": 1,
+    "priority": 25,
+    "hidden": true,
+    "error": true,
+    "requirements": [
+      LargeDifferenceEngineStructure,
+      LargeDifferenceEngineFluid("kubejs:gibibyte", 1024, "input"),
+      LargeDifferenceEngineItem("kubejs:brass_hard_disk", 1024)
+    ],
+  }).id("dut_create:large_difference_engine/brass_2")
+})

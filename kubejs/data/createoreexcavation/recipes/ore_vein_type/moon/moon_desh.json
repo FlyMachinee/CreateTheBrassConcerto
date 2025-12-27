@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 10.0,
+  "amountMin": 3.0,
+  "biomeWhitelist": "dut_create:moon",
+  "icon": {
+    "item": "ad_astra:moon_desh_ore"
+  },
+  "name": "{\"translate\":\"kubejs.vein_id.moon_desh\"}",
+  "placement": {
+    "salt": 456786791,
+    "separation": 24,
+    "spacing": 32
+  },
+  "priority": 1
+}

@@ -1,0 +1,66 @@
+[
+    {
+        "matchItems": [
+            "iceandfire:armor_silver_metal_helmet",
+            "iceandfire:armor_copper_metal_helmet",
+            "create_sa:copper_helmet",
+            "create_sa:zinc_helmet",
+            "minecraft:leather_helmet",
+            "minecraft:chainmail_helmet",
+            "minecraft:golden_helmet",
+            "minecraft:iron_helmet",
+            "iceandfire:silver_helmet",
+            "createloveandwar:tungsten_helmet",
+            "minecraft:diamond_helmet"
+        ],
+        "resultItems": "create_sa:brass_helmet"
+    },
+    {
+        "matchItems": [
+            "iceandfire:armor_silver_metal_chestplate",
+            "iceandfire:armor_copper_metal_chestplate",
+            "create_sa:copper_chestplate",
+            "create_sa:zinc_chestplate",
+            "minecraft:leather_chestplate",
+            "minecraft:chainmail_chestplate",
+            "minecraft:golden_chestplate",
+            "minecraft:iron_chestplate",
+            "iceandfire:silver_chestplate",
+            "createloveandwar:tungsten_chestplate",
+            "minecraft:diamond_chestplate"
+        ],
+        "resultItems": "create_sa:brass_chestplate"
+    },
+    {
+        "matchItems": [
+            "iceandfire:armor_silver_metal_leggings",
+            "iceandfire:armor_copper_metal_leggings",
+            "create_sa:copper_leggings",
+            "create_sa:zinc_leggings",
+            "minecraft:leather_leggings",
+            "minecraft:chainmail_leggings",
+            "minecraft:golden_leggings",
+            "minecraft:iron_leggings",
+            "iceandfire:silver_leggings",
+            "createloveandwar:tungsten_leggings",
+            "minecraft:diamond_leggings"
+        ],
+        "resultItems": "create_sa:brass_leggings"
+    },
+    {
+        "matchItems": [
+            "iceandfire:armor_silver_metal_boots",
+            "iceandfire:armor_copper_metal_boots",
+            "create_sa:copper_boots",
+            "create_sa:zinc_boots",
+            "minecraft:leather_boots",
+            "minecraft:chainmail_boots",
+            "minecraft:golden_boots",
+            "minecraft:iron_boots",
+            "iceandfire:silver_boots",
+            "createloveandwar:tungsten_boots",
+            "minecraft:diamond_boots"
+        ],
+        "resultItems": "create_sa:brass_boots"
+    }
+]

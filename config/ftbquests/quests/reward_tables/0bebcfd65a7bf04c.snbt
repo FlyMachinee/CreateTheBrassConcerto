@@ -1,0 +1,14 @@
+{
+	id: "0BEBCFD65A7BF04C"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ item: "kubejs:emergency_industrial_platform" }
+		{ item: "kubejs:emergency_industrial_platform_block" }
+		{ item: "kubejs:emergency_industrial_platform_dark" }
+		{ item: "kubejs:emergency_industrial_platform_dark_block" }
+		{ item: "kubejs:emergency_industrial_platform_lime" }
+		{ item: "kubejs:emergency_industrial_platform_lime_block" }
+	]
+	title: "工业平台"
+}

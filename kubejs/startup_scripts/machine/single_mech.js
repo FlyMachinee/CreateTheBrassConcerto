@@ -1,0 +1,61 @@
+StartupEvents.registry('block', event => {
+	//Syntax : event.create("namespace:block_id", "custommachinery").machine("namespace:machine_id)
+	event.create("kubejs:emergency_industrial_platform", "custommachinery")
+		.machine("dut:emergency_industrial_platform")
+	event.create("kubejs:emergency_industrial_platform_block", "custommachinery")
+		.machine("dut:emergency_industrial_platform_block")
+	event.create("kubejs:emergency_industrial_platform_lime", "custommachinery")
+		.machine("dut:emergency_industrial_platform_lime")
+	event.create("kubejs:emergency_industrial_platform_lime_block", "custommachinery")
+		.machine("dut:emergency_industrial_platform_lime_block")
+	event.create("kubejs:emergency_industrial_platform_dark", "custommachinery")
+		.machine("dut:emergency_industrial_platform_dark")
+	event.create("kubejs:emergency_industrial_platform_dark_block", "custommachinery")
+		.machine("dut:emergency_industrial_platform_dark_block")
+	event.create("kubejs:emergency_industrial_platform_space", "custommachinery")
+		.machine("dut:emergency_industrial_platform_space")
+	event.create("kubejs:battery_slot", "custommachinery")
+		.machine("dut:battery_slot")
+	event.create("kubejs:culture_bin", "custommachinery")
+		.machine("dut:culture_bin")
+	event.create("kubejs:filling_machine", "custommachinery")
+		.machine("dut:filling_machine")
+	event.create("kubejs:emptying_machine", "custommachinery")
+		.machine("dut:emptying_machine")
+	event.create("kubejs:anti_warden_bomb", "custommachinery")
+		.machine("dut:anti_warden_bomb")
+	event.create("kubejs:redstone_radar", "custommachinery")
+		.machine("dut:redstone_radar")
+	event.create("kubejs:cap_reaping_machine", "custommachinery")
+		.machine("dut:cap_reaping_machine")
+	event.create("kubejs:stem_reaping_machine", "custommachinery")
+		.machine("dut:stem_reaping_machine")
+})
+
+StartupEvents.registry('block', event => {
+	//太阳能板
+	event.create("solar_panel", "cardinal")
+		.glassSoundType()
+		.box(4, 0, 4, 12, 8, 12, true)
+		.viewBlocking(true)
+		.tagBlock('create:wrench_pickup')
+		.noValidSpawns(true)
+		.suffocating(false)
+		.notSolid()
+		.defaultCutout()
+		.blockEntity(info => {
+			info.attachCapability(CapabilityBuilder.ENERGY.customBlockEntity()
+				.canExtract(() => true)
+				.getEnergyStored(i => 60)
+				.getMaxEnergyStored(i => 60)
+				.extractEnergy((be, i, sim) => {
+					let { level, blockPos } = be
+					let block = level.getBlock(blockPos)
+					if ((level.day || block.biomeId == "ad_astra:orbit") && block.up.canSeeSky) {
+						return 60
+					}
+					return 0
+				})
+			)
+		})
+})

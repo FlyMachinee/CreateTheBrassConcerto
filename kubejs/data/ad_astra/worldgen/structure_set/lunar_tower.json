@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "ad_astra:lunar_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "frequency":0.0,
+    "salt": 1460175004,
+    "spacing": 4096,
+    "separation": 2048,
+    "type": "minecraft:random_spread"
+  }
+}

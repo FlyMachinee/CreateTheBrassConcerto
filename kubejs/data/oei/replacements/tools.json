@@ -1,0 +1,85 @@
+[
+    {
+        "matchItems": [
+            "createoreexcavation:vein_finder"
+        ],
+        "resultItems": "kubejs:scanner"
+    },
+    {
+        "matchItems": [
+            "minecraft:stone_pickaxe",
+            "iceandfire:copper_pickaxe",
+            "iceandfire:silver_pickaxe",
+            "create_sa:copper_pickaxe",
+            "create_sa:zinc_pickaxe",
+            "minecraft:iron_pickaxe",
+            "minecraft:golden_pickaxe",
+            "createloveandwar:tungsten_pickaxe",
+            "minecraft:diamond_pickaxe",
+            "create_sa:blazing_pickaxe"
+        ],
+        "resultItems": "create_sa:brass_pickaxe"
+    },
+    {
+        "matchItems": [
+            "iceandfire:copper_axe",
+            "iceandfire:silver_axe",
+            "create_sa:copper_axe",
+            "create_sa:zinc_axe",
+            "minecraft:stone_axe",
+            "minecraft:iron_axe",
+            "minecraft:golden_axe",
+            "createloveandwar:tungsten_axe",
+            "minecraft:diamond_axe",
+            "create_sa:blazing_axe"
+        ],
+        "resultItems": "create_sa:brass_axe"
+    },
+    {
+        "matchItems": [
+            "minecraft:wooden_hoe",
+            "minecraft:stone_hoe",
+            "iceandfire:copper_hoe",
+            "iceandfire:silver_hoe",
+            "create_sa:copper_hoe",
+            "create_sa:zinc_hoe",
+            "minecraft:iron_hoe",
+            "minecraft:golden_hoe",
+            "createloveandwar:tungsten_hoe",
+            "minecraft:diamond_hoe"
+        ],
+        "resultItems": "create_sa:brass_hoe"
+    },
+    {
+        "matchItems": [
+            "minecraft:wooden_sword",
+            "minecraft:golden_sword",
+            "minecraft:stone_sword",
+            "iceandfire:copper_sword",
+            "iceandfire:silver_sword",
+            "create_sa:copper_sword",
+            "create_sa:zinc_sword",
+            "minecraft:iron_sword",
+            "createloveandwar:tungsten_sword",
+            "minecraft:diamond_sword",
+            "create_sa:blazing_cleaver"
+        ],
+        "resultItems": "create_sa:brass_sword"
+    },
+    {
+        "matchItems": [
+            "minecraft:iron_shovel",
+            "minecraft:wooden_shovel",
+            "minecraft:stone_shovel",
+            "iceandfire:copper_shovel",
+            "iceandfire:silver_shovel",
+            "create_sa:copper_shovel",
+            "create_sa:zinc_shovel",
+            "minecraft:golden_shovel",
+            "createloveandwar:tungsten_shovel",
+            "minecraft:diamond_shovel",
+            "create_sa:blazing_shovel"
+        ],
+        "resultItems": "create_sa:brass_shovel"
+    }
+]

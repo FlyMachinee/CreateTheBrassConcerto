@@ -1,0 +1,11 @@
+{
+	chapter_groups: [
+		{ id: "26D57AC038FF3413", title: "史莱姆的乐谱-技巧与指南" }
+		{ id: "6EA46263F86F561F", title: "第一乐章-啮合之音" }
+		{ id: "6B818C6F92D84205", title: "第二乐章-钢铁之血" }
+		{ id: "05CDF1EA7F8CFC5D", title: "第三乐章-群星伊始" }
+		{ id: "12064763B96B71BC", title: "第四乐章-(施工中...)" }
+		{ id: "13182EA939D9B58C", title: "中场休息" }
+		{ id: "62FF2E225AA2A9EF", title: "星空名人堂" }
+	]
+}

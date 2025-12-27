@@ -1,0 +1,43 @@
+const MultiBlockRecipe = {
+	'kubejs:blueprint_builder': ['dut_create:blueprint_builder/alloy_furnace'],
+	'kubejs:trading_station': ['dut_create:trading_station/coin/in/coin_copper'],
+	"kubejs:large_difference_engine": ['dut_create:large_difference_engine/common'],
+	"kubejs:electron_tube_computer": ['dut_create:electron_tube_computer/common'],
+	"kubejs:space_elevator_controller": ["dut_create:space_elevator_controller/empty"],
+	"kubejs:launch_pad_controller": ["dut_create:launch_pad_controller/empty"],
+	"kubejs:satellite_station": ["dut_create:satellite_station/empty"],
+	'kubejs:airdrop_station': ["dut_create:airdrop_station/empty"],
+	"kubejs:condenser": ['dut_create:condenser/overworld/air_fluid_liquefaction'],
+	"kubejs:hydropress": ["dut_create:hydropress/get_fluid"],
+	"kubejs:blasting_compressor": ['blasting_compressor/coal_block'],
+	"kubejs:alloy_furnace": ["dut_create:alloy_furnace/industrial_iron"],
+	"kubejs:huge_crusher": ["dut_create:huge_crusher/fluid"],
+	"kubejs:shaft_furnace": ["dut_create:shaft_furnace/desh"],
+	"kubejs:infinity_fetching_pool": ["dut_create:infinity_fetching_pool/fluid"],
+	"kubejs:electrolytic_cell": ['dut_create:electrolytic_cell/water'],
+	'kubejs:electro_hydro_resonant_tower': ['dut_create:electro_hydro_resonant_tower/electro_hydro'],
+	"kubejs:assembling_machine": ["dut_create:assembling_machine/circuit_board"],
+	"kubejs:construction_station": ["dut_create:construction_station/lime_circuit_board"]
+}
+const $CustomMachineRenderer = Java.loadClass('fr.frinn.custommachinery.client.render.CustomMachineRenderer')
+const $GogglesItem = Java.loadClass('com.simibubi.create.content.equipment.goggles.GogglesItem')
+PlayerEvents.tick(event => {
+	let Item = event.player.offHandItem
+	if (!Item.hasTag('dut_create:multiblock_display')) { return }
+	if (event.level.time & 10 != 0) { return }
+	else {
+		$CustomMachineRenderer.addBlocksRenderById(MultiBlockRecipe[Item.id][0], 1000, false)
+	}
+})
+PlayerEvents.tick(event => {
+	if (!$GogglesItem.isWearingGoggles(event.player)) { return }
+	let viewBlock = event.player.rayTrace(event.player.getAttributeValue("forge:block_reach") + 1, true).block
+	if (!viewBlock.hasTag('dut_create:multiblock_display')) { return }
+	if (!Client.isAltDown()) {
+		if (event.level.time & 10 != 0) {
+			event.player.setStatusMessage(Text.translate("kubejs.message.multblock_display"))
+		}
+		return
+	}
+	$CustomMachineRenderer.addBlocksRenderById(MultiBlockRecipe[viewBlock.id][0], 24000, false)
+})

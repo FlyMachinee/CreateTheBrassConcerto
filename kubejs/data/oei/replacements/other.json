@@ -1,0 +1,193 @@
+[
+    {
+        "matchItems": [
+            "create_sa:steam_engine"
+        ],
+        "resultItems": "create:precision_mechanism"
+    },
+    {
+        "matchItems": [
+            "create_sa:hydraulic_engine"
+        ],
+        "resultItems": "kubejs:mechanical_core"
+    },
+    {
+        "matchItems": [
+            "create_sa:heat_engine"
+        ],
+        "resultItems": "kubejs:electric_gear"
+    },
+    {
+        "matchItems": [
+            "createaddition:biomass_pellet"
+        ],
+        "resultItems": "createaddition:biomass"
+    },
+    {
+        "matchItems": [
+            "create:red_sand_paper"
+        ],
+        "resultItems": "create:sand_paper"
+    },
+    {
+        "matchItems": [
+            "immersive_aircraft:engine"
+        ],
+        "resultItems": "create:steam_engine"
+    },
+    {
+        "matchItems": [
+            "immersive_aircraft:boiler"
+        ],
+        "resultItems": "create:fluid_tank"
+    },
+    {
+        "matchItems": [
+            "immersive_aircraft:hull"
+        ],
+        "resultItems": "kubejs:mechanical_core"
+    },
+    {
+        "matchItems": [
+            "immersive_aircraft:sail"
+        ],
+        "resultItems": "create:white_sail"
+    },
+    {
+        "matchItems": [
+            "immersive_aircraft:propeller"
+        ],
+        "resultItems": "create:propeller"
+    },
+    {
+        "matchItems": [
+            "waystones:warp_stone",
+            "waystones:warp_dust"
+        ],
+        "resultItems": "kubejs:electro_hydro_capacitor"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:robot_dog_bubblegum_skin",
+            "createloveandwar:robot_dog_racing_skin",
+            "createloveandwar:robot_dog_valkyrie_skin"
+        ],
+        "resultItems": "createloveandwar:tungsten"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:polymer_ingot"
+        ],
+        "resultItems": "kubejs:polymer_ingot"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:polymer_sheet"
+        ],
+        "resultItems": "kubejs:polymer_sheet"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:duraplas_ingot"
+        ],
+        "resultItems": "kubejs:duraplas_ingot"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:duraplas_sheet"
+        ],
+        "resultItems": "kubejs:duraplas_sheet"
+    },
+    {
+        "matchItems": [
+            "ad_astra:iron_plate"
+        ],
+        "resultItems": "create:iron_sheet"
+    },
+    {
+        "matchItems": [
+            "createaddition:iron_rod"
+        ],
+        "resultItems": "ad_astra:iron_rod"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:propellant_sheet",
+            "createloveandwar:pistol_casing",
+            "createloveandwar:rifle_casing",
+            "createloveandwar:heavy_rifle_casing",
+            "createloveandwar:steel_cup",
+            "createloveandwar:filled_pistol_casing",
+            "createloveandwar:filled_rifle_casing",
+            "createloveandwar:filled_heavy_rifle_casing",
+            "iceandfire:bestiary",
+            "iceandfire:manuscript",
+            "create_connected:inventory_bridge",
+            "vintageimprovements:sulfur_block",
+            "vintageimprovements:sulfur_chunk",
+            "vintageimprovements:sulfur",
+            "waystones:warp_plate"
+        ],
+        "resultItems": "minecraft:air"
+    },
+    {
+        "matchItems": [
+            "vintageimprovements:redstone_module"
+        ],
+        "resultItems": "create:wrench"
+    },
+    {
+        "matchItems": [
+            "sophisticatedbackpacks:stack_upgrade_tier_3"
+        ],
+        "resultItems": "sophisticatedbackpacks:stack_upgrade_tier_2"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:pistol_bullet",
+            "createloveandwar:rifle_bullet",
+            "createloveandwar:heavy_rifle_bullet"
+        ],
+        "resultItems": "createloveandwar:caseless_bullet"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:pistol_bullet_soft",
+            "createloveandwar:rifle_bullet_soft"
+        ],
+        "resultItems": "createloveandwar:caseless_bullet_soft"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:pistol_bullet_ap",
+            "createloveandwar:rifle_bullet_ap"
+        ],
+        "resultItems": "createloveandwar:caseless_bullet_ap"
+    },
+    {
+        "matchItems": [
+            "vintageimprovements:aluminum_sheet"
+        ],
+        "resultItems": "kubejs:aluminum_sheet"
+    },
+    {
+        "matchItems": [
+            "vintageimprovements:sulfur"
+        ],
+        "resultItems": "createloveandwar:sulfur"
+    },
+    {
+        "matchItems": [
+            "sophisticatedbackpacks:stack_upgrade_tier_2",
+            "sophisticatedbackpacks:stack_upgrade_tier_3"
+        ],
+        "resultItems": "sophisticatedbackpacks:stack_upgrade_tier_1"
+    },
+    {
+        "matchItems": [
+            "create:powdered_obsidian"
+        ],
+        "resultItems": "minecraft:obsidian"
+    }
+    
+]

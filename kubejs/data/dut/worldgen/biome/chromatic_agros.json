@@ -1,0 +1,177 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.75,
+  "effects": {
+    "fog_color": 16424161,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 10551172,
+    "water_color": 16548551,
+    "water_fog_color": 16608954,
+    "grass_color": 16558299,
+    "particle": {
+      "options": {
+        "type": "cherry_leaves"
+      },
+      "probability": 0.00090
+    }
+  },
+  "features": [
+    [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface",
+      "dut:slimeria/lake_water_surface",
+      "dut:slimeria/lake_slime_surface"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:fossil_lower",
+      "minecraft:fossil_upper"
+    ],
+    [
+      "minecraft:forest_rock"
+    ],
+    [],
+    [
+      "dut:slimeria/coal_lower",
+      "dut:slimeria/redstone_block_lower",
+      "dut:slimeria/redstone_block_upper",
+      "dut:slimeria/packed_mud_lower",
+      "dut:slimeria/packed_mud_upper",
+      "dut:slimeria/moss",
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:underwater_magma",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
+    ],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "dut:slimeria/moss",
+      "minecraft:lush_caves_ceiling_vegetation",
+      "minecraft:cave_vines",
+      "minecraft:lush_caves_clay",
+      "minecraft:rooted_azalea_tree",
+      "minecraft:glow_lichen",
+      "minecraft:patch_berry_bush",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:seagrass_deep",
+      "minecraft:seagrass_simple",
+      "dut:slimeria/tree_chromatic",
+      "minecraft:fossil_lower",
+      "minecraft:flower_forest_flowers",
+      "minecraft:flower_cherry",
+      "dut:patch_strophar"
+    ],
+    []
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:frog",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 500
+      },
+      {
+        "type": "minecraft:rabbit",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 200
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:creeper",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:cod",
+        "maxCount": 6,
+        "minCount": 3,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:salmon",
+        "maxCount": 6,
+        "minCount": 3,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:pufferfish",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:tropical_fish",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 1
+      }
+    ]
+  },
+  "temperature": 0.5
+}

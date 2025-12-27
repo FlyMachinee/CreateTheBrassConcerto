@@ -1,0 +1,13 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "72E96633A44DA34A"
+	group: "05CDF1EA7F8CFC5D"
+	icon: "ad_astra:moon_globe"
+	id: "72E96633A44DA34A"
+	order_index: 5
+	quest_links: [ ]
+	quests: [ ]
+	subtitle: ["地球很大，但也很小"]
+	title: "章末小结-因为宇宙就在眼前"
+}

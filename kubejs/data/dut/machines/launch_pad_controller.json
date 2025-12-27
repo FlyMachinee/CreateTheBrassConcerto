@@ -1,0 +1,208 @@
+{
+    "name": "block.kubejs.launch_pad_controller",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/launch_pad_controller"
+        },
+        "running": {
+            "block": "kubejs:machine/launch_pad_controller"
+        },
+        "errored": {
+            "block": "kubejs:machine/launch_pad_controller"
+        },
+        "paused": {
+            "block": "kubejs:machine/launch_pad_controller"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.multiblock_mech",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.multiblock_mech1",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.chunkloader",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:chunkload",
+            "radius": 2
+        },
+        {
+            "type": "custommachinery:redstone",
+            "powertopause": 1
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 32000,
+            "id": "radiator",
+            "maxInput": 4000,
+            "maxOutput": 4000,
+            "filter": [
+                "kubejs:cryogen"
+            ],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "navigate_data",
+            "mode": "input",
+            "filter": [
+                "#dut_create:navigate_data"
+            ],
+            "whitelist": true,
+            "locked": false,
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "empty_data",
+            "mode": "output",
+            "filter": [
+                "kubejs:navigate_data_empty"
+            ],
+            "whitelist": true,
+            "locked": false,
+            "config": {
+                "default": "output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "position_data",
+            "mode": "both",
+            "variant": "custommachinery:filter",
+            "whitelist": true,
+            "filter": [
+                "kubejs:position_data"
+            ],
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "box",
+            "mode": "input",
+            "whitelist": true,
+            "filter": [
+                "kubejs:parts_box"
+            ],
+            "locked": false,
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "fuel",
+            "mode": "input",
+            "locked": false,
+            "whitelist": true,
+            "filter": [
+                "kubejs:fuel_tank"
+            ],
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:button",
+            "x": 104,
+            "y": 70,
+            "id": "player",
+            "texture": "kubejs:textures/gui/rocket_button.png",
+            "texture_hovered": "kubejs:textures/gui/rocket_button_hovered.png",
+            "texture_toogle":"kubejs:textures/gui/rocket_button_toogle.png",
+            "texture_toogle_hovered":"kubejs:textures/gui/rocket_button_toogle_hovered.png",
+            "toggle": true,
+            "tooltips": {
+                "text": "kubejs.tooltip.launcher_pad_controller_buttom_tooltips",
+                "color": "yellow"
+            },
+            "width": 48,
+            "height": 18,
+            "text": {
+                "text": "kubejs.tooltip.launcher_pad_controller_buttom",
+                "color": "white"
+            }
+        },
+        {
+            "text": "block.kubejs.launch_pad_controller",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 47,
+            "y": 20,
+            "id": "radiator",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 48,
+            "id": "position_data",
+            "texture": "kubejs:textures/gui/pos_data_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 21,
+            "id": "navigate_data",
+            "texture": "kubejs:textures/gui/data_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 39,
+            "id": "box",
+            "texture": "kubejs:textures/gui/parts_box_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 57,
+            "id": "fuel",
+            "texture": "kubejs:textures/gui/fuel_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 75,
+            "id": "empty_data",
+            "texture": "kubejs:textures/gui/data_slot.png"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        }
+    ]
+}

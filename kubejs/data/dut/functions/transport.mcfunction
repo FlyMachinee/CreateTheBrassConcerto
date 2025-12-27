@@ -1,0 +1,9 @@
+execute if dimension overworld in ad_astra:earth_orbit run tp @s ~ -100 ~
+execute if dimension the_end in ad_astra:earth_orbit run tp @s ~ -100 ~
+execute if dimension the_nether in ad_astra:earth_orbit run tp @s ~ -100 ~
+execute if dimension ad_astra:moon in ad_astra:moon_orbit run tp @s ~ -100 ~
+execute if dimension ad_astra:mars in ad_astra:mars_orbit run tp @s ~ -100 ~
+execute if dimension ad_astra:glacio in ad_astra:glacio_orbit run tp @s ~ -100 ~
+execute if dimension ad_astra:mercury in ad_astra:mercury_orbit run tp @s ~ -100 ~
+execute if dimension ad_astra:venus in ad_astra:venus_orbit run tp @s ~ -100 ~
+execute if dimension dut:slimeria in dut:slimeria_orbit run tp @s ~ -100 ~

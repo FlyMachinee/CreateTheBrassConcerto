@@ -1,0 +1,19 @@
+{
+  "fluid": "#forge:natural_gas",
+  "sound_speed": 0,
+  "normal": {
+    "speed": 96.0,
+    "strength": 65536.0,
+    "burn_rate": 12
+  },
+  "modular": {
+    "speed": 96.0,
+    "strength": 65536.0,
+    "burn_rate": 12
+  },
+  "huge": {
+    "speed": 128.0,
+    "strength": 294912.0,
+    "burn_rate": 20
+  }
+}

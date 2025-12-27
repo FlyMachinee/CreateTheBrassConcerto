@@ -1,0 +1,5 @@
+#1A6 dut:chromatic_agros
+#02C dut:nitrolithic_shore
+#3DC minecraft:plains
+#534 dut:spore_jungle
+#5E9 dut:thalassgel

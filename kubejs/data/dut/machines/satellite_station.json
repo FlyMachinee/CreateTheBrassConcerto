@@ -1,0 +1,536 @@
+{
+    "name": "block.kubejs.satellite_station",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/satellite_station"
+        },
+        "running": {
+            "block": "kubejs:machine/satellite_station"
+        },
+        "errored": {
+            "block": "kubejs:machine/satellite_station"
+        },
+        "paused": {
+            "block": "kubejs:machine/satellite_station"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.multiblock_mech",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.multiblock_mech1",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.chunkloader",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:chunkload",
+            "radius": 2
+        },
+        {
+            "type": "custommachinery:redstone",
+            "powertopause": 1
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluid",
+            "maxInput": 4000,
+            "maxOutput": 4000,
+            "filter": [
+                "ad_astra:hydrogen",
+                "kubejs:hydrogen"
+            ],
+            "whitelist": true,
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "radiator",
+            "mode": "input",
+            "filter": [
+                "kubejs:radiator"
+            ],
+            "whitelist": true,
+            "locked": false,
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "empty_data",
+            "mode": "input",
+            "filter": [
+                "kubejs:navigate_data_empty"
+            ],
+            "whitelist": true,
+            "locked": false,
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "box",
+            "mode": "input",
+            "whitelist": true,
+            "filter": [
+                "kubejs:brass_parts_box"
+            ],
+            "locked": false,
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "filter_data",
+            "mode": "both",
+            "variant": "custommachinery:filter",
+            "locked": false,
+            "whitelist": true,
+            "filter": [
+                "ad_astra:earth_globe",
+                "supplementaries:globe",
+                "supplementaries:globe_sepia",
+                "ad_astra:moon_globe",
+                "createoreexcavation:vein_atlas",
+                "supplementaries:slice_map",
+                "create:brass_ingot",
+                "kubejs:resonant_bacteria"
+            ],
+            "config": {
+                "default": "none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "module",
+            "mode": "both",
+            "locked": false,
+            "whitelist": true,
+            "filter": [
+                "kubejs:satellite_scanning_module",
+                "kubejs:satellite_scanning_module_local",
+                "kubejs:satellite_mining_module"
+            ],
+            "config": {
+                "default": "input",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "disk",
+            "mode": "both",
+            "locked": false,
+            "whitelist": true,
+            "filter": [
+                "kubejs:tin_hard_disk","kubejs:aluminum_hard_disk","kubejs:brass_hard_disk"
+            ],
+            "config": {
+                "default": "both",
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output1",
+            "mode": "output",
+            "filter": [
+                "kubejs:satellite"
+            ],
+            "whitelist": false,
+            "locked": false,
+            "config": {
+                "default": "output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output2",
+            "mode": "output",
+            "filter": [
+                "kubejs:satellite"
+            ],
+            "whitelist": false,
+            "locked": false,
+            "config": {
+                "default": "output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output3",
+            "mode": "output",
+            "filter": [
+                "kubejs:satellite"
+            ],
+            "whitelist": false,
+            "locked": false,
+            "config": {
+                "default": "output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output4",
+            "mode": "output",
+            "filter": [
+                "kubejs:satellite"
+            ],
+            "whitelist": false,
+            "locked": false,
+            "config": {
+                "default": "output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output5",
+            "mode": "output",
+            "filter": [
+                "kubejs:satellite"
+            ],
+            "whitelist": false,
+            "locked": false,
+            "config": {
+                "default": "output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "output6",
+            "mode": "output",
+            "filter": [
+                "kubejs:satellite"
+            ],
+            "whitelist": false,
+            "locked": false,
+            "config": {
+                "default": "output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade1",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default": "none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade2",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default": "none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade3",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default": "none",
+                "input": false,
+                "output": false
+            }
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "text": "block.kubejs.satellite_station",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 47,
+            "y": 20,
+            "id": "fluid",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 74,
+            "y": 21,
+            "id": "module",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 164,
+            "y": 21,
+            "id": "disk",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 21,
+            "id": "radiator",
+            "texture": "kubejs:textures/gui/radiator_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 39,
+            "id": "box",
+            "texture": "kubejs:textures/gui/parts_box_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 57,
+            "id": "empty_data",
+            "texture": "kubejs:textures/gui/data_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 75,
+            "id": "filter_data",
+            "texture": "kubejs:textures/gui/filter_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 74,
+            "y": 57,
+            "id": "output1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 92,
+            "y": 57,
+            "id": "output2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 110,
+            "y": 57,
+            "id": "output3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 128,
+            "y": 57,
+            "id": "output4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 146,
+            "y": 57,
+            "id": "output5",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 164,
+            "y": 57,
+            "id": "output6",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 101,
+            "y": 75,
+            "id": "upgrade1",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 75,
+            "id": "upgrade2",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 137,
+            "y": 75,
+            "id": "upgrade3",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        }
+    ],
+    "jei": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "text": "block.kubejs.satellite_station",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "text": "block.kubejs.satellite_station",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 47,
+            "y": 20,
+            "id": "fluid",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 74,
+            "y": 21,
+            "id": "module",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 164,
+            "y": 21,
+            "id": "disk",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 21,
+            "id": "radiator",
+            "texture": "kubejs:textures/gui/radiator_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 39,
+            "id": "box",
+            "texture": "kubejs:textures/gui/parts_box_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 57,
+            "id": "empty_data",
+            "texture": "kubejs:textures/gui/data_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 75,
+            "id": "filter_data",
+            "texture": "kubejs:textures/gui/filter_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 74,
+            "y": 57,
+            "id": "output1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 92,
+            "y": 57,
+            "id": "output2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 110,
+            "y": 57,
+            "id": "output3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 128,
+            "y": 57,
+            "id": "output4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 146,
+            "y": 57,
+            "id": "output5",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 164,
+            "y": 57,
+            "id": "output6",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        }
+    ]
+}

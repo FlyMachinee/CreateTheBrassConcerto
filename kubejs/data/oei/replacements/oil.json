@@ -1,0 +1,27 @@
+[
+    {
+        "matchItems": [
+            "createloveandwar:crude_oil_bucket",
+            "ad_astra:oil_bucket"
+        ],
+        "resultItems": "createdieselgenerators:crude_oil_bucket"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:polymer_bucket"
+        ],
+        "resultItems": "kubejs:polymer_bucket"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:duraplas_bucket"
+        ],
+        "resultItems": "kubejs:duraplas_bucket"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:diesel_bucket"
+        ],
+        "resultItems": "createdieselgenerators:diesel_bucket"
+    }
+]

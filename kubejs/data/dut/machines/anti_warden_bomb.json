@@ -1,0 +1,39 @@
+{
+    "name": "block.kubejs.anti_warden_bomb",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/anti_warden_bomb"
+        },
+        "running": {
+            "block": "kubejs:machine/anti_warden_bomb"
+        },
+        "errored": {
+            "block": "kubejs:machine/anti_warden_bomb"
+        },
+        "paused": {
+            "block": "kubejs:machine/anti_warden_bomb"
+        }
+    },
+    "components": [
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 4000,
+            "id": "fluid",
+            "maxInput": 1000,
+            "maxOutput": 1000,
+            "filter": [
+                "minecraft:water"
+            ],
+            "whitelist": true,
+            "locked":true,
+            "config": {
+                "default": "none",
+                "top":"input",
+                "input": true,
+                "output": false
+            }
+        }
+    ]
+}

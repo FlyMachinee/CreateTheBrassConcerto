@@ -1,0 +1,15 @@
+let $I18n = Java.loadClass("net.minecraft.client.resources.language.I18n")
+let textStack = new Stack()
+let textNow = []
+//{type:['basic','auto',''],key:xxx,start:xxx,x:xxx,y:,draw:'',keeptime:xxx}
+PlayerEvents.tick(event => {
+	let player = event.player
+	if (textNow==[]&&!textStack.isEmpty()){
+		textNow.push(textStack.pop())
+	}
+})
+PlayerEvents.inventoryChanged(event => {
+	if (event.item.id == "create:wrench") {
+
+	}
+})

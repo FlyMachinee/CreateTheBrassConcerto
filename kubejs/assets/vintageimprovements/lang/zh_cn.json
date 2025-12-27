@@ -1,0 +1,25 @@
+{
+    "item.vintageimprovements.sulfuric_acid_bucket": "桶装硫酸",
+    "vintageimprovements.gui.goggles.vacuumizing_mode": "减压反应",
+    "vintageimprovements.gui.goggles.pressurizing_mode": "加压反应",
+    "vintageimprovements.gui.goggles.current_mode": "机器操作模式：",
+    "vintageimprovements.jei.text.secondary_fluid_ingredient": "这个液体是一种副输入，需要向压缩机泵入它",
+    "vintageimprovements.jei.text.secondary_fluid_result": "这个液体是一种副产出，它将储存在压缩机中，需要进行排出",
+    "vintageimprovements.recipe.vacuumizing": "减压反应",
+    "vintageimprovements.recipe.pressurizing": "加压反应",
+    "block.vintageimprovements.helve_hammer": "动力锤",
+    "block.vintageimprovements.vacuum_chamber": "密封压缩机",
+    "block.vintageimprovements.sulfuric_acid": "硫酸",
+    "fluid.vintageimprovements.sulfur_dioxide": "二氧化硫",
+    "fluid.vintageimprovements.sulfur_trioxide": "三氧化硫",
+    "fluid.vintageimprovements.sulfuric_acid": "硫酸",
+    "vintageimprovements.recipe.assembly.hammering": "锻打",
+    "vintageimprovements.recipe.auto_smithing": "自动锻造",
+    "item.vintageimprovements.netherite_sheet": "下界合金板",
+    "item.vintageimprovements.recipe_card": "配方芯片", 
+	"item.vintageimprovements.incomplete_recipe_card": "未完成的配方芯片", 
+	"vintageimprovements.recipe_card.item_slot": "输入槽", 
+	"block.vintageimprovements.lathe": "车床", 
+    "block.vintageimprovements.laser": "激光器"
+
+}

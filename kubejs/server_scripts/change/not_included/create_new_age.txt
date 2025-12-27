@@ -1,0 +1,19 @@
+ServerEvents.recipes(event => {
+  //event.replaceInput({ input: '' },'','')
+  //event.remove({output: '',not:{mod:'kubejs'}})
+  //event.remove({id: ''})
+  //event.remove({input: ''})
+  //event.custom().id("dut_create:")
+  //event.remove({ mod: '' })
+  //event.remove({output: '',not:{mod:'kubejs'}})
+  //event.remove({output: '',not:{mod:'kubejs'}})
+  //event.remove({output: '',not:{mod:'kubejs'}})
+  //event.remove({output: '',not:{mod:'kubejs'}})
+  //
+  //材料替换
+  event.replaceInput({ input: 'create_new_age:copper_circuit' },'create_new_age:copper_circuit','kubejs:circuit_board')
+  event.replaceInput({ input: 'create_new_age:overcharged_iron' },'create_new_age:overcharged_iron_sheet','#forge:plates/iron')
+  event.replaceInput({ input: 'create_new_age:overcharged_gold' },'create_new_age:overcharged_golden_sheet','#forge:plates/gold')
+  event.replaceInput({ input: 'create_new_age:overcharged_iron' },'create_new_age:overcharged_iron','ae2:charged_certus_quartz_crystal')
+  event.replaceInput({ input: 'create_new_age:overcharged_gold' },'create_new_age:overcharged_gold','ae2:fluix_crystal')
+})

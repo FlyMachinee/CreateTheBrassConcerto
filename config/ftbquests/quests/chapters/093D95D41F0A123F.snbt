@@ -1,0 +1,13 @@
+{
+	always_invisible: true
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "093D95D41F0A123F"
+	group: "12064763B96B71BC"
+	icon: "create:tree_fertilizer"
+	id: "093D95D41F0A123F"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "变奏-生命会改变一切"
+}

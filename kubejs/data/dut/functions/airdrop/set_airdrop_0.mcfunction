@@ -1,0 +1,2 @@
+summon armor_stand ~ ~ ~ {DisabledSlots:4144896,NoGravity:1b,Invulnerable:1b,Invisible:1b,ArmorItems:[{Count:1b,id:"stone",tag:{Items:[]}},{},{},{Count:1b,id:"kubejs:airdrop",tag:{}}],Tags:["dut_airdrop0"],Pose:{Head:[180f,0f,0f]}}
+execute as @e[tag=dut_airdrop0] at @s run function dut:airdrop/set_airdrop_1

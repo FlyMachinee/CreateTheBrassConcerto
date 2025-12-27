@@ -1,0 +1,1 @@
+execute as @s at @s summon marker run function dut:particle/scan_0

@@ -1,0 +1,2378 @@
+{
+	consume_items: true
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "3897805C1DB58FED"
+	group: "26D57AC038FF3413"
+	icon: {
+		Count: 1
+		id: "kubejs:matrix_2"
+		tag: {
+			RGB: [
+				[
+					[
+						1
+						0
+					]
+					[
+						0
+						1
+					]
+				]
+				[
+					[
+						0
+						1
+					]
+					[
+						0
+						1
+					]
+				]
+				[
+					[
+						1
+						0
+					]
+					[
+						1
+						0
+					]
+				]
+			]
+			matrix: [
+				[
+					[
+						1
+						0
+					]
+					[
+						0
+						1
+					]
+				]
+				[
+					[
+						0
+						1
+					]
+					[
+						0
+						1
+					]
+				]
+				[
+					[
+						1
+						0
+					]
+					[
+						1
+						0
+					]
+				]
+			]
+		}
+	}
+	id: "3897805C1DB58FED"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "0D72FFA2CB894282"
+			tasks: [{
+				id: "6F32212D36A4E6F6"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								1
+								0
+							]
+							[
+								2
+								0
+							]
+						]]
+						matrix: [[
+							[
+								1
+								0
+							]
+							[
+								2
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Beta信息素"
+			x: -6.5d
+			y: -4.5d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "6BC63E12D2F48CD0"
+			tasks: [{
+				id: "065ADB4ECDB618B9"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								2
+								0
+							]
+							[
+								0
+								1
+							]
+						]]
+						matrix: [[
+							[
+								2
+								0
+							]
+							[
+								0
+								1
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Gamma信息素"
+			x: -5.5d
+			y: -4.5d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "2ABFA8113F7E9663"
+			tasks: [{
+				id: "0DED50C18787EC65"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								0
+								1
+							]
+							[
+								2
+								0
+							]
+						]]
+						matrix: [[
+							[
+								0
+								1
+							]
+							[
+								2
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Delta信息素"
+			x: -4.5d
+			y: -4.5d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "11C5DAA3969DB066"
+			tasks: [{
+				id: "234D95F27DEA22BD"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								-1
+								1
+							]
+							[
+								2
+								0
+							]
+						]]
+						matrix: [[
+							[
+								-1
+								1
+							]
+							[
+								2
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Alpha信息素"
+			x: -7.5d
+			y: -4.5d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "3EE839636A970FA6"
+			tasks: [{
+				id: "573F7BC84BB4CFB1"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								1
+								1
+							]
+							[
+								3
+								1
+							]
+						]]
+						matrix: [[
+							[
+								1
+								1
+							]
+							[
+								3
+								1
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Epsilon信息素"
+			x: -3.5d
+			y: -4.5d
+		}
+		{
+			description: [
+				"右边的这些信息素可以无需额外加工而直接获取"
+				""
+				"当然，如果你要通过加工获取的话，那我也没什么意见"
+			]
+			id: "02CB3A7B9D4EA096"
+			tasks: [{
+				id: "3C67CF5A47F51915"
+				title: "基础信息素"
+				type: "checkmark"
+			}]
+			x: -9.0d
+			y: -4.5d
+		}
+		{
+			description: [
+				"乐章和思索中的描述也许仍然不够解答你的疑惑，这就是为什么我为你准备了矩阵之页！"
+				""
+				"在这里，你可以看到："
+				"&e-关于矩阵的一些说明"
+				"&e-所有能够直接获取的信息素（基础信息素）"
+				"&e-所有能用于繁殖或转化微生物、繁殖或转化生物的信息素（生殖信息素）"
+				"&e-所有能用于生产基础资源的信息素（资源信息素）"
+				"&e-多方块机器工作所需要的信息素（生产信息素）"
+				"&e-一些常用的用于嬗变加工的信息素（媒介信息素）"
+				""
+				"..."
+			]
+			icon: {
+				Count: 1
+				id: "kubejs:matrix_2"
+				tag: {
+					RGB: [
+						[
+							[
+								1
+								0
+							]
+							[
+								0
+								1
+							]
+						]
+						[
+							[
+								0
+								1
+							]
+							[
+								0
+								1
+							]
+						]
+						[
+							[
+								1
+								0
+							]
+							[
+								1
+								0
+							]
+						]
+					]
+					matrix: [
+						[
+							[
+								1
+								0
+							]
+							[
+								0
+								1
+							]
+						]
+						[
+							[
+								0
+								1
+							]
+							[
+								0
+								1
+							]
+						]
+						[
+							[
+								1
+								0
+							]
+							[
+								1
+								0
+							]
+						]
+					]
+				}
+			}
+			id: "5E381CD01D49C503"
+			tasks: [{
+				id: "42EA8B02FEC9C253"
+				title: "基础信息素"
+				type: "checkmark"
+			}]
+			title: "矩阵与信息素"
+			x: -9.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5E381CD01D49C503"]
+			description: [
+				"&6指标：&r&e矩阵中的元素可以用“第i行第j列”来唯一定位（A_(i,j)，下划线代表下标），(i,j)就称为该元素的指标，一般规定第一个数为行指标，第二个数为列指标"
+				""
+				"&6方阵：&r&e如果一个矩阵的行数m与列n数相等，那么称为m阶方阵"
+				""
+				"&6对角线、反对角线：&r&e矩阵中行指标与列指标相同的元素称为对角元，它们的集合就是矩阵的对角线（从左上到右下）。而行指标与列指标之和为矩阵行数和列数相加+1的元素称为反对角元，它们的集合就是矩阵的反对角线（从右上到左下）"
+				""
+				"{@pagebreak}"
+				"&6上三角矩阵：&r&e对角线下方的元素均为0的矩阵，常用U（upper）来表示"
+				""
+				"&6对角矩阵：&r&e对角线以外的元素均为0的矩阵，常用D（diagonal）来表示"
+				""
+				"&6下三角矩阵：&r&e对角线上方的元素均为0的矩阵，常用L（lower）来表示"
+				""
+				"&6对称矩阵：&r&e各个元素沿对角线轴对称的方阵，或者说，A^T=A"
+				""
+				"&6可交换矩阵：&r&e如果两个矩阵A和B满足AB=BA，那么他们互为可交换矩阵&a（从矩阵乘法的定义容易看出，矩阵乘法不满足交换律）&r"
+			]
+			icon: {
+				Count: 1
+				id: "kubejs:matrix_2"
+				tag: {
+					matrix: [
+						[
+							[
+								1
+								-1
+							]
+							[
+								0
+								1
+							]
+						]
+						[
+							[
+								0
+								1
+							]
+							[
+								0
+								0
+							]
+						]
+						[
+							[
+								0
+								0
+							]
+							[
+								0
+								-1
+							]
+						]
+					]
+				}
+			}
+			id: "7800372D4BACA970"
+			tasks: [{
+				id: "189B96EB8DEC33D1"
+				title: "常用矩阵术语"
+				type: "checkmark"
+			}]
+			x: -7.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["7800372D4BACA970"]
+			description: [
+				"&6矩阵的记号：&r&e虽然没有硬性规定，但一般我们用大写字母来表示一个矩阵"
+				""
+				"&6单位矩阵：&r&e对角线元素均为1的对角方阵，常用I或者E来代指"
+				""
+				"&6零矩阵：&r&e元素均为0的矩阵，常用O来代指"
+				""
+				"&6转置：&r&e将矩阵沿对角线翻转的操作称为转置，得到的矩阵一般记为A^T（^表示上标）"
+				""
+				"&6反转置：&r&e将矩阵沿反对角线翻转的操作称为反转置，得到的矩阵我们记为A^iT（^表示上标）"
+				""
+				"&6初等行/列变换：&r&e如下操作称为初等行/列变换：1.交换某两行/列；2.将某一行/列乘以一个倍数后加到或减到另一行/列；3.将某一行/列乘上一个非零倍数&a（为了便于理解，此处将2、3拆开了。实际上，2、3可以合并为同一种操作）&r"
+			]
+			icon: {
+				Count: 1
+				id: "kubejs:matrix_2"
+				tag: {
+					matrix: [
+						[
+							[
+								1
+								1
+							]
+							[
+								1
+								0
+							]
+						]
+						[
+							[
+								1
+								0
+							]
+							[
+								-1
+								1
+							]
+						]
+						[
+							[
+								1
+								1
+							]
+							[
+								-1
+								1
+							]
+						]
+					]
+				}
+			}
+			id: "20834E950544C1F6"
+			tasks: [{
+				id: "052B821CBA414B43"
+				title: "常见矩阵与常见的矩阵操作"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: -6.0d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "1B5081BECF8BA44E"
+			tasks: [{
+				id: "3C174B244B99ECEA"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								1
+								-2
+							]
+							[
+								-5
+								3
+							]
+						]]
+						matrix: [[
+							[
+								1
+								-2
+							]
+							[
+								-5
+								3
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Zeta信息素"
+			x: -2.5d
+			y: -4.5d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "7C63304DF7FBCE8C"
+			tasks: [{
+				id: "67E17D43E23E5274"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								0
+								1
+							]
+							[
+								1
+								1
+							]
+						]]
+						matrix: [[
+							[
+								0
+								1
+							]
+							[
+								1
+								1
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Eta信息素"
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "4142627F6E9D148E"
+			tasks: [{
+				id: "1FF61F2B41E28049"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								1
+								2
+							]
+							[
+								5
+								3
+							]
+						]]
+						matrix: [[
+							[
+								1
+								2
+							]
+							[
+								5
+								3
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Theta信息素"
+			x: -0.5d
+			y: -4.5d
+		}
+		{
+			description: ["基础信息素之一，可以直接获得"]
+			id: "007AF3D2F66B6523"
+			tasks: [{
+				id: "5039590D7B09D058"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								1
+								-1
+							]
+							[
+								-1
+								1
+							]
+						]]
+						matrix: [[
+							[
+								1
+								-1
+							]
+							[
+								-1
+								1
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "Iota信息素"
+			x: 0.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["20834E950544C1F6"]
+			description: [
+				"&6前缀-正/顺/反/逆：&r&e分别表示原信息素本身/原信息素顺时针旋转90°/原信息素旋转180°/原信息素逆时针旋转90°；比如，逆-Alpha信息素表示将Alpha信息素逆时针旋转90°"
+				""
+				"&6便捷记号：&r&e我们习惯用大写字母来表示一个矩阵，而表示信息素时则可以用[A,B,C,D,...]的形式来表示！"
+			]
+			icon: {
+				Count: 1
+				id: "kubejs:matrix_2"
+				tag: {
+					matrix: [
+						[
+							[
+								1
+								-1
+							]
+							[
+								-1
+								1
+							]
+						]
+						[
+							[
+								-1
+								0
+							]
+							[
+								1
+								-1
+							]
+						]
+						[
+							[
+								0
+								0
+							]
+							[
+								0
+								0
+							]
+						]
+					]
+				}
+			}
+			id: "47B3B62007474FAF"
+			tasks: [{
+				id: "763F42737ACCD558"
+				title: "信息素常用术语"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: -6.0d
+		}
+		{
+			description: ["右边的这些信息素可以用于直接增殖或转化微生物、或是用于繁殖或转化某些生物"]
+			id: "4683366C65387E30"
+			tasks: [{
+				id: "0FE9DAFC995083BB"
+				title: "生殖信息素"
+				type: "checkmark"
+			}]
+			x: -9.0d
+			y: 1.5d
+		}
+		{
+			description: ["右边的这些信息素可以用于生产一些基础资源"]
+			id: "0C27405991A6DFD8"
+			tasks: [{
+				id: "74EEAA8F0E66D9EC"
+				title: "资源信息素"
+				type: "checkmark"
+			}]
+			x: -9.0d
+			y: -1.5d
+		}
+		{
+			description: ["右边的这些信息素可以用于维持多方块机器的正常运转"]
+			id: "42DA556A9A0B78ED"
+			tasks: [{
+				id: "0F24291A0BD19B5E"
+				title: "生产信息素"
+				type: "checkmark"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			description: ["右边的这些信息素常用于进行嬗变加工！"]
+			id: "01B7E61C8A2E28D8"
+			tasks: [{
+				id: "614AC99CB8D683A3"
+				title: "媒介信息素"
+				type: "checkmark"
+			}]
+			x: -9.0d
+			y: -3.0d
+		}
+		{
+			description: ["炫彩信息素可以用于增殖异彩原虫！"]
+			id: "64FF25964132B50B"
+			tasks: [{
+				id: "7CE2E18AF2257EBC"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [
+							[
+								[
+									1
+									0
+								]
+								[
+									0
+									1
+								]
+							]
+							[
+								[
+									0
+									1
+								]
+								[
+									0
+									1
+								]
+							]
+							[
+								[
+									1
+									0
+								]
+								[
+									1
+									0
+								]
+							]
+						]
+						matrix: [
+							[
+								[
+									1
+									0
+								]
+								[
+									0
+									1
+								]
+							]
+							[
+								[
+									0
+									1
+								]
+								[
+									0
+									1
+								]
+							]
+							[
+								[
+									1
+									0
+								]
+								[
+									1
+									0
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "炫彩信息素"
+			x: -7.5d
+			y: 1.5d
+		}
+		{
+			description: ["常信息素可以用于增殖杂菌！"]
+			id: "7FE9A42BEE2EDBC3"
+			tasks: [{
+				id: "2DBC212C777BC758"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [
+							[
+								[
+									1
+									-1
+								]
+								[
+									0
+									1
+								]
+							]
+							[
+								[
+									0
+									1
+								]
+								[
+									0
+									0
+								]
+							]
+							[
+								[
+									0
+									0
+								]
+								[
+									0
+									-1
+								]
+							]
+						]
+						matrix: [
+							[
+								[
+									1
+									-1
+								]
+								[
+									0
+									1
+								]
+							]
+							[
+								[
+									0
+									1
+								]
+								[
+									0
+									0
+								]
+							]
+							[
+								[
+									0
+									0
+								]
+								[
+									0
+									-1
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "常信息素"
+			x: -6.5d
+			y: 1.5d
+		}
+		{
+			description: ["末影信息素可以用于增殖魅影真菌！"]
+			id: "5E10AF3CF65DF1AC"
+			tasks: [{
+				id: "045B431607D2B494"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [
+							[
+								[
+									1
+									3
+								]
+								[
+									-3
+									1
+								]
+							]
+							[
+								[
+									-7
+									-11
+								]
+								[
+									11
+									7
+								]
+							]
+							[
+								[
+									13
+									17
+								]
+								[
+									-17
+									-13
+								]
+							]
+						]
+						matrix: [
+							[
+								[
+									1
+									3
+								]
+								[
+									-3
+									1
+								]
+							]
+							[
+								[
+									-7
+									-11
+								]
+								[
+									11
+									7
+								]
+							]
+							[
+								[
+									13
+									17
+								]
+								[
+									-17
+									-13
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "末影信息素"
+			x: -5.5d
+			y: 1.5d
+		}
+		{
+			description: [
+				"当进行左嬗变时，它能交换矩阵的两行"
+				"当进行右嬗变时，它能交换矩阵的两列"
+			]
+			id: "72B922749BB8ADCC"
+			tasks: [{
+				id: "1E2B902748D7EAC4"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								0
+								1
+							]
+							[
+								1
+								0
+							]
+						]]
+						matrix: [[
+							[
+								0
+								1
+							]
+							[
+								1
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "置换信息素"
+			x: -6.5d
+			y: -3.0d
+		}
+		{
+			description: ["红绿灯信息素可以用于高效生产钨！"]
+			id: "61C1FDD61657C8B6"
+			tasks: [{
+				id: "6B4E8A00EBCB9858"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [
+							[
+								[
+									3
+									7
+								]
+								[
+									0
+									0
+								]
+							]
+							[
+								[
+									0
+									-2
+								]
+								[
+									0
+									1
+								]
+							]
+						]
+						matrix: [
+							[
+								[
+									3
+									7
+								]
+								[
+									0
+									0
+								]
+							]
+							[
+								[
+									0
+									-2
+								]
+								[
+									0
+									1
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "红绿灯信息素"
+			x: -7.5d
+			y: -1.5d
+		}
+		{
+			description: ["顺-红绿灯信息素可以用于高效生产戴斯！"]
+			id: "4B9188BD405AB31F"
+			tasks: [{
+				id: "6B8072D64DC34C0A"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [
+							[
+								[
+									0
+									3
+								]
+								[
+									0
+									7
+								]
+							]
+							[
+								[
+									0
+									0
+								]
+								[
+									1
+									-2
+								]
+							]
+						]
+						matrix: [
+							[
+								[
+									0
+									3
+								]
+								[
+									0
+									7
+								]
+							]
+							[
+								[
+									0
+									0
+								]
+								[
+									1
+									-2
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "顺-红绿灯信息素"
+			x: -6.5d
+			y: -1.5d
+		}
+		{
+			description: ["蓝焰信息素可以用于将烈焰支原体转化为蓝焰衣原体！"]
+			id: "04CD8548BFC11525"
+			tasks: [{
+				id: "2D0BAAF8DEF633BE"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						matrix: [
+							[
+								[
+									0
+									1
+								]
+								[
+									1
+									0
+								]
+							]
+							[
+								[
+									-1
+									3
+								]
+								[
+									3
+									-1
+								]
+							]
+							[
+								[
+									3
+									-1
+								]
+								[
+									-1
+									3
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "蓝焰信息素"
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			description: ["炽信息素可以用于高效生产钢！"]
+			id: "426C508770AC5101"
+			tasks: [{
+				id: "7C5A129E2C4ECE3C"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [
+							[
+								[
+									2
+									3
+								]
+								[
+									3
+									2
+								]
+							]
+							[
+								[
+									0
+									-1
+								]
+								[
+									-1
+									0
+								]
+							]
+						]
+						matrix: [
+							[
+								[
+									2
+									3
+								]
+								[
+									3
+									2
+								]
+							]
+							[
+								[
+									0
+									-1
+								]
+								[
+									-1
+									0
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "炽信息素"
+			x: -5.5d
+			y: -1.5d
+		}
+		{
+			description: [
+				"你也许已经在使用缩链、相位叠加、嬗变等方式对信息素的矩阵进行操作时发现了一些特性——比如不会出现大于127或小于-128的数值"
+				""
+				"事实上，这是因为操作信息素时使用的加法、减法与乘法均是&e8位补码&r的"
+				""
+				"&6即，首先将a+128，b+128相加/相减/相乘，接着取除256的余数，然后如果值为128~255，则减去256&r"
+				""
+				"这就是为什么不会出现大于127或小于-128的数值"
+			]
+			icon: {
+				Count: 1
+				id: "kubejs:matrix_2"
+				tag: {
+					RGB: [
+						[
+							[
+								57
+								56
+							]
+							[
+								56
+								57
+							]
+						]
+						[
+							[
+								-63
+								-62
+							]
+							[
+								-62
+								-63
+							]
+						]
+					]
+					matrix: [
+						[
+							[
+								57
+								56
+							]
+							[
+								56
+								57
+							]
+						]
+						[
+							[
+								-63
+								-62
+							]
+							[
+								-62
+								-63
+							]
+						]
+					]
+				}
+			}
+			id: "6B45F4B6FDACB366"
+			size: 1.5d
+			tasks: [{
+				id: "1991C9E9431436CE"
+				title: "基础信息素"
+				type: "checkmark"
+			}]
+			title: "矩阵的加工"
+			x: -9.0d
+			y: -8.25d
+		}
+		{
+			description: ["它是(1,1)处的矩阵加法单位元"]
+			id: "5BEDF7DFE1F4FEFD"
+			tasks: [{
+				id: "5E447DC328383957"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						matrix: [[
+							[
+								1
+								0
+							]
+							[
+								0
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "(1,1)基底信息素"
+			x: -5.5d
+			y: -3.0d
+		}
+		{
+			description: ["它是(1,2)处的矩阵加法单位元"]
+			id: "01FFC2CB57174F26"
+			tasks: [{
+				id: "2EC63BF73D54F3E9"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						matrix: [[
+							[
+								0
+								1
+							]
+							[
+								0
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "(1,2)基底信息素"
+			x: -4.5d
+			y: -3.0d
+		}
+		{
+			description: ["它是(2,1)处的矩阵加法单位元"]
+			id: "214F636457D809F5"
+			tasks: [{
+				id: "65F69E10A12EC5DC"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						matrix: [[
+							[
+								0
+								0
+							]
+							[
+								1
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "(2,1)基底信息素"
+			x: -3.5d
+			y: -3.0d
+		}
+		{
+			description: ["它是(2,2)处的矩阵加法单位元"]
+			id: "4FA0A000EC91B100"
+			tasks: [{
+				id: "265C0A5036BA5C53"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						matrix: [[
+							[
+								0
+								0
+							]
+							[
+								0
+								1
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "(2,2)基底信息素"
+			x: -2.5d
+			y: -3.0d
+		}
+		{
+			description: [
+				"在进行嬗变时，I将矩阵变为自身——这平平无奇"
+				""
+				"但是，如果是2I，在进行嬗变时，相当于将矩阵与2做数乘"
+				""
+				"以此类推，可以使用nI将某个矩阵放大n倍"
+			]
+			id: "37DBD223CD643854"
+			tasks: [{
+				id: "57CB64C12CD57DBB"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								1
+								0
+							]
+							[
+								0
+								1
+							]
+						]]
+						matrix: [[
+							[
+								1
+								0
+							]
+							[
+								0
+								1
+							]
+						]]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "单位信息素"
+			x: -7.5d
+			y: -3.0d
+		}
+		{
+			description: ["乳信息素可以用于高效生产牛奶！"]
+			id: "425DFF7F8151354B"
+			tasks: [{
+				id: "5B8C26C035717034"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						matrix: [
+							[
+								[
+									-1
+									1
+								]
+								[
+									1
+									0
+								]
+							]
+							[
+								[
+									-1
+									1
+								]
+								[
+									-1
+									-1
+								]
+							]
+							[
+								[
+									3
+									-1
+								]
+								[
+									-1
+									-3
+								]
+							]
+						]
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			title: "乳信息素"
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			description: [
+				"RG相变可以将一个信息素的R相与G相交换位置。&e如果信息素仅有R相，那么将G相视为零矩阵&r"
+				""
+				"比如，使用&e[A,B,C]&r进行RG相变，结果为&a[B,A,C]&r"
+			]
+			id: "7C8A9AA93217B0D1"
+			tasks: [{
+				consume_items: false
+				id: "6211B2BAF4344554"
+				item: "kubejs:green_spore_bucket"
+				type: "item"
+			}]
+			title: "单链加工-RG相变"
+			x: -4.0d
+			y: -8.5d
+		}
+		{
+			description: [
+				"RB相变可以将一个信息素的R相与B相交换位置。&e如果信息素没有G相或B相，那么对应相视为零矩阵&r"
+				""
+				"比如，使用&e[A,B,C]&r进行RB相变，结果为&a[C,B,A]&r"
+			]
+			id: "5502855DB7173AA2"
+			tasks: [{
+				consume_items: false
+				id: "277344B9C59F9D84"
+				item: "kubejs:blue_spore_bucket"
+				type: "item"
+			}]
+			title: "单链加工-RB相变"
+			x: -4.0d
+			y: -7.5d
+		}
+		{
+			description: [
+				"轮换可以将一个信息素的所有相的位置向后移动一位（尾相变为R相），或者你也可以把它理解为将最后一相移动至R相"
+				""
+				"比如，使用&e[A,B,C,D,E]&r进行轮换，结果为&a[E,A,B,C,D]&r"
+			]
+			id: "5E10E4D80627037F"
+			tasks: [{
+				consume_items: false
+				id: "1B09B3C976AA2FD6"
+				item: "kubejs:red_spore_bucket"
+				type: "item"
+			}]
+			title: "单链加工-轮换"
+			x: -3.0d
+			y: -8.5d
+		}
+		{
+			description: [
+				"左嬗变可以将两个信息素逐相进行嬗变（进行矩阵乘法）。&e在嬗变时，第一个信息素仅使用其R相，分别与第二个信息素的每一相进行左乘&r"
+				""
+				"比如，使用&e[A,B,C]&r和&e[D,E,F]&r进行左嬗变，结果为&a[AD,AE,AF]&r"
+			]
+			id: "3445E04E0E7D9908"
+			tasks: [{
+				consume_items: false
+				id: "4425A00F3B55AF5C"
+				item: "kubejs:aeronos_spore_bucket"
+				type: "item"
+			}]
+			title: "多相加工-左嬗变"
+			x: -1.5d
+			y: -8.5d
+		}
+		{
+			description: [
+				"右嬗变可以将两个信息素逐相进行嬗变（进行矩阵乘法）。&e在嬗变时，第一个信息素仅使用其R相，分别与第二个信息素的每一相进行右乘&r"
+				""
+				"比如，使用&e[A,B,C]&r和&e[D,E,F]&r进行右嬗变，结果为&a[DA,EA,FA]&r"
+			]
+			id: "6CE96E684C0EF5CA"
+			tasks: [{
+				consume_items: false
+				id: "7BA22F9157A409D7"
+				item: "kubejs:strophar_spore_bucket"
+				type: "item"
+			}]
+			title: "多相加工-右嬗变"
+			x: -1.5d
+			y: -7.5d
+		}
+		{
+			description: [
+				"反相叠加可以将两个信息素逐相相减（进行矩阵减法）。&e如果两个信息素的相位数不同，空相将被视为零矩阵&r"
+				""
+				"比如，使用&e[A,B,C]&r和&e[D,E]&r进行反相叠加，结果为&a[A-D,B-E,C]&r"
+			]
+			id: "33912BE976C8A950"
+			tasks: [{
+				consume_items: false
+				id: "213985EBC5878BDC"
+				item: "kubejs:brown_mushroom_spore_bucket"
+				type: "item"
+			}]
+			title: "双链加工-反相叠加"
+			x: -7.5d
+			y: -7.5d
+		}
+		{
+			description: [
+				"正相叠加可以将两个信息素逐相叠加（进行矩阵加法）。&e如果两个信息素的相位数不同，空相将被视为零矩阵&r"
+				""
+				"比如，使用&e[A,B,C]&r和&e[D,E]&r进行正相叠加，结果为&a[A+D,B+E,C]&r"
+			]
+			id: "2A634B7AA07665FE"
+			tasks: [{
+				consume_items: false
+				id: "070EB9D722CBB039"
+				item: "kubejs:red_mushroom_spore_bucket"
+				type: "item"
+			}]
+			title: "双链加工-正相叠加"
+			x: -7.5d
+			y: -8.5d
+		}
+		{
+			description: [
+				"正缩链可以将一个信息素的R相与G相合并（进行矩阵加法）。&e如果信息素的相位数小于2，那么不会发生任何变化&r"
+				""
+				"比如，使用&e[A,B,C]&r进行正缩链，结果为&a[A+B,C]&r"
+			]
+			id: "25A62566BB44CB7A"
+			tasks: [{
+				consume_items: false
+				id: "132D96D16017C8F7"
+				item: "kubejs:cryogen_bucket"
+				type: "item"
+			}]
+			title: "单链加工-正缩链"
+			x: -5.0d
+			y: -8.5d
+		}
+		{
+			description: [
+				"反缩链可以将一个信息素的R相与G相合并（进行矩阵减法，G相减去R相）。&e如果信息素的相位数小于2，那么相当于对R相取反&r"
+				""
+				"比如，使用&e[A,B,C]&r进行反缩链，结果为&a[B-A,C]&r"
+			]
+			id: "7F75B37A38211200"
+			tasks: [{
+				consume_items: false
+				id: "6ACFC53A72BD5687"
+				item: "kubejs:saline_water_bucket"
+				type: "item"
+			}]
+			title: "单链加工-反缩链"
+			x: -5.0d
+			y: -7.5d
+		}
+		{
+			description: [
+				"并联可以将两个信息素合并"
+				""
+				"比如，使用&e[A,B,C]&r和&e[D,E]&r进行并联，结果为&a[A,B,C,D,E]&r"
+			]
+			id: "6E90605AA6570018"
+			tasks: [{
+				consume_items: false
+				id: "0B0B5F3E5D562875"
+				item: "kubejs:cola_puree_bucket"
+				type: "item"
+			}]
+			title: "双链加工-并链"
+			x: -6.5d
+			y: -8.5d
+		}
+		{
+			description: [
+				"当使用红色蘑菇方块时，操作为逐相转置；当使用棕色蘑菇方块时，操作为逐相反转置"
+				""
+				"逐相转置可以将一个信息素的每一个相做转置（进行矩阵转置）"
+				""
+				"比如，使用&e[A,B,C]&r进行逐相转置，结果为&a[A^T,B^T,C^T]&r"
+				""
+				"逐相反转置可以将一个信息素的每一个相做反转置（进行矩阵反转置）"
+				""
+				"比如，使用&e[A,B,C]&r进行逐相反转置，结果为&a[A^iT,B^iT,C^iT]&r"
+			]
+			id: "78031E4E9DD15B00"
+			tasks: [{
+				consume_items: false
+				id: "778D980DDE82C3AE"
+				item: "createdieselgenerators:ethanol_bucket"
+				type: "item"
+			}]
+			title: "多相加工-逐相转置与逐相反转置"
+			x: -0.5d
+			y: -8.5d
+		}
+		{
+			description: [
+				"右边的这些信息素可以用于信息化存储网络的创建与扩容等操作"
+				""
+				"&e需要注意的是，它们并不是唯一的——你只需要符合某些特定的规范，就可以制造出拥有对应功能的信息素！&r"
+			]
+			id: "0E8C9C368D27B06E"
+			tasks: [{
+				id: "232AD5A635480646"
+				title: "网络信息素"
+				type: "checkmark"
+			}]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			description: [
+				"数据化信息素用于创建一个信息化存储网络，其初始容量为108种材料，每种材料256个"
+				""
+				"当你已经拥有网络时，使用它不会产生任何效果"
+				""
+				"信息化存储网络的单种材料上限无法被扩展"
+				""
+				"&a规范码：&r&e110, 101, 119, 78, 101, 116, 40, 101, 118, 101, 110, 116, 46, 112, 108, 97, 121, 101, 114, 41&r"
+			]
+			id: "7652F8B2A24BD7BB"
+			tasks: [{
+				id: "63D01CE85F9F6D52"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						ascii: 1
+						display: {
+							Name: "{\"translate\":\"kubejs.matrix.netcreate\",\"italic\":false}"
+						}
+						matrix: [
+							[
+								[
+									-10
+									7
+								]
+								[
+									20
+									4
+								]
+							]
+							[
+								[
+									5
+									-12
+								]
+								[
+									17
+									7
+								]
+							]
+							[
+								[
+									-3
+									11
+								]
+								[
+									10
+									13
+								]
+							]
+							[
+								[
+									8
+									4
+								]
+								[
+									9
+									12
+								]
+							]
+							[
+								[
+									-7
+									2
+								]
+								[
+									15
+									8
+								]
+							]
+							[
+								[
+									6
+									-5
+								]
+								[
+									18
+									11
+								]
+							]
+							[
+								[
+									4
+									3
+								]
+								[
+									13
+									10
+								]
+							]
+							[
+								[
+									-9
+									1
+								]
+								[
+									19
+									9
+								]
+							]
+							[
+								[
+									11
+									-8
+								]
+								[
+									16
+									14
+								]
+							]
+							[
+								[
+									-2
+									6
+								]
+								[
+									14
+									7
+								]
+							]
+							[
+								[
+									-6
+									0
+								]
+								[
+									21
+									5
+								]
+							]
+							[
+								[
+									7
+									-11
+								]
+								[
+									22
+									6
+								]
+							]
+							[
+								[
+									12
+									-10
+								]
+								[
+									23
+									15
+								]
+							]
+							[
+								[
+									-1
+									9
+								]
+								[
+									24
+									8
+								]
+							]
+							[
+								[
+									-8
+									-4
+								]
+								[
+									25
+									17
+								]
+							]
+							[
+								[
+									0
+									-13
+								]
+								[
+									26
+									13
+								]
+							]
+							[
+								[
+									2
+									-1
+								]
+								[
+									27
+									3
+								]
+							]
+							[
+								[
+									-5
+									-2
+								]
+								[
+									28
+									21
+								]
+							]
+							[
+								[
+									1
+									-3
+								]
+								[
+									29
+									2
+								]
+							]
+							[
+								[
+									3
+									-6
+								]
+								[
+									30
+									9
+								]
+							]
+							[
+								[
+									-4
+									-7
+								]
+								[
+									31
+									18
+								]
+							]
+							[
+								[
+									9
+									-9
+								]
+								[
+									32
+									16
+								]
+							]
+							[
+								[
+									10
+									-14
+								]
+								[
+									33
+									23
+								]
+							]
+							[
+								[
+									13
+									-15
+								]
+								[
+									34
+									27
+								]
+							]
+							[
+								[
+									14
+									-16
+								]
+								[
+									35
+									29
+								]
+							]
+							[
+								[
+									15
+									-17
+								]
+								[
+									36
+									31
+								]
+							]
+							[
+								[
+									16
+									-18
+								]
+								[
+									37
+									33
+								]
+							]
+							[
+								[
+									17
+									-19
+								]
+								[
+									38
+									35
+								]
+							]
+							[
+								[
+									18
+									-20
+								]
+								[
+									39
+									37
+								]
+							]
+						]
+						no_copy: 1
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			x: -7.5d
+			y: 3.0d
+		}
+		{
+			description: [
+				"网络拓展信息素用于拓展一个信息化存储网络的维数，可以将其维数增加1"
+				""
+				"当你尚未拥有网络时，使用它不会产生任何效果"
+				""
+				"信息化存储网络的单种材料上限无法被扩展"
+				""
+				"&a规范码：&r&e101, 120, 112, 97, 110, 100, 78, 101, 116, 40, 101, 118, 101, 110, 116, 46, 112, 108, 97, 121, 101, 114, 41&r"
+			]
+			id: "28E793B834DA438D"
+			tasks: [{
+				id: "74AD44346F134040"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						ascii: 1
+						display: {
+							Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+						}
+						matrix: [
+							[
+								[
+									1
+									3
+								]
+								[
+									-2
+									95
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									1
+									-124
+								]
+							]
+							[
+								[
+									1
+									-3
+								]
+								[
+									3
+									103
+								]
+							]
+							[
+								[
+									-1
+									2
+								]
+								[
+									-2
+									-93
+								]
+							]
+							[
+								[
+									1
+									4
+								]
+								[
+									-1
+									106
+								]
+							]
+							[
+								[
+									-1
+									-2
+								]
+								[
+									3
+									-94
+								]
+							]
+							[
+								[
+									-5
+									2
+								]
+								[
+									1
+									-16
+								]
+							]
+							[
+								[
+									10
+									-3
+								]
+								[
+									7
+									8
+								]
+							]
+							[
+								[
+									-4
+									5
+								]
+								[
+									4
+									-34
+								]
+							]
+							[
+								[
+									3
+									-7
+								]
+								[
+									4
+									4
+								]
+							]
+							[
+								[
+									2
+									13
+								]
+								[
+									5
+									83
+								]
+							]
+							[
+								[
+									-6
+									4
+								]
+								[
+									5
+									-23
+								]
+							]
+							[
+								[
+									11
+									3
+								]
+								[
+									3
+									10
+								]
+							]
+							[
+								[
+									8
+									-5
+								]
+								[
+									6
+									10
+								]
+							]
+							[
+								[
+									9
+									2
+								]
+								[
+									5
+									14
+								]
+							]
+							[
+								[
+									10
+									7
+								]
+								[
+									2
+									6
+								]
+							]
+							[
+								[
+									11
+									4
+								]
+								[
+									5
+									12
+								]
+							]
+							[
+								[
+									12
+									5
+								]
+								[
+									12
+									14
+								]
+							]
+							[
+								[
+									13
+									6
+								]
+								[
+									-1
+									7
+								]
+							]
+							[
+								[
+									5
+									3
+								]
+								[
+									3
+									26
+								]
+							]
+							[
+								[
+									6
+									5
+								]
+								[
+									5
+									21
+								]
+							]
+							[
+								[
+									7
+									8
+								]
+								[
+									5
+									22
+								]
+							]
+							[
+								[
+									8
+									9
+								]
+								[
+									7
+									13
+								]
+							]
+						]
+						no_copy: 1
+					}
+				}
+				match_nbt: true
+				type: "item"
+				weak_nbt_match: true
+			}]
+			x: -6.5d
+			y: 3.0d
+		}
+	]
+	title: "矩阵之页(施工中...)"
+}

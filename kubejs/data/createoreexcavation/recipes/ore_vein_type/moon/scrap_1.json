@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 12.0,
+  "amountMin": 3.0,
+  "biomeWhitelist": "dut_create:moon",
+  "icon": {
+    "item": "kubejs:scrap_1"
+  },
+  "name": "{\"translate\":\"item.kubejs.scrap_1\"}",
+  "placement": {
+    "salt": 32462457,
+    "separation": 12,
+    "spacing": 16
+  },
+  "priority": 0
+}

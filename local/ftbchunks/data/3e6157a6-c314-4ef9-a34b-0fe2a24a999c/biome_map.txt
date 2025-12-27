@@ -1,0 +1,9 @@
+#460 minecraft:cherry_grove
+#010 minecraft:forest
+#508 minecraft:frozen_peaks
+#2D6 minecraft:meadow
+#3DC minecraft:plains
+#67B minecraft:savanna
+#706 minecraft:savanna_plateau
+#524 minecraft:snowy_slopes
+#774 minecraft:sunflower_plains

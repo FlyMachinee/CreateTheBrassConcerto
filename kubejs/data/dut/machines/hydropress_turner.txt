@@ -1,0 +1,21 @@
+{
+    "name": "block.kubejs.hydropress_turner",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/hydropress_turner"
+        },
+        "running": {
+            "block": "kubejs:machine/hydropress_turner"
+        },
+        "errored": {
+            "block": "kubejs:machine/hydropress_turner"
+        },
+        "paused": {
+            "block": "kubejs:machine/hydropress_turner"
+        }
+    },
+    "components": [
+    ]
+}

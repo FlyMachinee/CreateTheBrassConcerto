@@ -1,0 +1,4 @@
+#05B minecraft:bamboo_jungle
+#4B0 minecraft:jungle
+#5FF minecraft:river
+#3AF minecraft:sparse_jungle

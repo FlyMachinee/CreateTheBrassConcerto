@@ -1,0 +1,331 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	disable_toast: true
+	filename: "3C7EE863FBCC0AAB"
+	group: "6EA46263F86F561F"
+	icon: "kubejs:brass_bucket"
+	id: "3C7EE863FBCC0AAB"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"你也许在疑惑什么是各种金属的增殖——那么这份乐谱应当会帮到你！"
+				""
+				"&e它暂时只包含了初期使用的矿物生产方法！&r"
+			]
+			id: "4B74E620CC367150"
+			shape: "gear"
+			tasks: [{
+				id: "5B3FF222CFBBA2D0"
+				title: "欢迎来到冶金之页！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.5d
+		}
+		{
+			description: ["&e绯红岩平均可以粉碎成1.25的粉碎铁矿石！&r"]
+			id: "2D5F34751921A307"
+			size: 1.25d
+			tasks: [{
+				id: "4DA7FA82FB4A587C"
+				item: "create:crimsite"
+				type: "item"
+			}]
+			title: "冶金之页-绯红岩"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			description: ["&e辉绿岩平均可以粉碎成1.25的粉碎铜矿石！&r"]
+			id: "76917EBDECCF58F8"
+			size: 1.25d
+			tasks: [{
+				id: "386F00164A7064ED"
+				item: "create:veridium"
+				type: "item"
+			}]
+			title: "冶金之页-辉绿岩"
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			description: ["&e皓蓝石平均可以粉碎成1.25的粉碎锌矿石！&r"]
+			id: "4DCCA0B6DBFB05B2"
+			size: 1.25d
+			tasks: [{
+				id: "56EA83A7EA174F1F"
+				item: "create:asurine"
+				type: "item"
+			}]
+			title: "冶金之页-皓蓝石"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			description: ["&e赭金砂平均可以粉碎成1.25的粉碎金矿石！&r"]
+			id: "4991EB347AB72808"
+			size: 1.25d
+			tasks: [{
+				id: "7BC455EDA9E99240"
+				item: "create:ochrum"
+				type: "item"
+			}]
+			title: "冶金之页-赭金砂"
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			description: ["&e锡石平均可以粉碎成1.25的粉碎锡矿石！&r"]
+			id: "12DB85A684EB6DA8"
+			size: 1.25d
+			tasks: [{
+				id: "0175FC8AC9F2EDCD"
+				item: "kubejs:raw_tin"
+				type: "item"
+			}]
+			title: "冶金之页-锡石"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4991EB347AB72808"]
+			description: [
+				"&a粉碎金矿石&r可以被水洗成&e9&r个&a金粒&r或是被烧炼为&e1&r个&a金锭&r"
+				""
+				"如果使用合金炉，&e9&r个&a粉碎金矿石&r可以变为&e1000mB&r&a熔融金&r"
+			]
+			id: "1F3DF392BF8DCB5E"
+			tasks: [{
+				id: "206CC74C98323FBF"
+				item: "create:crushed_raw_gold"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["76917EBDECCF58F8"]
+			description: [
+				"&a粉碎铜矿石&r可以被水洗成&e9&r个&a铜粒&r或是被烧炼为&e1&r个&a铜锭&r"
+				""
+				"如果使用合金炉，&e9&r个&a粉碎铜矿石&r可以变为&e1000mB&r&a熔融铜&r"
+			]
+			id: "2806BF2F9EF4B768"
+			tasks: [{
+				id: "1E46556657C61990"
+				item: "create:crushed_raw_copper"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2D5F34751921A307"]
+			description: [
+				"&a粉碎铁矿石&r可以被水洗成&e9&r个&a铁粒&r或是被烧炼为&e1&r个&a铁锭&r"
+				""
+				"如果使用合金炉，&e9&r个&a粉碎铁矿石&r可以变为&e1000mB&r&a熔融铁&r"
+			]
+			id: "5D6A2CB9FEC83A1E"
+			tasks: [{
+				id: "1451D4FE8B5B2914"
+				item: "create:crushed_raw_iron"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4DCCA0B6DBFB05B2"]
+			description: [
+				"&a粉碎锌矿石&r可以被水洗成&e9&r个&a锌粒&r或是被烧炼为&e1&r个&a锌锭&r"
+				""
+				"如果使用合金炉，&e9&r个&a粉碎锌矿石&r可以变为&e1000mB&r&a熔融锌&r"
+			]
+			id: "6ADB3EEAB9D33EBC"
+			tasks: [{
+				id: "2736ABA83955E334"
+				item: "create:crushed_raw_zinc"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["12DB85A684EB6DA8"]
+			description: [
+				"&a粉碎锡矿石&r可以被水洗成&e9&r个&a锡粒&r或是被烧炼为&e1&r个&a锡锭&r"
+				""
+				"如果使用合金炉，&e9&r个&a粉碎锡矿石&r可以变为&e1000mB&r&a熔融锡&r"
+			]
+			id: "2C21F8C4DD0A5B12"
+			tasks: [{
+				id: "6EEC813299FEF97B"
+				item: "create:crushed_raw_tin"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1F3DF392BF8DCB5E"]
+			description: ["&e金板 + 砂砾 + 250mB岩浆 = 2赭金砂&r"]
+			id: "27EAC2260635A0E2"
+			tasks: [{
+				id: "3902858E0F984B06"
+				item: "create:golden_sheet"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2806BF2F9EF4B768"]
+			description: ["&e铜板 + 砂砾 + 250mB水 = 2辉绿岩&r"]
+			id: "1920229728025683"
+			tasks: [{
+				id: "6BF968013B4ED5B8"
+				item: "create:copper_sheet"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5D6A2CB9FEC83A1E"]
+			description: ["&e铁板 + 砂砾 + 250mB岩浆 = 2绯红岩&r"]
+			id: "0E14C183837BDA2E"
+			tasks: [{
+				id: "3A5A4CEB4436BAE5"
+				item: "create:iron_sheet"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6ADB3EEAB9D33EBC"]
+			description: ["&e锌板 + 砂砾 + 250mB水 = 2皓蓝石&r"]
+			id: "7E69EECFD8A46805"
+			tasks: [{
+				id: "4AD378270E05CEA1"
+				item: "createaddition:zinc_sheet"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2C21F8C4DD0A5B12"]
+			description: ["&e锡板 + 砂砾 + 250mB岩浆 = 2锡石&r"]
+			id: "05E7404BB4D13F6A"
+			tasks: [{
+				id: "3248CA636A4146D4"
+				item: "kubejs:tin_sheet"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["27EAC2260635A0E2"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			id: "624CB4466E943732"
+			size: 1.25d
+			tasks: [{
+				id: "0151CA1F433AFFBA"
+				item: "create:ochrum"
+				type: "item"
+			}]
+			title: "冶金之页-赭金砂"
+			x: -4.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["1920229728025683"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			id: "0662E34246691544"
+			size: 1.25d
+			tasks: [{
+				id: "07FDF3856A23D2C4"
+				item: "create:veridium"
+				type: "item"
+			}]
+			title: "冶金之页-辉绿岩"
+			x: -2.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["0E14C183837BDA2E"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			id: "7F9AB0A99547F1AC"
+			size: 1.25d
+			tasks: [{
+				id: "7F96246EE5EE3019"
+				item: "create:crimsite"
+				type: "item"
+			}]
+			title: "冶金之页-绯红岩"
+			x: 0.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["7E69EECFD8A46805"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			id: "4F147B4F6F801B08"
+			size: 1.25d
+			tasks: [{
+				id: "147564BA45A6068B"
+				item: "create:asurine"
+				type: "item"
+			}]
+			title: "冶金之页-皓蓝石"
+			x: 2.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["05E7404BB4D13F6A"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			id: "27BEAE1DC6A31482"
+			size: 1.25d
+			tasks: [{
+				id: "31083B2F40E5BB79"
+				item: "kubejs:raw_tin"
+				type: "item"
+			}]
+			title: "冶金之页-锡石"
+			x: 4.0d
+			y: 6.5d
+		}
+		{
+			description: [
+				"在你开始金属增殖之前，你首先应当拥有无限的岩浆源！"
+				""
+				"在主世界的地下和下界都拥有大量的天然岩浆池，其中很多都超过了512立方！"
+				""
+				"[ \"如果你疑惑如何提交此任务，可以查看第一乐章第一节任务中的\", { \"text\": \"自动化任务！\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2A43D8C247527035\" } } ]"
+			]
+			id: "1648A078C72264C7"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "29247045D5BAE816"
+				table_id: 859008673492234316L
+				type: "choice"
+			}]
+			size: 1.25d
+			tasks: [{
+				amount: 512000L
+				fluid: "minecraft:lava"
+				id: "4FC71F0DF62DA426"
+				type: "fluid"
+			}]
+			title: "冶金之页-无限岩浆"
+			x: 0.0d
+			y: -1.0d
+		}
+	]
+	title: "乐谱-冶金之页"
+}

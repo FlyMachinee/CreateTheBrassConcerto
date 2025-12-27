@@ -1,0 +1,115 @@
+{
+    "name": "block.kubejs.emergency_industrial_platform_space",
+    "appearance": {
+        "resistance": 4,
+        "requires_tool": false,
+        "idle": {
+            "block":"kubejs:machine/emergency_industrial_platform_space"
+        },
+        "running": {
+            "block":"kubejs:machine/emergency_industrial_platform_space"
+        },
+        "errored": {
+            "block":"kubejs:machine/emergency_industrial_platform_space"
+        },
+        "paused": {
+            "block":"kubejs:machine/emergency_industrial_platform_space"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.emergency_industrial_platform",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.emergency_industrial_platform1",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.emergency_industrial_platform2",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:item",
+            "id": "item",
+            "filter": ["minecraft:stone"],
+            "whitelist": true,
+            "capacity": 1,
+            "mode": "both",
+            "locked":false
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 100,
+            "id": "tank",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": ["minecraft:lava"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 100,
+            "id": "tank1",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": ["minecraft:water"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 100,
+            "id": "tank2",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": ["create:honey"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 100,
+            "id": "tank3",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": ["kubejs:saline_water"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 100,
+            "id": "tank4",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": ["kubejs:cryogen"],
+            "whitelist": true
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 50,
+            "id": "item",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        },
+        {
+            "text": "block.kubejs.emergency_industrial_platform_space",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        }
+    ]
+}

@@ -1,0 +1,185 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.8,
+  "effects": {
+    "fog_color": 12450751,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 8058067,
+    "water_color": 10878632,
+    "water_fog_color": 9305974,
+    "grass_color": 9488730,
+    "particle": {
+      "options": {
+        "type": "spore_blossom_air"
+      },
+      "probability": 0.00005
+    }
+  },
+  "features": [
+    [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface",
+      "dut:slimeria/lake_water_surface",
+      "dut:slimeria/lake_slime_surface"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [
+      "minecraft:fossil_lower",
+      "minecraft:fossil_upper"
+    ],
+    [],
+    [],
+    [
+      "dut:slimeria/coal_lower",
+      "dut:slimeria/redstone_block_lower",
+      "dut:slimeria/redstone_block_upper",
+      "dut:slimeria/packed_mud_lower",
+      "dut:slimeria/packed_mud_upper",
+      "dut:slimeria/moss",
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:underwater_magma",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
+    ],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:cave_vines",
+      "minecraft:rooted_azalea_tree",
+      "minecraft:classic_vines_cave_feature",
+      "minecraft:glow_lichen",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_grass_plain",
+      "minecraft:patch_berry_rare",
+      "minecraft:patch_pumpkin",
+      "minecraft:patch_melon",
+      "minecraft:seagrass_deep",
+      "minecraft:seagrass_simple",
+      "dut:slimeria/tree_thalassgel",
+      "dut:patch_aeronos"
+    ],
+    []
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:frog",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:chicken",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 500
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:spider",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:creeper",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:magma_cube",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 2
+      },
+      {
+        "type": "ad_astra:martian_raptor",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 50
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:cod",
+        "maxCount": 6,
+        "minCount": 3,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:salmon",
+        "maxCount": 6,
+        "minCount": 3,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:pufferfish",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:tropical_fish",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 1
+      }
+    ]
+  },
+  "temperature": 0.5
+}

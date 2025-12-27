@@ -1,0 +1,385 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	disable_toast: true
+	filename: "1C8D6C5127B9B150"
+	group: "6B818C6F92D84205"
+	icon: "createloveandwar:tar_clump"
+	id: "1C8D6C5127B9B150"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"也许你已经在感慨石油化工是如此的复杂——那么我相信这份乐谱会帮到你的！"
+				""
+				"这一份乐谱仅包含原油的获取、分馏及其部分产物初步处理的路线！"
+			]
+			id: "0EB05F42A77ECCD6"
+			shape: "circle"
+			tasks: [{
+				id: "3C7510D9FB077617"
+				title: "欢迎来到石油化工之页！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2EFB5D929CA3B17A"
+				"03B693D028042FC9"
+				"120FE543244114EC"
+				"2FBE43A3090D1053"
+				"471973F58EEA5536"
+			]
+			description: [
+				"石油可以通过分馏塔进行分馏——"
+				""
+				"&e分馏塔的大小会影响其效率——2*2的分馏塔以4倍速运行，而3*3则以9倍！&r"
+				""
+				"这里并没有列出它的全部产物，而是仅列出那些重要的产物！"
+			]
+			id: "0AD1428EF423B9FF"
+			size: 1.5d
+			tasks: [{
+				id: "4B324806EECF9C51"
+				item: "createdieselgenerators:crude_oil_bucket"
+				type: "item"
+			}]
+			title: "石化之页-原油的分馏"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0AD1428EF423B9FF"
+				"4F005EA6EF996CDB"
+			]
+			description: [
+				"除了从原油分馏外，甲烷还有许多获取方式"
+				""
+				"比如，你可以从可燃冰中提取——这在月球上会很有用！"
+			]
+			id: "26325D9A9EDB84F4"
+			tasks: [{
+				id: "762282782CDAD0C8"
+				item: "kubejs:natural_gas_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装甲烷"
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0AD1428EF423B9FF"]
+			description: [
+				"柴油可以通过原油分馏获得"
+				""
+				"它可以被当做燃料，但更重要的用途是制作润滑油"
+			]
+			id: "36C3A59891538134"
+			tasks: [{
+				id: "502DDA8CC6246C37"
+				item: "createdieselgenerators:diesel_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装柴油"
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0AD1428EF423B9FF"
+				"36C3A59891538134"
+			]
+			id: "4F005EA6EF996CDB"
+			tasks: [{
+				id: "7C123558CB8DD1D7"
+				item: "createdieselgenerators:gasoline_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装汽油"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["36C3A59891538134"]
+			description: [
+				"润滑油是柴油最为重要的产物！"
+				""
+				"较为简单的配方是柴油加上氢气"
+				""
+				"而更进阶一些的配方则是使用柴油、氢气和二氧化硫——还可以加上烈焰支原体"
+			]
+			id: "7812BD9645B4F942"
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [{
+				id: "05AD6DAB4D5FBD23"
+				item: "kubejs:lube_oil_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装润滑油"
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4F005EA6EF996CDB"]
+			description: [
+				"汽油可以代替种子油被制作为生物柴油"
+				""
+				"当然，它的主要用途还是作为燃料以及生产甲烷"
+			]
+			id: "5EB4F266E3E04545"
+			tasks: [{
+				id: "07C5D0E1C6A3A0F6"
+				item: "createdieselgenerators:biodiesel_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装生物柴油"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["26325D9A9EDB84F4"]
+			description: ["乙烯是甲烷最重要的产物之一！"]
+			id: "77CC09146DF0F712"
+			tasks: [{
+				id: "12979CF2B8EA0561"
+				item: "kubejs:ethylene_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装乙烯"
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			description: ["甲烷可以作为燃料使用——或是成为重要的化工原料！"]
+			id: "3B718CC5433FF20C"
+			size: 1.25d
+			tasks: [{
+				id: "0387C9EDCD90C72A"
+				item: "kubejs:natural_gas_bucket"
+				type: "item"
+			}]
+			title: "石化之页-甲烷的用途"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3B718CC5433FF20C"]
+			description: [
+				"甲烷可以通过液态经验或者烈焰支原体转化为乙烯"
+				""
+				"这并非乙烯的唯一生产渠道！"
+			]
+			id: "4BA7DEFC98ED6B8B"
+			tasks: [{
+				id: "07CF7EFCF7951864"
+				item: "kubejs:ethylene_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装乙烯"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3B718CC5433FF20C"]
+			description: [
+				"利用甲烷也可以将余烬面粉变成红石"
+				""
+				"这并非红石的唯一获取渠道"
+			]
+			id: "683C6A67093011F5"
+			tasks: [{
+				id: "259E9973D68510B7"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			title: "石化之页-生产红石"
+			x: 1.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["3B718CC5433FF20C"]
+			description: [
+				"甲烷可以加水变成硫粉"
+				""
+				"这并非硫粉的唯一生产渠道！"
+				""
+				"但是这应该算是前期较为简洁的渠道"
+			]
+			id: "7185D44E508D54E9"
+			tasks: [{
+				id: "1162FDE571F6DA30"
+				item: "kubejs:sulphur"
+				type: "item"
+			}]
+			title: "石化之页-硫粉"
+			x: -1.5d
+			y: 8.5d
+		}
+		{
+			description: [
+				"奇异石油可以通过分馏塔进行分馏——"
+				""
+				"&e分馏塔的大小会影响其效率——2*2的分馏塔以4倍速运行，而3*3则以9倍！&r"
+				""
+				"这里并没有列出它的全部产物，而是仅列出那些重要的产物！"
+				""
+				"你可以通过矿脉挖掘或是合成的方式来获取它！"
+			]
+			id: "0BD2F52F839623A0"
+			size: 1.5d
+			tasks: [{
+				id: "54EB6A08EF367163"
+				item: "kubejs:refined_oil_bucket"
+				type: "item"
+			}]
+			title: "石化之页-奇异石油的分馏"
+			x: 0.0d
+			y: -2.25d
+		}
+		{
+			description: [
+				"你可以通过原油探测器探测那些有限的原油储备"
+				""
+				"少量原油有时仅有数桶"
+				""
+				"而大量原油则一般拥有数十万桶的储量！"
+			]
+			id: "03B693D028042FC9"
+			tasks: [{
+				id: "3160494A74C45699"
+				item: "createdieselgenerators:pumpjack_hole"
+				type: "item"
+			}]
+			title: "从油田获取原油"
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			description: ["有时，你会在沙漠地下找到油焦——它可以被溶解为原油！"]
+			id: "471973F58EEA5536"
+			tasks: [{
+				id: "2E7EFB293DC8EB7C"
+				item: "createloveandwar:tar_clump"
+				type: "item"
+			}]
+			title: "在沙漠中的宝藏"
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			description: [
+				"你可以通过在矿脉上建立流体提取井来无限地获取原油！"
+				""
+				"使用卫星扫描器来寻找矿脉！"
+			]
+			id: "120FE543244114EC"
+			tasks: [{
+				id: "22B1CF50536D1E48"
+				item: "createoreexcavation:extractor"
+				type: "item"
+			}]
+			title: "无限获取原油"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"你可以人工合成原油！"
+				""
+				"原油拥有许多的合成方式："
+				""
+				"煤炭液化、生物质、种子油"
+				""
+				"自行选择合适的方式吧！"
+			]
+			id: "2FBE43A3090D1053"
+			tasks: [{
+				id: "642BD9CECD4103D8"
+				item: "vintageimprovements:vacuum_chamber"
+				type: "item"
+			}]
+			title: "人工造油"
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			description: [
+				"有时，你会在地层中、海上以及其他地方发现一些方块形式的原油——从几桶到几十桶不等"
+				""
+				"也许这会成为你的第一桶原油！"
+			]
+			id: "2EFB5D929CA3B17A"
+			tasks: [{
+				id: "2937C902E2E43094"
+				item: "createdieselgenerators:canister"
+				type: "item"
+			}]
+			title: "天然原油"
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0BD2F52F839623A0"]
+			description: ["奇异石油可以直接分馏出乙烯！"]
+			id: "56336974EAB74B37"
+			tasks: [{
+				id: "68E801E742BBED79"
+				item: "kubejs:ethylene_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装乙烯"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0BD2F52F839623A0"]
+			description: ["奇异石油可以直接分馏出汽油！"]
+			id: "2CF2712E6A65A3D6"
+			tasks: [{
+				id: "7D8D4A827D361356"
+				item: "createdieselgenerators:gasoline_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装汽油"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0BD2F52F839623A0"]
+			description: ["奇异石油可以直接分馏出柴油！"]
+			id: "77D1E17160A3FC61"
+			tasks: [{
+				id: "086167BDA40F4308"
+				item: "createdieselgenerators:diesel_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装柴油"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0BD2F52F839623A0"]
+			description: [
+				"奇异石油可以直接分馏出润滑油！"
+				""
+				"你也可以进行合成！"
+			]
+			id: "246A98DC83209E94"
+			size: 1.0d
+			tasks: [{
+				id: "16D9A099F311EDDE"
+				item: "kubejs:lube_oil_bucket"
+				type: "item"
+			}]
+			title: "石化之页-桶装润滑油"
+			x: 1.5d
+			y: -3.0d
+		}
+	]
+	title: "乐谱-石化之页"
+}

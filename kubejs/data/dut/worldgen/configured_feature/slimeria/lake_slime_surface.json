@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:lake",
+    "config": {
+        "barrier": {
+            "type": "weighted_state_provider",
+            "entries": [
+                {
+                    "data": {
+                        "Name": "ad_astra:conglomerate"
+                    },
+                    "weight": 1
+                },
+                {
+                    "data": {
+                        "Name": "minecraft:slime_block"
+                    },
+                    "weight": 2
+                },
+                {
+                    "data": {
+                        "Name": "minecraft:moss_block"
+                    },
+                    "weight": 3
+                },
+                {
+                    "data": {
+                        "Name": "minecraft:mossy_cobblestone"
+                    },
+                    "weight": 2
+                }
+            ]
+        },
+        "fluid": {
+            "type": "simple_state_provider",
+            "state": {
+                "Name": "create_things_and_misc:slime"
+            }
+        }
+    }
+}

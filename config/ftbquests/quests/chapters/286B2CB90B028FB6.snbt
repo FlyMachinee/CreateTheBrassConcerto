@@ -1,0 +1,129 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "286B2CB90B028FB6"
+	group: "13182EA939D9B58C"
+	icon: "kubejs:myxomycetes_halophila"
+	id: "286B2CB90B028FB6"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&a如果觉得史莱姆干的好的话，欢迎为史莱姆提供饭票！&r"
+				"{image:kubejs:textures/ftb/slime_reward.png width:80 height:80 align:center}"
+				"&a感谢以下uu以及一些匿名或未提供游戏id的uu们为史莱姆提供饭票，是按时间先后排序的喵：&r"
+				""
+				"&eshelwind&r&6(被盗)&r&e现用账号: cildiant"
+				"&e二律背反（没给id）"
+				"&eqcyt17"
+				"&esuring_ice"
+				"&ewuxinfashi"
+				"&eTipsy?（没给id）"
+				"&eShiroi_Sakana"
+				"&e修狗（没给id）"
+				"&e霁修（没给id）"
+				"&ecncngy"
+				"&e一只键盘虾"
+				"&eLao_xianbing"
+				"&eyizhisanchu"
+				"&eCarbon-Trioxide"
+				"&e（若干没有给id也没分出来是谁的uu）&r"
+			]
+			icon: "kubejs:slime_cola_can"
+			id: "3317421791085996"
+			tasks: [{
+				id: "296021ABD79E855F"
+				type: "checkmark"
+			}]
+			title: "这里是赞助鸣谢喵！"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: [
+				"交流群内有很多有意思的群友和群友们制作的蓝图，同时也可以获得第一手（大概？）的整合包开发信息！"
+				""
+				"&aDiscord频道&r&ehttps://discord.gg/eNF5nzxxCg"
+				""
+				"&a一群&r&e560712538&r"
+				""
+				"&a二群&r&e746271641&r"
+				""
+				"&a三群&r&e1043699036&r"
+				""
+				"&aQQ频道&r&epd25557826&r"
+			]
+			icon: "railways:semaphore"
+			id: "4FA915FD2CAACEEA"
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [{
+				id: "65AFF41B346AED13"
+				type: "checkmark"
+			}]
+			title: "这里是官方交流群和频道！"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&aQQ:"
+				"&e384362798"
+				""
+				"&abilibili:"
+				"&ehttps://space.bilibili.com/310622238"
+				""
+				"&aMC百科:"
+				"&ehttps://bbsmc.net/user/Slimeli_"
+				""
+				"&aGitHub:"
+				"&ehttps://github.com/Slimeli-32767"
+				""
+				"&aBBSMC:"
+				"&ehttps://bbsmc.net/user/Slimeli_"
+				""
+				"&aXyeBBS:"
+				"&ehttps://www.xyebbs.com/members/952"
+				""
+				"&aCurseForge:"
+				"&ehttps://www.curseforge.com/members/slimeli_/projects"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:player_head"
+				tag: {
+					BlockEntityTag: {
+						id: "minecraft:skull"
+					}
+					SkullOwner: {
+						Id: [I;
+							1367475815
+							-1221311548
+							-1445710665
+							321043384
+						]
+						Name: "Slimeli_"
+						Properties: {
+							textures: [{
+								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk4NzQzMzcyNCwKICAicHJvZmlsZUlkIiA6ICI1MTgyMDY2N2I3MzQ0M2M0YTlkNDM0YjcxMzIyYmJiOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTbGltZWxpXyIsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYTNiYjQ5NjUyZDkzMDgzZDY3NzI4ODc2YWRiZTVmOWU1OTI3ZTAxNzUzNmU4YTFkYzA2MGQ5NDI3ZjBlODc0IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="
+							}]
+						}
+					}
+				}
+			}
+			id: "0D9EC291C4C46B00"
+			shape: "circle"
+			size: 1.25d
+			subtitle: "经常失踪、没看到你、已读不回、已读乱回"
+			tasks: [{
+				id: "0BD64EADD18734A6"
+				type: "checkmark"
+			}]
+			title: "如果有其他事务，联系作者"
+			x: 0.0d
+			y: 1.5d
+		}
+	]
+	title: "史莱姆树洞"
+}

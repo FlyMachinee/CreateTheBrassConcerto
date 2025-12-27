@@ -1,0 +1,1 @@
+summon armor_stand ~ ~ ~ {DisabledSlots:4144896,Invulnerable:1b,Invisible:1b,ArmorItems:[{Count:1b,id:"minecraft:stone",tag:{}},{},{},{Count:1b,id:"kubejs:space_elevator",tag:{}}],Tags:["dut_space_elevator","dut_space_elevator_back"]}

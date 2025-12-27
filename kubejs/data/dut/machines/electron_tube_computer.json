@@ -1,0 +1,292 @@
+{
+    "name": "block.kubejs.electron_tube_computer",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/electron_tube_computer"
+        },
+        "running": {
+            "block": "kubejs:machine/electron_tube_computer"
+        },
+        "errored": {
+            "block": "kubejs:machine/electron_tube_computer"
+        },
+        "paused": {
+            "block": "kubejs:machine/electron_tube_computer"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.multiblock_mech",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.multiblock_mech1",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 4096,
+            "id": "data_mebibyte",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": [
+                "kubejs:mebibyte"
+            ],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 4096,
+            "id": "data_kibibyte",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": [
+                "kubejs:kibibyte"
+            ],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "diskSlot1",
+            "mode": "both",
+            "filter": [
+                "#dut_create:data_disk"
+            ],
+            "whitelist": true,
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "diskSlot2",
+            "mode": "both",
+            "filter": [
+                "#dut_create:data_disk"
+            ],
+            "whitelist": true,
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "diskSlot3",
+            "mode": "both",
+            "filter": [
+                "#dut_create:data_disk"
+            ],
+            "whitelist": true,
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "diskSlot4",
+            "mode": "both",
+            "filter": [
+                "#dut_create:data_disk"
+            ],
+            "whitelist": true,
+            "locked": false
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 64000,
+            "maxInput": 6400,
+            "maxOutput": 6400,
+            "mode": "input",
+            "id": "fe",
+            "config": {
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade1",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade2",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade3",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 110,
+            "y": 75,
+            "id": "upgrade1",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 128,
+            "y": 75,
+            "id": "upgrade2",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "text": "block.kubejs.electron_tube_computer",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "type": "custommachinery:energy",
+            "x": 191,
+            "y": 21,
+            "id": "fe",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 47,
+            "y": 20,
+            "id": "data_mebibyte",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 65,
+            "y": 20,
+            "id": "data_kibibyte",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 21,
+            "id": "diskSlot1",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 39,
+            "id": "diskSlot2",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 57,
+            "id": "diskSlot3",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 75,
+            "id": "diskSlot4",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        }
+    ],
+    "jei": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "text": "block.kubejs.electron_tube_computer",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "type": "custommachinery:energy",
+            "x": 191,
+            "y": 21,
+            "id": "fe",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 47,
+            "y": 20,
+            "id": "data_mebibyte",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 65,
+            "y": 20,
+            "id": "data_kibibyte",
+            "width": 18,
+            "height": 72
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 21,
+            "id": "diskSlot1",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 39,
+            "id": "diskSlot2",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 57,
+            "id": "diskSlot3",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 75,
+            "id": "diskSlot4",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        }
+    ]
+}

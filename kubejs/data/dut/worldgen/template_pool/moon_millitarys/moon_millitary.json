@@ -1,0 +1,78 @@
+{
+  "name": "dut:moon_millitarys/moon_millitary",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_armored_car",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_artillery",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_artillery_small",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_tank",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_antiair_machinegun",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_gunship",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_hammer",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_millitarys/millitary_uac",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    }
+  ]
+}

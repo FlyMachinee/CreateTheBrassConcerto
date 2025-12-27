@@ -1,0 +1,1 @@
+damage @s 1200 minecraft:explosion

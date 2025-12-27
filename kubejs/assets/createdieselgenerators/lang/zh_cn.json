@@ -1,0 +1,6 @@
+{
+    "block.createdieselgenerators.oil_barrel": "密封油罐",
+    "createdieselgenerators.oil_barrel.tooltip.behaviour1": "为油罐染色",
+    "createdieselgenerators.oil_barrel.tooltip.condition1": "当使用染料对其右键时：",
+    "createdieselgenerators.oil_barrel.tooltip.summary": "像流体储罐一样存储液体"
+}

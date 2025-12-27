@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 16.0,
+  "amountMin": 6.0,
+  "biomeWhitelist": "dut_create:clay",
+  "icon": {
+    "item": "minecraft:clay"
+  },
+  "name": "{\"translate\":\"block.minecraft.clay\"}",
+  "placement": {
+    "salt": 1486764,
+    "separation": 8,
+    "spacing": 48
+  },
+  "priority": 1
+}

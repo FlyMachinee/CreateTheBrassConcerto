@@ -1,0 +1,201 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "6509F8EE3B2C05A1"
+	group: "26D57AC038FF3413"
+	hide_quest_details_until_startable: true
+	hide_quest_until_deps_complete: true
+	hide_quest_until_deps_visible: true
+	icon: "supplementaries:globe"
+	id: "6509F8EE3B2C05A1"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"这里有我曾经在对各个维度的不完全勘探中获得的各种信息，包括特有资源、维度特点、各类风险评估等，希望能够帮到你"
+				""
+				"&a这些信息将会在你到达对应维度时解锁&r"
+			]
+			icon: "supplementaries:slice_map"
+			id: "0AF55D7B3176FC98"
+			rewards: [{
+				id: "32932D08E441BA84"
+				item: "minecraft:recovery_compass"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "4D9152D4942BDCE7"
+				title: "欢迎来到拓荒之页！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0AF55D7B3176FC98"]
+			description: [
+				"地球是太阳系内最为宜居的星球，拥有温和的环境、完整的生态系统和仍然活跃的文明。不过在夜幕中会有怪物出没，地表和地下也有巨龙、独眼巨人等大型生物活动。"
+				"&a环境：&r&e温和，大气中含有氮、氧元素&r"
+				""
+				"&a可利用物种：&r&e丰富，如幽匿菌、酵母菌、泥炭原虫、小麦等&r"
+				""
+				"&a可利用的特色资源：&r&e丰富，包含地球大气、原木、赛特斯石英等&r"
+				""
+				"&a矿石资源：&r&e丰富，包含基本完整的基础矿石种类(近地轨道及地面均含有钨，轨道存在铝资源，地面包含不多的戴斯、少量的锡、以及无法提炼的铝资源)、石油、天然气等&r"
+				""
+				"&a威胁评估：&r&6轻度危险&r"
+				""
+				"&b空间站配方：64黄铜机壳，32列车机壳，32智能流体管道，32行星齿轮组，16太阳能板，16差速器&r"
+			]
+			hide_until_deps_visible: false
+			id: "6F43CC2B89A00D14"
+			size: 1.25d
+			tasks: [{
+				dimension: "minecraft:overworld"
+				icon: "minecraft:grass_block"
+				id: "20FC2532217A9C94"
+				type: "dimension"
+			}]
+			title: "地球-主世界"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6F43CC2B89A00D14"]
+			description: [
+				"下界是主世界的附属维度，可以直接修建传送门在两者间往来。这里到处都是岩浆和火焰，怪物也会频繁的在这里生成，还有许多活跃着大型怪物的遗迹。"
+				"&a环境：&r&e高温，大气中含有硫元素&r"
+				"&a可利用物种：&r&e烈焰人、烈焰支原体、蓝焰衣原体、疣猪兽、诡异菌、绯红菌、下界疣&r"
+				"&a可利用的特色资源：&r&e下界大气、下界岩、下界石英、萤石、灵魂沙等&r"
+				"&a矿脉资源：&r&e黑曜石、金、下界石英、萤石&r"
+				"&a威胁评估：&r&c中度危险&r"
+			]
+			id: "44F285E0580BC9E5"
+			size: 1.25d
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:netherrack"
+				id: "4A143061E6209C24"
+				type: "dimension"
+			}]
+			title: "地球-下界"
+			x: 1.875d
+			y: -1.875d
+		}
+		{
+			dependencies: ["6F43CC2B89A00D14"]
+			description: [
+				"末地是主世界的一个附属维度，这里被末影龙所占据着。在末影龙的领地之外，可以找到一些远古文明的遗迹。"
+				"&a环境：&r&e极度干旱，低温，大气中含有氯等元素&r"
+				"&a可利用物种：&r&e紫菘植物、潜影贝&r"
+				"&a可利用的特色资源：&r&e末地大气、鞘翅、龙首、魅影真菌&r"
+				"&a矿脉资源：&r&e无&r"
+				"&a威胁评估：&r&4危险&r"
+				""
+				"你可以在这里建设太空电梯、发射货运火箭，但任何轨道空投、货运火箭都无法直接从外部进入末地——除非你将它们丢入传送门"
+			]
+			id: "2E7A6595FE322879"
+			size: 1.25d
+			tasks: [{
+				dimension: "minecraft:the_end"
+				icon: "minecraft:end_stone"
+				id: "55F6AE18F8A93C17"
+				type: "dimension"
+			}]
+			title: "地球-末地"
+			x: 1.875d
+			y: 1.875d
+		}
+		{
+			dependencies: ["6F43CC2B89A00D14"]
+			description: [
+				"月球现在是一个没有氧气的低温卫星。在这里也存在一些远古文明的幸存者，但他们已经基本遗忘了祖先的技术。在氧气范围之外，这里的水会变为冰或直接蒸发，无法点燃篝火、火把，石头会被转化为滴水石并生长出石锥"
+				"&e月球的地下仍然存在岩浆层&r"
+				"&6这里有许多不同的古代文明的遗迹&r"
+				"&a环境：&r&e低温，大气稀薄，怪物稀少&r"
+				""
+				"&a可利用物种：&r&e乳酪月藻&r"
+				""
+				"&a可利用的特色资源：&r&e乳酪、月球岩石、月球铁矿石、月球戴斯矿石&r"
+				""
+				"&a矿脉资源：&6工业废料&r&e、戴斯、月岩、可燃冰、月球铁矿石、硫磺，含有大量的铝&r"
+				""
+				"&a威胁评估：&r&e几乎无危&r"
+				""
+				"&a帮助：&r&e你在月球的核心问题是解决以下三种资源的获取：水、氮、煤&r"
+				""
+				"&b空间站配方：64黄铜机壳，32列车机壳，32戴斯板，32行星齿轮组，16太阳能板，16差速器&r"
+			]
+			id: "7E616A7217320035"
+			size: 1.25d
+			tasks: [{
+				dimension: "ad_astra:moon"
+				icon: "ad_astra:moon_cheese_ore"
+				id: "191880DB947FCF86"
+				type: "dimension"
+			}]
+			title: "月球"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E616A7217320035"]
+			description: [
+				"这里无比空旷，没有大气，充满宇宙射线。你可以在这里布置空间站、火箭收发站、人造卫星等设施"
+				""
+				"不同行星空间站所需的材料是不同的，你可以在行星的页面中查看"
+				""
+				"值得注意的是，当到达坐标&ey=-128&r时，实体将被送回行星地面——可以利用这一点进行简单的物流投递"
+				""
+				"&e警告！在轨道投放太空垃圾将导致太空中出现异变的小行星——这些小行星将对你的基地造成破坏！&r&e那些在出现5分钟后消失的掉落物将转变为太空垃圾，并在深空的影响下出现异变&r"
+			]
+			id: "2118158984C96E2D"
+			size: 1.25d
+			tasks: [{
+				biome: "ad_astra:orbit"
+				icon: "ad_astra:solar_panel"
+				id: "45855E4A9F170DB6"
+				type: "biome"
+			}]
+			title: "行星轨道"
+			x: 5.0d
+			y: -1.875d
+		}
+		{
+			dependencies: ["7E616A7217320035"]
+			description: [
+				"史莱利亚是一个拥有厚重大气层（直达轨道）的独特行星。你可以在这里找到电龙文明与史莱利亚本土文明留下的遗迹，以及源自史莱利亚的独特物种——史莱姆。除此以外，这里还盘踞着迅猛龙、硫磺疣猪兽等异星掠食者"
+				"&e史莱利亚仅有约70%的地球重力&r"
+				"&6这里被繁茂的真菌菌落覆盖表面，在蘑菇林之间埋葬着许多不同的古代文明遗迹&r"
+				"&a环境：&r&e温度适宜，大气浓厚，富氧&r"
+				""
+				"&a可利用物种：&r&e&r"
+				""
+				"&a可利用的特色资源：&r&e&r"
+				""
+				"&a矿脉资源：&6&r&e&r"
+				""
+				"&a威胁评估：&r&e中度危险&r"
+				""
+				"&a帮助：&r&e&r"
+				""
+				"&b空间站配方：&r"
+			]
+			id: "58158D61E7FC06CB"
+			size: 1.5d
+			tasks: [{
+				dimension: "dut:slimeria"
+				icon: "kubejs:navigate_data_slimeria"
+				id: "1CA6EA040CE738E5"
+				type: "dimension"
+			}]
+			title: "史莱利亚"
+			x: 6.25d
+			y: 0.0d
+		}
+	]
+	title: "拓荒之页"
+}

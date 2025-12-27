@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 16.0,
+  "amountMin": 2.0,
+  "biomeWhitelist": "dut_create:moon",
+  "icon": {
+    "item": "ad_astra:ice_shard"
+  },
+  "name": "{\"translate\":\"kubejs.vein_id.burnable_ice\"}",
+  "placement": {
+    "salt": 189335,
+    "separation": 24,
+    "spacing": 96
+  },
+  "priority": 1
+}

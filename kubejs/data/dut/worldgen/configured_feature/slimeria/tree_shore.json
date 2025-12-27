@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "dut:none",
+    "features": [
+      {
+        "feature": "dut:slimeria/tree/trees_shore_large",
+        "chance": 0.3
+      },
+      {
+        "feature": "dut:slimeria/tree/trees_shore_middle",
+        "chance": 0.2
+      },
+      {
+        "feature": "dut:slimeria/tree/trees_shore_middle_1",
+        "chance": 0.2
+      },
+      {
+        "feature": "dut:slimeria/tree/trees_shore_middle_2",
+        "chance": 0.2
+      },
+      {
+        "feature": "dut:slimeria/tree/trees_shore_tiny",
+        "chance": 0.1
+      }
+    ]
+  }
+}

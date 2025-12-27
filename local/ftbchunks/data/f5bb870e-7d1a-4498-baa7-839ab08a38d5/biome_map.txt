@@ -1,0 +1,8 @@
+#008 minecraft:desert
+#65A minecraft:end_barrens
+#515 minecraft:end_highlands
+#577 minecraft:end_midlands
+#69A creatingspace:moon_plains
+#255 minecraft:small_end_islands
+#0B9 creatingspace:space
+#400 minecraft:the_end

@@ -1,0 +1,265 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "5DF8A114869675D1"
+	group: "6B818C6F92D84205"
+	icon: "create:track_station"
+	id: "5DF8A114869675D1"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"当你开始尝试化工，你的产线就将变得愈发复杂并且涉及越来越多的流体"
+				""
+				"这时你或许会意识到，仅依靠传送带与管道的物流已经不太够用了——除非你拥有强大的规划能力或愿意进行反复修改，从而完成工厂的布局"
+				""
+				"在这一小节中，我将详细为你介绍如何使用列车来优化你的工厂"
+			]
+			id: "329F12A02AE7A808"
+			tasks: [{
+				id: "669322340DAC47E5"
+				title: "在火车上"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5EAEBB91ED71BE7B"
+				"12BAAA66BF0064AF"
+			]
+			description: [
+				"[ \"关于设立站点的技巧，我在\", { \"text\": \"机械动力之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"56DCF1A76922FA3B\" } }, \"中有部分提及，下面再说一些尚未提及的部分\" ]"
+				""
+				"&e当在总线上运行的列车变多、车厢节数变多或是站点变得密集时，普通的移动接口也许会出现串线的情况！&r为了避免这种情况，&a你需要让移动接口仅在列车到站时启用！&r下面是一个参考："
+				"{image:kubejs:textures/ftb/station.png width:100 height:80 align:center}"
+				""
+				"让移动接口仅在列车到站时启用不仅能避免串线，还能避免另一个情况：当&e列车进站速度过快时，可能会导致移动接口无法和列车对接。&r而使用红石信号锁住移动接口可以避免这一点！"
+			]
+			id: "07EF10D2C969A48B"
+			rewards: [{
+				count: 8
+				id: "3B15A154135ACBDB"
+				item: "create:controls"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1B90B33219CD4A15"
+				item: "create:track_station"
+				type: "item"
+			}]
+			title: "设立站点！"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			description: [
+				"在“工厂的脉络”一节与“机械动力之页”一节中，我已经叙述过总线的概念，那么现在是时候使用列车系统来构建总线了——&e考虑到占地与灵活性，我推荐你使用窄轨进行建设！&r"
+				""
+				"相比于传送带和管道，列车最大的特点在于其灵活性与自适应能力。除此以外，火车还能跨过遥远的距离进行物流运送"
+				""
+				"不管你有多么复杂的物流需求，你只需要向总线上添加站点、为列车调整时刻表，列车就会自己判断物流路线与货物状态！"
+				""
+				"&a你应当将那些使用最频繁的材料放入列车网络，甚至直接使用列车网络来在机器之间运输所有种类的流体&r"
+				""
+				"需要注意的是，&e列车总线对接的不一定要是机器，你也可以对接传统的传送带总线、储罐总线与抽屉总线&r——这样能进一步减少站点数量，并从根本上减少出现死锁的可能"
+			]
+			id: "7289B09C6D6747BA"
+			rewards: [
+				{
+					count: 4
+					id: "6F30DD17FD6B2B5C"
+					item: "kubejs:filling_machine"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "245B6D06DD0402D0"
+					item: "kubejs:emptying_machine"
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 512L
+				id: "0CAF98102168DB55"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "create:tracks"
+					}
+				}
+				type: "item"
+			}]
+			title: "铁路总线"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7289B09C6D6747BA"]
+			description: [
+				"常规设计本质上就是将铁路连成一张网，并在上面接入并接出物品与流体。图中的结构仅做演示"
+				""
+				"{image:kubejs:textures/ftb/trunk.png width:180 height:200 align:center}"
+			]
+			id: "12BAAA66BF0064AF"
+			rewards: [{
+				id: "54BE14B8C91101F7"
+				item: "kubejs:slime_cola_can"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7A6F2A4D677F1FE0"
+				title: "常规设计"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7289B09C6D6747BA"]
+			description: [
+				"曼哈顿结构的命名来源于城市设计，你可以理解为模块化设计。将工厂分成一个个规范大小的模块（功能相同或不同）、并在模块外围设置规范大小的铁路网络"
+				"{image:kubejs:textures/ftb/manhattan_basic.png width:160 height:90 align:center}"
+				"下面是一个成型的曼哈顿结构工厂示例："
+				"{image:kubejs:textures/ftb/manhattan.png width:180 height:120 align:center}"
+			]
+			id: "5EAEBB91ED71BE7B"
+			tasks: [{
+				id: "58FAD2DB01763FE8"
+				title: "变体设计：曼哈顿结构"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7289B09C6D6747BA"]
+			description: [
+				"铁路网络拥有许多不同的设计方案"
+				""
+				"双向单轨是最为简单的一种：一条铁路仅有一条轨道，上面的列车均为双向行驶，在轨道上来回穿梭。这种铁路效率低下，不兼容多车，并且完全没有发挥出铁路的灵活性，仅适用于某些特定场景（比如从远处把开掘出的石油运输回来）"
+				""
+				"其次是单向环路：一条铁路仅有一条轨道，但是轨道首尾相接成为一个环，上面的列车单向行驶，在轨道上跑一圈又一圈。这种铁路效率低下，容易死锁，不推荐大规模使用"
+				""
+				"单向多轨是更加常见的设计，一条铁路线上建设多条轨道，每条轨道均为单向行驶，轨道之间在设定好的路口处连接。在这种情况下，铁路才能真正被建设为一条铁路网，其物流的真正潜力才能被显现出来"
+				""
+				"&e一般而言，我们使用单向双轨来建设铁路总线&r"
+				"{image:kubejs:textures/ftb/railway.png width:120 height:100 align:center}"
+			]
+			icon: "create_things_and_misc:train_stop"
+			id: "47B9A2A8FA7A0063"
+			rewards: [{
+				count: 12
+				id: "3CE0941F640CC0DD"
+				item: "create:track_signal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3DE3611FC80C15C8"
+				title: "单轨？多轨？"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7289B09C6D6747BA"]
+			description: [
+				"下面讲解路口设计（默认为单向双轨铁路，一左一右）："
+				""
+				"铁路路口有两类，一类是交叉口，一类是换道口"
+				""
+				"交叉口只是两条铁路线存在交叉，并不涉及到变轨问题。如果你熟记你是在三维空间中修建铁路，那么你可以避免绝大多数交叉口的出现"
+				""
+				"我们主要需要讨论的是换道口：换道口不仅仅是铁路线之间的交叉，它同时要承载着列车变轨和掉头的功能：即列车前往另一条铁路线或是在原本的铁路线上掉头"
+				""
+				"想要实现这一点并不难，只不过你需要同时考虑如何安插信号灯以避免列车相撞或死锁（关于安插信号灯的技巧，我已经在机械动力之页中提及，在此不再赘述）"
+				""
+				"由于变轨方式和可选变轨方向的数量的不同，衍生出了各式各样的路口设计：环轨路口、丁字路口......&e事实上，它们之间并不存在最优解，你应该根据使用场景合理地选择！&r"
+				""
+				"{image:kubejs:textures/ftb/cross.png width:180 height:80 align:center}"
+				"{image:kubejs:textures/ftb/cross1.png width:180 height:80 align:center}"
+			]
+			icon: "railways:semaphore"
+			id: "36339F2B92E0D77D"
+			rewards: [{
+				count: 12
+				id: "5CCC5C4FA2F0CEF2"
+				item: "create:track_signal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1E4741148535CB4E"
+				title: "单轨？多轨？"
+				type: "checkmark"
+			}]
+			title: "路口的设计"
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["07EF10D2C969A48B"]
+			description: [
+				"使用列车时刻表来为你的列车划定工作！"
+				""
+				"列车时刻表可以令列车以指定顺序执行多种不同行为，并且你可以为每个行为分别设置结束条件！"
+				"{image:kubejs:textures/ftb/timer.png width:180 height:100 align:center}"
+				"当你设置条件时，纵向一列的所有条件为与（必须一整列全部满足），而每一列之间则是或的关系（有一列全部满足）"
+				""
+				"{@pagebreak}"
+				"在设置物流车辆时，我们最常用的两种条件便是货物数量、停止装卸与调度延迟，当然，你需要根据具体情况决定如何使用，或者你可以参考如下的通用设置（不完全通用，但应该适用于大部分情况）"
+				""
+				"&e停止装卸A秒 or 调度延迟B秒 or (数量大于C and 调度延迟D秒) &r"
+				"&e（A << D < B）&r"
+				""
+				"&a为什么如此设置呢？我们考虑下面三种情况：&r"
+				"&61.上游缓存充足，货物很快就装满了"
+				"&62.上游缓存差一点把列车装满，但是在正常生产所以没有停止装卸"
+				"&63.上游缓存不足，但是在正常生产"
+				"&64.上游没有在生产"
+				""
+				"&a我们设置时刻表就是要在“保证物流数量”与“保证通过效率”之间找到一个合适的平衡点。&r"
+				""
+				"&e对于情景1和4，我们显然希望列车能尽快离开，此时应当适用停止装卸；"
+				""
+				"&e对于情景2，我们也希望列车尽快离开，此时适用“数量大于C and 调度延迟D秒”；"
+				""
+				"&e对于情景3，我们希望列车尽可能多装一些东西，但是不希望它停留太久而导致堵塞，此&e时适用调度延迟"
+			]
+			id: "4EA2D93A28690628"
+			tasks: [{
+				id: "3D9EC6BC6D2D9758"
+				item: "create:schedule"
+				type: "item"
+			}]
+			title: "划定规范"
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["07EF10D2C969A48B"]
+			description: [
+				"为了提高列车效率以及避免产线之间相互干扰，我建议你在大多数情况下一辆车仅运送一种物品"
+				""
+				"专车专送可以提高稳定性、简化时刻表书写并简化车站结构，是一种十分泛用的技巧"
+				""
+				"至少你应当为常用流体设置专车"
+			]
+			icon: "minecraft:chest_minecart"
+			id: "7B5DC9F1259CF3C3"
+			tasks: [{
+				advancement: "create:train"
+				criterion: ""
+				id: "632FEFEEDFFA9C24"
+				type: "advancement"
+			}]
+			title: "分门别类"
+			x: 1.5d
+			y: 5.5d
+		}
+	]
+	title: "乐谱-轨道工厂"
+}

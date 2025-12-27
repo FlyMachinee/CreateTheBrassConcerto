@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "111_5"
+	group: "12064763B96B71BC"
+	icon: "minecraft:popped_chorus_fruit"
+	id: "48CB3EF98F96707C"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: "紫颂之歌(施工中)"
+}

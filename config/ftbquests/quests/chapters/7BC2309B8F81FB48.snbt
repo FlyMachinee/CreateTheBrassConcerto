@@ -1,0 +1,4602 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "7BC2309B8F81FB48"
+	group: "6EA46263F86F561F"
+	icon: "create:steam_engine"
+	id: "7BC2309B8F81FB48"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"第一乐章是齿轮、蒸汽和计算机科学的基础"
+				""
+				"机械的力量会保证你的生活"
+				""
+				"&c需要注意的是，许多配方或许并不与你所熟知的配方相同，请仔细查看任务描述、思索与JEI！&r"
+				""
+				"&c我建议你完全抛弃过去的一切细节上的经验！&r"
+				""
+				"&e当前这一小节大多是一些最前期的引导和第一乐章大部分内容的简单介绍！&r"
+				""
+				"&e如果你需要一些更好的存储，你可以查看“跨越时空”一节！&r"
+				""
+				"&e如果你需要一些规划上的指引，你可以查看“工厂脉络”一节！&r"
+				""
+				"希望在这一乐章结束后，你能拥有一个初步的工业区"
+			]
+			id: "57005A71B5688770"
+			rewards: [{
+				id: "156417C6D2F6F310"
+				item: "create:goggles"
+				team_reward: false
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "53A654FF10DE95E6"
+				title: "欢迎来到机械动力！"
+				type: "checkmark"
+			}]
+			title: "让我们开始吧"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["57005A71B5688770"]
+			description: ["锌是十分有用的矿石，可以用于制作黄铜等材料"]
+			id: "6C50D97F2E3C3F38"
+			rewards: [{
+				count: 32
+				id: "2A97902D5D617D9A"
+				item: "create:crushed_raw_zinc"
+				type: "item"
+			}]
+			subtitle: "基础矿石-锌"
+			tasks: [{
+				id: "672BB0AEBA636BF0"
+				item: "create:zinc_ingot"
+				type: "item"
+			}]
+			title: "锌中有数"
+			x: -1.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["57005A71B5688770"]
+			description: ["传送带是核心的物流方式之一，为了制作传送带，请收集大量的海带！"]
+			id: "31B47BA34C8D4477"
+			rewards: [{
+				count: 9
+				id: "706F162713DAF9DF"
+				item: "minecraft:dried_kelp_block"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "2FF72188B474C9C7"
+				item: "minecraft:kelp"
+				type: "item"
+			}]
+			title: "带带你的"
+			x: 1.0d
+			y: -3.5d
+		}
+		{
+			description: [
+				"移动结构是工程学的核心之一，不得不品尝！"
+				""
+				"为了建造更加有效的移动结构，粘液球是必须的！"
+				""
+				"粘液球可以由黄绿色染料与面团制作、可以由岩浆膏离心、可以利用聚乙烯合成...或者从一种生物——史莱姆——身上获取——&e不过，史莱姆并不存在于绝大部分星球之上，在地球上也仅能在一些古老的遗迹中看到它们的踪迹&r"
+				""
+				"&a沼泽地和某些地方的地下...？你在说什么，这是来自你故乡的知识吗？那里也有史莱姆吗？"
+			]
+			id: "63F40B24ABDA759C"
+			rewards: [{
+				count: 16
+				id: "299580956463F60B"
+				item: "minecraft:slime_block"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				id: "32C58CF6DBAB96C6"
+				item: "minecraft:slime_ball"
+				type: "item"
+			}]
+			title: "它不是鼻涕"
+			x: -4.375d
+			y: -4.375d
+		}
+		{
+			dependencies: ["57005A71B5688770"]
+			description: [
+				"安山岩是开启工业的必备材料！"
+				"为了安山合金，对安山岩使用黄铜镐吧！"
+			]
+			id: "6170726DD12211A8"
+			rewards: [{
+				count: 64
+				id: "072FDE5524B64784"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			subtitle: "基础材料-安山岩"
+			tasks: [{
+				count: 32L
+				id: "3BEF42D2055745D5"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			title: "挖呀挖呀挖"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["57005A71B5688770"]
+			description: [
+				"建造动力钻头等工作部件、制造安山合金、制造烈焰人燃烧室......"
+				"这些都需要大量的铁！"
+			]
+			id: "0A300217BFFF0EFE"
+			rewards: [{
+				count: 32
+				id: "58BE0FE9D9179FB6"
+				item: "create:crushed_raw_iron"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "5A84CDFB5FC8154E"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			title: "定订腚啶锭"
+			x: 1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["57005A71B5688770"]
+			description: ["铜是流体系统的主要材料，同时也是制作黄铜的材料之一"]
+			id: "5657783EBC7A2614"
+			rewards: [{
+				count: 64
+				id: "315B433CE6CA5836"
+				item: "create:crushed_raw_copper"
+				type: "item"
+			}]
+			subtitle: "基础材料-铜"
+			tasks: [{
+				id: "26D7012042345ECC"
+				item: "minecraft:copper_ingot"
+				type: "item"
+			}]
+			title: "铜同桶通嗵"
+			x: -1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["57005A71B5688770"]
+			description: [
+				"木材是制作机壳、齿轮和水车的必要材料！"
+				""
+				"你可以使用&e木屑材料&r来替代它们！"
+			]
+			icon: "minecraft:stripped_spruce_log"
+			id: "6901F25ADD92F25D"
+			rewards: [
+				{
+					count: 64
+					id: "7CE58311B27DB719"
+					item: "createdieselgenerators:chip_wood_block"
+					type: "item"
+				}
+				{
+					id: "1856C7EF7268A57F"
+					item: "minecraft:kelp"
+					type: "item"
+				}
+			]
+			subtitle: "基础材料-原木"
+			tasks: [{
+				id: "37A049902493CD40"
+				type: "checkmark"
+			}]
+			title: "木林森"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			description: [
+				"工业化由此开始！"
+				""
+				"你也许发现，它是无法通过工作台制作的——从此开始，你就必须逐渐脱离手工制造的思想，逐渐朝着机械化前进！"
+				""
+				"&a对世界中的安山岩使用铁粒或锌粒，即可获得你的第一个安山合金！&r"
+				""
+				"而如果你想要更好地自动化生产它，你&e必须&r使用一种独特的合成方式——&e方块注液&r！&a具体请查看安山合金的思索！&r"
+				""
+				"&e在你的生产中，并非所有的元件都必须一开始就自动化&r——如果你坚持全自动，那自然是更好的——但这一般只适合于那些较为熟练的工程师"
+			]
+			id: "0D782C4C1D0AE24D"
+			rewards: [
+				{
+					id: "69CEF665AF39B620"
+					item: "create:clipboard"
+					type: "item"
+				}
+				{
+					id: "25C5920D067B86CB"
+					item: "kubejs:coin_gold"
+					type: "item"
+				}
+				{
+					count: 96
+					id: "1E16DAD2AE9C721B"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "万物起源"
+			tasks: [{
+				id: "206BF91028236D4D"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "要开始加速咯！"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["00B48F1BEA0C0EFF"]
+			description: [
+				"传送带可以用来传输应力或物品，但尽量不要使用它来传输应力"
+				""
+				"为了美观，可以使用染料染色或加装机壳"
+			]
+			id: "35DBF77859D890D6"
+			rewards: [{
+				count: 16
+				id: "2DF555F9B45A4B5B"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			subtitle: "物流总是令人头疼"
+			tasks: [{
+				advancement: "create:belt"
+				criterion: ""
+				id: "0628D6B35BCBF95E"
+				type: "advancement"
+			}]
+			x: 6.0d
+			y: -4.875d
+		}
+		{
+			dependencies: ["18B4AAE5B37A74FF"]
+			description: [
+				"对去皮原木使用安山合金可以创建安山机壳"
+				"你需要用它制作机械核心"
+			]
+			id: "447805012105BE20"
+			rewards: [
+				{
+					count: 3
+					id: "712BD555848CD166"
+					item: "kubejs:coin_iron"
+					type: "item"
+				}
+				{
+					id: "58408A4C4BA1583C"
+					item: "creategbd:advanced_laser_turret"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "基础机械元件"
+			tasks: [{
+				advancement: "create:andesite_casing"
+				criterion: ""
+				id: "7A2F5496D70EC770"
+				type: "advancement"
+			}]
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0D782C4C1D0AE24D"]
+			description: [
+				"传动杆用于制作大小齿轮等元件，也可以直接用来传递应力"
+				"它可以套上机壳"
+			]
+			id: "18B4AAE5B37A74FF"
+			rewards: [
+				{
+					count: 32
+					id: "030F7033DBD5962C"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "4415F4A926554D9B"
+					item: "kubejs:io_mechanism"
+					type: "item"
+				}
+			]
+			subtitle: "非常好传动，爱来自传动杆"
+			tasks: [{
+				id: "06F53A6C71B334BB"
+				item: "create:shaft"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["18B4AAE5B37A74FF"]
+			description: [
+				"这些都是常用的传动部件，各自适用于不同的场景"
+				"大小齿轮相接可以将转速加倍或减半"
+				"需要注意的是，转速的上限是256！"
+			]
+			id: "10ED8A59CCBB2CAD"
+			rewards: [
+				{
+					count: 16
+					id: "068A7BF245A1244C"
+					item: "create:encased_chain_drive"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "33D68F56C6F6C231"
+					item: "create:gearbox"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "2D9CBD89586BF76B"
+					item: "create_connected:encased_chain_cogwheel"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "63795ACD32345529"
+					item: "create_connected:parallel_gearbox"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "6D378C24897FA5BE"
+					item: "create:gearshift"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3794702CAA8C8CDC"
+					item: "create_connected:inverted_gearshift"
+					type: "item"
+				}
+				{
+					id: "73DA77DFFE26CC54"
+					item: "design_decor:industrial_gear"
+					type: "item"
+				}
+				{
+					id: "235100CB5FF4F5D8"
+					item: "design_decor:industrial_gear_large"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "428C75F47DAE5E59"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					id: "08C35A64B9D0F4A1"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			title: "大鸟转转转"
+			x: 1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["18B4AAE5B37A74FF"]
+			dependency_requirement: "one_completed"
+			description: [
+				"水车是前期最佳的应力来源！（也许你还有别的能用？）"
+				"大水车可以提供512su的应力，而小水车可以获得更高的转速"
+				"如果让小水车先转动，然后再接上大水车，那么就能让大水车转的更快！"
+				"风车拥有比水车更高的应力上限——8192su。但是它要更昂贵一些"
+			]
+			id: "65F7892A9EA11087"
+			rewards: [
+				{
+					id: "5E1F4E628B5C2CA0"
+					item: "create:windmill_bearing"
+					type: "item"
+				}
+				{
+					id: "007AC2FC23F9B06F"
+					item: "create:hand_crank"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "5082E5F2ABE1AF2D"
+					item: "create_things_and_misc:oak_sail"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "4522B3FB8CEC144E"
+					item: "kubejs:coin_iron"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "7FD787AACAF180F2"
+					item: "create:white_sail"
+					type: "item"
+				}
+			]
+			subtitle: "前期的应力来源"
+			tasks: [{
+				id: "26D90A00CE9AD707"
+				item: "create:large_water_wheel"
+				type: "item"
+			}]
+			title: "推动磨坊！"
+			x: -1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["787949E6C41BA2F5"]
+			description: [
+				"压板的锭是机械动力中的重要材料"
+				""
+				"铁板用于制作各种机器"
+				""
+				"金板可以制作扳手、工程师护目镜等重要物品"
+				""
+				"&e除此以外，辊压机还可用于批量生产绯红岩、皓蓝石等基础资源&r"
+				""
+				"为了获得金属板，请制作至少一个动力辊压机！"
+				""
+				"&e满转速的动力辊压机的工作盆压块时间为10tick，而压片时间为11tick（有时为12tick）！&r"
+			]
+			id: "66E89DB9217359ED"
+			rewards: [
+				{
+					count: 64
+					id: "171286EE1E3F722D"
+					item: "create:crushed_raw_iron"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "5CFB9B13CB5B446B"
+					item: "create:mechanical_pump"
+					type: "item"
+				}
+			]
+			size: 1.25d
+			subtitle: "压板"
+			tasks: [{
+				id: "312942C0C42F3636"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			title: "感受动量"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["787949E6C41BA2F5"]
+			description: [
+				"工作盆可以用来自动打包、搅拌、酿造"
+				"也可以用来融化金属、微生物发酵"
+			]
+			id: "4E7BFFF65ACABE29"
+			rewards: [{
+				count: 3
+				id: "119ACFC73B1BE561"
+				item: "kubejs:coin_iron"
+				type: "item"
+			}]
+			subtitle: "真的不是炼药锅"
+			tasks: [{
+				id: "5F14D99E1CAD5F64"
+				item: "create:basin"
+				type: "item"
+			}]
+			title: "压一压、搅一搅"
+			x: 1.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["66E89DB9217359ED"]
+			description: [
+				"扳手可以用于旋转元件、配置元件状态、快速拆除元件和编辑元件配置"
+				""
+				"每一个工程师都会需要它的"
+				""
+				"&e不单单是机械元件，在经过我的技术改进后，你可以使用扳手收起绝大部分工厂中会用到的东西！包括但不限于水龙头、抽屉、工作台......&r"
+			]
+			id: "078DF73AD1AC34D8"
+			rewards: [{
+				count: 3
+				id: "7551922402E6CA91"
+				item: "kubejs:coin_iron"
+				type: "item"
+			}]
+			subtitle: "必备物品！"
+			tasks: [{
+				id: "2474EA617F9B809D"
+				item: "create:wrench"
+				type: "item"
+			}]
+			title: "工程师套装"
+			x: -1.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["66E89DB9217359ED"]
+			description: [
+				"动力鼓风机可以进行洗涤、烟熏、熔炼和缠魂，是大部分产线的核心元件"
+				""
+				"它可以增加矿物产出、无燃料熔炼、无燃料烤制、将沙子变成灵魂沙、将砂砾变为燧石、将灵魂沙变为地狱疣......"
+				""
+				"不可不品尝！"
+			]
+			id: "1937330ACAF9F87C"
+			rewards: [{
+				count: 3
+				id: "5D870EF8B71BC05F"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			subtitle: "工作元件-鼓风机"
+			tasks: [{
+				id: "704195FF831D4A00"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			title: "吹啊吹啊我的骄傲放纵"
+			x: -1.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["66E89DB9217359ED"]
+			description: [
+				"护目镜可以用于查看元件信息，你可以将它放置在饰品栏中"
+				""
+				"每一个工程师都会需要它的"
+			]
+			id: "0989E8F1E4F5840F"
+			rewards: [
+				{
+					count: 3
+					id: "0EA63FEC86BBED68"
+					item: "kubejs:coin_iron"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6714790B23CE1411"
+					item: "storagedrawers:compacting_drawers_3"
+					type: "item"
+				}
+			]
+			subtitle: "必备物品！"
+			tasks: [{
+				id: "559613F8A8B59BB9"
+				item: "create:goggles"
+				type: "item"
+			}]
+			title: "工程师套装"
+			x: 1.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["66E89DB9217359ED"]
+			description: [
+				"你可以通过用动力搅拌器搅拌岩浆和水的方式快速获得大量圆石！"
+				""
+				"&e满转速的动力搅拌器工作时间为17tick！&r"
+			]
+			id: "7FE5AB2587E7BC6A"
+			rewards: [{
+				count: 64
+				id: "1D33AB6451A20041"
+				item: "create:crushed_raw_zinc"
+				type: "item"
+			}]
+			subtitle: "工作元件-动力搅拌器"
+			tasks: [{
+				id: "282198709E23E4E2"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4155630A86002758"]
+			description: [
+				"使用空燃烧室右键烈焰人或者烈焰人刷怪笼即可获得燃烧室"
+				""
+				"在地狱的大型遗迹中能找到烈焰人刷怪笼"
+				""
+				"&e而如果你实在找不到，还有一些临时替代方案！具体请查看小卖部！&r"
+				""
+				"你可以使用&eCarry On&r仪式来搬运刷怪笼！"
+				""
+				"空手对着刷怪笼按下&eShift+右键&r即可搬起"
+				""
+				"吸管能使得燃烧室可以接收直接泵入的液体燃料！"
+				""
+				"&a你可以在背包中对燃烧室按U来查看可以使用的液体燃料！&r"
+			]
+			id: "75BBAADC815BE524"
+			rewards: [
+				{
+					count: 11
+					id: "3F5B59126BAC136C"
+					item: "create:blaze_burner"
+					type: "item"
+				}
+				{
+					id: "7171C1890F13CCF6"
+					item: "minecraft:bamboo"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "4666F5E652D1233F"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.125d
+		}
+		{
+			dependencies: ["4D065E793F1933EB"]
+			description: [
+				"蒸汽引擎和熔炉引擎是前期的主要动力来源（大前期则是水车、风车）"
+				""
+				"水龙头可以便利地向炉子输水，岩浆块、篝火等可以作为被动热源，具体请查看水龙头与蒸汽引擎的思索"
+				""
+				"这样，可以搓出一台不需要燃料的引擎；但是如果供应燃料，又会发生什么呢？"
+				""
+				"吸管能使得燃烧室可以接收直接泵入的液体燃料！"
+				""
+				"&e水龙头输出速率为250mB/s&r"
+			]
+			id: "5AD4875AE4B11325"
+			rewards: [
+				{
+					id: "6C4098FB61C22C8B"
+					item: "create:steam_engine"
+					type: "item"
+				}
+				{
+					id: "33E5BFBD832B61E7"
+					item: "createaddition:straw"
+					type: "item"
+				}
+			]
+			subtitle: "动力澎湃"
+			tasks: [
+				{
+					id: "2214FF49C8FB846A"
+					item: "supplementaries:faucet"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4BD7E8E1852E634E"
+					item: { Count: 4, id: "create:fluid_tank" }
+					type: "item"
+				}
+			]
+			title: "零级炉"
+			x: -3.0d
+			y: 4.125d
+		}
+		{
+			dependencies: ["0989E8F1E4F5840F"]
+			description: [
+				"蓝图可以用于自动建造"
+				""
+				"在蓝图桌内加载蓝图，然后就可以放到蓝图加农炮内自动打印"
+				""
+				"需要注意的是，蓝图无法打印流体、无法打印合成槽盖板、打印储罐常出问题、偶尔会让机器上的过滤消失"
+				"所以，打印完成后一定要认真检查机器。"
+				""
+				"&e你在未来需要修建许多的多方块机器——你可以使用蓝图打印它们的结构。不过需要注意的是，我传输给你的蓝图中不包含各个机器的核心或控制器！&r"
+				""
+				"&e蓝图还可用于一类特殊的合成方式——方块合成"
+				"可以在思索中查看它&r"
+				""
+				"&a一个小技巧是，可以把部署好的蓝图作为机械手的过滤，然后让机械手进行放置！&r"
+			]
+			id: "11AD32B46ACE5E2C"
+			rewards: [
+				{
+					id: "087B9116FBFD8115"
+					item: "create:schematicannon"
+					type: "item"
+				}
+				{
+					id: "4DAF222DAE5BFF7D"
+					item: "create:empty_schematic"
+					type: "item"
+				}
+			]
+			subtitle: "copy你的"
+			tasks: [{
+				id: "18383A17B936CCD8"
+				item: "create:schematic_table"
+				type: "item"
+			}]
+			title: "蓝图工程"
+			x: 1.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["75BBAADC815BE524"]
+			description: [
+				"黄铜是一种核心原料！"
+				""
+				"有了它，可以制作黄铜漏斗等重要元件，并且你可以在这些元件上应用过滤器与属性过滤器！"
+				""
+				"绝大部分机器都离不开它"
+			]
+			id: "6C9B7AA41299D278"
+			rewards: [
+				{
+					count: 3
+					id: "558B05F7C83A8C20"
+					item: "kubejs:coin_gold"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "077AE5C0CD3D85FF"
+					item: "create:mechanical_drill"
+					type: "item"
+				}
+				{
+					id: "36320D88B6A83757"
+					item: "create:filter"
+					type: "item"
+				}
+				{
+					id: "11262B188E543A2F"
+					item: "create:attribute_filter"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "26D202C7EFE21B0B"
+					item: "create:controls"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "create:brass_casing"
+				criterion: ""
+				id: "7BE47FDBCCCDFFF0"
+				type: "advancement"
+			}]
+			title: "黄铜时代！"
+			x: 3.0d
+			y: 4.125d
+		}
+		{
+			dependencies: ["39CB4BF75BD6FA9F"]
+			description: [
+				"软管滑轮是十分重要的元件——它可以使流体无限化，也可以便捷抽取液体"
+				""
+				"当软管滑轮抽取的流体池中含有512立方以上的某些流体，它将可以无限抽取"
+				""
+				"建造一个512立方的无限岩浆池以获取无限燃料！"
+				""
+				"&e或者，主世界的地下和地狱都拥有许多大型的岩浆池甚至岩浆海！&r"
+				""
+				"（推荐大小：8*8*8）"
+				"[ \"在\", { \"text\": \"史莱姆的乐谱\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"35F0C3FF989DA797\" } }, \"中查看可以无限抽取的流体列表！（点击横线跳转）\" ]"
+				""
+				"&a顺便一提，经过我的技术改进，动力泵现在的扬程是24格！&r"
+				""
+				"&e满转速的动力泵工作速率为2560mB/s！（128mB/tick）&r"
+			]
+			id: "4D065E793F1933EB"
+			rewards: [{
+				id: "151FA9590BF3BA64"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.25d
+			subtitle: "无底洞"
+			tasks: [{
+				id: "351F5214E67E1B58"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			title: "无限液体！"
+			x: -3.25d
+			y: 3.25d
+		}
+		{
+			dependencies: ["36140639AA33A37E"]
+			description: [
+				"电气齿轮是高级机器元件的必要材料"
+				""
+				"可以制作诸如黄铜漏斗、辉光管等好料"
+				""
+				"动力合成器可以用于自动制作一些配方，也可以用于制作一些高级配方！"
+			]
+			id: "0BA283A335841F26"
+			rewards: [
+				{
+					count: 16
+					id: "324F6C155C43163C"
+					item: "create:electron_tube"
+					type: "item"
+				}
+				{
+					id: "322AC636E0FB21DC"
+					item: "create:mechanical_crafter"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "7F87CE49D801CE3E"
+				item: "kubejs:electric_gear"
+				type: "item"
+			}]
+			title: "电气时代！"
+			x: 4.5d
+			y: -6.875d
+		}
+		{
+			dependencies: ["4D065E793F1933EB"]
+			description: [
+				"坚固板是铁路工程的必备原料"
+				""
+				"它制作的列车机壳用于制作列车站、创建转向架等工程"
+				""
+				"它制作的列车调度表用于调度列车"
+				""
+				"它还用于附魔表、烹饪表和各种高级机械装备"
+				""
+				"你主要有四种方式获取黑曜石："
+				"&e搅拌冷冻剂与岩浆"
+				"&e在黑曜石粉中注入水和岩浆"
+				"&e挤压冷冻剂与岩浆接触产生的黑曜石"
+				"&e挤压水与岩浆源接触产生的黑曜石"
+			]
+			id: "583C961608F1EB5E"
+			rewards: [{
+				id: "254FD89FDB9EB53D"
+				item: "railways:conductor_whistle"
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "6A03EB09B6089573"
+				item: "create:sturdy_sheet"
+				type: "item"
+			}]
+			title: "铁路时代！"
+			x: -4.5d
+			y: 2.625d
+		}
+		{
+			dependencies: ["447805012105BE20"]
+			description: [
+				"粉碎轮可以将矿物等物品粉碎"
+				""
+				"&e在量产矿物原料、木屑材料中具有十分重要的作用&r"
+				"&e有了它，圆石生万物！&r"
+				""
+				"虽然你的飞船上有两个我看不懂的结构已经被这个世界转化为了粉碎轮，但你总不能一直用那两个粉碎轮吧"
+				""
+				"&a你可以使用世界合成的方式制造它，请查看思索！&r"
+				""
+				"&e在大部分情况下，满转速的粉碎轮处理一组物品的时间为69tick，而部分特殊配方——比如粉碎木屑——拥有极快的处理速度！&r"
+			]
+			icon: "create:crushing_wheel"
+			id: "63B2F182F14905E0"
+			rewards: [{
+				count: 8
+				id: "25E443FE6C36762A"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			subtitle: "矿物量产！"
+			tasks: [
+				{
+					id: "10DD16468A7A41E6"
+					item: "create:crushing_wheel"
+					type: "item"
+				}
+				{
+					id: "21C7F0B7E5EAF187"
+					title: "可以通过世界合成制作！"
+					type: "checkmark"
+				}
+			]
+			title: "一对大家伙"
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["4E7BFFF65ACABE29"]
+			description: [
+				"工作盆盖板可以进行发酵"
+				""
+				"它思索中关于配方的内容已经有些过时了，还是查看JEI吧！"
+				""
+				"&a使用基础的配方（作物+木屑+水）发酵乙醇的时间为恒定的25秒，而其它的发酵配方时长各有不同，从半秒到几十秒均有！&r你应当通过你的需求、作物产出和配方时长对你需要多少发酵盆进行计算，而不是盲目地设置数量！"
+				""
+				"发酵产生的乙醇可以用于制作&e生物柴油&r——一种可以提供&e超级加热&r的燃料！需要注意的是，它并不适合在柴油机中使用"
+				""
+				"在此为你提供以下数据："
+				"在没有&e时运&r魔咒的情况下——"
+				"&a1株小麦&r平均产出&e2.71小麦种子&r+&e1小麦&r"
+				"&a1株马铃薯&r平均产出&e3.71马铃薯&r+&e0.02毒马铃薯&r"
+				"&a1株甜菜&r平均产出&e2.71甜菜种子&r+&e1甜菜根&r"
+				"&a1株胡萝卜&r平均产出&e2.71胡萝卜&r"
+			]
+			id: "1DE9850DD200CD3F"
+			rewards: [{
+				count: 6
+				id: "3C518B61614EFB0B"
+				item: "createdieselgenerators:large_diesel_engine"
+				type: "item"
+			}]
+			shape: "hexagon"
+			subtitle: "制造...燃料？"
+			tasks: [{
+				id: "1938DB1B3B091720"
+				item: "createdieselgenerators:basin_lid"
+				type: "item"
+			}]
+			title: "发酵"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4C7F4AB89C420568"]
+			description: [
+				"滚珠轴承是一种重要零件，它广泛的应用于工业元件之中！"
+				""
+				"什么？你问我没有动力泵怎么往注液器里灌入流体？&e不妨看看水龙头吧。&r"
+				""
+				"&c不过请注意，水龙头在特定情况下是有一定损耗的哟！&r"
+				""
+				"或者你也可以选择用&e动力轴承&r来制作它！"
+				""
+				"&a顺便一提，经过我的技术改进，动力泵现在的扬程是24格！&r"
+				""
+				"在你开始批量生产它之前，你最好已经完成了&e金属增殖&r、&e种子油&r以及&e安山合金&r产线的搭建"
+			]
+			icon: "kubejs:bearing"
+			id: "67F7753F65D198FD"
+			rewards: [
+				{
+					count: 24
+					id: "60E1A7E767753EBD"
+					item: "kubejs:bearing"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "656ADBB343257876"
+					item: "create:brass_funnel"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "62CB527049BB6697"
+					item: "kubejs:bearing"
+					type: "item"
+				}
+				{
+					id: "5F4BB54FFA80987D"
+					item: "supplementaries:faucet"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["4E7BFFF65ACABE29"]
+			description: [
+				"种子油是重要的生产原料，也可以当做临时燃料，不过更好把它制作成能够&e超级加热&r的&e生物柴油&r"
+				""
+				"你可以建造一座自动化农场来批量生产它"
+				""
+				"不过受制于世界的规则，所有的植物必须要有人在附近看护才能生长"
+				""
+				"如果你希望用更快的速度生产它，也许你可以查看酵母菌和氮肥的配方"
+				""
+				"&e在过去，由于技术缺陷，储罐里的燃料会被外部爆炸引爆——但经过我的技术改进之后，现在已经不会出现这种情况了！&r"
+			]
+			id: "0CFF70EC1A3F0E19"
+			rewards: [
+				{
+					id: "5558EBEEA6A80C77"
+					item: "create:item_drain"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4C9F880ABDE4DCF0"
+					item: "createaddition:seed_oil_bucket"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "0F7C72E65AC7228D"
+				item: "createaddition:seed_oil_bucket"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["41BBAE875EE21525"]
+			description: [
+				"机械手使用铁质手部零件或世界合成制造！"
+				""
+				"你有很多方式可以获得铁质手部零件！"
+			]
+			id: "0BEFDE24534261C5"
+			rewards: [
+				{
+					count: 8
+					id: "5B63FAC3FACC7302"
+					item: "kubejs:circuit_board"
+					type: "item"
+				}
+				{
+					id: "77AD81B6F93F5455"
+					item: "create:precision_mechanism"
+					team_reward: false
+					type: "item"
+				}
+				{
+					id: "2171A219E455FC4A"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+			]
+			size: 1.0d
+			tasks: [{
+				id: "1C736601CAC2F294"
+				item: "kubejs:iron_hand"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2ECE50D43DDBC159"]
+			description: [
+				"这应该是你遇到的第一个不能手动制作的组装配方！"
+				""
+				"让机械手对着机壳使用大齿轮吧！"
+			]
+			id: "787949E6C41BA2F5"
+			rewards: [
+				{
+					count: 32
+					id: "793D7F4C36067EF5"
+					item: "kubejs:mechanical_core"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "77A2979804CEEB5F"
+					item: "minecraft:redstone_block"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "03375FAFB73EA231"
+				item: "kubejs:mechanical_core"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			description: [
+				"如果你需要木炭的话...（一般而言这时你应该不太需要？）"
+				""
+				"&e推荐使用木屑熔炼获得木炭！&r"
+			]
+			id: "7CAC547948AC264F"
+			rewards: [
+				{
+					count: 16
+					id: "0CB5458D14216DA0"
+					item: "supplementaries:cage"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "19714ED4617E955E"
+					item: "create:encased_chain_drive"
+					type: "item"
+				}
+			]
+			tasks: [{
+				consume_items: true
+				count: 512L
+				id: "63E2BA0680F9CA07"
+				item: "minecraft:charcoal"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.625d
+		}
+		{
+			description: [
+				"你可以通过与木屑类似的方式批量生产羊毛！"
+				""
+				"羊毛可以用于制造&a过滤器&r和&e坐垫&r！&6而坐垫可以用于封印一些强大的怪物——诸如主世界的各种巨龙！&r"
+				""
+				"不过也许你并不需要那么多的羊毛！"
+			]
+			id: "3E2B932D41926256"
+			rewards: [{
+				count: 64
+				id: "05B14E9CFBA3DC8C"
+				item: "kubejs:bearing"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 256L
+				id: "182442444D025354"
+				item: "minecraft:white_wool"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -0.375d
+		}
+		{
+			dependencies: ["66185985051C6656"]
+			description: [
+				"离心机可以用于一些奇怪的配方"
+				""
+				"我有时候非常怀疑它里边其实住了一只拉普拉斯妖"
+				""
+				"需要注意的是，它的部分思索已经过时了——&e在安装好工作盆之后，你只需要通过扳手右键中心的旋转轴，即可切换红石模块的启用与关闭！&r"
+				""
+				"如果你给离心机启用了红石模块，那么你将可以使用比较器检测是否仍有输入的原料存在于离心机中！"
+				""
+				"&o&7(Beta0.7.1起)&r&r&a在过去，离心机会大幅提升世界不稳定度，但经过来自科学家&r&eApertyotis&r&a的技术改进以后，它对世界造成的负载被大幅减弱了！&r"
+			]
+			id: "2B5D24FB223D7D37"
+			rewards: [
+				{
+					count: 12
+					id: "021E0E59F8156555"
+					item: "kubejs:circuit_board"
+					type: "item"
+				}
+				{
+					id: "643794F849D5FFCC"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5560D5EA87DFECF2"
+				item: "vintageimprovements:centrifuge"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["67F7753F65D198FD"]
+			description: ["卷簧机用于生产一些重要机器"]
+			id: "66185985051C6656"
+			rewards: [{
+				count: 32
+				id: "2AF08EC3218CC5D1"
+				item: "design_decor:industrial_gear"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1CC36F986815D276"
+				item: "vintageimprovements:spring_coiling_machine"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 10.5d
+		}
+		{
+			description: [
+				"辉绿岩可以用于量产铜矿！"
+				""
+				"请在JEI中查看具体配方！"
+				""
+				"[ \"或是查看\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"？\" ]"
+			]
+			id: "214C637A27E560E8"
+			rewards: [{
+				id: "3BD482E98765512E"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "183F14D6AF49B997"
+				item: "create:veridium"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -8.0d
+		}
+		{
+			description: [
+				"绯红岩可以用于量产铁矿！"
+				""
+				"请在JEI中查看具体配方！"
+				""
+				"[ \"或是查看\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"？\" ]"
+			]
+			id: "3F706516FF786A38"
+			rewards: [
+				{
+					id: "34D48D2416194E0A"
+					item: "storagedrawers:controller"
+					type: "item"
+				}
+				{
+					id: "6700363D97F694B7"
+					item: "storagedrawers:compacting_drawers_3"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "1DE97E25EEA7B273"
+				item: "create:crimsite"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -8.75d
+		}
+		{
+			description: [
+				"皓蓝石可以用于量产锌矿！"
+				""
+				"请在JEI中查看具体配方！"
+				""
+				"[ \"或是查看\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4DCCA0B6DBFB05B2\" } }, \"？\" ]"
+			]
+			id: "7725EC39D40144B5"
+			rewards: [{
+				id: "405C0CC7AA08D94D"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "61A79E5CB99C46B0"
+				item: "create:asurine"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["0BA283A335841F26"]
+			description: ["大部分涉及信号的高级元件都需要电路板来制作"]
+			id: "62275C451D524EE0"
+			rewards: [
+				{
+					count: 24
+					id: "4150DA9BA57381A2"
+					item: "kubejs:electric_gear"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "0754F2999CF8FB30"
+					item: "kubejs:fluid_mechanism"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "00997CEF9AB11CCE"
+				item: "kubejs:circuit_board"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -7.375d
+		}
+		{
+			dependencies: ["583C961608F1EB5E"]
+			description: [
+				"喷气背包让你可以在地面附近飞行"
+				""
+				"这在工程中非常方便！"
+				""
+				"手持便携液体储罐对水右键即可装水"
+				""
+				"手持便携燃料储罐对岩浆右键即可装填燃料"
+				""
+				"便携储罐只需要放在身上就可以自动为喷气背包等设备提供动力"
+			]
+			id: "70806CB53335AB3C"
+			tasks: [
+				{
+					id: "4A79E4C32566CA5E"
+					item: {
+						Count: 1
+						id: "create_sa:brass_jetpack_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "33BA44EA18A06551"
+					item: {
+						Count: 1
+						id: "create_sa:large_fueling_tank"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "17306C58BB96E0B5"
+					item: {
+						Count: 1
+						id: "create_sa:large_filling_tank"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "起飞！"
+			x: -5.5d
+			y: 1.625d
+		}
+		{
+			dependencies: ["4BB17B8F476D22EB"]
+			description: [
+				"它可以作为占地更小的打磨方案！并且是某些配方的必需品！"
+				""
+				"不过需要注意的是，它的工作配方需要特定的转速区间！"
+				""
+				"&a1~16RPM为低转速&r"
+				"&b17~64RPM为中转速&r"
+				"&c65~256RPM为高转速&r"
+			]
+			id: "74BAB5407EA93AD4"
+			rewards: [{
+				count: 3
+				id: "211435D4B451D2C0"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5BB0CA8936C7E6E0"
+				item: "vintageimprovements:belt_grinder"
+				type: "item"
+			}]
+			x: 6.5d
+			y: -2.875d
+		}
+		{
+			dependencies: ["6C5776BDB9D45454"]
+			description: [
+				"这个设备可以让你一个区块内的机器强制运行——无论你是否在旁边"
+				"也许制作它的升级版是更好的选择"
+			]
+			id: "7AAE0F6B66F18F0D"
+			rewards: [{
+				count: 3
+				id: "364D506DB6B3CE89"
+				item: "create_power_loader:empty_andesite_chunk_loader"
+				type: "item"
+			}]
+			tasks: [{
+				id: "14C9EB5A9B6B21CA"
+				item: "create_power_loader:empty_andesite_chunk_loader"
+				type: "item"
+			}]
+			title: "给我动！"
+			x: 5.5d
+			y: 1.625d
+		}
+		{
+			dependencies: ["75BBAADC815BE524"]
+			description: [
+				"这是一个制作非常复杂的部件，但不要被它的合成表吓到了！"
+				""
+				"实际上，你暂时可以不用自动化制作它！只需要一些，就足以使用很久！"
+			]
+			id: "6C5776BDB9D45454"
+			rewards: [
+				{
+					count: 48
+					id: "518536D65F46D8CA"
+					item: "create:electron_tube"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "1F3EB1A2718FA4D2"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "0AC10FD6D4B22D1C"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			title: "这是个啥"
+			x: 4.5d
+			y: 2.625d
+		}
+		{
+			dependencies: ["1937330ACAF9F87C"]
+			description: [
+				"鼓风机触媒可以帮助你更好的运用鼓风机"
+				"它不会与环境产生意外的交互"
+			]
+			id: "3BE34E3C1A74B3C6"
+			tasks: [{
+				id: "526D10E4263C9EC4"
+				item: "create_connected:empty_fan_catalyst"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.5d
+		}
+		{
+			description: [
+				"目标显示器可以用于自动完成任务"
+				""
+				"选定任务，然后将所需物品或流体输入即可"
+			]
+			icon: "kubejs:coin_emerald"
+			id: "2A43D8C247527035"
+			rewards: [
+				{
+					count: 7
+					id: "368399F00C68C0C1"
+					item: "kubejs:coin_iron"
+					type: "item"
+				}
+				{
+					id: "435EB52EB2CD8D21"
+					item: {
+						Count: 1
+						id: "kubejs:matrix_2"
+						tag: {
+							ascii: 1
+							display: {
+								Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+							}
+							matrix: [
+								[
+									[
+										1
+										3
+									]
+									[
+										-2
+										95
+									]
+								]
+								[
+									[
+										-1
+										4
+									]
+									[
+										1
+										-124
+									]
+								]
+								[
+									[
+										1
+										-3
+									]
+									[
+										3
+										103
+									]
+								]
+								[
+									[
+										-1
+										2
+									]
+									[
+										-2
+										-93
+									]
+								]
+								[
+									[
+										1
+										4
+									]
+									[
+										-1
+										106
+									]
+								]
+								[
+									[
+										-1
+										-2
+									]
+									[
+										3
+										-94
+									]
+								]
+								[
+									[
+										-5
+										2
+									]
+									[
+										1
+										-16
+									]
+								]
+								[
+									[
+										10
+										-3
+									]
+									[
+										7
+										8
+									]
+								]
+								[
+									[
+										-4
+										5
+									]
+									[
+										4
+										-34
+									]
+								]
+								[
+									[
+										3
+										-7
+									]
+									[
+										4
+										4
+									]
+								]
+								[
+									[
+										2
+										13
+									]
+									[
+										5
+										83
+									]
+								]
+								[
+									[
+										-6
+										4
+									]
+									[
+										5
+										-23
+									]
+								]
+								[
+									[
+										11
+										3
+									]
+									[
+										3
+										10
+									]
+								]
+								[
+									[
+										8
+										-5
+									]
+									[
+										6
+										10
+									]
+								]
+								[
+									[
+										9
+										2
+									]
+									[
+										5
+										14
+									]
+								]
+								[
+									[
+										10
+										7
+									]
+									[
+										2
+										6
+									]
+								]
+								[
+									[
+										11
+										4
+									]
+									[
+										5
+										12
+									]
+								]
+								[
+									[
+										12
+										5
+									]
+									[
+										12
+										14
+									]
+								]
+								[
+									[
+										13
+										6
+									]
+									[
+										-1
+										7
+									]
+								]
+								[
+									[
+										5
+										3
+									]
+									[
+										3
+										26
+									]
+								]
+								[
+									[
+										6
+										5
+									]
+									[
+										5
+										21
+									]
+								]
+								[
+									[
+										7
+										8
+									]
+									[
+										5
+										22
+									]
+								]
+								[
+									[
+										8
+										9
+									]
+									[
+										7
+										13
+									]
+								]
+							]
+							no_copy: 1
+						}
+					}
+					team_reward: false
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "自动提交！"
+			tasks: [{
+				id: "56FDF2129EC0888C"
+				item: "ftbquests:screen_1"
+				type: "item"
+			}]
+			title: "自动化任务"
+			x: 0.0d
+			y: -5.749999999999999d
+		}
+		{
+			description: [
+				"你可以用这个罐子方便且安全地搬运液体"
+				""
+				"它是一个存量为8B的流体潜影盒。不仅如此，它还可以像桶那样与工作盆交互，并可以盛装不足1B的流体"
+				""
+				"在此之外，你还可以用它设置流体过滤"
+			]
+			id: "37B807F2628934C1"
+			rewards: [
+				{
+					id: "0BDE33B0D8D3733B"
+					item: {
+						Count: 1
+						id: "fluiddrawerslegacy:fluiddrawer_4"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "3FBBE0F2261063E9"
+					item: "kubejs:filling_machine"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7236E220F2B993CF"
+				item: "createdieselgenerators:canister"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["447805012105BE20"]
+			description: ["置物台是用于放置代加工物品的台子，同时也是进行物品加工的台面。"]
+			id: "1F9DD084EE705F35"
+			tasks: [{
+				id: "3EDC6835F7775777"
+				item: "create:depot"
+				type: "item"
+			}]
+			title: "原来是案板"
+			x: -1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["18B4AAE5B37A74FF"]
+			description: ["活塞杆是动力活塞和手工制作机械手所需要的"]
+			id: "5C6FC89A981D7A60"
+			rewards: [{
+				count: 32
+				id: "4546294F0E3B45FF"
+				item: "kubejs:scrap"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5906D6586408F0CF"
+				item: "create:piston_extension_pole"
+				type: "item"
+			}]
+			title: "我的头呢？"
+			x: 1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5C6FC89A981D7A60"]
+			description: [
+				"动力活塞可以把粘连在一起的最多2048个方块一起推走！"
+				""
+				"不过，你现在主要是用它来制作机械手"
+			]
+			id: "43C1589CFED267C5"
+			rewards: [{
+				count: 16
+				id: "4951CA207622AEAF"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6513E7DC350ABDC3"
+				item: "create:mechanical_piston"
+				type: "item"
+			}]
+			title: "不需要支点也能撬动世界"
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"43C1589CFED267C5"
+				"1F9DD084EE705F35"
+			]
+			description: [
+				"机械手可以帮助你办到&a几乎所有你左键右键能直接办到的事&r——无论是修剪羊毛、放置方块还是杀死怪物！"
+				""
+				"除此以外，它还能完成那些你无法完成的精密工作——比如组装一些元件"
+				""
+				"你也许在疑惑要如何合成它，&e或许可以查看它思索的最后一节？&r"
+				""
+				"&a需要注意的是，机械手不止有这一种获取方式！&r"
+				""
+				"&e满转速的机械手的组装时间为6tick！此外的工作时间为8tick！&r"
+			]
+			id: "2ECE50D43DDBC159"
+			rewards: [
+				{
+					count: 7
+					id: "7380EA03FFFE48E1"
+					item: "create:deployer"
+					type: "item"
+				}
+				{
+					id: "7727B945AC811896"
+					item: "create:rotation_speed_controller"
+					type: "item"
+				}
+			]
+			size: 1.25d
+			tasks: [{
+				id: "26E1E704383EFFF1"
+				item: "create:deployer"
+				type: "item"
+			}]
+			title: "你也许需要帮手"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["078DF73AD1AC34D8"]
+			description: [
+				"尝试使用&e扳手右键&r旋转传动杆吧！"
+				""
+				"如果你需要拆除元件，就&a按住shift并右键&r"
+				""
+				"如果你需要配置元件，就&a长按右键&r"
+				""
+				"尝试使用&e空手右键&r来调整流体管道和流体管道箱的开口吧！"
+				""
+				"在经过我的技术改进之后，&e你现在可以空手右键流体管道和流体管道箱的某一面来切换该面是否开口！如果你在潜行状态下调整，则可以切换对侧！&r"
+				""
+				"机械手也可以切换开口，只不过它无法调整对侧"
+				""
+				"需要注意的是，流体管道的开口状态并不稳定，你还是需要为它套壳！"
+			]
+			id: "225A27C1F76D4386"
+			rewards: [
+				{
+					count: 16
+					id: "6EE0F399C42C4711"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "57D2D5CDD8B9AEF6"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "2545E0B23EEF398F"
+					item: "create:shaft"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				block: "create:shaft"
+				block_type: 0
+				checkItem: true
+				id: "48376C1370D2640F"
+				isItemInteraction: true
+				item: "create:wrench"
+				type: "questsadditions:use"
+				value: 1L
+			}]
+			title: "旋转它！调整它！"
+			x: -1.0d
+			y: 9.5d
+		}
+		{
+			dependency_requirement: "one_completed"
+			description: [
+				"橡胶和海带都可以用于制作传送带、分液器、漏斗、隧道等物品"
+				""
+				"&e对于安山漏斗和黄铜漏斗而言，输出速度都是9tick/次，而输入速度则没有上限&r"
+				""
+				"在过去，曾经存在着一些能够天然产出橡胶的生物，但现在它们已经全部灭绝了。如果你想要获取橡胶，只能通过人工合成的方式"
+			]
+			id: "00B48F1BEA0C0EFF"
+			rewards: [
+				{
+					count: 12
+					id: "3798B261E5A1EBBF"
+					item: "minecraft:dried_kelp_block"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "537CFBA21A49A7FA"
+					item: "kubejs:rubber"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: false
+				id: "75366BC7EC93EA08"
+				item: "minecraft:dried_kelp"
+				type: "item"
+			}]
+			title: "制作的准备"
+			x: 4.5d
+			y: -4.375d
+		}
+		{
+			dependencies: ["63F40B24ABDA759C"]
+			description: [
+				"强力胶用于创建更大的移动结构，并且让轴向底盘不再成为必须。"
+				""
+				"不过，我还是建议你多用轴向底盘，毕竟它确实更加方便"
+			]
+			id: "534B224A5FCAAA4A"
+			rewards: [{
+				count: 32
+				id: "289DBE3574E16E5F"
+				item: "create:linear_chassis"
+				type: "item"
+			}]
+			tasks: [{
+				id: "42683A3600AA8465"
+				item: {
+					Count: 1
+					id: "create:super_glue"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "打胶也是一门艺术"
+			x: -6.0d
+			y: -4.875d
+		}
+		{
+			dependencies: ["534B224A5FCAAA4A"]
+			description: [
+				"矿车装配站可以用于组装矿车移动结构，具体操作可以查看思索"
+				""
+				"&e你可以用它将大量方块直接带走（相当于可以剪切并粘贴一个选区）&r"
+				""
+				"你可以用它搬运水晶母岩、刷怪笼等"
+				""
+				"你可以用它方块化装置时产生的挤压快速挖矿"
+				""
+				"你可以使用动力铁轨让矿车跑起来，也可以选择使用动力矿车组装结构，然后向动力矿车填装燃料"
+				""
+				"如果你希望一个能够自动无限前进的矿车结构，那么你需要放置路基（也可以使用压路机！）铁轨的机械手、放置方块来清除路上液体的机械手、清除前方方块的动力钻或者压路机和自动回收铁轨所需的动力犁"
+			]
+			id: "0F3B3D4856B86846"
+			rewards: [
+				{
+					count: 16
+					id: "29B9ACB9ECC19257"
+					item: "minecraft:rail"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "42DFBBE7A91D096B"
+					item: "minecraft:powered_rail"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "77ED2686EC0F0D8B"
+					item: "minecraft:redstone_torch"
+					type: "item"
+				}
+				{
+					id: "45ADBC2356888F21"
+					item: "minecraft:lever"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "32AA3FCC6CE8B353"
+				item: "create:cart_assembler"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -3.875d
+		}
+		{
+			dependencies: ["0F3B3D4856B86846"]
+			description: [
+				"&e一台&r&a盾构机&r&e可以满足你对大部分珍稀矿物的需求，而一台&r&a铺路机&r&e可以用来快速铺设工业区。&r当然，你也可以制作应急工业平台！"
+				""
+				"&e除了前面所说的部分，你还需要一个足够大的保险库（或者是许多箱子）用来装下收获，一些移动式物品接口用于物流交换，一个坐垫——让你跟着机器前进&r"
+				""
+				"除此以外，你还可以研究一些高级功能："
+				""
+				"&a自动按一定间隔的距离插火把&r（提示：动力锯可以一次砍倒一棵树，&e即使它是横着的&r）"
+				""
+				"&a自动清除液体&r（提示：机械手可以使用方块替换液体）"
+				""
+				"&a无轨矿车&r（提示：动力犁可以击飞实体）"
+				""
+				"&a自动返航或自动暂停&r（提示：移动式物品接口、接触式红石信号发生器）"
+				""
+				"&a防实体阻挡&r（&e实体阻挡会使得机械手无法放置方块，比如掉落的砂砾&r，提示：动力犁）"
+			]
+			id: "62A05BD7400E12D8"
+			rewards: [
+				{
+					id: "0592B12CE142E763"
+					item: "kubejs:coin_gold"
+					type: "item"
+				}
+				{
+					count: 24
+					id: "7F2E0CC2E7E32D27"
+					item: "create:mechanical_roller"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "48B4165799A9AF5B"
+				item: {
+					Count: 1
+					id: "create:minecart_contraption"
+					tag: { }
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			x: -6.5d
+			y: -2.875d
+		}
+		{
+			dependencies: ["534B224A5FCAAA4A"]
+			description: [
+				"火车是大宗物流和远程物流的必选项"
+				"当然，在短距离内也能使用"
+				"它也可以用于建造更便捷的盾构机等设备"
+				""
+				"我相信你哪怕没有远程物流需求也会需要它的——这比接传送带要轻松且美观"
+				""
+				"火车不需要燃料（你也可以用燃料让它更快运行），不过这并不是重点。&a它真正的的得天独厚之处在于——它可以穿过未加载的区块！&r"
+				""
+				"配置时刻表来让列车自动行驶！"
+			]
+			id: "021DC3A0645EDA43"
+			rewards: [
+				{
+					count: 6
+					id: "4C4952B318C877FD"
+					item: "create:track_station"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "02FCC6DC38D3B54B"
+					item: "create:railway_casing"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5B755FC1D5C2B50D"
+				item: "create:schedule"
+				type: "item"
+			}]
+			title: "建造列车！"
+			x: -5.5d
+			y: -5.875d
+		}
+		{
+			dependencies: ["021DC3A0645EDA43"]
+			description: [
+				"使用列车站来组装列车"
+				""
+				"对着轨道使用列车机壳来创建转向架"
+				""
+				"对着转向架右键切换样式，使用扳手右键切换大小"
+				""
+				"列车的上的物品容器（除了保险库）或燃料储罐（不是流体储罐！）中有燃料时，列车会自动消耗燃料并加速行驶"
+			]
+			id: "2382B027395D6652"
+			rewards: [
+				{
+					id: "4F03986C85D13488"
+					item: "kubejs:coin_gold"
+					type: "item"
+				}
+				{
+					id: "1310C652D155F034"
+					item: "railways:fuel_tank"
+					type: "item"
+				}
+				{
+					id: "45DCAEB4FABB5F1B"
+					item: "railways:portable_fuel_interface"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "3C4A4DA656160511"
+					item: "create:track_signal"
+					type: "item"
+				}
+			]
+			tasks: [{
+				advancement: "create:train"
+				criterion: ""
+				id: "6EFD09EE12DDF44B"
+				type: "advancement"
+			}]
+			x: -4.5d
+			y: -6.875d
+		}
+		{
+			description: [
+				"燃烧室可以点上&e普通火&r或&b灵魂火&r以为鼓风机服务"
+				""
+				"还可以用于关押烈焰人！"
+			]
+			id: "4155630A86002758"
+			rewards: [{
+				count: 11
+				id: "5E4D6B2523E04A00"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				id: "48917F4C639AAE2B"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			x: 3.25d
+			y: 2.0d
+		}
+		{
+			dependencies: ["35DBF77859D890D6"]
+			description: ["通过序列组装来制作电子管！"]
+			id: "36140639AA33A37E"
+			rewards: [{
+				count: 32
+				id: "77D704FC7AEE01E0"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "1C1ED3EB1C3503D8"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -5.875d
+		}
+		{
+			dependencies: ["35DBF77859D890D6"]
+			description: ["砂纸可以用于打磨玫瑰石英"]
+			id: "4BB17B8F476D22EB"
+			rewards: [{
+				count: 16
+				id: "6DD589EBB175C223"
+				item: "create:rose_quartz"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5136F134FF1CC461"
+				item: {
+					Count: 1
+					id: "create:sand_paper"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: -3.875d
+		}
+		{
+			description: [
+				"应力表可以查看网络中的总应力与剩余应力"
+				"速度表可以查看转速"
+				"它们的数值可以被显示连接器读取"
+				"在这条任务线中，你将看到一些可用的应力生产方式"
+			]
+			id: "39CB4BF75BD6FA9F"
+			rewards: [{
+				id: "371BE6B1790F673E"
+				item: "create:speedometer"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				id: "47E69FE9DB0DD778"
+				item: "create:stressometer"
+				type: "item"
+			}]
+			title: "我已拥有什么，又还剩下什么？"
+			x: -3.25d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2382B027395D6652"]
+			description: [
+				"单轨是一种比较好玩的轨道"
+				"你可以用它来制作吊轨列车！"
+			]
+			id: "0229EB775BD2361E"
+			rewards: [
+				{
+					count: 3
+					id: "3EA988B7862EC344"
+					item: "kubejs:coin_iron"
+					type: "item"
+				}
+				{
+					id: "190E3830A4541DDF"
+					item: "railways:handcar"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "6CC1203E7B42DD7A"
+				item: "railways:track_monorail"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -7.375d
+		}
+		{
+			dependencies: ["0989E8F1E4F5840F"]
+			description: [
+				"合成蓝图可以用来方便地进行合成！"
+				"设置好配方后，只需右键即可合成"
+				"按住shift并右键即可以最大数量进行合成！"
+			]
+			id: "7D9531DC48C77B98"
+			rewards: [{
+				count: 64
+				id: "137B290610407EF5"
+				item: "minecraft:copper_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1FA9AC333C23C2B5"
+				item: "create:crafting_blueprint"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6C9B7AA41299D278"]
+			description: [
+				"工业铁锭是一种更加优质的合金"
+				""
+				"你可以使用更少的材料制作出更多的元件"
+				""
+				"在最初，你需要通过&e超级加热&r铁板和安山合金并辊压来获得它"
+				""
+				"你可以使用&e生物柴油&r来进行超级加热"
+				""
+				"你最好提前设置配方过滤！"
+			]
+			id: "12DC20AEAD2EA873"
+			rewards: [
+				{
+					count: 32
+					id: "50DB527FFB754E70"
+					item: "design_decor:industrial_gear"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "51C06442B43B067E"
+					item: "design_decor:industrial_gear_large"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				id: "37AAA40EDD4FC7B1"
+				item: "kubejs:industrial_iron_ingot"
+				type: "item"
+			}]
+			title: "更好的合金"
+			x: 2.5d
+			y: 5.125d
+		}
+		{
+			description: [
+				"储物抽屉是十分好用的存储工具，它能存储大量同种物品！"
+				""
+				"你可以制作它的各种升级和抽屉钥匙来提升和拓展它的功能——锁定、销毁、存量转信、隐藏图标......"
+				""
+				"顺便一提，最好用的存储升级是绿宝石存储升级"
+				""
+				"单击右键存入手上物品，双击右键存入身上所有对应物品"
+				""
+				"对着格子单击左键取出一个物品，shift+左键取出一组物品"
+				""
+				"&e对它使用shift+右键来打开它的面板&r"
+				""
+				"&c需要注意的是，破坏抽屉将丢失其内部的全部材料——为了防止误触，你需要按住潜行来破坏抽屉！（除非你使用的是塑钢动力钻）&r"
+			]
+			id: "0C50315D47D42922"
+			rewards: [{
+				id: "68D475C526045254"
+				item: "storagedrawers:drawer_key"
+				type: "item"
+			}]
+			tasks: [{
+				id: "24EE7B9B029895FE"
+				item: "storagedrawers:upgrade_template"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["0C50315D47D42922"]
+			description: [
+				"装上销毁升级的抽屉能够销毁过量的物品！"
+				""
+				"如果你有不需要的废料，那么你可能需要它！"
+			]
+			id: "7CDEA05EE41FB3C8"
+			rewards: [{
+				count: 12
+				id: "692DF3FCD355EB32"
+				item: "storagedrawers:emerald_storage_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "13155C234BA2C5E0"
+				item: "storagedrawers:void_upgrade"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["7CDEA05EE41FB3C8"]
+			description: [
+				"压缩抽屉不仅可以存储，还可以处理一些简单的配方，把一些物品变成它的压缩形式"
+				""
+				"比如线》羊毛、铁粒》铁锭》铁块"
+				""
+				"你可以自由选择存入/取出其中一种状态的物品——比如你可以同时取出块、锭、粒"
+				""
+				"&e适当利用过滤和压缩抽屉，你可以极大地简化你的产线！&r"
+			]
+			id: "465C443D36FD3255"
+			rewards: [{
+				count: 12
+				id: "27E65750371A91E1"
+				item: "storagedrawers:void_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6AF8348DAA82FA05"
+				item: "storagedrawers:compacting_drawers_3"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 11.5d
+		}
+		{
+			dependencies: ["465C443D36FD3255"]
+			description: [
+				"抽屉控制器是简单的物流核心！它把相接的抽屉连接在一起"
+				""
+				"你可以在抽屉控制器处向整个网络输入物品，也可以使用漏斗从整个网络提取特定物品"
+				""
+				"使用桥接方块相连的抽屉被视为同一个网络中的抽屉"
+				""
+				"抽屉控制器的链接范围为50格"
+				""
+				"你可以对抽屉控制器单击右键存入手中物品，双击右键来将背包中所有网络可存储的物品存入！"
+			]
+			id: "79E91D5C7BBA6318"
+			rewards: [
+				{
+					id: "5967A23E22F1CCAA"
+					item: "storagedrawers:spruce_trim"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "5F8482C0A4B01144"
+					item: "storagedrawers:controller"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "078032006B09E34E"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["078DF73AD1AC34D8"]
+			description: [
+				"工具箱是更好用的潜影盒！"
+				"除了潜影盒本就拥有的功能之外，你还可以便捷地从中存取物品！"
+				"按住Alt，就可以快捷地打开附近的工具箱！"
+			]
+			id: "2348FD6ADEA08464"
+			rewards: [{
+				count: 32
+				id: "45259061D030FC1F"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1B0501DDAB79B87C"
+				item: "create:brown_toolbox"
+				type: "item"
+			}]
+			title: "工程师套装"
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["67F7753F65D198FD"]
+			description: [
+				"轧机是金属加工的重要机器！"
+				"它用于生产金属棒和金属线"
+			]
+			id: "41BBAE875EE21525"
+			rewards: [{
+				count: 32
+				id: "7983E32D3D2C8A76"
+				item: "design_decor:industrial_gear_large"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0562F7EAF26F78F0"
+				item: "createaddition:rolling_mill"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["3B6B2FD9BDA523F0"]
+			description: [
+				"动力冲压机可以处理一些更精细的压制配方"
+				"它需要通过车床制作并安装冲压头才能使用，不同的配方需要不同的冲压头"
+			]
+			id: "223775466012800D"
+			rewards: [{
+				count: 16
+				id: "3907E617A8194B50"
+				item: "minecraft:bucket"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7C3C4A0871F73323"
+				item: "vintageimprovements:curving_press"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 11.5d
+		}
+		{
+			description: [
+				"赭金砂可以用于量产金矿！"
+				""
+				"请在JEI中查看具体配方！"
+				""
+				"[ \"或是查看\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"？\" ]"
+			]
+			id: "663F941E80AC1710"
+			rewards: [{
+				id: "653626B252E112C1"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "025A1FB7E49A7ACD"
+				item: "create:ochrum"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -8.5d
+		}
+		{
+			description: [
+				"锡石可以用于量产锡矿！"
+				""
+				"请在JEI中查看具体配方！"
+				""
+				"[ \"或是查看\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"？\" ]"
+			]
+			id: "1A821112B212FCB1"
+			rewards: [{
+				id: "2E23A0551CAAAD3F"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "1108E51000E8F9FC"
+				item: "kubejs:raw_tin"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -8.0d
+		}
+		{
+			description: [
+				"大份薯条是果腹的最佳选择！"
+				""
+				"[ \"至于这个信息素是做什么的...你也许可以看看\", { \"text\": \"变奏-超越时空\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"048B2441C17D3CA7\" } }, \"！\" ]"
+				""
+				"&o&7人生的意义是什么？去码头整点薯条！&r&r"
+			]
+			id: "6998F405FFA09C3D"
+			rewards: [
+				{
+					id: "3AE70B85E03F767B"
+					item: "sophisticatedbackpacks:advanced_feeding_upgrade"
+					type: "item"
+				}
+				{
+					id: "6F1DC707CC043758"
+					item: {
+						Count: 1
+						id: "kubejs:matrix_2"
+						tag: {
+							ascii: 1
+							display: {
+								Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+							}
+							matrix: [
+								[
+									[
+										1
+										3
+									]
+									[
+										-2
+										95
+									]
+								]
+								[
+									[
+										-1
+										4
+									]
+									[
+										1
+										-124
+									]
+								]
+								[
+									[
+										1
+										-3
+									]
+									[
+										3
+										103
+									]
+								]
+								[
+									[
+										-1
+										2
+									]
+									[
+										-2
+										-93
+									]
+								]
+								[
+									[
+										1
+										4
+									]
+									[
+										-1
+										106
+									]
+								]
+								[
+									[
+										-1
+										-2
+									]
+									[
+										3
+										-94
+									]
+								]
+								[
+									[
+										-5
+										2
+									]
+									[
+										1
+										-16
+									]
+								]
+								[
+									[
+										10
+										-3
+									]
+									[
+										7
+										8
+									]
+								]
+								[
+									[
+										-4
+										5
+									]
+									[
+										4
+										-34
+									]
+								]
+								[
+									[
+										3
+										-7
+									]
+									[
+										4
+										4
+									]
+								]
+								[
+									[
+										2
+										13
+									]
+									[
+										5
+										83
+									]
+								]
+								[
+									[
+										-6
+										4
+									]
+									[
+										5
+										-23
+									]
+								]
+								[
+									[
+										11
+										3
+									]
+									[
+										3
+										10
+									]
+								]
+								[
+									[
+										8
+										-5
+									]
+									[
+										6
+										10
+									]
+								]
+								[
+									[
+										9
+										2
+									]
+									[
+										5
+										14
+									]
+								]
+								[
+									[
+										10
+										7
+									]
+									[
+										2
+										6
+									]
+								]
+								[
+									[
+										11
+										4
+									]
+									[
+										5
+										12
+									]
+								]
+								[
+									[
+										12
+										5
+									]
+									[
+										12
+										14
+									]
+								]
+								[
+									[
+										13
+										6
+									]
+									[
+										-1
+										7
+									]
+								]
+								[
+									[
+										5
+										3
+									]
+									[
+										3
+										26
+									]
+								]
+								[
+									[
+										6
+										5
+									]
+									[
+										5
+										21
+									]
+								]
+								[
+									[
+										7
+										8
+									]
+									[
+										5
+										22
+									]
+								]
+								[
+									[
+										8
+										9
+									]
+									[
+										7
+										13
+									]
+								]
+							]
+							no_copy: 1
+						}
+					}
+					team_reward: false
+					type: "item"
+				}
+			]
+			tasks: [{
+				count: 128L
+				id: "7720BC40337E69CD"
+				item: "kubejs:large_fries"
+				type: "item"
+			}]
+			title: "捞捞薯条！"
+			x: -6.5d
+			y: -1.375d
+		}
+		{
+			description: [
+				"你可能已经体验过反复为便携式流体储罐和便携式燃料储罐添加燃料的不便之处了"
+				""
+				"那么，不妨用我所发明的仪式制作一个无限便携流体储罐！它可以为你的便携设备提供无限的燃料和水！"
+				""
+				"&e由于一些特别的原因，它的配方是变化的——但应该影响不大！如果你的配方非常难，也不用担心——就如同我前面说的那样：它不是一成不变的！&r"
+			]
+			icon: "create_sa:creative_filling_tank"
+			id: "14D6DF4D1B698552"
+			rewards: [
+				{
+					id: "3DF3EFF6548900FC"
+					item: "kubejs:emptying_machine"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "4CC536DE98329E39"
+					item: {
+						Count: 1
+						id: "kubejs:matrix_2"
+						tag: {
+							ascii: 1
+							display: {
+								Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+							}
+							matrix: [
+								[
+									[
+										1
+										3
+									]
+									[
+										-2
+										95
+									]
+								]
+								[
+									[
+										-1
+										4
+									]
+									[
+										1
+										-124
+									]
+								]
+								[
+									[
+										1
+										-3
+									]
+									[
+										3
+										103
+									]
+								]
+								[
+									[
+										-1
+										2
+									]
+									[
+										-2
+										-93
+									]
+								]
+								[
+									[
+										1
+										4
+									]
+									[
+										-1
+										106
+									]
+								]
+								[
+									[
+										-1
+										-2
+									]
+									[
+										3
+										-94
+									]
+								]
+								[
+									[
+										-5
+										2
+									]
+									[
+										1
+										-16
+									]
+								]
+								[
+									[
+										10
+										-3
+									]
+									[
+										7
+										8
+									]
+								]
+								[
+									[
+										-4
+										5
+									]
+									[
+										4
+										-34
+									]
+								]
+								[
+									[
+										3
+										-7
+									]
+									[
+										4
+										4
+									]
+								]
+								[
+									[
+										2
+										13
+									]
+									[
+										5
+										83
+									]
+								]
+								[
+									[
+										-6
+										4
+									]
+									[
+										5
+										-23
+									]
+								]
+								[
+									[
+										11
+										3
+									]
+									[
+										3
+										10
+									]
+								]
+								[
+									[
+										8
+										-5
+									]
+									[
+										6
+										10
+									]
+								]
+								[
+									[
+										9
+										2
+									]
+									[
+										5
+										14
+									]
+								]
+								[
+									[
+										10
+										7
+									]
+									[
+										2
+										6
+									]
+								]
+								[
+									[
+										11
+										4
+									]
+									[
+										5
+										12
+									]
+								]
+								[
+									[
+										12
+										5
+									]
+									[
+										12
+										14
+									]
+								]
+								[
+									[
+										13
+										6
+									]
+									[
+										-1
+										7
+									]
+								]
+								[
+									[
+										5
+										3
+									]
+									[
+										3
+										26
+									]
+								]
+								[
+									[
+										6
+										5
+									]
+									[
+										5
+										21
+									]
+								]
+								[
+									[
+										7
+										8
+									]
+									[
+										5
+										22
+									]
+								]
+								[
+									[
+										8
+										9
+									]
+									[
+										7
+										13
+									]
+								]
+							]
+							no_copy: 1
+						}
+					}
+					team_reward: false
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "61353C972B310709"
+				item: "create_sa:creative_filling_tank"
+				type: "item"
+			}]
+			title: "它是无限的"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"这是个单纯的抓钩！"
+				""
+				"但是在低重力环境下也许会有意想不到的机动效果！"
+			]
+			id: "6107D95BEFCAAB6B"
+			tasks: [{
+				id: "5E5B36642E27DD98"
+				item: {
+					Count: 1
+					id: "create_sa:grapplin_whisk"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.625d
+		}
+		{
+			dependencies: ["6107D95BEFCAAB6B"]
+			description: [
+				"黄铜钻头具有&e下界合金挖掘等级&r与极快的挖掘速度"
+				""
+				"附魔之后，它可以一次性挖掘3*3的范围！"
+			]
+			id: "6DB7A12267721774"
+			tasks: [{
+				id: "59D6F8546A0BE2FB"
+				item: {
+					Count: 1
+					id: "create_sa:portable_drill"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: -0.375d
+		}
+		{
+			dependencies: ["6DB7A12267721774"]
+			description: ["建筑之杖可以用于快速放置和快速破坏"]
+			id: "1E415E97AAB03A6E"
+			rewards: [{
+				id: "0973D0062A9D7309"
+				item: "constructionwand:core_destruction"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5A59CBA977803A55"
+				item: {
+					Count: 1
+					id: "constructionwand:iron_wand"
+					tag: {
+						Damage: 0
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.375d
+		}
+		{
+			description: ["每个建筑师都喜欢它！"]
+			id: "7C2BE691D13CA130"
+			rewards: [
+				{
+					id: "6C65A4EF4B4FB476"
+					item: "storagedrawers:controller"
+					type: "item"
+				}
+				{
+					id: "62FD52C2B391B234"
+					item: {
+						Count: 1
+						id: "kubejs:matrix_2"
+						tag: {
+							ascii: 1
+							display: {
+								Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+							}
+							matrix: [
+								[
+									[
+										1
+										3
+									]
+									[
+										-2
+										95
+									]
+								]
+								[
+									[
+										-1
+										4
+									]
+									[
+										1
+										-124
+									]
+								]
+								[
+									[
+										1
+										-3
+									]
+									[
+										3
+										103
+									]
+								]
+								[
+									[
+										-1
+										2
+									]
+									[
+										-2
+										-93
+									]
+								]
+								[
+									[
+										1
+										4
+									]
+									[
+										-1
+										106
+									]
+								]
+								[
+									[
+										-1
+										-2
+									]
+									[
+										3
+										-94
+									]
+								]
+								[
+									[
+										-5
+										2
+									]
+									[
+										1
+										-16
+									]
+								]
+								[
+									[
+										10
+										-3
+									]
+									[
+										7
+										8
+									]
+								]
+								[
+									[
+										-4
+										5
+									]
+									[
+										4
+										-34
+									]
+								]
+								[
+									[
+										3
+										-7
+									]
+									[
+										4
+										4
+									]
+								]
+								[
+									[
+										2
+										13
+									]
+									[
+										5
+										83
+									]
+								]
+								[
+									[
+										-6
+										4
+									]
+									[
+										5
+										-23
+									]
+								]
+								[
+									[
+										11
+										3
+									]
+									[
+										3
+										10
+									]
+								]
+								[
+									[
+										8
+										-5
+									]
+									[
+										6
+										10
+									]
+								]
+								[
+									[
+										9
+										2
+									]
+									[
+										5
+										14
+									]
+								]
+								[
+									[
+										10
+										7
+									]
+									[
+										2
+										6
+									]
+								]
+								[
+									[
+										11
+										4
+									]
+									[
+										5
+										12
+									]
+								]
+								[
+									[
+										12
+										5
+									]
+									[
+										12
+										14
+									]
+								]
+								[
+									[
+										13
+										6
+									]
+									[
+										-1
+										7
+									]
+								]
+								[
+									[
+										5
+										3
+									]
+									[
+										3
+										26
+									]
+								]
+								[
+									[
+										6
+										5
+									]
+									[
+										5
+										21
+									]
+								]
+								[
+									[
+										7
+										8
+									]
+									[
+										5
+										22
+									]
+								]
+								[
+									[
+										8
+										9
+									]
+									[
+										7
+										13
+									]
+								]
+							]
+							no_copy: 1
+						}
+					}
+					team_reward: false
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "24253E455B1D0C93"
+				item: "create:wand_of_symmetry"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0BEFDE24534261C5"]
+			description: [
+				"流体储罐可以批量存储液体，一个就能存放&e32&r桶流体！"
+				""
+				"桶无法直接与流体储罐交互，请使用动力泵或水龙头与分液池等部件"
+				""
+				"&e在过去，由于技术缺陷，储罐里的燃料会被外部爆炸引爆——但经过我的技术改进之后，现在已经不会出现这种情况了！&r"
+			]
+			id: "06A285E3B17F83A7"
+			rewards: [
+				{
+					id: "0BBE5EEAC39156BC"
+					item: "createdieselgenerators:canister"
+					type: "item"
+				}
+				{
+					count: 36
+					id: "621B61F0768D7169"
+					item: "create:fluid_tank"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "457417BBE2D0C0F5"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			title: "流体储罐"
+			x: -1.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["67F7753F65D198FD"]
+			description: [
+				"车床能够更好地加工金属原料"
+				"其有独特的自动化方法"
+			]
+			id: "3B6B2FD9BDA523F0"
+			rewards: [
+				{
+					id: "1A0B04C0C593B0C3"
+					item: "create:sequenced_gearshift"
+					type: "item"
+				}
+				{
+					id: "28DA64BB26CB9977"
+					item: {
+						Count: 1
+						id: "vintageimprovements:recipe_card"
+						tag: {
+							Items: { }
+							Recipe: { }
+							Results: { }
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "24731244814BE18B"
+				item: "vintageimprovements:lathe"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["06A285E3B17F83A7"]
+			description: ["工业铁锅炉可以用于修建一些多方块结构，是高级生产的必备品！"]
+			id: "65F33DA40AD9CBEF"
+			rewards: [{
+				count: 16
+				id: "0190AC7AFAD1369B"
+				item: "kubejs:industrial_iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "469EC4A29E3EDEAF"
+				item: "design_decor:industrial_iron_boiler"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["06A285E3B17F83A7"]
+			description: ["工业铁锅炉可以用于修建一些多方块结构，是高级生产的必备品！"]
+			id: "0BD9F067FEA764F1"
+			rewards: [{
+				count: 16
+				id: "0EE378D2D077CF55"
+				item: "design_decor:industrial_iron_boiler"
+				type: "item"
+			}]
+			tasks: [{
+				id: "249DC29237B4A83F"
+				item: "design_decor:industrial_iron_boiler_large"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["63B2F182F14905E0"]
+			description: [
+				"&c锡矿不会在世界中自然生成&r，你需要通过&a粉碎花岗岩&r来得到第一个锡石，&e在此之后就可以用增殖的方式生产了&r。"
+				""
+				"除此以外，在世界上有一些生物保留着一种大撕裂带来的奇异合金：&e青铜&r——它由锡与铜复合而成"
+				""
+				"现在，这个世界已经几乎不允许存在真正的青铜了。于是，那些脱离生物体的青铜将变得极为不稳定。&e如果你能击杀它们，也许你就能获取它们身上的锡。&r"
+			]
+			id: "1D8E155C16AB0AA3"
+			tasks: [{
+				id: "19591868E7FE3349"
+				item: "kubejs:tin_ingot"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0BD9F067FEA764F1"
+				"65F33DA40AD9CBEF"
+			]
+			description: [
+				"利用合金炉，你可以快速大量地生产工业铁、黄铜等合金。&e除此以外，在冶炼过程中也许会产生一些奇异的合金，可别当废物扔了！&r"
+				""
+				"[ \"收下这个可以由\", { \"text\": \"蓝图构筑站\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"56F4799B252FC6AE\" } }, \"来制作的材料包吧！它里边包含了合金炉的全部结构材料！\" ]"
+				""
+				"在思索中查看合金炉的使用方式！"
+				""
+				"[ \"如果你遇到问题，可以查看\", { \"text\": \"工程之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4FB506D4FED99495\" } }, \"！\" ]"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！&r"
+			]
+			id: "30CD2348B60180E6"
+			rewards: [
+				{
+					id: "1A9FE87E4C042752"
+					item: {
+						Count: 1
+						id: "minecraft:barrel"
+						tag: {
+							BlockEntityTag: {
+								Items: [
+									{
+										Count: 4b
+										Slot: 0b
+										id: "design_decor:metal_support"
+									}
+									{
+										Count: 9b
+										Slot: 1b
+										id: "design_decor:diagonal_girder"
+									}
+									{
+										Count: 4b
+										Slot: 2b
+										id: "design_decor:andesite_floodlight"
+									}
+									{
+										Count: 9b
+										Slot: 3b
+										id: "createaddition:straw"
+									}
+									{
+										Count: 15b
+										Slot: 4b
+										id: "create:metal_girder"
+									}
+									{
+										Count: 4b
+										Slot: 5b
+										id: "design_decor:industrial_iron_boiler_large"
+									}
+									{
+										Count: 16b
+										Slot: 6b
+										id: "create:industrial_iron_block"
+									}
+									{
+										Count: 1b
+										Slot: 7b
+										id: "railways:smokestack_oilburner"
+									}
+									{
+										Count: 4b
+										Slot: 8b
+										id: "create:andesite_funnel"
+									}
+									{
+										Count: 6b
+										Slot: 9b
+										id: "design_decor:diagonal_metal_support"
+									}
+									{
+										Count: 1b
+										Slot: 10b
+										id: "design_decor:stepped_lever"
+									}
+									{
+										Count: 4b
+										Slot: 11b
+										id: "design_decor:industrial_iron_boiler"
+									}
+									{
+										Count: 19b
+										Slot: 12b
+										id: "design_decor:iron_railing"
+									}
+									{
+										Count: 9b
+										Slot: 13b
+										id: "design_decor:ornate_grate"
+									}
+									{
+										Count: 9b
+										Slot: 14b
+										id: "create:blaze_burner"
+									}
+								]
+								id: "minecraft:barrel"
+							}
+							display: {
+								Name: "{\"translate\":\"block.kubejs.alloy_furnace\",\"italic\":false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 3
+					id: "43256B014974310B"
+					item: {
+						Count: 1
+						id: "kubejs:matrix_2"
+						tag: {
+							ascii: 1
+							display: {
+								Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+							}
+							matrix: [
+								[
+									[
+										1
+										3
+									]
+									[
+										-2
+										95
+									]
+								]
+								[
+									[
+										-1
+										4
+									]
+									[
+										1
+										-124
+									]
+								]
+								[
+									[
+										1
+										-3
+									]
+									[
+										3
+										103
+									]
+								]
+								[
+									[
+										-1
+										2
+									]
+									[
+										-2
+										-93
+									]
+								]
+								[
+									[
+										1
+										4
+									]
+									[
+										-1
+										106
+									]
+								]
+								[
+									[
+										-1
+										-2
+									]
+									[
+										3
+										-94
+									]
+								]
+								[
+									[
+										-5
+										2
+									]
+									[
+										1
+										-16
+									]
+								]
+								[
+									[
+										10
+										-3
+									]
+									[
+										7
+										8
+									]
+								]
+								[
+									[
+										-4
+										5
+									]
+									[
+										4
+										-34
+									]
+								]
+								[
+									[
+										3
+										-7
+									]
+									[
+										4
+										4
+									]
+								]
+								[
+									[
+										2
+										13
+									]
+									[
+										5
+										83
+									]
+								]
+								[
+									[
+										-6
+										4
+									]
+									[
+										5
+										-23
+									]
+								]
+								[
+									[
+										11
+										3
+									]
+									[
+										3
+										10
+									]
+								]
+								[
+									[
+										8
+										-5
+									]
+									[
+										6
+										10
+									]
+								]
+								[
+									[
+										9
+										2
+									]
+									[
+										5
+										14
+									]
+								]
+								[
+									[
+										10
+										7
+									]
+									[
+										2
+										6
+									]
+								]
+								[
+									[
+										11
+										4
+									]
+									[
+										5
+										12
+									]
+								]
+								[
+									[
+										12
+										5
+									]
+									[
+										12
+										14
+									]
+								]
+								[
+									[
+										13
+										6
+									]
+									[
+										-1
+										7
+									]
+								]
+								[
+									[
+										5
+										3
+									]
+									[
+										3
+										26
+									]
+								]
+								[
+									[
+										6
+										5
+									]
+									[
+										5
+										21
+									]
+								]
+								[
+									[
+										7
+										8
+									]
+									[
+										5
+										22
+									]
+								]
+								[
+									[
+										8
+										9
+									]
+									[
+										7
+										13
+									]
+								]
+							]
+							no_copy: 1
+						}
+					}
+					team_reward: false
+					type: "item"
+				}
+			]
+			shape: "gear"
+			subtitle: "你的第一个多方块机器"
+			tasks: [{
+				id: "4DFD9966B807E4D5"
+				item: "kubejs:alloy_furnace"
+				type: "item"
+			}]
+			title: "优秀的冶炼炉！"
+			x: 1.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["30CD2348B60180E6"]
+			description: [
+				"爆破压缩机是一种大型辊压机器，可以快速处理金属块"
+				""
+				"爆破压缩机一次能将9个金属块压成81块金属板，此外还有一些独特配方！"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
+				""
+				"[ \"如果你遇到问题，可以查看\", { \"text\": \"工程之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4FB506D4FED99495\" } }, \"！\" ]"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
+				""
+				"&e&o温馨提示：如果工作但是无法输出物品，可能是集装箱蓝图打印问题，拆掉集装箱手动放置即可！&r&r"
+			]
+			id: "038403EDBDA076AB"
+			rewards: [{
+				id: "4F09D6832CBFEC8A"
+				item: {
+					Count: 1
+					id: "minecraft:barrel"
+					tag: {
+						BlockEntityTag: {
+							Items: [
+								{
+									Count: 18b
+									Slot: 0b
+									id: "create:industrial_iron_block"
+								}
+								{
+									Count: 2b
+									Slot: 1b
+									id: "design_decor:brass_boiler_large"
+								}
+								{
+									Count: 1b
+									Slot: 2b
+									id: "design_decor:cast_iron_boiler_large"
+								}
+								{
+									Count: 26b
+									Slot: 3b
+									id: "create:metal_girder"
+								}
+								{
+									Count: 5b
+									Slot: 4b
+									id: "design_decor:industrial_iron_boiler"
+								}
+								{
+									Count: 2b
+									Slot: 5b
+									id: "design_decor:green_container"
+								}
+								{
+									Count: 8b
+									Slot: 6b
+									id: "design_decor:diagonal_metal_support"
+								}
+								{
+									Count: 4b
+									Slot: 7b
+									id: "create:shaft"
+								}
+							]
+							id: "minecraft:barrel"
+						}
+						display: {
+							Name: "{\"translate\":\"block.kubejs.blasting_compressor\",\"italic\":false}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "2BC0A374B73A5368"
+				item: "kubejs:blasting_compressor"
+				type: "item"
+			}]
+			title: "爆破！压缩！"
+			x: -1.0d
+			y: 14.5d
+		}
+		{
+			dependencies: ["0BD9F067FEA764F1"]
+			description: [
+				"巨型粉碎机是一种大型粉碎机器，可以快速处理&c部分&r粉碎配方——除此以外，&e部分粉碎配方只能通过巨型粉碎机执行！&r"
+				""
+				"&e一台巨型粉碎机的效率可以达到69对粉碎轮！它的理论极限为每小时处理4608000份原料（对大部分配方而言）&r——除此以外，如果你的原料输入速度充足，它的所有配方都可以以两倍的处理量运行——也就是说，&e你可以将效率提升至每小时处理9216000份原料（对大部分配方而言）&r"
+				""
+				"[ \"如果你遇到问题，可以查看\", { \"text\": \"工程之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4FB506D4FED99495\" } }, \"！\" ]"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
+			]
+			id: "108DAB6E6BFEB87F"
+			rewards: [{
+				id: "54AB9AF73F4F07BF"
+				item: {
+					Count: 1
+					id: "minecraft:barrel"
+					tag: {
+						BlockEntityTag: {
+							Items: [
+								{
+									Count: 24b
+									Slot: 0b
+									id: "design_decor:industrial_plating_block"
+								}
+								{
+									Count: 4b
+									Slot: 1b
+									id: "design_decor:andesite_floodlight"
+								}
+								{
+									Count: 1b
+									Slot: 2b
+									id: "design_decor:green_container"
+								}
+								{
+									Count: 14b
+									Slot: 3b
+									id: "minecraft:smooth_stone_slab"
+								}
+								{
+									Count: 2b
+									Slot: 4b
+									id: "design_decor:industrial_gear"
+								}
+								{
+									Count: 2b
+									Slot: 5b
+									id: "create:gearbox"
+								}
+								{
+									Count: 3b
+									Slot: 6b
+									id: "create:encased_chain_drive"
+								}
+								{
+									Count: 4b
+									Slot: 7b
+									id: "create:fluid_pipe"
+								}
+								{
+									Count: 6b
+									Slot: 8b
+									id: "design_decor:diagonal_metal_support"
+								}
+								{
+									Count: 5b
+									Slot: 9b
+									id: "design_decor:industrial_gear_large"
+								}
+								{
+									Count: 5b
+									Slot: 10b
+									id: "create:crushing_wheel"
+								}
+								{
+									Count: 2b
+									Slot: 11b
+									id: "create:andesite_casing"
+								}
+								{
+									Count: 2b
+									Slot: 12b
+									id: "design_decor:industrial_iron_boiler"
+								}
+								{
+									Count: 1b
+									Slot: 13b
+									id: "design_decor:red_container"
+								}
+								{
+									Count: 2b
+									Slot: 14b
+									id: "create:display_board"
+								}
+								{
+									Count: 6b
+									Slot: 15b
+									id: "design_decor:industrial_iron_boiler_large"
+								}
+								{
+									Count: 14b
+									Slot: 16b
+									id: "create_things_and_misc:brass_bricks"
+								}
+								{
+									Count: 4b
+									Slot: 17b
+									id: "create_things_and_misc:brass_brick_stairs"
+								}
+								{
+									Count: 40b
+									Slot: 18b
+									id: "ad_astra:iron_pillar"
+								}
+							]
+							id: "minecraft:barrel"
+						}
+						display: {
+							Name: "{\"translate\":\"block.kubejs.huge_crusher\",\"italic\":false}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "2ADD8EEF1349F466"
+				item: "kubejs:huge_crusher"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 11.5d
+		}
+		{
+			description: [
+				"就如同它的名字——只是单纯横过来罢了。"
+				""
+				"在某些场景有应用奇效"
+				""
+				"如果你需要一个流体潜影盒，那么你可以使用&e密封储罐&r！"
+				""
+				"&a不单如此，它还可以直接像桶一样与工作盆交互！&r"
+			]
+			id: "115A14D0EFF3C9AC"
+			rewards: [
+				{
+					count: 12
+					id: "1B4B1EFF250B30FB"
+					item: "create_connected:fluid_vessel"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "4FEFCB91E7354785"
+					item: "createdieselgenerators:canister"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7D6E288256728646"
+				item: "create_connected:fluid_vessel"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["115A14D0EFF3C9AC"]
+			description: [
+				"流体抽屉就如同抽屉那般，只不过它们存储的是流体而非物品"
+				""
+				"它也可以与抽屉控制器互动！"
+				""
+				"不同的是，流体抽屉无法使用远程连接升级"
+			]
+			id: "5B8C3F4E196706A5"
+			tasks: [{
+				id: "3462883A48908B93"
+				item: {
+					Count: 1
+					id: "fluiddrawerslegacy:fluiddrawer"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5B8C3F4E196706A5"]
+			description: ["多格的流体抽屉可以用来便捷地分离流体产物！"]
+			id: "4DC67B3D37B8A1EE"
+			tasks: [{
+				id: "21A3F1076DF9316A"
+				item: {
+					Count: 1
+					id: "fluiddrawerslegacy:fluiddrawer_4"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 2.0d
+			y: 13.0d
+		}
+		{
+			description: [
+				"应急工业平台可以用于快捷建造工业区地基！并且它的造价非常便宜！"
+				""
+				"经过技术改进之后，现在它可以四向放置了！"
+				""
+				"&a在放置下来之后，它会以粒子显示自己的工作范围&r"
+				""
+				"也许还有其它用法？"
+			]
+			icon: "kubejs:emergency_industrial_platform"
+			id: "3850110FA6E8BC7A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "49B0765A6C354A2E"
+					table_id: 859008673492234316L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "308C3039EB536A74"
+					table_id: 859008673492234316L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5BE5AF3B64BFA71E"
+					table_id: 859008673492234316L
+					type: "choice"
+				}
+			]
+			size: 1.5d
+			tasks: [{
+				id: "5FC6CB8D9BCE6B5E"
+				type: "checkmark"
+			}]
+			title: "应急工业平台"
+			x: 0.0d
+			y: 0.625d
+		}
+		{
+			dependencies: ["66E89DB9217359ED"]
+			description: [
+				"注液器可以向置物台或传送带上的物品中注入流体"
+				""
+				"除此以外，我还发明了一系列的&e方块注液&r配方供你使用！"
+				""
+				"它们包括注液转化方块为物品、注液转化方块其它方块、注液产生物品、注液产生方块、注液催生菌类等不同类型！"
+				""
+				"你可以在&aJEI&r中查看注液器的一般配方，或者在&a思索&r中查看&e方块注液&r配方！"
+				""
+				"你可以在&e安山合金&r的思索中查看方块注液的一个例子"
+				""
+				"&e注液器工作时间为21tick！&r"
+			]
+			id: "4C7F4AB89C420568"
+			tasks: [{
+				id: "063E5373D2A1FE91"
+				item: "create:spout"
+				type: "item"
+			}]
+			title: "注入流体！"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1937330ACAF9F87C"]
+			description: [
+				"为了生产安山合金，你会用到工作盆铸造盖的！"
+				""
+				"通过它，你可以使用工作盆来融化金属，并利用得到的熔融金属进行其它操作——比如进行方块注液，或是搅拌生产合金！"
+				""
+				"&e收下这个永恒加热燃烧室吧，它可以持续燃烧一个难以想象地长的时间——以至于与永恒无异。在未来，你可以利用信息素来制造它——不过那还很遥远&r"
+				""
+				"&6不过，如果你将它破坏或是为它安插吸管，它就会失去这种性质。为了避免这种情况，你应该使用移动结构搬运它&r"
+			]
+			id: "77CA6031124CE74B"
+			rewards: [{
+				id: "0535F93398481133"
+				item: {
+					Count: 1
+					id: "create:minecart_contraption"
+					tag: {
+						Contraption: {
+							Actors: [{
+								Data: { }
+								FirstMovement: 0b
+								Motion: [
+									0.0d
+									0.0d
+									0.0d
+								]
+								Pos: {
+									X: 0
+									Y: 1
+									Z: 0
+								}
+								RelativeMotion: [
+									0.0d
+									0.0d
+									0.0d
+								]
+								Stall: 0b
+							}]
+							Anchor: {
+								X: 810
+								Y: 55
+								Z: -120
+							}
+							Blocks: {
+								BlockList: [
+									{
+										Pos: 0L
+										State: 0
+									}
+									{
+										Data: {
+											id: "create:blaze_heater"
+											isCreative: 1b
+										}
+										Pos: 1L
+										State: 1
+									}
+								]
+								Palette: [
+									{
+										Name: "create:minecart_anchor"
+										Properties: {
+											axis: "z"
+										}
+									}
+									{
+										Name: "create:blaze_burner"
+										Properties: {
+											blaze: "kindled"
+											facing: "south"
+										}
+									}
+								]
+							}
+							BottomlessSupply: 0b
+							BoundsFront: [
+								-1.0f
+								0.0f
+								-1.0f
+								2.0f
+								2.0f
+								2.0f
+							]
+							CapturedMultiblocks: [ ]
+							DisabledActors: [ ]
+							FluidFuelStorage: [ ]
+							FluidStorage: [ ]
+							InitialOrientation: "NORTH"
+							Interactors: [{
+								Pos: {
+									X: 0
+									Y: 1
+									Z: 0
+								}
+							}]
+							Passengers: [ ]
+							RotationMode: "ROTATE"
+							Seats: [ ]
+							Stalled: 0b
+							Storage: [ ]
+							SubContraptions: [ ]
+							Superglue: [ ]
+							Type: "mounted"
+						}
+						RepairCost: 0
+						display: {
+							Name: "{\"text\":\"永恒加热燃烧室\"}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "593C41E929A302CA"
+				item: "createbigcannons:basin_foundry_lid"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			description: [
+				"&e由于很多路径之间可以相互替代，所以你可能遇上一些麻烦：我的目标到底是什么？"
+				""
+				"&a为了回到你的故乡，你可以暂时以以下的关键节点进行初步发展："
+				""
+				"&61.金属生产"
+				""
+				"&62.超级加热生产"
+				""
+				"&63.三种集成电路板"
+				""
+				"&64.微生物与炼钢"
+				""
+				"&65.星际物流网络"
+				""
+				"&e不同节点之间存在大量的可选路线以及分支内容，你可以根据你的需要去选择它们！"
+				""
+				"[ \"而关于金属生产，你可以点击横线部分跳转到\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"！\" ]"
+			]
+			id: "33462C3746610C92"
+			tasks: [{
+				id: "3795038B7C257D7C"
+				title: "整体目标？Go！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["30CD2348B60180E6"]
+			description: [
+				"液压机是一种大型辊压机器，可以快速处理金属流体以及强度较低的金属块"
+				""
+				"&e你需要自行通过红石系统来控制液压机的工作——具体请查看思索！"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！"
+				""
+				"[ \"如果你遇到问题，可以查看\", { \"text\": \"工程之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4FB506D4FED99495\" } }, \"！\" ]"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
+			]
+			id: "20E4FDEECA16AAB1"
+			rewards: [{
+				id: "17F0F85E34E9E27B"
+				item: {
+					Count: 1
+					id: "minecraft:barrel"
+					tag: {
+						BlockEntityTag: {
+							Items: [
+								{
+									Count: 20b
+									Slot: 0b
+									id: "create:copper_casing"
+								}
+								{
+									Count: 9b
+									Slot: 1b
+									id: "create:railway_casing"
+								}
+								{
+									Count: 4b
+									Slot: 2b
+									id: "design_decor:industrial_plating_block"
+								}
+								{
+									Count: 1b
+									Slot: 3b
+									id: "create:gearshift"
+								}
+								{
+									Count: 1b
+									Slot: 4b
+									id: "create:gearbox"
+								}
+								{
+									Count: 10b
+									Slot: 5b
+									id: "design_decor:industrial_iron_boiler"
+								}
+								{
+									Count: 2b
+									Slot: 6b
+									id: "design_decor:brass_boiler"
+								}
+								{
+									Count: 2b
+									Slot: 7b
+									id: "design_decor:industrial_gear_large"
+								}
+								{
+									Count: 2b
+									Slot: 8b
+									id: "create:mechanical_pump"
+								}
+								{
+									Count: 1b
+									Slot: 9b
+									id: "create:gantry_carriage"
+								}
+								{
+									Count: 3b
+									Slot: 10b
+									id: "design_decor:diagonal_metal_support"
+								}
+								{
+									Count: 6b
+									Slot: 11b
+									id: "create:metal_girder"
+								}
+								{
+									Count: 1b
+									Slot: 12b
+									id: "create:brass_funnel"
+								}
+								{
+									Count: 10b
+									Slot: 13b
+									id: "design_decor:diagonal_girder"
+								}
+								{
+									Count: 4b
+									Slot: 14b
+									id: "create:gantry_shaft"
+								}
+								{
+									Count: 1b
+									Slot: 15b
+									id: "design_decor:andesite_floodlight"
+								}
+								{
+									Count: 1b
+									Slot: 16b
+									id: "design_decor:brass_boiler_large"
+								}
+							]
+							id: "minecraft:barrel"
+						}
+						display: {
+							Name: "{\"translate\":\"block.kubejs.hydropress\",\"italic\":false}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "7BBB593DBBEDD653"
+				item: "kubejs:hydropress"
+				type: "item"
+			}]
+			title: "水之道"
+			x: 1.0d
+			y: 15.0d
+		}
+	]
+	subtitle: ["齿轮和传动杆"]
+	title: "人类改造蒸汽，蒸汽改造人类"
+}

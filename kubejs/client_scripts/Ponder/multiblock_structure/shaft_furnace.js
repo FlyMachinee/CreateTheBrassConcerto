@@ -1,0 +1,322 @@
+Ponder.registry((event) => {
+  event
+    .create(["ad_astra:steel_ingot", "kubejs:shaft_furnace", "kubejs:incomplete_steel_bucket", "kubejs:incomplete_steel_1_bucket", "createbigcannons:molten_steel_bucket"])
+    .tag("kubejs:machine_and_multiblock")
+    .scene(
+      "kubejs:use_shaft_furnace",
+      "使用工业高炉",
+      "kubejs:shaft_furnace",
+      (scene, utils) => {
+        scene.configureBasePlate(0, 0, 15);
+        scene.showStructure(0);
+        scene.scaleSceneView(0.35);
+        scene.setSceneOffsetY(-6)
+        const aLayer = [[2, 1, 2], [3, 1, 2], [4, 1, 2], [5, 1, 2], [9, 1, 2], [10, 1, 2], [11, 1, 2], [12, 1, 2], [2, 1, 3], [3, 1, 3], [4, 1, 3], [5, 1, 3], [9, 1, 3], [10, 1, 3], [11, 1, 3], [12, 1, 3], [2, 1, 4], [3, 1, 4], [4, 1, 4], [5, 1, 4], [9, 1, 4], [10, 1, 4], [11, 1, 4], [12, 1, 4], [2, 1, 5], [3, 1, 5], [4, 1, 5], [5, 1, 5], [6, 1, 5], [7, 1, 5], [8, 1, 5], [9, 1, 5], [10, 1, 5], [11, 1, 5], [12, 1, 5], [2, 1, 6], [3, 1, 6], [4, 1, 6], [5, 1, 6], [6, 1, 6], [7, 1, 6], [8, 1, 6], [9, 1, 6], [10, 1, 6], [11, 1, 6], [12, 1, 6], [2, 1, 7], [3, 1, 7], [4, 1, 7], [5, 1, 7], [6, 1, 7], [7, 1, 7], [8, 1, 7], [9, 1, 7], [10, 1, 7], [11, 1, 7], [12, 1, 7], [2, 1, 8], [3, 1, 8], [4, 1, 8], [5, 1, 8], [6, 1, 8], [7, 1, 8], [8, 1, 8], [9, 1, 8], [10, 1, 8], [11, 1, 8], [12, 1, 8], [2, 1, 9], [3, 1, 9], [4, 1, 9], [5, 1, 9], [6, 1, 9], [7, 1, 9], [8, 1, 9], [9, 1, 9], [10, 1, 9], [11, 1, 9], [12, 1, 9], [2, 1, 10], [3, 1, 10], [4, 1, 10], [5, 1, 10], [6, 1, 10], [7, 1, 10], [8, 1, 10], [9, 1, 10], [10, 1, 10], [11, 1, 10], [12, 1, 10], [4, 1, 11], [5, 1, 11], [6, 1, 11], [7, 1, 11], [8, 1, 11], [9, 1, 11], [10, 1, 11], [4, 1, 12], [5, 1, 12], [6, 1, 12], [7, 1, 12], [8, 1, 12], [9, 1, 12], [10, 1, 12], [4, 1, 13], [5, 1, 13], [6, 1, 13], [7, 1, 13], [8, 1, 13], [9, 1, 13], [10, 1, 13], [5, 2, 4], [9, 2, 4], [3, 2, 5], [6, 2, 5], [7, 2, 5], [8, 2, 5], [11, 2, 5], [6, 2, 6], [7, 2, 6], [8, 2, 6], [3, 2, 7], [6, 2, 7], [7, 2, 7], [8, 2, 7], [11, 2, 7], [5, 2, 8], [6, 2, 8], [8, 2, 8], [9, 2, 8], [6, 2, 9], [7, 2, 9], [8, 2, 9], [5, 2, 10], [6, 2, 10], [7, 2, 10], [8, 2, 10], [9, 2, 10], [5, 2, 11], [6, 2, 11], [7, 2, 11], [8, 2, 11], [9, 2, 11], [5, 2, 12], [6, 2, 12], [7, 2, 12], [8, 2, 12], [9, 2, 12], [6, 2, 13], [7, 2, 13], [8, 2, 13], [5, 3, 4], [6, 3, 4], [7, 3, 4], [8, 3, 4], [9, 3, 4], [3, 3, 5], [4, 3, 5], [5, 3, 5], [6, 3, 5], [7, 3, 5], [8, 3, 5], [9, 3, 5], [10, 3, 5], [11, 3, 5], [3, 3, 6], [4, 3, 6], [5, 3, 6], [6, 3, 6], [7, 3, 6], [8, 3, 6], [9, 3, 6], [10, 3, 6], [11, 3, 6], [3, 3, 7], [4, 3, 7], [5, 3, 7], [6, 3, 7], [7, 3, 7], [8, 3, 7], [9, 3, 7], [10, 3, 7], [11, 3, 7], [5, 3, 8], [6, 3, 8], [8, 3, 8], [9, 3, 8], [6, 3, 9], [7, 3, 9], [8, 3, 9], [6, 3, 10], [7, 3, 10], [8, 3, 10], [6, 3, 11], [7, 3, 11], [8, 3, 11], [6, 3, 12], [7, 3, 12], [8, 3, 12], [5, 4, 3], [6, 4, 3], [7, 4, 3], [8, 4, 3], [9, 4, 3], [4, 4, 4], [7, 4, 4], [10, 4, 4], [4, 4, 5], [6, 4, 5], [7, 4, 5], [8, 4, 5], [10, 4, 5], [4, 4, 6], [5, 4, 6], [6, 4, 6], [7, 4, 6], [8, 4, 6], [9, 4, 6], [10, 4, 6], [4, 4, 7], [6, 4, 7], [7, 4, 7], [8, 4, 7], [10, 4, 7], [4, 4, 8], [6, 4, 8], [8, 4, 8], [10, 4, 8], [5, 4, 9], [6, 4, 9], [7, 4, 9], [8, 4, 9], [9, 4, 9], [6, 4, 10], [7, 4, 10], [8, 4, 10], [6, 4, 11], [7, 4, 11], [8, 4, 11], [6, 4, 12], [7, 4, 12], [8, 4, 12], [7, 5, 4], [6, 5, 5], [7, 5, 5], [8, 5, 5], [4, 5, 6], [5, 5, 6], [6, 5, 6], [7, 5, 6], [8, 5, 6], [9, 5, 6], [10, 5, 6], [6, 5, 7], [7, 5, 7], [8, 5, 7], [6, 5, 8], [7, 5, 8], [8, 5, 8], [6, 5, 9], [7, 5, 9], [8, 5, 9], [6, 5, 10], [7, 5, 10], [8, 5, 10], [6, 5, 11], [7, 5, 11], [8, 5, 11], [6, 5, 12], [7, 5, 12], [8, 5, 12], [7, 6, 4], [6, 6, 5], [7, 6, 5], [8, 6, 5], [5, 6, 6], [6, 6, 6], [7, 6, 6], [8, 6, 6], [9, 6, 6], [6, 6, 7], [7, 6, 7], [8, 6, 7], [7, 6, 8], [6, 6, 10], [7, 6, 10], [8, 6, 10], [6, 6, 11], [7, 6, 11], [8, 6, 11], [6, 6, 12], [7, 6, 12], [8, 6, 12], [7, 7, 4], [6, 7, 5], [7, 7, 5], [8, 7, 5], [5, 7, 6], [6, 7, 6], [7, 7, 6], [8, 7, 6], [9, 7, 6], [6, 7, 7], [7, 7, 7], [8, 7, 7], [7, 7, 8], [6, 7, 10], [7, 7, 10], [8, 7, 10], [6, 7, 11], [7, 7, 11], [8, 7, 11], [6, 7, 12], [7, 7, 12], [8, 7, 12], [7, 8, 4], [6, 8, 5], [7, 8, 5], [8, 8, 5], [5, 8, 6], [6, 8, 6], [7, 8, 6], [8, 8, 6], [9, 8, 6], [6, 8, 7], [7, 8, 7], [8, 8, 7], [7, 8, 8], [6, 8, 10], [7, 8, 10], [8, 8, 10], [6, 8, 11], [7, 8, 11], [8, 8, 11], [6, 8, 12], [7, 8, 12], [8, 8, 12], [7, 9, 4], [6, 9, 5], [7, 9, 5], [8, 9, 5], [5, 9, 6], [6, 9, 6], [7, 9, 6], [8, 9, 6], [9, 9, 6], [6, 9, 7], [7, 9, 7], [8, 9, 7], [7, 9, 8], [6, 9, 10], [7, 9, 10], [8, 9, 10], [6, 9, 11], [7, 9, 11], [8, 9, 11], [6, 9, 12], [7, 9, 12], [8, 9, 12], [7, 10, 5], [6, 10, 6], [7, 10, 6], [8, 10, 6], [7, 10, 7], [6, 10, 10], [7, 10, 10], [8, 10, 10], [6, 10, 11], [7, 10, 11], [8, 10, 11], [6, 10, 12], [7, 10, 12], [8, 10, 12], [7, 11, 4], [6, 11, 5], [7, 11, 5], [8, 11, 5], [7, 11, 6], [6, 11, 7], [7, 11, 7], [8, 11, 7], [7, 11, 8], [6, 11, 10], [7, 11, 10], [8, 11, 10], [6, 11, 11], [7, 11, 11], [8, 11, 11], [6, 11, 12], [7, 11, 12], [8, 11, 12], [7, 12, 4], [7, 12, 5], [6, 12, 6], [7, 12, 6], [8, 12, 6], [7, 12, 7], [7, 12, 8], [6, 12, 10], [7, 12, 10], [8, 12, 10], [6, 12, 11], [7, 12, 11], [8, 12, 11], [6, 12, 12], [7, 12, 12], [8, 12, 12], [7, 13, 5], [6, 13, 6], [7, 13, 6], [8, 13, 6], [7, 13, 7], [6, 13, 10], [7, 13, 10], [8, 13, 10], [6, 13, 11], [7, 13, 11], [8, 13, 11], [6, 13, 12], [7, 13, 12], [8, 13, 12], [7, 14, 5], [6, 14, 6], [7, 14, 6], [8, 14, 6], [7, 14, 7], [7, 14, 11], [7, 15, 5], [6, 15, 6], [7, 15, 6], [8, 15, 6], [7, 15, 7], [7, 16, 5], [6, 16, 6], [7, 16, 6], [8, 16, 6], [7, 16, 7], [7, 17, 5], [7, 17, 6], [7, 17, 7], [7, 18, 5], [6, 18, 6], [7, 18, 6], [8, 18, 6], [7, 18, 7], [7, 19, 5], [6, 19, 6], [7, 19, 6], [8, 19, 6], [7, 19, 7], [7, 20, 5], [6, 20, 6], [7, 20, 6], [8, 20, 6], [7, 20, 7], [7, 21, 6]]
+        for (let i of aLayer) {
+          scene.world.showSection(i, Direction.down);
+        }
+        scene.world.showSection([6, 1, 0, 8, 1, 4], Direction.down);
+        scene.idle(20);
+        scene.text(60, "工业高炉是一种大型机器，有其独特的操作方式");
+        scene.text(60, "核心位置", [7, 19, 6]);
+        scene.overlay.showOutline("green", {}, [7, 19, 6], 30);
+        scene.idle(80);
+        scene.addKeyframe();
+        scene.text(60, "请注意：核心应当朝向储罐!");
+        scene.idle(80);
+        scene.rotateCameraY(-90);
+        scene.addKeyframe();
+        scene.text(60, "请注意：演示中的储罐只有下部3*6*3的部分是必须的!");
+        scene.overlay.showOutline("green", {}, [6, 2, 10, 8, 7, 12], 60);
+        scene.idle(60);
+        scene.rotateCameraY(90);
+        scene.idle(20);
+        scene.addKeyframe();
+        scene.text(60, "如果你想要执行任何操作，你必须先为燃烧室提供超级加热");
+        scene.overlay.showOutline("red", {}, [6, 2, 5, 8, 2, 7], 60);
+        scene.showControls(15, [7, 0, 0], "up").withItem("createdieselgenerators:biodiesel_bucket")
+        scene.world.modifyTileNBT([6, 1, 1], (nbt) => { nbt.Speed = 128.0 });
+        scene.world.modifyTileNBT([7, 1, 1], (nbt) => { nbt.Speed = -128.0 });
+        scene.world.modifyTileNBT([8, 1, 1], (nbt) => { nbt.Speed = 128.0 });
+        scene.idle(5);
+        for (let i1 = 6; i1 < 9; i1++) {
+          for (let i2 = 5; i2 < 8; i2++) {
+            scene.world.modifyBlock([i1, 2, i2], state => state.with("blaze", "seething"), false)
+            scene.world.modifyTileNBT([i1, 2, i2], (nbt) => { nbt.fuelLevel = 2 });
+            scene.idle(5);
+          }
+        }
+        scene.idle(30);
+        scene.addKeyframe();
+        scene.text(60, "有些配方需要氧气，你可以向这两个3*1*1的区域泵出氧气流体从而输入氧气（图中结构仅做演示！）");
+        scene.overlay.showOutline("red", {}, [3, 4, 5, 3, 4, 7], 30);
+        scene.showControls(30, [3, 4, 6], "up").withItem("kubejs:oxygen_bucket")
+        scene.idle(20);
+        for (let i of [[0, 2, 6], [1, 2, 6], [2, 2, 6], [1, 3, 6], [2, 3, 6], [1, 4, 6], [2, 4, 6], [3, 4, 6], [1, 5, 6], [2, 5, 6], [3, 5, 6], [1, 6, 6], [2, 6, 6], [3, 6, 6], [3, 4, 5], [3, 4, 6]]) {
+          scene.world.showSection(i, Direction.down);
+        }
+        scene.idle(20);
+        scene.rotateCameraY(90);
+        scene.idle(15);
+        scene.overlay.showOutline("red", {}, [11, 4, 5, 11, 4, 7], 30);
+        scene.showControls(30, [11, 4, 6], "up").withItem("kubejs:oxygen_bucket")
+        scene.idle(20);
+        for (let i of [[14, 2, 6], [13, 2, 6], [12, 2, 6], [13, 3, 6], [12, 3, 6], [13, 4, 6], [12, 4, 6], [11, 4, 6], [13, 5, 6], [12, 5, 6], [11, 5, 6], [13, 6, 6], [12, 6, 6], [11, 6, 6], [11, 4, 5], [11, 4, 6]]) {
+          scene.world.showSection(i, Direction.down);
+        }
+        scene.idle(20);
+        scene.rotateCameraY(-90);
+        scene.idle(35);
+        scene.addKeyframe();
+        scene.text(60, "有些配方需要其它流体，你可以向这两个位置泵出对应流体从而输入");
+        scene.overlay.showOutline("red", {}, [6, 11, 6], 30);
+        scene.showControls(30, [6, 11, 6], "up").withItem("kubejs:industrial_iron_bucket")
+        scene.idle(40);
+        scene.rotateCameraY(90);
+        scene.idle(15);
+        scene.overlay.showOutline("red", {}, [8, 11, 6], 30);
+        scene.showControls(30, [8, 11, 6], "up").withItem("kubejs:industrial_iron_bucket")
+        scene.idle(40);
+        scene.rotateCameraY(-90);
+        scene.idle(35);
+        scene.addKeyframe();
+        scene.text(60, "上方核心控制器周围的漏斗则可以自由调整，用于物品的输入输出");
+        scene.overlay.showOutline("green", {}, [6, 19, 5, 8, 19, 7], 60);
+        scene.idle(80);
+        scene.addKeyframe();
+        scene.rotateCameraY(-60);
+        scene.text(60, "此外，为了输出流体产物，你必须为此处提供足够的转速", [6, 3, 9]);
+        scene.overlay.showOutline("green", {}, [6, 2, 9, 6, 4, 9], 30);
+        scene.world.modifyTileNBT([6, 2, 9], (nbt) => { nbt.Speed = 128.0 });
+        scene.world.modifyTileNBT([6, 3, 9], (nbt) => { nbt.Speed = -128.0 });
+        scene.world.modifyTileNBT([6, 4, 9], (nbt) => { nbt.Speed = 128.0 });
+        scene.world.modifyTileNBT([8, 2, 9], (nbt) => { nbt.Speed = 128.0 });
+        scene.world.modifyTileNBT([8, 3, 9], (nbt) => { nbt.Speed = -128.0 });
+        scene.world.modifyTileNBT([8, 4, 9], (nbt) => { nbt.Speed = 128.0 });
+        scene.idle(40);
+        scene.rotateCameraY(-135);
+        scene.idle(15);
+        scene.overlay.showOutline("green", {}, [8, 2, 9, 8, 4, 9], 30);
+        scene.idle(40);
+        scene.rotateCameraY(-165);
+        scene.idle(35);
+        scene.addKeyframe();
+        scene.addKeyframe();
+        const link = scene.world.showIndependentSection([0, 22, 0, 14, 39, 14], Direction.down, 30)
+        scene.world.moveSection(link, [0, -21, 0], 20)
+        scene.idle(20);
+        scene.world.setBlock([6, 19, 6], "create:brass_belt_funnel", true);
+        scene.world.modifyBlock([6, 19, 6], state => state.with("facing", "west"), false)
+        scene.world.modifyTileNBT([0, 2, 6], (nbt) => { nbt.Speed = 128.0 });
+        scene.world.modifyTileNBT([14, 2, 6], (nbt) => { nbt.Speed = -128.0 });
+        scene.world.modifyTileNBT([3, 5, 6], (nbt) => { nbt.Speed = -128.0 });
+        scene.world.modifyTileNBT([11, 5, 6], (nbt) => { nbt.Speed = 128.0 });
+        scene.idle(20);
+        scene.text(60, "在不破坏工业高炉本身结构的情况下，你可以自由设计你的线路！");
+        scene.rotateCameraY(-180);
+        scene.idle(40);
+        scene.rotateCameraY(-180);
+        scene.idle(80);
+        scene.addKeyframe();
+        scene.text(60, "你还可以加上各种各样的装饰！");
+        const link1 = scene.world.showIndependentSection([15, 0, 0, 29, 19, 14], Direction.west, 30)
+        scene.world.moveSection(link1, [-12, 0, 0], 20)
+        scene.idle(80);
+      }
+    )
+    .scene(
+      "kubejs:shaft_furnace",
+      "建造工业高炉",
+      "kubejs:shaft_furnace_structure",
+      (scene, utils) => {
+        scene.configureBasePlate(0, 0, 15);
+        scene.showStructure(21);
+        scene.scaleSceneView(0.35);
+        scene.setSceneOffsetY(-6)
+        scene.idle(20);
+        scene.text(60, "工业高炉是一种多方块机器，有特殊的结构要求");
+        scene.idle(80);
+        scene.addKeyframe();
+        scene.text(60, "由于其结构巨大，一般建议使用蓝图打印的方式来建造而非手动建造");
+        scene.idle(80);
+        scene.text(60, "如果你希望手动建造，那么下面是一个简单的指引：");
+        scene.idle(20);
+        scene.world.hideSection([0, 1, 0, 14, 21, 14], Direction.up);
+        scene.idle(60);
+        const Layer1 = [[2, 1, 3], [3, 1, 3], [4, 1, 3], [5, 1, 3], [9, 1, 3], [10, 1, 3], [11, 1, 3], [12, 1, 3], [2, 1, 4], [3, 1, 4], [4, 1, 4], [5, 1, 4], [9, 1, 4], [10, 1, 4], [11, 1, 4], [12, 1, 4], [2, 1, 5], [3, 1, 5], [4, 1, 5], [5, 1, 5], [9, 1, 5], [10, 1, 5], [11, 1, 5], [12, 1, 5], [2, 1, 6], [3, 1, 6], [4, 1, 6], [5, 1, 6], [6, 1, 6], [7, 1, 6], [8, 1, 6], [9, 1, 6], [10, 1, 6], [11, 1, 6], [12, 1, 6], [2, 1, 7], [3, 1, 7], [4, 1, 7], [5, 1, 7], [6, 1, 7], [7, 1, 7], [8, 1, 7], [9, 1, 7], [10, 1, 7], [11, 1, 7], [12, 1, 7], [2, 1, 8], [3, 1, 8], [4, 1, 8], [5, 1, 8], [6, 1, 8], [7, 1, 8], [8, 1, 8], [9, 1, 8], [10, 1, 8], [11, 1, 8], [12, 1, 8], [2, 1, 9], [3, 1, 9], [4, 1, 9], [5, 1, 9], [6, 1, 9], [7, 1, 9], [8, 1, 9], [9, 1, 9], [10, 1, 9], [11, 1, 9], [12, 1, 9], [2, 1, 10], [3, 1, 10], [4, 1, 10], [5, 1, 10], [6, 1, 10], [7, 1, 10], [8, 1, 10], [9, 1, 10], [10, 1, 10], [11, 1, 10], [12, 1, 10], [2, 1, 11], [3, 1, 11], [4, 1, 11], [5, 1, 11], [6, 1, 11], [7, 1, 11], [8, 1, 11], [9, 1, 11], [10, 1, 11], [11, 1, 11], [12, 1, 11], [4, 1, 12], [5, 1, 12], [6, 1, 12], [7, 1, 12], [8, 1, 12], [9, 1, 12], [10, 1, 12], [4, 1, 13], [5, 1, 13], [6, 1, 13], [7, 1, 13], [8, 1, 13], [9, 1, 13], [10, 1, 13], [4, 1, 14], [5, 1, 14], [6, 1, 14], [7, 1, 14], [8, 1, 14], [9, 1, 14], [10, 1, 14]]
+        const Layer2 = [[5, 2, 5], [9, 2, 5], [3, 2, 6], [6, 2, 6], [7, 2, 6], [8, 2, 6], [11, 2, 6], [6, 2, 7], [7, 2, 7], [8, 2, 7], [3, 2, 8], [6, 2, 8], [7, 2, 8], [8, 2, 8], [11, 2, 8], [5, 2, 9], [6, 2, 9], [8, 2, 9], [9, 2, 9], [6, 2, 10], [7, 2, 10], [8, 2, 10], [5, 2, 11], [9, 2, 11], [5, 2, 12], [9, 2, 12], [5, 2, 13], [9, 2, 13], [6, 2, 14], [7, 2, 14], [8, 2, 14]]
+        const Layer3 = [[5, 3, 5], [6, 3, 5], [7, 3, 5], [8, 3, 5], [9, 3, 5], [3, 3, 6], [4, 3, 6], [5, 3, 6], [6, 3, 6], [7, 3, 6], [8, 3, 6], [9, 3, 6], [10, 3, 6], [11, 3, 6], [3, 3, 7], [4, 3, 7], [5, 3, 7], [6, 3, 7], [7, 3, 7], [8, 3, 7], [9, 3, 7], [10, 3, 7], [11, 3, 7], [3, 3, 8], [4, 3, 8], [5, 3, 8], [6, 3, 8], [7, 3, 8], [8, 3, 8], [9, 3, 8], [10, 3, 8], [11, 3, 8], [5, 3, 9], [6, 3, 9], [8, 3, 9], [9, 3, 9], [6, 3, 10], [7, 3, 10], [8, 3, 10]]
+        const Layer4 = [[5, 4, 4], [6, 4, 4], [7, 4, 4], [8, 4, 4], [9, 4, 4], [4, 4, 5], [7, 4, 5], [10, 4, 5], [4, 4, 6], [6, 4, 6], [7, 4, 6], [8, 4, 6], [10, 4, 6], [4, 4, 7], [5, 4, 7], [6, 4, 7], [7, 4, 7], [8, 4, 7], [9, 4, 7], [10, 4, 7], [4, 4, 8], [6, 4, 8], [7, 4, 8], [8, 4, 8], [10, 4, 8], [4, 4, 9], [6, 4, 9], [8, 4, 9], [10, 4, 9], [5, 4, 10], [6, 4, 10], [7, 4, 10], [8, 4, 10], [9, 4, 10]]
+        const Layer5 = [[7, 5, 5], [6, 5, 6], [7, 5, 6], [8, 5, 6], [4, 5, 7], [5, 5, 7], [6, 5, 7], [7, 5, 7], [8, 5, 7], [9, 5, 7], [10, 5, 7], [6, 5, 8], [7, 5, 8], [8, 5, 8], [6, 5, 9], [7, 5, 9], [8, 5, 9], [6, 5, 10], [7, 5, 10], [8, 5, 10]]
+        const Layer6 = [[7, 6, 5], [6, 6, 6], [7, 6, 6], [8, 6, 6], [5, 6, 7], [6, 6, 7], [7, 6, 7], [8, 6, 7], [9, 6, 7], [6, 6, 8], [7, 6, 8], [8, 6, 8], [7, 6, 9]]
+        const Layer7 = [[7, 7, 5], [6, 7, 6], [7, 7, 6], [8, 7, 6], [5, 7, 7], [6, 7, 7], [7, 7, 7], [8, 7, 7], [9, 7, 7], [6, 7, 8], [7, 7, 8], [8, 7, 8], [7, 7, 9]]
+        const Layer8 = [[7, 8, 5], [6, 8, 6], [7, 8, 6], [8, 8, 6], [5, 8, 7], [6, 8, 7], [7, 8, 7], [8, 8, 7], [9, 8, 7], [6, 8, 8], [7, 8, 8], [8, 8, 8], [7, 8, 9]]
+        const Layer9 = [[7, 9, 5], [6, 9, 6], [7, 9, 6], [8, 9, 6], [5, 9, 7], [6, 9, 7], [7, 9, 7], [8, 9, 7], [9, 9, 7], [6, 9, 8], [7, 9, 8], [8, 9, 8], [7, 9, 9]]
+        const Layer10 = [[7, 10, 6], [6, 10, 7], [7, 10, 7], [8, 10, 7], [7, 10, 8]]
+        const Layer11 = [[7, 11, 5], [6, 11, 6], [7, 11, 6], [8, 11, 6], [7, 11, 7], [6, 11, 8], [7, 11, 8], [8, 11, 8], [7, 11, 9]]
+        const Layer12 = [[7, 12, 5], [7, 12, 6], [6, 12, 7], [7, 12, 7], [8, 12, 7], [7, 12, 8], [7, 12, 9]]
+        const Layer13 = [[7, 13, 6], [6, 13, 7], [7, 13, 7], [8, 13, 7], [7, 13, 8]]
+        const Layer14 = [[7, 14, 6], [6, 14, 7], [7, 14, 7], [8, 14, 7], [7, 14, 8]]
+        const Layer15 = [[7, 15, 6], [6, 15, 7], [7, 15, 7], [8, 15, 7], [7, 15, 8]]
+        const Layer16 = [[7, 16, 6], [6, 16, 7], [7, 16, 7], [8, 16, 7], [7, 16, 8]]
+        const Layer17 = [[7, 17, 6], [7, 17, 7], [7, 17, 8]]
+        const Layer18 = [[7, 18, 7], [7, 19, 6], [6, 19, 7], [7, 19, 7], [8, 19, 7], [7, 19, 8]]
+        const Layer19 = [[7, 20, 6], [6, 20, 7], [7, 20, 7], [8, 20, 7], [7, 20, 8]]
+        const Layer20 = [[7, 21, 6], [6, 21, 7], [7, 21, 7], [8, 21, 7], [7, 21, 8]]
+        const Pot = [[6, 2, 11], [7, 2, 11], [8, 2, 11], [6, 2, 12], [7, 2, 12], [8, 2, 12], [6, 2, 13], [7, 2, 13], [8, 2, 13], [6, 3, 11], [7, 3, 11], [8, 3, 11], [6, 3, 12], [7, 3, 12], [8, 3, 12], [6, 3, 13], [7, 3, 13], [8, 3, 13], [6, 4, 11], [7, 4, 11], [8, 4, 11], [6, 4, 12], [7, 4, 12], [8, 4, 12], [6, 4, 13], [7, 4, 13], [8, 4, 13], [6, 5, 11], [7, 5, 11], [8, 5, 11], [6, 5, 12], [7, 5, 12], [8, 5, 12], [6, 5, 13], [7, 5, 13], [8, 5, 13], [6, 6, 11], [7, 6, 11], [8, 6, 11], [6, 6, 12], [7, 6, 12], [8, 6, 12], [6, 6, 13], [7, 6, 13], [8, 6, 13], [6, 7, 11], [7, 7, 11], [8, 7, 11], [6, 7, 12], [7, 7, 12], [8, 7, 12], [6, 7, 13], [7, 7, 13], [8, 7, 13], [6, 8, 11], [7, 8, 11], [8, 8, 11], [6, 8, 12], [7, 8, 12], [8, 8, 12], [6, 8, 13], [7, 8, 13], [8, 8, 13], [6, 9, 11], [7, 9, 11], [8, 9, 11], [6, 9, 12], [7, 9, 12], [8, 9, 12], [6, 9, 13], [7, 9, 13], [8, 9, 13], [6, 10, 11], [7, 10, 11], [8, 10, 11], [6, 10, 12], [7, 10, 12], [8, 10, 12], [6, 10, 13], [7, 10, 13], [8, 10, 13], [6, 11, 11], [7, 11, 11], [8, 11, 11], [6, 11, 12], [7, 11, 12], [8, 11, 12], [6, 11, 13], [7, 11, 13], [8, 11, 13], [6, 12, 11], [7, 12, 11], [8, 12, 11], [6, 12, 12], [7, 12, 12], [8, 12, 12], [6, 12, 13], [7, 12, 13], [8, 12, 13], [6, 13, 11], [7, 13, 11], [8, 13, 11], [6, 13, 12], [7, 13, 12], [8, 13, 12], [6, 13, 13], [7, 13, 13], [8, 13, 13], [7, 14, 12]]
+        scene.addKeyframe();
+        scene.text(30, "第 1 层：", [6, 1, 6])
+        for (let i of Layer1) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(80);
+        scene.addKeyframe();
+        scene.text(30, "第 2 层：", [6, 2, 6])
+        for (let i of Layer2) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(48);
+        for (let i of Pot) {
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(60);
+        scene.addKeyframe();
+        scene.text(30, "第 3 层：", [6, 3, 6])
+        for (let i of Layer3) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(94);
+        scene.addKeyframe();
+        scene.text(30, "第 4 层：", [6, 4, 6])
+        for (let i of Layer4) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(84);
+        scene.addKeyframe();
+        scene.text(30, "第 5 层：", [6, 5, 6])
+        for (let i of Layer5) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(56);
+        scene.addKeyframe();
+        scene.text(30, "第 6 层：", [6, 6, 6])
+        for (let i of Layer6) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(42);
+        scene.addKeyframe();
+        scene.text(30, "第 7 层：", [6, 7, 6])
+        for (let i of Layer7) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(42);
+        scene.addKeyframe();
+        scene.text(30, "第 8 层：", [6, 8, 6])
+        for (let i of Layer8) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(42);
+        scene.addKeyframe();
+        scene.text(30, "第 9 层：", [6, 9, 6])
+        for (let i of Layer9) {
+          scene.idle(1);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(42);
+        scene.addKeyframe();
+        scene.text(30, "第 10 层：", [6, 10, 6])
+        for (let i of Layer10) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 11 层：", [6, 11, 6])
+        for (let i of Layer11) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 12 层：", [6, 12, 6])
+        for (let i of Layer12) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 13 层：", [6, 13, 6])
+        for (let i of Layer13) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 14 层：", [6, 14, 6])
+        for (let i of Layer14) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 15 层：", [6, 15, 6])
+        for (let i of Layer15) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 16 层：", [6, 16, 6])
+        for (let i of Layer16) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 17 层：", [6, 17, 6])
+        for (let i of Layer17) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 18, 19 层：", [6, 18, 6])
+        for (let i of Layer18) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(60, "请注意：核心的正侧应面向储罐", [7, 19, 7]);
+        scene.overlay.showOutline("red", {}, [7, 19, 7], 30);
+        scene.idle(80);
+        scene.addKeyframe();
+        scene.text(30, "第 20 层：", [6, 20, 6])
+        for (let i of Layer19) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.text(30, "第 21 层：", [6, 21, 6])
+        for (let i of Layer20) {
+          scene.idle(2);
+          scene.world.showSection(i, Direction.down);
+        };
+        scene.idle(40);
+        scene.addKeyframe();
+        scene.rotateCameraY(-180);
+        scene.idle(80);
+        scene.rotateCameraY(-180);
+        scene.idle(80);
+      }
+    )
+});

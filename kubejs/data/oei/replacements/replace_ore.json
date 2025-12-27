@@ -1,0 +1,44 @@
+[
+    {
+        "matchItems": [
+            "minecraft:raw_iron"
+        ],
+        "resultItems": "create:crushed_raw_iron"
+    },
+    {
+        "matchItems": [
+            "minecraft:raw_gold"
+        ],
+        "resultItems": "create:crushed_raw_gold"
+    },
+    {
+        "matchItems": [
+            "minecraft:raw_copper"
+        ],
+        "resultItems": "create:crushed_raw_copper"
+    },
+    {
+        "matchItems": [
+            "create:raw_zinc"
+        ],
+        "resultItems": "create:crushed_raw_zinc"
+    },
+    {
+        "matchItems": [
+            "iceandfire:raw_silver"
+        ],
+        "resultItems": "create:crushed_raw_silver"
+    },
+    {
+        "matchItems": [
+            "iceandfire:copper_nugget"
+        ],
+        "resultItems": "create:copper_nugget"
+    },
+    {
+        "matchItems": [
+            "vintageimprovements:zinc_sheet"
+        ],
+        "resultItems": "createaddition:zinc_sheet"
+    }
+]

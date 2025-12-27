@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spread_type": "linear",
+    "salt": 46124854,
+    "spacing": 32,
+    "separation": 24
+  },
+  "structures": [
+    {
+      "structure": "dut:moon_millitary",
+      "weight": 1
+    }
+  ]
+}

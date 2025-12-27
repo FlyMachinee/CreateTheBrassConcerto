@@ -1,0 +1,3 @@
+execute as @s at @s if block ~ ~-1 ~ create:depot if block ~1 ~-1 ~ create:depot if block ~-1 ~-1 ~ create:depot if block ~1 ~-1 ~1 create:depot if block ~1 ~-1 ~-1 create:depot if block ~-1 ~-1 ~1 create:depot if block ~-1 ~-1 ~-1 create:depot if block ~ ~-1 ~1 create:depot if block ~ ~-1 ~-1 create:depot run tag @s add dut_carrier_rocket_output
+execute as @s[tag=dut_carrier_rocket_output] at @s run function dut:carrier_rocket/running/output
+execute as @s[tag=!dut_carrier_rocket_output] at @s run function dut:carrier_rocket/running/explode

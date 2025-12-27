@@ -1,0 +1,141 @@
+{
+  "name": "dut:moon_railways/moon_railway",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_bridge_45",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_bridge",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_signal",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_cross",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 8,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_common_1",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 8,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_common_2",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_armored_train",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_cannon_train",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_freight_car",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_train_1",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_train_2",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_train_with_train",
+        "projection": "rigid",
+        "processors": "dut:random9"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_long",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_short",
+        "projection": "rigid",
+        "processors": "dut:random8"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "dut:moon_railways/moon_railway_45",
+        "projection": "rigid",
+        "processors": "dut:random75"
+      }
+    }
+  ]
+}

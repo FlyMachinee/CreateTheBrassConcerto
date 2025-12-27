@@ -1,0 +1,22 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "minecraft"
+	group: "6EE28B02E436C44F"
+	icon: "minecraft:grass_block"
+	id: "507B291D18ED71B8"
+	order_index: 1
+	quest_links: [ ]
+	quests: [{
+		id: "70292FD3035C9590"
+		tasks: [{
+			advancement: "minecraft:end/dragon_egg"
+			criterion: ""
+			id: "368F4971E0A8AAD7"
+			type: "advancement"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Minecraft的究极冒险"
+}

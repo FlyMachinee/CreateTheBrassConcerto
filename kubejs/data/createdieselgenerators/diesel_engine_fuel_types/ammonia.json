@@ -1,0 +1,19 @@
+{
+  "fluid": "kubejs:ammonia",
+  "sound_speed": 1,
+  "normal": {
+    "speed": 96.0,
+    "strength": 65536.0,
+    "burn_rate": 16
+  },
+  "modular": {
+    "speed": 96.0,
+    "strength": 65536.0,
+    "burn_rate": 16
+  },
+  "huge": {
+    "speed": 128.0,
+    "strength": 884736.0,
+    "burn_rate": 32
+  }
+}

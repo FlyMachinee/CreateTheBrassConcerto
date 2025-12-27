@@ -1,0 +1,183 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "111_4"
+	group: "62FF2E225AA2A9EF"
+	icon: "kubejs:lime_circuit_board"
+	id: "1F127B29A469C2C8"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&a众所周知，在黄铜协奏曲中，黄绿色集成电路板的获取能为你带来翻天覆地的变化，那么你最短能用时多久获取它呢？&r"
+				""
+				"&e在生存模式，困难难度下，不得开启作弊，不得额外更改FTB模组设置，不得额外添加模组，不得调整随机刻速度，不得开启流动岩浆转化为岩浆源，以获取黄绿色集成电路板为挑战结束标志&r"
+				""
+				"将存档向作者提交或在B站等平台提供全程录像，你的纪录将被放入此处！此挑战不接收时长超过4小时的纪录！以下是通关列表:"
+				""
+				"&a1.suring_ice&r "
+				"-&6RSG&r&e-版本Release2.0，2:20:42&r"
+				""
+				"&a2.dragonwalkgod&r "
+				"-&6RSG&r&e-版本Release2.0，3:28:35&r"
+				""
+				"&a3.shelwind(cildiant)&r "
+				"-&6RSG&r&e-版本Release2.0，1:22:36&r"
+				""
+				"&a4.suring_ice&r "
+				"-&6RSG&r&e-版本Release2.2，1:18:28&r"
+				""
+				"&a5.suring_ice&r "
+				"-&6SSG 种子:-6159554532809859948&r&e -版本Release2.2，00:37:35&r"
+				""
+				"&a6.Slimeli_&r "
+				"-&6RSG&r&e-版本Release2.2，00:32:58&r"
+				""
+				"&a7.suring_ice&r -&6SSG 种子:-6159554532809859948&r&e -版本Release2.2，00:29:29&r"
+			]
+			icon: "kubejs:lime_substrate"
+			id: "798303187C2A1C7A"
+			tasks: [{
+				id: "0856A8C9CC223334"
+				title: "直达绿板"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: [
+				"&6纪录信息：&r"
+				""
+				"&a规则：&r&eRSG&r"
+				""
+				"&a版本：&r&eRelease2.2&r"
+				""
+				"&a附加规则：&r&e无&r"
+				""
+				"&a时长：&r&e00:32:58&r"
+				""
+				"&a留言：&r&eRSG比SSG快这一块，给劲嗷！&r"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:player_head"
+				tag: {
+					SkullOwner: {
+						Id: [I;
+							1367475815
+							-1221311548
+							-1445710665
+							321043384
+						]
+						Name: "Slimeli_"
+						Properties: {
+							textures: [{
+								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk4NzQzMzcyNCwKICAicHJvZmlsZUlkIiA6ICI1MTgyMDY2N2I3MzQ0M2M0YTlkNDM0YjcxMzIyYmJiOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTbGltZWxpXyIsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYTNiYjQ5NjUyZDkzMDgzZDY3NzI4ODc2YWRiZTVmOWU1OTI3ZTAxNzUzNmU4YTFkYzA2MGQ5NDI3ZjBlODc0IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="
+							}]
+						}
+					}
+				}
+			}
+			id: "55BD2271A3F5CDA0"
+			size: 1.25d
+			tasks: [{
+				id: "4588736478867E31"
+				item: {
+					Count: 1
+					id: "minecraft:player_head"
+					tag: {
+						SkullOwner: {
+							Id: [I;
+								1367475815
+								-1221311548
+								-1445710665
+								321043384
+							]
+							Name: "Slimeli_"
+							Properties: {
+								textures: [{
+									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk4NzQzMzcyNCwKICAicHJvZmlsZUlkIiA6ICI1MTgyMDY2N2I3MzQ0M2M0YTlkNDM0YjcxMzIyYmJiOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTbGltZWxpXyIsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYTNiYjQ5NjUyZDkzMDgzZDY3NzI4ODc2YWRiZTVmOWU1OTI3ZTAxNzUzNmU4YTFkYzA2MGQ5NDI3ZjBlODc0IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="
+								}]
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "RSG纪录保持者"
+			x: -1.25d
+			y: 1.875d
+		}
+		{
+			description: [
+				"&6纪录信息：&r"
+				""
+				"&a规则：&r&eSSG&r "
+				""
+				"&a种子：&r&e-6159554532809859948"
+				""
+				"&a版本：&r&eRelease2.2&r"
+				""
+				"&a附加规则：&r&e无&r"
+				""
+				"&a时长：&r&e00:29:29&r"
+				""
+				"&a留言：&r&e偶遇恐怖史莱姆，思路清晰强如怪物，反复练习才终于战胜——并非偶遇，并非怪物，并非战胜&r"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:player_head"
+				tag: {
+					SkullOwner: {
+						Id: [I;
+							-1031115882
+							1349141854
+							-2132915619
+							-1015659082
+						]
+						Name: "suring_ice"
+						Properties: {
+							textures: [{
+								Signature: "dl/bKUTpRLGLqj8AZXbUWpuBMNd/zYN4gbxDRA/5hvkeXzOqbPQIvPB9GhF0eChTmOcmoMpUV63YuFVBOucj05hC6zzPVSd44yowBF1omVwmh5aUpI1iyWAUJFKYsLUNu33eSXZOKniDaP1fq/wiRCA/OQ56Ltarkej8LRUKu/GPgU+ALWwsbULnq3Ui6B2OIB+mfnTJx5FR78VUsbsfxx2cgaGTxsLGq04x3CzhxRnxEDEza35E6ME19gLhy8DQRcJKWm1hH+h/YcvW7jqJGBBFQUuG7LPXEtiu+eQgbsupk0KU8NRjvOj3EGOW+1OuxKtCpZOMbi0aZwoP9aEG0WsximYOphTmiHQJlbcHUMZ6QUWTcnuTZIY+9TbN9PwDp4u8geYkhcl+RWQzea94AI6lUF8bPqKsQA3F90otTP3NxSH1I9giuwj7BA0xKkkxC9G3AAbGmJ8HhjiRwlENorwVECmpPxpswVm+rrq+ZCHpaNI9om7fdWk657tc9wmRInnLn0IeTCL06cqlY7XPGU9Gu8wUa8HOkqE+fetkxK4rvWrUpZAT8aYdya0P1plos1R+9JIxnfiWUgmiADoS4vG/HwtxBqsVtMDs6gPytfK1xqcxkOy0WYL6OVw32jLQsiSwDjjNwiyU+S/AwRdhuPIW7eip7Hy7TvF2LPJZFLo="
+								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk5NDYxNjIwMiwKICAicHJvZmlsZUlkIiA6ICJjMjhhNmI5NjUwNmE0NTVlODBkZTRhNWRjMzc2NDViNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJzdXJpbmdfaWNlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E2Mjk5MDhhZDY4NmNiMjIyMjZiZjdlYjRjMDRiYTRjYmViNGVkZGYzZjQwM2Q5NzA2OTJmZjhjYjIxNWRhZGMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZDlkODJhYjE3ZmQ5MjAyMmRiZDRhODZjZGU0YzM4MmE3NTQwZTExN2ZhZTdiOWEyODUzNjU4NTA1YTgwNjI1IgogICAgfQogIH0KfQ=="
+							}]
+						}
+					}
+				}
+			}
+			id: "12775560AA59D76B"
+			size: 1.25d
+			tasks: [{
+				id: "6904B14035B84411"
+				item: {
+					Count: 1
+					id: "minecraft:player_head"
+					tag: {
+						SkullOwner: {
+							Id: [I;
+								-1031115882
+								1349141854
+								-2132915619
+								-1015659082
+							]
+							Name: "suring_ice"
+							Properties: {
+								textures: [{
+									Signature: "dl/bKUTpRLGLqj8AZXbUWpuBMNd/zYN4gbxDRA/5hvkeXzOqbPQIvPB9GhF0eChTmOcmoMpUV63YuFVBOucj05hC6zzPVSd44yowBF1omVwmh5aUpI1iyWAUJFKYsLUNu33eSXZOKniDaP1fq/wiRCA/OQ56Ltarkej8LRUKu/GPgU+ALWwsbULnq3Ui6B2OIB+mfnTJx5FR78VUsbsfxx2cgaGTxsLGq04x3CzhxRnxEDEza35E6ME19gLhy8DQRcJKWm1hH+h/YcvW7jqJGBBFQUuG7LPXEtiu+eQgbsupk0KU8NRjvOj3EGOW+1OuxKtCpZOMbi0aZwoP9aEG0WsximYOphTmiHQJlbcHUMZ6QUWTcnuTZIY+9TbN9PwDp4u8geYkhcl+RWQzea94AI6lUF8bPqKsQA3F90otTP3NxSH1I9giuwj7BA0xKkkxC9G3AAbGmJ8HhjiRwlENorwVECmpPxpswVm+rrq+ZCHpaNI9om7fdWk657tc9wmRInnLn0IeTCL06cqlY7XPGU9Gu8wUa8HOkqE+fetkxK4rvWrUpZAT8aYdya0P1plos1R+9JIxnfiWUgmiADoS4vG/HwtxBqsVtMDs6gPytfK1xqcxkOy0WYL6OVw32jLQsiSwDjjNwiyU+S/AwRdhuPIW7eip7Hy7TvF2LPJZFLo="
+									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk5NDYxNjIwMiwKICAicHJvZmlsZUlkIiA6ICJjMjhhNmI5NjUwNmE0NTVlODBkZTRhNWRjMzc2NDViNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJzdXJpbmdfaWNlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E2Mjk5MDhhZDY4NmNiMjIyMjZiZjdlYjRjMDRiYTRjYmViNGVkZGYzZjQwM2Q5NzA2OTJmZjhjYjIxNWRhZGMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZDlkODJhYjE3ZmQ5MjAyMmRiZDRhODZjZGU0YzM4MmE3NTQwZTExN2ZhZTdiOWEyODUzNjU4NTA1YTgwNjI1IgogICAgfQogIH0KfQ=="
+								}]
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "SSG纪录保持者"
+			x: 1.25d
+			y: 1.875d
+		}
+	]
+	title: "直达绿板速通挑战"
+}

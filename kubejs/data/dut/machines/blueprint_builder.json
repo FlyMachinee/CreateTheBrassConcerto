@@ -1,0 +1,347 @@
+{
+    "name": "block.kubejs.blueprint_builder",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/blueprint_builder"
+        },
+        "running": {
+            "block": "kubejs:machine/blueprint_builder"
+        },
+        "errored": {
+            "block": "kubejs:machine/blueprint_builder"
+        },
+        "paused": {
+            "block": "kubejs:machine/blueprint_builder"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.multiblock_mech",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.multiblock_mech1",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:item",
+            "id": "filter",
+            "mode": "both",
+            "variant": "custommachinery:filter",
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item1",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item2",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item3",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item4",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item5",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item6",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item7",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item8",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item9",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item10",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel","#dut_create:data_disk"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "barrel_input",
+            "mode": "input",
+            "locked": false,
+            "filter": [
+                "minecraft:barrel"
+            ],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "disk_input",
+            "mode": "both",
+            "locked": false,
+            "filter": [
+                "#dut_create:data_disk"
+            ],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out1",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output"
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out2",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output"
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out3",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output"
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out4",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output"
+            }
+        },
+        {
+            "type": "custommachinery:contraption",
+            "config": {
+                "default": "none",
+                "bottom": "input",
+                "input": true,
+                "output": false
+            },
+            "stress_impact":0
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:progress",
+            "x": 143,
+            "y": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 29,
+            "id": "item1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 29,
+            "id": "item2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 83,
+            "y": 29,
+            "id": "item3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 101,
+            "y": 29,
+            "id": "item4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 29,
+            "id": "item5",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 47,
+            "id": "item6",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 70,
+            "id": "disk_input",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 47,
+            "id": "item7",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 70,
+            "id": "barrel_input",
+            "texture": "kubejs:textures/gui/barrel_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 83,
+            "y": 47,
+            "id": "item8",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 83,
+            "y": 70,
+            "id": "filter",
+            "texture": "kubejs:textures/gui/filter_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 101,
+            "y": 47,
+            "id": "item9",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 47,
+            "id": "item10",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 29,
+            "id": "out1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 29,
+            "id": "out3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 47,
+            "id": "out2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 191,
+            "y": 47,
+            "id": "out4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "text": "block.kubejs.blueprint_builder",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        }
+    ]
+}

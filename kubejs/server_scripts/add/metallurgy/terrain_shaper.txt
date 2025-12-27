@@ -1,0 +1,176 @@
+ServerEvents.recipes(event => {
+    const PlateCommon1 = {
+        "type": "custommachinery:fluid",
+        "mode": "input",
+        "tank": "tank",
+        "fluid": "minecraft:water",
+        "amount": 25
+    }
+    const PlateCommon2 = {
+        "type": "custommachinery:command",
+        "phase": "crafting_tickable",
+        "command": "/playsound minecraft:block.stone.place block @a ~ ~ ~ 0.5",
+        "log": false,
+        "chance": 0.25,
+        "permissionlevel": 5
+    }
+    const PlateCommon3 = {
+        "type": "custommachinery:command",
+        "phase": "crafting_tickable",
+        "command": "/playsound minecraft:block.stone.place block @a ~ ~ ~ 0.5",
+        "log": false,
+        "chance": 0.25,
+        "permissionlevel": 5
+    }
+    const PlateCommon4 = {
+        "type": "custommachinery:command",
+        "phase": "crafting_tickable",
+        "command": "/particle minecraft:snowflake ~ ~1 ~ 0.3 1.5 0.3 0 5",
+        "log": false,
+        "permissionlevel": 5
+    }
+    const PlateCommon5 = {
+        "type": "custommachinery:command",
+        "phase": "crafting_tickable",
+        "command": "/particle minecraft:cloud ~ ~1 ~ 0.55 1 0.55 0 4",
+        "log": false,
+        "permissionlevel": 5
+    }
+    //
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:terrain_shaper",
+        "time": 1,
+        "error": false,
+        "priority": 1,
+        "hidden":true,
+        "requirements": [
+            PlateCommon1,
+            PlateCommon2,
+            PlateCommon3,
+            PlateCommon4,
+            PlateCommon5,
+            {
+                "type": "custommachinery:block",
+                "mode": "output",
+                "action": "replace_destroy",
+                "amount": 9,
+                "pos": [0, 0, -1, -47, 11, -48],
+                "filter": ["minecraft:air","minecraft:void_air","minecraft:cave_air"],
+                "block": "minecraft:air"
+            }
+        ]
+    }).id("dut_create:platform/set")
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:terrain_shaper",
+        "time": 1,
+        "hidden":true,
+        "error": false,
+        "priority": 0.4,
+        "requirements": [
+            PlateCommon1,
+            PlateCommon2,
+            PlateCommon3,
+            PlateCommon4,
+            PlateCommon5,
+            {
+                "type": "custommachinery:block",
+                "mode": "output",
+                "action": "replace_destroy",
+                "amount": 1,
+                "pos": [0, -8, -1, -47, -1, -48],
+                "filter": ["minecraft:stone","minecraft:bedrock"],
+                "block": "minecraft:stone"
+            },
+            {
+                "type": "custommachinery:item",
+                "mode": "input",
+                "item": "minecraft:stone",
+                "amount": 1
+            }
+        ]
+    }).id("dut_create:platform/setstone")
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:terrain_shaper",
+        "time": 1,
+        "error": false,
+        "priority": 0.6,
+        "requirements": [
+            PlateCommon1,
+            PlateCommon2,
+            PlateCommon3,
+            PlateCommon4,
+            PlateCommon5,
+            {
+                "type": "custommachinery:block",
+                "mode": "output",
+                "action": "replace_destroy",
+                "amount": 8,
+                "pos": [0, -8, -1, -47, -1, -48],
+                "filter": ["minecraft:stone","minecraft:bedrock"],
+                "block": "minecraft:stone"
+            },
+            {
+                "type": "custommachinery:item",
+                "mode": "input",
+                "item": "minecraft:stone",
+                "amount": 8
+            }
+        ],
+        "jei": [
+            PlateCommon1,
+            {
+                "type": "custommachinery:block",
+                "mode": "output",
+                "action": "replace_destroy",
+                "amount": 9,
+                "pos": [0, 0, -1, -47, 11, -48],
+                "filter": ["minecraft:air","minecraft:void_air","minecraft:cave_air"],
+                "block": "minecraft:air"
+            },
+            {
+                "type": "custommachinery:item",
+                "mode": "input",
+                "item": "minecraft:stone",
+                "amount": 8
+            }
+        ]
+    }).id("dut_create:platform/setstone1")
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:terrain_shaper",
+        "time": 1,
+        "error": false,
+        "priority": 0.5,
+        "requirements": [
+            PlateCommon1,
+            PlateCommon2,
+            PlateCommon3,
+            PlateCommon4,
+            PlateCommon5,
+            {
+                "type": "custommachinery:block",
+                "mode": "output",
+                "action": "replace_destroy",
+                "amount": 1,
+                "pos": [0, 0, -1, -47, 11, -48],
+                "filter": ["minecraft:air","minecraft:void_air","minecraft:cave_air"],
+                "block": "minecraft:air"
+            }
+        ],
+        "jei": [
+            PlateCommon1,
+            {
+                "type": "custommachinery:block",
+                "mode": "output",
+                "action": "replace_destroy",
+                "amount": 9,
+                "pos": [0, 0, -1, -47, 11, -48],
+                "filter": ["minecraft:air","minecraft:void_air","minecraft:cave_air"],
+                "block": "minecraft:air"
+            }
+        ]
+    }).id("dut_create:platform/set1")
+})

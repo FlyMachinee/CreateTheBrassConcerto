@@ -1,0 +1,10 @@
+{
+  "dimension": "dut:slimeria",
+  "gravity": 7.499,
+  "orbit": "dut:slimeria_orbit",
+  "oxygen": true,
+  "solar_power": 22,
+  "solar_system": "dut:233b_system",
+  "temperature": 24,
+  "tier": 2
+}

@@ -1,0 +1,753 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "77515F6244613FD2"
+	group: "6B818C6F92D84205"
+	icon: "createloveandwar:walker"
+	id: "77515F6244613FD2"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"你或许已经无数次遇到哨站中的掠夺者、平原上的独眼巨人、巢穴中的巨龙、堡垒中的傀儡......文明的光辉或许可以感化这些生物，但你必须首先能让它们安分地坐下来听你讲道理——这也是为什么你需要更强大的力量。"
+				""
+				"除此以外，清扫这些生物所获得的战利品也能帮助你提高产线的效能！"
+				""
+				"如果你希望能获得强大的力量从而清扫星球上的各种障碍，那么这一节就是为此而准备的！"
+				""
+				"&e需要注意的是，枪械的实际伤害是显示数值的三倍——而爆头命中时是十二倍！&r"
+				""
+				"作为变奏，这一部分内容并非必须，但可以为你带来许多实际的收获！"
+			]
+			id: "3E8B27165178C3B3"
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "5141574F5A55272B"
+				title: "欢迎来到机械动力！"
+				type: "checkmark"
+			}]
+			title: "暴力是无法回避的现实"
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3E8B27165178C3B3"]
+			description: [
+				"你可以在这里组合枪械零件并制造一些简单的枪械，但是它不能用来制造子弹"
+				""
+				"如果你需要更高级的枪械，那么你需要制造更高级的工作台"
+				""
+				"为了制造子弹，你需要建造新的生产线"
+				""
+				"而为了制造枪械零件，你首先需要制作模具，然后通过冲压制造各种不同材质的零件"
+				""
+				"&e需要注意的是，枪械的实际伤害是显示数值的两倍——而爆头命中时是八倍！&r"
+			]
+			id: "4DD1864C81C0311D"
+			rewards: [
+				{
+					id: "33840BAA3E9EE37B"
+					item: "createloveandwar:stamping_press"
+					type: "item"
+				}
+				{
+					id: "5F9679179F99EE00"
+					item: "flansmod:gun_modification_table"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5387C1F2EA31A670"
+				item: "createloveandwar:law_workbench"
+				type: "item"
+			}]
+			title: "枪械工作台"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4DD1864C81C0311D"]
+			description: [
+				"空弹壳是制作子弹的第一步！"
+				""
+				"使弹壳冲压机来制造它！"
+			]
+			id: "1577AFD4174C9DCD"
+			tasks: [{
+				id: "3E4B84C470139322"
+				item: "createloveandwar:drawing_press"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["3E8B27165178C3B3"]
+			description: ["熔融金属来铸造火炮！"]
+			id: "7239A5B43410C216"
+			tasks: [{
+				id: "06ECBAFCC4B39AFF"
+				item: "createbigcannons:basin_foundry_lid"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1577AFD4174C9DCD"]
+			description: ["向空弹壳中装填火药——或是直接制造发射药块！"]
+			id: "112434E15A5D6960"
+			tasks: [
+				{
+					id: "6D05FA6F317C421F"
+					item: "createloveandwar:filled_shotgun_casing"
+					type: "item"
+				}
+				{
+					id: "0D39EEAC7E39A832"
+					item: "createloveandwar:propellant_moulded"
+					type: "item"
+				}
+			]
+			title: "装填弹壳"
+			x: -1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7239A5B43410C216"]
+			description: ["为了制造火炮，你需要用铸造砂和火炮铸模来制造模具，然后再进行浇筑"]
+			id: "7BF9023F9EE23B02"
+			rewards: [{
+				id: "3F34467675F0F6C5"
+				item: "createbigcannons:sliding_breech_cast_mould"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7A03F04F544742A4"
+				item: "createbigcannons:casting_sand"
+				type: "item"
+			}]
+			title: "模具铸造！"
+			x: 0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0B696DFD739EC06E"]
+			description: [
+				"高级的火炮需要套管或焊接来制造，在思索中查看具体做法！"
+				""
+				"不过需要注意的是，焊接制造的火炮强度更低！"
+			]
+			id: "33AF93748227B480"
+			tasks: [
+				{
+					id: "09665CB0BD8CFB1A"
+					item: {
+						Count: 1
+						id: "createbigcannons:cannon_welder"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1D16F013997D02A8"
+					item: "createbigcannons:cannon_builder"
+					type: "item"
+				}
+			]
+			title: "焊接！"
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["112434E15A5D6960"]
+			description: [
+				"最普通的子弹，除此以外还有穿甲(AP)和中空(HP)版本"
+				""
+				"适用于大部分枪械！"
+				""
+				"&e需要注意的是，枪械的实际伤害是显示数值的三倍——而爆头命中时是十二倍！&r"
+			]
+			id: "5DE91E7068BAF3DB"
+			tasks: [{
+				id: "2DA8E0C531FC9703"
+				item: "createloveandwar:caseless_bullet"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5DE91E7068BAF3DB"]
+			description: [
+				"子弹的穿甲(AP)和中空(HP)版本！适用于大部分枪械！"
+				""
+				"&e需要注意的是，枪械的实际伤害是显示数值的三倍——而爆头命中时是十二倍！&r"
+			]
+			id: "649FD2CD5111D305"
+			tasks: [
+				{
+					id: "3575E1C5B17D9E19"
+					item: "createloveandwar:caseless_bullet_soft"
+					type: "item"
+				}
+				{
+					id: "6A0CD7AB6759A6F7"
+					item: "createloveandwar:caseless_bullet_ap"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["649FD2CD5111D305"]
+			description: [
+				"最普通的霰弹枪子弹，除此以外还有三种版本，各有优劣"
+				""
+				"&e需要注意的是，枪械的实际伤害是显示数值的三倍——而爆头命中时是十二倍！&r"
+			]
+			id: "63822245DFA5C7EC"
+			tasks: [{
+				id: "32D905FC61EE517E"
+				item: "createloveandwar:buckshot_shell"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["33AF93748227B480"]
+			description: [
+				"你需要底座和方向机来控制火炮垂直方向和水平方向上的旋转、以及火炮的装载和发射"
+				""
+				"火炮的转速是输入转速的1/8，可以基于此设计同轴炮塔"
+			]
+			id: "14E45901CFA1A8D0"
+			tasks: [
+				{
+					id: "735BC57425902AD2"
+					item: "createbigcannons:cannon_mount"
+					type: "item"
+				}
+				{
+					id: "6C4B71E3235C86FA"
+					item: "createbigcannons:fixed_cannon_mount"
+					type: "item"
+				}
+			]
+			title: "控制火炮"
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4AD0D014D5C9826E"]
+			description: ["为了获取更多的火药以及更方便地自动化装填，你需要制造硝化甘油火药"]
+			id: "3454D72D2E79F1C0"
+			tasks: [{
+				id: "7892497B8FFED026"
+				item: "createbigcannons:congealed_nitro"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3454D72D2E79F1C0"]
+			description: [
+				"硝粉可以制作成普通的火药"
+				"也可以用来制造大型弹药"
+			]
+			id: "312BDA3D9C517142"
+			tasks: [{
+				id: "562B08BB098C9C43"
+				item: "createbigcannons:nitropowder"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7BF9023F9EE23B02"]
+			description: [
+				"所有的火炮炮膛都需要钻孔"
+				"在思索中查看具体情形"
+			]
+			id: "0B696DFD739EC06E"
+			tasks: [{
+				id: "7B6CBB516492CF75"
+				item: "createbigcannons:cannon_drill"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["14E45901CFA1A8D0"]
+			description: [
+				"你需要火炮装载机和装药机头来自动装填"
+				"还需要刷头来退出哑火的弹药"
+			]
+			id: "4AD0D014D5C9826E"
+			tasks: [
+				{
+					id: "3D66A8C801E3F043"
+					item: "createbigcannons:cannon_loader"
+					type: "item"
+				}
+				{
+					id: "5F7E6468F51B54AA"
+					item: "createbigcannons:ram_head"
+					type: "item"
+				}
+				{
+					id: "09F114CEAD07C230"
+					item: "createbigcannons:worm_head"
+					type: "item"
+				}
+			]
+			title: "自动装载"
+			x: 0.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["312BDA3D9C517142"]
+			description: ["使用切割、冲压的方式来制作火炮弹药"]
+			id: "5219110C37B33FF6"
+			tasks: [
+				{
+					id: "517D6572E56B22CA"
+					item: "createbigcannons:autocannon_cartridge_sheet"
+					type: "item"
+				}
+				{
+					id: "57ACDC77FC8F1429"
+					item: "createbigcannons:big_cartridge_sheet"
+					type: "item"
+				}
+			]
+			title: "高级自动化装填"
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5219110C37B33FF6"]
+			description: ["这些弹药可以用于快速装填火炮！"]
+			id: "775C82A0CD78E7A9"
+			tasks: [
+				{
+					id: "122DEA848CAF0FF5"
+					item: {
+						Count: 1
+						id: "createbigcannons:autocannon_cartridge"
+						tag: {
+							Projectile: {
+								Count: 1b
+								id: "createbigcannons:ap_autocannon_round"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "093B622EE91EEDDB"
+					item: {
+						Count: 1
+						id: "createbigcannons:autocannon_cartridge"
+						tag: {
+							Projectile: {
+								Count: 1b
+								id: "createbigcannons:flak_autocannon_round"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "290C28B6274E8ED3"
+					item: {
+						Count: 1
+						id: "createbigcannons:machine_gun_round"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "5D03A2E8C8890065"
+					item: {
+						Count: 1
+						id: "createbigcannons:big_cartridge"
+						tag: {
+							Power: 4
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "成型的弹药"
+			x: -2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["775C82A0CD78E7A9"]
+			description: ["小型的火炮有更方便的装填方式！"]
+			id: "63AD3D024CF1E6D0"
+			tasks: [{
+				id: "15B38F8D80117CDD"
+				item: "createbigcannons:autocannon_ammo_container"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["63822245DFA5C7EC"]
+			description: ["火焰也是一种有力的武器——特别是当你拥有不限量的燃料和地狱火附魔的时候"]
+			id: "74EB273BFC3BF7D6"
+			tasks: [{
+				id: "4768601C8BA9B720"
+				item: {
+					Count: 1
+					id: "create_sa:flamethrower"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["74EB273BFC3BF7D6"]
+			description: [
+				"在战斗中分秒必争"
+				""
+				"为了吃下食物所浪费的时间可能要了你的命！"
+				""
+				"为了防止这种情况发生，制作一些自动喂食的装备！"
+			]
+			id: "72D0A7ADFC0CB9AD"
+			tasks: [{
+				id: "682AA9B11D4BEDE9"
+				item: "sophisticatedbackpacks:advanced_feeding_upgrade"
+				type: "item"
+			}]
+			title: "战斗中的补给"
+			x: 3.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["72D0A7ADFC0CB9AD"]
+			description: ["薯条可以简单地提供大量的饱食度！"]
+			id: "75916A0AC84DE5D1"
+			tasks: [{
+				id: "05636FA19413F49B"
+				item: "kubejs:large_fries"
+				type: "item"
+			}]
+			title: "去码头整点薯条"
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["63AD3D024CF1E6D0"]
+			description: ["用最快的速度装填大型火炮！"]
+			id: "5FF2344DD9FA4FED"
+			tasks: [{
+				id: "3305946A2D8F8FC8"
+				item: "createbigcannons:quickfiring_mechanism"
+				type: "item"
+			}]
+			title: "最高速度！"
+			x: 0.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["75916A0AC84DE5D1"]
+			description: [
+				"塑料罐可以制造可乐"
+				"它可以被快捷使用"
+				""
+				"一瓶就能为你提供大量的能量！"
+			]
+			id: "4D422DB74261387E"
+			tasks: [{
+				id: "3618A7271F8083C8"
+				item: "kubejs:empty_can"
+				type: "item"
+			}]
+			title: "制造可乐！"
+			x: 3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4D422DB74261387E"]
+			description: [
+				"塑钢能够制造强大的动力剑"
+				""
+				"动力剑能消耗电能为你提供额外护盾、加速效果"
+				""
+				"此外，只需要充电就能让动力剑恢复到正常状态"
+				""
+				"推荐使用电池插槽进行充电！它会比特斯拉线圈快得多"
+			]
+			id: "47C296AFDF7F0643"
+			tasks: [{
+				id: "0EA0FD80F76BD43E"
+				item: "createloveandwar:steel_ingot"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["47C296AFDF7F0643"]
+			description: [
+				"你已经拥有了大部分战斗用品，虽然还可以做更多的准备，但在我看来，你已经足以横扫主世界的一切"
+				""
+				"也许是时候出击了！"
+			]
+			id: "6C19A4E6173D1580"
+			tasks: [{
+				id: "6F453FBE83F6E5A2"
+				title: "是时候出击了！"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			description: [
+				"在击败末影龙后，你便可以安全地对末地进行开发了！"
+				""
+				"除此以外，你还可以利用末影龙掉落的魅影真菌批量生产龙息从而批量生产龙蛋、制作能够远程传输物品的抽屉升级，&e还可以利用百合把末影龙蛋转化为冰火雷三种龙蛋&r"
+				""
+				"需要注意的是，抽屉无线连接升级只能在抽屉控制器范围内使用，并且无法应用于流体抽屉！"
+			]
+			id: "0948D79B50550974"
+			rewards: [
+				{
+					count: 2
+					id: "62079627468C0E31"
+					item: "kubejs:coin_netherite"
+					team_reward: true
+					type: "item"
+				}
+				{
+					id: "65F2CC798C775980"
+					item: "minecraft:dragon_egg"
+					team_reward: false
+					type: "item"
+				}
+				{
+					id: "6830391589B17C63"
+					item: "kubejs:cola_puree_bucket"
+					team_reward: false
+					type: "item"
+				}
+			]
+			size: 1.5d
+			tasks: [{
+				advancement: "minecraft:end/kill_dragon"
+				criterion: ""
+				id: "3EEF241087990F4F"
+				type: "advancement"
+			}]
+			x: 0.5d
+			y: 6.5d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "5A777BD18837678F"
+			shape: "diamond"
+			tasks: [{
+				id: "52E34530E0C3FAF9"
+				item: {
+					Count: 1
+					id: "createloveandwar:mars"
+					tag: {
+						id: [I;
+							-391777553
+							-908704703
+							-1452997189
+							141852484
+						]
+						primary_fire: {
+							mag_0: {
+								bullets: {
+									0: {
+										Count: 7b
+										id: "createloveandwar:caseless_bullet"
+									}
+								}
+							}
+						}
+					}
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			x: 0.5d
+			y: -8.0d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "374097639C9CDBFB"
+			shape: "diamond"
+			tasks: [{
+				id: "1BDBE19BE28F4024"
+				item: {
+					Count: 1
+					id: "createloveandwar:dreysepistol"
+					tag: {
+						id: [I;
+							-849117993
+							1903971187
+							-1389295530
+							1771890478
+						]
+						primary_fire: {
+							mag_0: {
+								bullets: {
+									0: {
+										Count: 1b
+										id: "createloveandwar:black_powder_cartridge"
+									}
+								}
+							}
+						}
+					}
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			x: 0.5d
+			y: -7.0d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "5D30B92076F81226"
+			shape: "diamond"
+			tasks: [{
+				id: "1C3393B0CBF8B801"
+				item: {
+					Count: 1
+					id: "createloveandwar:p53_enfield"
+					tag: {
+						id: [I;
+							-202199543
+							-1129691494
+							-1449519540
+							1137855480
+						]
+						primary_fire: {
+							mag_0: {
+								bullets: {
+									0: {
+										Count: 1b
+										id: "createloveandwar:black_powder_cartridge"
+									}
+								}
+							}
+						}
+					}
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			x: 0.0d
+			y: -7.5d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "1EEAC23AEACA2827"
+			shape: "diamond"
+			tasks: [{
+				id: "7285702853DF6C74"
+				item: {
+					Count: 1
+					id: "createloveandwar:vetterli"
+					tag: {
+						id: [I;
+							-778797563
+							-807910968
+							-1996632984
+							-1523861107
+						]
+						primary_fire: {
+							mag_0: {
+								bullets: {
+									0: {
+										Count: 2b
+										id: "minecraft:apple"
+									}
+									2: {
+										Count: 10b
+										id: "createloveandwar:caseless_bullet"
+									}
+								}
+							}
+						}
+					}
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			x: 1.0d
+			y: -7.5d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "4893C602A92779C4"
+			shape: "diamond"
+			tasks: [{
+				id: "5F4A834DFC57BCED"
+				item: "createloveandwar:mas62"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -9.5d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "04B0299B0C782EED"
+			shape: "diamond"
+			tasks: [{
+				id: "0703C30DC2941054"
+				item: "createloveandwar:wz35"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -9.0d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "737C7E72CCB05A56"
+			shape: "diamond"
+			tasks: [{
+				id: "4B31EC4C3DBF1599"
+				item: "createloveandwar:aai_acr"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -10.0d
+		}
+		{
+			description: ["请记住：它们的伤害是显示数值的3倍！"]
+			id: "72256344F68D2CBB"
+			shape: "diamond"
+			tasks: [{
+				id: "44EEC1BAA7763FE7"
+				item: "createloveandwar:em2"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -9.5d
+		}
+	]
+	subtitle: ["征与伐"]
+	title: "变奏-批判的武器不能代替武器的批判"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 12.0,
+  "amountMin": 2.0,
+  "biomeWhitelist": "dut_create:stone",
+  "icon": {
+    "item": "minecraft:tuff"
+  },
+  "name": "{\"translate\":\"block.minecraft.tuff\"}",
+  "placement": {
+    "salt": 1523235716,
+    "separation": 12,
+    "spacing": 96
+  },
+  "priority": 0
+}

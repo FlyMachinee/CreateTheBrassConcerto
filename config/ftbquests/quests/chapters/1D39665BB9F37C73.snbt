@@ -1,0 +1,2074 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "1D39665BB9F37C73"
+	group: "6EA46263F86F561F"
+	icon: "beyonddimensions:net_interface"
+	id: "1D39665BB9F37C73"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"虽然我不知道你的故乡是一个什么模样，但我可以向你简单说明一下我们世界的基本图景——&a“万物皆信息”&r"
+				""
+				"在我们的世界，一切物质实体均可以被分解为相同的基础单元——信息——从而一切物质实体均为信息空间的表征。在此基础上，世界上所发生的一切是信息的迁移与重排——而世界上的所有规律（比如区块加载规律、实体堆积规律等），本质上也是一类特殊的信息——它们能够自我复制，并作用于其他信息，主导其迁移与重组。"
+				""
+				"&e如果以电脑来类比，信息空间即是整个世界的“储存”，物质实体即是整个世界的“显示器”，而世界规律则是“程序”&r"
+				""
+				"你可能要问了：“内存”呢？"
+				""
+				"“内存”，即是&d信息素&r所扮演的角色"
+				""
+				"你也许还尚未接触过它——&e信息素是物质化的信息本身&r，它同时是信息自身和自身的表征——对于世界而言，它既是物质实体也是信息空间的底层结构。世界的“程序”可以被以物质实体的方式存储于信息素中，并通过它直接影响信息空间的底层结构"
+				""
+				"在未来，你也许可以使用信息素来转化物质、创造物质、甚至是修改世界规律！"
+				""
+				"比如，当信息被重排时，两种所含信息量相同的物质就可能被互相转化"
+			]
+			id: "048B2441C17D3CA7"
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "092B66246DEDC204"
+				title: "信息理论"
+				type: "checkmark"
+			}]
+			x: -0.625d
+			y: 0.0d
+		}
+		{
+			description: [
+				"使用时，首先按下&eShift+右键&r来绑定至网络"
+				""
+				"在装备便携网络终端之后，你可以按下&a[H]&r来打开信息化存储网络"
+				""
+				"与按下&a[O]&r打开的页面不同，按下&a[H]&r打开的页面中的合成槽会在关闭时保留其中的物品（实际上，它们被暂存在便携网络终端中）\\"
+				""
+				"除此以外，一个便捷功能是：当你同时按下&aShift&r和&a中键&r时，你可以将快速主手物品放入维度网络！"
+			]
+			id: "096EF73906A67238"
+			rewards: [{
+				count: 3
+				id: "494E02CAD0852A93"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						ascii: 1
+						display: {
+							Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+						}
+						matrix: [
+							[
+								[
+									1
+									3
+								]
+								[
+									-2
+									95
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									1
+									-124
+								]
+							]
+							[
+								[
+									1
+									-3
+								]
+								[
+									3
+									103
+								]
+							]
+							[
+								[
+									-1
+									2
+								]
+								[
+									-2
+									-93
+								]
+							]
+							[
+								[
+									1
+									4
+								]
+								[
+									-1
+									106
+								]
+							]
+							[
+								[
+									-1
+									-2
+								]
+								[
+									3
+									-94
+								]
+							]
+							[
+								[
+									-5
+									2
+								]
+								[
+									1
+									-16
+								]
+							]
+							[
+								[
+									10
+									-3
+								]
+								[
+									7
+									8
+								]
+							]
+							[
+								[
+									-4
+									5
+								]
+								[
+									4
+									-34
+								]
+							]
+							[
+								[
+									3
+									-7
+								]
+								[
+									4
+									4
+								]
+							]
+							[
+								[
+									2
+									13
+								]
+								[
+									5
+									83
+								]
+							]
+							[
+								[
+									-6
+									4
+								]
+								[
+									5
+									-23
+								]
+							]
+							[
+								[
+									11
+									3
+								]
+								[
+									3
+									10
+								]
+							]
+							[
+								[
+									8
+									-5
+								]
+								[
+									6
+									10
+								]
+							]
+							[
+								[
+									9
+									2
+								]
+								[
+									5
+									14
+								]
+							]
+							[
+								[
+									10
+									7
+								]
+								[
+									2
+									6
+								]
+							]
+							[
+								[
+									11
+									4
+								]
+								[
+									5
+									12
+								]
+							]
+							[
+								[
+									12
+									5
+								]
+								[
+									12
+									14
+								]
+							]
+							[
+								[
+									13
+									6
+								]
+								[
+									-1
+									7
+								]
+							]
+							[
+								[
+									5
+									3
+								]
+								[
+									3
+									26
+								]
+							]
+							[
+								[
+									6
+									5
+								]
+								[
+									5
+									21
+								]
+							]
+							[
+								[
+									7
+									8
+								]
+								[
+									5
+									22
+								]
+							]
+							[
+								[
+									8
+									9
+								]
+								[
+									7
+									13
+								]
+							]
+						]
+						no_copy: 1
+					}
+				}
+				team_reward: false
+				type: "item"
+			}]
+			tasks: [{
+				id: "0E1EAA177BBAB4D5"
+				item: "beyonddimensions:net_terminal_item"
+				match_nbt: false
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"只有网络的管理员可以使用网络赠送符来赠送网络"
+				""
+				"使用时，首先按下&eShift+右键&r来绑定至网络，接着将绑定后的连接符交给对方使用即可将网络赠予对方！"
+				""
+				"当网络被赠送时，你的网络中的所有材料向量将被逐批次转移至对方的网络中——那些溢出的部分将被还原至初始状态，从而你和对方都将永远失去它们"
+			]
+			id: "2BD534330FA2F40E"
+			tasks: [{
+				id: "6DCAB40EDBF89BBF"
+				item: "beyonddimensions:net_gifter"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"只有网络的管理员可以使用网络自毁符来摧毁网络"
+				""
+				"使用时，首先按下&eShift+右键&r来绑定至网络，接着长按右键五秒即可摧毁所在网络！"
+				""
+				"当网络被摧毁时，其中的所有信息都将被还原至初始状态——你将永远失去存储于其中的材料——你最好确信你要这么做！"
+			]
+			id: "14D04119F57BD8C6"
+			tasks: [{
+				id: "3200F0F441FC785F"
+				item: "beyonddimensions:net_destroyer"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"只有网络的管理员可以使用成员连接符来将网络链接至其它人"
+				""
+				"使用时，首先按下&eShift+右键&r来绑定至网络，接着将绑定后的连接符交给对方使用即可将对方加入网络！"
+			]
+			id: "22156355E3CB5A0C"
+			tasks: [{
+				id: "124361C55D091736"
+				item: "beyonddimensions:net_member_inviter"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"只有网络的管理员可以使用管理员连接符来将网络链接至其它人，并将Ta也设置为管理员"
+				""
+				"使用时，首先按下&eShift+右键&r来绑定至网络，接着将绑定后的连接符交给对方使用即可将对方加入网络并设置为管理员！"
+			]
+			id: "3EF761E762E90280"
+			tasks: [{
+				id: "4899CEF3D946E280"
+				item: "beyonddimensions:net_manager_inviter"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"&a信息化存储网络是比背包更加适合于工程建设的存储系统"
+				""
+				"收下这个&d数据化信息素&r吧，它可以用于创建一个信息化存储网络——如果你的网络损毁，我可以无偿为你提供数据化信息素——传输它们对我而言并不费力，并且我也还有大量的存货——你只需要再用一个任意的信息素作为交换"
+				""
+				"&e每一个人只能与一个网络建立链接。如果你有需要，你可以通过一些物品来赠与、共享、共享所有权或是销毁网络&r"
+				""
+				"当你使用数据化信息素创建信息化存储网络时，数据化信息素首先解离为了非物质状态的信息。接下来，它将自身转化为一个“可执行的世界程序”，世界会自动执行它，并在一个特定的无穷维信息空间的一个特定坐标处开辟出一个&e半径256的216维球体&r、并建立它和实体世界的联系，这便是一个崭新的信息化存储网络&e（如果你看不懂的话，翻到下一页阅读黄色文字即可）&r"
+				""
+				"{@pagebreak}"
+				"&a当材料被放入信息化存储网络时，它们实际上首先被转化为了对应的信息素，接着解离为非物质状态的信息并存储为网络所在的无穷维信息空间中的一个基向量——材料的数量即为该向量的模长。&e你可以在任何地方按下[O]来链接至网络，并存取其中的材料。&r&a在取出时，该基向量被重组为对应的信息素，再由网络程序转化为实体材料"
+				""
+				"由于网络本身是一个半径为256的216维球体，&e这意味着你至多存储216种材料，并且每种材料至多存储256个&r"
+				""
+				"&e在以后，你可以使用&d网络扩展信息素&r&e来扩展网络的维数，从而增加存储种类上限"
+				"{@pagebreak}"
+				"也许你会有疑问：半径为256的n维球体，而材料是其中的一个基向量——如果向量的模长代表了材料的数量，那么其方向（正向，反向）又代表了什么？"
+				""
+				"实际上，当材料存储在网络中时，它们对应的向量均为正向，也就是在静态时，网络的每个向量总是在正半球之中"
+				""
+				"当你从网络中取出物品时，实际上是对网络施加了处于反向的材料向量——这种对称性的破缺会制止网络中的材料被嬗变（基向量标架的旋转）为其它的材料，因为嬗变将可能导致网络信息总数的不守恒——从而保证了网络中的材料不会“变质”为别的什么东西"
+				""
+				"同时你也许有疑惑：网络是如何同时存入/取走大量多种材料的呢？（它们的和向量可能模长远大于256）"
+				""
+				"实际上，当一个向量被赋予网络时，网络首先会将它们依次分解为一系列的基向量，然后分批次并入网络之中，以此避免模长溢出的问题！"
+			]
+			icon: {
+				Count: 1
+				id: "kubejs:matrix_2"
+				tag: {
+					ascii: 1
+					display: {
+						Name: "{\"translate\":\"kubejs.matrix.netcreate\",\"italic\":false}"
+					}
+					matrix: [
+						[
+							[
+								-10
+								7
+							]
+							[
+								20
+								4
+							]
+						]
+						[
+							[
+								5
+								-12
+							]
+							[
+								17
+								7
+							]
+						]
+						[
+							[
+								-3
+								11
+							]
+							[
+								10
+								13
+							]
+						]
+						[
+							[
+								8
+								4
+							]
+							[
+								9
+								12
+							]
+						]
+						[
+							[
+								-7
+								2
+							]
+							[
+								15
+								8
+							]
+						]
+						[
+							[
+								6
+								-5
+							]
+							[
+								18
+								11
+							]
+						]
+						[
+							[
+								4
+								3
+							]
+							[
+								13
+								10
+							]
+						]
+						[
+							[
+								-9
+								1
+							]
+							[
+								19
+								9
+							]
+						]
+						[
+							[
+								11
+								-8
+							]
+							[
+								16
+								14
+							]
+						]
+						[
+							[
+								-2
+								6
+							]
+							[
+								14
+								7
+							]
+						]
+						[
+							[
+								-6
+								0
+							]
+							[
+								21
+								5
+							]
+						]
+						[
+							[
+								7
+								-11
+							]
+							[
+								22
+								6
+							]
+						]
+						[
+							[
+								12
+								-10
+							]
+							[
+								23
+								15
+							]
+						]
+						[
+							[
+								-1
+								9
+							]
+							[
+								24
+								8
+							]
+						]
+						[
+							[
+								-8
+								-4
+							]
+							[
+								25
+								17
+							]
+						]
+						[
+							[
+								0
+								-13
+							]
+							[
+								26
+								13
+							]
+						]
+						[
+							[
+								2
+								-1
+							]
+							[
+								27
+								3
+							]
+						]
+						[
+							[
+								-5
+								-2
+							]
+							[
+								28
+								21
+							]
+						]
+						[
+							[
+								1
+								-3
+							]
+							[
+								29
+								2
+							]
+						]
+						[
+							[
+								3
+								-6
+							]
+							[
+								30
+								9
+							]
+						]
+						[
+							[
+								-4
+								-7
+							]
+							[
+								31
+								18
+							]
+						]
+						[
+							[
+								9
+								-9
+							]
+							[
+								32
+								16
+							]
+						]
+						[
+							[
+								10
+								-14
+							]
+							[
+								33
+								23
+							]
+						]
+						[
+							[
+								13
+								-15
+							]
+							[
+								34
+								27
+							]
+						]
+						[
+							[
+								14
+								-16
+							]
+							[
+								35
+								29
+							]
+						]
+						[
+							[
+								15
+								-17
+							]
+							[
+								36
+								31
+							]
+						]
+						[
+							[
+								16
+								-18
+							]
+							[
+								37
+								33
+							]
+						]
+						[
+							[
+								17
+								-19
+							]
+							[
+								38
+								35
+							]
+						]
+						[
+							[
+								18
+								-20
+							]
+							[
+								39
+								37
+							]
+						]
+					]
+					no_copy: 1
+				}
+			}
+			id: "3003AD4442734E65"
+			rewards: [{
+				id: "49C43D0F0F24A787"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						ascii: 1
+						display: {
+							Name: "{\"translate\":\"kubejs.matrix.netcreate\",\"italic\":false}"
+						}
+						matrix: [
+							[
+								[
+									-1
+									7
+								]
+								[
+									2
+									-124
+								]
+							]
+							[
+								[
+									1
+									-3
+								]
+								[
+									5
+									86
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									2
+									-127
+								]
+							]
+							[
+								[
+									-1
+									7
+								]
+								[
+									4
+									-106
+								]
+							]
+							[
+								[
+									1
+									-5
+								]
+								[
+									6
+									71
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									3
+									-128
+								]
+							]
+							[
+								[
+									1
+									10
+								]
+								[
+									5
+									90
+								]
+							]
+							[
+								[
+									-1
+									2
+								]
+								[
+									8
+									-117
+								]
+							]
+							[
+								[
+									1
+									3
+								]
+								[
+									2
+									124
+								]
+							]
+							[
+								[
+									-1
+									5
+								]
+								[
+									3
+									-116
+								]
+							]
+							[
+								[
+									1
+									4
+								]
+								[
+									1
+									114
+								]
+							]
+							[
+								[
+									-1
+									6
+								]
+								[
+									2
+									-128
+								]
+							]
+							[
+								[
+									1
+									7
+								]
+								[
+									3
+									67
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									4
+									-128
+								]
+							]
+							[
+								[
+									1
+									5
+								]
+								[
+									2
+									118
+								]
+							]
+							[
+								[
+									-1
+									3
+								]
+								[
+									5
+									-112
+								]
+							]
+							[
+								[
+									1
+									2
+								]
+								[
+									3
+									127
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									4
+									-117
+								]
+							]
+							[
+								[
+									1
+									3
+								]
+								[
+									1
+									117
+								]
+							]
+							[
+								[
+									-1
+									5
+								]
+								[
+									10
+									-91
+								]
+							]
+						]
+						no_copy: 1
+					}
+				}
+				only_one: true
+				team_reward: false
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "7AEC5BDE59C7584C"
+				title: "信息化存储网络"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"网络接口用于全自动地向信息化存储网络中补充物品！——但是不能用于提取物品"
+				""
+				"&a你可以使用各种物流工具将物品放入其中&r，其会自动将物品放入网络&e（每种物品数量不会超过256）&r。其GUI的带箭头槽可以作为对下方槽位的黑名单过滤，但一般而言你不需要这么做"
+				""
+				"处于弹出模式的网络接口会自动将不符合过滤的物品弹出至相邻的容器中"
+				""
+				"当你放置网络接口时，它会自行绑定至你所在的网络"
+			]
+			id: "0A2D2021DD40301B"
+			rewards: [{
+				count: 9
+				id: "24CFCC60CDC21527"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						ascii: 1
+						display: {
+							Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+						}
+						matrix: [
+							[
+								[
+									1
+									3
+								]
+								[
+									-2
+									95
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									1
+									-124
+								]
+							]
+							[
+								[
+									1
+									-3
+								]
+								[
+									3
+									103
+								]
+							]
+							[
+								[
+									-1
+									2
+								]
+								[
+									-2
+									-93
+								]
+							]
+							[
+								[
+									1
+									4
+								]
+								[
+									-1
+									106
+								]
+							]
+							[
+								[
+									-1
+									-2
+								]
+								[
+									3
+									-94
+								]
+							]
+							[
+								[
+									-5
+									2
+								]
+								[
+									1
+									-16
+								]
+							]
+							[
+								[
+									10
+									-3
+								]
+								[
+									7
+									8
+								]
+							]
+							[
+								[
+									-4
+									5
+								]
+								[
+									4
+									-34
+								]
+							]
+							[
+								[
+									3
+									-7
+								]
+								[
+									4
+									4
+								]
+							]
+							[
+								[
+									2
+									13
+								]
+								[
+									5
+									83
+								]
+							]
+							[
+								[
+									-6
+									4
+								]
+								[
+									5
+									-23
+								]
+							]
+							[
+								[
+									11
+									3
+								]
+								[
+									3
+									10
+								]
+							]
+							[
+								[
+									8
+									-5
+								]
+								[
+									6
+									10
+								]
+							]
+							[
+								[
+									9
+									2
+								]
+								[
+									5
+									14
+								]
+							]
+							[
+								[
+									10
+									7
+								]
+								[
+									2
+									6
+								]
+							]
+							[
+								[
+									11
+									4
+								]
+								[
+									5
+									12
+								]
+							]
+							[
+								[
+									12
+									5
+								]
+								[
+									12
+									14
+								]
+							]
+							[
+								[
+									13
+									6
+								]
+								[
+									-1
+									7
+								]
+							]
+							[
+								[
+									5
+									3
+								]
+								[
+									3
+									26
+								]
+							]
+							[
+								[
+									6
+									5
+								]
+								[
+									5
+									21
+								]
+							]
+							[
+								[
+									7
+									8
+								]
+								[
+									5
+									22
+								]
+							]
+							[
+								[
+									8
+									9
+								]
+								[
+									7
+									13
+								]
+							]
+						]
+						no_copy: 1
+					}
+				}
+				team_reward: false
+				type: "item"
+			}]
+			tasks: [{
+				id: "3C41AF8952EB71DD"
+				item: "beyonddimensions:net_interface"
+				match_nbt: false
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"当有内容物的网络接口被破坏时，其中的材料将被封存进一个新的n维球体中，即压缩物质球"
+				""
+				"当压缩物质球重新被放入网络时，将会解压并还原其中的材料"
+			]
+			icon: "beyonddimensions:matter_compress_ball"
+			id: "65487636BD0050B3"
+			tasks: [{
+				id: "62D32CB535FF2340"
+				title: "压缩物质球"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			description: ["你的数据化信息素遗失了？信息化存储网络损坏了？——只需要用一个任意的信息素作为交换即可！"]
+			icon: {
+				Count: 1
+				id: "kubejs:matrix_2"
+				tag: {
+					ascii: 1
+					display: {
+						Name: "{\"translate\":\"kubejs.matrix.netcreate\",\"italic\":false}"
+					}
+					matrix: [
+						[
+							[
+								-10
+								7
+							]
+							[
+								20
+								4
+							]
+						]
+						[
+							[
+								5
+								-12
+							]
+							[
+								17
+								7
+							]
+						]
+						[
+							[
+								-3
+								11
+							]
+							[
+								10
+								13
+							]
+						]
+						[
+							[
+								8
+								4
+							]
+							[
+								9
+								12
+							]
+						]
+						[
+							[
+								-7
+								2
+							]
+							[
+								15
+								8
+							]
+						]
+						[
+							[
+								6
+								-5
+							]
+							[
+								18
+								11
+							]
+						]
+						[
+							[
+								4
+								3
+							]
+							[
+								13
+								10
+							]
+						]
+						[
+							[
+								-9
+								1
+							]
+							[
+								19
+								9
+							]
+						]
+						[
+							[
+								11
+								-8
+							]
+							[
+								16
+								14
+							]
+						]
+						[
+							[
+								-2
+								6
+							]
+							[
+								14
+								7
+							]
+						]
+						[
+							[
+								-6
+								0
+							]
+							[
+								21
+								5
+							]
+						]
+						[
+							[
+								7
+								-11
+							]
+							[
+								22
+								6
+							]
+						]
+						[
+							[
+								12
+								-10
+							]
+							[
+								23
+								15
+							]
+						]
+						[
+							[
+								-1
+								9
+							]
+							[
+								24
+								8
+							]
+						]
+						[
+							[
+								-8
+								-4
+							]
+							[
+								25
+								17
+							]
+						]
+						[
+							[
+								0
+								-13
+							]
+							[
+								26
+								13
+							]
+						]
+						[
+							[
+								2
+								-1
+							]
+							[
+								27
+								3
+							]
+						]
+						[
+							[
+								-5
+								-2
+							]
+							[
+								28
+								21
+							]
+						]
+						[
+							[
+								1
+								-3
+							]
+							[
+								29
+								2
+							]
+						]
+						[
+							[
+								3
+								-6
+							]
+							[
+								30
+								9
+							]
+						]
+						[
+							[
+								-4
+								-7
+							]
+							[
+								31
+								18
+							]
+						]
+						[
+							[
+								9
+								-9
+							]
+							[
+								32
+								16
+							]
+						]
+						[
+							[
+								10
+								-14
+							]
+							[
+								33
+								23
+							]
+						]
+						[
+							[
+								13
+								-15
+							]
+							[
+								34
+								27
+							]
+						]
+						[
+							[
+								14
+								-16
+							]
+							[
+								35
+								29
+							]
+						]
+						[
+							[
+								15
+								-17
+							]
+							[
+								36
+								31
+							]
+						]
+						[
+							[
+								16
+								-18
+							]
+							[
+								37
+								33
+							]
+						]
+						[
+							[
+								17
+								-19
+							]
+							[
+								38
+								35
+							]
+						]
+						[
+							[
+								18
+								-20
+							]
+							[
+								39
+								37
+							]
+						]
+					]
+					no_copy: 1
+				}
+			}
+			id: "2E43B325CBE6E3DA"
+			rewards: [{
+				id: "2A04596644B8B3FE"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						ascii: 1
+						display: {
+							Name: "{\"translate\":\"kubejs.matrix.netcreate\",\"italic\":false}"
+						}
+						matrix: [
+							[
+								[
+									-1
+									7
+								]
+								[
+									2
+									-124
+								]
+							]
+							[
+								[
+									1
+									-3
+								]
+								[
+									5
+									86
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									2
+									-127
+								]
+							]
+							[
+								[
+									-1
+									7
+								]
+								[
+									4
+									-106
+								]
+							]
+							[
+								[
+									1
+									-5
+								]
+								[
+									6
+									71
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									3
+									-128
+								]
+							]
+							[
+								[
+									1
+									10
+								]
+								[
+									5
+									90
+								]
+							]
+							[
+								[
+									-1
+									2
+								]
+								[
+									8
+									-117
+								]
+							]
+							[
+								[
+									1
+									3
+								]
+								[
+									2
+									124
+								]
+							]
+							[
+								[
+									-1
+									5
+								]
+								[
+									3
+									-116
+								]
+							]
+							[
+								[
+									1
+									4
+								]
+								[
+									1
+									114
+								]
+							]
+							[
+								[
+									-1
+									6
+								]
+								[
+									2
+									-128
+								]
+							]
+							[
+								[
+									1
+									7
+								]
+								[
+									3
+									67
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									4
+									-128
+								]
+							]
+							[
+								[
+									1
+									5
+								]
+								[
+									2
+									118
+								]
+							]
+							[
+								[
+									-1
+									3
+								]
+								[
+									5
+									-112
+								]
+							]
+							[
+								[
+									1
+									2
+								]
+								[
+									3
+									127
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									4
+									-117
+								]
+							]
+							[
+								[
+									1
+									3
+								]
+								[
+									1
+									117
+								]
+							]
+							[
+								[
+									-1
+									5
+								]
+								[
+									10
+									-91
+								]
+							]
+						]
+						no_copy: 1
+					}
+				}
+				team_reward: false
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				consume_items: true
+				id: "7EC572A13CBFCFF8"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						RGB: [[
+							[
+								0
+								0
+							]
+							[
+								0
+								0
+							]
+						]]
+						matrix: [[
+							[
+								0
+								0
+							]
+							[
+								0
+								0
+							]
+						]]
+					}
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			title: "数据化信息素：重获"
+			x: 5.5d
+			y: 0.0d
+		}
+		{
+			description: [
+				"蓝图接口可以用于连接蓝图加农炮与信息化存储网络！"
+				""
+				"在蓝图接口附近的蓝图加农炮能够直接从信息化存储网络中提取所需的物品！"
+			]
+			id: "158AB4B52C866224"
+			tasks: [{
+				id: "3D8EBF3BE54A72BD"
+				item: "beyonddimensions:schematicannon_pathway"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"网络喂食器可以起到与背包喂食升级类似的效果"
+				""
+				"它能直接将信息化存储网络中的指定食物喂给你"
+				""
+				"在Shift+右键绑定网络并设置食物种类的白名单过滤之后，它就能自动为你进行喂食了！"
+			]
+			id: "595F917BB3988AE6"
+			tasks: [{
+				id: "71DB696575122856"
+				item: {
+					Count: 1
+					id: "beyonddimensions:net_feeder_item"
+					tag: {
+						control_mode: "IGNORE"
+						feeder_mode: "SATURATION_KEEP"
+						filter_slots: [
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+							{
+								Amount: 0L
+								Stack: {
+									id: "minecraft:air"
+								}
+								Type: "beyonddimensions:stack_type/item"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+	]
+	title: "变奏-跨越时空"
+}

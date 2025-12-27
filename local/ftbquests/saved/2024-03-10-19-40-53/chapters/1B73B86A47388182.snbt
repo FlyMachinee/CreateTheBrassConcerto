@@ -1,0 +1,478 @@
+{
+	consume_items: true
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	default_repeatable_quest: true
+	filename: "1B73B86A47388182"
+	group: "13182EA939D9B58C"
+	icon: "minecraft:dragon_egg"
+	id: "1B73B86A47388182"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: false
+			description: [
+				"这里买卖一些冰火传说的物品"
+				""
+			]
+			id: "6145B3DE1A0C1517"
+			tasks: [{
+				id: "2972E74ED4CA730E"
+				title: "欢迎来到龙之商店"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: "iceandfire:dragon_meal"
+			id: "38EF03F7AA24CC87"
+			rewards: [{
+				count: 16
+				id: "2214998489286DDE"
+				item: "iceandfire:dragon_meal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4DBDD406FA4CB3F7"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "龙食"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_red"
+			id: "59857D771832B6E6"
+			rewards: [{
+				id: "637EAC9E4828D560"
+				item: "iceandfire:dragonegg_red"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "6290EFAD63FDC49E"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: -0.5d
+			y: -7.5d
+		}
+		{
+			can_repeat: false
+			icon: "iceandfire:fire_dragon_heart"
+			id: "06487D2F802E281E"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				advancement: "iceandfire:iceandfire/dragon_egg"
+				criterion: ""
+				id: "2714567CE5D51085"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_green"
+			id: "5F8E318E90E3CB0F"
+			rewards: [{
+				id: "416DDA2CF3A84F63"
+				item: "iceandfire:dragonegg_green"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "59A7656522E5771F"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: 0.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_gray"
+			id: "0E181752A7445890"
+			rewards: [{
+				id: "774386E6A01A4D33"
+				item: "iceandfire:dragonegg_gray"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "16164CAA4B32509D"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: 2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_blue"
+			id: "7629531E00AF09CA"
+			rewards: [{
+				id: "25FBA4295243DA2E"
+				item: "iceandfire:dragonegg_blue"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "70CFB86AFECD4FE8"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: 2.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_white"
+			id: "7534CC609245FC3D"
+			rewards: [{
+				id: "53135977180CF5E7"
+				item: "iceandfire:dragonegg_white"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "481D11B1CB1A2925"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: 1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_amythest"
+			id: "12EB50889095C269"
+			rewards: [{
+				id: "1D9ECBB9E6C74C2B"
+				item: "iceandfire:dragonegg_amythest"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "52E5663ED0FBC7D3"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: -2.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_copper"
+			id: "0C84956785FB31E4"
+			rewards: [{
+				id: "6A6EAF40A40299A4"
+				item: "iceandfire:dragonegg_copper"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "34789C7B1CEB0CFA"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: -2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_black"
+			id: "0E3F1F884EFE8DED"
+			rewards: [{
+				id: "4A00840B7231E5DE"
+				item: "iceandfire:dragonegg_black"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "01DE721494DB386A"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: -1.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_bronze"
+			id: "0E5480DB7233D6CB"
+			rewards: [{
+				id: "39BCCA3C50317267"
+				item: "iceandfire:dragonegg_bronze"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "5038874818541DAD"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: 1.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_sapphire"
+			id: "6F114105738D4008"
+			rewards: [{
+				id: "4A666D9916868084"
+				item: "iceandfire:dragonegg_sapphire"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "6EA6EB703A8D6A81"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: 0.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_silver"
+			id: "72BD9DDE213619DE"
+			rewards: [{
+				id: "6B6DFEA29993CE4E"
+				item: "iceandfire:dragonegg_silver"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "4B8530A34763DC50"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: -0.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["06487D2F802E281E"]
+			icon: "iceandfire:dragonegg_electric"
+			id: "4DAC3B4D09F91CF2"
+			rewards: [{
+				id: "6FD03ED9D67C0735"
+				item: "iceandfire:dragonegg_electric"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				count: 8L
+				id: "601EF4D0BE957F4D"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "龙蛋"
+			x: -1.5d
+			y: -4.0d
+		}
+		{
+			icon: "iceandfire:fire_lily"
+			id: "2CC32C3F8411862D"
+			rewards: [{
+				id: "7703580FDBCCE294"
+				item: "iceandfire:fire_lily"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "10E554A5D766F70B"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "繁殖你的龙"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			icon: "iceandfire:frost_lily"
+			id: "79581599B30E456C"
+			rewards: [{
+				id: "0A05509C39646C0D"
+				item: "iceandfire:frost_lily"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "7FB6AEB45DE6905B"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "繁殖你的龙"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			icon: "iceandfire:lightning_lily"
+			id: "2D16504D6B01CDA0"
+			rewards: [{
+				id: "5348EE6D5A148EFF"
+				item: "iceandfire:lightning_lily"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "7E29BE0EC5717AC0"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "繁殖你的龙"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			icon: "iceandfire:myrmex_desert_resin"
+			id: "12E6217E80D2B591"
+			rewards: [{
+				id: "3D54B1DF95644EF4"
+				item: "iceandfire:myrmex_desert_resin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2FD78F040ACE42B1"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "蚁脂"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			icon: "iceandfire:myrmex_jungle_resin"
+			id: "32F32EDD3828788B"
+			rewards: [{
+				id: "0AB758F0C4B07AEB"
+				item: "iceandfire:myrmex_jungle_resin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "13788F51009E6469"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "蚁脂"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			icon: "iceandfire:rotten_egg"
+			id: "27C298D926F88731"
+			rewards: [{
+				id: "58A11F8D7CA34F45"
+				item: "iceandfire:rotten_egg"
+				type: "item"
+			}]
+			tasks: [{
+				id: "32CA76D1BA8EAC99"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "鸡蛇"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			icon: "iceandfire:hippogryph_egg"
+			id: "4BC5C797065CA0D2"
+			rewards: [{
+				id: "0C27389AD7F92A73"
+				item: "iceandfire:hippogryph_egg"
+				type: "item"
+			}]
+			tasks: [{
+				count: 12L
+				id: "0AEB4F8C10A0CC46"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "骏鹰"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			icon: "iceandfire:deathworm_egg"
+			id: "6FB95D3EF1B90AE3"
+			rewards: [{
+				id: "711CAA114F32A0E3"
+				item: "iceandfire:deathworm_egg"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4ACE3245F511922C"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "死亡蠕虫"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			icon: "iceandfire:deathworm_egg_giant"
+			id: "30A0239225A54A27"
+			rewards: [{
+				id: "77E040B84E74F0ED"
+				item: "iceandfire:deathworm_egg_giant"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "744BF8EEC71C6DF1"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "巨型死亡蠕虫"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			icon: "iceandfire:dread_key"
+			id: "4F5CEE7DEECF1D2B"
+			rewards: [{
+				id: "5F7BD91ECAA9B369"
+				item: "iceandfire:dread_key"
+				type: "item"
+			}]
+			tasks: [{
+				id: "633BE5581B4DAD56"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "陵主之匙"
+			x: 0.0d
+			y: 3.5d
+		}
+	]
+	title: "龙之商店"
+}

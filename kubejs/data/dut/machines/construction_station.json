@@ -1,0 +1,443 @@
+{
+    "name": "block.kubejs.construction_station",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "idle": {
+            "block": "kubejs:machine/construction_station"
+        },
+        "running": {
+            "block": "kubejs:machine/construction_station"
+        },
+        "errored": {
+            "block": "kubejs:machine/construction_station"
+        },
+        "paused": {
+            "block": "kubejs:machine/construction_station"
+        }
+    },
+    "tooltips": [
+        {
+            "text": "kubejs.tooltip.multiblock_mech",
+            "color": "green"
+        },
+        {
+            "text": "kubejs.tooltip.multiblock_mech1",
+            "color": "green"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:item",
+            "id": "item1",
+            "mode": "input",
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item2",
+            "mode": "input",
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item3",
+            "mode": "input",
+            "locked": false
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "item4",
+            "mode": "input",
+            "locked": false
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluid1",
+            "maxInput": 4000,
+            "maxOutput": 0,
+            "mode": "input",
+            "unique": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluid2",
+            "maxInput": 4000,
+            "maxOutput": 4000,
+            "mode": "input",
+            "unique": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluid3",
+            "maxInput": 4000,
+            "maxOutput": 4000,
+            "mode": "input",
+            "unique": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluid4",
+            "maxInput": 4000,
+            "maxOutput": 4000,
+            "mode": "input",
+            "unique": true
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out1",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out2",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out3",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "out4",
+            "mode": "output",
+            "locked": false,
+            "config": {
+                "default":"output",
+                "input": false,
+                "output": true
+            }
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 80000,
+            "maxInput": 80000,
+            "maxOutput": 80000,
+            "mode": "input",
+            "id": "fe",
+            "config": {
+                "input": true,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:contraption",
+            "config": {
+                "default": "none",
+                "bottom": "input"
+            },
+            "stress_impact": 0
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade1",
+            "mode": "none",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade2",
+            "mode": "none",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade3",
+            "mode": "none",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:progress",
+            "x": 125,
+            "y": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 101,
+            "y": 75,
+            "id": "upgrade1",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 119,
+            "y": 75,
+            "id": "upgrade2",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 137,
+            "y": 75,
+            "id": "upgrade3",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 29,
+            "id": "item1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 47,
+            "id": "item2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 29,
+            "id": "item3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 47,
+            "id": "item4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 83,
+            "y": 29,
+            "id": "fluid1",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 83,
+            "y": 47,
+            "id": "fluid2",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 101,
+            "y": 29,
+            "id": "fluid3",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 101,
+            "y": 47,
+            "id": "fluid4",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 155,
+            "y": 29,
+            "id": "out1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 155,
+            "y": 47,
+            "id": "out2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 29,
+            "id": "out3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 47,
+            "id": "out4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:energy",
+            "id": "fe",
+            "x": 191,
+            "y": 25
+        },
+        {
+            "text": "block.kubejs.construction_station",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        }
+    ],
+    "jei": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:progress",
+            "x": 125,
+            "y": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 29,
+            "id": "item1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 47,
+            "id": "item2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 29,
+            "id": "item3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 47,
+            "id": "item4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 83,
+            "y": 29,
+            "id": "fluid1",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 83,
+            "y": 47,
+            "id": "fluid2",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 101,
+            "y": 29,
+            "id": "fluid3",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 101,
+            "y": 47,
+            "id": "fluid4",
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 155,
+            "y": 29,
+            "id": "out1",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 155,
+            "y": 47,
+            "id": "out2",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 29,
+            "id": "out3",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 173,
+            "y": 47,
+            "id": "out4",
+            "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:energy",
+            "id": "fe",
+            "x": 191,
+            "y": 25
+        },
+        {
+            "text": "block.kubejs.construction_station",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        }
+    ]
+}

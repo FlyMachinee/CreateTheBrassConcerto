@@ -1,0 +1,139 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.8,
+  "effects": {
+    "fog_color": 16102230,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 16116871,
+    "water_color": 16425836,
+    "water_fog_color": 15504554,
+    "grass_color": 13605517,
+    "particle": {
+      "options": {
+        "type": "white_ash"
+      },
+      "probability": 0.0008
+    }
+  },
+  "features": [
+    [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
+    [
+      "minecraft:large_dripstone"
+    ],
+    [],
+    [
+      "dut:slimeria/shore/nitrolithic_delta",
+      "dut:slimeria/shore/dirt_delta",
+      "dut:slimeria/shore/granite_pile",
+      "dut:slimeria/shore/dripstone_pile",
+      "dut:slimeria/shore/ochrum_pile"
+    ],
+    [],
+    [
+      "dut:slimeria/coal_lower",
+      "dut:slimeria/redstone_block_lower",
+      "dut:slimeria/redstone_block_upper",
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:underwater_magma",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
+    ],
+    [
+      "minecraft:dripstone_cluster",
+      "minecraft:pointed_dripstone"
+    ],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "dut:slimeria/tree/trees_shore_large",
+      "dut:slimeria/tree/trees_shore_middle",
+      "dut:slimeria/tree/trees_shore_middle_1",
+      "dut:slimeria/tree/trees_shore_middle_2",
+      "dut:slimeria/tree/trees_shore_small",
+      "dut:slimeria/tree/trees_shore_tiny",
+      "minecraft:rooted_azalea_tree",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:brown_mushroom_old_growth",
+      "minecraft:patch_grass_plain"
+    ],
+    []
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:magma_cube",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 32
+      },
+      {
+        "type": "ad_astra:mogler",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 50
+      },
+      {
+        "type": "ad_astra:zombified_mogler",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      }
+    ],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:pufferfish",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:tropical_fish",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 1
+      }
+    ]
+  },
+  "temperature": 0.5
+}

@@ -1,0 +1,2 @@
+execute align xyz positioned ~0.5 ~0.5 ~0.5 run summon armor_stand ~ ~ ~ {DisabledSlots:4144896,Invulnerable:1b,Invisible:1b,NoGravity:1b,ArmorItems:[{Count:1b,id:"minecraft:stone",tag:{}},{},{},{Count:1b,id:"kubejs:space_elevator",tag:{}}],Tags:["dut_space_elevator0","dut_space_elevator_up"]}
+execute as @e[tag=dut_space_elevator0] at @s run function dut:space_elevator/set_elevator_1

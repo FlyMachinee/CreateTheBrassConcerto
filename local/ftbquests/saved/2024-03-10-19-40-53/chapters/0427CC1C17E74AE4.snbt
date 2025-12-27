@@ -1,0 +1,1088 @@
+{
+	always_invisible: true
+	consume_items: true
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	default_repeatable_quest: true
+	filename: "0427CC1C17E74AE4"
+	group: "13182EA939D9B58C"
+	icon: "create:clipboard"
+	id: "0427CC1C17E74AE4"
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: false
+			description: [
+				"这里可以买卖一些基础材料（左卖右买）"
+				"也可以买卖一些重要的物品"
+				"甚至是矿脉和创造模式飞行！"
+				"货币模板合成表已经ban了，无法通过多驱冲压机获得货币"
+			]
+			id: "1703A096AFF92C0D"
+			shape: "hexagon"
+			subtitle: "欢迎来到DUT商店"
+			tasks: [{
+				id: "7509CE0525A4E558"
+				title: "让货币流动起来！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "45DD51C3F52EFCB7"
+			rewards: [{
+				count: 10
+				id: "2FC2FF880BE4D04B"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7EDB9F9DBC6CB3EA"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "银币-金币"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			id: "4E2A51A67F4B055E"
+			rewards: [{
+				count: 64
+				id: "221099656C48AAD2"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "60287F717C74B220"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "下界合金币-金币"
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			id: "28196A15CF1781F5"
+			rewards: [{
+				count: 10
+				id: "5A5A2DF7495A2BEF"
+				item: "thermal:copper_coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6F3F1C86EFDB11B0"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "银币-铜币"
+			x: -0.5d
+			y: 1.0d
+		}
+		{
+			id: "52824B554885022D"
+			rewards: [{
+				id: "4BE6813323759DF3"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 10L
+				id: "1B825DEF12CE48B8"
+				item: "thermal:copper_coin"
+				type: "item"
+			}]
+			title: "铜币-银币"
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			id: "1C42FFA405034B47"
+			rewards: [{
+				id: "08930C3F6E892A35"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 10L
+				id: "2984338BFC2AF01B"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "银币-金币"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			icon: "thermal:gold_coin"
+			id: "25FAA61C84E1E5FA"
+			rewards: [{
+				id: "6040924C1D908BA9"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				icon: "thermal:gold_coin"
+				id: "3E0112F6DADB5672"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "金币-下界合金币"
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			icon: "minecraft:torch"
+			id: "1F6E2643FD4019A4"
+			rewards: [{
+				id: "6F1AE38DB6659F5E"
+				item: "minecraft:torch"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C4CDF538A3D2F23"
+				item: "thermal:copper_coin"
+				type: "item"
+			}]
+			title: "火把"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			icon: "minecraft:bread"
+			id: "2B4E8AC416B1BA63"
+			rewards: [{
+				id: "399AE44F9FFF7355"
+				item: "minecraft:bread"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3A7748897B431DC7"
+				item: "thermal:copper_coin"
+				type: "item"
+			}]
+			title: "面包"
+			x: -1.0d
+			y: -4.0d
+		}
+		{
+			icon: "minecraft:cobblestone"
+			id: "652B492FE94BE8A6"
+			rewards: [{
+				count: 64
+				id: "737B928B8BE6C736"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6C7CEB1FA9CCF126"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "圆石"
+			x: 1.0d
+			y: -4.0d
+		}
+		{
+			icon: "minecraft:oak_log"
+			id: "0983663765C7BD2F"
+			rewards: [{
+				id: "20D54E77C20A136E"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6A2BCFC09FB40CB9"
+				item: "thermal:copper_coin"
+				type: "item"
+			}]
+			title: "木材"
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			icon: "create:experience_nugget"
+			id: "089B62FB6C6C63EF"
+			rewards: [{
+				count: 16
+				id: "5CD15B6E7599BAD3"
+				item: "create:experience_nugget"
+				type: "item"
+			}]
+			tasks: [{
+				id: "232A7A2B4F455C7D"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "经验颗粒"
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			icon: "sophisticatedbackpacks:backpack"
+			id: "775065AC5AEFBFA7"
+			rewards: [{
+				id: "0E1AC5DB32556775"
+				item: "sophisticatedbackpacks:backpack"
+				type: "item"
+			}]
+			tasks: [{
+				id: "09447D49B368BA64"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "背包"
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			icon: "sophisticatedbackpacks:iron_backpack"
+			id: "202206E05C4360E7"
+			rewards: [{
+				id: "375059F4CD3E1E65"
+				item: "sophisticatedbackpacks:iron_backpack"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "4C58F710EC85B310"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "铁质背包"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			icon: "sophisticatedbackpacks:gold_backpack"
+			id: "3570E18E451BC0EE"
+			rewards: [{
+				id: "2EEE23377EA9F8BC"
+				item: "sophisticatedbackpacks:gold_backpack"
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "3CF6D989B48B0A51"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "金质背包"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			icon: "sophisticatedbackpacks:diamond_backpack"
+			id: "402E27B446213701"
+			rewards: [{
+				id: "75A7217CA7C3B61A"
+				item: "sophisticatedbackpacks:diamond_backpack"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "549CE6C4B31854D7"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "钻石背包"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			icon: "sophisticatedbackpacks:netherite_backpack"
+			id: "6945970170027D40"
+			rewards: [{
+				id: "2009F88E9E393154"
+				item: "sophisticatedbackpacks:netherite_backpack"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1B0650F7BC009C12"
+				item: "thermal:netherite_coin"
+				type: "item"
+			}]
+			title: "合金背包"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			icon: "storagedrawers:compacting_drawers_3"
+			id: "6342694DE592514E"
+			rewards: [{
+				id: "6DD945EDFECBCE82"
+				item: "storagedrawers:compacting_drawers_3"
+				type: "item"
+			}]
+			tasks: [{
+				count: 2L
+				id: "145518700D83A825"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "压缩抽屉"
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			icon: "storagedrawers:controller"
+			id: "0BAD11D1D1B062DB"
+			rewards: [{
+				id: "0814B87B8919F5A6"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			tasks: [{
+				id: "52AF6C604EE5CBAC"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "抽屉控制器"
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			icon: "storagedrawers:emerald_storage_upgrade"
+			id: "327DFF1DC6387CD3"
+			rewards: [{
+				id: "5515D4D12F3BA628"
+				item: "storagedrawers:emerald_storage_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				icon: "thermal:gold_coin"
+				id: "30C42AE6F4DC48AE"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "绿宝石升级"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			icon: "storagedrawers:void_upgrade"
+			id: "48762FAB6C838FC0"
+			rewards: [{
+				id: "6445CCC8DC0ADBC1"
+				item: "storagedrawers:void_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "480E8D9C875A0B19"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "销毁升级"
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			icon: "storagedrawers:fill_level_upgrade"
+			id: "680D41118B0B1351"
+			rewards: [{
+				id: "4F4E99FB90C7E800"
+				item: "storagedrawers:fill_level_upgrade"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "1281CD6F3F67C62F"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "状态显示升级"
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			icon: "createloveandwar:pistol_bullet"
+			id: "4E32C261C6413726"
+			rewards: [{
+				count: 16
+				id: "3BE9F186D1B73970"
+				item: "createloveandwar:pistol_bullet"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0B68A06BCE055625"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "手枪子弹"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			icon: "createloveandwar:rifle_bullet"
+			id: "71E9EAE217B4ACF9"
+			rewards: [{
+				count: 16
+				id: "6CB70D39F1D13AA7"
+				item: "createloveandwar:rifle_bullet"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1C12B6BF5DE666D7"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "步枪子弹"
+			x: 6.0d
+			y: -1.0d
+		}
+		{
+			icon: "createloveandwar:slug_shell"
+			id: "3F767E037DA4AA90"
+			rewards: [{
+				count: 8
+				icon: "createloveandwar:slug_shell"
+				id: "0C5410A27E139B4E"
+				item: "createloveandwar:slug_shell"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1AFCA6B3ACDB7659"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "霰弹"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			icon: "minecraft:arrow"
+			id: "4D883B927B035D7E"
+			rewards: [{
+				count: 16
+				id: "6E63ECE10CFE9430"
+				item: "minecraft:arrow"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2767D06A877AFBBB"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "箭"
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			icon: "supplementaries:bomb"
+			id: "068F3E8CFEB37D20"
+			rewards: [{
+				count: 16
+				id: "2883709C079D449D"
+				item: "supplementaries:bomb"
+				type: "item"
+			}]
+			tasks: [{
+				id: "38908DA3887F3ED3"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "炸弹"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			id: "25683C53C2BF9D35"
+			rewards: [{
+				count: 6
+				id: "66C112B92B29237B"
+				item: "thermal:copper_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "2D05CC8868204E2D"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			id: "6EC4466608000E39"
+			rewards: [{
+				count: 8
+				id: "6EE4A1FCC72B2E72"
+				item: "thermal:copper_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "75CB7E30BB3E890C"
+				item: "minecraft:spruce_log"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			id: "3593EE302C4DA08A"
+			rewards: [{
+				id: "25E82E8FAC0FCBEF"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "529125A6B868C603"
+				item: "minecraft:iron_block"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			id: "1269C4C6D03DF038"
+			rewards: [{
+				id: "69E6B8BC688CD5B8"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "64136F6C844E5933"
+				item: "minecraft:gold_block"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			id: "416AA3F7F1E57FBB"
+			rewards: [{
+				count: 16
+				id: "4CC7DF8C9CB43FDB"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "21B09CE658FA6490"
+				item: "create:andesite_alloy_block"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			id: "3CD38E44210A38A7"
+			rewards: [{
+				count: 16
+				id: "5E904A1D837DB363"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "1BA208FCA21983D6"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			id: "2DA51467E8CBBD54"
+			rewards: [{
+				count: 16
+				id: "4F145EAA85A47BFD"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "32DCFDCFF0B4DFBA"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			icon: "thermal:upgrade_augment_3"
+			id: "033A5DD2B4BF4FCA"
+			rewards: [{
+				id: "33F140A10516FF0A"
+				item: "thermal:upgrade_augment_3"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2EB92634D211F48E"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "谐振组件"
+			x: 7.0d
+			y: -2.0d
+		}
+		{
+			icon: "thermal:upgrade_augment_2"
+			id: "51DB3995DED6DAAD"
+			rewards: [{
+				id: "55A5779825C9CA47"
+				item: "thermal:upgrade_augment_2"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5F6FC3B20AE4B5FF"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "强化组件"
+			x: 7.0d
+			y: -1.0d
+		}
+		{
+			icon: "thermal:upgrade_augment_1"
+			id: "23B029572A7BC38E"
+			rewards: [{
+				id: "3BFC3674F30FCE01"
+				item: "thermal:upgrade_augment_1"
+				type: "item"
+			}]
+			tasks: [{
+				id: "566C359A7643497E"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "硬化组件"
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			icon: "thermal:earth_grenade"
+			id: "792710049D5B6855"
+			rewards: [{
+				count: 8
+				id: "65443D76817D358E"
+				item: "thermal:earth_grenade"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7058B4398CF13B5B"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "开矿手雷"
+			x: 7.0d
+			y: 1.0d
+		}
+		{
+			icon: "thermal:nuke_grenade"
+			id: "17C29D8B1E18F986"
+			rewards: [{
+				id: "2E05FFD44A4800A7"
+				item: "thermal:nuke_grenade"
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "5C4A6BA93FE543D2"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "核子手雷"
+			x: 7.0d
+			y: 2.0d
+		}
+		{
+			id: "1B303171783BD855"
+			rewards: [{
+				id: "615B9261CFEF1197"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "027742695F77C402"
+				item: "create:sturdy_sheet"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			id: "5F363E0D8E50CDC2"
+			rewards: [{
+				count: 8
+				id: "1297F547CD79695E"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "369383163FCE75A2"
+				item: "minecraft:hay_block"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -1.0d
+		}
+		{
+			id: "2EE3092314DE121D"
+			rewards: [{
+				count: 8
+				id: "4F8AC2B1E1CD2A3F"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "6513B2B4A937E187"
+				item: "farmersdelight:carrot_crate"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -2.0d
+		}
+		{
+			id: "5BA1AB2B489BD7C1"
+			rewards: [{
+				count: 8
+				id: "05450674D7706CA7"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "39D29E3EE0FFB24A"
+				item: "farmersdelight:potato_crate"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -2.0d
+		}
+		{
+			id: "769A1E0888316363"
+			rewards: [{
+				count: 8
+				id: "63ACA891E98A3297"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "0873EF8829447DA2"
+				item: "farmersdelight:beetroot_crate"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -1.0d
+		}
+		{
+			id: "7043F6BB203A05C3"
+			rewards: [{
+				count: 8
+				id: "346C5A2A01BB16E3"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "4CD75F6375D3C965"
+				item: "farmersdelight:cabbage_crate"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			id: "081E4DA2E78472EE"
+			rewards: [{
+				count: 8
+				id: "4D89D04BEE5D7A9F"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "14D446EA3DDF3B51"
+				item: "farmersdelight:tomato_crate"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			id: "0FEE0A8054FBB010"
+			rewards: [{
+				count: 8
+				id: "56F984697098D688"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "64F601C2F03793DC"
+				item: "farmersdelight:onion_crate"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			id: "6027E32F9DFDBF2C"
+			rewards: [{
+				count: 8
+				id: "5B604EB37FA4A055"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "69EC3381B746E066"
+				item: "minecraft:beef"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -2.0d
+		}
+		{
+			id: "23E58EAEF4F09125"
+			rewards: [{
+				count: 8
+				id: "7C6E659709105617"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "4ADDBF3F02E8FEC9"
+				item: "minecraft:mutton"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -1.0d
+		}
+		{
+			id: "635F5866BF200E49"
+			rewards: [{
+				count: 4
+				id: "786A098A8D3167BB"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "1A1BEEDF5DCCACCB"
+				item: "minecraft:chicken"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			id: "52E4AFB15A7CF0A7"
+			rewards: [{
+				count: 8
+				id: "04D696DE2A05CAEF"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "39AABC1F94192EEE"
+				item: "minecraft:porkchop"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			id: "62312601589DF613"
+			rewards: [{
+				count: 8
+				id: "04553E6DD8C84B7A"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "408F76828DBCF8A3"
+				item: "minecraft:rabbit"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			id: "091F966E41544321"
+			rewards: [{
+				count: 8
+				id: "67F5EFF95173B529"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "25EBB933FC02DB1C"
+				item: "crabbersdelight:cod_barrel"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -2.0d
+		}
+		{
+			id: "1A8516D7E5BEBE7B"
+			rewards: [{
+				count: 8
+				id: "0E70456FB7F05970"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "51DD0E4A9ED74C10"
+				item: "crabbersdelight:salmon_barrel"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -1.0d
+		}
+		{
+			id: "21608EBCD96C315E"
+			rewards: [{
+				count: 8
+				id: "5F5DE05C677F431F"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "5D3F5BF5DAA969B3"
+				item: "crabbersdelight:tropical_fish_barrel"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			id: "3AD0B2508D167CA3"
+			rewards: [{
+				count: 8
+				id: "72A4F98BAA356580"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "42E55DB2001131F7"
+				item: "crabbersdelight:pufferfish_barrel"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			id: "2FABB484EC21A54C"
+			rewards: [{
+				count: 8
+				id: "356EF3018395F6AA"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "5BDAE7AAAF3DAAE0"
+				item: "crabbersdelight:crab_barrel"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			id: "62A7E864ECEBD1F7"
+			rewards: [{
+				count: 8
+				id: "06A808A912ABE13F"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "2AEE9A0D7B3F7C22"
+				item: "crabbersdelight:clam_barrel"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -2.0d
+		}
+		{
+			id: "0CBE579862BB1EF1"
+			rewards: [{
+				count: 8
+				id: "1DAB05B2EE1B3FCE"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "351E916BF137DA0F"
+				item: "crabbersdelight:clawster_barrel"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -1.0d
+		}
+		{
+			id: "3925E604203B868E"
+			rewards: [{
+				count: 8
+				id: "0646E017F7A91D16"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "456AC305F8B5151A"
+				item: "crabbersdelight:shrimp_barrel"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			id: "32B9E9909AE99067"
+			rewards: [{
+				count: 8
+				id: "69BD85757C951377"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			tasks: [{
+				count: 64L
+				id: "2029E25EDBD6C5BC"
+				item: "crabbersdelight:lanternfish_barrel"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			icon: "ae2:flawless_budding_quartz"
+			id: "65A69A6F79A7EB52"
+			rewards: [{
+				id: "2E518861ECC0C79B"
+				item: "ae2:flawless_budding_quartz"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4DE23EE807BDA2D1"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "赛斯特石英母岩"
+			x: 8.0d
+			y: -2.0d
+		}
+	]
+	title: "基础商店！"
+}

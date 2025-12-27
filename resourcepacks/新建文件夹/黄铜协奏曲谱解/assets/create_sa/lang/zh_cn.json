@@ -1,0 +1,15 @@
+{
+    "block.create_things_and_misc.slime": "史莱姆粘液",
+    "fluid.create_things_and_misc.slime": "史莱姆粘液",
+    "fluid_type.create_things_and_misc.slime": "史莱姆粘液",
+    "block.create_things_and_misc.diluted_bonemeal": "骨粉稀释液",
+    "fluid.create_things_and_misc.diluted_bonemeal": "骨粉稀释液",
+    "fluid_type.create_things_and_misc.diluted_bonemeal": "骨粉稀释液",
+    "block.create_things_and_misc.card_press": "磁卡写入器",
+    "block.create_things_and_misc.sprinkler": "喷灌器",
+    "block.create_things_and_misc.sprinkleron": "喷灌器[工作中]",
+    "item.create_things_and_misc.sprinkler_head": "喷淋头",
+    "item.create_things_and_misc.empty_card": "空白磁卡",
+    "item.create_things_and_misc.empty_ticket": "空白车票",
+    "item.create_things_and_misc.slime_cake": "粘液蛋糕"
+}

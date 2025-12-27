@@ -1,0 +1,36 @@
+ServerEvents.recipes(event => {
+  //event.custom().id("dut_create:")
+  //event.custom().id("dut_create:")
+
+    //event.remove({ id:"create:fill_minecraft_bucket_with_ad_astra_oil"})
+    event.remove({ type: "minecraft:blasting", input: "minecraft:raw_iron" })
+    event.remove({ type: "minecraft:blasting", input: "minecraft:raw_gold" })
+    event.remove({ type: "minecraft:blasting", input: "minecraft:raw_copper" })
+    event.remove({ type: "minecraft:blasting", input: "create:raw_zinc" })
+    event.remove({ type: "minecraft:blasting", input: "iceandfire:raw_silver" })
+
+
+  event.remove({ output: 'ad_astra:sky_stone' })
+  function killFuckingCrushing(recipeID) {
+    event.remove({ id: 'create:crushing/' + recipeID })
+  }
+    event.remove({ id: 'vintageimprovements:crushing/basalt_recycling'})
+    event.remove({ id: 'vintageimprovements:crushing/basalt'})
+  killFuckingCrushing('raw_iron')
+  killFuckingCrushing('raw_gold')
+  killFuckingCrushing('raw_copper')
+  killFuckingCrushing('raw_zinc')
+  killFuckingCrushing('raw_silver')
+  killFuckingCrushing('venus_calorite_ore')
+  killFuckingCrushing('venus_gold_ore')
+  killFuckingCrushing('venus_coal_ore')
+  killFuckingCrushing('venus_diamond_ore')
+  killFuckingCrushing('mercury_iron_ore')
+  killFuckingCrushing('mars_diamond_ore')
+  killFuckingCrushing('mars_ice_shard_ore')
+  killFuckingCrushing('mars_ostrum_ore')
+  killFuckingCrushing('mars_iron_ore')
+  event.remove({ mod: 'ad_astra', output: "ad_astra:ostrum_ingot", not: { type: 'crafting_shaped' }, not: { type: 'crafting_shapeless' } })
+  event.remove({ mod: 'ad_astra', output: "ad_astra:desh_ingot", not: { type: 'crafting_shaped' }, not: { type: 'crafting_shapeless' } })
+  event.remove({ mod: 'ad_astra', output: "ad_astra:calorite_ingot", not: { type: 'crafting_shaped' }, not: { type: 'crafting_shapeless' } })
+})

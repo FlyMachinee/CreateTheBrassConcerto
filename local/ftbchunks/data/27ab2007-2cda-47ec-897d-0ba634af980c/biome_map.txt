@@ -1,0 +1,15 @@
+#47F minecraft:birch_forest
+#4F9 minecraft:dark_forest
+#109 minecraft:deep_cold_ocean
+#34D minecraft:deep_lukewarm_ocean
+#3DE minecraft:deep_ocean
+#010 minecraft:forest
+#286 minecraft:grove
+#79A minecraft:lukewarm_ocean
+#498 minecraft:lush_caves
+#4F1 minecraft:ocean
+#1DF minecraft:old_growth_birch_forest
+#73A minecraft:old_growth_pine_taiga
+#60C minecraft:old_growth_spruce_taiga
+#51A minecraft:stony_shore
+#169 minecraft:taiga

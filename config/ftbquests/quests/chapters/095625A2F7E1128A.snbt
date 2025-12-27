@@ -1,0 +1,1331 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "095625A2F7E1128A"
+	group: "6B818C6F92D84205"
+	icon: "createdieselgenerators:crude_oil_bucket"
+	id: "095625A2F7E1128A"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"现在我们开始学习化工系统吧!"
+				""
+				"无数个世代在地下积累的资源将成为你的助力"
+				""
+				"它将为你带来大量的好处：&a更优质的燃料、更强大的动力源、更高的矿物产量、更多能够量产的物件......&r"
+				""
+				"不过它十分复杂且需要大量(真的很多!)的铜，希望你能有所准备!"
+				""
+				"&e在这一章，不同的任务之间跨度变得愈发巨大，有时许多天都没有推进到下一个任务是很正常的！&r"
+				""
+				"&e只要思想不滑坡，办法总比困难多！&r"
+			]
+			id: "2CD7DA25D6F102FC"
+			shape: "gear"
+			tasks: [{
+				id: "56575F9B3D4DE908"
+				title: "欢迎来到机械动力！"
+				type: "checkmark"
+			}]
+			title: "事情开始变得复杂了"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: [
+				"海带粉可以用于浸取盐水，而盐水中能提取出盐"
+				"盐在工业中有十分重要的地位——不过你暂时还无法运用它"
+			]
+			id: "52744CC68AA87354"
+			tasks: [{
+				id: "076C425291DFEA36"
+				item: "kubejs:kelp_dust"
+				type: "item"
+			}]
+			title: "磨碎它"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["52744CC68AA87354"]
+			description: ["哦，除了工业，它还可以吃"]
+			id: "5495F2B5448CFC5B"
+			tasks: [{
+				id: "59E737290E040E54"
+				item: "kubejs:salt"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			description: [
+				"死去的生物经过千万年的沉积留下了这一份宝贵的遗产——原油"
+				""
+				"你有时能在世界中直接见到它"
+				""
+				"有时你会见到它的固体形式，将之进行搅拌就能获取原油"
+				""
+				"原油不一定需要从地下和海中获取，你还可以使用煤、粉碎煤、种子油、生物质等资源来合成它！"
+			]
+			id: "13C620410D54B082"
+			tasks: [{
+				id: "5D30EDADE7631EDC"
+				item: "createdieselgenerators:crude_oil_bucket"
+				type: "item"
+			}]
+			title: "遗产"
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"你可以用这个罐子方便且安全地搬运液体"
+				""
+				"它是一个存量为8B的流体潜影盒。不仅如此，它还可以像桶那样与工作盆交互，并可以盛装不足1B的流体"
+				""
+				"在此之外，你还可以用它设置流体过滤"
+			]
+			id: "23FCF6DA7824526A"
+			tasks: [{
+				id: "6EB72D5FA632E2B9"
+				item: "createdieselgenerators:canister"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"13C620410D54B082"
+				"23FCF6DA7824526A"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"有了这些原油——你就能分析出如何寻找它们了"
+				""
+				"制作一个原油探测器，然后就可以查看你所在的区块是否含有原油——你可以利用一个古代团体&eMOJANG&r发明的仪式：按下&aF3+G&r，你就能直接目视区块边界"
+				""
+				"这些原油是有限的，并且分为少量油田和大量油田两种。在未来，你可以通过流体钻井无限抽取原油，或者你现在也可以选择合成原油而非开采！"
+				""
+				"&a少量真的很少！&r"
+			]
+			id: "6CE80217F2F61E53"
+			tasks: [{
+				id: "428406B6E755B702"
+				item: "createdieselgenerators:oil_scanner"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["6CE80217F2F61E53"]
+			description: [
+				"如果还没找到，那先做一点油罐来储存原油吧"
+				""
+				"&e在过去，由于技术缺陷，普通储罐里的燃料会被外部爆炸引爆——但经过我的技术改进之后，现在已经不会出现这种情况了！&r"
+				""
+				"所以，你可以自由选择油罐和普通储罐！"
+			]
+			id: "28D71B8E139A883C"
+			rewards: [{
+				count: 15
+				id: "0A97A6390ACF1BF5"
+				item: "createdieselgenerators:oil_barrel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2255462486D8F311"
+				item: "createdieselgenerators:oil_barrel"
+				type: "item"
+			}]
+			title: "找到油田了吗？"
+			x: 1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["28D71B8E139A883C"]
+			description: [
+				"组装钻井的必备元件"
+				""
+				"在组装抽油机时，尾部的轴承也会记入后臂长度。而中部轴承对应的方块则不会被记入长度"
+			]
+			id: "7DD87FB08A7E5601"
+			tasks: [{
+				id: "3B5DC57F300C0BC1"
+				item: "createdieselgenerators:pumpjack_bearing"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["28D71B8E139A883C"]
+			description: [
+				"组装钻井的必备元件"
+				""
+				"在组装钻井时，驴头会被记入前臂长度"
+			]
+			id: "1C2F0F2DE7D882E5"
+			rewards: [
+				{
+					id: "7767DE3A9A08EC08"
+					item: "createdieselgenerators:diesel_engine"
+					type: "item"
+				}
+				{
+					id: "506E501E7FFFA549"
+					item: "createdieselgenerators:pumpjack_hole"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "3DC04786AD2CE423"
+				item: "createdieselgenerators:pumpjack_head"
+				type: "item"
+			}]
+			title: "开采原油！"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28D71B8E139A883C"]
+			description: [
+				"组装钻井的必备元件"
+				""
+				"对于抽油机而言，其效率与前臂后臂之比、曲轴类型和转速同时相关"
+				""
+				"大型曲轴的效率是小型曲轴的两倍"
+				""
+				"所谓前臂长度指的是自中部轴承（不包括那一格）到抽油机驴头（包括驴头）的长度"
+				""
+				"所谓后臂长度指的是自中部轴承（不包括那一格）到尾部轴承（包括尾部轴承）的长度"
+				""
+				"而抽油机效率将在前臂：后臂为5:1、并且曲轴为大型曲轴时达到最大"
+				""
+				"&e由于后臂长度最小为4&r，所以最小的满效率抽油机为20:4"
+				""
+				"&a除此以外，效率越高的抽油机，其原油利用率也越高——这使得可以抽出的原油远大于油田的显示储量！&r"
+			]
+			id: "5A0BC2420F12862C"
+			tasks: [{
+				id: "208258898D34631E"
+				item: "createdieselgenerators:pumpjack_crank"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"6CE80217F2F61E53"
+				"28D71B8E139A883C"
+			]
+			description: [
+				"&e柴油、汽油、天然气......润滑油、硫磺、氨气......&r"
+				""
+				"&e在过去世代遗产的帮助下，工业将迸发出无穷的活力！&r"
+				""
+				"&a如果对合成表感到困惑，请查看下一个任务，或是查看化工之页以及石化之页！&r"
+				""
+				"温馨提示：使用超级加热的分馏配方大多使用的是&a恒温器&r而非&e分馏塔控制器&r，请注意区分！"
+				""
+				"分馏塔的大小会影响其效率——2*2的分馏塔以4倍速运行，而3*3则以9倍！"
+				""
+				"{@pagebreak}"
+				"[ \"实际上，从现在开始，你应当开始控制\", { \"text\": \"世界不稳定度\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\" } }, \"！（点击横线部分跳转至对应页面）\" ]"
+				""
+				"&e分馏塔，以及未来你将会接触到的恒温塔，都是会对世界造成较高负载的机械。&r当世界不稳定度逐渐升高时，你需要找到更好的方式来代替它们！"
+			]
+			id: "3070A92AD6E4B7FD"
+			rewards: [{
+				count: 8
+				id: "233B365291B50681"
+				item: "createdieselgenerators:distillation_controller"
+				type: "item"
+			}]
+			tasks: [{
+				id: "716A029F50784982"
+				item: "createdieselgenerators:distillation_controller"
+				type: "item"
+			}]
+			title: "石！油！加！工！"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5495F2B5448CFC5B"]
+			description: [
+				"氯气是常用的工业原料，盐酸可以由它获得"
+				"而盐酸可以制取氮肥、增产矿物、制作电池......"
+				"那么，怎么获得氯气呢？"
+			]
+			id: "5D17F3EB50C80731"
+			tasks: [{
+				id: "5B7787E483AD6F07"
+				item: "kubejs:chlorine_bucket"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5495F2B5448CFC5B"]
+			description: [
+				"氢氧化钠是常用的工业原料"
+				"它可以制取精炼石油、精取盐水、制作电池......"
+				"那么，怎么获得呢？"
+			]
+			id: "401F17194C1C062C"
+			tasks: [{
+				id: "460057353B7EC8FE"
+				item: "kubejs:caustic_soda_bucket"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3070A92AD6E4B7FD"]
+			description: [
+				"将甲烷/乙醇制成乙烯，然后获取塑料！"
+				""
+				"塑料将是常用的化工产品，能够制作吸管、分馏塔控制器等设备！"
+				""
+				"除此以外，聚乙烯液体还可以用于给铜上蜡"
+				""
+				"你有许多方式可以获取乙烯！"
+				""
+				"[ \"比如：通过液态经验使甲烷并链变为乙烯、\", { \"text\": \"通过硫酸使乙醇脱水变为乙烯\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2D3DBC1B834A5513\" } }, \"(点击跳转)、通过盐酸和氢氧化钠使乙醇变为乙烯\" ]"
+			]
+			id: "734BBC9808E801E6"
+			rewards: [{
+				count: 15
+				id: "0E82F2AF8D3DDBD1"
+				item: "kubejs:polymer_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5FD19EF1A9E4BCA7"
+				item: "kubejs:polymer_ingot"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3070A92AD6E4B7FD"]
+			description: [
+				"柴油机是更好的动力来源！"
+				""
+				"它不需要输入水、拥有比蒸汽机更高的应力上下限、并且体积非常小！"
+				""
+				"除了噪音恼人，其余都非常棒！"
+			]
+			id: "323BFD5BCA3BB9AD"
+			rewards: [{
+				count: 3
+				id: "1669F51488A6267B"
+				item: "kubejs:coin_iron"
+				type: "item"
+			}]
+			tasks: [{
+				id: "518F1D5E2B7F2453"
+				item: "createdieselgenerators:diesel_engine"
+				type: "item"
+			}]
+			title: "动力小型化"
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["33B5D92383569018"]
+			description: [
+				"硫磺是重要工业原料，可以制作为二氧化硫、三氧化硫与硫酸，还可以用于制作人工橡胶；二氧化硫可以用于无土栽培诡异菌、绯红菌、下界疣、枪药珠，并进一步获得二氧化氮、火药、染料"
+				""
+				"硫矿石在主世界和下界有大量分布，除此以外，从甲烷或烂鸡蛋中也可以提取"
+			]
+			id: "497C1131A3DF9662"
+			rewards: [{
+				id: "2C0F79BB83D1D907"
+				item: "kubejs:magenta_circuit_board"
+				type: "item"
+			}]
+			tasks: [{
+				id: "097C5C36B417A45A"
+				item: "kubejs:sulphur"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["3070A92AD6E4B7FD"]
+			description: [
+				"这是化学加工最常用的机器！"
+				""
+				"最好能够自动化生产它！"
+				""
+				"不要被它的外表所欺骗——&a它可以被从任意方向泵入/泵出液体！&r"
+				""
+				"&e有时，密封压缩机被放下来的时候如果底下已经有工作盆，并且压缩机工作方向反了，那么即使改正工作方向也不会工作，而是需要重新放置工作盆！&r"
+				""
+				"&e密封压缩机在满转速时的工作时间为ceil(配方时长*3/20)+1 tick！&r"
+			]
+			id: "33B5D92383569018"
+			rewards: [{
+				count: 15
+				id: "2329D3ED6C312BD1"
+				item: "vintageimprovements:vacuum_chamber"
+				type: "item"
+			}]
+			tasks: [{
+				id: "198BD399B2DA1670"
+				item: "vintageimprovements:vacuum_chamber"
+				type: "item"
+			}]
+			title: "密封加工"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["497C1131A3DF9662"]
+			description: [
+				"精密工业的起步，也是动力革命的第一步！"
+				""
+				"&e通过原油分馏获取柴油，再对柴油加工获得润滑油&r——可以只加氢，也可以同时加入烈焰支原体和二氧化硫。未来，你还可以使用奇异石油直接获得润滑油"
+				""
+				"在进出料简单和高产率之间要如何抉择呢？"
+			]
+			id: "7E2194D1F164C71A"
+			rewards: [{
+				count: 16
+				id: "72BA839103ADCC71"
+				item: "ad_astra:desh_fluid_pipe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7AD554E817C484BA"
+				item: "kubejs:lube_oil_bucket"
+				type: "item"
+			}]
+			title: "活动关节"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["323BFD5BCA3BB9AD"]
+			description: ["终于可以远离噪音了！"]
+			id: "5ED5ECBBB99F42D4"
+			rewards: [{
+				id: "13C5E13791995F26"
+				item: "kubejs:coin_iron"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4A3CA5BD5562B2CE"
+				item: "createdieselgenerators:engine_silencer"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E2194D1F164C71A"]
+			description: ["齿轮中似乎包含了我们的母星"]
+			id: "2F6511F37CB28C7B"
+			rewards: [{
+				id: "1989F352976F5F10"
+				item: "kubejs:planetary_gear"
+				type: "item"
+			}]
+			tasks: [{
+				id: "36256C0D83579DDC"
+				item: "kubejs:planetary_gear"
+				type: "item"
+			}]
+			title: "微缩的家"
+			x: -1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7E2194D1F164C71A"]
+			description: ["一个灵活活动的机械，也许会成为某种突破口"]
+			id: "60975844F7A3B133"
+			rewards: [{
+				id: "76D027A050D57D58"
+				item: "create:brass_hand"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0518E38B84924858"
+				item: "kubejs:cardan_joint"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7E2194D1F164C71A"]
+			id: "4EEBF6833EE9EC1D"
+			rewards: [{
+				id: "455E761079BB0BF8"
+				item: "kubejs:differential"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5214F5F0A22A86D5"
+				item: "kubejs:differential"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["734BBC9808E801E6"]
+			description: [
+				"硬化塑料是一种更高级的塑料"
+				"使用乙烯和氯气来制取它！"
+			]
+			id: "5AB3602434AE8947"
+			rewards: [{
+				count: 8
+				id: "4F0F7066037481F1"
+				item: "kubejs:magenta_circuit_board"
+				type: "item"
+			}]
+			tasks: [{
+				id: "29EC1C0849478096"
+				item: "kubejs:duraplas_ingot"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5ED5ECBBB99F42D4"]
+			description: ["如果你对噪音无所谓，那可以做出这个来让引擎加速！"]
+			id: "63B60CFB02789713"
+			rewards: [{
+				id: "129265077E1FB005"
+				item: "kubejs:coin_iron"
+				type: "item"
+			}]
+			tasks: [{
+				id: "562D78F353D76452"
+				item: "createdieselgenerators:engine_turbocharger"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5AB3602434AE8947"]
+			description: [
+				"高速装/卸罐机可以用于快速在容器之间进行流体转移！（&a至多32B/tick！&r）"
+				""
+				"你可以塞入诸如&e密封储罐&r、桶、宇航服、氧气瓶这样可以存储流体的物品，流体将会在它们与机器之间转移！"
+				""
+				"如果你需要让物品仅在装满/排空后才被输出，那么可以尝试使用&e列表过滤器&r匹配物品属性或者使用&e属性过滤器&r的黑名单过滤装有液体的物品！"
+				""
+				"&e除此以外，当下方不是容器时，高速卸罐机会将部分液体直接排放至下方——你可以利用这一点来快速为高炉供氧！如果你不想要，可以使用红石信号禁用！&r"
+			]
+			id: "268BF1B548306F39"
+			rewards: [{
+				id: "6DE19F030BBC69E4"
+				item: "kubejs:emptying_machine"
+				type: "item"
+			}]
+			tasks: [{
+				id: "05CD26B09D172B1E"
+				item: "kubejs:filling_machine"
+				match_nbt: false
+				type: "item"
+			}]
+			title: "运输革命"
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2F6511F37CB28C7B"]
+			description: [
+				"已经厌倦了使用一系列齿轮来转变速度了吗？"
+				"转速控制器可以轻松满足你的要求！"
+			]
+			id: "4A73F70D9A7EFC87"
+			rewards: [{
+				count: 12
+				id: "2255F7513B5702CC"
+				item: "kubejs:planetary_gear"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4FDA0BAC23B7AB72"
+				item: "create:rotation_speed_controller"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4EEBF6833EE9EC1D"]
+			description: [
+				"这将暂时是你最高效的动力源"
+				""
+				"对于某些燃料而言，一台即可比肩一台十八级锅炉——而当使用氨气燃烧时，甚至能比肩六台九级锅炉！"
+				""
+				"相信我，把蒸汽引擎全部换成它是非常值当的！"
+				""
+				"&o&7(Beta0.7.1起)&r&r&a在过去，大型柴油引擎会大幅提升世界不稳定度，但经过来自科学家&r&eApertyotis&r&a的技术改进以后，它对世界造成的负载被大幅减弱了！除此以外，你再也不需要为其开口了！现在管道会自动与大型柴油引擎连接！&r"
+				""
+				"[ \"关于\", { \"text\": \"世界不稳定度\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\" } }, \"（点击跳转）\" ]"
+			]
+			id: "316C37B5A2522059"
+			rewards: [{
+				count: 16
+				id: "5F5A29266E17225D"
+				item: "kubejs:differential"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4B3670977942B8FB"
+				item: "createdieselgenerators:huge_diesel_engine"
+				type: "item"
+			}]
+			title: "动力革命！"
+			x: -1.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["60975844F7A3B133"]
+			dependency_requirement: "one_completed"
+			description: [
+				"更高级的短程物流，往往采用最&m简单&r的方式"
+				"动力臂可以完美满足你的需求！"
+				""
+				"然而，我不建议你过多使用它！"
+				""
+				"&e走太多捷径，会让自己忘记怎样克服困难&r"
+			]
+			id: "2158B1016BA073D8"
+			rewards: [{
+				count: 2
+				id: "604A8DFF8ED505B2"
+				item: "create:brass_hand"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6DE68BDEF439CD62"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			title: "我的手能换成这个吗？"
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4EEBF6833EE9EC1D"]
+			description: [
+				"现在你可以建造列车来运输你的物品和流体了！"
+				""
+				"关于如何建造列车，请查看思索"
+				""
+				"关于如何建设列车系统，请查看机械动力之页与变奏-轨道工厂！"
+			]
+			id: "54761A74741334BF"
+			rewards: [{
+				count: 8
+				id: "64D2FDC5A2DE3934"
+				item: "create:railway_casing"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2D439C2ED5571D87"
+				item: "create:controls"
+				type: "item"
+			}]
+			title: "飞驰的巨兽"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"6CE80217F2F61E53"
+				"28D71B8E139A883C"
+			]
+			description: ["守卫者激光炮塔可以保护你的工厂免受苦力怕或其他生物的影响！"]
+			id: "29EBC59CC5ECAF04"
+			rewards: [{
+				id: "37D8ADC60C9588E3"
+				item: "creategbd:elder_guardian_beam_capacitor"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4BCEB50F5E966AAC"
+				item: "creategbd:basic_laser_turret"
+				type: "item"
+			}]
+			title: "保卫工厂！"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"蓝冰可以批量生产冰块！"
+				""
+				"可以将冰块压制为浮冰，再压制为蓝冰"
+			]
+			id: "63F63C5EB6A116A0"
+			tasks: [{
+				id: "0FCB32098B91AE7D"
+				item: "minecraft:blue_ice"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["63F63C5EB6A116A0"]
+			description: [
+				"冷冻剂可以用于生产电路板和液态空气"
+				""
+				"你可以用冰来快速生产它！"
+			]
+			id: "33C1C18E2D0D3825"
+			tasks: [{
+				id: "2319242070FEE33A"
+				item: "kubejs:cryogen_bucket"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["33C1C18E2D0D3825"]
+			description: ["氧气是基本的助燃剂"]
+			id: "5C4CDE6BB82666BE"
+			tasks: [{
+				id: "634E96F573C0AB8C"
+				item: "kubejs:oxygen_bucket"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["33C1C18E2D0D3825"]
+			description: [
+				"氮气的主要作用是制备氨气、硝酸"
+				"那么氢气是怎么来的呢？"
+			]
+			id: "368A009A98EDA1EE"
+			tasks: [{
+				id: "3AFDFD2D842F1F9E"
+				item: "kubejs:nitrogen_bucket"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5C60160231FA2379"]
+			description: [
+				"这是由一些奇异的微生物发酵而成的原油——它和普通原油有着不同的成分"
+				""
+				"&e需要注意的是，它暂时对你而言不是必须的&r——你可以通过普通原油获取它的全部分馏产物！"
+			]
+			id: "7A8EB5759D701AD3"
+			tasks: [{
+				id: "7721BEB85ADD7F79"
+				item: "kubejs:refined_oil_bucket"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["368A009A98EDA1EE"]
+			description: [
+				"氮肥是升级农业的基础！"
+				""
+				"有了它，你可以开始尝试无土栽培来快速高效地生产农作物！"
+				""
+				"&e(某些合成可能显示错误，请相信所有的相关合成都是正收益的！)&r"
+			]
+			id: "559B386DA7731C89"
+			tasks: [{
+				id: "1E26E393CBA04221"
+				item: "kubejs:nitrogen_fertilizer_bucket"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["401F17194C1C062C"]
+			description: [
+				"复合钻井液可以清洁石油管道并产出优质的石油"
+				""
+				"在未来，还有更多重要的矿脉需要用它来开发"
+			]
+			id: "78E8AD96D10D37D0"
+			tasks: [{
+				id: "4B9BE0C720BAC68D"
+				item: "kubejs:drilling_fluid_bucket"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"0EE5C05F14473612"
+				"2158B1016BA073D8"
+			]
+			description: [
+				"矿物钻井可以无限地从矿脉中挖掘矿物！"
+				""
+				"在思索中查看制造方法或使用蓝图！"
+			]
+			id: "5B67D4465E9711BE"
+			rewards: [{
+				id: "29E08E3CEFECA5A4"
+				item: "createoreexcavation:netherite_drill"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1A8E69DAC62C3F79"
+				item: "createoreexcavation:drilling_machine"
+				type: "item"
+			}]
+			title: "从地心挖掘"
+			x: 2.5d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"316C37B5A2522059"
+				"4A73F70D9A7EFC87"
+			]
+			description: [
+				"流体钻井可以无限地从矿脉中抽取流体！"
+				""
+				"在思索中查看制造方法或使用蓝图！"
+			]
+			id: "3EDA286345992903"
+			rewards: [{
+				id: "77AAD4856486194C"
+				item: "createoreexcavation:netherite_drill"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7688DC8A24ABAE86"
+				item: "createoreexcavation:extractor"
+				type: "item"
+			}]
+			title: "从星球汲取血液"
+			x: -2.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["4EEBF6833EE9EC1D"]
+			description: [
+				"升降机是比软管滑轮更方便的一种移动机械"
+				"它还用于制造钻井！"
+			]
+			id: "0EE5C05F14473612"
+			rewards: [{
+				count: 8
+				id: "1C34411BCDC8C0D5"
+				item: "kubejs:cardan_joint"
+				type: "item"
+			}]
+			tasks: [{
+				id: "278D19E45289927B"
+				item: "create:elevator_pulley"
+				type: "item"
+			}]
+			title: "上上下下"
+			x: 1.0d
+			y: 6.5d
+		}
+		{
+			description: [
+				"矿脉是无限的资源生产方式"
+				""
+				"使用卫星扫描器来令卫星寻找拥有矿脉的区块——从而你就可以读取卫星获得的矿脉信息了！"
+				""
+				"这份信息包含距离最近的&e矿脉种类&r和&e矿脉坐标&r，&a你可以通过在矿脉手册中禁用矿脉种类的方式来过滤掉你不希望获取的矿脉信息！&r"
+				""
+				"使用钻井来开采区块中的矿脉！"
+				""
+				"需要注意的是，许多矿脉只会出现在特定的星球、维度或生物群系当中！"
+				""
+				"&a我在地球上空还有最后一颗能运转的卫星——它已经存储着一处矿脉坐标。&r&e如果你需要它就点击确认吧，它会向你发送矿脉的种类与坐标&r"
+			]
+			id: "5C60160231FA2379"
+			rewards: [{
+				command: "/execute in minecraft:overworld run kubejs custom_command first_vein"
+				elevate_perms: true
+				exclude_from_claim_all: true
+				icon: {
+					Count: 1
+					id: "kubejs:satellite"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "322DF9E4D8BE39CD"
+				ignore_reward_blocking: true
+				silent: true
+				title: "确认"
+				type: "command"
+			}]
+			tasks: [{
+				id: "3440EACBD21B460D"
+				item: "kubejs:scanner"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["5D17F3EB50C80731"]
+			dependency_requirement: "one_completed"
+			description: [
+				"盐酸自然有着它的大用——刻蚀电路板、浸泡透镜、炼钨......"
+				""
+				"你早晚会用上它的！"
+			]
+			id: "22D58AAC0D5BFE19"
+			tasks: [{
+				id: "58E92312DFD30283"
+				item: "kubejs:muriatic_acid_bucket"
+				type: "item"
+			}]
+			title: "盐酸"
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			description: [
+				"哦，还有比这更美味的饮料吗？"
+				""
+				"在那个远古的时代，甚至机关人们都对它赞不绝口！"
+			]
+			id: "3D1D36FCEDCB4361"
+			tasks: [{
+				id: "4CB4DC7191773346"
+				item: "kubejs:slime_cola_bucket"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			description: [
+				"在宇宙中，红石是一种高度稀缺的资源。在宇宙中的绝大多数地方，红石资源都是十分匮乏的。不过幸运的是，由于太阳系非常靠近恒星系233B，所以太阳系内还是有数量可观的红石资源——虽然并不存在红石矿脉"
+				""
+				"当然了，如果真的需要特别大量的红石，那么最好的选择还是开发恒星系233B中的星球——但你离星际采矿还有一段距离"
+			]
+			id: "7FFEC580D2E4C680"
+			tasks: [{
+				id: "6F3B3679D8D0B76F"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			title: "富含能量"
+			x: -1.0d
+			y: 7.5d
+		}
+		{
+			description: [
+				"洗涤锡矿可以产出萤石"
+				""
+				"生物柴油注入红石也可以获得萤石"
+				""
+				"在下界还会有萤石矿脉"
+				""
+				"使用哪种方式好呢？"
+			]
+			id: "180B40057E08AE2E"
+			tasks: [{
+				id: "362416C1BBAAE83B"
+				item: "minecraft:glowstone_dust"
+				type: "item"
+			}]
+			title: "挖还是注？"
+			x: 1.0d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"7FFEC580D2E4C680"
+				"180B40057E08AE2E"
+			]
+			description: [
+				"暗影钢是一种高级材料！"
+				""
+				"它可以用来生产批量生产下界合金碎片，也可以用于获取第一个下界合金碎片！"
+			]
+			id: "3F1D29E01951ACCF"
+			rewards: [{
+				id: "70FF045001D3256E"
+				item: "creategbd:elder_guardian_beam_capacitor"
+				type: "item"
+			}]
+			tasks: [{
+				id: "165111471D861A06"
+				item: "create:shadow_steel"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.5d
+		}
+		{
+			description: [
+				"现在你能真正的获得飞行了！"
+				""
+				"飞行戒指能够赋予你两种飞行，一种是能够悬停的自由飞行，一种是如烟花鞘翅般的高速飞行"
+				""
+				"单击空格进入鞘翅飞行"
+				""
+				"疾跑时单击空格进入烟花鞘翅飞行"
+				""
+				"双击空格进入自由飞行"
+			]
+			id: "1EFCE2A7FB341A0A"
+			rewards: [{
+				id: "4F91947C92FD8189"
+				item: "kubejs:slime_cola_can"
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "6E480175D5AE379A"
+				item: "balancedflight:ascended_flight_ring"
+				type: "item"
+			}]
+			title: "改造世界，创意无限"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			description: [
+				"&e大气冷凝机是一种多方块机器！&r你需要在核心附近建造指定的结构（可以是不同朝向的）来使用它！"
+				""
+				"利用大气冷凝机，你可以提取大气中的各种有效成分为你所用！"
+				"不同维度的大气成分各不相同，而有的维度则没有大气"
+				""
+				"在思索中查看使用方式！"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
+				""
+				"&c有时你会遇到不需要加热的分馏配方——它们仍然需要烈焰人燃烧室！只不过你不需要提供燃料罢了&r"
+			]
+			id: "4A04F41BC7C33EBF"
+			rewards: [{
+				id: "499D05C6AD1B7BE7"
+				item: {
+					Count: 1
+					id: "minecraft:barrel"
+					tag: {
+						BlockEntityTag: {
+							Items: [
+								{
+									Count: 4b
+									Slot: 0b
+									id: "design_decor:andesite_floodlight"
+								}
+								{
+									Count: 22b
+									Slot: 1b
+									id: "create:copper_casing"
+								}
+								{
+									Count: 15b
+									Slot: 2b
+									id: "create:item_drain"
+								}
+								{
+									Count: 3b
+									Slot: 3b
+									id: "create:smart_fluid_pipe"
+								}
+								{
+									Count: 1b
+									Slot: 4b
+									id: "vintageimprovements:vacuum_chamber"
+								}
+								{
+									Count: 2b
+									Slot: 5b
+									id: "design_decor:stepped_lever"
+								}
+								{
+									Count: 1b
+									Slot: 6b
+									id: "design_decor:brass_boiler_large"
+								}
+								{
+									Count: 2b
+									Slot: 7b
+									id: "design_decor:brass_boiler"
+								}
+								{
+									Count: 1b
+									Slot: 8b
+									id: "create:mechanical_pump"
+								}
+								{
+									Count: 4b
+									Slot: 9b
+									id: "design_decor:metal_support"
+								}
+								{
+									Count: 2b
+									Slot: 10b
+									id: "design_decor:copper_boiler"
+								}
+								{
+									Count: 4b
+									Slot: 11b
+									id: "design_decor:diagonal_metal_support"
+								}
+							]
+							id: "minecraft:barrel"
+						}
+						display: {
+							Name: "{\"translate\":\"block.kubejs.condenser\",\"italic\":false}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "5B3A7D77698AA251"
+				item: "kubejs:condenser"
+				type: "item"
+			}]
+			title: "获取大气！"
+			x: -1.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["51950D03F6955270"]
+			description: [
+				"&e工业高炉是一种大型多方块机器！&r你需要在核心附近建造指定的结构（可以是不同朝向的）来使用它！"
+				""
+				"你需要通过工业高炉来生产钢、戴斯等高级金属。&e如果你觉得输氧太慢，那么不妨试试高速卸罐机！&r"
+				""
+				"在思索中查看使用方式！"
+				""
+				"如果你不知道如何正确输入物品的话，请查看&a机械动力之页&r的&e混带&r一节！"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
+			]
+			id: "62A2FDFE9317F04D"
+			rewards: [
+				{
+					id: "2684EA15F3BCF893"
+					item: {
+						Count: 1
+						id: "minecraft:barrel"
+						tag: {
+							BlockEntityTag: {
+								Items: [
+									{
+										Count: 63b
+										Slot: 0b
+										id: "design_decor:ornate_grate"
+									}
+									{
+										Count: 4b
+										Slot: 1b
+										id: "create:andesite_funnel"
+									}
+									{
+										Count: 4b
+										Slot: 2b
+										id: "create:andesite_bars"
+									}
+									{
+										Count: 8b
+										Slot: 3b
+										id: "design_decor:brass_lamp"
+									}
+									{
+										Count: 12b
+										Slot: 4b
+										id: "design_decor:industrial_iron_boiler"
+									}
+									{
+										Count: 3b
+										Slot: 5b
+										id: "create:mechanical_pump"
+									}
+									{
+										Count: 3b
+										Slot: 6b
+										id: "design_decor:industrial_iron_boiler_large"
+									}
+									{
+										Count: 11b
+										Slot: 7b
+										id: "ad_astra:iron_plating_slab"
+									}
+									{
+										Count: 2b
+										Slot: 8b
+										id: "design_decor:brass_boiler_large"
+									}
+									{
+										Count: 6b
+										Slot: 9b
+										id: "create:cogwheel"
+									}
+									{
+										Count: 3b
+										Slot: 10b
+										id: "design_decor:brass_boiler"
+									}
+									{
+										Count: 4b
+										Slot: 11b
+										id: "create_things_and_misc:brass_brick_slab"
+									}
+									{
+										Count: 9b
+										Slot: 12b
+										id: "design_decor:diagonal_metal_support"
+									}
+									{
+										Count: 24b
+										Slot: 13b
+										id: "create:metal_girder"
+									}
+								]
+								id: "minecraft:barrel"
+							}
+							display: {
+								Lore: ["{\"text\":\"I\"}"]
+								Name: "{\"translate\":\"block.kubejs.shaft_furnace\",\"italic\":false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "13CDAC3D6DA18BCD"
+					item: {
+						Count: 1
+						id: "minecraft:barrel"
+						tag: {
+							BlockEntityTag: {
+								Items: [
+									{
+										Count: 1b
+										Slot: 0b
+										id: "design_decor:stepped_lever"
+									}
+									{
+										Count: 1b
+										Slot: 1b
+										id: "railways:smokestack_oilburner"
+									}
+									{
+										Count: 4b
+										Slot: 2b
+										id: "create:brass_funnel"
+									}
+									{
+										Count: 54b
+										Slot: 3b
+										id: "create:fluid_tank"
+									}
+									{
+										Count: 12b
+										Slot: 4b
+										id: "create:copper_casing"
+									}
+									{
+										Count: 15b
+										Slot: 5b
+										id: "design_decor:iron_railing"
+									}
+									{
+										Count: 3b
+										Slot: 6b
+										id: "design_decor:copper_boiler"
+									}
+									{
+										Count: 15b
+										Slot: 7b
+										id: "ad_astra:iron_pillar"
+									}
+									{
+										Count: 22b
+										Slot: 8b
+										id: "create:industrial_iron_block"
+									}
+									{
+										Count: 9b
+										Slot: 9b
+										id: "create:fluid_pipe"
+									}
+									{
+										Count: 48b
+										Slot: 10b
+										id: "create:railway_casing"
+									}
+									{
+										Count: 9b
+										Slot: 11b
+										id: "createaddition:straw"
+									}
+									{
+										Count: 9b
+										Slot: 12b
+										id: "create:blaze_burner"
+									}
+									{
+										Count: 12b
+										Slot: 13b
+										id: "design_decor:diagonal_girder"
+									}
+								]
+								id: "minecraft:barrel"
+							}
+							display: {
+								Lore: ["{\"text\":\"II\"}"]
+								Name: "{\"translate\":\"block.kubejs.shaft_furnace\",\"italic\":false}"
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "235D5CEF0D331ACE"
+				item: "kubejs:shaft_furnace"
+				type: "item"
+			}]
+			title: "大炼钢铁！"
+			x: 1.5d
+			y: 8.5d
+		}
+	]
+	subtitle: ["石油的脉动"]
+	title: "千万年后的新生"
+}

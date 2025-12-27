@@ -1,0 +1,10 @@
+{
+    "pack": {
+        "pack_format": 15,
+        "description": "§a§n由史莱姆及其它贡献者人工翻译 §e§o版本：§c§l1.20.1",
+        "supported_formats": {
+            "min_inclusive": 1,
+            "max_inclusive": 10000
+        }
+    }
+}

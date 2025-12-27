@@ -1,0 +1,35 @@
+[
+    {
+        "matchItems": [
+            "iceandfire:chared_dirt",
+            "iceandfire:chared_stone",
+            "iceandfire:chared_grass",
+            "iceandfire:chared_cobblestone",
+            "iceandfire:chared_gravel",
+            "iceandfire:chared_dirt_path"
+        ],
+        "resultItems": "iceandfire:ash"
+    },
+    {
+        "matchItems": [
+            "iceandfire:frozen_dirt",
+            "iceandfire:frozen_stone",
+            "iceandfire:frozen_grass",
+            "iceandfire:frozen_cobblestone",
+            "iceandfire:frozen_gravel",
+            "iceandfire:frozen_dirt_path",
+            "iceandfire:frozen_splinters"
+        ],
+        "resultItems": "iceandfire:dragon_ice"
+    },
+    {
+        "matchItems": [
+            "iceandfire:crackled_dirt",
+            "iceandfire:crackled_stone",
+            "iceandfire:crackled_grass",
+            "iceandfire:crackled_gravel",
+            "iceandfire:crackled_dirt_path"
+        ],
+        "resultItems":"iceandfire:crackled_cobblestone"
+    }
+]

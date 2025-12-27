@@ -1,0 +1,121 @@
+{
+    "name": "block.kubejs.steam_generator",
+    "appearance": {
+        "resistance": 12,
+        "requires_tool": false,
+        "block": "kubejs:machine/steam_generator"
+    },
+    "processor": {
+        "type": "custommachinery:machine",
+        "coolbottom": 5
+    },
+    "tooltips": [
+        {
+            "text": "MAX: 16384 FE/t",
+            "color": "green"
+        },
+        {
+            "text": "MIN: 256 FE/t",
+            "color": "yellow"
+        }
+    ],
+    "components": [
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 1000,
+            "id": "steam",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "mode": "both",
+            "filter": [ "kubejs:superheated_steam"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 50,
+            "id": "lube",
+            "maxInput": 5,
+            "maxOutput": 5,
+            "mode": "input",
+            "config": {
+                "input": true,
+                "output": false,
+                "default": "input",
+                "front": "output"
+            },
+            "filter": [ "kubejs:lube_oil"],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 320000,
+            "maxInput": 160000,
+            "maxOutput": 160000,
+            "mode": "input",
+            "id": "fe",
+            "config": {
+                "input": false,
+                "output": true,
+                "default": "input",
+                "front": "output"
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade1",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "upgrade2",
+            "mode": "input",
+            "capacity": 1,
+            "variant": "custommachinery:upgrade",
+            "config": {
+                "default":"none",
+                "input": false,
+                "output": false
+            }
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:texture",
+            "x": 0,
+            "y": 0,
+            "texture": "custommachinery:textures/gui/base_background.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 110,
+            "y": 75,
+            "id": "upgrade1",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 128,
+            "y": 75,
+            "id": "upgrade2",
+            "texture": "kubejs:textures/gui/upgrade_slot.png"
+        },
+        {
+            "text": "block.kubejs.steam_generator",
+            "x": 7,
+            "y": 5,
+            "type": "custommachinery:text"
+        },
+        {
+            "x": 47,
+            "y": 110,
+            "type": "custommachinery:player_inventory"
+        }
+    ]
+}

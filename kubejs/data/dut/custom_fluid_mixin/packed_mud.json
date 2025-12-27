@@ -1,0 +1,11 @@
+{
+    "type": "flowing_block",
+    "flowing": "#minecraft:water",
+    "blocks_nearby": [
+        "kubejs:saline_water"
+    ],
+    "result": {
+        "type": "block",
+        "block": "minecraft:mud"
+    }
+}

@@ -1,0 +1,33 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "6F4403462C0C5A8D"
+	group: "26D57AC038FF3413"
+	icon: "design_decor:warning_sign"
+	id: "6F4403462C0C5A8D"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		description: [
+			"希望你明确的是，这一章的所有内容并非任务线，而是一些简单的教学和流程示意！"
+			""
+			"流程示意仅显示了关键节点和部分路线，而非所有可选路线！"
+			""
+			"一部分具体的流程示意和教学被划分至了对应章节——它们具有乐谱前缀！"
+		]
+		id: "4FEE3B3E68617A7C"
+		rewards: [{
+			id: "3A3CCF2501D350F1"
+			item: "minecraft:writable_book"
+			type: "item"
+		}]
+		tasks: [{
+			id: "1A800DCE8EA2F590"
+			type: "checkmark"
+		}]
+		title: "希望你明确！"
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "这里的内容并非任务线！"
+}

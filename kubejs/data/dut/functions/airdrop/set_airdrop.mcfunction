@@ -1,0 +1,1 @@
+execute positioned ~ ~-6.5 ~ run function dut:airdrop/set_airdrop_0

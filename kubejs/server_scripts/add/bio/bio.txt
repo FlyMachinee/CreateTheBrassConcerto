@@ -1,0 +1,13 @@
+ItemEvents.rightClicked("MAIN_HAND", event => {
+  let player = event.player
+  let handitem = player.getMainHandItem()
+  let handitemnbt = player.getMainHandItem().getNbt()
+  let pos = player.getPosition(0)
+  let biome = player.getLevel().getBiome(pos)
+  let itemcount = handitem.getCount()
+  //event.player.statusMessage=`${handitemnbt}`
+  if (handitemnbt.toString().includes('{wood_chip:1}') && handitem == 'kubejs:pasteurized_culture_plate') {
+    player.give(Item.of('kubejs:culture_plate', 1, handitemnbt.merge('{pasteurized: 1 }')))
+    player.getMainHandItem().setCount(itemcount - 1)
+  }
+})

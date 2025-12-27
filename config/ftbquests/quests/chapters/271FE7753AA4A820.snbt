@@ -1,0 +1,1209 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "271FE7753AA4A820"
+	group: "05CDF1EA7F8CFC5D"
+	icon: {
+		Count: 1
+		id: "ad_astra:tier_1_rocket"
+		tag: { }
+	}
+	id: "271FE7753AA4A820"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"70B71AF12951D64D"
+				"62A2FDFE9317F04D"
+				"038403EDBDA076AB"
+				"37DE1583F992DD4B"
+			]
+			description: [
+				"钢是飞向太空的必备材料！"
+				"使用&e高炉、密封压缩机和爆破压缩机&r来制作它！"
+				"首先在&e高炉&r中利用&a石灰石、蓝焰衣原体和粉碎煤&r将工业铁变为半成品钢"
+				""
+				"接着，使用&e密封压缩机&r在&a超级加热&r下&a吹入氧气&r将半成品钢变为半成品钢I。在此过程中，将损失50%的质量"
+				""
+				"然后，使用&e密封压缩机&r在&a超级加热&r下&a吹入氨气或粗制药水&r将半成品钢I变为钢水。在此过程中，体积将缩减50%"
+				""
+				"然后，使用&e密封压缩机&r&a吹入冷冻剂&r将钢水变为钢块。"
+				""
+				"最后，使用&e爆破压缩机&r将钢块压缩为钢板！"
+			]
+			id: "2C70A7487912B250"
+			size: 1.5d
+			tasks: [{
+				id: "0469D6ABCEDBAAA7"
+				item: "ad_astra:steel_ingot"
+				type: "item"
+			}]
+			title: "致密金属"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C70A7487912B250"]
+			description: [
+				"火箭上有大量的零件——这些零件大多寿命不长，需要在每次发射后更换"
+				""
+				"所以你需要提前准备好更换的零件"
+				""
+				"&a对它按U查看为火箭更换零件的配方&r"
+			]
+			id: "6FEB0A4901D3218C"
+			tasks: [{
+				id: "31D30233C2C3BE66"
+				item: "kubejs:steel_parts_box"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2C70A7487912B250"]
+			description: [
+				"这个燃料储罐是一次性的，每次发射后都需要重新为火箭装填"
+				""
+				"&a对它按U查看为火箭装填燃料的配方&r"
+				""
+				"&e它配方中的液体应添加在工作盆中！&r"
+			]
+			id: "0DAF0D205C441E45"
+			tasks: [{
+				id: "2B895D39CECB2DDC"
+				item: "ad_astra:steel_tank"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2C70A7487912B250"]
+			description: [
+				"钢制引擎是最基础的火箭引擎"
+				""
+				"它是一次性的，每次发射后都需要更换"
+				""
+				"&a对它按U查看为火箭更换引擎的配方&r"
+				""
+				"&e它配方中的液体应添加在工作盆中！&r"
+			]
+			id: "59AE4AFD32C80669"
+			tasks: [{
+				id: "3438A97BA9F93ADC"
+				item: "ad_astra:steel_engine"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"6FEB0A4901D3218C"
+				"59AE4AFD32C80669"
+				"0DAF0D205C441E45"
+				"0F584EFA37EF490D"
+				"010F56E110CF0F3A"
+			]
+			description: [
+				"&a火箭的箭体需要在通过世界合成的方式合成，具体请查看思索&r"
+				""
+				"在获得箭体后，你还需要为其加装引擎、配件、氧气和燃料，完成所有准备的火箭需要在放置在发射台上发射"
+				""
+				"&e有些配方你也许无法直接查看——比如如何为火箭提供燃料、如何制作氧气瓶——那是一些遗留下来的小问题，你可以通过对它们的材料按U来查看它们的配方&r"
+				""
+				"当然，你还需要准备更多的东西——你需要还需要考虑到达后的基地建设与返程"
+				""
+				"&a如果你要建设轨道空间站，那么你还需要准备空间站所需的材料！&r不同空间站使用不同材料建造，可以在拓荒指南中查看！"
+				""
+				"至于火箭的操作？"
+				"发射时只需要按下空格，但是&c降落时需要在合适的高度开始按住空格减速，否则火箭将会爆炸！&r"
+			]
+			id: "51EEA6FC7337439F"
+			tasks: [
+				{
+					id: "0DDA37D65BA0AFC2"
+					item: {
+						Count: 1
+						id: "ad_astra:tier_1_rocket"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "43FAC4453510D33D"
+					item: "ad_astra:launch_pad"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			description: [
+				"为了更进一步的发展，你需要前往太空"
+				""
+				"在近地轨道、月球轨道和月球上建造空间站与基地，获取地球上十分缺乏的材料，发展更高级的工业和星际物流！"
+				""
+				"为了在月球建立工业基地，你需要做好充分的准备，你需要宇航服，需要学会在太空中获取氧气，还需要学会面对外星上的怪物威胁和探索外星的文明遗迹。"
+				""
+				"&e正常来说，你需要通过观星等方式获取一个星球的轨道信息后才能进行发射任务——但凑巧的是，我可以为你代劳。所以，你可以直接前往近地轨道、月球和月球轨道！&r"
+				""
+				"现在，开始吧！"
+				""
+				"&e这是你真正前往太空的第一步！&r"
+			]
+			id: "37DE1583F992DD4B"
+			rewards: [{
+				id: "37CB0CB12546E63C"
+				item: "kubejs:emergency_industrial_platform_space"
+				type: "item"
+			}]
+			tasks: [{
+				id: "414C48268203F9E6"
+				title: "前往月球吧！"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2C70A7487912B250"]
+			description: [
+				"航天服是你在外星球生存的必须品！"
+				""
+				"至于氧气罐？"
+				""
+				"对钢板按U来查看配方！"
+			]
+			id: "010F56E110CF0F3A"
+			tasks: [
+				{
+					id: "3B7DB6B8B1AF8314"
+					item: {
+						Count: 1
+						id: "ad_astra:space_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2CDD84BCB2C4F651"
+					item: {
+						Count: 1
+						id: "ad_astra:space_suit"
+						tag: {
+							Damage: 0
+						}
+					}
+					match_nbt: false
+					type: "item"
+				}
+				{
+					id: "24AE88C87E46D7F8"
+					item: {
+						Count: 1
+						id: "ad_astra:space_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "411BEE20740F1BB2"
+					item: {
+						Count: 1
+						id: "ad_astra:space_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "航天服"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2C70A7487912B250"]
+			description: [
+				"为了在外星建立舒适的基地，你需要氧气分配器用来让基地内充满氧气"
+				""
+				"你可以在GUI中为它配置自动提取、自动输出等功能！"
+				""
+				"&e需要注意的是，如果你过量输入氧气或水，那么将会造成浪费！&r"
+				""
+				"通风口和不完整方块不能阻止分配的氧气气体通过"
+				""
+				"对钢板按U来查看配方！"
+				""
+				"重力模拟器可以允许你调整它附近的重力系数——不久后你就能制造它了！"
+			]
+			id: "0F584EFA37EF490D"
+			rewards: [{
+				id: "581EB7EF0E15FB9F"
+				item: "ad_astra:gravity_normalizer"
+				type: "item"
+			}]
+			tasks: [{
+				id: "02571BCEB8B46FBB"
+				item: "ad_astra:oxygen_distributor"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["51EEA6FC7337439F"]
+			description: [
+				"&a恭喜你登上月球！&r"
+				""
+				"但先别急着高兴——你还有许多事情需要做。你需要在月球建立自己的基地，而月球的环境并不良好。"
+				""
+				"月球在很久以前拥有充足的氧气、熊熊燃烧的内核、完整的生态系统和发达的古代文明——但大撕裂改变了这一切。大撕裂破坏了月球的生态系统，吸走了月球内核的大半能量，最终导致月球变成了这样一个冰冷的星球。"
+				""
+				"为了在这里建立基地，&a你需要想办法获取足够的氢和氧，各种燃料和矿物，以及氮等气体。幸运的是，这里的工业废料可以为你提供帮助。&r相信这对于现在的你而言并不算特别困难，你应该能够找到获取它们的办法。"
+				""
+				"[ \"如果你实在没有头绪，可以在乐谱中查看刚刚为你解锁的\", { \"text\": \"拓荒之页！\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7E616A7217320035\" } } ]"
+			]
+			id: "1CAE801EB30A50F9"
+			rewards: [
+				{
+					id: "04ED49122AD3784A"
+					item: "create_sa:brass_cube"
+					type: "item"
+				}
+				{
+					count: 9
+					id: "714E0F73E3C40B5F"
+					item: {
+						Count: 1
+						id: "kubejs:matrix_2"
+						tag: {
+							ascii: 1
+							display: {
+								Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+							}
+							matrix: [
+								[
+									[
+										1
+										3
+									]
+									[
+										-2
+										95
+									]
+								]
+								[
+									[
+										-1
+										4
+									]
+									[
+										1
+										-124
+									]
+								]
+								[
+									[
+										1
+										-3
+									]
+									[
+										3
+										103
+									]
+								]
+								[
+									[
+										-1
+										2
+									]
+									[
+										-2
+										-93
+									]
+								]
+								[
+									[
+										1
+										4
+									]
+									[
+										-1
+										106
+									]
+								]
+								[
+									[
+										-1
+										-2
+									]
+									[
+										3
+										-94
+									]
+								]
+								[
+									[
+										-5
+										2
+									]
+									[
+										1
+										-16
+									]
+								]
+								[
+									[
+										10
+										-3
+									]
+									[
+										7
+										8
+									]
+								]
+								[
+									[
+										-4
+										5
+									]
+									[
+										4
+										-34
+									]
+								]
+								[
+									[
+										3
+										-7
+									]
+									[
+										4
+										4
+									]
+								]
+								[
+									[
+										2
+										13
+									]
+									[
+										5
+										83
+									]
+								]
+								[
+									[
+										-6
+										4
+									]
+									[
+										5
+										-23
+									]
+								]
+								[
+									[
+										11
+										3
+									]
+									[
+										3
+										10
+									]
+								]
+								[
+									[
+										8
+										-5
+									]
+									[
+										6
+										10
+									]
+								]
+								[
+									[
+										9
+										2
+									]
+									[
+										5
+										14
+									]
+								]
+								[
+									[
+										10
+										7
+									]
+									[
+										2
+										6
+									]
+								]
+								[
+									[
+										11
+										4
+									]
+									[
+										5
+										12
+									]
+								]
+								[
+									[
+										12
+										5
+									]
+									[
+										12
+										14
+									]
+								]
+								[
+									[
+										13
+										6
+									]
+									[
+										-1
+										7
+									]
+								]
+								[
+									[
+										5
+										3
+									]
+									[
+										3
+										26
+									]
+								]
+								[
+									[
+										6
+										5
+									]
+									[
+										5
+										21
+									]
+								]
+								[
+									[
+										7
+										8
+									]
+									[
+										5
+										22
+									]
+								]
+								[
+									[
+										8
+										9
+									]
+									[
+										7
+										13
+									]
+								]
+							]
+							no_copy: 1
+						}
+					}
+					team_reward: true
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				advancement: "ad_astra:moon"
+				criterion: ""
+				id: "0A2C818F8C33EC91"
+				type: "advancement"
+			}]
+			title: "回家的第一步"
+			x: 0.0d
+			y: 5.25d
+		}
+		{
+			dependencies: ["1CAE801EB30A50F9"]
+			description: [
+				"你也许已经在地球上见过这种矿物了，但是你无法通过地球的材料完成熔炼。"
+				""
+				"粗戴斯的还原条件较为苛刻，你需要月壤中的某种特殊成分才能完成对粗戴斯的还原"
+				""
+				"或者，你也许可以找到另一种方式制作戴斯？"
+			]
+			id: "464972F2946AF5A6"
+			tasks: [{
+				id: "1BEB0B8A837D00C6"
+				item: "ad_astra:desh_ingot"
+				type: "item"
+			}]
+			title: "乳酪金属"
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1CAE801EB30A50F9"]
+			description: [
+				"铝工业是太空工程、精算工程等工业方向的基础！"
+				""
+				"在月球寻找并开发&e铝矿脉&r，你需要&e巨型粉碎机&r、&e工业高炉&r、&e大量闪长合金&r（&a你应该没有把它们全部销毁吧？&r）、&e大量的电能&r、&e大型电解池&r以及&e合金炉&r！"
+				""
+				"以铝为基础，你可以改善炼钢效率、通过铝热剂培育蓝焰衣原体；生产&e轻质复合板&r、&e散热元件&r、&e各种火箭零件&r、&a粘胶&r等材料，从而全面进入下一个生产阶段！"
+				""
+				"除此以外，以钨、铝、钢、聚合物复合成的高级合金——&a塑钢&r，能够制造更加强力的工具！"
+				""
+				"实际上而言，铝在地球上并不罕见——比如蓝宝石、粘土、绿宝石中也同样含有铝，但它们需要更先进的技术才能进行提炼"
+			]
+			id: "37C5D70E6BC760CF"
+			tasks: [{
+				id: "697557C50EBA8CC2"
+				item: "kubejs:aluminite"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["39E57EA5F66BA411"]
+			description: [
+				"轻质复合板是绝佳的火箭外壳材料，使用铝和铜复合或是碳纤维与铜复合而成"
+				""
+				"&e它配方之一的最后一步的冷冻剂应添加在工作盆中！&r"
+			]
+			id: "26109FCB1D427253"
+			tasks: [{
+				id: "7B1FED24F2E6AF9E"
+				item: "kubejs:light_composite_plate"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1CAE801EB30A50F9"]
+			description: [
+				"在制作强力胶时，你可能已经发现了史莱姆这种生物的重要性。"
+				""
+				"而史莱姆的共生生物——粘菌，将这种生物的重要性提升到了无与伦比的高度！"
+				""
+				"你需要修建空间站或是利用大量的花岗合金产生的微量辐射来获取这种微生物！"
+			]
+			id: "39E57EA5F66BA411"
+			tasks: [{
+				id: "3DDE8D38AF7CDEB5"
+				item: "kubejs:mycetozoan"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["464972F2946AF5A6"]
+			description: [
+				"火箭维修盒可以用于制作能够自动化星际运输的运载火箭"
+				""
+				"在每次发射后，你都需要火箭维修盒来修复在太空中受损的运载火箭。"
+			]
+			id: "674C22808372B20B"
+			tasks: [{
+				id: "14689C4417285050"
+				item: "kubejs:parts_box"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1454D1A448CB429E"]
+			description: [
+				"散热元件是火箭、卫星等高级设备的必需品"
+				""
+				"你需要在每次使用卫星后为之补充！"
+			]
+			id: "7DE3F77D4A648908"
+			tasks: [{
+				id: "6DC5DDFB2D23AC8D"
+				item: "kubejs:radiator"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"26109FCB1D427253"
+				"5298370E29854902"
+			]
+			description: ["火箭陀螺仪是火箭使用的高级导航设备！"]
+			id: "6D46DF6D78C8AB63"
+			tasks: [{
+				id: "009814EBD5BC270D"
+				item: "kubejs:rocket_gyro"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["26109FCB1D427253"]
+			description: ["为了适配火箭、卫星等设备的用电环境，你需要一些更特别的接电器！"]
+			id: "5298370E29854902"
+			tasks: [{
+				id: "2CB6BDEB3507439E"
+				item: "kubejs:rocket_electric_connector"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"7DE3F77D4A648908"
+				"209E012ED51F7563"
+			]
+			description: [
+				"火箭构件是火箭的基本组成"
+				""
+				"你只能通过序列组装的方式来制作它"
+			]
+			id: "6C682679F1590F9C"
+			tasks: [{
+				id: "6388C243AE105A36"
+				item: "kubejs:rocket_mechanism"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["6B9C8BA61BB374C6"]
+			description: [
+				"火箭气瓶用于装载火箭所需的燃料氧化剂"
+				""
+				"使用自动化构筑站来快速制作它！"
+			]
+			id: "44087A421EA35356"
+			tasks: [{
+				id: "7CB09AD29B4521C5"
+				item: "kubejs:gas_tank"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"6B9C8BA61BB374C6"
+				"44087A421EA35356"
+			]
+			description: [
+				"你可以使用若干种不同的燃料来填充火箭燃料罐"
+				""
+				"在每次发射后，你都需要重新补充它！"
+			]
+			id: "209E012ED51F7563"
+			tasks: [{
+				id: "7877A5B32144682A"
+				item: "kubejs:fuel_tank"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1454D1A448CB429E"]
+			description: [
+				"铝渣和铝之间的转换并非是无损的，并且不能直接转换！"
+				""
+				"我认为你应当注意这一点"
+			]
+			id: "6B9C8BA61BB374C6"
+			tasks: [{
+				id: "0AFE8F80D7C2B88A"
+				item: "kubejs:aluminum_slag"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["37C5D70E6BC760CF"]
+			description: ["你必须使用铝土粉冶炼熔融氧化铝，以避免高炉堵塞！"]
+			id: "1454D1A448CB429E"
+			tasks: [{
+				id: "42F4229C195220DA"
+				item: "kubejs:aluminite_powder"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"6C682679F1590F9C"
+				"674C22808372B20B"
+				"6D46DF6D78C8AB63"
+				"209E012ED51F7563"
+			]
+			description: [
+				"货运火箭是一种只需要简单维护的可重复利用火箭——你只需要在发射时提供导航数据，并在每次发射后提供维修盒、燃料罐和冷却剂即可"
+				""
+				"它不止可以运货，还可以载人"
+				""
+				"它将成为你星际物流系统的起点！"
+				""
+				"[ \"如果你需要运送流体的话，你可以考虑使用\", { \"text\": \"密封储罐\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"37B807F2628934C1\" } }, \"！\" ]"
+			]
+			icon: {
+				Count: 1
+				id: "kubejs:carrier_rocket"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "19EACEC5C977A2FA"
+			rewards: [{
+				count: 9
+				id: "00DF37D2DCEB5FEF"
+				item: {
+					Count: 1
+					id: "kubejs:matrix_2"
+					tag: {
+						ascii: 1
+						display: {
+							Name: "{\"translate\":\"kubejs.matrix.netexpand\",\"italic\":false}"
+						}
+						matrix: [
+							[
+								[
+									1
+									3
+								]
+								[
+									-2
+									95
+								]
+							]
+							[
+								[
+									-1
+									4
+								]
+								[
+									1
+									-124
+								]
+							]
+							[
+								[
+									1
+									-3
+								]
+								[
+									3
+									103
+								]
+							]
+							[
+								[
+									-1
+									2
+								]
+								[
+									-2
+									-93
+								]
+							]
+							[
+								[
+									1
+									4
+								]
+								[
+									-1
+									106
+								]
+							]
+							[
+								[
+									-1
+									-2
+								]
+								[
+									3
+									-94
+								]
+							]
+							[
+								[
+									-5
+									2
+								]
+								[
+									1
+									-16
+								]
+							]
+							[
+								[
+									10
+									-3
+								]
+								[
+									7
+									8
+								]
+							]
+							[
+								[
+									-4
+									5
+								]
+								[
+									4
+									-34
+								]
+							]
+							[
+								[
+									3
+									-7
+								]
+								[
+									4
+									4
+								]
+							]
+							[
+								[
+									2
+									13
+								]
+								[
+									5
+									83
+								]
+							]
+							[
+								[
+									-6
+									4
+								]
+								[
+									5
+									-23
+								]
+							]
+							[
+								[
+									11
+									3
+								]
+								[
+									3
+									10
+								]
+							]
+							[
+								[
+									8
+									-5
+								]
+								[
+									6
+									10
+								]
+							]
+							[
+								[
+									9
+									2
+								]
+								[
+									5
+									14
+								]
+							]
+							[
+								[
+									10
+									7
+								]
+								[
+									2
+									6
+								]
+							]
+							[
+								[
+									11
+									4
+								]
+								[
+									5
+									12
+								]
+							]
+							[
+								[
+									12
+									5
+								]
+								[
+									12
+									14
+								]
+							]
+							[
+								[
+									13
+									6
+								]
+								[
+									-1
+									7
+								]
+							]
+							[
+								[
+									5
+									3
+								]
+								[
+									3
+									26
+								]
+							]
+							[
+								[
+									6
+									5
+								]
+								[
+									5
+									21
+								]
+							]
+							[
+								[
+									7
+									8
+								]
+								[
+									5
+									22
+								]
+							]
+							[
+								[
+									8
+									9
+								]
+								[
+									7
+									13
+								]
+							]
+						]
+						no_copy: 1
+					}
+				}
+				team_reward: true
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "781166EA4E295972"
+					item: {
+						Count: 1
+						id: "kubejs:carrier_rocket"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4FCC15EB20EDB6D2"
+					item: "kubejs:launch_pad_controller"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["37DE1583F992DD4B"]
+			description: [
+				"你也许发现了：在月球，你需要大量的奶来生产乳酪这一重要原料"
+				""
+				"&a为了稳定地获取牛奶，你有三种可选方案：&r"
+				""
+				"&e1-使用&r&a氧气分配器&r&e提供氧气，在范围内饲养牛&r"
+				"&e2-使用&r&a笼子&r&e捕捉幼年牛——包含了牛的笼子同样可以用于挤奶！（无需氧气）&r"
+				"&e3-使用&r&a信息素&r&e作为催化剂合成牛奶！&r"
+			]
+			id: "1D258DC971D88A17"
+			rewards: [{
+				id: "73EA7F220FD9D021"
+				item: {
+					Count: 1
+					id: "supplementaries:cage"
+					tag: {
+						BlockEntityTag: {
+							MobHolder: {
+								EntityData: {
+									AbsorptionAmount: 0.0f
+									Age: -23964
+									Air: 60s
+									ArmorDropChances: [
+										0.085f
+										0.085f
+										0.085f
+										0.085f
+									]
+									ArmorItems: [
+										{ }
+										{ }
+										{ }
+										{ }
+									]
+									Attributes: [
+										{
+											Base: 16.0d
+											Name: "minecraft:generic.follow_range"
+										}
+										{
+											Base: 0.08d
+											Name: "forge:entity_gravity"
+										}
+										{
+											Base: 0.20000000298023224d
+											Name: "minecraft:generic.movement_speed"
+										}
+										{
+											Base: 0.0d
+											Name: "forge:step_height_addition"
+										}
+									]
+									BalmData: { }
+									Brain: {
+										memories: { }
+									}
+									CanPickUpLoot: 0b
+									CanUpdate: 1b
+									CitadelData: { }
+									DeathTime: 0s
+									EntityJSData: { }
+									FallDistance: 0.0f
+									FallFlying: 0b
+									Fire: 0s
+									ForcedAge: 0
+									ForgeCaps: {
+										"curios:inventory": {
+											Curios: [ ]
+										}
+										"iceandfire:entity_data": {
+											chainedData: { }
+											chickenData: {
+												timeUntilNextEgg: -1
+											}
+											frozenData: {
+												frozenTicks: 0
+												isFrozen: 0b
+											}
+											miscData: {
+												hasDismounted: 0b
+												loveTicks: 0
+												lungeTicks: 0
+											}
+											sirenData: {
+												charmTime: 0
+												charmedById: -1
+												isCharmed: 0b
+											}
+										}
+									}
+									ForgeData: { }
+									HandDropChances: [
+										0.085f
+										0.085f
+									]
+									HandItems: [
+										{ }
+										{ }
+									]
+									Health: 7.0f
+									HurtByTimestamp: 0
+									HurtTime: 0s
+									InLove: 0
+									Invulnerable: 0b
+									LeftHanded: 0b
+									Motion: [
+										0.003689364377671198d
+										-0.0784000015258789d
+										0.004053043565425478d
+									]
+									OnGround: 1b
+									PersistenceRequired: 0b
+									PortalCooldown: 0
+									Pos: [
+										0.5d
+										0.0626d
+										0.5d
+									]
+									Rotation: [
+										0.0f
+										0.0f
+									]
+									TicksFrozen: 18
+									id: "minecraft:cow"
+								}
+								Name: "牛"
+								Scale: 0.625f
+								UUID: [I;
+									1684514569
+									124142487
+									-1724859230
+									-1138375918
+								]
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4E9B0E65D0C05B62"
+				item: "minecraft:milk_bucket"
+				type: "item"
+			}]
+			title: "我需要牛奶！"
+			x: 0.0d
+			y: -3.0d
+		}
+	]
+	subtitle: ["沐浴在亿万星辰之中"]
+	title: "一艘船越过地球"
+}

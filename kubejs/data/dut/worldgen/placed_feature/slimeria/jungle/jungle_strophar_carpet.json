@@ -1,0 +1,9 @@
+{
+  "feature": "dut:slimeria/jungle/jungle_strophar_carpet",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

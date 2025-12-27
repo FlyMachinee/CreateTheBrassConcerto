@@ -1,0 +1,8 @@
+ForgeEvents.onEvent("net.minecraftforge.event.AnvilUpdateEvent",event=>{
+    const ItemIDList=["kubejs:carrier_rocket","kubejs:scanner","kubejs:space_elevator",'kubejs:chargeable_battery', 'kubejs:disposable_battery',"kubejs:brass_hard_disk","kubejs:aluminum_hard_disk","kubejs:tin_hard_disk"]
+    let bool=ItemIDList.some(event.left.item.id)
+    if (event.left.item.id=="minecraft:carrier_rocket"||event.right.item.id=="minecraft:enchantment_book"){
+        //event.
+        event.canceled()
+    }
+})

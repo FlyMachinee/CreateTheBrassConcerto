@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spread_type": "linear",
+    "salt": 12378674,
+    "spacing": 20,
+    "separation": 12
+  },
+  "structures": [
+    {
+      "structure": "dut:moon_railway",
+      "weight": 1
+    }
+  ]
+}

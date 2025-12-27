@@ -1,0 +1,36 @@
+//小木斧我操你妈！！
+ /**
+   * 以OP的权限去执行指令
+   * @param {$ServerPlayer_} player 
+   * @param {String} command
+   */
+  function runCommandWithPermission(player, command) {
+    let commandSource = player.createCommandSourceStack()
+      .withPermission(4)
+      .withSuppressedOutput();
+
+    player.server.getCommands().performPrefixedCommand(commandSource, command);
+  }mmandWithPermission(event.player,`/tp ~ ~1 ~`)
+})
+BlockEvents.leftClicked("#dut_create:breakable", event => {
+  runCommandWithPermission(event.player,`//pos1 ${event.block.pos.x},${event.block.pos.y},${event.block.pos.z}`)
+})
+BlockEvents.rightClicked("#dut_create:breakable", event => {
+  runCommandWithPermission(event.player,`//pos2 ${event.block.pos.x},${event.block.pos.y},${event.block.pos.z}`)
+})
+PlayerEvents.chat(event=>{
+  if (event.player.hasPermissions()||!event.message.startsWith('//cut')) {return}
+  runCommandWithPermission(event.player,event.message)
+})
+PlayerEvents.chat(event=>{
+  if (event.player.hasPermissions()||!event.message.startsWith('//undo')) {return}
+  runCommandWithPermission(event.player,event.message)
+})
+PlayerEvents.chat(event=>{
+  if (event.player.hasPermissions()||!event.message.startsWith('//redo')) {return}
+  runCommandWithPermission(event.player,event.message)
+})
+PlayerEvents.chat(event=>{
+  if (event.player.hasPermissions()||!event.message.startsWith('//paste')) {return}
+  runCommandWithPermission(event.player,event.message)
+})

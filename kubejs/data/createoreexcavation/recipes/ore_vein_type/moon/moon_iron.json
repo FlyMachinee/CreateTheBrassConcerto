@@ -1,0 +1,16 @@
+{
+  "type": "createoreexcavation:vein",
+  "amountMax": 12.0,
+  "amountMin": 3.0,
+  "biomeWhitelist": "dut_create:moon",
+  "icon": {
+    "item": "ad_astra:moon_iron_ore"
+  },
+  "name": "{\"translate\":\"kubejs.vein_id.moon_iron\"}",
+  "placement": {
+    "salt": 57675478,
+    "separation": 24,
+    "spacing": 32
+  },
+  "priority": 1
+}

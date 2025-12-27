@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "dut:slimeria/tree_checked",
+    "features": [
+      {
+        "feature": "dut:slimeria/tree/tree_chromatic_middle",
+        "chance": 0.2125
+      },
+      {
+        "feature": "dut:slimeria/tree/tree_chromatic_small",
+        "chance": 0.175
+      },
+      {
+        "feature": "dut:slimeria/tree/tree_chromatic_tiny",
+        "chance": 0.2125
+      },
+      {
+        "feature": "dut:slimeria/tree/mushroom_chromatic_large",
+        "chance": 0.175
+      },
+      {
+        "feature": "dut:slimeria/tree/mushroom_chromatic_small",
+        "chance": 0.225
+      }
+    ]
+  }
+}
