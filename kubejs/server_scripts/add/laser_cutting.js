@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "vintageimprovements:laser_cutting",
         "ingredients": [
-            { "tag": "forge:ingots/zinc" }
+            { "item": "create:andesite_alloy" }
         ],
         "results": [
             { "item": "design_decor:blank_sign", "count": 12 }

@@ -12,102 +12,32 @@ ServerEvents.recipes(event => {
     ]
   }).id("dut_create:get_metal")
   //金属转化
-  //铁-铜锌金
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidInput": 0,
-    "ingredients": [
-      { "fluid": "minecraft:lava", "amount": 500 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:crimsite" },
-      { "item": "create:crimsite" },
-      { "item": "create:crimsite" },
-      { "item": "create:crimsite" },
-      { "item": "create:crimsite" },
-      { "item": "create:crimsite" },
-    ],
-    "processingTime": 60,
-    "results": [
-      { "item": "create:veridium", "count": 2 },
-      { "item": "create:ochrum", "count": 2 },
-      { "item": "create:asurine", "count": 2 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:limestone" }
-    ]
-  }).id("dut_create:metal/iron_to_basic")
-  //铜-铁锡银
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidInput": 0,
-    "ingredients": [
-      { "fluid": "minecraft:lava", "amount": 500 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:veridium" },
-      { "item": "create:veridium" },
-      { "item": "create:veridium" },
-      { "item": "create:veridium" },
-      { "item": "create:veridium" },
-      { "item": "create:veridium" },
-      { "item": "create:veridium" },
-      { "item": "create:veridium" }
-    ],
-    "processingTime": 60,
-    "results": [
-      { "item": "create:crushed_raw_silver", "count": 5 },
-      { "item": "kubejs:raw_tin", "count": 4 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:limestone" }
-    ]
-  }).id("dut_create:metal/copper_to_advanced")
-  //锌-锡银
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidInput": 0,
-    "ingredients": [
-      { "fluid": "minecraft:lava", "amount": 500 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:asurine" },
-      { "item": "create:asurine" },
-      { "item": "create:asurine" },
-      { "item": "create:asurine" },
-      { "item": "create:asurine" },
-      { "item": "create:asurine" },
-      { "item": "create:asurine" },
-      { "item": "create:asurine" }
-    ],
-    "processingTime": 60,
-    "results": [
-      { "item": "create:crushed_raw_silver", "count": 5 },
-      { "item": "kubejs:raw_tin", "count": 4 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:limestone" }
-    ]
-  }).id("dut_create:metal/zinc_to_advanced")
-  //金-锡银
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidInput": 0,
-    "ingredients": [
-      { "fluid": "minecraft:lava", "amount": 500 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:ochrum" },
-      { "item": "create:ochrum" },
-      { "item": "create:ochrum" },
-      { "item": "create:ochrum" },
-      { "item": "create:ochrum" },
-      { "item": "create:ochrum" },
-      { "item": "create:ochrum" },
-      { "item": "create:ochrum" }
-    ],
-    "processingTime": 60,
-    "results": [
-      { "item": "create:crushed_raw_silver", "count": 5 },
-      { "item": "kubejs:raw_tin", "count": 4 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:limestone" }
-    ]
-  }).id("dut_create:metal/gold_to_advanced")
+  function getOre(item, time, count) {
+    event.custom({
+      "type": "vintageimprovements:pressurizing",
+      "secondaryFluidInput": 0,
+      "ingredients": [
+        { "fluid": "minecraft:lava", "amount": 250 },
+        { "item": "kubejs:metal_protozoa" },
+        { "item": "minecraft:cobblestone" },
+        { "item": "minecraft:cobblestone" },
+        { "item": "minecraft:cobblestone" }
+      ],
+      "processingTime": time,
+      "results": [
+        { "item": item, "count": count },
+        { "item": "kubejs:metal_protozoa" },
+        { "item": "create:limestone", "count": 12, "chance": 0.25 }
+      ]
+    }).id("dut_create:metal/get_" + item.split(":")[1])
+  }
+  //催化绯红岩
+  getOre("create:crimsite", 120, 12)
+  getOre("create:ochrum", 120, 12)
+  getOre("create:veridium", 120, 12)
+  getOre("kubejs:raw_tin", 120, 12)
   //金属流体转化
+  /*
   const metalFluid = [
     ["kubejs:iron", "kubejs:copper", "kubejs:tin"],
     ["kubejs:copper", "kubejs:gold", "kubejs:zinc"],
@@ -134,28 +64,27 @@ ServerEvents.recipes(event => {
       ]
     }).id("dut_create:metal/fluid/" + fluid[0].split(":")[1])
   }
-  for (let i of metalFluid){
+  for (let i of metalFluid) {
     FluidTransform(i)
   }
-
-  //催化绯红岩
+  */
+ //铁板
   event.custom({
     "type": "vintageimprovements:pressurizing",
-    "secondaryFluidInput": 0,
+    "heatRequirement":"heated",
     "ingredients": [
-      { "fluid": "minecraft:lava", "amount": 500 },
       { "item": "kubejs:metal_protozoa" },
-      { "item": "minecraft:cobblestone" },
-      { "item": "minecraft:cobblestone" },
-      { "item": "minecraft:cobblestone" }
+      { "item": "minecraft:raw_iron_block"},
+      { "item": "minecraft:raw_iron_block"},
     ],
-    "processingTime": 240,
+    "processingTime": 120,
     "results": [
-      { "item": "create:crimsite", "count": 15 },
-      { "item": "kubejs:metal_protozoa" },
-      { "item": "create:limestone", "count": 12, "chance": 0.25 }
+      { "item": "kubejs:metal_protozoa"},
+      { "item": "minecraft:iron_block","count":2},
+      { "item": "create:andesite_alloy","count":6}
     ]
-  }).id("dut_create:metal/get_crimsite")
+  }).id("dut_create:metal/iron_block")
+
 
   //原虫增殖
   event.custom({
@@ -167,8 +96,6 @@ ServerEvents.recipes(event => {
       { "item": "create:crimsite" },
       { "item": "create:veridium" },
       { "item": "create:ochrum" },
-      { "item": "create:asurine" },
-      { "item": "create:limestone" },
       { "item": "kubejs:raw_tin" }
     ],
     "processingTime": 300,

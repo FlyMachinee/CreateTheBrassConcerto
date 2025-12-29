@@ -127,7 +127,7 @@ ServerEvents.recipes(event => {
       CultureBinFluidNBT("create:potion", "output", 2000, { Bottle: "REGULAR", Potion: "minecraft:mundane" }),
       CultureBinItemInput("#dut_create:ice_dragonegg", 1),
       CultureBinItemInput("iceandfire:dragon_meal", 8),
-      CultureBinItemInput("#forge:plates/zinc", 1),
+      CultureBinItemInput("#forge:plates/tin", 1),
       CultureBinItemChance('iceandfire:ice_dragon_blood', 3, 1),
       CultureBinItemChance('iceandfire:ice_dragon_blood', 2, 0.5),
       CultureBinItemChance('iceandfire:ice_dragon_blood', 2, 0.5),

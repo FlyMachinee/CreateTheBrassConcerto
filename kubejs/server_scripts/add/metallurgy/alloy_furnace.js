@@ -174,21 +174,21 @@ ServerEvents.recipes(event => {
         "kubejs:brass[level=13]",
         "kubejs:brass[level=14]",
         "kubejs:brass[level=15]",
-        "kubejs:zinc[level=1]",
-        "kubejs:zinc[level=2]",
-        "kubejs:zinc[level=3]",
-        "kubejs:zinc[level=4]",
-        "kubejs:zinc[level=5]",
-        "kubejs:zinc[level=6]",
-        "kubejs:zinc[level=7]",
-        "kubejs:zinc[level=8]",
-        "kubejs:zinc[level=9]",
-        "kubejs:zinc[level=10]",
-        "kubejs:zinc[level=11]",
-        "kubejs:zinc[level=12]",
-        "kubejs:zinc[level=13]",
-        "kubejs:zinc[level=14]",
-        "kubejs:zinc[level=15]",
+        "kubejs:new_zinc[level=1]",
+        "kubejs:new_zinc[level=2]",
+        "kubejs:new_zinc[level=3]",
+        "kubejs:new_zinc[level=4]",
+        "kubejs:new_zinc[level=5]",
+        "kubejs:new_zinc[level=6]",
+        "kubejs:new_zinc[level=7]",
+        "kubejs:new_zinc[level=8]",
+        "kubejs:new_zinc[level=9]",
+        "kubejs:new_zinc[level=10]",
+        "kubejs:new_zinc[level=11]",
+        "kubejs:new_zinc[level=12]",
+        "kubejs:new_zinc[level=13]",
+        "kubejs:new_zinc[level=14]",
+        "kubejs:new_zinc[level=15]",
         "kubejs:copper[level=1]",
         "kubejs:copper[level=2]",
         "kubejs:copper[level=3]",
@@ -580,14 +580,14 @@ ServerEvents.recipes(event => {
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(12, "kubejs:brass"),
             AlloyFurnaceItem("#forge:plates/copper", 54, "input"),
-            AlloyFurnaceItem("#forge:plates/zinc", 54, "input"),
+            AlloyFurnaceItem("#forge:plates/gold", 54, "input"),
             AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output")
         ],
         "jei": [
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(12, "kubejs:brass"),
             AlloyFurnaceItem("#forge:plates/copper", 54, "input"),
-            AlloyFurnaceItem("#forge:plates/zinc", 54, "input"),
+            AlloyFurnaceItem("#forge:plates/gold", 54, "input"),
             AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output"),
             AlloyFurnaceFluid("kubejs:brass", 12)
         ]
@@ -604,14 +604,14 @@ ServerEvents.recipes(event => {
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(12, "kubejs:brass"),
             AlloyFurnaceItem("#forge:storage_blocks/copper", 6, "input"),
-            AlloyFurnaceItem("#forge:storage_blocks/zinc", 6, "input"),
+            AlloyFurnaceItem("#forge:storage_blocks/gold", 6, "input"),
             AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output")
         ],
         "jei": [
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(12, "kubejs:brass"),
             AlloyFurnaceItem("#forge:storage_blocks/copper", 6, "input"),
-            AlloyFurnaceItem("#forge:storage_blocks/zinc", 6, "input"),
+            AlloyFurnaceItem("#forge:storage_blocks/gold", 6, "input"),
             AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output"),
             AlloyFurnaceFluid("kubejs:brass", 12)
         ]
@@ -668,16 +668,16 @@ ServerEvents.recipes(event => {
             AlloyFurnaceCommand1,
             AlloyFurnaceCommand2,
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(9, "kubejs:zinc"),
-            AlloyFurnaceItem("#forge:ingots/zinc", 100, "input")
+            AlloyFurnaceReplace(9, "kubejs:new_zinc"),
+            AlloyFurnaceItem("kubejs:new_zinc_ingot", 100, "input")
         ],
         "jei": [
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(9, "kubejs:zinc"),
-            AlloyFurnaceItem("#forge:ingots/zinc", 100, "input"),
-            AlloyFurnaceFluid("kubejs:zinc", 9)
+            AlloyFurnaceReplace(9, "kubejs:new_zinc"),
+            AlloyFurnaceItem("kubejs:new_zinc_ingot", 100, "input"),
+            AlloyFurnaceFluid("kubejs:new_zinc", 9)
         ]
-    }).id("dut_create:alloy_furnace/zinc_melt")
+    }).id("dut_create:alloy_furnace/new_zinc_melt")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -688,18 +688,18 @@ ServerEvents.recipes(event => {
             AlloyFurnaceCommand1,
             AlloyFurnaceCommand2,
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(6, "kubejs:zinc"),
-            AlloyFurnaceItem("create:crushed_raw_zinc", 54, "input"),
+            AlloyFurnaceReplace(6, "kubejs:new_zinc"),
+            AlloyFurnaceItem("kubejs:new_crushed_raw_zinc", 54, "input"),
             AlloyFurnaceItem("create:andesite_alloy", 6, "output")
         ],
         "jei": [
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(6, "kubejs:zinc"),
-            AlloyFurnaceItem("create:crushed_raw_zinc", 54, "input"),
+            AlloyFurnaceReplace(6, "kubejs:new_zinc"),
+            AlloyFurnaceItem("kubejs:new_crushed_raw_zinc", 54, "input"),
             AlloyFurnaceItem("create:andesite_alloy", 6, "output"),
-            AlloyFurnaceFluid("kubejs:zinc", 6)
+            AlloyFurnaceFluid("kubejs:new_zinc", 6)
         ]
-    }).id("dut_create:alloy_furnace/zinc_from_ore")
+    }).id("dut_create:alloy_furnace/new_zinc_from_ore")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -829,48 +829,6 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
-        "time": 100,
-        "priority": 1,
-        "error": true,
-        "requirements": [
-            AlloyFurnaceCommand1,
-            AlloyFurnaceCommand2,
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(9, "kubejs:silver"),
-            AlloyFurnaceItem("#forge:ingots/silver", 100, "input")
-        ],
-        "jei": [
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(9, "kubejs:silver"),
-            AlloyFurnaceItem("#forge:ingots/silver", 100, "input"),
-            AlloyFurnaceFluid("kubejs:silver", 9)
-        ]
-    }).id("dut_create:alloy_furnace/silver_melt")
-    event.custom({
-        "type": "custommachinery:custom_machine",
-        "machine": "dut:alloy_furnace",
-        "time": 30,
-        "priority": 1,
-        "error": true,
-        "requirements": [
-            AlloyFurnaceCommand1,
-            AlloyFurnaceCommand2,
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(6, "kubejs:silver"),
-            AlloyFurnaceItem("create:crushed_raw_silver", 54, "input"),
-            AlloyFurnaceItem("create:andesite_alloy", 6, "output")
-        ],
-        "jei": [
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(6, "kubejs:silver"),
-            AlloyFurnaceItem("create:crushed_raw_silver", 54, "input"),
-            AlloyFurnaceItem("create:andesite_alloy", 6, "output"),
-            AlloyFurnaceFluid("kubejs:silver", 6)
-        ]
-    }).id("dut_create:alloy_furnace/silver_from_ore")
-    event.custom({
-        "type": "custommachinery:custom_machine",
-        "machine": "dut:alloy_furnace",
         "time": 20,
         "error": true,
         "priority": 2,
@@ -973,17 +931,17 @@ ServerEvents.recipes(event => {
             AlloyFurnaceCommand2,
             AlloyFurnaceReplace(2, "kubejs:ammonia"),
             AlloyFurnaceItem("createloveandwar:crushed_tungsten", 54, "input"),
-            AlloyFurnaceItem("iceandfire:silver_ingot", 18, "input"),
+            AlloyFurnaceItem("#forge:ingots/tin", 18, "input"),
             AlloyFurnaceItem("createloveandwar:tungsten", 6, "output"),
-            AlloyFurnaceItem("create:crushed_raw_silver", 18, "output")
+            AlloyFurnaceItem("create:crushed_raw_tin", 18, "output")
         ],
         "jei": [
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(2, "kubejs:ammonia"),
             AlloyFurnaceItem("createloveandwar:crushed_tungsten", 54, "input"),
-            AlloyFurnaceItem("iceandfire:silver_ingot", 18, "input"),
+            AlloyFurnaceItem("#forge:ingots/tin", 18, "input"),
             AlloyFurnaceItem("createloveandwar:tungsten", 6, "output"),
-            AlloyFurnaceItem("create:crushed_raw_silver", 18, "output"),
+            AlloyFurnaceItem("create:crushed_raw_tin", 18, "output"),
             AlloyFurnaceFluid("kubejs:ammonia", 2)
         ]
     }).id("dut_create:alloy_furnace/tungsten")
@@ -999,19 +957,19 @@ ServerEvents.recipes(event => {
             AlloyFurnaceCommand2,
             AlloyFurnaceReplace(3, "kubejs:ammonia"),
             AlloyFurnaceItem("createloveandwar:crushed_tungsten", 32, "input"),
-            AlloyFurnaceItem("iceandfire:silver_ingot", 18, "input"),
+            AlloyFurnaceItem("#forge:ingots/tin", 18, "input"),
             AlloyFurnaceItemNBT("input", "kubejs:matrix_2", 1, '{matrix:[[[3,7],[0,0]],[[0,-2],[0,1]]]}'),
             AlloyFurnaceItem("createloveandwar:tungsten", 8, "output"),
-            AlloyFurnaceItem("create:crushed_raw_silver", 18, "output")
+            AlloyFurnaceItem("create:crushed_raw_tin", 18, "output")
         ],
         "jei": [
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(3, "kubejs:ammonia"),
             AlloyFurnaceItem("createloveandwar:crushed_tungsten", 32, "input"),
-            AlloyFurnaceItem("iceandfire:silver_ingot", 18, "input"),
+            AlloyFurnaceItem("#forge:ingots/tin", 18, "input"),
             AlloyFurnaceItemNBT("input", "kubejs:matrix_2", 1, '{matrix:[[[3,7],[0,0]],[[0,-2],[0,1]]]}'),
             AlloyFurnaceItem("createloveandwar:tungsten", 8, "output"),
-            AlloyFurnaceItem("create:crushed_raw_silver", 18, "output"),
+            AlloyFurnaceItem("create:crushed_raw_tin", 18, "output"),
             AlloyFurnaceFluid("kubejs:ammonia", 3)
         ]
     }).id("dut_create:alloy_furnace/tungsten/matrix")
@@ -1156,4 +1114,5 @@ ServerEvents.recipes(event => {
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
         "fire_dragon_blood")
+
 })

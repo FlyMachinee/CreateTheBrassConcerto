@@ -1,6 +1,5 @@
 ServerEvents.recipes(event => {
-  const TradingStationStructure =
-  {
+  const TradingStationStructure = {
     "type": "custommachinery:structure",
     "pattern": [
       [
@@ -56,6 +55,12 @@ ServerEvents.recipes(event => {
     },
     "jei": true
   }
+  const TradingStationCommon = {
+    "type": "custommachinery:fluid",
+    "mode": "input",
+    "fluid": "kubejs:hydrofluid",
+    "amount": 1
+  }
   function TradingStationFluid(fluid, amount, mode) {
     return ({
       "type": "custommachinery:fluid",
@@ -79,6 +84,24 @@ ServerEvents.recipes(event => {
       "slot": "filter"
     })
   }
+
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:trading_station",
+    "time": 1,
+    "error": true,
+    "hidden": true,
+    "priority": 1,
+    "requirements": [
+      TradingStationStructure,
+      {
+        "type": "custommachinery:fluid",
+        "mode": "output",
+        "fluid": "kubejs:hydrofluid",
+        "amount": 1000
+      }
+    ]
+  }).id("dut_create:trading_station/fluid")
   //硬币存入与取出
   function TradingStationCoin(i) {
     event.custom({
@@ -89,7 +112,7 @@ ServerEvents.recipes(event => {
       "hidden": false,
       "priority": 1,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFluid("kubejs:slime_coin", i.value, "output"),
         TradingStationItem(i.id, 1, "input")
       ],
@@ -102,7 +125,7 @@ ServerEvents.recipes(event => {
       "hidden": true,
       "priority": 2,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFluid("kubejs:slime_coin", i.value * 64, "output"),
         TradingStationItem(i.id, 64, "input")
       ],
@@ -115,7 +138,7 @@ ServerEvents.recipes(event => {
       "hidden": false,
       "priority": 3,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFliter(i.id),
         TradingStationFluid("kubejs:slime_coin", i.value, "input"),
         TradingStationItem(i.id, 1, "output")
@@ -129,7 +152,7 @@ ServerEvents.recipes(event => {
       "hidden": true,
       "priority": 4,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFliter(i.id),
         TradingStationFluid("kubejs:slime_coin", i.value * 64, "input"),
         TradingStationItem(i.id, 64, "output")
@@ -156,7 +179,7 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 1,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFluid("kubejs:slime_coin", inputItem.value, "output")
       ].concat([TradingStationItem(inputItem.id, inputItem.amount, "input")]),
     }).id("dut_create:trading_station/selling/item/" + inputItem.id.split(":")[1])
@@ -169,7 +192,7 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 1,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFluid("kubejs:slime_coin", inputFluid.value, "output")
       ].concat([TradingStationFluid(inputFluid.id, inputFluid.amount, "input")]),
     }).id("dut_create:trading_station/selling/fluid/" + inputFluid.id.split(":")[1])
@@ -178,7 +201,6 @@ ServerEvents.recipes(event => {
     { "id": "minecraft:iron_block", "amount": 64, "value": 45 },
     { "id": "minecraft:copper_block", "amount": 64, "value": 45 },
     { "id": "minecraft:gold_block", "amount": 64, "value": 45 },
-    { "id": "create:zinc_block", "amount": 64, "value": 45 },
     { "id": "minecraft:redstone_block", "amount": 64, "value": 75 },
     { "id": "minecraft:glowstone", "amount": 64, "value": 75 },
     { "id": "create:andesite_alloy_block", "amount": 64, "value": 75 },
@@ -186,7 +208,6 @@ ServerEvents.recipes(event => {
     { "id": "minecraft:slime_block", "amount": 64, "value": 60 },
     { "id": "minecraft:netherite_block", "amount": 64, "value": 7500 },
     { "id": "ad_astra:steel_block", "amount": 64, "value": 13500 },
-    { "id": "iceandfire:silver_block", "amount": 64, "value": 90 },
     { "id": "kubejs:tin_block", "amount": 64, "value": 45 },
     { "id": "create:experience_block", "amount": 64, "value": 45 },
     { "id": "minecraft:hay_block", "amount": 64, "value": 60 },
@@ -272,7 +293,7 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 3,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFliter(inputItem.id),
         TradingStationFluid("kubejs:slime_coin", inputItem.value, "input")
       ].concat([TradingStationItem(inputItem.id, inputItem.amount, "output")]),
@@ -286,7 +307,7 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 3,
       "requirements": [
-        TradingStationStructure,
+        TradingStationCommon,
         TradingStationFliter(inputFluid.bucket),
         TradingStationFluid("kubejs:slime_coin", inputFluid.value, "input")
       ].concat([TradingStationFluid(inputFluid.id, inputFluid.amount, "output")]),
@@ -298,10 +319,8 @@ ServerEvents.recipes(event => {
     { "id": "minecraft:iron_block", "amount": 64, "value": 60 },
     { "id": "minecraft:copper_block", "amount": 64, "value": 60 },
     { "id": "minecraft:gold_block", "amount": 64, "value": 60 },
-    { "id": "create:zinc_block", "amount": 64, "value": 60 },
     { "id": "create:andesite_alloy_block", "amount": 64, "value": 100 },
     { "id": "create:brass_block", "amount": 64, "value": 100 },
-    { "id": "iceandfire:silver_block", "amount": 64, "value": 120 },
     { "id": "kubejs:tin_block", "amount": 64, "value": 60 },
     { "id": "kubejs:large_fries", "amount": 64, "value": 240 },
     { "id": "iceandfire:dragon_meal", "amount": 64, "value": 400 },

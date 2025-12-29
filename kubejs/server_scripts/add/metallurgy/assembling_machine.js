@@ -445,10 +445,26 @@ ServerEvents.recipes(event => {
       AssemblingMachineEnergy(),
       AssemblingMachineItem("create:copper_sheet", 16, "input"),
       AssemblingMachineItem("kubejs:polymer_ingot", 16, "input"),
-      AssemblingMachineItem("createaddition:zinc_sheet", 16, "input"),
+      AssemblingMachineItem("#forge:plates/gold", 16, "input"),
       AssemblingMachineItem("createaddition:capacitor", 32, "output")
     ],
   }).id("dut_create:assembling_machine/capacitor")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:assembling_machine",
+    "time": 20,
+    "error": true,
+    "priority": 1,
+    "requirements": [
+      AssemblingMachineStructure,
+      AssemblingMachineEnergy(),
+      AssemblingMachineItem("create:brass_sheet", 20, "input"),
+      AssemblingMachineItem("create:copper_sheet", 16, "input"),
+      AssemblingMachineItem("#forge:plates/gold", 16, "input"),
+      AssemblingMachineFluid("vintageimprovements:sulfuric_acid", 3000),
+      AssemblingMachineItem("createaddition:modular_accumulator", 4, "output")
+    ],
+  }).id("dut_create:assembling_machine/modular_accumulator")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -816,7 +832,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineEnergy(),
       AssemblingMachineDisk("kubejs:tin_hard_disk", 1024),
       AssemblingMachineItem("kubejs:circuit_board", 45, "input"),
-      AssemblingMachineItem("#forge:plates/zinc", 30, "input"),
+      AssemblingMachineItem("#forge:plates/gold", 30, "input"),
       AssemblingMachineFluid("kubejs:tin", 1350, "input"),
       AssemblingMachineItem("kubejs:efficiency_module", 3, "output")
     ],
@@ -864,7 +880,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineEnergy(),
       AssemblingMachineDisk("kubejs:aluminum_hard_disk", 1),
       AssemblingMachineItem("kubejs:circuit_board", 45, "input"),
-      AssemblingMachineItem("#forge:plates/zinc", 30, "input"),
+      AssemblingMachineItem("#forge:plates/gold", 30, "input"),
       AssemblingMachineFluid("kubejs:tin", 1350, "input"),
       AssemblingMachineItem("kubejs:efficiency_module", 3, "output")
     ],
@@ -948,22 +964,6 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("createdieselgenerators:huge_diesel_engine", 1, "output")
     ],
   }).id("dut_create:assembling_machine/huge_diesel_engine")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:assembling_machine",
-    "time": 20,
-    "error": true,
-    "priority": 1,
-    "requirements": [
-      AssemblingMachineStructure,
-      AssemblingMachineEnergy(),
-      AssemblingMachineItem("create:brass_sheet", 20, "input"),
-      AssemblingMachineItem("create:copper_sheet", 16, "input"),
-      AssemblingMachineItem("createaddition:zinc_sheet", 16, "input"),
-      AssemblingMachineFluid("vintageimprovements:sulfuric_acid", 3000),
-      AssemblingMachineItem("createaddition:modular_accumulator", 4, "output")
-    ],
-  }).id("dut_create:assembling_machine/modular_accumulator")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -1102,6 +1102,5 @@ ServerEvents.recipes(event => {
   //CoinMix("kubejs:coin_gold", "kubejs:coin_diamond")
   //CoinMix("kubejs:coin_diamond", "kubejs:coin_emerald")
   //CoinMix("kubejs:coin_emerald", "kubejs:coin_netherite")
-
 
 })

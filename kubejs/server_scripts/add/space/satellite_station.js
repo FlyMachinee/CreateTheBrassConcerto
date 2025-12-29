@@ -401,7 +401,7 @@ ServerEvents.recipes(event => {
     SatelliteStationItem("create:crushed_raw_copper", 56, "output"),
     SatelliteStationItemChance("create:crushed_raw_copper", 36, "output", 0.5),
     SatelliteStationItem("minecraft:calcite", 24, "output"),
-    SatelliteStationItemChance("minecraft:dripstone_block", 32, "output", 0.5)
+    SatelliteStationItemChance("kubejs:sulphur", 48, "output", 0.5)
   ])
   SatelliteStationMining("create:crushed_raw_gold", 1, 8, [
     SatelliteStationBiome,
@@ -409,13 +409,6 @@ ServerEvents.recipes(event => {
     SatelliteStationItemChance("create:crushed_raw_gold", 36, "output", 0.5),
     SatelliteStationItem("minecraft:diorite", 24, "output"),
     SatelliteStationItemChance("minecraft:quartz", 48, "output", 0.5)
-  ])
-  SatelliteStationMining("create:crushed_raw_zinc", 1, 8, [
-    SatelliteStationBiome,
-    SatelliteStationItem("create:crushed_raw_zinc", 52, "output"),
-    SatelliteStationItemChance("create:crushed_raw_zinc", 36, "output", 0.5),
-    SatelliteStationItem("minecraft:tuff", 24, "output"),
-    SatelliteStationItemChance("kubejs:sulphur", 48, "output", 0.5)
   ])
   SatelliteStationMining("create:crushed_raw_tin", 1, 8, [
     SatelliteStationBiome,
@@ -437,7 +430,7 @@ ServerEvents.recipes(event => {
     SatelliteStationItem("kubejs:aluminite", 36, "output"),
     SatelliteStationItemChance("kubejs:aluminite", 24, "output", 0.5),
     SatelliteStationItem("kubejs:salt", 16, "output"),
-    SatelliteStationItemChance("create:crushed_raw_silver", 24, "output", 0.5)
+    SatelliteStationItem("minecraft:tuff", 24, "output")
   ])
   SatelliteStationMining("kubejs:crushed_coal", 2, 8, [
     SatelliteStationBiome,

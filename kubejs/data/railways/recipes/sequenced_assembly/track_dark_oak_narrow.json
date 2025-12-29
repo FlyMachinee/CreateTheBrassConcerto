@@ -34,9 +34,7 @@
           {
             "tag": "railways:internal/nuggets/iron_nuggets"
           },
-          {
-            "tag": "railways:internal/nuggets/zinc_nuggets"
-          }
+          {"item": "kubejs:tin_nugget"}
         ]
       ],
       "results": [

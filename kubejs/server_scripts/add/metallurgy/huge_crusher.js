@@ -242,7 +242,7 @@ ServerEvents.recipes(event => {
 
     CrusherCommon([{ id: "createloveandwar:raw_tungsten", count: 32 }], [{ id: "createloveandwar:crushed_tungsten", count: 40 }], "tungsten")
 
-    CrusherCommon([{ id: "#create:stone_types/asurine", count: 64 }], [{ id: "create:crushed_raw_zinc", count: 80 }], "zinc")
+    CrusherCommon([{ id: "kubejs:new_asurine", count: 64 }], [{ id: "kubejs:new_crushed_raw_zinc", count: 80 }], "zinc")
 
     CrusherCommon([{ id: "#create:stone_types/crimsite", count: 64 }], [{ id: "create:crushed_raw_iron", count: 80 }], "iron")
 

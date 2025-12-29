@@ -62,8 +62,20 @@ ServerEvents.recipes(event => {
         },
         "result": { "item": "design_decor:aluminium_boiler" }
     }).id("dut_create:aluminium_boiler")
+    event.custom({
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+            "#",
+            "&",
+            "#"
+        ],
+        "key": {
+            "#": { "item": "kubejs:new_zinc_sheet"},
+            "&": { "item": "create:fluid_tank" }
+        },
+        "result": { "item": "design_decor:zinc_boiler" }
+    }).id("dut_create:zinc_boiler")
     craftBoiler("forge:plates/industrial_iron", 'design_decor:industrial_iron_boiler')
-    craftBoiler("forge:plates/zinc", 'design_decor:zinc_boiler')
     craftBoiler("forge:plates/brass", 'design_decor:brass_boiler')
     craftBoiler("forge:plates/gold", 'design_decor:gold_boiler')
     craftBoiler("forge:plates/copper", 'design_decor:copper_boiler')

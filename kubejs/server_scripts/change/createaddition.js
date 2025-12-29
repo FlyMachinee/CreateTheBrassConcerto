@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'createaddition:compacting/biomass_pellet' })
   event.remove({ id: 'createaddition:crafting/diamond_grit_sandpaper' })
   event.remove({ id: "createaddition:crushing/diamond" })
-
+  event.remove({ id: 'createaddition:liquid_burning/biofuel' })
   event.custom({
     "type": "minecraft:crafting_shapeless",
     "ingredients": [{ "item": "createaddition:biomass_pellet_block" }],
@@ -63,7 +63,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:deploying",
         "ingredients": [{ "item": "kubejs:incomplete_copper_box" },
-        { "tag": "forge:storage_blocks/zinc" }],
+        { "tag": "forge:storage_blocks/gold" }],
         "results": [{ "item": "kubejs:incomplete_copper_box" }]
       },
       {
@@ -151,7 +151,7 @@ ServerEvents.recipes(event => {
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "key": {
-      "A": { "tag": "forge:plates/zinc" },
+      "A": { "tag": "forge:plates/gold" },
       "B": { "tag": "dut_create:ingots/polymer" },
       "C": { "tag": "forge:plates/copper" }
     },

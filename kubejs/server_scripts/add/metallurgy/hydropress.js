@@ -323,8 +323,8 @@ ServerEvents.recipes(event => {
     PlatePress("create:brass_block", "create:brass_sheet", 81)
     FluidPress("kubejs:brass", "create:brass_ingot")
 
-    PlatePress("create:zinc_block", "createaddition:zinc_sheet", 81)
-    FluidPress("kubejs:zinc", "create:zinc_ingot")
+    PlatePress("kubejs:new_zinc_block", "kubejs:new_zinc_sheet", 81)
+    FluidPress("kubejs:new_zinc", "kubejs:new_zinc_ingot")
 
     PlatePress("minecraft:iron_block", "create:iron_sheet", 81)
     FluidPress("kubejs:iron", "minecraft:iron_ingot")

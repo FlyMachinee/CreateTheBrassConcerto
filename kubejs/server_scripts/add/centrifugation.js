@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:brass", "amount": 810 }
         ],
         "results": [
-            { "fluid": "kubejs:zinc", "amount": 270 },
+            { "fluid": "kubejs:gold", "amount": 270 },
             { "fluid": "kubejs:copper", "amount": 270 }
         ],
         "processingTime": 300

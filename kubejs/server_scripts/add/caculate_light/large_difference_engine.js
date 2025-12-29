@@ -249,7 +249,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
       LargeDifferenceEngineFluid("kubejs:kibibyte", 1, "input"),
       LargeDifferenceEngineItem("kubejs:tin_hard_disk", 1)
     ],
@@ -262,9 +261,8 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
-      LargeDifferenceEngineFluid("kubejs:kibibyte", 8, "input"),
-      LargeDifferenceEngineItem("kubejs:tin_hard_disk", 8)
+      LargeDifferenceEngineFluid("kubejs:kibibyte", 16, "input"),
+      LargeDifferenceEngineItem("kubejs:tin_hard_disk", 16)
     ],
   }).id("dut_create:large_difference_engine/tin_1")
   event.custom({
@@ -275,7 +273,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
       LargeDifferenceEngineFluid("kubejs:kibibyte", 1024, "input"),
       LargeDifferenceEngineItem("kubejs:tin_hard_disk", 1024)
     ],
@@ -288,7 +285,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
       LargeDifferenceEngineFluid("kubejs:mebibyte", 1, "input"),
       LargeDifferenceEngineItem("kubejs:tin_hard_disk", 1024)
     ],
@@ -301,9 +297,8 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
-      LargeDifferenceEngineFluid("kubejs:mebibyte", 32, "input"),
-      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 32)
+      LargeDifferenceEngineFluid("kubejs:mebibyte", 1, "input"),
+      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 1)
     ],
   }).id("dut_create:large_difference_engine/aluminum")
   event.custom({
@@ -314,9 +309,8 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
-      LargeDifferenceEngineFluid("kubejs:mebibyte", 64, "input"),
-      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 64)
+      LargeDifferenceEngineFluid("kubejs:mebibyte", 16, "input"),
+      LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 16)
     ],
   }).id("dut_create:large_difference_engine/aluminum_1")
   event.custom({
@@ -340,7 +334,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
       LargeDifferenceEngineFluid("kubejs:gibibyte", 1, "input"),
       LargeDifferenceEngineItem("kubejs:aluminum_hard_disk", 1024)
     ],
@@ -353,7 +346,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
       LargeDifferenceEngineFluid("kubejs:gibibyte", 1, "input"),
       LargeDifferenceEngineItem("kubejs:brass_hard_disk", 1)
     ],
@@ -366,7 +358,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
       LargeDifferenceEngineFluid("kubejs:gibibyte", 8, "input"),
       LargeDifferenceEngineItem("kubejs:brass_hard_disk", 8)
     ],
@@ -379,7 +370,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      LargeDifferenceEngineStructure,
       LargeDifferenceEngineFluid("kubejs:gibibyte", 1024, "input"),
       LargeDifferenceEngineItem("kubejs:brass_hard_disk", 1024)
     ],

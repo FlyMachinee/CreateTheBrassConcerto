@@ -68,6 +68,14 @@ ServerEvents.recipes(event => {
   event.remove({ id: "create:filling/gunpowder" })
   event.remove({ id: "create:mixing/andesite_alloy" })
   event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
+  
+  //黄铜板
+  event.custom({
+    "type": "create:compacting",
+    "ingredients": [{ "tag": "forge:plates/gold" },
+    { "tag": "forge:plates/copper" }],
+    "results": [{ "item": "create:brass_sheet", "count": 2 }]
+  }).id("dut_create:brass_sheet")
   //电子管
   event.custom({
     "type": "create:filling",
@@ -104,7 +112,7 @@ ServerEvents.recipes(event => {
     "type": "create:mixing",
     "ingredients": [
       { "amount": 270, "fluid": "kubejs:copper" },
-      { "amount": 270, "fluid": "kubejs:zinc" }
+      { "amount": 270, "fluid": "kubejs:gold" }
     ],
     "results": [
       { "amount": 540, "fluid": "kubejs:brass" }

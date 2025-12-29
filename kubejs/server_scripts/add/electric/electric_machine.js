@@ -69,7 +69,7 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "kubejs:incomplete_brass_box" },
-                    { "tag": "forge:plates/silver" }
+                    { "tag": "forge:plates/tin" }
                 ],
                 "results": [{ "item": "kubejs:incomplete_brass_box" }]
             },

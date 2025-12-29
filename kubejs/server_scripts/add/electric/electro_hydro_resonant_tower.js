@@ -500,19 +500,17 @@ ServerEvents.recipes(event => {
   ResonantTowerRecipe([
     ResonantTowerDimension('ad_astra:moon'),
     ResonantTowerEnergyInput(6144),
-    ResonantTowerItem("kubejs:carbon_electrode", 4, "input"),
+    ResonantTowerItem("kubejs:carbon_electrode", 8, "input"),
     ResonantTowerItem("iceandfire:ectoplasm", 24, "input"),
     ResonantTowerItem("iceandfire:ghost_ingot", 1, "input"),
-    ResonantTowerFluid("kubejs:silver", 500, "input"),
     ResonantTowerFluid("kubejs:electro_hydro", 750, "output"),
   ], "electro_hydro_ghost", 60)
   ResonantTowerRecipeLightning([
     ResonantTowerDimension('ad_astra:moon'),
     ResonantTowerEnergyInput(4096),
-    ResonantTowerItem("kubejs:carbon_electrode", 4, "input"),
+    ResonantTowerItem("kubejs:carbon_electrode", 8, "input"),
     ResonantTowerItem("iceandfire:ectoplasm", 24, "input"),
     ResonantTowerItem("iceandfire:ghost_ingot", 1, "input"),
-    ResonantTowerFluid("kubejs:silver", 500, "input"),
     ResonantTowerFluid("kubejs:electro_hydro", 750, "output"),
   ], "electro_hydro_ghost", 120)
   ResonantTowerRecipe([

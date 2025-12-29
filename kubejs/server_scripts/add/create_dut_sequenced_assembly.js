@@ -197,7 +197,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:deploying",
         "ingredients": [{ "item": "kubejs:incomplete_iron_hand" },
-        { "tag": "forge:nuggets/iron" }],
+        { "tag": "dut_create:craftnugget" }],
         "results": [{ "item": "kubejs:incomplete_iron_hand" }]
       }
     ],
@@ -487,8 +487,7 @@ ServerEvents.recipes(event => {
         "type": "create:deploying",
         "ingredients": [
           { "item": "kubejs:incomplete_bearing" },
-          [{ "tag": "forge:nuggets/iron" },
-          { "tag": "forge:nuggets/zinc" }]
+          { "tag": "dut_create:craftnugget" }
         ],
         "results": [{ "item": "kubejs:incomplete_bearing" }]
       },

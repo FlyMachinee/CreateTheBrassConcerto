@@ -21,6 +21,18 @@ let multiblock_display_list=[
     "kubejs:construction_station"
   ]
 ServerEvents.tags('item', event => {
+  event.remove("forge:plates/silver",["vintageimprovements:silver_sheet"])
+  event.remove("forge:storage_blocks/silver",'iceandfire:silver_block')
+  event.remove("forge:nuggets/silver",'iceandfire:silver_nugget')
+  event.remove("forge:ingots/silver",'iceandfire:silver_ingot')
+  event.remove("forge:plates/zinc",['createadditon:zinc_sheet',"vintageimprovements:zinc_sheet"])
+  event.remove("forge:storage_blocks/zinc",'create:zinc_block')
+  event.remove("forge:nuggets/zinc",'create:zinc_nugget')
+  event.remove("forge:ingots/zinc",'create:zinc_ingot')
+  event.remove("create:stone_types/asurine",'create:asurine')
+  event.add("create:stone_types/asurine",["kubejs:new_asurine"])
+  event.remove("railways:internal/nuggets/zinc_nuggets",["create:zinc_nugget"])
+  event.add("railways:internal/nuggets/zinc_nuggets",["kubejs:tin_nugget"])
   //需要显示结构的多方块机器
   event.add('dut_create:multiblock_display', multiblock_display_list)
   //steel
@@ -224,7 +236,7 @@ ServerEvents.tags('block', event => {
     'storagedrawers:framed_compacting_drawers_2', 'storagedrawers:framed_compacting_drawers_3', 'storagedrawers:framed_controller', 'storagedrawers:framed_trim', 'storagedrawers:framed_framed_controller_io', 'storagedrawers:framed_full_drawers_1', 'storagedrawers:framed_full_drawers_2', 'storagedrawers:framed_full_drawers_4',
   ])
   //扳手
-  event.add('create:wrench_pickup', ["#dut_create:drawers", "#dut_create:minecrafts", "#dut_create:supplemantaries", "enchantinginfuser:enchanting_infuser", "enchantinginfuser:advanced_enchanting_infuser", 'storagedrawers:controller', '#storagedrawers:trim', "ad_astra:desh_fluid_pipe", "ad_astra:fluid_pipe_duct", "ad_astra:cable_duct", "ad_astra:ostrum_fluid_pipe", "ad_astra:oxygen_sensor", "ad_astra:oxygen_distributor", "ad_astra:coal_generator", "ad_astra:desh_cable", "ad_astra:steel_cable", "ad_astra:cryo_freezer", "ad_astra:gravity_normalizer", "design_decor:iron_railing", "design_decor:zinc_railing", "design_decor:copper_railing", "design_decor:brass_railing", "design_decor:copper_lamp", "design_decor:brass_lamp", "design_decor:zinc_lamp", "design_decor:metal_support", "design_decor:diagonal_metal_support", "design_decor:stepped_lever", "design_decor:breaker_switch", "design_decor:copper_light", "design_decor:brass_light", "design_decor:zinc_light", "kubejs:condenser", "kubejs:hydropress", "kubejs:alloy_furnace", "kubejs:huge_crusher", "kubejs:shaft_furnace", "kubejs:infinity_fetching_pool", "kubejs:emergency_industrial_platform", "kubejs:culture_bin", "kubejs:carbon_electrode", "kubejs:electrolytic_cell", "kubejs:steam_generator", 'kubejs:battery_slot', "kubejs:assemblying_machine", "farmersdelight:basket", "create:schematicannon", "create:schematic_table", "create_things_and_misc:sprinkler", "create_things_and_misc:sprinkleron", "beyonddimensions:net_interface"
+  event.add('create:wrench_pickup', ["#dut_create:drawers", "#dut_create:minecrafts", "#dut_create:supplemantaries", "enchantinginfuser:enchanting_infuser", "enchantinginfuser:advanced_enchanting_infuser", 'storagedrawers:controller', '#storagedrawers:trim', "ad_astra:desh_fluid_pipe", "ad_astra:fluid_pipe_duct", "ad_astra:cable_duct", "ad_astra:ostrum_fluid_pipe", "ad_astra:oxygen_sensor", "ad_astra:oxygen_distributor", "ad_astra:coal_generator", "ad_astra:desh_cable", "ad_astra:steel_cable", "ad_astra:cryo_freezer", "ad_astra:gravity_normalizer", "design_decor:iron_railing", "design_decor:zinc_railing", "design_decor:copper_railing", "design_decor:brass_railing", "design_decor:copper_lamp", "design_decor:brass_lamp", "design_decor:zinc_lamp", "design_decor:metal_support", "design_decor:diagonal_metal_support", "design_decor:stepped_lever", "design_decor:breaker_switch", "design_decor:copper_light", "design_decor:brass_light", "design_decor:zinc_light", "kubejs:condenser", "kubejs:hydropress", "kubejs:alloy_furnace", "kubejs:huge_crusher", "kubejs:shaft_furnace", "kubejs:infinity_fetching_pool", "kubejs:emergency_industrial_platform", "kubejs:culture_bin", "kubejs:carbon_electrode", "kubejs:electrolytic_cell", "kubejs:steam_generator", 'kubejs:battery_slot', "kubejs:assemblying_machine", "farmersdelight:basket", "create:schematicannon", "create:schematic_table", "create_things_and_misc:sprinkler", "create_things_and_misc:sprinkleron", "beyonddimensions:net_interface","storagedrawers:framed_trim","storagedrawers:framed_controller","storagedrawers:framed_controller_io"
   ])
 
 })
@@ -292,9 +304,10 @@ ServerEvents.tags('worldgen/biome', event => {
   event.add('dut_create:burnable_ice', ["#minecraft:is_deep_ocean", '#dut_create:moon'])
 })
 ServerEvents.tags('fluid', event => {
+  event.remove('minecraft:water', ["createaddition:bioethanol"])
   event.add('dut_create:fries_oil', ['kubejs:refined_oil', '#forge:crude_oil', '#forge:lube_oil', '#forge:gasoline', '#forge:biodiesel', '#forge:kerosene', '#forge:diesel'])
   event.add('dut_create:carrier_rocket_fuel', ['#forge:biodiesel', '#forge:diesel'])
-  event.add('dut_create:superheated_fuel', ["kubejs:lube_oil", "kubejs:ammonia", "createdieselgenerators:biodiesel", "createaddition:bioethanol"])
+  event.add('dut_create:superheated_fuel', ["kubejs:lube_oil", "kubejs:ammonia", "createdieselgenerators:biodiesel"])
   event.add('dut_create:tier_1_fuel', ['kubejs:natural_gas', '#forge:biodiesel', '#forge:diesel'])
   //ad_astra
   event.remove('ad_astra:destroyed_in_space', ["minecraft:lantern"])
@@ -323,7 +336,7 @@ ServerEvents.tags('fluid', event => {
   event.add('dut_create:polymer', 'kubejs:polymer')
   event.add('dut_create:ethylene', 'kubejs:ethylene')
   //超级加热液体
-  event.add('dut_create:superheated', ["kubejs:lube_oil", "kubejs:ammonia", "createdieselgenerators:biodiesel", "createaddition:bioethanol"])
+  event.add('dut_create:superheated', ["kubejs:lube_oil", "kubejs:ammonia", "createdieselgenerators:biodiesel"])
   //可无限液体
   event.add('create:bottomless/allow', ['kubejs:saline_water', 'minecraft:milk', 'kubejs:cryogen'])
 })

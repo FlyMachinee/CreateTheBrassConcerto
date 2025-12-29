@@ -45,10 +45,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "create:zinc_ingot"
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:iron_ingot"
         },
         {

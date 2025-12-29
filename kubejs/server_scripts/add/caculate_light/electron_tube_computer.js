@@ -123,7 +123,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      ElectronTubeComputerStructure,
       ElectronTubeComputerFluid("kubejs:kibibyte", 1, "input"),
       ElectronTubeComputerItem("kubejs:tin_hard_disk", 1)
     ],
@@ -136,7 +135,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      ElectronTubeComputerStructure,
       ElectronTubeComputerFluid("kubejs:kibibyte", 64, "input"),
       ElectronTubeComputerItem("kubejs:tin_hard_disk", 64)
     ],
@@ -149,7 +147,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      ElectronTubeComputerStructure,
       ElectronTubeComputerFluid("kubejs:kibibyte", 1024, "input"),
       ElectronTubeComputerItem("kubejs:tin_hard_disk", 1024)
     ],
@@ -162,7 +159,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      ElectronTubeComputerStructure,
       ElectronTubeComputerFluid("kubejs:mebibyte", 1, "input"),
       ElectronTubeComputerItem("kubejs:aluminum_hard_disk", 1)
     ],
@@ -175,7 +171,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      ElectronTubeComputerStructure,
       ElectronTubeComputerFluid("kubejs:mebibyte", 8, "input"),
       ElectronTubeComputerItem("kubejs:aluminum_hard_disk", 8)
     ],
@@ -188,7 +183,6 @@ ServerEvents.recipes(event => {
     "hidden": true,
     "error": true,
     "requirements": [
-      ElectronTubeComputerStructure,
       ElectronTubeComputerFluid("kubejs:mebibyte", 1024, "input"),
       ElectronTubeComputerItem("kubejs:aluminum_hard_disk", 1024)
     ],

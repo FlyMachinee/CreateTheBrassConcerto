@@ -241,13 +241,11 @@ ServerEvents.recipes(event => {
 
   BlastingCompressorPlate("create:brass_block", "create:brass_sheet", 81)
 
-  BlastingCompressorPlate("create:zinc_block", "createaddition:zinc_sheet", 81)
+  BlastingCompressorPlate("kubejs:new_zinc_block", "kubejs:new_zinc_sheet", 81)
 
   BlastingCompressorPlate("minecraft:iron_block", "create:iron_sheet", 81)
 
   BlastingCompressorPlate("minecraft:gold_block", "create:golden_sheet", 81)
-
-  BlastingCompressorPlate("iceandfire:silver_block", "vintageimprovements:silver_sheet", 81)
 
   BlastingCompressorPlate("#dut_create:copper_block", "create:copper_sheet", 81)
 

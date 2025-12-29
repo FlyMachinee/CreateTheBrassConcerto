@@ -16,23 +16,33 @@ ServerEvents.recipes(event => {
     "result": {"item": "kubejs:tin_ingot","count": 9}
   }).id("dut_create:tin/block_to_ingot")
   event.custom({
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-      "###",
-      "###",
-      "###"
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"},
+      {"tag": "forge:ingots/tin"}
     ],
-    "key": {"#": {"tag": "forge:ingots/tin"}},
     "result": {"item": "kubejs:tin_block"}
   }).id("dut_create:tin/ingot_to_block")
   event.custom({
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-      "###",
-      "###",
-      "###"
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"},
+      {"tag": "forge:nuggets/tin"}
     ],
-    "key": {"#": {"tag": "forge:nuggets/tin"}},
     "result": {"item": "kubejs:tin_ingot"}
   }).id("dut_create:tin/nugget_to_ingot")
   //压板

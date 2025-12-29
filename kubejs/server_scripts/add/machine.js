@@ -171,22 +171,15 @@ ServerEvents.recipes(event => {
         "show_notification": true
     }).id("dut_create:culture_bin")
     //合金炉核心
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "tag": "forge:storage_blocks/tin" },
-            "B": { "item": "kubejs:tin_hard_disk", "nbt": { Damage: 0 } },
-            "D": { "item": "create:blaze_burner" },
-            "C": { "tag": "forge:ingots/industrial_iron" }
-        },
-        "pattern": [
-            "CCC",
-            "BDB",
-            "AAA"
-        ],
-        "result": { "item": "kubejs:alloy_furnace" },
-        "show_notification": true
+    event.shaped("kubejs:alloy_furnace", [
+        "CCC",
+        "BDB",
+        "AAA"
+    ], {
+        A: "#forge:storage_blocks/tin",
+        B: Item.of("kubejs:tin_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "create:blaze_burner",
+        C: "#forge:ingots/industrial_iron"
     }).id("dut_create:alloy_furnace")
     //大型粉碎机核心
     event.custom({
@@ -208,23 +201,16 @@ ServerEvents.recipes(event => {
         "show_notification": true
     }).id("dut_create:huge_crusher")
     //爆破压缩机核心
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "tag": "forge:plates/brass" },
-            "B": { "item": "kubejs:electric_gear" },
-            "C": { "item": "kubejs:tin_hard_disk", "nbt": { Damage: 0 } },
-            "D": { "item": "create:gantry_carriage" },
-            "E": { "item": "create:precision_mechanism" }
-        },
-        "pattern": [
-            "AAA",
-            "CDC",
-            "EBE"
-        ],
-        "result": { "item": "kubejs:blasting_compressor" },
-        "show_notification": true
+    event.shaped("kubejs:blasting_compressor", [
+        "AAA",
+        "CDC",
+        "EBE"
+    ], {
+        A: "#forge:plates/brass",
+        B: "kubejs:electric_gear",
+        C: Item.of("kubejs:tin_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "create:gantry_carriage",
+        E: "create:precision_mechanism"
     }).id("dut_create:blasting_compressor")
     //大气冷凝机
     event.custom({
@@ -246,23 +232,16 @@ ServerEvents.recipes(event => {
         "show_notification": true
     }).id("dut_create:condenser")
     //无限取液池
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:tin_hard_disk", "nbt": { Damage: 0 } },
-            "B": { "item": "createaddition:capacitor" },
-            "C": { "tag": "forge:plates/brass" },
-            "D": { "item": "kubejs:magenta_circuit_board" },
-            "E": { "tag": "forge:ingots/industrial_iron" },
-        },
-        "pattern": [
-            "CCC",
-            "BDB",
-            "EAE"
-        ],
-        "result": { "item": "kubejs:infinity_fetching_pool" },
-        "show_notification": true
+    event.shaped("kubejs:infinity_fetching_pool", [
+        "CCC",
+        "BDB",
+        "EAE"
+    ], {
+        C: "#forge:plates/brass",
+        B: "createaddition:capacitor",
+        A: Item.of("kubejs:tin_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "kubejs:magenta_circuit_board",
+        E: "#forge:ingots/industrial_iron"
     }).id("dut_create:infinity_fetching_pool")
     //工业高炉核心
     event.custom({
@@ -426,22 +405,15 @@ ServerEvents.recipes(event => {
         "show_notification": true
     }).id("dut_create:emergency_industrial_platform_lime_block1")
     //电子管计算机
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:circuit_board" },
-            "E": { "item": "kubejs:tin_hard_disk", "nbt": { Damage: 0 } },
-            "D": { "item": "kubejs:electric_gear" },
-            "F": { "tag": "forge:storage_blocks/tin" }
-        },
-        "pattern": [
+    event.shaped("kubejs:electron_tube_computer", [
             "AAA",
             "EDE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:electron_tube_computer" },
-        "show_notification": true
+    ], {
+        A: "kubejs:circuit_board",
+        E: Item.of("kubejs:tin_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "kubejs:electric_gear",
+        F: "#forge:storage_blocks/tin"
     }).id("dut_create:electron_tube_computer")
     //蓝图构筑站
     event.custom({
@@ -462,170 +434,107 @@ ServerEvents.recipes(event => {
         "show_notification": true
     }).id("dut_create:blueprint_builder")
     //大型差分机
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:light_composite_plate" },
-            "E": { "item": "kubejs:aluminum_hard_disk", "nbt": { Damage: 0 } },
-            "D": { "item": "kubejs:differential" },
-            "F": { "tag": "forge:storage_blocks/steel" }
-        },
-        "pattern": [
+    event.shaped("kubejs:large_difference_engine", [
             "AAA",
             "EDE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:large_difference_engine" },
-        "show_notification": true
+    ], {
+        A: "kubejs:light_composite_plate",
+        E: Item.of("kubejs:aluminum_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "kubejs:differential",
+        F: "#forge:storage_blocks/steel"
     }).id("dut_create:large_difference_engine")
     //组装机控制器
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "create:stockpile_switch" },
-            "B": { "item": "kubejs:magenta_circuit_board" },
-            "D": { "item": "kubejs:tin_hard_disk", "nbt": { Damage: 0 } },
-            "E": { "item": "createaddition:modular_accumulator" },
-            "F": { "tag": "forge:storage_blocks/industrial_iron" }
-        },
-        "pattern": [
+    event.shaped("kubejs:assembling_machine", [
             "ABA",
             "EDE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:assembling_machine" },
-        "show_notification": true
+    ], {
+        A: "create:stockpile_switch",
+        B: "kubejs:magenta_circuit_board",
+        D: Item.of("kubejs:tin_hard_disk", { Damage: 0 }).weakNBT(),
+        E: "createaddition:modular_accumulator",
+        F: "#forge:storage_blocks/industrial_iron"
     }).id("dut_create:assembling_machine")
     //构筑站控制器
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:assembling_machine" },
-            "B": { "item": "create:mechanical_arm" },
-            "D": { "tag": "forge:storage_blocks/desh" },
-            "E": { "item": "kubejs:aluminum_hard_disk", "nbt": { Damage: 0 } },
-            "F": { "tag": "forge:storage_blocks/industrial_iron" }
-        },
-        "pattern": [
+    event.shaped("kubejs:construction_station", [
             "ABA",
             "DED",
             "FFF"
-        ],
-        "result": { "item": "kubejs:construction_station" },
-        "show_notification": true
+    ], {
+        A: "kubejs:assembling_machine",
+        B: "create:mechanical_arm",
+        E: Item.of("kubejs:aluminum_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "#forge:storage_blocks/desh",
+        F: "#forge:storage_blocks/industrial_iron"
     }).id("dut_create:construction_station")
     //轨道空投炮
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:filling_machine" },
-            "B": { "item": "kubejs:satellite" },
-            "D": { "tag": "forge:storage_blocks/steel" },
-            "E": { "item": "kubejs:brass_hard_disk", "nbt": { Damage: 0 } },
-            "F": { "tag": "forge:storage_blocks/desh" }
-        },
-        "pattern": [
+    event.shaped("kubejs:airdrop_station", [
             "DBD",
             "EAE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:airdrop_station" },
-        "show_notification": true
+    ], {
+        A: "kubejs:filling_machine",
+        B: "kubejs:satellite",
+        E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "#forge:storage_blocks/steel",
+        F: "#forge:storage_blocks/desh"
     }).id("dut_create:airdrop_station")
     //卫星收发站
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:electron_tube_computer" },
-            "B": { "item": "kubejs:satellite" },
-            "D": { "tag": "forge:ingots/aluminum" },
-            "E": { "item": "kubejs:brass_hard_disk", "nbt": { Damage: 0 } },
-            "F": { "tag": "forge:storage_blocks/steel" }
-        },
-        "pattern": [
+    event.shaped("kubejs:satellite_station", [
             "DBD",
             "EAE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:satellite_station" },
-        "show_notification": true
+    ], {
+        A: "kubejs:electron_tube_computer",
+        B: "kubejs:satellite",
+        E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "#forge:ingots/aluminum",
+        F: "#forge:storage_blocks/steel"
     }).id("dut_create:satellite_station")
     //火箭发射台
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:carrier_rocket" },
-            "D": { "item": "kubejs:light_composite_plate" },
-            "E": { "item": "kubejs:brass_hard_disk", "nbt": { Damage: 0 } },
-            "F": { "tag": "forge:storage_blocks/steel" }
-        },
-        "pattern": [
+    event.shaped("kubejs:launch_pad_controller", [
             "DDD",
             "EAE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:launch_pad_controller" },
-        "show_notification": true
+    ], {
+        A: "kubejs:carrier_rocket",
+        E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "kubejs:light_composite_plate",
+        F: "#forge:storage_blocks/steel"
     }).id("dut_create:launch_pad_controller")
     //电流体谐振塔
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:efficiency_module_2" },
-            "D": { "item": 'create:refined_radiance' },
-            "E": { "item": "kubejs:brass_hard_disk", "nbt": { Damage: 0 } },
-            "F": { "item": "kubejs:electrolytic_cell" }
-        },
-        "pattern": [
+    event.shaped("kubejs:electro_hydro_resonant_tower", [
             "DFD",
             "DAD",
             "DED"
-        ],
-        "result": { "item": "kubejs:electro_hydro_resonant_tower" },
-        "show_notification": true
+    ], {
+        A: "kubejs:efficiency_module_2",
+        E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "create:refined_radiance",
+        F: "kubejs:electrolytic_cell"
     }).id("dut_create:electro_hydro_resonant_tower")
     //太空电梯控制台
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:efficiency_module_2" },
-            "D": { "item": "kubejs:lime_circuit_board" },
-            "E": { "item": "kubejs:brass_hard_disk", "nbt": { Damage: 0 } },
-            "F": { "item": "kubejs:electro_hydro_capacitor" }
-        },
-        "pattern": [
+    event.shaped("kubejs:space_elevator_controller", [
             "DDD",
             "EAE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:space_elevator_controller" },
-        "show_notification": true
+    ], {
+        A: "kubejs:efficiency_module_2",
+        E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "kubejs:lime_circuit_board",
+        F: "kubejs:electro_hydro_capacitor"
     }).id("dut_create:space_elevator_controller")
     //自动化贸易终端
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:carrier_rocket" },
-            "D": { "item": "minecraft:copper_block" },
-            "E": { "item": "kubejs:brass_hard_disk", "nbt": { Damage: 0 } },
-            "F": { "item": "create:brass_block" }
-        },
-        "pattern": [
+    event.shaped("4x kubejs:trading_station", [
             "DDD",
             "EAE",
             "FFF"
-        ],
-        "result": { "item": "kubejs:trading_station", "count": 4 },
-        "show_notification": true
+    ], {
+        A: "kubejs:carrier_rocket",
+        E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
+        D: "#forge:storage_blocks/copper",
+        F: "#forge:storage_blocks/brass"
     }).id("dut_create:trading_station")
     //样本钻井
     event.custom({
@@ -655,41 +564,41 @@ ServerEvents.recipes(event => {
             "count": 1
         }).id("dut_create:machine/clearnbt/" + item.split(":")[1])
     }
-    const List=[
-    "kubejs:launch_pad_controller",
-    "kubejs:condenser",
-    "kubejs:alloy_furnace",
-    "kubejs:huge_crusher",
-    "kubejs:shaft_furnace",
-    "kubejs:infinity_fetching_pool",
-    "kubejs:electrolytic_cell",
-    "kubejs:steam_generator",
-    "kubejs:assembling_machine",
-    "kubejs:construction_station",
-    "kubejs:large_difference_engine",
-    "kubejs:electron_tube_computer",
-    "kubejs:satellite_station",
-    "kubejs:airdrop_station",
-    "kubejs:blueprint_builder",
-    "kubejs:blasting_compressor",
-    "kubejs:covariant_reactor",
-    "kubejs:space_elevator_controller",
-    "kubejs:electro_hydro_resonant_tower",
-    "kubejs:planting_tower",
-    "kubejs:trading_station",
-    "kubejs:emergency_industrial_platform",
-    "kubejs:emergency_industrial_platform_block",
-    "kubejs:emergency_industrial_platform_lime",
-    "kubejs:emergency_industrial_platform_lime_block",
-    "kubejs:emergency_industrial_platform_dark",
-    "kubejs:emergency_industrial_platform_dark_block",
-    "kubejs:battery_slot",
-    "kubejs:culture_bin",
-    "kubejs:filling_machine",
-    "kubejs:emptying_machine",
-    "kubejs:anti_warden_bomb",
-    "kubejs:redstone_radar",
-    "kubejs:cap_reaping_machine",
-    "kubejs:stem_reaping_machine"]
+    const List = [
+        "kubejs:launch_pad_controller",
+        "kubejs:condenser",
+        "kubejs:alloy_furnace",
+        "kubejs:huge_crusher",
+        "kubejs:shaft_furnace",
+        "kubejs:infinity_fetching_pool",
+        "kubejs:electrolytic_cell",
+        "kubejs:steam_generator",
+        "kubejs:assembling_machine",
+        "kubejs:construction_station",
+        "kubejs:large_difference_engine",
+        "kubejs:electron_tube_computer",
+        "kubejs:satellite_station",
+        "kubejs:airdrop_station",
+        "kubejs:blueprint_builder",
+        "kubejs:blasting_compressor",
+        "kubejs:covariant_reactor",
+        "kubejs:space_elevator_controller",
+        "kubejs:electro_hydro_resonant_tower",
+        "kubejs:planting_tower",
+        "kubejs:trading_station",
+        "kubejs:emergency_industrial_platform",
+        "kubejs:emergency_industrial_platform_block",
+        "kubejs:emergency_industrial_platform_lime",
+        "kubejs:emergency_industrial_platform_lime_block",
+        "kubejs:emergency_industrial_platform_dark",
+        "kubejs:emergency_industrial_platform_dark_block",
+        "kubejs:battery_slot",
+        "kubejs:culture_bin",
+        "kubejs:filling_machine",
+        "kubejs:emptying_machine",
+        "kubejs:anti_warden_bomb",
+        "kubejs:redstone_radar",
+        "kubejs:cap_reaping_machine",
+        "kubejs:stem_reaping_machine"]
     List.forEach(i => clearNbt(i))
 })

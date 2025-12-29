@@ -26,7 +26,7 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "kubejs:incomplete_chargeable_battery" },
-                    { "tag": "forge:plates/zinc" }
+                    { "tag": "forge:plates/gold" }
                 ],
                 "results": [{ "item": "kubejs:incomplete_chargeable_battery" }]
             },
@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
     //一次性电池
     event.custom({
         "type": "create:sequenced_assembly",
-        "ingredient": { "tag": "forge:plates/zinc", "count": 1 },
+        "ingredient": { "tag": "forge:plates/gold", "count": 1 },
         "results": [
             { "item": "kubejs:disposable_battery" }
         ],
@@ -58,28 +58,28 @@ ServerEvents.recipes(event => {
         "sequence": [
             {
                 "type": "create:filling",
-                "ingredients": [{ "item": "createaddition:zinc_sheet" },
+                "ingredients": [{ "tag": "forge:plates/gold" },
                 { "amount": 250, "fluid": "create_enchantment_industry:experience" }],
-                "results": [{ "item": "createaddition:zinc_sheet" }]
+                "results": [{ "tag": "forge:plates/gold" }]
             },
             {
                 "type": "create:deploying",
                 "ingredients": [
-                    { "item": "createaddition:zinc_sheet" },
+                    { "tag": "forge:plates/gold" },
                     { "tag": "forge:plates/copper" }
                 ],
-                "results": [{ "item": "createaddition:zinc_sheet" }]
+                "results": [{ "tag": "forge:plates/gold" }]
             },
             {
                 "type": "create:deploying",
                 "ingredients": [
-                    { "item": "createaddition:zinc_sheet" },
+                    { "tag": "forge:plates/gold" },
                     { "item": "kubejs:graphite" }
                 ],
-                "results": [{ "item": "createaddition:zinc_sheet" }]
+                "results": [{ "tag": "forge:plates/gold" }]
             }
         ],
-        "transitionalItem": { "item": "createaddition:zinc_sheet" }
+        "transitionalItem": { "tag": "forge:plates/gold" }
     }).id("dut_create:disposable_battery_from_experience")
     event.custom({
         "type": "create:sequenced_assembly",
@@ -122,7 +122,7 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "create:copper_sheet" },
-                    { "tag": "forge:plates/silver" }
+                    { "tag": "forge:plates/tin" }
                 ],
                 "results": [{ "item": "create:copper_sheet" }]
             },
@@ -136,13 +136,13 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "create:copper_sheet" },
-                    { "tag": "forge:plates/zinc" }
+                    { "tag": "forge:plates/gold" }
                 ],
                 "results": [{ "item": "create:copper_sheet" }]
             }
         ],
         "transitionalItem": { "item": "create:copper_sheet" }
-    }).id("dut_create:disposable_battery_from_zinc_silver_naoh")
+    }).id("dut_create:disposable_battery_from_gold_tin_naoh")
     event.custom({
         "type": "create:sequenced_assembly",
         "ingredient": { "item": "kubejs:incomplete_disposable_battery", "count": 1 },
@@ -155,7 +155,7 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "kubejs:incomplete_disposable_battery" },
-                    { "tag": "forge:plates/zinc" }
+                    { "tag": "forge:plates/gold" }
                 ],
                 "results": [{ "item": "kubejs:incomplete_disposable_battery" }]
             },
@@ -169,13 +169,13 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "kubejs:incomplete_disposable_battery" },
-                    { "tag": "forge:plates/silver" }
+                    { "tag": "forge:plates/tin" }
                 ],
                 "results": [{ "item": "kubejs:incomplete_disposable_battery" }]
             }
         ],
         "transitionalItem": { "item": "kubejs:incomplete_disposable_battery" }
-    }).id("dut_create:disposable_battery_from_zinc_silver_saline")
+    }).id("dut_create:disposable_battery_from_gold_tin_saline")
     //一次性电池外壳
     event.custom({
         "type": "vintageimprovements:curving",

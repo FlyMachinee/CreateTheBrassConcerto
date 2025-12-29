@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
         "heatRequirement": "heated",
         "ingredients": [
             { "fluidTag": "dut_create:ethylene", "amount": 125 },
-            { "tag": "forge:gems/sulfur" }
+            { "item": "kubejs:sulphur" }
         ],
         "results": [
             { "item": "kubejs:rubber", "count": 8 }

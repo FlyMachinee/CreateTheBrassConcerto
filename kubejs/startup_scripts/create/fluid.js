@@ -13,10 +13,9 @@ StartupEvents.registry('fluid', event => {
     event.create('tin')
         .thickTexture(0xC5E3FF)
     //熔融银
-    event.create('silver')
-        .thickTexture(0xD4FFF9)
+    //event.create('silver').thickTexture(0xD4FFF9)
     //熔融锌
-    event.create('zinc')
+    event.create('new_zinc')
         .thickTexture(0x0EFF97)
     //熔融金
     event.create('gold')

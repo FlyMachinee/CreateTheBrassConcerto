@@ -761,14 +761,13 @@ ServerEvents.recipes(event => {
     "requirements": [
       ShaftFurnaceStructure,
       ShaftFurnaceItem("createloveandwar:crushed_tungsten", 32, "input"),
-      ShaftFurnaceItem("#forge:plates/silver", 32, "input"),
       ShaftFurnaceItem("#dut_create:shaft_furnace", 3, "input"),
       ShaftFurnaceItem("minecraft:tuff", 24, "input"),
       ShaftFurnaceFluid("kubejs:muriatic_acid", 6000, "fluid", "input"),
       ShaftFurnaceFluid("kubejs:oxygen", 8000, "oxygen", "input"),
       ShaftFurnaceFluid("kubejs:ammonia", 2000, "fluid_output", "output"),
       ShaftFurnaceItem("createloveandwar:tungsten", 48, "output"),
-      ShaftFurnaceItem("create:crushed_raw_silver", 32, "output"),
+      ShaftFurnaceItem("create:crushed_raw_tin", 32, "output"),
       ShaftFurnaceItem("kubejs:diorite_alloy", 24, "output")
     ],
   }).id("dut_create:shaft_furnace/tungsten")
@@ -781,7 +780,6 @@ ServerEvents.recipes(event => {
     "requirements": [
       ShaftFurnaceStructure,
       ShaftFurnaceItem("createloveandwar:crushed_tungsten", 32, "input"),
-      ShaftFurnaceItem("#forge:ingots/silver", 24, "input"),
       ShaftFurnaceItem("#dut_create:shaft_furnace", 3, "input"),
       ShaftFurnaceItem("minecraft:tuff", 24, "input"),
       ShaftFurnaceItemNBT("input", "kubejs:matrix_2", 1, '{matrix:[[[3,7],[0,0]],[[0,-2],[0,1]]]}'),
@@ -790,7 +788,7 @@ ServerEvents.recipes(event => {
       ShaftFurnaceFluid("kubejs:oxygen", 3000, "oxygen", "input"),
       ShaftFurnaceFluid("kubejs:ammonia", 3000, "fluid_output", "output"),
       ShaftFurnaceItem("createloveandwar:tungsten", 64, "output"),
-      ShaftFurnaceItem("create:crushed_raw_silver", 24, "output"),
+      ShaftFurnaceItem("create:crushed_raw_tin", 24, "output"),
       ShaftFurnaceItem("kubejs:diorite_alloy", 36, "output")
     ],
   }).id("dut_create:shaft_furnace/tungsten/matrix")

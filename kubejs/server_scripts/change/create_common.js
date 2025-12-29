@@ -22,19 +22,22 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "item": "minecraft:obsidian" }
     ],
-    "results": [{ "item": "create:sturdy_sheet","count":2 }]
+    "results": [{ "item": "create:sturdy_sheet", "count": 2 }]
   }).id("dut_create:sturdy_sheet")
   //安山合金
   event.custom({
     "type": "create:item_application",
     "ingredients": [
       { "item": "minecraft:andesite" },
-      [{ "item": "minecraft:iron_nugget" }, { "item": "create:zinc_nugget" }]
+      { "tag": "dut_create:craftnugget" }
     ],
     "results": [{ "item": "create:andesite_alloy" }]
   }).id("dut_create:andesite_alloy_manual_only")
-  event.remove({id:"dut_create:andesite_alloy_manual_only_using_deployer"})
+  event.remove({ id: "dut_create:andesite_alloy_manual_only_using_deployer" })
   //event.recipes.create.item_application("create:andesite_alloy",["minecraft:andesite",["minecraft:iron_nugget", "create:zinc_nugget"]] ).id("dut_create:andesite_alloy_manual_only")
+  //玫瑰石英灯
+  event.remove({ id: "create:crafting/kinetics/rose_quartz_lamp" })
+  event.shapeless("create:rose_quartz_lamp", ["#forge:ingots/tin", "minecraft:redstone", "create:polished_rose_quartz"]).id("dut_create:rose_quartz_lamp")
   //横向流体储罐
   event.remove({ id: "create_connected:crafting/kinetics/fluid_vessel_from_conversion" })
   event.custom({
@@ -139,13 +142,6 @@ ServerEvents.recipes(event => {
     },
     "show_notification": true
   }).id("dut_create:deployer")
-  //黄铜板
-  event.custom({
-    "type": "create:compacting",
-    "ingredients": [{ "tag": "forge:plates/zinc" },
-    { "tag": "forge:plates/copper" }],
-    "results": [{ "item": "create:brass_sheet", "count": 2 }]
-  }).id("dut_create:brass_sheet")
   //显示连接器
   event.remove({ output: 'create:display_link', not: { mod: 'kubejs' } })
   event.custom({

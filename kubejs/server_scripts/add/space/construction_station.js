@@ -655,7 +655,7 @@ ServerEvents.recipes(event => {
       ConstructionStationEnergy(),
       ConstructionStationItem("kubejs:empty_parts_box", 16, "input"),
       ConstructionStationItem("#forge:plates/tungsten", 16, "input"),
-      ConstructionStationItem("#forge:plates/silver", 16, "input"),
+      ConstructionStationItem("#forge:plates/tin", 16, "input"),
       ConstructionStationItem("kubejs:light_composite_plate", 16, "input"),
       ConstructionStationItem("kubejs:parts_box", 24, "output")
     ],

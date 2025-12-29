@@ -114,17 +114,6 @@ ServerEvents.recipes(event => {
   //皓蓝石粉碎
   event.remove({ id: 'create:crushing/asurine' })
   event.remove({ id: 'create:crushing/asurine_recycling' })
-  event.custom({
-    "type": "create:crushing",
-    "ingredients": [
-      { "tag": "create:stone_types/asurine" }
-    ],
-    "processingTime": 250,
-    "results": [
-      { "item": "create:crushed_raw_zinc" },
-      { "chance": 0.25, "item": "create:crushed_raw_zinc" }
-    ]
-  }).id("dut_create:ore_production/asurine")
   //绯红岩粉碎
   event.remove({ id: 'create:crushing/crimsite' })
   event.remove({ id: 'create:crushing/crimsite_recycling' })
@@ -180,24 +169,11 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:clay_ball", "chance": 0.125 }
     ]
   }).id("dut_create:ore_production/limestone")
-  //皓蓝石
-  event.custom({
-    "type": "create:compacting",
-    "ingredients": [
-      { "tag": "forge:plates/zinc" },
-      { "item": "minecraft:gravel" },
-      { "amount": 250, "fluid": "minecraft:water" }
-    ],
-    "results": [
-      { "item": "create:asurine", "count": 2 }
-    ]
-  }).id("dut_create:ore_production/zinc")
   //绯红岩
   event.custom({
     "type": "create:compacting",
     "ingredients": [
       { "tag": "forge:plates/iron" },
-      { "item": "minecraft:gravel" },
       { "amount": 250, "fluid": "minecraft:lava" }
     ],
     "results": [
@@ -209,7 +185,6 @@ ServerEvents.recipes(event => {
     "type": "create:compacting",
     "ingredients": [
       { "tag": "forge:plates/gold" },
-      { "item": "minecraft:gravel" },
       { "amount": 250, "fluid": "minecraft:lava" }
     ],
     "results": [
@@ -221,7 +196,6 @@ ServerEvents.recipes(event => {
     "type": "create:compacting",
     "ingredients": [
       { "tag": "forge:plates/copper" },
-      { "item": "minecraft:gravel" },
       { "amount": 250, "fluid": "minecraft:water" }
     ],
     "results": [
@@ -233,8 +207,7 @@ ServerEvents.recipes(event => {
     "type": "create:compacting",
     "ingredients": [
       { "tag": "forge:plates/tin" },
-      { "item": "minecraft:gravel" },
-      { "amount": 250, "fluid": "minecraft:lava" }
+      { "amount": 250, "fluid": "minecraft:water" }
     ],
     "results": [
       { "item": "kubejs:raw_tin", "count": 2 }
@@ -263,25 +236,8 @@ ServerEvents.recipes(event => {
       { "chance": 0.025, "item": "minecraft:tuff" }
     ]
   }).id("dut_create:ore_production/crushed_raw_iron_wash")
-  event.custom({
-    "type": "minecraft:smelting",
-    "category": "blocks",
-    "cookingtime": 200,
-    "ingredient": {
-      "item": "create:crushed_raw_silver"
-    },
-    "result": "iceandfire:silver_ingot"
-  }).id("dut_create:ore_production/silver")
-  event.custom({
-    "type": "create:splashing",
-    "ingredients": [
-      { "item": "create:crushed_raw_silver" }
-    ],
-    "results": [
-      { "count": 9, "item": "iceandfire:silver_nugget" }
-    ]
-  }).id("dut_create:ore_production/crushed_raw_silver_wash")
 
+  event.remove({ id: "create:splashing/crushed_raw_zinc" })
   event.remove({ id: "create:splashing/iceandfire/crushed_raw_silver" })
   event.remove({ id: "create:splashing/crushed_raw_gold" })
   event.custom({
@@ -294,17 +250,6 @@ ServerEvents.recipes(event => {
       { "chance": 0.025, "item": "minecraft:quartz" }
     ]
   }).id("dut_create:ore_production/crushed_raw_gold_wash")
-  event.remove({ id: "create:splashing/crushed_raw_zinc" })
-  event.custom({
-    "type": "create:splashing",
-    "ingredients": [
-      { "item": "create:crushed_raw_zinc" }
-    ],
-    "results": [
-      { "count": 9, "item": "create:zinc_nugget" },
-      { "chance": 0.05, "item": "minecraft:gunpowder" }
-    ]
-  }).id("dut_create:ore_production/crushed_raw_zinc_wash")
   event.remove({ id: "create:splashing/crushed_raw_copper" })
   event.custom({
     "type": "create:splashing",
@@ -387,10 +332,8 @@ ServerEvents.recipes(event => {
       { "chance": 0.25, "item": "minecraft:flint" },
       { "chance": 0.1, "item": "minecraft:gold_nugget" },
       { "chance": 0.1, "item": "create:copper_nugget" },
-      { "chance": 0.1, "item": "create:zinc_nugget" },
       { "chance": 0.1, "item": "minecraft:iron_nugget" },
-      { "chance": 0.1, "item": "kubejs:tin_nugget" },
-      { "chance": 0.1, "item": "iceandfire:silver_nugget" }
+      { "chance": 0.1, "item": "kubejs:tin_nugget" }
     ]
   }).id("dut_create:ore_production/tuff")
   //铝土

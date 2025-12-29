@@ -120,7 +120,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "create:mixing",
     "ingredients": [
-      { "tag": "forge:ingots/zinc" },
+      { "tag": "forge:ingots/gold" },
       { "tag": "forge:ingots/copper" },
       { "item": "kubejs:blaze_mycoplasma" }
     ],

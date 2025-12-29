@@ -19,6 +19,18 @@
     "components": [
         {
             "type": "custommachinery:fluid",
+            "capacity": 1000,
+            "id": "fluid",
+            "maxInput": 0,
+            "maxOutput": 0,
+            "filter": [ "kubejs:hydrofluid"],
+            "whitelist": true,
+            "config":{
+                "default": "none"
+            }
+        },
+        {
+            "type": "custommachinery:fluid",
             "capacity": 2147483647,
             "id": "coin",
             "mode": "both",

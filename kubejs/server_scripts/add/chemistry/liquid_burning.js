@@ -91,15 +91,4 @@ ServerEvents.recipes(event => {
     ]
   }
   ).id("dut_create:liquid_burning/gasoline")
-  //生物乙醇
-  event.remove({ id: 'createaddition:liquid_burning/biofuel' })
-  event.custom({
-    "type":"createaddition:liquid_burning",
-    "input": {
-          "fluidTag": "forge:biofuel",
-          "amount": 1000
-    },
-    "burnTime": 8000,
-    "superheated": true
-  }).id("dut_create:liquid_burning/biofuel")
 })

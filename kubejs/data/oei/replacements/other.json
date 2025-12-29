@@ -178,6 +178,12 @@
     },
     {
         "matchItems": [
+            "vintageimprovements:tin_sheet"
+        ],
+        "resultItems": "kubejs:tin_sheet"
+    },
+    {
+        "matchItems": [
             "sophisticatedbackpacks:stack_upgrade_tier_2",
             "sophisticatedbackpacks:stack_upgrade_tier_3"
         ],

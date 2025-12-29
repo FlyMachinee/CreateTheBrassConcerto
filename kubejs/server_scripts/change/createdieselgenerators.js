@@ -5,14 +5,14 @@ ServerEvents.recipes(event => {
   //event.remove({input: ''})
   //event.custom({})
   //沥青
-  event.remove({id:"createdieselgenerators:mixing/asphalt_block"})
-  event.remove({id:"createdieselgenerators:crafting/asphalt_block"})
-  
+  event.remove({ id: "createdieselgenerators:mixing/asphalt_block" })
+  event.remove({ id: "createdieselgenerators:crafting/asphalt_block" })
+
   event.custom({
     "type": "create:mixing",
     "heatRequirement": "heated",
     "ingredients": [
-      {"fluid": "createloveandwar:bitumen_fluid","amount": 125},
+      { "fluid": "createloveandwar:bitumen_fluid", "amount": 125 },
       { "item": "minecraft:sand" },
       { "item": "minecraft:sand" },
       { "item": "minecraft:sand" },
@@ -23,7 +23,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:gravel" }
     ],
     "results": [
-      { "item": "createdieselgenerators:asphalt_block","count":8 }
+      { "item": "createdieselgenerators:asphalt_block", "count": 8 }
     ]
   }).id("dut_create:mixing/asphalt_block")
   //生物柴油
@@ -85,20 +85,20 @@ ServerEvents.recipes(event => {
   //木棍
   event.custom({
     "type": "create:cutting",
-    "ingredients": [{"item": "createdieselgenerators:chip_wood_block"}],
+    "ingredients": [{ "item": "createdieselgenerators:chip_wood_block" }],
     "processingTime": 60,
     "results": [
-      {"item": "minecraft:stick","count":6}
+      { "item": "minecraft:stick", "count": 6 }
     ]
   }).id('dut_create:stick_from_chip_wood_block')
-  function Planks(i){
+  function Planks(i) {
     event.custom({
-    "type": "create:compacting",
-    "ingredients": [{ "item": "createdieselgenerators:chip_wood_block" }],
-    "results": [{ "item": "minecraft:"+i+"_planks","count":6}],
-  }).id("dut_create:compacting/"+i+"_planks_from_woodchip")
+      "type": "create:compacting",
+      "ingredients": [{ "item": "createdieselgenerators:chip_wood_block" }],
+      "results": [{ "item": "minecraft:" + i + "_planks", "count": 6 }],
+    }).id("dut_create:compacting/" + i + "_planks_from_woodchip")
   }
-  const WoodType=[
+  const WoodType = [
     "spruce",
     "oak",
     "birch",
@@ -110,16 +110,16 @@ ServerEvents.recipes(event => {
     "warped",
     "crimson"
   ]
-  for (let i of WoodType){
+  for (let i of WoodType) {
     Planks(i)
   }
-  
+
   event.custom({
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       { "item": "createdieselgenerators:chip_wood_block" }
     ],
-    "result": { "item": "createdieselgenerators:wood_chip" , "count": 4 }
+    "result": { "item": "createdieselgenerators:wood_chip", "count": 4 }
   }).id("dut_create:wood_chip_split")
   //原油探测器
   event.remove({ output: 'createdieselgenerators:oil_scanner', not: { mod: 'kubejs' } })
@@ -142,7 +142,9 @@ ServerEvents.recipes(event => {
       "count": 1
     }
   }).id('dut_create:oil_scanner')
-  event.remove({ id: 'createdieselgenerators:mechanical_crafting/pumpjack_crank', not: { mod: 'kubejs' } })
+  event.remove({ id: 'createdieselgenerators:mechanical_crafting/pumpjack_crank' })
+  event.remove({ id: 'createdieselgenerators:crafting/pumpjack_bearing' })
+  event.remove({ id: 'createdieselgenerators:crafting/pumpjack_head' })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "pattern": [
@@ -151,13 +153,41 @@ ServerEvents.recipes(event => {
       "ADA"
     ],
     "key": {
-      "A": { "tag": "forge:ingots/zinc" },
+      "A": { "tag": "forge:ingots/tin" },
       "B": { "item": "create:andesite_alloy" },
       "C": { "item": "kubejs:bearing" },
       "D": { "item": "kubejs:mechanical_core" }
     },
-    "result": {"item": "createdieselgenerators:pumpjack_crank"}
+    "result": { "item": "createdieselgenerators:pumpjack_crank" }
   }).id('dut_create:pumpjack_crank')
+  event.custom({
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "BAB",
+      "ACA",
+      "BAB"
+    ],
+    "key": {
+      "A": { "tag": "forge:ingots/tin" },
+      "B": { "item": "create:andesite_alloy" },
+      "C": { "item": "create:mechanical_bearing" },
+    },
+    "result": { "item": "createdieselgenerators:pumpjack_bearing" }
+  }).id('dut_create:pumpjack_bearing')
+  event.custom({
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A A",
+      "BCB",
+      "A A"
+    ],
+    "key": {
+      "B": { "tag": "forge:ingots/tin" },
+      "A": { "item": "create:andesite_alloy" },
+      "C": { "tag": "dut_create:belt" },
+    },
+    "result": { "item": "createdieselgenerators:pumpjack_head" }
+  }).id('dut_create:pumpjack_head')
   //密封液罐
   event.custom({
     "type": "minecraft:crafting_shaped",
@@ -283,23 +313,41 @@ ServerEvents.recipes(event => {
         "type": "create:deploying",
         "ingredients": [{ "item": "kubejs:incomplete_engine_piston" },
         [{ "item": "create:shaft" },
-        { "item": "createaddition:iron_rod" },{"item":"ad_astra:iron_rod"}]],
+        { "item": "createaddition:iron_rod" }, { "item": "ad_astra:iron_rod" }]],
         "results": [{ "item": "kubejs:incomplete_engine_piston" }]
       },
       {
         "type": "create:deploying",
         "ingredients": [{ "item": "kubejs:incomplete_engine_piston" },
-        [{ "tag": "forge:nuggets/zinc" },
-        { "tag": "forge:nuggets/iron" }]],
+        { "tag": "dut_create:craftnugget" }],
         "results": [{ "item": "kubejs:incomplete_engine_piston" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_engine_piston" },
-          { "fluidTag": "dut_create:plantoil", "amount": 125 }],
+        { "fluidTag": "dut_create:plantoil", "amount": 125 }],
         "results": [{ "item": "kubejs:incomplete_engine_piston" }]
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_engine_piston" }
   }).id('dut_create:engine_pisto')
+  
+  //涡轮增压
+  event.remove({ id:'createdieselgenerators:crafting/engine_turbocharger' })
+  event.custom({
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ABC",
+      "DED",
+      "ABA"
+    ],
+    "key": {
+      "A": { "item": "create:andesite_alloy" },
+      "B": { "tag": "forge:ingots/tin" },
+      "C": { "item": "create:fluid_pipe" },
+      "D": { "tag": "forge:plates/iron" },
+      "E": { "item": "create:propeller" }
+    },
+    "result": {"item": "createdieselgenerators:engine_turbocharger"}
+  }).id('dut_create:engine_turbocharger')
 })
