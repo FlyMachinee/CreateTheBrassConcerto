@@ -1,0 +1,51 @@
+[
+    {
+        "match": [
+            "create:zinc_block"
+        ],
+        "result": "minecraft:gold_block"
+    },
+    {
+        "match": [
+            "create:zinc_ore"
+        ],
+        "result": "minecraft:gold_ore"
+    },
+    {
+        "match": [
+            "create:deepslate_zinc_ore"
+        ],
+        "result": "minecraft:deepslate_gold_ore"
+    },
+    {
+        "match": [
+            "create:raw_zinc_block"
+        ],
+        "result": "minecraft:raw_gold_block"
+    },
+    {
+        "match": [
+            "create:asurine"
+        ],
+        "result": "create:ochrum"
+    },
+    {
+        "match": [
+            "iceandfire:silver_pile"
+        ],
+        "result": "minecraft:air"
+    },
+    {
+        "match": [
+            "iceandfire:silver_ore",
+            "iceandfire:deepslate_silver_ore"
+        ],
+        "result": "minecraft:granite"
+    },
+    {
+        "match": [
+            "iceandfire:silver_block"
+        ],
+        "result": "kubejs:tin_block"
+    }
+]
