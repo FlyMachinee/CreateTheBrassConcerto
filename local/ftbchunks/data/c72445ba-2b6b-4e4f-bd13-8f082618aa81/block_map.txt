@@ -52,12 +52,14 @@
 #D31607 minecraft:andesite_wall
 #B1BAA9 kubejs:anti_warden_bomb
 #DBECBF minecraft:anvil
+#9CBB60 design_decor:arrow_down_sign
 #E83B14 iceandfire:ash
 #ADF429 supplementaries:ash
 #E95F01 supplementaries:ash_bricks_wall
 #57AA77 createdieselgenerators:asphalt_block
 #DD1724 createdieselgenerators:asphalt_slab
 #51E3A1 kubejs:assembling_machine
+#6E69B5 create:asurine
 #0D47EE minecraft:azalea_leaves
 #E88056 design_decor:b_sign
 #4A6CCF sophisticatedbackpacks:backpack
@@ -331,6 +333,7 @@
 #6D805D supplementaries:deepslate_lamp
 #9E0209 minecraft:deepslate_lapis_ore
 #60355C minecraft:deepslate_redstone_ore
+#A532A0 iceandfire:deepslate_silver_ore
 #4DC58C minecraft:deepslate_tile_slab
 #C2A7DC minecraft:deepslate_tile_stairs
 #4F6F1C minecraft:deepslate_tile_wall
@@ -401,6 +404,7 @@
 #D02DBB kubejs:end_air_fluid
 #1FA6D3 minecraft:end_gateway
 #889C43 minecraft:end_portal
+#622CB1 minecraft:end_portal_frame
 #A8CFF4 minecraft:end_stone
 #0EF243 minecraft:end_stone_bricks
 #138909 supplementaries:end_stone_lamp
@@ -434,6 +438,7 @@
 #67D1EF fluiddrawerslegacy:fluiddrawer_4
 #5F7D4C create:flywheel
 #787736 storagedrawers:framed_compacting_drawers_2
+#16665D storagedrawers:framed_controller
 #0B35E5 storagedrawers:framed_full_drawers_1
 #0B35E6 storagedrawers:framed_full_drawers_2
 #A56058 create:framed_glass
@@ -527,6 +532,7 @@
 #01D558 ad_astra:iron_panel
 #DCE40C ad_astra:iron_pillar
 #C0A499 ad_astra:iron_plateblock
+#7B0767 ad_astra:iron_plating
 #9B3648 ad_astra:iron_plating_slab
 #9BDF98 ad_astra:iron_plating_stairs
 #C79B75 design_decor:iron_railing
@@ -706,6 +712,7 @@
 #392E46 minecraft:oak_wood
 #188EC9 minecraft:observer
 #4A5E4E minecraft:obsidian
+#5C837A create:ochrum
 #AD93A8 design_decor:ochrum_crushing_wheel
 #66575D ad_astra:oil
 #2CA11D createdieselgenerators:oil_barrel
@@ -800,7 +807,9 @@
 #39D68A create:radial_chassis
 #868785 minecraft:rail
 #7C5ED3 create:railway_casing
+#079058 minecraft:raw_gold_block
 #D5E58A createloveandwar:raw_tungsten_block
+#B9BCAD create:raw_zinc_block
 #025A66 minecraft:red_concrete
 #C43B2F design_decor:red_container
 #EA01C1 interiors:red_floor_chair
@@ -875,7 +884,9 @@
 #F68259 minecraft:shroomlight
 #30862B minecraft:shulker_box
 #AE1C97 kubejs:silver
+#197D79 iceandfire:silver_block
 #E1234E iceandfire:silver_ore
+#3907C2 iceandfire:silver_pile
 #7760DE minecraft:skeleton_skull
 #2AA99B farmersdelight:skillet
 #B9A552 ad_astra:sky_stone
@@ -988,6 +999,7 @@
 #BE5BDB minecraft:stripped_acacia_wood
 #D1E517 minecraft:stripped_birch_wood
 #B001A7 minecraft:stripped_dark_oak_wood
+#83D6FD minecraft:stripped_jungle_log
 #77039A minecraft:stripped_jungle_wood
 #4CB25E minecraft:stripped_mangrove_wood
 #3B1D89 minecraft:stripped_oak_log
