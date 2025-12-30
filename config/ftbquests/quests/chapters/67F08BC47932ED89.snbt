@@ -1002,7 +1002,7 @@
 			y: 0.0d
 		}
 		{
-			description: ["皓蓝石是锌无限增殖的方式"]
+			description: ["[ \"你可以在\", { \"text\": \"工厂的脉络\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"5F5A767FA46F447C\" } }, \"一节查看安山合金的批量生产方式！\" ]"]
 			id: "69E7E664297C1386"
 			rewards: [
 				{
@@ -1263,7 +1263,7 @@
 			tasks: [{
 				count: 1024L
 				id: "71F7A7712554D83C"
-				item: "createaddition:zinc_sheet"
+				item: "create:andesite_alloy"
 				type: "item"
 			}]
 			x: 2.0d
@@ -1273,7 +1273,7 @@
 			description: [
 				"你可以使用冷冻剂和岩浆搅拌来获取大量黑曜石！"
 				""
-				"或者也可以向黑曜石粉注入水和岩浆！"
+				"或者也可以向黑曜石注入水和岩浆！"
 			]
 			id: "45E0470B21054974"
 			rewards: [

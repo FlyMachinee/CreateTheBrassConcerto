@@ -972,31 +972,6 @@
 		}
 		{
 			disable_toast: true
-			id: "1DAAD6272DDB47DB"
-			rewards: [
-				{
-					count: 2
-					id: "3A0BB11169A59DC9"
-					item: "kubejs:coin_iron"
-					type: "item"
-				}
-				{
-					id: "7519DF296F7DDCFA"
-					item: "kubejs:coin_gold"
-					type: "item"
-				}
-			]
-			tasks: [{
-				count: 64L
-				id: "4CA474C1F87F7F8F"
-				item: "iceandfire:silver_block"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 0.5d
-		}
-		{
-			disable_toast: true
 			id: "3DB5E168452AE929"
 			rewards: [
 				{

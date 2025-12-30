@@ -328,7 +328,7 @@ ServerEvents.recipes(event => {
       "S": "design_decor:copper_boiler",
       "B": "design_decor:iron_railing",
       "G": "design_decor:diagonal_metal_support",
-      "L": "createaddition:liquid_blaze_burner[blaze=seething]"
+      "L": "createaddition:liquid_blaze_burner{fuelLevel:2}"
     },
     "jei": true
   }

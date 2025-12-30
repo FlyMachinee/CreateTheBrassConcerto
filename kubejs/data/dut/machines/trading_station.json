@@ -62,7 +62,7 @@
             "maxOutput": 0,
             "unique": true,
             "filter": [
-                "kubejs:slime_coin"
+                "kubejs:slime_coin","kubejs:hydrofluid"
             ],
             "whitelist": false
         },
@@ -75,7 +75,7 @@
             "maxOutput": 0,
             "unique": true,
             "filter": [
-                "kubejs:slime_coin"
+                "kubejs:slime_coin","kubejs:hydrofluid"
             ],
             "whitelist": false
         },
@@ -87,7 +87,7 @@
             "maxInput": 0,
             "maxOutput": 96000,
             "filter": [
-                "kubejs:slime_coin"
+                "kubejs:slime_coin","kubejs:hydrofluid"
             ],
             "whitelist": false
         },

@@ -12,12 +12,21 @@
 			description: [
 				"&a众所周知，在黄铜协奏曲中，九级锅炉是一种&r&6《前期要花很久才能搞出来的东西》&r&a——那么你最短能用时多久能开始实现它呢？&r"
 				""
-				"&e在生存模式，困难难度下，不得开启作弊，不得额外更改FTB模组设置，不得额外添加模组，不得调整随机刻速度，不得开启流动岩浆转化为岩浆源，不得使用蓝图炮打印带吸管的燃烧室，以建造一台可稳定运行的九级锅炉为结束标志&r"
+				"&e在生存模式，困难难度下，不得开启作弊，不得额外更改FTB模组设置，不得额外添加模组，不得调整随机刻速度，不得开启流动岩浆转化为岩浆源，不得使用蓝图炮打印带吸管的燃烧室，以建造一台可稳定运行并输出147456su应力的九级锅炉为结束标志&r"
 				""
-				"将存档向作者提交或在B站等平台提供全程录像，你的纪录将被放入此处！此挑战不接收时长超过30分钟的纪录！以下是通关列表:"
+				"将存档向作者提交或在B站等平台提供全程录像，你的纪录将被放入此处！此挑战不接收时长超过20分钟的纪录！以下是通关列表:"
 				""
 				"&a1.ShiroishiKaori&r "
 				"-&6RSG&r&e-版本Beta0.7.0，00:13:48&r"
+				""
+				"&a2.ShiroishiKaori&r "
+				"-&6RSG&r&e-版本Beta0.7.0，00:10:55&r"
+				""
+				"&a3.shelwind(cildiant)&r "
+				"-&6RSG&r&e-版本Beta0.7.0，00:08:58&r"
+				""
+				"&a特别纪录.ShadoWistle&r "
+				"-&6？&r&e-发现了一个描述bug：如果仅要求九级炉，那么不需要蒸汽引擎，只需要蒸汽笛即可&r"
 			]
 			icon: "supplementaries:faucet"
 			id: "2BC66362B16161D4"
@@ -41,9 +50,9 @@
 				""
 				"&a附加规则：&r&e无&r"
 				""
-				"&a时长：&r&e00:13:48&r"
+				"&a时长：&r&e00:08:58&r"
 				""
-				"&a留言：&r&e你包前期做锅炉太难了😭😭😭&r"
+				"&a留言：&r&e就算是只有个位数fps我也要玩cbc😭&r"
 			]
 			icon: {
 				Count: 1
@@ -54,16 +63,16 @@
 					}
 					SkullOwner: {
 						Id: [I;
-							533719536
-							809910477
-							-1875772702
-							-1149295883
+							1643871415
+							832521044
+							-1592285802
+							924786261
 						]
-						Name: "ShiroishiKaori"
+						Name: "shelwind"
 						Properties: {
 							textures: [{
-								Signature: "UQIuIpRE/4h4mDK8C5mgbAbpyllvcODjnM3SLFpYSSuB+Ts9EivnQLdVCk22xlWSBVaOWJwNlnWumXijDa2veFFu0oQ0PL/Rupprt4EZJXhXxl4sIw5FatAMo4pH7C2I23gugBCn8o7+B3HNBrPzWfsMUWLdn+Iis34/cZynre0G1/4MYwOo2JbXSL/4zkyE1n4l/rR6Rehjc0oQxDWZH0RYwL1ovuhaSdO2E2q9a03m/hdhoBNFzxvNiOCMW0KD4DdDVjowvqvNRLKQafYxWa5N6oXxpw8s4izRBT3xCxavRp0GQX+GgoGNqsolGQonpGHe7+i1GFD/VlHBJO2Zzc1s7iWwDVsgJ1oL+ZWyt4M2YnlUmUXKgVOnXXrbsUTYT2HuQ/PvEbZwBD3yX0ZDwAFVS/gWlMMWGzZeCL5qJ8p6h+zzSDBAPSmxNpwNDad8/uVCzsxOBZRh7158YdaFbOISiRRTMqhy7KUtBHkFqUM9ncKfebDBplltdf6ssZLaULo0nhtqStbMjBQI81sciHrTJihvLJe27NWQt+Xd9+1B2KGVUwGNvbjWx39WD47Vmm509C8G84NEMnYJd/gcl8tkbC+QpKXc/HQCpZg2+kWgfW6zeQs2o1yJWn8X+QpZA9ItEK/6RZPYmY1uVRa3GsPVgbBJQI07NE5cZz329Qs="
-								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2NjIzODU3NTI0MSwKICAicHJvZmlsZUlkIiA6ICIxZmNmZTlmMDMwNDY0MGNkOTAzMWZhZTJiYjdmMjJmNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaGlyb2lzaGlLYW9yaSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iNzBkNmQ4Njg3OWM3NDMyZWYxZDgwOGJiZDczY2E4Mzc0YTBjY2E4Y2U1MDY1OTFhOWUyOWYyMjg1MjMxNWY1IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="
+								Signature: "ycnRBw6Y03j58yB5RNRsF4zut/P7lb8Z73PeUc+LaIyU6/MjISsmuR982UkJEtrm9aDqeuJQ9Ryj0FvIlCGfbtGkLi76duxnQ45e4gbL0kYfX6mif32aaKO7zX5zOn++pU75LhxJNIZc6B449cbkAL5cqdVZszHAIm6XeZncoEuaSnhgsPqV3TaZpGpdaf7v830d8rEvYus0/OOuWWr3DBB9Qfwk/FxrVPwmPtRnz1+RlNQ7ghPeqSFoYpv9gq5rOLN279v8wHRHrxMTw02uVs16zzTCYC+AK09fCpu9HBUK88ri20DqPZL0SeNi2AZAVR4bIkYQYSRE7axk6WuNCT4SP+4yZPSDHqqHhZIDlmo91tbPNt0OSVw46bRsft07HZOprHWtHNcqpBgjl9vWvGJyntZeezI0VJE/wcL4y8jKGJuxzLcrjZZnzaY5f9CSdd6NXK0h1FuxzEmxeb0lGoUgos5uYT9wBIeyJLyUt1mXdqJMP2LOJ1fDO9N5OHAAeInOV1/3U+esu4zaPa1bXfQgofAUKbIE7VHNFJj2mY2txbehstzeK/zc6yHfAVRtsQf92dHkTYFRAtha+1jQdeHsQRYgRYVXnhBlKJsrqIVtQbsaBagcBgNv/rmlMpBQj1L0tIgKsKzcbe7vfJ2dQj/HhlS8K6+O+qVrQNkXTGM="
+								Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1OTI3OTc0MjExMSwKICAicHJvZmlsZUlkIiA6ICI2MWZiN2NiNzMxOWY0MzU0YTExN2E1OTYzNzFmMWU1NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJzaGVsd2luZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80MGJiZjMyNjZjYzM5ZTE3NDk4YzBmYWJlYzcwZTI2MDc1MTI1YzNhMzA5MGJiZmE5MDYxZjRhZTYzOTRmOGY2IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
 							}]
 						}
 					}
@@ -72,7 +81,7 @@
 			id: "59452E3FE8C4AE81"
 			size: 1.25d
 			tasks: [{
-				id: "712C173F0BFA5A21"
+				id: "60527027D49EA741"
 				item: {
 					Count: 1
 					id: "minecraft:player_head"
@@ -82,16 +91,16 @@
 						}
 						SkullOwner: {
 							Id: [I;
-								533719536
-								809910477
-								-1875772702
-								-1149295883
+								1643871415
+								832521044
+								-1592285802
+								924786261
 							]
-							Name: "ShiroishiKaori"
+							Name: "shelwind"
 							Properties: {
 								textures: [{
-									Signature: "UQIuIpRE/4h4mDK8C5mgbAbpyllvcODjnM3SLFpYSSuB+Ts9EivnQLdVCk22xlWSBVaOWJwNlnWumXijDa2veFFu0oQ0PL/Rupprt4EZJXhXxl4sIw5FatAMo4pH7C2I23gugBCn8o7+B3HNBrPzWfsMUWLdn+Iis34/cZynre0G1/4MYwOo2JbXSL/4zkyE1n4l/rR6Rehjc0oQxDWZH0RYwL1ovuhaSdO2E2q9a03m/hdhoBNFzxvNiOCMW0KD4DdDVjowvqvNRLKQafYxWa5N6oXxpw8s4izRBT3xCxavRp0GQX+GgoGNqsolGQonpGHe7+i1GFD/VlHBJO2Zzc1s7iWwDVsgJ1oL+ZWyt4M2YnlUmUXKgVOnXXrbsUTYT2HuQ/PvEbZwBD3yX0ZDwAFVS/gWlMMWGzZeCL5qJ8p6h+zzSDBAPSmxNpwNDad8/uVCzsxOBZRh7158YdaFbOISiRRTMqhy7KUtBHkFqUM9ncKfebDBplltdf6ssZLaULo0nhtqStbMjBQI81sciHrTJihvLJe27NWQt+Xd9+1B2KGVUwGNvbjWx39WD47Vmm509C8G84NEMnYJd/gcl8tkbC+QpKXc/HQCpZg2+kWgfW6zeQs2o1yJWn8X+QpZA9ItEK/6RZPYmY1uVRa3GsPVgbBJQI07NE5cZz329Qs="
-									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc2NjIzODU3NTI0MSwKICAicHJvZmlsZUlkIiA6ICIxZmNmZTlmMDMwNDY0MGNkOTAzMWZhZTJiYjdmMjJmNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaGlyb2lzaGlLYW9yaSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iNzBkNmQ4Njg3OWM3NDMyZWYxZDgwOGJiZDczY2E4Mzc0YTBjY2E4Y2U1MDY1OTFhOWUyOWYyMjg1MjMxNWY1IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="
+									Signature: "ycnRBw6Y03j58yB5RNRsF4zut/P7lb8Z73PeUc+LaIyU6/MjISsmuR982UkJEtrm9aDqeuJQ9Ryj0FvIlCGfbtGkLi76duxnQ45e4gbL0kYfX6mif32aaKO7zX5zOn++pU75LhxJNIZc6B449cbkAL5cqdVZszHAIm6XeZncoEuaSnhgsPqV3TaZpGpdaf7v830d8rEvYus0/OOuWWr3DBB9Qfwk/FxrVPwmPtRnz1+RlNQ7ghPeqSFoYpv9gq5rOLN279v8wHRHrxMTw02uVs16zzTCYC+AK09fCpu9HBUK88ri20DqPZL0SeNi2AZAVR4bIkYQYSRE7axk6WuNCT4SP+4yZPSDHqqHhZIDlmo91tbPNt0OSVw46bRsft07HZOprHWtHNcqpBgjl9vWvGJyntZeezI0VJE/wcL4y8jKGJuxzLcrjZZnzaY5f9CSdd6NXK0h1FuxzEmxeb0lGoUgos5uYT9wBIeyJLyUt1mXdqJMP2LOJ1fDO9N5OHAAeInOV1/3U+esu4zaPa1bXfQgofAUKbIE7VHNFJj2mY2txbehstzeK/zc6yHfAVRtsQf92dHkTYFRAtha+1jQdeHsQRYgRYVXnhBlKJsrqIVtQbsaBagcBgNv/rmlMpBQj1L0tIgKsKzcbe7vfJ2dQj/HhlS8K6+O+qVrQNkXTGM="
+									Value: "ewogICJ0aW1lc3RhbXAiIDogMTc1OTI3OTc0MjExMSwKICAicHJvZmlsZUlkIiA6ICI2MWZiN2NiNzMxOWY0MzU0YTExN2E1OTYzNzFmMWU1NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJzaGVsd2luZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80MGJiZjMyNjZjYzM5ZTE3NDk4YzBmYWJlYzcwZTI2MDc1MTI1YzNhMzA5MGJiZmE5MDYxZjRhZTYzOTRmOGY2IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
 								}]
 							}
 						}

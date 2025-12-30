@@ -133,7 +133,7 @@ ServerEvents.recipes(event => {
             "I": "design_decor:industrial_iron_boiler_structure",
             "C": "create:metal_girder",
             "L": "design_decor:metal_support",
-            "G": "createaddition:liquid_blaze_burner[blaze=kindled]",
+            "G": "createaddition:liquid_blaze_burner{fuelLevel:1}",
             "D": "create:industrial_iron_block",
             "F": "design_decor:diagonal_metal_support",
             "H": "design_decor:ornate_grate"
@@ -572,48 +572,48 @@ ServerEvents.recipes(event => {
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
         "priority": 1,
-        "time": 40,
+        "time": 20,
         "error": true,
         "requirements": [
             AlloyFurnaceCommand1,
             AlloyFurnaceCommand2,
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(12, "kubejs:brass"),
-            AlloyFurnaceItem("#forge:plates/copper", 54, "input"),
-            AlloyFurnaceItem("#forge:plates/gold", 54, "input"),
-            AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output")
+            AlloyFurnaceReplace(6, "kubejs:brass"),
+            AlloyFurnaceItem("#forge:plates/copper", 27, "input"),
+            AlloyFurnaceItem("#forge:plates/gold", 27, "input"),
+            AlloyFurnaceItem("kubejs:diorite_alloy", 9, "output")
         ],
         "jei": [
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(12, "kubejs:brass"),
-            AlloyFurnaceItem("#forge:plates/copper", 54, "input"),
-            AlloyFurnaceItem("#forge:plates/gold", 54, "input"),
-            AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output"),
-            AlloyFurnaceFluid("kubejs:brass", 12)
+            AlloyFurnaceReplace(6, "kubejs:brass"),
+            AlloyFurnaceItem("#forge:plates/copper", 27, "input"),
+            AlloyFurnaceItem("#forge:plates/gold", 27, "input"),
+            AlloyFurnaceItem("kubejs:diorite_alloy", 9, "output"),
+            AlloyFurnaceFluid("kubejs:brass", 6)
         ]
     }).id("dut_create:alloy_furnace/brass")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
         "priority": 1,
-        "time": 60,
+        "time": 30,
         "error": true,
         "requirements": [
             AlloyFurnaceCommand1,
             AlloyFurnaceCommand2,
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(12, "kubejs:brass"),
-            AlloyFurnaceItem("#forge:storage_blocks/copper", 6, "input"),
-            AlloyFurnaceItem("#forge:storage_blocks/gold", 6, "input"),
-            AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output")
+            AlloyFurnaceReplace(6, "kubejs:brass"),
+            AlloyFurnaceItem("#forge:storage_blocks/copper", 3, "input"),
+            AlloyFurnaceItem("#forge:storage_blocks/gold", 3, "input"),
+            AlloyFurnaceItem("kubejs:diorite_alloy", 9, "output")
         ],
         "jei": [
             AlloyFurnaceStructure,
-            AlloyFurnaceReplace(12, "kubejs:brass"),
-            AlloyFurnaceItem("#forge:storage_blocks/copper", 6, "input"),
-            AlloyFurnaceItem("#forge:storage_blocks/gold", 6, "input"),
-            AlloyFurnaceItem("kubejs:diorite_alloy", 18, "output"),
-            AlloyFurnaceFluid("kubejs:brass", 12)
+            AlloyFurnaceReplace(6, "kubejs:brass"),
+            AlloyFurnaceItem("#forge:storage_blocks/copper", 3, "input"),
+            AlloyFurnaceItem("#forge:storage_blocks/gold", 3, "input"),
+            AlloyFurnaceItem("kubejs:diorite_alloy", 9, "output"),
+            AlloyFurnaceFluid("kubejs:brass", 6)
         ]
     }).id("dut_create:alloy_furnace/brass_from_block")
     event.custom({

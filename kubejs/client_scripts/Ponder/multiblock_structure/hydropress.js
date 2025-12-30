@@ -18,6 +18,9 @@ Ponder.registry((event) => {
         scene.text(60, "液压机是一种需要自主控制的多方块机械！");
         scene.idle(80);
         scene.addKeyframe();
+        scene.text(60, "它可以单次处理9个金属块，或是1B/3B/6B/9B的熔融金属，此外还有一些特殊配方！");
+        scene.idle(80);
+        scene.addKeyframe();
         scene.text(60, "首先，液压机核心附近必须拥有正确的基础结构：");
         scene.overlay.showOutline("blue", {}, [4, 3, 2], 60);
         scene.idle(80);

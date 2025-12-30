@@ -70,7 +70,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			description: [
@@ -203,7 +203,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 5.0d
+			y: 4.5d
 		}
 		{
 			description: [
@@ -358,7 +358,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["7D452424A8C15F35"]
@@ -383,8 +383,8 @@
 				item: "minecraft:sand"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 1.5d
+			x: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["1A115EF233394340"]
@@ -411,8 +411,7 @@
 					type: "item"
 				}
 			]
-			shape: "gear"
-			size: 1.25d
+			size: 1.0d
 			tasks: [{
 				consume_items: true
 				count: 2048L
@@ -420,8 +419,8 @@
 				item: "minecraft:cobblestone"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -0.5d
+			x: -1.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["234B8765235D4601"]
@@ -444,8 +443,8 @@
 				item: "minecraft:gravel"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 2.5d
+			x: 1.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["241467A9149EFB99"]
@@ -504,12 +503,12 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 3.5d
+			y: 2.5d
 		}
 		{
-			dependencies: ["7D452424A8C15F35"]
+			dependencies: ["1A115EF233394340"]
 			description: [
-				"这四种金属（尤其是前三种）可以说是工厂建设的基石，你肯定需要批量生产它们！"
+				"这几种金属可以说是工厂建设的基石，你肯定需要批量生产它们！"
 				""
 				"[ \"你可以在\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"中看到生产方式，点击横线部分即可跳转！\" ]"
 				""
@@ -519,7 +518,7 @@
 			]
 			id: "261F377F113598D4"
 			shape: "hexagon"
-			size: 1.25d
+			size: 1.0d
 			tasks: [
 				{
 					id: "7663E1BB66CD5A2A"
@@ -532,11 +531,6 @@
 					type: "item"
 				}
 				{
-					id: "654EA69603878F3C"
-					item: "create:asurine"
-					type: "item"
-				}
-				{
 					id: "392542F971BB18D2"
 					item: "create:ochrum"
 					type: "item"
@@ -544,7 +538,7 @@
 			]
 			title: "金属生产"
 			x: 0.0d
-			y: 4.375d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7D452424A8C15F35"]
@@ -560,8 +554,8 @@
 				type: "item"
 			}]
 			title: "大型机械的准备"
-			x: -1.5d
-			y: 2.5d
+			x: 0.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["28F4B4206A2C4875"]
@@ -681,7 +675,7 @@
 			]
 			title: "金属板材"
 			x: -1.5d
-			y: 5.0d
+			y: 4.5d
 		}
 		{
 			description: [
@@ -1045,7 +1039,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1135,6 +1129,8 @@
 				item: "create:hose_pulley"
 				type: "item"
 			}]
+			shape: "gear"
+			size: 1.25d
 			tasks: [{
 				advancement: "create:hose_pulley_lava"
 				criterion: ""
@@ -1142,7 +1138,7 @@
 				type: "advancement"
 			}]
 			x: -1.5d
-			y: -0.5d
+			y: 2.5d
 		}
 		{
 			dependencies: [
@@ -1206,7 +1202,7 @@
 			description: [
 				"如果你需要建造多方块，那么你显然需要硬盘！"
 				""
-				"你暂时完全不必自动化生产它！"
+				"你暂时不必自动化生产它！"
 			]
 			id: "69DFF2C19952AC52"
 			shape: "rsquare"
@@ -1222,7 +1218,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 1.0d
+			y: -0.5d
 		}
 		{
 			description: [

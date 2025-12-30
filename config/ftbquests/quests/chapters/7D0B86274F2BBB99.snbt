@@ -51,6 +51,16 @@
 				"&e你可以在配方中查看微生物具体需要的生物群系，将鼠标移至左下角的空白地图图标处即可显示&r"
 				"{image:kubejs:textures/ftb/culture_bin.png width:100 height:120 align:left}"
 				"&e你可以在思索中查看如何进行精确混带！&r"
+				""
+				"{@pagebreak}"
+				"黄铜培养仓的一个重要问题就是菌种的回流"
+				""
+				"你可以充分利用黄铜培养仓的自动输出来达成这一点"
+				""
+				"使用容器拓展端口可以让黄铜培养仓向自己自动输出"
+				"{image:kubejs:textures/ftb/bin_io.png width:100 height:80 align:center}"
+				"{image:kubejs:textures/ftb/bin_cycle.png width:100 height:80 align:center}"
+				"当然，你也可以直接将产物全部导出再单独回流"
 			]
 			id: "2BDD1C7FA08793B2"
 			size: 1.5d

@@ -58,6 +58,7 @@ ServerEvents.recipes(event => {
   const TradingStationCommon = {
     "type": "custommachinery:fluid",
     "mode": "input",
+    "tank": "fluid",
     "fluid": "kubejs:hydrofluid",
     "amount": 1
   }

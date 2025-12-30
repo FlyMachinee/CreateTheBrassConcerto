@@ -35,7 +35,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-绯红岩"
-			x: 0.0d
+			x: 1.0d
 			y: 2.0d
 		}
 		{
@@ -48,20 +48,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-辉绿岩"
-			x: -2.0d
-			y: 2.0d
-		}
-		{
-			description: ["&e皓蓝石平均可以粉碎成1.25的粉碎锌矿石！&r"]
-			id: "4DCCA0B6DBFB05B2"
-			size: 1.25d
-			tasks: [{
-				id: "56EA83A7EA174F1F"
-				item: "create:asurine"
-				type: "item"
-			}]
-			title: "冶金之页-皓蓝石"
-			x: 2.0d
+			x: -1.0d
 			y: 2.0d
 		}
 		{
@@ -74,7 +61,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-赭金砂"
-			x: -4.0d
+			x: -3.0d
 			y: 2.0d
 		}
 		{
@@ -87,7 +74,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-锡石"
-			x: 4.0d
+			x: 3.0d
 			y: 2.0d
 		}
 		{
@@ -103,7 +90,7 @@
 				item: "create:crushed_raw_gold"
 				type: "item"
 			}]
-			x: -4.0d
+			x: -3.0d
 			y: 3.5d
 		}
 		{
@@ -119,7 +106,7 @@
 				item: "create:crushed_raw_copper"
 				type: "item"
 			}]
-			x: -2.0d
+			x: -1.0d
 			y: 3.5d
 		}
 		{
@@ -135,23 +122,7 @@
 				item: "create:crushed_raw_iron"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 3.5d
-		}
-		{
-			dependencies: ["4DCCA0B6DBFB05B2"]
-			description: [
-				"&a粉碎锌矿石&r可以被水洗成&e9&r个&a锌粒&r或是被烧炼为&e1&r个&a锌锭&r"
-				""
-				"如果使用合金炉，&e9&r个&a粉碎锌矿石&r可以变为&e1000mB&r&a熔融锌&r"
-			]
-			id: "6ADB3EEAB9D33EBC"
-			tasks: [{
-				id: "2736ABA83955E334"
-				item: "create:crushed_raw_zinc"
-				type: "item"
-			}]
-			x: 2.0d
+			x: 1.0d
 			y: 3.5d
 		}
 		{
@@ -167,67 +138,55 @@
 				item: "create:crushed_raw_tin"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 3.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["1F3DF392BF8DCB5E"]
-			description: ["&e金板 + 砂砾 + 250mB岩浆 = 2赭金砂&r"]
+			description: ["&e金板 + 250mB岩浆 = 2赭金砂&r"]
 			id: "27EAC2260635A0E2"
 			tasks: [{
 				id: "3902858E0F984B06"
 				item: "create:golden_sheet"
 				type: "item"
 			}]
-			x: -4.0d
+			x: -3.0d
 			y: 5.0d
 		}
 		{
 			dependencies: ["2806BF2F9EF4B768"]
-			description: ["&e铜板 + 砂砾 + 250mB水 = 2辉绿岩&r"]
+			description: ["&e铜板 + 250mB水 = 2辉绿岩&r"]
 			id: "1920229728025683"
 			tasks: [{
 				id: "6BF968013B4ED5B8"
 				item: "create:copper_sheet"
 				type: "item"
 			}]
-			x: -2.0d
+			x: -1.0d
 			y: 5.0d
 		}
 		{
 			dependencies: ["5D6A2CB9FEC83A1E"]
-			description: ["&e铁板 + 砂砾 + 250mB岩浆 = 2绯红岩&r"]
+			description: ["&e铁板 + 250mB岩浆 = 2绯红岩&r"]
 			id: "0E14C183837BDA2E"
 			tasks: [{
 				id: "3A5A4CEB4436BAE5"
 				item: "create:iron_sheet"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["6ADB3EEAB9D33EBC"]
-			description: ["&e锌板 + 砂砾 + 250mB水 = 2皓蓝石&r"]
-			id: "7E69EECFD8A46805"
-			tasks: [{
-				id: "4AD378270E05CEA1"
-				item: "createaddition:zinc_sheet"
-				type: "item"
-			}]
-			x: 2.0d
+			x: 1.0d
 			y: 5.0d
 		}
 		{
 			dependencies: ["2C21F8C4DD0A5B12"]
-			description: ["&e锡板 + 砂砾 + 250mB岩浆 = 2锡石&r"]
+			description: ["&e锡板 + 250mB岩浆 = 2锡石&r"]
 			id: "05E7404BB4D13F6A"
 			tasks: [{
 				id: "3248CA636A4146D4"
 				item: "kubejs:tin_sheet"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 3.0d
 			y: 5.0d
 		}
 		{
@@ -241,7 +200,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-赭金砂"
-			x: -4.0d
+			x: -3.0d
 			y: 6.5d
 		}
 		{
@@ -255,7 +214,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-辉绿岩"
-			x: -2.0d
+			x: -1.0d
 			y: 6.5d
 		}
 		{
@@ -269,21 +228,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-绯红岩"
-			x: 0.0d
-			y: 6.5d
-		}
-		{
-			dependencies: ["7E69EECFD8A46805"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
-			id: "4F147B4F6F801B08"
-			size: 1.25d
-			tasks: [{
-				id: "147564BA45A6068B"
-				item: "create:asurine"
-				type: "item"
-			}]
-			title: "冶金之页-皓蓝石"
-			x: 2.0d
+			x: 1.0d
 			y: 6.5d
 		}
 		{
@@ -297,7 +242,7 @@
 				type: "item"
 			}]
 			title: "冶金之页-锡石"
-			x: 4.0d
+			x: 3.0d
 			y: 6.5d
 		}
 		{
