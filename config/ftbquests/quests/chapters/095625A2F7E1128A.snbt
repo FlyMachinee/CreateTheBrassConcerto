@@ -505,8 +505,11 @@
 		{
 			dependencies: ["734BBC9808E801E6"]
 			description: [
-				"硬化塑料是一种更高级的塑料"
+				"聚氯乙烯是一种更高级的塑料"
+				""
 				"使用乙烯和氯气来制取它！"
+				""
+				"[ \"你可以使用\", { \"text\": \"列表过滤器\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4AE919CE7C34AD83\" } }, \"为工作盆设置过滤——只需要将聚氯乙烯桶从JEI中拖入列表过滤器即可！\" ]"
 			]
 			id: "5AB3602434AE8947"
 			rewards: [{

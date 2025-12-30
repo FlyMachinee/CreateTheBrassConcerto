@@ -213,7 +213,6 @@ ServerEvents.recipes(event => {
     "error": true,
     "priority": 3,
     "requirements": [
-      SpaceELevatorStructure,
       SpaceELevatorDimension,
       {
         "type": "custommachinery:fluid",
@@ -297,6 +296,7 @@ ServerEvents.recipes(event => {
     "jei": [
       SpaceELevatorStructure,
       SpaceELevatorDimension,
+      SpaceELevatorRedstone,
       SpaceELevatorEnergyInput(16384),
       SpaceELevatorFluid("minecraft:water", 500),
       SpaceELevatorFluid("kubejs:gibibyte", 8),

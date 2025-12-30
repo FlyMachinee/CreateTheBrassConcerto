@@ -77,7 +77,7 @@ ItemEvents.firstRightClicked('kubejs:matrix_2', event => {
 })
 function newNet(player) {
     if (DimensionsNet.getNetFromPlayer(player) == null) {
-        DimensionsNet.createNewNetForPlayer(player, 256, 216)
+        DimensionsNet.createNewNetForPlayer(player, 65536, 216)
         player.setStatusMessage(Text.translate("kubejs.tooltip.newnet"))
         return
     }
@@ -90,6 +90,10 @@ function expandNet(player) {
         return
     }
     let newSize = DimensionsNet.getNetFromPlayer(player).getUnifiedStorage().slotMaxSize + 1
+    let Slots = DimensionsNet.getNetFromPlayer(player).getUnifiedStorage().slotCapacity
+    if (Slots != 65536) {
+        DimensionsNet.getNetFromPlayer(player).getUnifiedStorage().setSlotCapacity(65536)
+    }
     DimensionsNet.getNetFromPlayer(player).getUnifiedStorage().setSlotMaxSize(newSize)
     DimensionsNet.getNetFromPlayer(player).setDirty()
     player.setStatusMessage(Text.translate("kubejs.tooltip.expandnet"))

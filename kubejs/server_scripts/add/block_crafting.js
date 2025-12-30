@@ -117,7 +117,7 @@ BlockCrafting.addMultiblockStructure(MultiblockStructureBuilder.create("zinc_boi
     .pattern("AAA")
     .pattern("ACA")
     .pattern("AAA")
-    .whereTag("A", "forge:storage_blocks/zinc")
+    .whereTag("A", "forge:storage_blocks/new_zinc")
     .center("C", "create:fluid_tank")
     .craftingItem("create:wrench")
     .resultItem("design_decor:zinc_boiler_large")
