@@ -8,7 +8,7 @@
   },
   "downfall": 0.8,
   "effects": {
-    "fog_color": 16759284,
+    "fog_color": 8058067,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -109,12 +109,6 @@
       },
       {
         "type": "minecraft:cave_spider",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 50
-      },
-      {
-        "type": "minecraft:creeper",
         "maxCount": 4,
         "minCount": 1,
         "weight": 50

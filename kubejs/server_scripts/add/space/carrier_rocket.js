@@ -84,7 +84,7 @@ ServerEvents.recipes(event => {
           { "item": "kubejs:aluminum_sheet" },
           { "amount": 250, "fluid": "kubejs:cryogen" }],
         "results": [{ "item": "kubejs:aluminum_sheet" }],
-        "processingTime": 300
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:aluminum_sheet" }

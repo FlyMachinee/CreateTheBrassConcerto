@@ -121,7 +121,7 @@ ServerEvents.recipes(event => {
         "type": "vintageimprovements:vibrating",
         "ingredients": [{ "item": "kubejs:slime_cola_can" }],
         "results": [{ "item": "supplementaries:bomb_blue" }],
-        "processingTime": 100
+        "processingTime": 120
     }).id("dut_create:eggs/cola_bomb")
     //饥荒-海滩
     event.custom({
@@ -138,7 +138,7 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:bone_meal", "count": 4 },
             { "item": "kubejs:sulphur", "count": 3 }
         ],
-        "processingTime": 200
+        "processingTime": 50
     }).id('dut_create:eggs/sulphur_from_rotten_egg')
     //“油”炸薯条
     event.custom({
@@ -183,7 +183,7 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:lube_oil", "amount": 50 }
         ],
         "results": [{ "fluid": "kubejs:cola_puree", "amount": 150 }],
-        "processingTime": 400
+        "processingTime": 50
     }).id('dut_create:steam_punk_slime_cola')
     //COFFee
     event.custom({
@@ -201,7 +201,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "item": 'create:builders_tea', "count": 2 }
         ],
-        "processingTime": 200
+        "processingTime": 50
     }).id('dut_create:eggs/2c_2fe_o2_equals_2coffee')
     //COCOa
     event.custom({
@@ -229,7 +229,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "fluid": "kubejs:slime_cola", "amount": 500 }
         ],
-        "processingTime": 200
+        "processingTime": 50
     }).id('dut_create:eggs/2al_2c_o2_equals_2cola')
     //2Al+2Cu==2Au+Cl2
     event.custom({
@@ -243,7 +243,7 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:chlorine", "amount": 250 },
             { "fluid": "kubejs:gold", "amount": 500 }
         ],
-        "processingTime": 200
+        "processingTime": 50
     }).id('dut_create:eggs/2al_2cu_equals_2au_cl2')
     //砂纸
     event.custom({
@@ -256,6 +256,15 @@ ServerEvents.recipes(event => {
         ],
         "result": { "item": "create:sand_paper" }
     }).id("dut_create:eggs/sand_paper")
+    //泰君
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "minecraft:slime_ball" },
+            { "item": "minecraft:stick" }
+        ],
+        "result": { "item": "minecraft:torch","count":3 }
+    }).id("dut_create:eggs/terraria")
     //钢也是合金
     event.custom({
         "type": "create:deploying",
@@ -275,7 +284,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "item": "ad_astra:steel_ingot" }
         ],
-        "processingTime": 200
+        "processingTime": 240
     }).id("dut_create:eggs/nether_steel_also_steel")
     //铁杵磨成针
     function Polishing(item1,item2,item3,material) {

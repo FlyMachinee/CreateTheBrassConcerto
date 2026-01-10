@@ -26,7 +26,11 @@
 			y: 0.5d
 		}
 		{
-			description: ["&e绯红岩平均可以粉碎成1.25的粉碎铁矿石！&r"]
+			description: [
+				"&e绯红岩可以被工作盆铸造盖铸造为1铁锭！&r"
+				""
+				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
+			]
 			id: "2D5F34751921A307"
 			size: 1.25d
 			tasks: [{
@@ -39,7 +43,11 @@
 			y: 2.0d
 		}
 		{
-			description: ["&e辉绿岩平均可以粉碎成1.25的粉碎铜矿石！&r"]
+			description: [
+				"&e辉绿岩可以被工作盆铸造盖铸造为1铜锭！&r"
+				""
+				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
+			]
 			id: "76917EBDECCF58F8"
 			size: 1.25d
 			tasks: [{
@@ -52,7 +60,11 @@
 			y: 2.0d
 		}
 		{
-			description: ["&e赭金砂平均可以粉碎成1.25的粉碎金矿石！&r"]
+			description: [
+				"&e赭金砂可以被工作盆铸造盖铸造为1金锭！&r"
+				""
+				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
+			]
 			id: "4991EB347AB72808"
 			size: 1.25d
 			tasks: [{
@@ -65,7 +77,11 @@
 			y: 2.0d
 		}
 		{
-			description: ["&e锡石平均可以粉碎成1.25的粉碎锡矿石！&r"]
+			description: [
+				"&e锡石可以被工作盆铸造盖铸造为1锡锭！&r"
+				""
+				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
+			]
 			id: "12DB85A684EB6DA8"
 			size: 1.25d
 			tasks: [{
@@ -79,15 +95,11 @@
 		}
 		{
 			dependencies: ["4991EB347AB72808"]
-			description: [
-				"&a粉碎金矿石&r可以被水洗成&e9&r个&a金粒&r或是被烧炼为&e1&r个&a金锭&r"
-				""
-				"如果使用合金炉，&e9&r个&a粉碎金矿石&r可以变为&e1000mB&r&a熔融金&r"
-			]
+			description: ["&a金锭&r可以被动力辊压机压成&e1&r个&a金板&r"]
 			id: "1F3DF392BF8DCB5E"
 			tasks: [{
 				id: "206CC74C98323FBF"
-				item: "create:crushed_raw_gold"
+				item: "minecraft:gold_ingot"
 				type: "item"
 			}]
 			x: -3.0d
@@ -95,15 +107,11 @@
 		}
 		{
 			dependencies: ["76917EBDECCF58F8"]
-			description: [
-				"&a粉碎铜矿石&r可以被水洗成&e9&r个&a铜粒&r或是被烧炼为&e1&r个&a铜锭&r"
-				""
-				"如果使用合金炉，&e9&r个&a粉碎铜矿石&r可以变为&e1000mB&r&a熔融铜&r"
-			]
+			description: ["&a铜锭&r可以被动力辊压机压成&e1&r个&a铜板&r"]
 			id: "2806BF2F9EF4B768"
 			tasks: [{
 				id: "1E46556657C61990"
-				item: "create:crushed_raw_copper"
+				item: "minecraft:copper_ingot"
 				type: "item"
 			}]
 			x: -1.0d
@@ -111,15 +119,11 @@
 		}
 		{
 			dependencies: ["2D5F34751921A307"]
-			description: [
-				"&a粉碎铁矿石&r可以被水洗成&e9&r个&a铁粒&r或是被烧炼为&e1&r个&a铁锭&r"
-				""
-				"如果使用合金炉，&e9&r个&a粉碎铁矿石&r可以变为&e1000mB&r&a熔融铁&r"
-			]
+			description: ["&a铁锭&r可以被动力辊压机压成&e1&r个&a铁板&r"]
 			id: "5D6A2CB9FEC83A1E"
 			tasks: [{
 				id: "1451D4FE8B5B2914"
-				item: "create:crushed_raw_iron"
+				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
 			x: 1.0d
@@ -127,15 +131,11 @@
 		}
 		{
 			dependencies: ["12DB85A684EB6DA8"]
-			description: [
-				"&a粉碎锡矿石&r可以被水洗成&e9&r个&a锡粒&r或是被烧炼为&e1&r个&a锡锭&r"
-				""
-				"如果使用合金炉，&e9&r个&a粉碎锡矿石&r可以变为&e1000mB&r&a熔融锡&r"
-			]
+			description: ["&a锡锭&r可以被动力辊压机压成&e1&r个&a锡板&r"]
 			id: "2C21F8C4DD0A5B12"
 			tasks: [{
 				id: "6EEC813299FEF97B"
-				item: "create:crushed_raw_tin"
+				item: "kubejs:tin_ingot"
 				type: "item"
 			}]
 			x: 3.0d
@@ -179,7 +179,7 @@
 		}
 		{
 			dependencies: ["2C21F8C4DD0A5B12"]
-			description: ["&e锡板 + 250mB岩浆 = 2锡石&r"]
+			description: ["&e锡板 + 250mB水 = 2锡石&r"]
 			id: "05E7404BB4D13F6A"
 			tasks: [{
 				id: "3248CA636A4146D4"
@@ -191,7 +191,7 @@
 		}
 		{
 			dependencies: ["27EAC2260635A0E2"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
 			id: "624CB4466E943732"
 			size: 1.25d
 			tasks: [{
@@ -205,7 +205,7 @@
 		}
 		{
 			dependencies: ["1920229728025683"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
 			id: "0662E34246691544"
 			size: 1.25d
 			tasks: [{
@@ -219,7 +219,7 @@
 		}
 		{
 			dependencies: ["0E14C183837BDA2E"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
 			id: "7F9AB0A99547F1AC"
 			size: 1.25d
 			tasks: [{
@@ -233,7 +233,7 @@
 		}
 		{
 			dependencies: ["05E7404BB4D13F6A"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2.5倍，也许是3.09倍！）&r"]
+			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
 			id: "27BEAE1DC6A31482"
 			size: 1.25d
 			tasks: [{

@@ -4,6 +4,19 @@ ServerEvents.recipes(event => {
   //event.remove({id: ''})
   //event.remove({input: ''})
   //event.custom({})
+  //木屑
+  event.remove({ id: "createdieselgenerators:crushing/wood_chip_planks" })
+
+  event.custom({
+    "type": "create:crushing",
+    "ingredients": [
+      { "item": "createdieselgenerators:chip_wood_block" }
+    ],
+    "processingTime": 5,
+    "results": [
+      { "item": "createdieselgenerators:wood_chip", "count": 8 }
+    ]
+  }).id("dut_create:crushing/wood_chip")
   //沥青
   event.remove({ id: "createdieselgenerators:mixing/asphalt_block" })
   event.remove({ id: "createdieselgenerators:crafting/asphalt_block" })
@@ -38,7 +51,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createdieselgenerators:biodiesel", "amount": 450 },
     ],
-    "processingTime": 300
+    "processingTime": 45
   }).id('dut_create:pressurizing/biodiesel_from_gasoline')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -51,7 +64,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createdieselgenerators:biodiesel", "amount": 450 },
     ],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:pressurizing/biodiesel_0')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -64,7 +77,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createdieselgenerators:biodiesel", "amount": 450 },
     ],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:pressurizing/biodiesel_1')
   //植物燃油
   event.remove({ id: 'createdieselgenerators:compacting/plant_oil' })
@@ -80,13 +93,13 @@ ServerEvents.recipes(event => {
       { "item": "createdieselgenerators:chip_wood_block" }
     ],
     "results": [{ "item": "minecraft:charcoal" }, { "item": "minecraft:charcoal", "chance": 0.5 }],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:charcoal_from_chip_wood_block')
   //木棍
   event.custom({
     "type": "create:cutting",
     "ingredients": [{ "item": "createdieselgenerators:chip_wood_block" }],
-    "processingTime": 60,
+    "processingTime": 5,
     "results": [
       { "item": "minecraft:stick", "count": 6 }
     ]
@@ -225,19 +238,16 @@ ServerEvents.recipes(event => {
         "item": "create:fluid_pipe"
       }
     },
-    "result": {
-      "item": "createdieselgenerators:distillation_controller",
-      "count": 4
-    }
+    "result": { "item": "createdieselgenerators:distillation_controller", "count": 4 }
   }).id('dut_create:distillation_controller')
   //大型柴油引擎
-  event.remove({ output: 'createdieselgenerators:plant_oil', not: { mod: 'kubejs' } })
-  event.remove({ output: 'createdieselgenerators:huge_diesel_engine', not: { mod: 'kubejs' } })
+  event.remove({ id: "createdieselgenerators:compacting/plant_oil" })
+  event.remove({ id: "createdieselgenerators:crafting/huge_diesel_engine" })
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "create:steam_engine" },
     "loops": 3,
-    "results": [{ "chance": 1.0, "item": "createdieselgenerators:huge_diesel_engine" }],
+    "results": [{ "item": "createdieselgenerators:huge_diesel_engine" }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -261,12 +271,12 @@ ServerEvents.recipes(event => {
     "transitionalItem": { "item": "kubejs:incomplete_huge_diesel_engine" }
   }).id('dut_create:huge_diesel_engine')
   //小型柴油引擎
-  event.remove({ output: 'createdieselgenerators:diesel_engine', not: { mod: 'kubejs' } })
+  event.remove({ id: "createdieselgenerators:crafting/diesel_engine" })
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": { "tag": "forge:storage_blocks/brass" },
     "loops": 1,
-    "results": [{ "chance": 1.0, "item": "createdieselgenerators:diesel_engine" }],
+    "results": [{ "item": "createdieselgenerators:diesel_engine" }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -295,45 +305,34 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_diesel_engine" },
-        { "amount": 250, "fluidTag": "forge:gasoline" }],
+        { "amount": 250, "fluid": "createdieselgenerators:gasoline" }],
         "results": [{ "item": "kubejs:incomplete_diesel_engine" }]
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_diesel_engine" }
   }).id('dut_create:diesel_engine')
   //引擎活塞
-  event.remove({ output: 'createdieselgenerators:engine_piston', not: { mod: 'kubejs' } })
+  event.remove({ id: "createdieselgenerators:crafting/engine_piston" })
+  event.remove({ id: "createdieselgenerators:crafting/engine_piston_from_rods" })
   event.custom({
-    "type": "create:sequenced_assembly",
-    "ingredient": { "item": "kubejs:bearing" },
-    "loops": 1,
-    "results": [{ "chance": 1.0, "item": "createdieselgenerators:engine_piston" }],
-    "sequence": [
-      {
-        "type": "create:deploying",
-        "ingredients": [{ "item": "kubejs:incomplete_engine_piston" },
-        [{ "item": "create:shaft" },
-        { "item": "createaddition:iron_rod" }, { "item": "ad_astra:iron_rod" }]],
-        "results": [{ "item": "kubejs:incomplete_engine_piston" }]
-      },
-      {
-        "type": "create:deploying",
-        "ingredients": [{ "item": "kubejs:incomplete_engine_piston" },
-        { "tag": "dut_create:craftnugget" }],
-        "results": [{ "item": "kubejs:incomplete_engine_piston" }]
-      },
-      {
-        "type": "create:filling",
-        "ingredients": [{ "item": "kubejs:incomplete_engine_piston" },
-        { "fluidTag": "dut_create:plantoil", "amount": 125 }],
-        "results": [{ "item": "kubejs:incomplete_engine_piston" }]
-      }
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "B": { "item": "create:shaft" },
+      "C": { "tag": "dut_create:craftnugget" },
+      "A": { "item": "kubejs:bearing" }
+    },
+    "pattern": [
+      "C",
+      "B",
+      "A"
     ],
-    "transitionalItem": { "item": "kubejs:incomplete_engine_piston" }
-  }).id('dut_create:engine_pisto')
-  
+    "result": { "item": "createdieselgenerators:engine_piston"},
+    "show_notification": true
+  }).id("dut_create:engine_piston")
+
   //涡轮增压
-  event.remove({ id:'createdieselgenerators:crafting/engine_turbocharger' })
+  event.remove({ id: 'createdieselgenerators:crafting/engine_turbocharger' })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "pattern": [
@@ -348,6 +347,6 @@ ServerEvents.recipes(event => {
       "D": { "tag": "forge:plates/iron" },
       "E": { "item": "create:propeller" }
     },
-    "result": {"item": "createdieselgenerators:engine_turbocharger"}
+    "result": { "item": "createdieselgenerators:engine_turbocharger" }
   }).id('dut_create:engine_turbocharger')
 })

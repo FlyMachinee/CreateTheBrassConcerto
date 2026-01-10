@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:muriatic_acid", "amount": 500 },
       { "fluid": "kubejs:oxygen", "amount": 250 }
     ],
-    "processingTime": 200
+    "processingTime": 15
   }).id('dut_create:chlorine_reduction')
   //电解盐酸
   event.custom({
@@ -57,6 +57,6 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:chlorine", "amount": 125 },
       { "item": "kubejs:uncharged_electrolyzer" }
     ],
-    "processingTime": 200
+    "processingTime": 45
   }).id('dut_create:muriatic_acid_electrolysis')
 })

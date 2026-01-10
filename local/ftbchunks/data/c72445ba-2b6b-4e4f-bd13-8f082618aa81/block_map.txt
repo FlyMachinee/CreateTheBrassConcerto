@@ -257,6 +257,7 @@
 #0E2AEC bellsandwhistles:copper_grab_rails
 #C57E1A design_decor:copper_lamp
 #6E76AF minecraft:copper_ore
+#713136 iceandfire:copper_pile
 #A1D6C6 design_decor:copper_railing
 #28428A design_decor:copper_screw
 #E39FA1 create:copper_valve_handle
@@ -300,6 +301,8 @@
 #19E8F4 create:cut_deepslate
 #3A1CE0 create:cut_diorite_bricks
 #25F417 create:cut_dripstone
+#9714C9 create:cut_granite
+#825017 create:cut_ochrum
 #3C3897 minecraft:cut_sandstone
 #2F26E8 minecraft:cut_sandstone_slab
 #FF4D62 create:cut_tuff
@@ -676,6 +679,7 @@
 #3F535D railways:narrow_double_scotch_bogey
 #BA099C railways:narrow_small_bogey
 #A5E34D kubejs:natural_gas
+#2BCFB0 create_things_and_misc:neon_tube_block
 #42111F beyonddimensions:net_control
 #8F4C88 beyonddimensions:net_hopper_block
 #F4B97B beyonddimensions:net_interface
@@ -731,6 +735,7 @@
 #B75237 minecraft:packed_ice
 #B76368 minecraft:packed_mud
 #1250DE create_connected:parallel_gearbox
+#54B682 minecraft:pearlescent_froglight
 #215D71 create:peculiar_bell
 #6F6635 supplementaries:pedestal
 #AB1C58 minecraft:peony
@@ -808,6 +813,7 @@
 #868785 minecraft:rail
 #7C5ED3 create:railway_casing
 #079058 minecraft:raw_gold_block
+#E57697 createloveandwar:raw_sulphur_block
 #D5E58A createloveandwar:raw_tungsten_block
 #B9BCAD create:raw_zinc_block
 #025A66 minecraft:red_concrete
@@ -831,6 +837,7 @@
 #6923A4 supplementaries:redstone_illuminator
 #6CFCB6 minecraft:redstone_lamp
 #6A5D69 create:redstone_link
+#62B28A minecraft:redstone_ore
 #270B05 kubejs:redstone_radar
 #883188 wirelessredstone:redstone_receiver
 #24BE64 minecraft:redstone_torch
@@ -892,6 +899,7 @@
 #B9A552 ad_astra:sky_stone
 #E89E5F railways:slashed_locometal
 #F87E74 sliceanddice:slicer
+#9CF15D create_things_and_misc:slime
 #846C49 minecraft:slime_block
 #786F82 kubejs:slime_cola
 #7D6E71 kubejs:slime_colloid

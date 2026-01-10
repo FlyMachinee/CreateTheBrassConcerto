@@ -1,28 +1,28 @@
 ServerEvents.recipes(event => {
   //增殖
-    event.custom({
-      "type": "create:sequenced_assembly",
-      "ingredient": { "item": "kubejs:blaze_chlamydia" },
-      "results": [
-        { "item": "kubejs:blaze_chlamydia", "count": 2 },
-      ],
-      "loops": 1,
-      "sequence": [
-        {
-          "type": "create:filling",
-          "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
-          { "amount": 1000, "fluidTag": "dut_create:superheated_fuel" }],
-          "results": [{ "item": "kubejs:blaze_chlamydia" }]
-        },
-        {
-          "type": "create:filling",
-          "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
-          { "amount": 250, "fluid": "kubejs:nitric_acid" }],
-          "results": [{ "item": "kubejs:blaze_chlamydia" }]
-        }
-      ],
-      "transitionalItem": { "item": "kubejs:blaze_chlamydia" }
-    }).id("dut_create:blaze_chlamydia")
+  event.custom({
+    "type": "create:sequenced_assembly",
+    "ingredient": { "item": "kubejs:blaze_chlamydia" },
+    "results": [
+      { "item": "kubejs:blaze_chlamydia", "count": 2 },
+    ],
+    "loops": 1,
+    "sequence": [
+      {
+        "type": "create:filling",
+        "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
+        { "amount": 1000, "fluidTag": "dut_create:superheated_fuel" }],
+        "results": [{ "item": "kubejs:blaze_chlamydia" }]
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
+        { "amount": 250, "fluid": "kubejs:nitric_acid" }],
+        "results": [{ "item": "kubejs:blaze_chlamydia" }]
+      }
+    ],
+    "transitionalItem": { "item": "kubejs:blaze_chlamydia" }
+  }).id("dut_create:blaze_chlamydia")
   //黄铜区块加载器
   event.custom({
     "type": "create:item_application",
@@ -44,12 +44,12 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:carborundum" },
       { "item": "kubejs:carborundum" },
       { "item": "kubejs:carborundum" },
-      { "item": "kubejs:blaze_chlamydia"}
+      { "item": "kubejs:blaze_chlamydia" }
     ],
     "results": [
       { "item": "kubejs:graphene_coil", "count": 4 }
     ],
-    "processingTime": 200
+    "processingTime": 40
   }).id('dut_create:blaze_chlamydia/graphene_coil_from_sic')
   //碳化硅
   event.custom({
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:carborundum", "count": 4 },
       { "fluid": "kubejs:carbon_dioxide", "amount": 250 }
     ],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:blaze_chlamydia/carborundum')
   //过热蒸汽
   event.custom({
@@ -75,29 +75,14 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "fluid": "minecraft:water", "amount": 1000 },
       { "item": "kubejs:blaze_chlamydia" },
-      { "item": "kubejs:carborundum"}
+      { "item": "kubejs:carborundum" }
     ],
     "results": [
       { "fluid": "kubejs:superheated_steam", "amount": 500 },
-      { "item": "kubejs:carborundum"}
+      { "item": "kubejs:carborundum" }
     ],
-    "processingTime": 400
+    "processingTime": 60
   }).id('dut_create:blaze_chlamydia/superheated_steam_with_carborundum')
-  //合成天然气
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidInput": 0,
-    "ingredients": [
-      { "fluidTag": "forge:hydrogen", "amount": 1000 },
-      { "item": "kubejs:crushed_coal" },
-      { "item": "kubejs:crushed_coal" },
-      { "item": "kubejs:blaze_chlamydia" }
-    ],
-    "results": [
-      { "fluid": "kubejs:natural_gas", "amount": 500 }
-    ],
-    "processingTime": 300
-  }).id('dut_create:blaze_chlamydia/natural_gas_from_coal')
   //纤维布
   event.custom({
     "type": "vintageimprovements:vacuumizing",
@@ -112,10 +97,10 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "kubejs:fiber_fabric", "count": 3 }
     ],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:fiber_fabric')
   //末影之眼
-  event.remove({ output: "minecraft:ender_eye"})
+  event.remove({ output: "minecraft:ender_eye" })
   event.custom({
     "type": "vintageimprovements:vacuumizing",
     "ingredients": [
@@ -123,6 +108,6 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:blaze_chlamydia" }
     ],
     "results": [{ "item": "minecraft:ender_eye" }],
-    "processingTime": 600
+    "processingTime": 90
   }).id("dut_create:ender_eye")
 })

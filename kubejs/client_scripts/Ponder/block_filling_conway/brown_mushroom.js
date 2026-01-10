@@ -30,7 +30,7 @@ Ponder.registry((event) => {
         scene.idle(20);
         scene.text(120, "媒介方块种类：泥坯", [4.5, 6.5, 4.5]);
         scene.overlay.showOutline("red", { "glue": true }, [4, 6, 4], 120);
-        scene.text(120, "流体消耗：50mB 棕色蘑菇孢子", [2.5, 8.5, 4.5]);
+        scene.text(120, "流体消耗：250mB 棕色蘑菇孢子", [2.5, 8.5, 4.5]);
         scene.overlay.showOutline("blue", { "glue": true }, [2, 8, 4], 120);
         scene.text(120, "理想比例：4", [4.5, 3.5, 4.5]).attachKeyFrame()
         scene.overlay.showOutline("green", { "glue": true }, [3, 2, 3, 5, 4, 5], 30);

@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: "createloveandwar:crafting/smooth_asphalt_slab"})
   event.remove({ id: "createloveandwar:fractional_distillation/crude_oil" })
   event.remove({ id: "createloveandwar:compressing/fuel_pellet" })
-  event.remove({ id: "createloveandwar:compressing/fuel_pellet" })
+  event.remove({ id: "createloveandwar:sequenced_assembly/filled_heavy_rifle_casing" })
   event.custom({
     "type": "create:compacting",
     "ingredients": [{ "amount": 250, "fluidTag": "forge:diesel" }],

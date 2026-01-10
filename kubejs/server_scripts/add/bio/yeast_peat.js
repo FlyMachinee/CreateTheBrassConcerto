@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
       { "item": "createdieselgenerators:wood_chip" },
       { "item": "createdieselgenerators:wood_chip" }
     ],
-    "processingTime": 600,
+    "processingTime": 480,
     "results": [
       { "fluid": "createdieselgenerators:ethanol", "amount": 200 },
       { "item": "kubejs:yeast" }
@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:charcoal" },
       { "item": "minecraft:charcoal" }
     ],
-    "processingTime": 200,
+    "processingTime": 180,
     "results": [
       { "item": "minecraft:mud", "count": 2 },
       { "item": "minecraft:coal", "count": 4 },
@@ -48,7 +48,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:mud" },
       { "item": "kubejs:peat_protozoa" }
     ],
-    "processingTime": 300,
+    "processingTime": 240,
     "results": [
       { "item": "minecraft:packed_mud", "count": 2 },
       { "item": "minecraft:packed_mud", "count": 2, "chance": 0.8 },
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:packed_mud" },
       { "item": "kubejs:peat_protozoa" }
     ],
-    "processingTime": 100,
+    "processingTime": 120,
     "results": [
       { "item": "minecraft:charcoal" },
       { "item": "minecraft:charcoal", "chance": 0.5 },

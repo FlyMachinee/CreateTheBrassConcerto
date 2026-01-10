@@ -287,9 +287,9 @@
 				""
 				"黄铜镐是一把能挖掘黑曜石和远古残骸的好用工具&a如果你丢失了你的黄铜镐，不必担心——木镐也能够挖掘铜与锌&r"
 				""
-				"你可以使用切石机来切制石头与圆石"
+				"&e你可以使用切石机来切制石头与圆石"
 				""
-				"在未来，你可以使用动力搅拌器来快速生产圆石"
+				"&e在未来，你可以使用动力搅拌器来快速生产圆石"
 				""
 				"你说岩浆与水在世界中接触？说实在的，完全没有必要通过这种方式生产圆石！"
 			]
@@ -777,15 +777,12 @@
 			description: [
 				"&c在没有作者允许的情况下，任何人不得以任何形式挪用本整合包制作的美术和文本资源！&r"
 				""
-				"本整合包的其余部分采用&aCC-BY-SA 4.0&r协议"
+				"&c在没有作者允许的情况下，任何人不得以任何形式&n以此整合包的名义&r&c宣传、分发经过了二次修改代码的整合包内容！&r"
+				""
+				"本整合包的其余部分采用&aCC-BY-SA-NC 4.0&r协议"
 				""
 				"GitHub:"
 				"&ohttps://github.com/Slimeli-32767/CreateTheBrassConcerto"
-				""
-				"作者主页："
-				"&ohttps://center.mcmod.cn/567575&r"
-				"&ohttps://space.bilibili.com/310622238&r"
-				"&ohttps://discord.gg/eNF5nzxxCg"
 				""
 				"&e祝贺CBC第一个内测版本发布一周年！&r"
 			]
@@ -833,7 +830,7 @@
 				""
 				"这个整合包含有&aParcool&r，你可以&e跑的更快、趴下穿过一格高的空间、右键扒墙来跨越3格高度&r...&6如果你不想要，可以按Ctrl+P关闭全部或是Alt+P关闭部分功能！&r"
 				""
-				"这个整合包几乎含有&aFTB全家桶&r，你可以使用诸如&e区块认领、/warp、/back、连锁挖掘等便捷功能！&r"
+				"这个整合包几乎含有&aFTB全家桶&r，你可以使用诸如&e区块认领、连锁挖掘等便捷功能！&r"
 				""
 				"这个整合包含有&aCarry On&r，空手时&eShift + 右键&r即可搬起&e箱子、木桶、刷怪笼！&r"
 				""
@@ -911,26 +908,35 @@
 		{
 			can_repeat: true
 			description: [
-				"我可以通过一些简单的仪式魔法让你能够在死亡时保留自身的经验与物品"
+				"当你死亡（严格来说，是你与你的躯体断开链接）时，我可以通过一些简单的仪式魔法让你能够在死亡时保留自身的经验与物品，你不必为了物品遗失而担心"
 				""
-				"你不必为了物品遗失而担心"
+				"除此以外，你只需要寻找一个合适的地点按下[Alt]，即可重新部署你的躯体"
+				""
+				"如果你找不到合适的部署地点，你可以使用&a/redeploy&r指令来重新部署至地球的 0 0 0 处"
+				""
+				"&c需要注意的是，这会使你的所有物品丢失！"
+				""
+				"&e-你可以使用/back来重新部署至死亡地点或是上一个传送点"
+				"&e-你可以使用/spawn来重新部署至重生点"
+				"&e-你可以使用/sethome来设置一个名为home的部署地点"
+				"&e-你可以使用/home来重新部署至home"
+				"&e-你可以使用/tpa来请求部署至其它人的位置"
+				"&e-你可以使用/tpahere来请求其它人部署至你的位置"
+				"&e-你可以使用/tpaaccept来同意其它人的请求"
 			]
 			disable_toast: true
 			icon: "minecraft:totem_of_undying"
 			id: "3C2BF33D05996519"
 			rewards: [{
-				command: "/gamerule keepInventory true"
-				elevate_perms: true
-				exclude_from_claim_all: true
-				id: "58FF2E4776F6AB2F"
-				silent: true
-				type: "command"
+				id: "6832A80BDDD25CCE"
+				item: "kubejs:coin_gold"
+				type: "item"
 			}]
 			tasks: [{
 				id: "75489C4BDB35C7AF"
 				type: "checkmark"
 			}]
-			title: "死亡不掉落"
+			title: "死亡与重生"
 			x: 0.0d
 			y: -5.0d
 		}
@@ -979,7 +985,7 @@
 			description: [
 				"在音频格式超过24位88.2k时，将出现音频撕裂与掉帧，请调整至合适的音频格式！"
 				""
-				"此整合包与模组：EMI不兼容！"
+				"此整合包与模组：EMI、FTB Essential不兼容！"
 			]
 			id: "2163479F56D4B75A"
 			tasks: [{

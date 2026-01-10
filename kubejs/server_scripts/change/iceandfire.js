@@ -164,7 +164,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "iceandfire:fire_dragon_blood", "chance": 0.005 }
     ],
-    "processingTime": 200
+    "processingTime": 20
   }).id("dut_create:centrifugation/fire_dragon_blood")
   event.custom({
     "type": "vintageimprovements:centrifugation",
@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "iceandfire:ice_dragon_blood", "chance": 0.005 }
     ],
-    "processingTime": 200
+    "processingTime": 20
   }).id("dut_create:centrifugation/ice_dragon_blood")
   event.custom({
     "type": "vintageimprovements:centrifugation",
@@ -184,7 +184,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "iceandfire:lightning_dragon_blood", "chance": 0.005 }
     ],
-    "processingTime": 200
+    "processingTime": 20
   }).id("dut_create:centrifugation/lightning_dragon_blood")
 
   //百合栽培

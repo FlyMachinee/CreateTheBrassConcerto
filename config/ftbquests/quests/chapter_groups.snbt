@@ -1,6 +1,7 @@
 {
 	chapter_groups: [
 		{ id: "26D57AC038FF3413", title: "史莱姆的乐谱-技巧与指南" }
+		{ id: "5997E69EB327A306", title: "量化与配平之章(施工中...)" }
 		{ id: "6EA46263F86F561F", title: "第一乐章-啮合之音" }
 		{ id: "6B818C6F92D84205", title: "第二乐章-钢铁之血" }
 		{ id: "05CDF1EA7F8CFC5D", title: "第三乐章-群星伊始" }

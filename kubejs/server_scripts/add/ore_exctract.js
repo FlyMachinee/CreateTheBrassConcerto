@@ -10,7 +10,7 @@ ServerEvents.recipes(event => {
     "output": { "amount": 500, "fluid": "createdieselgenerators:crude_oil" },
     "priority": 0,
     "stress": 384,
-    "ticks": 100,
+    "ticks": 20,
     "vein_id": "createoreexcavation:ore_vein_type/crude_oil"
   }).id("dut_create:extractor/oil_saline_water")
   //奇异石油-钻井液
@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
     "output": { "amount": 500, "fluid": "kubejs:refined_oil" },
     "priority": 0,
     "stress": 256,
-    "ticks": 100,
+    "ticks": 20,
     "vein_id": "createoreexcavation:ore_vein_type/refined_oil"
   }).id("dut_create:extractor/oil_drilling_fluid")
   //可燃冰
@@ -31,12 +31,11 @@ ServerEvents.recipes(event => {
     "fluid": { "amount": 250, "fluid": "kubejs:cryogen" },
     "output": [
       { "item": "ad_astra:ice_shard", "count": 2 },
-      { "item": "ad_astra:ice_shard", "count": 4, "chance": 0.25 },
-      { "item": "ad_astra:ice_shard", "count": 4, "chance": 0.25 }
+      { "item": "ad_astra:ice_shard", "count": 8, "chance": 0.25 }
     ],
     "priority": 0,
     "stress": 384,
-    "ticks": 400,
+    "ticks": 50,
     "vein_id": "createoreexcavation:ore_vein_type/burnable_ice"
   }).id("dut_create:extractor/burnable_ice")
   event.custom({
@@ -45,12 +44,11 @@ ServerEvents.recipes(event => {
     "fluid": { "amount": 250, "fluid": "kubejs:cryogen" },
     "output": [
       { "item": "ad_astra:ice_shard", "count": 2 },
-      { "item": "ad_astra:ice_shard", "count": 4, "chance": 0.25 },
-      { "item": "ad_astra:ice_shard", "count": 4, "chance": 0.25 }
+      { "item": "ad_astra:ice_shard", "count": 8, "chance": 0.25 }
     ],
     "priority": 0,
     "stress": 384,
-    "ticks": 400,
+    "ticks": 50,
     "vein_id": "createoreexcavation:ore_vein_type/burnable_ice_earth"
   }).id("dut_create:extractor/burnable_ice_earth")
   //月球铝
@@ -63,7 +61,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 384,
-    "ticks": 200,
+    "ticks": 15,
     "vein_id": "createoreexcavation:ore_vein_type/moon/moon_aluminite"
   }).id("dut_create:drilling/moon_aluminite")
   //月球戴斯
@@ -76,7 +74,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 1024,
-    "ticks": 200,
+    "ticks": 20,
     "vein_id": "createoreexcavation:ore_vein_type/moon/moon_desh"
   }).id("dut_create:drilling/moon_desh")
   //月壤
@@ -94,7 +92,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 96,
-    "ticks": 200,
+    "ticks": 10,
     "vein_id": "createoreexcavation:ore_vein_type/moon/moon_stone"
   }).id("dut_create:drilling/moon_stone")
   //月球铁
@@ -103,13 +101,12 @@ ServerEvents.recipes(event => {
     "drill": { "item": "createoreexcavation:netherite_drill" },
     "fluid": { "amount": 50, "fluid": "kubejs:drilling_fluid" },
     "output": [
-      { "item": "kubejs:industrial_iron_ingot", "count": 8 },
-      { "item": "kubejs:industrial_iron_sheet", "count": 8, "chance": 0.5 },
-      { "item": "ad_astra:steel_nugget", "count": 8, "chance": 0.5 }
+      { "item": "kubejs:industrial_iron_ingot", "count": 12 },
+      { "item": "ad_astra:steel_nugget", "count": 4 }
     ],
     "priority": 0,
     "stress": 512,
-    "ticks": 200,
+    "ticks": 20,
     "vein_id": "createoreexcavation:ore_vein_type/moon/moon_iron"
   }).id("dut_create:drilling/moon_iron")
   //工业废料
@@ -124,7 +121,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 384,
-    "ticks": 80,
+    "ticks": 5,
     "vein_id": "createoreexcavation:ore_vein_type/moon/scrap"
   }).id("dut_create:drilling/scrap")
   event.custom({
@@ -139,7 +136,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 448,
-    "ticks": 80,
+    "ticks": 5,
     "vein_id": "createoreexcavation:ore_vein_type/moon/scrap_1"
   }).id("dut_create:drilling/scrap_1")
   //硫
@@ -152,7 +149,7 @@ ServerEvents.recipes(event => {
     { "item": "createloveandwar:sulphur", "chance": 0.5 }],
     "priority": 0,
     "stress": 196,
-    "ticks": 300,
+    "ticks": 30,
     "vein_id": "createoreexcavation:ore_vein_type/sulphur"
   }).id("dut_create:drilling/sulphur")
   //粘土
@@ -165,7 +162,7 @@ ServerEvents.recipes(event => {
     { "item": "minecraft:quartz", "chance": 0.5 }],
     "priority": 0,
     "stress": 48,
-    "ticks": 200,
+    "ticks": 20,
     "vein_id": "createoreexcavation:ore_vein_type/clay"
   }).id("dut_create:drilling/clay")
   //钨
@@ -180,7 +177,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 512,
-    "ticks": 300,
+    "ticks": 30,
     "vein_id": "createoreexcavation:ore_vein_type/tungsten"
   }).id("dut_create:drilling/tungsten")
   //安山岩
@@ -193,7 +190,7 @@ ServerEvents.recipes(event => {
     { "item": "minecraft:andesite", "count": 8, "chance": 0.25 }],
     "priority": 0,
     "stress": 96,
-    "ticks": 300,
+    "ticks": 30,
     "vein_id": "createoreexcavation:ore_vein_type/stone/andesite"
   }).id("dut_create:drilling/andesite")
   //闪长岩
@@ -206,7 +203,7 @@ ServerEvents.recipes(event => {
     { "item": "minecraft:diorite", "count": 8, "chance": 0.25 }],
     "priority": 0,
     "stress": 96,
-    "ticks": 300,
+    "ticks": 30,
     "vein_id": "createoreexcavation:ore_vein_type/stone/diorite"
   }).id("dut_create:drilling/diorite")
   //花岗岩
@@ -219,7 +216,7 @@ ServerEvents.recipes(event => {
     { "item": "minecraft:granite", "count": 8, "chance": 0.25 }],
     "priority": 0,
     "stress": 96,
-    "ticks": 300,
+    "ticks": 30,
     "vein_id": "createoreexcavation:ore_vein_type/stone/granite"
   }).id("dut_create:drilling/granite")
   //凝灰岩
@@ -232,7 +229,7 @@ ServerEvents.recipes(event => {
     { "item": "minecraft:tuff", "count": 8, "chance": 0.25 }],
     "priority": 0,
     "stress": 96,
-    "ticks": 300,
+    "ticks": 30,
     "vein_id": "createoreexcavation:ore_vein_type/stone/tuff"
   }).id("dut_create:drilling/tuff")
   //方解石
@@ -247,7 +244,7 @@ ServerEvents.recipes(event => {
     { "item": "minecraft:bone_meal", "count": 12, "chance": 0.25 }],
     "priority": 0,
     "stress": 192,
-    "ticks": 300,
+    "ticks": 30,
     "vein_id": "createoreexcavation:ore_vein_type/stone/calcite"
   }).id("dut_create:drilling/calcite")
   //煤炭
@@ -262,7 +259,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 384,
-    "ticks": 200,
+    "ticks": 15,
     "vein_id": "createoreexcavation:ore_vein_type/coal"
   }).id("dut_create:drilling/coal")
   //青金石
@@ -275,7 +272,7 @@ ServerEvents.recipes(event => {
     ],
     "priority": 0,
     "stress": 384,
-    "ticks": 200,
+    "ticks": 20,
     "vein_id": "createoreexcavation:ore_vein_type/lapis"
   }).id("dut_create:drilling/lapis")
   //

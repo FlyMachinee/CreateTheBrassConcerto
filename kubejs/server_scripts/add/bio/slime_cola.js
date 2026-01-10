@@ -33,7 +33,7 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:sugar" }
         ],
         "results": [{ "fluid": "kubejs:cola_puree", "amount": 150 }],
-        "processingTime": 400
+        "processingTime": 60
     }).id('dut_create:secret_recipe_of_slime_cola')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
             { "fluid": "minecraft:water", "amount": 250 }
         ],
         "results": [{ "fluid": "kubejs:slime_cola", "amount": 500 }],
-        "processingTime": 200
+        "processingTime": 30
     }).id('dut_create:slime_cola')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
             { "fluid": "create_things_and_misc:slime", "amount": 900 }
         ],
         "results": [{ "item": "minecraft:slime_block" }],
-        "processingTime": 200
+        "processingTime": 30
     }).id('dut_create:slime_block')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -63,7 +63,7 @@ ServerEvents.recipes(event => {
         "ingredients": [
             { "item": "minecraft:slime_block" }
         ],
-        "results": [{ "fluid": "create_things_and_misc:slime", "amount": 900 }],
-        "processingTime": 200
+        "results": [{ "fluid": "create_things_and_misc:slime", "amount": 810 }],
+        "processingTime": 30
     }).id('dut_create:slime_block_melt')
 })

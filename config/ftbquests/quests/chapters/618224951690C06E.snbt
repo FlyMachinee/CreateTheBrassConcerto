@@ -7,7 +7,7 @@
 	group: "6B818C6F92D84205"
 	icon: "kubejs:nether_air_fluid_bucket"
 	id: "618224951690C06E"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{

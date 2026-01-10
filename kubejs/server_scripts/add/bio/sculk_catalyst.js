@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "item": "createaddition:biomass" }
     ],
-    "processingTime": 200,
+    "processingTime": 30,
     "results": [
       { "amount": 200, "fluid": "create_enchantment_industry:experience" },
       { "item": "minecraft:sculk_catalyst" },
@@ -66,7 +66,6 @@ ServerEvents.recipes(event => {
   //幽匿增殖
   event.custom({
     "type": "vintageimprovements:pressurizing",
-    "secondaryFluidOutput": 0,
     "ingredients": [{ "amount": 250, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" } },
       { "item": "minecraft:sculk_catalyst" },
       { "item": "createaddition:biomass" },
@@ -74,7 +73,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "item": "createaddition:biomass" }
     ],
-    "processingTime": 200,
+    "processingTime": 30,
     "results": [
       { "item": "minecraft:sculk_catalyst" },
       { "item": "minecraft:sculk_catalyst","chance":0.5 },
@@ -89,7 +88,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:sculk_catalyst" },
       { "item": "minecraft:deepslate" }
     ],
-    "processingTime": 200,
+    "processingTime": 30,
     "results": [
       { "item": "minecraft:reinforced_deepslate" ,"chance":0.5}
     ]
@@ -126,7 +125,7 @@ ServerEvents.recipes(event => {
       { "tag": "forge:ingots/chromatic" },
       { "item": "minecraft:sculk_catalyst" }
     ],
-    "processingTime": 100,
+    "processingTime": 15,
     "results": [
       { "item": "create:shadow_steel","count":8 },
       { "item": "minecraft:sculk_catalyst" }

@@ -426,7 +426,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "minecraft:planks" }
     ],
-    "processingTime": 60,
+    "processingTime": 5,
     "results": [{ "item": "minecraft:stick", "count": 6 }]
   }).id("dut_create:cutting/stick")
   event.custom({
@@ -434,7 +434,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "item": "createdieselgenerators:chip_wood_block" }
     ],
-    "processingTime": 60,
+    "processingTime": 5,
     "results": [{ "item": "minecraft:stick", "count": 6 }]
   }).id("dut_create:rolling/stick")
 

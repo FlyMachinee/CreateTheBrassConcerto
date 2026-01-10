@@ -192,7 +192,7 @@ ServerEvents.recipes(event => {
     "ingredient": { "item": "create:brass_hand" },
     "loops": 1,
     "results": [
-      { "item": "create:mechanical_arm", "count": 1 },
+      { "item": "create:mechanical_arm"},
     ],
     "sequence": [
       {
@@ -253,7 +253,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:cardan_joint" },
     "loops": 3,
-    "results": [{ "chance": 1.0, "item": "create:brass_hand", "count": 3 }],
+    "results": [{ "item": "create:brass_hand", "count": 3 }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -293,7 +293,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:mechanical_core" },
     "loops": 1,
-    "results": [{ "chance": 1.0, "item": "create:gearbox" }],
+    "results": [{  "item": "create:gearbox" }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -327,7 +327,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:mechanical_core" },
     "loops": 1,
-    "results": [{ "chance": 1.0, "item": "create:encased_chain_drive" }],
+    "results": [{ "item": "create:encased_chain_drive" }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -385,7 +385,7 @@ ServerEvents.recipes(event => {
       "tag": "forge:storage_blocks/copper"
     },
     "loops": 1,
-    "results": [{ "chance": 1.0, "item": "create:steam_engine" }],
+    "results": [{  "item": "create:steam_engine" }],
     "sequence": [
       {
         "type": "create:deploying",

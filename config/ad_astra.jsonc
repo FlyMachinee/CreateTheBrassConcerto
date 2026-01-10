@@ -7,7 +7,7 @@
      * The random tick speed for breaking plants, torches, freezing water, etc. on planets.
      * Type: Integer
      */
-    "planetRandomTickSpeed": 20,
+    "planetRandomTickSpeed": 3,
     // Always tick every planet chunk for things like freezing water, breaking plants, etc., regardless of whether the chunk can tick randomly or not. This has a small performance impact.
     "forcePlanetTick": false,
     /*

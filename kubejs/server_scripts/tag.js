@@ -104,7 +104,7 @@ ServerEvents.tags('item', event => {
   event.remove("forge:plates/steel", ["createloveandwar:steel_sheet"])
   event.remove("forge:nuggets/steel", ["createloveandwar:steel_nugget"])
   //发酵专用
-  event.add('dut_create:fermentable', ["#forge:dough", "minecraft:bread", "minecraft:potato", "minecraft:baked_potato", "minecraft:apple", "minecraft:beetroot", "farmersdelight:rice", 'minecraft:sweet_berries', 'kubejs:red_mushroom_cap_piece', 'kubejs:brown_mushroom_cap_piece', 'kubejs:stem_silk'])
+  event.add('dut_create:fermentable', ["#forge:dough", "minecraft:bread", "minecraft:potato", "minecraft:baked_potato", "minecraft:apple", "minecraft:beetroot", "farmersdelight:rice", 'kubejs:red_mushroom_cap_piece', 'kubejs:brown_mushroom_cap_piece', 'kubejs:stem_silk'])
   //月壤
   event.add('dut_create:moon_solid', ['ad_astra:moon_sand', 'ad_astra:moon_stone', 'ad_astra:moon_deepslate', 'ad_astra:moon_cobblestone'])
   //大齿轮

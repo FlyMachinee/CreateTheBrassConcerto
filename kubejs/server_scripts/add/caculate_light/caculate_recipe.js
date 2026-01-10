@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "item": "kubejs:incomplete_tin_hard_disk" },
         { "amount": 500, "fluid": "kubejs:nitrogen" }],
         "results": [{ "item": "kubejs:incomplete_tin_hard_disk" }],
-        "processingTime": 50
+        "processingTime": 5
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_tin_hard_disk" }
@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "item": "kubejs:incomplete_aluminum_hard_disk" },
         { "amount": 500, "fluid": "kubejs:nitrogen" }],
         "results": [{ "item": "kubejs:incomplete_aluminum_hard_disk" }],
-        "processingTime": 50
+        "processingTime": 5
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_aluminum_hard_disk" }
@@ -138,7 +138,7 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "item": "kubejs:incomplete_brass_hard_disk" },
         { "amount": 500, "fluid": "kubejs:nitrogen" }],
         "results": [{ "item": "kubejs:incomplete_brass_hard_disk" }],
-        "processingTime": 50
+        "processingTime": 5
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_brass_hard_disk" }

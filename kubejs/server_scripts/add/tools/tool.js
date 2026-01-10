@@ -54,6 +54,22 @@ ItemEvents.rightClicked("kubejs:position_data", event => {
   event.player.addItemCooldown("kubejs:position_data", 5)
 })
 
+
+ItemEvents.rightClicked("kubejs:unknown_prototype", event => {
+  event.player.swing()
+  event.level.playSound(null, event.player.x, event.player.y, event.player.z, "block.fire.extinguish", "players", 0.4, 1)
+  if (randomOne(0, 9) != 0) {
+    event.level.runCommandSilent(`/execute as ${event.player.getUsername()} at @s run function dut:unknown_prototype`)
+    event.player.addItemCooldown("kubejs:unknown_prototype", 60)
+    event.item.shrink(1)
+  }
+  else {
+    event.player.block.createExplosion().strength(3).explosionMode("mob").explode()
+    event.player.addItemCooldown("kubejs:unknown_prototype", 60)
+    event.item.shrink(1)
+  }
+})
+
 ItemEvents.rightClicked("kubejs:tin_hard_disk", event => {
   if (event.item.damageValue > 0 && event.player.getOffHandItem().id == "create:clipboard") {
     event.item.damageValue -= 12
@@ -144,7 +160,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:blaze_chlamydia" }
     ],
     "results": [{ "item": "createloveandwar:steel_ingot" }],
-    "processingTime": 600
+    "processingTime": 120
   }).id("dut_create:tools/plastic_steel")
   //动力剑
   event.custom({
@@ -226,7 +242,6 @@ ServerEvents.customCommand('first_vein', e => {
   level.playSound(null, player.x, player.y, player.z, "minecraft:block.note_block.bell", "players", 1, 0.2)
 })
 //工程師戰鬥扳手
-
 const battlewrench_type = [
   "{display:{Name:'{\"translate\":\"item.kubejs.battle_wrench\",\"color\":\"aqua\",\"italic\":\"false\"}'},Enchantments: [ { id: \"minecraft:knockback\", lvl: 5s },{ id: \"minecraft:fire_aspect\", lvl: 2s }, { id: \"minecraft:looting\", lvl: 7s }, { id: \"minecraft:fortune\", lvl: 5s } ],AttributeModifiers:[{Slot:\"mainhand\",AttributeName:\"generic.attack_damage\",Name:\"111\",Amount:32,Operation:0,UUID:[I;11451,4,1919,810]},{Slot:\"mainhand\",AttributeName:\"generic.armor\",Name:\"112\",Amount:12,Operation:0,UUID:[I;1145,1419,198,10]}]}",
 
@@ -284,8 +299,6 @@ ServerEvents.recipes(event => {
       ],
       "transitionalItem": { "item": "create:wrench" }
     }).id("dut_create:sequnced_assembly/battle_wrench")
-
   }
   battleWrench(battlewrench_type[randomOne(0, 7)])
 })
-

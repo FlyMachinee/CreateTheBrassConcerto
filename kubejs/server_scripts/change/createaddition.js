@@ -29,7 +29,8 @@ ServerEvents.recipes(event => {
     "type": "createaddition:charging",
     "input": { "item": "minecraft:terracotta" },
     "result": { "item": "minecraft:terracotta" },
-    "energy": 24000000
+    "energy": 24000000,
+    "maxChargeRate":24000
   }).id("dut_create:charging/terracota")
   //轧机
   event.replaceInput({ input: 'create:andesite_alloy', id: 'createaddition:crafting/rolling_mill' }, 'create:andesite_alloy', 'kubejs:bearing')
@@ -287,17 +288,6 @@ ServerEvents.recipes(event => {
     ],
     "heatRequirement": "heated"
   }).id("dut_create:efficient_biomass_from_corps")
-  //生物质颗粒转生物质
-  event.custom({
-    "type": "create:filling",
-    "ingredients": [
-      { "item": "createaddition:biomass_pellet" },
-      { "amount": 75, "fluid": "minecraft:water" }
-    ],
-    "results": [
-      { "item": "createaddition:biomass" }
-    ]
-  }).id("dut_create:biomass_from_biomass_pellet")
   //塑料吸管
   event.custom({
     "type": "createaddition:rolling",

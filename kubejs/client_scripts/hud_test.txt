@@ -8,8 +8,3 @@ PlayerEvents.tick(event => {
 		textNow.push(textStack.pop())
 	}
 })
-PlayerEvents.inventoryChanged(event => {
-	if (event.item.id == "create:wrench") {
-
-	}
-})

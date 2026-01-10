@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:green_dye" },
       { "item": "minecraft:blue_dye" }
     ],
-    "processingTime": 300,
+    "processingTime": 45,
     "results": [
       { "fluid": "kubejs:chromatic_waste", "amount": 250 },
       { "item": "kubejs:chromatic_protozoa" }
@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
       { "tag": "forge:ingots/shadow_steel" },
       { "item": "kubejs:chromatic_protozoa" }
     ],
-    "processingTime": 200,
+    "processingTime": 30,
     "results": [
       { "item": "create:chromatic_compound" },
       { "item": "kubejs:chromatic_protozoa" }
@@ -96,7 +96,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:chromatic_protozoa" },
       { "tag": "forge:ingots/chromatic" }
     ],
-    "processingTime": 400,
+    "processingTime": 60,
     "results": [
       { "item": "kubejs:chromatic_protozoa" },
       { "fluid": "create_enchantment_industry:hyper_experience", "amount": 200 }

@@ -1,5 +1,6 @@
 ServerEvents.recipes(event => {
   //event.remove({input: ''})
+  event.remove({ id:'minecraft:ender_chest'})
   event.remove({ output: 'custommachinery:configuration_card' })
   event.remove({ input: 'create:precision_mechanism', mod: 'createoreexcavation' })
   event.remove({ id: 'createoreexcavation:diamond_drill' })

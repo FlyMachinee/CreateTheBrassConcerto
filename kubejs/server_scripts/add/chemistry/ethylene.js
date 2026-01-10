@@ -4,13 +4,13 @@ ServerEvents.recipes(event => {
         "type": "vintageimprovements:pressurizing",
         "heatRequirement": "heated",
         "ingredients": [
-            { "fluidTag": "dut_create:ethylene", "amount": 125 },
+            { "fluidTag": "dut_create:ethylene", "amount": 250 },
             { "item": "kubejs:sulphur" }
         ],
         "results": [
             { "item": "kubejs:rubber", "count": 8 }
         ],
-        "processingTime": 200
+        "processingTime": 45
     }).id("dut_create:rubber")
     //经验制法
     event.custom({
@@ -25,25 +25,9 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:ethylene", "amount": 250 },
             { "fluid": "kubejs:hydrogen", "amount": 500 }
         ],
-        "processingTime": 100
+        "processingTime": 75
     }).id('dut_create:ethylene_from_natural_gas')
-    //乙醇制法1
-    event.custom({
-        "type": "vintageimprovements:pressurizing",
-        "secondaryFluidInput": 2,
-        "heatRequirement": "heated",
-        "ingredients": [
-            { "fluid": "createdieselgenerators:ethanol", "amount": 500 },
-            { "fluid": "kubejs:muriatic_acid", "amount": 500 },
-            { "fluid": "kubejs:caustic_soda", "amount": 500 }
-        ],
-        "results": [
-            { "fluid": "kubejs:ethylene", "amount": 500 },
-            { "fluid": "kubejs:saline_water", "amount": 500 }
-        ],
-        "processingTime": 400
-    }).id('dut_create:ethylene_from_ethylene_and_muriatic_acid')
-    //乙醇制法2
+    //乙醇制法
     event.custom({
         "type": "vintageimprovements:pressurizing",
         "secondaryFluidOutput": 2,
@@ -57,8 +41,8 @@ ServerEvents.recipes(event => {
             { "fluid": "vintageimprovements:sulfuric_acid", "amount": 750 },
             { "fluid": "vintageimprovements:sulfur_dioxide", "amount": 250 }
         ],
-        "processingTime": 500
-    }).id('dut_create:ethylene_from_ethylene_and_sulfuric_acid')
+        "processingTime": 60
+    }).id('dut_create:ethylene_from_ethanol_and_sulfuric_acid')
     //聚乙烯
     event.remove({ input: 'createloveandwar:catalyst', not: { mod: 'kubejs' } })
     event.custom({
@@ -68,9 +52,9 @@ ServerEvents.recipes(event => {
             { "fluidTag": "dut_create:ethylene", "amount": 1000 }
         ],
         "results": [
-            { "fluid": "kubejs:polymer", "amount": 225 }
+            { "fluid": "kubejs:polymer", "amount": 200 }
         ],
-        "processingTime": 400
+        "processingTime": 35
     }).id('dut_create:polymer')
     event.custom({
         "type": "create:compacting",
@@ -95,7 +79,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "item": "minecraft:sponge" }
         ],
-        "processingTime": 400
+        "processingTime": 55
     }).id('dut_create:sponge')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -108,7 +92,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "fluid": "kubejs:polymer", "amount": 125 }
         ],
-        "processingTime": 400
+        "processingTime": 55
     }).id('dut_create:sponge_to_polymer')
 
     //聚氯乙烯
@@ -125,7 +109,7 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:duraplas", "amount": 125 },
             { "fluid": "kubejs:muriatic_acid", "amount": 500 }
         ],
-        "processingTime": 400
+        "processingTime": 70
     }).id('dut_create:duraplas')
     event.custom({
         "type": "create:compacting",

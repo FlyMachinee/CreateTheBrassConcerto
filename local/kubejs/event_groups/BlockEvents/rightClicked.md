@@ -23,40 +23,35 @@ Note: Even if no fields are listed above, some methods are still available as fi
 
 | Name | Parameters | Return type | Static? |
 | ---- | ---------- | ----------- | ------- |
-| getItem |  |  | ItemStack | ✘ |
-| getHand |  |  | InteractionHand | ✘ |
-| getEntity |  |  | LivingEntity | ✘ |
-| getBlock |  |  | BlockContainerJS | ✘ |
 | getFacing |  |  | Direction | ✘ |
+| getItem |  |  | ItemStack | ✘ |
+| getBlock |  |  | BlockContainerJS | ✘ |
+| getEntity |  |  | LivingEntity | ✘ |
+| getHand |  |  | InteractionHand | ✘ |
+| getPlayer |  |  | Player | ✘ |
+| removeGameStage | String |  | void | ✘ |
 | addGameStage | String |  | void | ✘ |
 | hasGameStage | String |  | boolean | ✘ |
-| removeGameStage | String |  | void | ✘ |
-| getPlayer |  |  | Player | ✘ |
 | getLevel |  |  | Level | ✘ |
 | getServer |  |  | MinecraftServer | ✘ |
 | exit | Object |  | Object | ✘ |
 | exit |  |  | Object | ✘ |
 | cancel | Object |  | Object | ✘ |
 | cancel |  |  | Object | ✘ |
-| success | Object |  | Object | ✘ |
 | success |  |  | Object | ✘ |
+| success | Object |  | Object | ✘ |
 
 
 ### Documented members:
 
+- `Direction getFacing()`
+```
+The face of the block being right clicked.
+```
+
 - `ItemStack getItem()`
 ```
 The position of the block that was right clicked.
-```
-
-- `InteractionHand getHand()`
-```
-The hand that was used to right click the block.
-```
-
-- `LivingEntity getEntity()`
-```
-The player that right clicked the block.
 ```
 
 - `BlockContainerJS getBlock()`
@@ -64,9 +59,23 @@ The player that right clicked the block.
 The block that was right clicked.
 ```
 
-- `Direction getFacing()`
+- `LivingEntity getEntity()`
 ```
-The face of the block being right clicked.
+The player that right clicked the block.
+```
+
+- `InteractionHand getHand()`
+```
+The hand that was used to right click the block.
+```
+
+- `void removeGameStage(String var0)`
+
+  Parameters:
+  - var0: String
+
+```
+Removes the specified game stage from the player
 ```
 
 - `void addGameStage(String var0)`
@@ -85,15 +94,6 @@ Adds the specified game stage to the player
 
 ```
 Checks if the player has the specified game stage
-```
-
-- `void removeGameStage(String var0)`
-
-  Parameters:
-  - var0: String
-
-```
-Removes the specified game stage from the player
 ```
 
 - `Object exit(Object var0)`
@@ -132,6 +132,13 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 `cancel` denotes a `false` outcome.
 ```
 
+- `Object success()`
+```
+Stops the event with default exit value. Execution will be stopped **immediately**.
+
+`success` denotes a `true` outcome.
+```
+
 - `Object success(Object var0)`
 
   Parameters:
@@ -139,13 +146,6 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 
 ```
 Stops the event with the given exit value. Execution will be stopped **immediately**.
-
-`success` denotes a `true` outcome.
-```
-
-- `Object success()`
-```
-Stops the event with default exit value. Execution will be stopped **immediately**.
 
 `success` denotes a `true` outcome.
 ```

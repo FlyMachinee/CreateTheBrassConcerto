@@ -1,8 +1,5 @@
 ServerEvents.recipes(event => {
-    //event.remove({output: '',not:{mod:'kubejs'}})
-    //event.remove({id: ''})
-    //event.remove({input: ''})
-    //event.custom()
+    //染料
     event.remove({ id: "vintageimprovements:centrifugation/orange_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -14,9 +11,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:red_dye" },
             { "item": "minecraft:yellow_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/orange_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/purple_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -28,9 +24,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:red_dye" },
             { "item": "minecraft:blue_dye" }
         ],
-        "processingTime": 100
+        "processingTime": 5
     }).id("dut_create:centrifugation/purple_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/pink_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -42,9 +37,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:white_dye" },
             { "item": "minecraft:red_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/pink_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/magenta_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -56,9 +50,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:pink_dye" },
             { "item": "minecraft:purple_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/magenta_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/lime_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -70,9 +63,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:white_dye" },
             { "item": "minecraft:greeb_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/lime_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/light_gray_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -84,9 +76,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:white_dye" },
             { "item": "minecraft:gray_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/light_gray_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/light_blue_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -98,9 +89,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:white_dye" },
             { "item": "minecraft:blue_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/light_blue_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/gray_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -112,9 +102,8 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:white_dye" },
             { "item": "minecraft:black_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/gray_dye")
-    //
     event.remove({ id: "vintageimprovements:centrifugation/cyan_dye" })
     event.custom({
         "type": "vintageimprovements:centrifugation",
@@ -126,7 +115,7 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:blue_dye" },
             { "item": "minecraft:green_dye" }
         ],
-        "processingTime": 200
+        "processingTime": 5
     }).id("dut_create:centrifugation/cyan_dye")
     //泥巴
     event.remove({ id: "vintageimprovements:centrifugation/mud" })
@@ -139,7 +128,7 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:dirt", "count": 2 },
             { "fluid": "minecraft:water", "amount": 250 }
         ],
-        "processingTime": 200
+        "processingTime": 10
     }).id("dut_create:centrifugation/mud")
     //熔融黄铜离心
     event.custom({
@@ -151,7 +140,7 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:gold", "amount": 270 },
             { "fluid": "kubejs:copper", "amount": 270 }
         ],
-        "processingTime": 300
+        "processingTime": 60
     }).id("dut_create:centrifugation/brass")
     //液态空气离心
     event.custom({
@@ -163,182 +152,67 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:nitrogen", "amount": 800 },
             { "fluid": "kubejs:oxygen", "amount": 200 }
         ],
-        "processingTime": 600
+        "processingTime": 80
     }).id("dut_create:centrifugation/air_fluid")
     //玫瑰石英离心
     event.custom({
         "type": "vintageimprovements:centrifugation",
         "ingredients": [
-            {
-                "item": "create:rose_quartz",
-                "count": 1
-            }
+            { "item": "create:rose_quartz" }
         ],
         "results": [
-            {
-                "item": "minecraft:redstone",
-                "count": 8
-            },
-            {
-                "item": "minecraft:quartz",
-                "count": 1
-            }
+            { "item": "minecraft:redstone", "count": 8 },
+            { "item": "minecraft:quartz" }
         ],
-        "processingTime": 400
+        "processingTime": 15
     }).id("dut_create:centrifugation/rose_quartz")
-    //棋盘格离心
-    event.custom({
-        "type": "vintageimprovements:centrifugation",
-        "ingredients": [
-            {
-                "item": "supplementaries:checker_block",
-                "count": 2
-            }
-        ],
-        "results": [
-            {
-                "item": "minecraft:cobblestone",
-                "count": 1
-            },
-            {
-                "item": "minecraft:blackstone",
-                "count": 1
-            }
-        ],
-        "processingTime": 1200
-    }).id("dut_create:centrifugation/checker_block")
     //花岗岩离心
     event.custom({
         "type": "vintageimprovements:centrifugation",
         "ingredients": [
-            {
-                "item": "minecraft:granite",
-                "count": 1
-            }
+            { "item": "minecraft:granite" }
         ],
         "results": [
-            {
-                "item": "minecraft:quartz",
-                "count": 1
-            },
-            {
-                "item": "minecraft:diorite",
-                "count": 1
-            }
+            { "item": "minecraft:quartz" },
+            { "item": "minecraft:diorite" }
         ],
-        "processingTime": 200
+        "processingTime": 20
     }).id("dut_create:centrifugation/granite")
     //安山岩离心
     event.custom({
         "type": "vintageimprovements:centrifugation",
         "ingredients": [
-            {
-                "item": "minecraft:andesite",
-                "count": 1
-            }
+            { "item": "minecraft:andesite" }
         ],
         "results": [
-            {
-                "item": "minecraft:cobblestone",
-                "count": 1
-            },
-            {
-                "item": "minecraft:diorite",
-                "count": 1
-            }
+            { "item": "minecraft:cobblestone" },
+            { "item": "minecraft:diorite" }
         ],
-        "processingTime": 200
+        "processingTime": 20
     }).id("dut_create:centrifugation/andesite")
     //闪长岩离心
     event.custom({
         "type": "vintageimprovements:centrifugation",
         "ingredients": [
-            {
-                "item": "minecraft:diorite",
-                "count": 1
-            }
+            { "item": "minecraft:diorite" }
         ],
         "results": [
-            {
-                "item": "minecraft:cobblestone",
-                "count": 1
-            },
-            {
-                "item": "minecraft:quartz",
-                "count": 1
-            }
+            { "item": "minecraft:cobblestone" },
+            { "item": "minecraft:quartz" }
         ],
-        "processingTime": 200
+        "processingTime": 20
     }).id("dut_create:centrifugation/diorite")
-    //砂土离心
-    event.custom({
-        "type": "vintageimprovements:centrifugation",
-        "ingredients": [
-            {
-                "item": "minecraft:coarse_dirt",
-                "count": 1
-            }
-        ],
-        "results": [
-            {
-                "item": "minecraft:gravel",
-                "count": 1
-            },
-            {
-                "item": "minecraft:dirt",
-                "count": 1
-            }
-        ],
-        "processingTime": 300
-    }).id("dut_create:centrifugation/coarse_dirt")
-    //铸造砂离心
-    event.custom({
-        "type": "vintageimprovements:centrifugation",
-        "ingredients": [
-            {
-                "item": "createbigcannons:casting_sand",
-                "count": 2
-            }
-        ],
-        "results": [
-            {
-                "item": "minecraft:sand",
-                "count": 2
-            },
-            {
-                "item": "minecraft:clay_ball",
-                "count": 1
-            },
-            {
-                "item": "minecraft:dirt",
-                "count": 1
-            }
-        ],
-        "processingTime": 300
-    }).id("dut_create:centrifugation/casting_sand")
     //火药离心
     event.custom({
         "type": "vintageimprovements:centrifugation",
         "ingredients": [
-            {
-                "item": "minecraft:gunpowder",
-                "count": 3
-            }
+            { "item": "minecraft:gunpowder", "count": 9 }
         ],
         "results": [
-            {
-                "item": "minecraft:charcoal",
-                "chance": 0.33
-            },
-            {
-                "item": "minecraft:bone_meal",
-                "chance": 0.33
-            },
-            {
-                "item": "minecraft:blaze_powder",
-                "chance": 0.33
-            }
+            { "item": "minecraft:charcoal" },
+            { "item": "minecraft:bone_meal" },
+            { "item": "minecraft:blaze_powder" }
         ],
-        "processingTime": 300
+        "processingTime": 30
     }).id("dut_create:centrifugation/gunpowder")
 })

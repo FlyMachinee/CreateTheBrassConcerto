@@ -59,6 +59,14 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
+      { "item": "minecraft:map" },
+      { "item": "minecraft:feather" }
+    ],
+    "result": { "item": "supplementaries:slice_map" }
+  }).id("dut_create:slice_map")
+  event.custom({
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
       { "item": "minecraft:snow_block" }
     ],
     "result": { "item": "minecraft:snowball", "count": 4 }
@@ -134,7 +142,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "minecraft:wool" }
     ],
-    "processingTime": 100,
+    "processingTime": 20,
     "results": [
       { "count": 5, "item": "minecraft:string" },
       { "chance": 0.5, "item": "minecraft:string" }
@@ -236,7 +244,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "minecraft:amethyst_shard", "count": 12 }
     ],
-    "processingTime": 120
+    "processingTime": 10
   }).id("dut_create:amethyst_shard")
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -251,7 +259,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:amethyst_cluster" },
       { "item": "minecraft:amethyst_cluster", "chance": 0.25 }
     ],
-    "processingTime": 100
+    "processingTime": 10
   }).id('dut_create:pressurizing/amethyst_cluster')
   event.custom({
     "type": "minecraft:smelting",
@@ -273,7 +281,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:amethyst_shard", "count": 12 },
       { "item": "minecraft:amethyst_shard", "count": 6, "chance": 0.5 }
     ],
-    "processingTime": 200
+    "processingTime": 10
   }).id("dut_create:vibrating/amethyst_cluster")
   //石英
   event.custom({
@@ -285,7 +293,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:purple_dye", "chance": 0.5 },
       { "item": "minecraft:quartz" }
     ],
-    "processingTime": 50
+    "processingTime": 5
   }).id("dut_create:crushing/amethyst_shard")
   //硅板
   event.custom({
@@ -295,7 +303,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:amethyst_shard" }
     ],
     "results": [{ "item": "kubejs:silicon_plate" }],
-    "processingTime": 80
+    "processingTime": 5
   }).id("dut_create:pressurizing/silicon_plate")
   //甘蔗产糖
   event.remove({ output: "minecraft:sugar", mod: 'create' })
@@ -304,7 +312,7 @@ ServerEvents.recipes(event => {
     "type": "create:milling",
     "ingredients": [{ "item": "minecraft:sugar_cane" }],
     "results": [{ "item": "minecraft:sugar" }],
-    "processingTime": 50
+    "processingTime": 20
   }).id("dut_create:milling/sugar_cane")
   //碳化硅打磨玫瑰石英
   event.custom({

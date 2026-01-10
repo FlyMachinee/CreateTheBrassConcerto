@@ -19,18 +19,23 @@ Note: Even if no fields are listed above, some methods are still available as fi
 
 | Name | Parameters | Return type | Static? |
 | ---- | ---------- | ----------- | ------- |
+| getAllTypes |  |  | List<EntityType<? extends LivingEntity>> | ✘ |
 | getAttributes | EntityType<? extends LivingEntity> |  | List<Attribute> | ✘ |
 | modify | EntityType<? extends LivingEntity>, Consumer<AttributeModificationHelper> |  | void | ✘ |
-| getAllTypes |  |  | List<EntityType<? extends LivingEntity>> | ✘ |
 | exit | Object |  | Object | ✘ |
 | exit |  |  | Object | ✘ |
 | cancel | Object |  | Object | ✘ |
 | cancel |  |  | Object | ✘ |
-| success | Object |  | Object | ✘ |
 | success |  |  | Object | ✘ |
+| success | Object |  | Object | ✘ |
 
 
 ### Documented members:
+
+- `List<EntityType<? extends LivingEntity>> getAllTypes()`
+```
+Returns a list of all entity types that can have their attributes modified by this event
+```
 
 - `List<Attribute> getAttributes(EntityType<? extends LivingEntity> var0)`
 
@@ -49,11 +54,6 @@ Returns a list of all attributes the given entity type has by default
 
 ```
 Modifies the given entity type's attributes
-```
-
-- `List<EntityType<? extends LivingEntity>> getAllTypes()`
-```
-Returns a list of all entity types that can have their attributes modified by this event
 ```
 
 - `Object exit(Object var0)`
@@ -92,6 +92,13 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 `cancel` denotes a `false` outcome.
 ```
 
+- `Object success()`
+```
+Stops the event with default exit value. Execution will be stopped **immediately**.
+
+`success` denotes a `true` outcome.
+```
+
 - `Object success(Object var0)`
 
   Parameters:
@@ -99,13 +106,6 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 
 ```
 Stops the event with the given exit value. Execution will be stopped **immediately**.
-
-`success` denotes a `true` outcome.
-```
-
-- `Object success()`
-```
-Stops the event with default exit value. Execution will be stopped **immediately**.
 
 `success` denotes a `true` outcome.
 ```

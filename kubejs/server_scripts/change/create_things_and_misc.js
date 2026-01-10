@@ -18,6 +18,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: "create_things_and_misc:rose_quartz_sheet_craft"})
   event.remove({ id: "create_things_and_misc:experiencesheetcraft" })
   event.remove({ id: "create_things_and_misc:sprinklerheadcraft" })
+  event.remove({ id: "create_things_and_misc:neon_tube_craft" })
   event.replaceInput({id:"create_things_and_misc:sprinkler_craft"},"create_things_and_misc:sprinkler_head","#dut_create:belt")
   event.replaceInput({input:"create_things_and_misc:vibration_mechanism"},"create_things_and_misc:vibration_mechanism","vintageimprovements:vibrating_table")
 })

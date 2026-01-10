@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:mechanical_core", "chance": 0.25, "count": 2 },
             { "item": "kubejs:rubber", "chance": 0.125, "count": 3 }
         ],
-        "processingTime": 20
+        "processingTime": 5
     }).id("dut_create:recycle/scrap")
     event.custom({
         "type": "vintageimprovements:vibrating",
@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:silicon_plate", "chance": 0.3, "count": 2 },
             { "item": "create:copper_sheet", "chance": 0.35, "count": 3 }
         ],
-        "processingTime": 20
+        "processingTime": 5
     }).id("dut_create:recycle/scrap_1")
     event.custom({
         "type": "vintageimprovements:vibrating",
@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
             { "item": "create:fluid_pipe", "chance": 0.1, "count": 3  },
             { "item": "create:mechanical_pump", "chance": 0.05}
         ],
-        "processingTime": 20
+        "processingTime": 5
     }).id("dut_create:recycle/scrap_2")
     event.custom({
         "type": "vintageimprovements:vibrating",
@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:planetary_gear", "chance": 0.05 },
             { "item": "kubejs:differential", "chance": 0.02}
         ],
-        "processingTime": 20
+        "processingTime": 5
     }).id("dut_create:recycle/scrap_3")
     event.custom({
       "type": "create:splashing",
@@ -76,6 +76,6 @@ ServerEvents.recipes(event => {
             { "chance": 0.15, "item": "kubejs:scrap" },
             { "chance": 0.05, "item": "kubejs:scrap_1" }
         ],
-        "processingTime": 20
+        "processingTime": 5
     }).id("dut_create:recycle/scrap_vibrating")
 })

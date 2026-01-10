@@ -64,8 +64,8 @@ ServerEvents.recipes(event => {
     "ingredient": { "tag": "forge:ingots/shadow_steel" },
     "loops": 1,
     "results": [
-      { "item": "minecraft:netherite_scrap", "chance": 0.05},
-      { "item": 'create:cinder_flour', "chance": 0.95 },
+      { "item": "minecraft:netherite_scrap", "chance": 0.25 },
+      { "item": 'create:cinder_flour', "chance": 0.75 },
     ],
     "sequence": [{
       "type": "create:filling",
@@ -74,7 +74,7 @@ ServerEvents.recipes(event => {
         { "fluid": "create_enchantment_industry:experience", "amount": 1000 }
       ],
       "results": [{ "item": "create:shadow_steel" }],
-    },{
+    }, {
       "type": "create:filling",
       "ingredients": [
         { "item": "create:shadow_steel" },
@@ -122,7 +122,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "create:stone_types/crimsite" }
     ],
-    "processingTime": 250,
+    "processingTime": 80,
     "results": [
       { "item": "create:crushed_raw_iron" },
       { "chance": 0.25, "item": "create:crushed_raw_iron" }
@@ -136,7 +136,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "create:stone_types/ochrum" }
     ],
-    "processingTime": 250,
+    "processingTime": 80,
     "results": [
       { "item": "create:crushed_raw_gold" },
       { "chance": 0.25, "item": "create:crushed_raw_gold" }
@@ -150,7 +150,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "create:stone_types/veridium" }
     ],
-    "processingTime": 250,
+    "processingTime": 80,
     "results": [
       { "item": "create:crushed_raw_copper" },
       { "chance": 0.25, "item": "create:crushed_raw_copper" }
@@ -162,7 +162,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "create:stone_types/limestone" }
     ],
-    "processingTime": 250,
+    "processingTime": 80,
     "results": [
       { "item": "minecraft:calcite", "chance": 0.5 },
       { "item": "minecraft:bone_meal", "chance": 0.5 },
@@ -222,7 +222,7 @@ ServerEvents.recipes(event => {
       { "item": "create:crushed_raw_tin" },
       { "item": "create:crushed_raw_tin", "chance": 0.25 }
     ],
-    "processingTime": 250
+    "processingTime": 80
   }).id("dut_create:ore_production/crushed_tin")
   //矿洗涤
   event.remove({ id: "create:splashing/crushed_raw_iron" })
@@ -299,7 +299,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "item": "minecraft:coal" }
     ],
-    "processingTime": 100,
+    "processingTime": 60,
     "results": [
       { "item": "kubejs:crushed_coal" },
       { "item": "kubejs:crushed_coal", "chance": 0.75 },
@@ -312,7 +312,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "create:stone_types/scorchia" }
     ],
-    "processingTime": 250,
+    "processingTime": 80,
     "results": [
       { "chance": 0.5, "item": "create:cinder_flour" },
       { "chance": 0.05, "item": "kubejs:crushed_coal" },
@@ -327,7 +327,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "tag": "create:stone_types/tuff" }
     ],
-    "processingTime": 350,
+    "processingTime": 80,
     "results": [
       { "chance": 0.25, "item": "minecraft:flint" },
       { "chance": 0.1, "item": "minecraft:gold_nugget" },
@@ -345,6 +345,26 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "kubejs:aluminite_powder" }
     ],
-    "processingTime": 250
+    "processingTime": 100
   }).id("dut_create:ore_production/aluminite_powder")
+  //砸板增殖
+  function PressPlate(event, input, output) {
+    event.custom({
+      "type": "createbigcannons:melting",
+      "heatRequirement": "heated",
+      "ingredients": [{ "tag": input }],
+      "processingTime": 20,
+      "results": [{ "item": output }]
+    }).id("dut_create:melting_ore_rack/" + output.split(":")[1])
+  }
+  PressPlate(event, "create:stone_types/crimsite", "minecraft:iron_ingot")
+  PressPlate(event, "create:stone_types/ochrum", "minecraft:gold_ingot")
+  PressPlate(event, "create:stone_types/veridium", "minecraft:copper_ingot")
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:raw_tin" }],
+    "processingTime": 20,
+    "results": [{ "item": "kubejs:tin_ingot" }]
+  }).id("dut_create:melting_ore_rack/tin_ingot")
 })

@@ -9,6 +9,8 @@ ServerEvents.recipes(event => {
   event.remove({ id:"vintageimprovements:craft/sulfur_items_to_block" })
   event.remove({ id:"vintageimprovements:craft/sulfur_item_to_nuggets" })
   event.remove({ id:"vintageimprovements:craft/sulfur_block_to_items" })
+  event.remove({ id:"vintageimprovements:coiling/electrum_rod" })
+  event.remove({ id:"vintageimprovements:coiling/electrum_wire" })
   //板
   event.remove({ type:"vintageimprovements:hammering" })
   event.remove({ type:"vintageimprovements:auto_smithing"})

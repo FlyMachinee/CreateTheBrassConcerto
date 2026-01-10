@@ -117,7 +117,7 @@ Ponder.registry((event) => {
         scene.showControls(15, [7, 3, 4], "up").withItem("64x kubejs:carbon_electrode")
         scene.idle(30);
         scene.addKeyframe();
-        scene.text(60, "最后，提供一枚满耐久的货运火箭，组装就会正式开始！");
+        scene.text(60, "最后，提供一枚货运火箭，组装就会正式开始！");
         scene.showControls(15, [7, 3, 4], "up").withItem("kubejs:carrier_rocket")
         scene.overlay.showOutline("green", {}, [7, 3, 4], 30);
         scene.idle(30);

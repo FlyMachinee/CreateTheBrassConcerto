@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:mycetozoan" },
       { "item": "kubejs:mycetozoan" }
     ],
-    "processingTime": 600,
+    "processingTime": 300,
     "results": [
       { "item": "minecraft:slime_block"}
     ]

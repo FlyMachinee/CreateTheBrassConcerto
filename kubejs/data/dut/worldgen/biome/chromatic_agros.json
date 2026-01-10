@@ -79,7 +79,7 @@
       "dut:slimeria/tree_chromatic",
       "minecraft:fossil_lower",
       "minecraft:flower_forest_flowers",
-      "minecraft:flower_cherry",
+      "dut:slimeria/argos_cherry",
       "dut:patch_strophar"
     ],
     []
@@ -116,12 +116,6 @@
         "maxCount": 4,
         "minCount": 1,
         "weight": 50
-      },
-      {
-        "type": "minecraft:creeper",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 100
       },
       {
         "type": "minecraft:slime",

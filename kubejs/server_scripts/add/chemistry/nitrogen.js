@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:nitrogen", "amount": 350 },
       { "fluid": "kubejs:saline_water", "amount": 600 }
     ],
-    "processingTime": 200
+    "processingTime": 40
   }).id('dut_create:comproportionation_nitrogen')
   //硝酸
   event.custom({
@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:nitrogen_dioxide", "amount": 125 },
       { "item": "kubejs:uncharged_electrolyzer"}
     ],
-    "processingTime": 200
+    "processingTime": 40
   }).id('dut_create:nitric_acid_from_ammonia')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:nitric_acid", "amount": 250 }
     ],
-    "processingTime": 200
+    "processingTime": 50
   }).id('dut_create:nitric_acid_from_nitrogen_dioxide')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:nitric_acid", "amount": 500 }
     ],
-    "processingTime": 200
+    "processingTime": 50
   }).id('dut_create:nitric_acid_from_nitrogen_dioxide_better')
   //二氧化氮
   event.custom({
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:nitrogen_dioxide", "amount": 125 },
       { "item": "kubejs:uncharged_electrolyzer"}
     ],
-    "processingTime": 300
+    "processingTime": 25
   }).id('dut_create:nitrogen_dioxide_crafted')
   //氮肥制树木肥料
   event.custom({
@@ -95,7 +95,7 @@ ServerEvents.recipes(event => {
         { "fluid": "kubejs:nitrogen_fertilizer", "amount": 250 * c },
         { "fluid": "minecraft:water", "amount": 250 * b }
       ],
-      "processingTime": 200
+      "processingTime": 30
     }).id(d);
     return 0
   }
@@ -116,7 +116,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:salt"},
       { "item": "minecraft:bone_meal"}
     ],
-    "processingTime": 80
+    "processingTime": 25
   }).id('dut_create:nitrogen_fertilizer_from_carbon_dioxide')
   //合成氨
   event.custom({
@@ -124,15 +124,14 @@ ServerEvents.recipes(event => {
     "secondaryFluidInput": 0,
     "heatRequirement": "superheated",
     "ingredients": [
-      { "fluidTag": "forge:hydrogen", "amount": 450 },
-      { "fluid": "kubejs:nitrogen", "amount": 150 },
-      { "item": "create:crushed_raw_iron" }
+      { "fluidTag": "forge:hydrogen", "amount": 300 },
+      { "fluid": "kubejs:nitrogen", "amount": 100 },
+      { "tag": "forge:plates/iron" }
     ],
     "results": [
-      { "fluid": "kubejs:ammonia", "amount": 300 },
-      { "item": "create:crushed_raw_iron", "chance": 0.96 }
+      { "fluid": "kubejs:ammonia", "amount": 200 }
     ],
-    "processingTime": 100
+    "processingTime": 20
   }).id('dut_create:ammonia_from_nitrogen_with_iron_superheated')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -144,6 +143,6 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:ammonia", "amount": 200 }
     ],
-    "processingTime": 200
+    "processingTime": 80
   }).id('dut_create:ammonia_from_nitrogen')
 })

@@ -5,11 +5,15 @@
     "features": [
       {
         "feature": "dut:slimeria/jungle/jungle_aeronos_fungus",
-        "chance": 0.55
+        "chance": 0.6
       },
       {
-        "feature": "dut:slimeria/jungle/jungle_aeronos_carpet",
-        "chance": 0.35
+        "feature": "dut:slimeria/jungle/aeronos_cap_pile",
+        "chance": 0.25
+      },
+      {
+        "feature": "dut:slimeria/jungle/aeronos_stem_pile",
+        "chance": 0.05
       },
       {
         "feature": "dut:slimeria/jungle/jungle_aeronos_tiny",

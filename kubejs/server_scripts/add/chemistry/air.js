@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createdieselgenerators:distillation",
     "ingredients": [{ "fluid": "kubejs:air_fluid", "amount": 1000 }],
-    "processingTime": 200,
+    "processingTime": 180,
     "heatRequirement": "heated",
     "results": [
       { "fluid": "kubejs:oxygen", "amount": 200 },
@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
     "type": "createloveandwar:fractional_distillation",
     "ingredients": [{ "fluid": "kubejs:air_fluid", "amount": 2000 }],
     "heatRequirement": "superheated",
-    "processingTime": 100,
+    "processingTime": 120,
     "results": [
       { "fluid": "kubejs:oxygen", "amount": 400 },
       { "fluid": "kubejs:nitrogen", "amount": 1600 }
@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createdieselgenerators:distillation",
     "ingredients": [{ "fluid": "kubejs:nether_air_fluid", "amount": 2000 }],
-    "processingTime": 800,
+    "processingTime": 900,
     "heatRequirement": "heated",
     "results": [
       { "fluid": "vintageimprovements:sulfur_dioxide", "amount": 500 },
@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
     "type": "createloveandwar:fractional_distillation",
     "ingredients": [{ "fluid": "kubejs:nether_air_fluid", "amount": 2000 }],
     "heatRequirement": "superheated",
-    "processingTime": 400,
+    "processingTime": 360,
     "results": [
       { "fluid": "vintageimprovements:sulfur_dioxide", "amount": 300 },
       { "fluid": "kubejs:nitrogen_dioxide", "amount": 300 },
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createdieselgenerators:distillation",
     "ingredients": [{ "fluid": "kubejs:end_air_fluid", "amount": 1000 }],
-    "processingTime": 400,
+    "processingTime": 450,
     "heatRequirement": "heated",
     "results": [
       { "fluid": "kubejs:nitrogen_dioxide", "amount": 210 },
@@ -65,23 +65,25 @@ ServerEvents.recipes(event => {
   //高级分馏
   event.custom({
     "type": "createloveandwar:fractional_distillation",
-    "ingredients": [{ "fluid": "kubejs:end_air_fluid", "amount": 4000 }],
+    "ingredients": [{ "fluid": "kubejs:end_air_fluid", "amount": 2000 }],
     "heatRequirement": "superheated",
-    "processingTime": 400,
+    "processingTime": 450,
     "results": [
-      { "fluid": "kubejs:nitrogen_dioxide", "amount": 840 },
-      { "fluid": "kubejs:chlorine", "amount": 840 },
-      { "fluid": "kubejs:oxygen", "amount": 700 },
-      { "fluid": "kubejs:nitrogen", "amount": 1600 }
+      { "fluid": "kubejs:nitrogen_dioxide", "amount": 420 },
+      { "fluid": "kubejs:chlorine", "amount": 420 },
+      { "fluid": "kubejs:oxygen", "amount": 350 },
+      { "fluid": "kubejs:nitrogen", "amount": 800 }
     ]
   }).id('dut_create:advanced_distillation/end_air')
   event.custom({
     "type": "createdieselgenerators:basin_fermenting",
-    "ingredients": [{ "fluid": "kubejs:end_air_fluid", "amount": 1000 }],
+    "ingredients": [
+      { "fluid": "kubejs:end_air_fluid", "amount": 1000 }
+    ],
     "processingTime": 80,
     "heatRequirement": "superheated",
     "results": [
-      {"item":"minecraft:dragon_breath","chance":0.05}
+      { "item": "minecraft:dragon_breath", "chance": 0.05 }
     ]
   }).id('dut_create:dragon_breath')
 })

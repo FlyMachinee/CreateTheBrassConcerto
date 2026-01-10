@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createbigcannons:molten_steel", "amount": 250 }
     ],
-    "processingTime": 300
+    "processingTime": 45
   }).id('dut_create:steel/molten_steel1')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createbigcannons:molten_steel", "amount": 250 }
     ],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:steel/molten_steel')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createbigcannons:molten_steel", "amount": 400 }
     ],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:steel/molten_steel_aluminum')
   //event.custom().id("dut_create:steel/")
 })

@@ -112,26 +112,6 @@
     },
     {
         "matchItems": [
-            "createloveandwar:propellant_sheet",
-            "createloveandwar:pistol_casing",
-            "createloveandwar:rifle_casing",
-            "createloveandwar:heavy_rifle_casing",
-            "createloveandwar:steel_cup",
-            "createloveandwar:filled_pistol_casing",
-            "createloveandwar:filled_rifle_casing",
-            "createloveandwar:filled_heavy_rifle_casing",
-            "iceandfire:bestiary",
-            "iceandfire:manuscript",
-            "create_connected:inventory_bridge",
-            "vintageimprovements:sulfur_block",
-            "vintageimprovements:sulfur_chunk",
-            "vintageimprovements:sulfur",
-            "waystones:warp_plate"
-        ],
-        "resultItems": "minecraft:air"
-    },
-    {
-        "matchItems": [
             "vintageimprovements:redstone_module"
         ],
         "resultItems": "create:wrench"
@@ -194,6 +174,35 @@
             "create:powdered_obsidian"
         ],
         "resultItems": "minecraft:obsidian"
+    },
+    {
+        "matchItems": [
+            "create_connected:inventory_bridge"
+        ],
+        "resultItems": "create_connected:inventory_access_port"
+    },
+    {
+        "matchItems": [
+            "createloveandwar:propellant_sheet",
+            "createloveandwar:pistol_casing",
+            "createloveandwar:rifle_casing",
+            "createloveandwar:heavy_rifle_casing",
+            "createloveandwar:steel_cup",
+            "createloveandwar:filled_pistol_casing",
+            "createloveandwar:filled_rifle_casing",
+            "createloveandwar:filled_heavy_rifle_casing",
+            "iceandfire:bestiary",
+            "iceandfire:manuscript",
+            "vintageimprovements:sulfur_block",
+            "vintageimprovements:sulfur_chunk",
+            "vintageimprovements:sulfur",
+            "waystones:warp_plate",
+            "balancedflight:flight_anchor",
+            "minecraft:ender_chest",
+            "create_sa:brass_jetpack_chestplate",
+            "ad_astra:oxygen_distributor",
+            "create_things_and_misc:neon_tube"
+        ],
+        "resultItems": "kubejs:unknown_prototype"
     }
-    
 ]

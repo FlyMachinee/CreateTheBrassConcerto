@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:natural_gas", "amount": 500 },
       { "fluid": "minecraft:water", "amount": 500 }
     ],
-    "processingTime": 300
+    "processingTime": 45
   }).id('dut_create:natural_gas_from_coal')
   //合成天然气
   event.custom({
@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
       { "fluid": "minecraft:water", "amount": 500 },
       { "fluid": "kubejs:natural_gas", "amount": 250 }
     ],
-    "processingTime": 100
+    "processingTime": 15
   }).id('dut_create:natural_gas_from_co2')
   //可燃冰
   event.custom({
@@ -52,6 +52,6 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:mud", "chance": 0.03 },
       { "item": "minecraft:gravel", "chance": 0.03 }
     ],
-    "processingTime": 100
+    "processingTime": 15
   }).id('dut_create:vacuumizing/natural_gas_from_ice')
 })

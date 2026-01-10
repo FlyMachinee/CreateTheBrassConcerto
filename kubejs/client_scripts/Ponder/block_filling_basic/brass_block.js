@@ -3,8 +3,8 @@ Ponder.registry((event) => {
     .create(["create:brass_block"])
     .tag("kubejs:block_filling_basic")
     .scene(
-      "kubejs:brass_block_from_zinc",
-      "使用熔融锌注液将铜块转化为黄铜块",
+      "kubejs:brass_block_from_gold",
+      "使用熔融金注液将铜块转化为黄铜块",
       "kubejs:9x9base",
       (scene, utils) => {
         scene.configureBasePlate(0, 0, 9);
@@ -15,7 +15,7 @@ Ponder.registry((event) => {
         scene.world.modifyBlock([4, 4, 4], state => state.with("facing", "down"), false)
         scene.world.setBlock([4, 5, 4], "create:creative_fluid_tank", false)
         scene.world.modifyTileNBT([4, 5, 4], (nbt) => {
-          nbt.TankContent = { Amount: 32000, FluidName: "kubejs:zinc" }
+          nbt.TankContent = { Amount: 32000, FluidName: "kubejs:gold" }
         })
         let Inputs = ["minecraft:copper_block"]
         let Outputs = ["create:brass_block"]
@@ -36,7 +36,7 @@ Ponder.registry((event) => {
         scene.overlay.showOutline("red", { "glue": true }, [6, 1, 1, 8, 1, 7], 120);
         scene.text(120, "方块产出：黄铜块", [3.5, 1.5, 8.5]);
         scene.overlay.showOutline("green", { "glue": true }, [0, 1, 1, 2, 1, 7], 120);
-        scene.text(120, "流体消耗：810mB 熔融锌", [4.5, 4.5, 4.5]);
+        scene.text(120, "流体消耗：810mB 熔融金", [4.5, 4.5, 4.5]);
         scene.text(120, "转化方块", [4.5, 1.5, 4.5]);
         scene.overlay.showOutline("blue", { "glue": true }, [4, 1, 4], 120);
 
@@ -47,7 +47,7 @@ Ponder.registry((event) => {
     )
     .scene(
       "kubejs:brass_block_from_copper",
-      "使用熔融铜注液将锌块转化为黄铜块",
+      "使用熔融铜注液将金块转化为黄铜块",
       "kubejs:9x9base",
       (scene, utils) => {
         scene.configureBasePlate(0, 0, 9);
@@ -60,7 +60,7 @@ Ponder.registry((event) => {
         scene.world.modifyTileNBT([4, 5, 4], (nbt) => {
           nbt.TankContent = { Amount: 32000, FluidName: "kubejs:copper" }
         })
-        let Inputs = ["create:zinc_block"]
+        let Inputs = ["minecraft:gold_block"]
         let Outputs = ["create:brass_block"]
 
         for (let i = 0; i < Inputs.length; i++) {
@@ -75,7 +75,7 @@ Ponder.registry((event) => {
         }
 
         scene.idle(20);
-        scene.text(120, "方块种类要求：锌块", [6.5, 1, 1.5]);
+        scene.text(120, "方块种类要求：金块", [6.5, 1, 1.5]);
         scene.overlay.showOutline("red", { "glue": true }, [6, 1, 1, 8, 1, 7], 120);
         scene.text(120, "方块产出：黄铜块", [3.5, 1.5, 8.5]);
         scene.overlay.showOutline("green", { "glue": true }, [0, 1, 1, 2, 1, 7], 120);

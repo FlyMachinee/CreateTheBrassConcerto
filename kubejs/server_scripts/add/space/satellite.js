@@ -107,7 +107,7 @@ ServerEvents.recipes(event => {
         "results": [
           { "item": "kubejs:carborundum", }
         ],
-        "processingTime": 200
+        "processingTime": 60
       },
       {
         "type": "vintageimprovements:pressurizing",
@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
           { "fluid": "kubejs:muriatic_acid", "amount": 500 }
         ],
         "results": [{ "item": "kubejs:carborundum" }],
-        "processingTime": 200
+        "processingTime": 60
       },
       {
         "type": "create:filling",

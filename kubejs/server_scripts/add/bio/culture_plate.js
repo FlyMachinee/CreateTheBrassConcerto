@@ -62,7 +62,7 @@ ServerEvents.recipes(event => {
         "results": [
           { "item": "kubejs:culture_plate" }
         ],
-        "processingTime": 300
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:culture_plate" }
@@ -96,7 +96,7 @@ ServerEvents.recipes(event => {
         "results": [
           { "item": "kubejs:culture_plate" }
         ],
-        "processingTime": 300
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:culture_plate" }
@@ -190,7 +190,7 @@ ServerEvents.recipes(event => {
         "results": [
           { "item": "kubejs:culture_plate" }
         ],
-        "processingTime": 300
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:culture_plate" }
@@ -217,7 +217,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:deploying",
         "ingredients": [{ "item": "kubejs:culture_plate" },
-        { "item": "kubejs:kelp_dust" }],
+        { "item": "minecraft:dried_kelp" }],
         "results": [{ "item": "kubejs:culture_plate" }]
       },
       {
@@ -236,7 +236,7 @@ ServerEvents.recipes(event => {
         "results": [
           { "item": "kubejs:culture_plate" }
         ],
-        "processingTime": 300
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:culture_plate" }
@@ -282,7 +282,7 @@ ServerEvents.recipes(event => {
         "results": [
           { "item": "kubejs:culture_plate" }
         ],
-        "processingTime": 300
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:culture_plate" }
@@ -350,7 +350,7 @@ ServerEvents.recipes(event => {
         "results": [
           { "item": "kubejs:culture_plate" }
         ],
-        "processingTime": 300
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:culture_plate" }

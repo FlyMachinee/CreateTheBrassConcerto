@@ -11,30 +11,25 @@ ServerEvents.recipes(event => {
     ]
   }).id('dut_create:saline_water_mixing')
   event.custom({
-    "type": "vintageimprovements:pressurizing",
+    "type": "create:mixing",
     "ingredients": [
-      { "fluid": "kubejs:muriatic_acid", "amount": 250 },
+      { "fluid": "kubejs:nitric_acid", "amount": 250 },
       { "fluid": "kubejs:caustic_soda", "amount": 250 },
     ],
     "results": [
       { "fluid": "kubejs:saline_water", "amount": 250 }
-    ],
-    "processingTime": 50
-  }).id('dut_create:saline_water_pressurizing')
-  //盐水蒸馏
+    ]
+  }).id('dut_create:saline_water_mixing_2')
   event.custom({
-    "type": "vintageimprovements:vacuumizing",
-    "heatRequirement": "heated",
-    "secondaryFluidOutput": 0,
+    "type": "create:mixing",
     "ingredients": [
-      { "fluid": "kubejs:saline_water", "amount": 500 }
+      { "fluid": "vintageimprovements:sulfuric_acid", "amount": 125 },
+      { "fluid": "kubejs:caustic_soda", "amount": 250 },
     ],
     "results": [
-      { "fluid": "minecraft:water", "amount": 500 },
-      { "item": "kubejs:salt", "count": 2 }
-    ],
-    "processingTime": 200
-  }).id('dut_create:saline_water_distil')
+      { "fluid": "kubejs:saline_water", "amount": 250 }
+    ]
+  }).id('dut_create:saline_water_mixing_3')
   //电解食盐水
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -49,7 +44,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:chlorine", "amount": 125 },
       { "item": "kubejs:uncharged_electrolyzer" }
     ],
-    "processingTime": 200
+    "processingTime": 50
   }).id('dut_create:saline_water_electrolysis')
   //煮盐
   event.custom({
@@ -72,33 +67,8 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:salt", "count": 2 },
       { "fluid": "minecraft:water", "amount": 500 }
     ],
-    "processingTime": 500
+    "processingTime": 70
   }).id('dut_create:saline_water_centrifugation')
-  //海带浸取盐水
-  event.custom({
-    "type": "create:mixing",
-    "ingredients": [
-      { "fluid": "minecraft:water", "amount": 500 },
-      { "item": "kubejs:kelp_dust" },
-      { "item": "kubejs:kelp_dust" },
-      { "item": "kubejs:kelp_dust" },
-      { "item": "kubejs:kelp_dust" }
-    ],
-    "results": [
-      { "fluid": "kubejs:saline_water", "amount": 250 }
-    ]
-  }).id('dut_create:saline_water_from_kelp_dust')
-  //海带粉碎
-  event.custom({
-    "type": "create:crushing",
-    "ingredients": [
-      { "item": "minecraft:dried_kelp" }
-    ],
-    "results": [
-      { "item": "kubejs:kelp_dust", "count": 2 },
-      { "item": "kubejs:kelp_dust", "chance": 0.5 }
-    ]
-  }).id('dut_create:kelp_dust')
   //盐溶解
   event.custom({
     "type": "create:mixing",

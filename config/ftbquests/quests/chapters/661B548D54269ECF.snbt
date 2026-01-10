@@ -11,7 +11,7 @@
 		}
 	}
 	id: "661B548D54269ECF"
-	order_index: 4
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
@@ -587,22 +587,6 @@
 			y: 4.0d
 		}
 		{
-			description: [
-				"飞行基座可以让你在它附近飞行！"
-				""
-				"需要注意的是，由于它的仪式是基于主世界时空特征的，所以它只在主世界生效"
-			]
-			id: "71166EB5F9627B08"
-			tasks: [{
-				id: "6FBF5A6B23A5491A"
-				item: "balancedflight:flight_anchor"
-				type: "item"
-			}]
-			title: "芜湖，起飞！"
-			x: -1.5d
-			y: 1.0d
-		}
-		{
 			dependencies: ["322ACA6256D0AD6A"]
 			description: ["激光可以用于更加精细的加工场景，你同时需要为它提供应力和电力"]
 			id: "12791AC9AE74A060"
@@ -804,6 +788,23 @@
 			}]
 			x: 3.0d
 			y: 2.0d
+		}
+		{
+			description: ["守卫者激光炮塔可以保护你的工厂免受苦力怕或其他生物的影响！"]
+			id: "29EBC59CC5ECAF04"
+			rewards: [{
+				id: "37D8ADC60C9588E3"
+				item: "creategbd:elder_guardian_beam_capacitor"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4BCEB50F5E966AAC"
+				item: "creategbd:basic_laser_turret"
+				type: "item"
+			}]
+			title: "保卫工厂！"
+			x: -1.5d
+			y: 1.0d
 		}
 	]
 	subtitle: ["涌动的电流"]

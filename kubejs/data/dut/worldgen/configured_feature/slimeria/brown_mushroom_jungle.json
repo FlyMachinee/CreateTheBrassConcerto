@@ -5,15 +5,11 @@
     "features": [
       {
         "feature": "dut:slimeria/jungle/jungle_brown_fungus",
-        "chance": 0.45
+        "chance": 0.5
       },
       {
         "feature": "dut:slimeria/jungle/jungle_brown_fungus1",
-        "chance": 0.45
-      },
-      {
-        "feature": "minecraft:brown_mushroom_normal",
-        "chance": 0.1
+        "chance": 0.5
       }
     ]
   }

@@ -25,7 +25,7 @@ CreateEvents.spoutHandler((event) => {
     * @param {Block} block block
     * @param {number} dy 中心坐标
     * @param {string} blockAid 细胞种类A-菌盖
-    * @param {string} blockAid 细胞种类B-菌柄
+    * @param {string} blockBid 细胞种类B-菌柄
     * @param {number} AoverB A:B的理想值
     */
     //在(0,dy,0)周围3*3*3范围运行魔改版康威生命游戏
@@ -122,7 +122,7 @@ CreateEvents.spoutHandler((event) => {
                 if (fluid.id == fluidInput.id && fluid.amount >= fluidInput.amount && block.y >= -59) {
                     if (!simulate) {
                         slimes3dConway(block, -3, output[0], output[1], AoverB)
-                        block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                        block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                         block.level.server.runCommandSilent(`/particle minecraft:spore_blossom_air ${block.pos.x} ${block.pos.y - 3} ${block.pos.z} 0.75 0.75 0.75 0.3 8`)
                     }
                     return 50
@@ -131,8 +131,8 @@ CreateEvents.spoutHandler((event) => {
             }
         )
     }
-    blockFillingConway("dut_create:red_mushroom", "minecraft:moss_block", { id: "kubejs:red_mushroom_spore", amount: 50 }, ["minecraft:red_mushroom_block", "minecraft:mushroom_stem"], 6)
-    blockFillingConway("dut_create:brown_mushroom", "minecraft:packed_mud", { id: "kubejs:brown_mushroom_spore", amount: 50 }, ["minecraft:brown_mushroom_block", "minecraft:mushroom_stem"], 4)
-    blockFillingConway("dut_create:aeronos", "ad_astra:conglomerate", { id: "kubejs:aeronos_spore", amount: 50 }, ["ad_astra:aeronos_cap", "ad_astra:aeronos_stem"], 5)
-    blockFillingConway("dut_create:strophar", "ad_astra:sky_stone", { id: "kubejs:strophar_spore", amount: 50 }, ["ad_astra:strophar_cap", "ad_astra:strophar_stem"], 3)
+    blockFillingConway("dut_create:red_mushroom", "minecraft:moss_block", { id: "kubejs:red_mushroom_spore", amount: 250 }, ["minecraft:red_mushroom_block", "minecraft:mushroom_stem"], 6)
+    blockFillingConway("dut_create:brown_mushroom", "minecraft:packed_mud", { id: "kubejs:brown_mushroom_spore", amount: 250 }, ["minecraft:brown_mushroom_block", "minecraft:mushroom_stem"], 4)
+    blockFillingConway("dut_create:aeronos", "ad_astra:conglomerate", { id: "kubejs:aeronos_spore", amount: 250 }, ["ad_astra:aeronos_cap", "ad_astra:aeronos_stem"], 5)
+    blockFillingConway("dut_create:strophar", "ad_astra:sky_stone", { id: "kubejs:strophar_spore", amount: 250 }, ["ad_astra:strophar_cap", "ad_astra:strophar_stem"], 3)
 })

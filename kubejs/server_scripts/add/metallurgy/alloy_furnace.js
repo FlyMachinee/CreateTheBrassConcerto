@@ -22,103 +22,81 @@ ServerEvents.recipes(event => {
         "pattern":
             [
                 [
-                    "       ",
-                    "  C C  ",
-                    " CGGGC ",
-                    "  GGG  ",
-                    " CGGGC ",
-                    "  C C  ",
-                    "       "
+                    " C C ",
+                    "CGGGC",
+                    " GGG ",
+                    "CGGGC",
+                    " C C "
                 ],
                 [
-                    "       ",
-                    "  DDD  ",
-                    " DHHHD ",
-                    " DHHHD ",
-                    " DHHHD ",
-                    "  DDD  ",
-                    "       "
+                    " DDD ",
+                    "DHHHD",
+                    "DHHHD",
+                    "DHHHD",
+                    " DDD "
                 ],
                 [
-                    " AABAA ",
-                    "A  E  A",
-                    "A III A",
-                    "AFIMIFA",
-                    "A III A",
-                    "A  F  A",
-                    " AAAAA "
+                    " AEA ",
+                    "AIIIA",
+                    "FIMIF",
+                    "AIIIA",
+                    " AFA ",
                 ],
                 [
-                    "       ",
-                    "       ",
-                    "  III  ",
-                    " FIMIF ",
-                    "  III  ",
-                    "   O   ",
-                    "       "
+                    "     ",
+                    " III ",
+                    "FIMIF",
+                    " III ",
+                    "  O  "
                 ],
                 [
-                    "       ",
-                    "   F   ",
-                    "  III  ",
-                    " CIMIC ",
-                    "  III  ",
-                    "   C   ",
-                    "       "
+                    "  F  ",
+                    " III ",
+                    "CIMIC",
+                    " III ",
+                    "  C  "
                 ],
                 [
-                    "       ",
-                    "   C   ",
-                    "  III  ",
-                    " CIMIC ",
-                    "  III  ",
-                    "   C   ",
-                    "       "
+                    "  C  ",
+                    " III ",
+                    "CIMIC",
+                    " III ",
+                    "  C  "
                 ],
                 [
-                    "       ",
-                    "   B   ",
-                    "  JDJ  ",
-                    " BDEDB ",
-                    "  JDJ  ",
-                    "   B   ",
-                    "       "
+                    "  B  ",
+                    " JDJ ",
+                    "BDEDB",
+                    " JDJ ",
+                    "  B  "
                 ],
                 [
-                    "       ",
-                    "       ",
-                    "       ",
-                    "   E   ",
-                    "       ",
-                    "       ",
-                    "       "
+                    "     ",
+                    "     ",
+                    "  E  ",
+                    "     ",
+                    "     "
                 ],
                 [
-                    "       ",
-                    "       ",
-                    "   K   ",
-                    "  KmK  ",
-                    "   K   ",
-                    "       ",
-                    "       "
+                    "     ",
+                    "  K  ",
+                    " KmK ",
+                    "  K  ",
+                    "     "
                 ],
                 [
-                    "       ",
-                    "       ",
-                    "   L   ",
-                    "  LNL  ",
-                    "   L   ",
-                    "       ",
-                    "       "
+                    "     ",
+                    "  L  ",
+                    " LNL ",
+                    "  L  ",
+                    "     "
                 ],
                 [
-                    "       ",
-                    "       ",
-                    "   B   ",
-                    "  BEB  ",
-                    "   B   ",
-                    "       ",
-                    "       "
+                    "     ",
+                    "  B  ",
+                    " BEB ",
+                    "  B  ",
+                    "     "
                 ]
             ],
         "keys": {
@@ -1031,7 +1009,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(1, "kubejs:aluminum"),
             AlloyFurnaceBiome("ad_astra:orbit"),
-            AlloyFurnaceItem("kubejs:aluminite", 12, "input"),
+            AlloyFurnaceItem("kubejs:aluminite", 16, "input"),
             AlloyFurnaceItem("kubejs:diorite_alloy", 1, "input"),
             AlloyFurnaceItem("#forge:ingots/brass", 9, "input"),
             AlloyFurnaceItem("kubejs:granite_alloy", 1, "output"),
@@ -1041,7 +1019,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceReplace(1, "kubejs:aluminum"),
             AlloyFurnaceFluid("kubejs:aluminum", 1),
             AlloyFurnaceBiome("ad_astra:orbit"),
-            AlloyFurnaceItem("kubejs:aluminite", 12, "input"),
+            AlloyFurnaceItem("kubejs:aluminite", 16, "input"),
             AlloyFurnaceItem("kubejs:diorite_alloy", 1, "input"),
             AlloyFurnaceItem("#forge:ingots/brass", 9, "input"),
             AlloyFurnaceItem("kubejs:granite_alloy", 1, "output"),
