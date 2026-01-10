@@ -1,0 +1,1 @@
+execute summon minecraft:shulker_bullet run function dut:unknown_prototype1
