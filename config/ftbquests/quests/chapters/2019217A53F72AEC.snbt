@@ -1,0 +1,563 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "2019217A53F72AEC"
+	group: "5997E69EB327A306"
+	icon: "kubejs:iron_hand"
+	id: "2019217A53F72AEC"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&e满速工作时间: &r&a10 tick"
+				""
+				"&e特殊性质: &r"
+				"&a下方的黄铜漏斗、安山漏斗不会阻止其工作"
+				"&a可以自上方正中央将物品通过其正中央的空隙传递至下方"
+			]
+			id: "2CD086BEBE4D1EC0"
+			tasks: [{
+				id: "377A395207873D47"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a15 tick"
+				""
+				"&e特殊性质: &r"
+				"&a可以自上方正中央将物品通过其正中央的空隙传递至下方"
+				"&a工作启动延迟20tick"
+				"&a工作停止延迟20tick"
+			]
+			id: "3ED2448247D993CC"
+			tasks: [{
+				id: "2F9250A211FD1835"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -0.5d
+		}
+		{
+			id: "5CF0F9241AC898D1"
+			tasks: [{
+				id: "0D8FCECF30482713"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a5 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+				""
+				"&e存储空间:&r&a1 stack 物品持有槽"
+				""
+				"&e特殊性质: &r"
+				"&a可以使用扳手切换放置/破坏模式"
+				"&a无视与工作目标之间的方块阻挡"
+				"&a在额外物品槽有物品时停止工作"
+			]
+			id: "7C20837FC2387006"
+			tasks: [{
+				id: "12F999DFB55CAFDA"
+				item: "create:deployer"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a10 tick"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e存储空间:&r&a1 stack 物品输入槽"
+			]
+			id: "5A8B742E02E68FB9"
+			tasks: [{
+				id: "6B05998792CE434E"
+				item: "create:mechanical_saw"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+				""
+				"&e存储空间:&r&a1 stack 物品输入槽"
+				""
+				"&e特殊性质: &r"
+				"&a输入的所有物品将被同时处理"
+				"&a当输入物品不足64时，配方时间乘2"
+				"&a可以向斜下方开放容器自动输出物品、流体(自动输出模式), 开口会被大部分方块阻挡(不包括黄铜漏斗、安山漏斗)"
+			]
+			icon: "create:crushing_wheel"
+			id: "42ED8326036D4D8B"
+			tasks: [{
+				id: "69ECF5763E724D56"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "design_decor:crushing_wheels"
+					}
+				}
+				title: "粉碎轮"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e存储空间:&r&a1 stack 物品输入槽"
+			]
+			icon: "create:millstone"
+			id: "5A6C8FCB80ED9BA7"
+			tasks: [{
+				id: "2553757E4DD7CDEC"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "design_decor:millstones"
+					}
+				}
+				title: "石磨"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"&e工作时间: &r&a10 tick(需要额外加上物品运输时间)"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e存储空间:&r&a2*1B 流体槽"
+			]
+			id: "1DA95F61084B067A"
+			tasks: [{
+				id: "08FCAEE32AB1E24B"
+				item: "create:item_drain"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&e工作时间: &r&a20 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+				""
+				"&e存储空间:&r&a2000mB 流体输入槽"
+				""
+				"&e特殊性质: &r"
+				"&a下方的黄铜漏斗、安山漏斗不会阻止其工作"
+			]
+			id: "16410D2A8BF83C5A"
+			tasks: [{
+				id: "08748C0DA983C788"
+				item: "create:spout"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -0.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+			]
+			id: "5CC876D5CDF60CF9"
+			tasks: [{
+				id: "16E68CA982BA2840"
+				item: "vintageimprovements:lathe"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"&e工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e存储空间:&r&a1 stack 物品输入槽"
+				""
+				"&e特殊性质: &r"
+				"&a可以将物品直接输入末端连接的开放容器中"
+				"&a工作时间与转速无关"
+				"&a工作时间最短为3 tick"
+			]
+			id: "1FE3BDEB0A4F79AF"
+			tasks: [{
+				id: "1C100524E405B2E1"
+				item: "vintageimprovements:belt_grinder"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+				""
+				"&e存储空间:&r&a1B 流体输入槽; 1B流体输出槽"
+				""
+				"&e特殊性质: &r"
+				"&a可以从任意面进行流体输入输出"
+				"&a无视与工作盆之间的方块阻挡"
+				"&a工作启动延迟20tick"
+				"&a工作停止延迟20tick"
+			]
+			id: "6D43741365D71D0D"
+			tasks: [{
+				id: "2C829BE170C43EDB"
+				item: "vintageimprovements:vacuum_chamber"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e特殊性质: &r"
+				"&a可以将物品直接输入连接的开放容器中"
+			]
+			id: "59747A9214C86577"
+			tasks: [{
+				id: "78A5F68690D362AA"
+				item: "vintageimprovements:spring_coiling_machine"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -0.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e存储空间:&r&a9 stack输入输出共用"
+			]
+			id: "7BCB37B916EFB693"
+			tasks: [{
+				id: "5913A61DE431FBBE"
+				item: "createaddition:rolling_mill"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+				""
+				"&e存储空间:&r&a2*1B 流体输入槽; 2*1B流体输出槽; 9 stack输入输出共用"
+				""
+				"&e特殊性质: &r"
+				"&a必须在停止工作时进行输入输出"
+				"&a扳手右键中心可以调整红石模块，在红石模块激活时可检测配方状态"
+			]
+			id: "7D22EC9EEEE68B6C"
+			tasks: [{
+				id: "70A693270BBDD278"
+				item: "vintageimprovements:centrifuge"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e存储空间:&r&a9 stack输入输出共用"
+			]
+			id: "484E251E25DD4674"
+			tasks: [{
+				id: "407F6C9CC30B23CD"
+				item: "vintageimprovements:vibrating_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e特殊性质: &r"
+				"&a可以安装不同的冲压头以调整工作模式"
+				"&a下方的黄铜漏斗、安山漏斗、溜槽、智能溜槽不会阻止其工作"
+			]
+			id: "09E5F42AF0B8AB8F"
+			tasks: [{
+				id: "7E219922C5DCC0AE"
+				item: "vintageimprovements:curving_press"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.5d
+		}
+		{
+			id: "041EC1B12232B5D3"
+			tasks: [{
+				id: "6A1BD60E2BC42FE7"
+				item: "createloveandwar:drawing_press"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -2.5d
+		}
+		{
+			id: "4D70B9D937390F7C"
+			tasks: [{
+				id: "34A386AFD8C82199"
+				item: "createloveandwar:stamping_press"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方所需电量/配方充电速率 tick"
+				""
+				"&e存储空间:&r&a40000 FE"
+			]
+			id: "493E9373BE596ADD"
+			tasks: [{
+				id: "3BAC1E6FD53DB8A2"
+				item: "vintageimprovements:laser"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方所需电量/配方充电速率 tick"
+				""
+				"&e存储空间:&r&a240000 FE"
+				""
+				"&e特殊性质: &r"
+				"&a可以在红石信号控制下攻击附近实体"
+			]
+			id: "4D0961350F35582F"
+			tasks: [{
+				id: "7B21EF4F5FCF9370"
+				item: "createaddition:tesla_coil"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"&e工作时间: &r&a配方时间 tick"
+				""
+				"&e特殊性质: &r"
+				"&a可以打开盖板，开启时停止工作"
+			]
+			id: "17275D3519962B75"
+			tasks: [{
+				id: "02DA1F45602E8785"
+				item: "createdieselgenerators:basin_lid"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.5d
+		}
+		{
+			description: ["&e工作时间: &r&a配方时间 tick"]
+			id: "2D3677F1BDF0B267"
+			tasks: [{
+				id: "5F7E307AC66CD31A"
+				item: "createbigcannons:basin_foundry_lid"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&e工作时间: &r&a配方时间/分馏塔横截面积 tick"
+				""
+				"&e存储空间:&r&a横截面积*500mB 流体每层，其中最下层为输入，此外为输出"
+				""
+				"&e特殊性质: &r"
+				"&a分馏塔每格储罐都需要一个分馏塔控制器"
+				"&a分馏塔每一层的存储空间独立"
+			]
+			id: "4F213C0FD0E88666"
+			tasks: [{
+				id: "5755D9464B0680DF"
+				item: "createdieselgenerators:distillation_controller"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"&e工作时间: &r&a配方时间/恒温塔横截面积 tick"
+				""
+				"&e存储空间:&r&a横截面积*500mB 流体每层，其中最下层为输入，此外为输出"
+				""
+				"&e特殊性质: &r"
+				"&a恒温塔只需要一个恒温器"
+				"&a恒温塔每一层的存储空间独立"
+			]
+			id: "48D1CAF5D9B7491E"
+			tasks: [{
+				id: "5266D044573BAA8D"
+				item: "createloveandwar:thermostat"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -0.5d
+		}
+		{
+			description: [
+				"&e存储空间:&r&a1000mB 原油"
+				""
+				"&e特殊性质: &r"
+				"&a-对于抽油机而言，其效率与前臂后臂之比、曲轴类型和转速同时相关"
+				"&a-大型曲轴的效率是小型曲轴的两倍"
+				"&a-所谓前臂长度指的是自中部轴承（不包括那一格）到抽油机驴头（包括驴头）的长度"
+				"&a-所谓后臂长度指的是自中部轴承（不包括那一格）到尾部轴承（包括尾部轴承）的长度"
+				"&a-而抽油机效率将在前臂：后臂为5:1、并且曲轴为大型曲轴时达到最大"
+				"&a-抽油机后臂长度最小为4"
+				"&a-效率越高的抽油机，其原油利用率也越高"
+			]
+			id: "42F64901210F8E3F"
+			tasks: [{
+				id: "141392F537F9F6F4"
+				item: "createdieselgenerators:pumpjack_hole"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+				""
+				"&e存储空间:&r&a16B 钻浆槽; 9 stack物品输出槽; 1 钻头槽"
+				""
+				"&e特殊性质: &r"
+				"&a所处区块中必须含有所需矿脉"
+				"&a仅当下方为固体方块时可以工作"
+			]
+			id: "5F46A63B2F668FEA"
+			tasks: [{
+				id: "705B09766BD64580"
+				item: "createoreexcavation:drilling_machine"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.5d
+		}
+		{
+			description: [
+				"&e满速工作时间: &r&a配方时间 tick"
+				""
+				"&e是否是开放容器: &r&a否"
+				""
+				"&e存储空间:&r&a16B 钻浆槽; 16B 流体输出槽; 1 钻头槽"
+				""
+				"&e特殊性质: &r"
+				"&a所处区块中必须含有所需矿脉"
+				"&a仅当下方为固体方块时可以工作"
+			]
+			id: "0EC96A3CAED88B20"
+			tasks: [{
+				id: "13649A284702D497"
+				item: "createoreexcavation:extractor"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e存储空间:&r&a2*1B 流体输入槽; 2*1B流体输出槽; 9 stack输入输出共用"
+				""
+				"&e特殊性质: &r"
+				"&a-可以向斜下方开放容器自动输出物品、流体(自动输出模式), 开口会被大部分方块阻挡(不包括黄铜漏斗、安山漏斗)"
+				"&a-只有运转中的传送带会使工作盆进入自动输出模式"
+				"&a-自动输出模式下自身仅会存储1次配方产出"
+				"&a-可以使用扳手禁用开口"
+				"&a-工作盆上方的方块不会阻止动力搅拌器、动力冲压机等机器工作"
+			]
+			id: "48510BDA8132DB5A"
+			tasks: [{
+				id: "0F01125F22F245A8"
+				item: "create:basin"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -0.5d
+		}
+		{
+			id: "7E67D519575506B9"
+			tasks: [{
+				id: "035AB47ABB0CCF9E"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.5d
+		}
+		{
+			description: ["大部分工作元件的工作效率均经过了改进——它们现在的工作效率变得易于计算了！"]
+			id: "4DABF413A39634DC"
+			tasks: [{
+				id: "61F841727C2BEE8B"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -4.0d
+		}
+	]
+	title: "工作元件"
+}
