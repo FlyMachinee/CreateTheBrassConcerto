@@ -22,13 +22,14 @@ const DimensionNameKey = {
     "ad_astra:moon": "planet.dut.moon",
     "ad_astra:moon_orbit": "planet.dut.moon_orbit"
 }
-function orCreateIt(pdata, data) {
-    if (pdata === null || pdata === undefined) {
-        pdata = data
-    }
-}
+/**
+ * 
+ * @param {Internal.CompoundTag} pdata 
+ * @param {string} tag 
+ * @param {any} basic 
+ */
 function orCreateData(pdata, tag, basic) {
-    if (pdata[tag] === null || pdata[tag] === undefined) {
+    if (!pdata.contains(tag)) {
         pdata[tag] = basic
     }
 }

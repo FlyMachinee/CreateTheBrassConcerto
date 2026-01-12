@@ -5,7 +5,7 @@
 	group: "6EA46263F86F561F"
 	icon: "create:steam_engine"
 	id: "7BC2309B8F81FB48"
-	order_index: 2
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
@@ -45,12 +45,16 @@
 		}
 		{
 			dependencies: ["57005A71B5688770"]
-			description: ["金是十分有用的矿石，可以用于制作一些重要的合金"]
+			description: [
+				"金是十分有用的矿石，可以用于制作一些重要的合金"
+				""
+				"你可以选择去地下或下界挖一些、去遗迹中寻找，或是等到批量生产铁之后，再从凝灰岩中获取它！"
+			]
 			id: "6C50D97F2E3C3F38"
 			rewards: [{
 				count: 32
 				id: "2A97902D5D617D9A"
-				item: "create:crushed_raw_gold"
+				item: "create:ochrum"
 				type: "item"
 			}]
 			subtitle: "基础矿石-金"
@@ -65,19 +69,25 @@
 		}
 		{
 			dependencies: ["57005A71B5688770"]
-			description: ["传送带是核心的物流方式之一，为了制作传送带，请收集大量的海带！"]
+			description: ["传送带是最为核心的物流方式——为了制作传送带，你会需要这些海带的！"]
+			icon: "minecraft:kelp"
 			id: "31B47BA34C8D4477"
-			rewards: [{
-				count: 9
-				id: "706F162713DAF9DF"
-				item: "minecraft:dried_kelp_block"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 9
+					id: "706F162713DAF9DF"
+					item: "minecraft:dried_kelp_block"
+					type: "item"
+				}
+				{
+					id: "732FC177845AD00B"
+					item: "minecraft:kelp"
+					type: "item"
+				}
+			]
 			tasks: [{
-				count: 64L
-				id: "2FF72188B474C9C7"
-				item: "minecraft:kelp"
-				type: "item"
+				id: "596035776F88540D"
+				type: "checkmark"
 			}]
 			title: "带带你的"
 			x: 1.0d
@@ -89,7 +99,7 @@
 				""
 				"为了建造更加有效的移动结构，粘液球是必须的！"
 				""
-				"粘液球可以由黄绿色染料与面团制作、可以由岩浆膏离心、可以利用聚乙烯合成...或者从一种生物——史莱姆——身上获取——&e不过，史莱姆并不存在于绝大部分星球之上，在地球上也仅能在一些古老的遗迹中看到它们的踪迹&r"
+				"粘液球可以由面团制作、由岩浆膏离心、可以利用聚乙烯合成...或者从一种生物——史莱姆——身上获取——&e不过，史莱姆并不存在于绝大部分星球之上，在地球上也仅能在一些古老的遗迹中看到它们的踪迹&r"
 				""
 				"&a沼泽地和某些地方的地下...？你在说什么，这是来自你故乡的知识吗？那里也有史莱姆吗？"
 			]
@@ -114,58 +124,15 @@
 		{
 			dependencies: ["57005A71B5688770"]
 			description: [
-				"安山岩是开启工业的必备材料！"
-				"为了安山合金，对安山岩使用黄铜镐吧！"
+				"铜是流体系统的主要材料，同时也是制作黄铜的材料之一"
+				""
+				"你的飞船上就有一些，你可以用它们作为启动资金！"
 			]
-			id: "6170726DD12211A8"
-			rewards: [{
-				count: 64
-				id: "072FDE5524B64784"
-				item: "minecraft:andesite"
-				type: "item"
-			}]
-			subtitle: "基础材料-安山岩"
-			tasks: [{
-				count: 32L
-				id: "3BEF42D2055745D5"
-				item: "minecraft:andesite"
-				type: "item"
-			}]
-			title: "挖呀挖呀挖"
-			x: 0.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["57005A71B5688770"]
-			description: [
-				"建造动力钻头等工作部件、制造安山合金、制造烈焰人燃烧室......"
-				"这些都需要大量的铁！"
-			]
-			id: "0A300217BFFF0EFE"
-			rewards: [{
-				count: 32
-				id: "58BE0FE9D9179FB6"
-				item: "create:crushed_raw_iron"
-				type: "item"
-			}]
-			tasks: [{
-				count: 16L
-				id: "5A84CDFB5FC8154E"
-				item: "minecraft:iron_ingot"
-				type: "item"
-			}]
-			title: "定订腚啶锭"
-			x: 1.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["57005A71B5688770"]
-			description: ["铜是流体系统的主要材料，同时也是制作黄铜的材料之一"]
 			id: "5657783EBC7A2614"
 			rewards: [{
 				count: 64
 				id: "315B433CE6CA5836"
-				item: "create:crushed_raw_copper"
+				item: "create:veridium"
 				type: "item"
 			}]
 			subtitle: "基础材料-铜"
@@ -187,27 +154,20 @@
 			]
 			icon: "minecraft:stripped_spruce_log"
 			id: "6901F25ADD92F25D"
-			rewards: [
-				{
-					count: 64
-					id: "7CE58311B27DB719"
-					item: "createdieselgenerators:chip_wood_block"
-					type: "item"
-				}
-				{
-					id: "1856C7EF7268A57F"
-					item: "minecraft:kelp"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 64
+				id: "7CE58311B27DB719"
+				item: "createdieselgenerators:chip_wood_block"
+				type: "item"
+			}]
 			subtitle: "基础材料-原木"
 			tasks: [{
 				id: "37A049902493CD40"
 				type: "checkmark"
 			}]
 			title: "木林森"
-			x: 0.0d
-			y: -4.0d
+			x: 1.0d
+			y: -2.5d
 		}
 		{
 			description: [
@@ -240,8 +200,8 @@
 					type: "item"
 				}
 			]
-			shape: "rsquare"
-			size: 1.25d
+			shape: "gear"
+			size: 1.5d
 			subtitle: "万物起源"
 			tasks: [{
 				id: "206BF91028236D4D"
@@ -250,7 +210,7 @@
 			}]
 			title: "要开始加速咯！"
 			x: 0.0d
-			y: 2.5d
+			y: 2.25d
 		}
 		{
 			dependencies: ["00B48F1BEA0C0EFF"]
@@ -478,7 +438,7 @@
 				{
 					count: 64
 					id: "171286EE1E3F722D"
-					item: "create:crushed_raw_iron"
+					item: "create:crimsite"
 					type: "item"
 				}
 				{
@@ -613,7 +573,7 @@
 			rewards: [{
 				count: 64
 				id: "1D33AB6451A20041"
-				item: "create:crushed_raw_gold"
+				item: "create:ochrum"
 				type: "item"
 			}]
 			subtitle: "工作元件-动力搅拌器"
@@ -1721,13 +1681,13 @@
 			}]
 			title: "自动化任务"
 			x: 0.0d
-			y: -5.749999999999999d
+			y: -1.5d
 		}
 		{
 			description: [
 				"你可以用这个罐子方便且安全地搬运液体"
 				""
-				"它是一个存量为8B的流体潜影盒。不仅如此，它还可以像桶那样与工作盆交互，并可以盛装不足1B的流体"
+				"它是一个存量为16B的流体潜影盒。不仅如此，它还可以像桶那样与工作盆交互，并可以盛装不足1B的流体"
 				""
 				"在此之外，你还可以用它设置流体过滤"
 			]
@@ -1754,7 +1714,7 @@
 				type: "item"
 			}]
 			x: -1.0d
-			y: -1.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["447805012105BE20"]
@@ -3088,7 +3048,7 @@
 			}]
 			title: "它是无限的"
 			x: 0.0d
-			y: -1.0d
+			y: 0.5d
 		}
 		{
 			description: [
@@ -3419,7 +3379,7 @@
 				type: "item"
 			}]
 			x: 1.0d
-			y: -1.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["0BEFDE24534261C5"]
@@ -4266,7 +4226,7 @@
 			}]
 			title: "应急工业平台"
 			x: 0.0d
-			y: 0.625d
+			y: -4.5d
 		}
 		{
 			dependencies: ["66E89DB9217359ED"]
@@ -4413,35 +4373,6 @@
 			y: 7.0d
 		}
 		{
-			description: [
-				"&e由于很多路径之间可以相互替代，所以你可能遇上一些麻烦：我的目标到底是什么？"
-				""
-				"&a为了回到你的故乡，你可以暂时以以下的关键节点进行初步发展："
-				""
-				"&61.金属生产"
-				""
-				"&62.超级加热生产"
-				""
-				"&63.三种集成电路板"
-				""
-				"&64.微生物与炼钢"
-				""
-				"&65.星际物流网络"
-				""
-				"&e不同节点之间存在大量的可选路线以及分支内容，你可以根据你的需要去选择它们！"
-				""
-				"[ \"而关于金属生产，你可以点击横线部分跳转到\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"！\" ]"
-			]
-			id: "33462C3746610C92"
-			tasks: [{
-				id: "3795038B7C257D7C"
-				title: "整体目标"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: 5.0d
-		}
-		{
 			dependencies: ["30CD2348B60180E6"]
 			description: [
 				"液压机是一种大型辊压机器，可以快速处理金属流体以及强度较低的金属块"
@@ -4579,5 +4510,5 @@
 		}
 	]
 	subtitle: ["齿轮和传动杆"]
-	title: "人类改造蒸汽，蒸汽改造人类"
+	title: "※人类改造蒸汽，蒸汽改造人类"
 }

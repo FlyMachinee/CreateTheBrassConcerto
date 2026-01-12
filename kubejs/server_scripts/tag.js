@@ -196,6 +196,8 @@ ServerEvents.tags('block', event => {
   ])
   event.remove('ad_astra:destroyed_in_space', ["minecraft:mushroom_stem", "minecraft:red_mushroom_block", "minecraft:brown_mushroom_block"])
   event.add('create:non_movable', [
+    'ad_astra:iron_pillar',
+    'ad_astra:steel_pillar',
     '#dut_create:drawers',
     'ad_astra:desh_fluid_pipe',
     'ad_astra:ostrum_fluid_pipe',

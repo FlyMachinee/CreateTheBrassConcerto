@@ -57,13 +57,4 @@ ServerEvents.recipes(event => {
         "results": [{ "item": "minecraft:slime_block" }],
         "processingTime": 30
     }).id('dut_create:slime_block')
-    event.custom({
-        "type": "vintageimprovements:pressurizing",
-        "heatRequirement": "heated",
-        "ingredients": [
-            { "item": "minecraft:slime_block" }
-        ],
-        "results": [{ "fluid": "create_things_and_misc:slime", "amount": 810 }],
-        "processingTime": 30
-    }).id('dut_create:slime_block_melt')
 })

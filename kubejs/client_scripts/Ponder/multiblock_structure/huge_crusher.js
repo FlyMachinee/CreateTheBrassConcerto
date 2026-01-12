@@ -72,7 +72,7 @@ Ponder.registry((event) => {
         scene.showControls(15, [7, 3, 1], "up").withItem("minecraft:water_bucket")
         scene.idle(80);
         scene.addKeyframe();
-        scene.text(60, "如果一切正确，你应当看到核心中出现液压液！");
+        scene.text(60, "如果一切正确，你应当看到核心中出现结构液！");
         scene.idle(80);
         scene.addKeyframe();
         scene.text(60, "现在，向绿色集装箱输入配方所需的物品...");

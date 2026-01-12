@@ -133,6 +133,7 @@
 			icon: "create:crafting_blueprint"
 			id: "44BB55331CD79D87"
 			shape: "hexagon"
+			size: 1.25d
 			tasks: [{
 				id: "79D4D0F81D2959A9"
 				title: "如何查看多方块机器的结构是否搭建成功？"

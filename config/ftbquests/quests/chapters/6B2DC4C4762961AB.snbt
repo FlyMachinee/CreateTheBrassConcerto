@@ -136,7 +136,7 @@
 				item: "createaddition:electric_motor"
 				type: "item"
 			}]
-			x: -4.0d
+			x: 4.0d
 			y: -3.0d
 		}
 		{
@@ -245,7 +245,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: -3.0d
+			y: -2.0d
 		}
 		{
 			description: [
@@ -279,7 +279,18 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: -2.0d
+			y: -1.0d
+		}
+		{
+			description: ["陶瓦配合特斯拉线圈可以用于销毁电力！"]
+			id: "572E056E4ADE7174"
+			tasks: [{
+				id: "7B63C99B9DDE3DF7"
+				item: "minecraft:terracotta"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
 		}
 	]
 	title: "应力与电力"

@@ -6,7 +6,7 @@
 	group: "6EA46263F86F561F"
 	icon: "kubejs:brass_bucket"
 	id: "3C7EE863FBCC0AAB"
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{

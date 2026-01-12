@@ -170,6 +170,15 @@ ServerEvents.recipes(event => {
         "minecraft:lava[level=14]",
         "minecraft:lava[level=15]"
     ]
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:emptying_machine",
+        "time": 1,
+        "priority": 0,
+        "hidden": true,
+        "error": true,
+        "requirements": []
+    }).id("dut_create:emptying_machine/empty")
     function EmptyingFluidOut(fluid) {
         event.custom({
             "type": "custommachinery:custom_machine",

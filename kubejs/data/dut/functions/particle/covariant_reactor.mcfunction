@@ -12,6 +12,7 @@ particle cloud ~ ~3 ~ 1.2 1.2 1.2 1.2 512 force
 particle large_smoke ~ ~3 ~ 1.2 1.2 1.2 0.6 256 force
 particle campfire_cosy_smoke ~ ~5 ~ 1.0 4.0 1.0 0.03 512 force
 particle campfire_cosy_smoke ~ ~9 ~ 3.0 3.0 3.0 0.12 2048 force
+fill ~12 ~12 ~12 ~-12 ~-12 ~-12 bedrock replace sculk
 place feature dut:machine/reactor_spawn
 place feature dut:machine/reactor_spawn_1
 summon creeper ~ ~ ~ {ignited:1b,Fuse:0,ExplosionRadius:24,NoAI:1b,Invulnerable:1b}

@@ -138,6 +138,7 @@ ServerEvents.recipes(event => {
     "result": { "item": "create_sa:large_filling_tank" }
   }).id("dut_create:large_filling_tank")
   event.remove({ id: "create_sa:brass_jetpack_recipe" })
+  event.remove({ id: "create_sa:netherite_jetpack_recipe" })
   event.remove({ id: 'create_sa:fan_component_recipe' })
   event.custom({
     "type": "minecraft:crafting_shaped",

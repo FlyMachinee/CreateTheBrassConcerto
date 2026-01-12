@@ -201,7 +201,17 @@
             "minecraft:ender_chest",
             "create_sa:brass_jetpack_chestplate",
             "ad_astra:oxygen_distributor",
-            "create_things_and_misc:neon_tube"
+            "create_things_and_misc:neon_tube",
+            "create_sa:netherite_jetpack_chestplate",
+            "create_sa:andesite_jetpack_chestplate",
+            "create_sa:copper_jetpack_chestplate",
+            "create_sa:andesite_exoskeleton_chestplate",
+            "create_sa:copper_exoskeleton_chestplate",
+            "create_sa:zinc_handle",
+            "create_sa:small_fueling_tank",
+            "create_sa:medium_fueling_tank",
+            "create_sa:small_filling_tank",
+            "create_sa:medium_filling_tank"
         ],
         "resultItems": "kubejs:unknown_prototype"
     }

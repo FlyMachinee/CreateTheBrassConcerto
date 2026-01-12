@@ -52,9 +52,9 @@ ServerEvents.recipes(event => {
     "machine": "dut:culture_bin",
     "time": 120,
     "requirements": [
-      CultureBinItemInput("iceandfire:ectoplasm", 3),
+      CultureBinItemInput("iceandfire:ectoplasm", 6),
       CultureBinItemInput("create:refined_radiance", 1),
-      CultureBinItemChance("iceandfire:ghost_ingot", 1, 0.25)
+      CultureBinItemChance("iceandfire:ghost_ingot", 1, 1)
     ]
   }).id("dut_create:culture_bin/ghost_ingot")
 
@@ -587,12 +587,12 @@ ServerEvents.recipes(event => {
     "time": 60,
     "requirements": [
       CultureBinDimension(["minecraft:overworld", "ad_astra:earth_orbit"]),
-      CultureBinFluid("kubejs:slime_colloid", "input", 750),
+      CultureBinFluid("kubejs:slime_colloid", "input", 250),
       CultureBinItemInput("kubejs:blaze_wart", 1),
       CultureBinItemInput("minecraft:soul_soil", 1),
       CultureBinItemChance("kubejs:blaze_wart", 1, 1),
       CultureBinItemChance("minecraft:soul_soil", 1, 1),
-      CultureBinItemChance("iceandfire:ectoplasm", 3, 1)
+      CultureBinItemChance("iceandfire:ectoplasm", 6, 1)
     ]
   }).id("dut_create:culture_bin/ectoplasm")
   event.custom({

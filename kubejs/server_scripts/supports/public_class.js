@@ -1,4 +1,6 @@
 // priority: 16384
+//Java
+let $Object=Java.loadClass("java.lang.Object")
 //File
 let $RootPath = Java.loadClass("net.minecraftforge.fml.loading.FMLPaths")
 //

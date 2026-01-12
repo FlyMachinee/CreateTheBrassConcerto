@@ -6,6 +6,7 @@ ServerEvents.recipes(event => {
   //event.custom().id("dut_create:")
   //event.remove({ mod: '' })
 
+  event.remove({ id: "create_things_and_misc:slimefluidcraft" })
   event.remove({ id: "create_things_and_misc:powder_obsi_c_raft" })
   event.remove({ id: "create_things_and_misc:glue_fluid_craft" })
   event.remove({ id: "create_things_and_misc:gluepackagingcraft" })

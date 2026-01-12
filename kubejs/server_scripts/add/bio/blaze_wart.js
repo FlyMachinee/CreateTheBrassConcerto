@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
   //getSpawnEgg("iceandfire:amphithere_skull", 'iceandfire:spawn_egg_amphithere', 1, "")
   //getSpawnEgg("iceandfire:seaserpent_skull", 'iceandfire:spawn_egg_sea_serpent', 1, "")
   //getSpawnEgg("iceandfire:cockatrice_skull", 'iceandfire:spawn_egg_cockatrice', 1, "")
-  getSpawnEgg('iceandfire:ectoplasm', 'iceandfire:spawn_egg_ghost', 1, "")
+  //getSpawnEgg('iceandfire:ectoplasm', 'iceandfire:spawn_egg_ghost', 1, "")
   //getSpawnEgg('iceandfire:myrmex_jungle_resin', 'iceandfire:myrmex_jungle_egg', 1, "")
   //getSpawnEgg('iceandfire:myrmex_desert_resin', 'iceandfire:myrmex_desert_egg', 1, "")
   getDragonEgg("iceandfire:fire_lily", [
