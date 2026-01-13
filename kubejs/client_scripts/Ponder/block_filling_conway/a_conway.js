@@ -75,7 +75,7 @@ Ponder.registry((event) => {
         scene.overlay.showOutline("green", { "glue": true }, [3, 2, 3, 5, 4, 5], 30);
         scene.idle(50);
         scene.world.setBlock([4, 3, 4], "minecraft:red_mushroom_block", false)
-        scene.text(30, "50%几率变为菌盖", [4.5, 3.5, 4.5]);
+        scene.text(30, "50%%几率变为菌盖", [4.5, 3.5, 4.5]);
         scene.overlay.showOutline("blue", { "glue": true }, [4, 3, 4], 30);
         scene.idle(60);
         scene.text(60, "3*3*3范围内的每一个方块都会进行生长——也就是5*5*5范围内的方块决定了生长的结果", [4.5, 3.5, 4.5]).attachKeyFrame()
