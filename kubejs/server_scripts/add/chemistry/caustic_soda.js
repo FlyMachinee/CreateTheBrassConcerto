@@ -13,6 +13,6 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:saline_water", "amount": 500 },
       { "fluid": "kubejs:oxygen", "amount": 250 }
     ],
-    "processingTime": 150
+    "processingTime": 25
   }).id('dut_create:remove_chlorine')
 })

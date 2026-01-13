@@ -35,19 +35,19 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "create:cutting",
         "ingredients": [{ "item": "minecraft:red_mushroom" }],
-        "processingTime": 100,
-        "results": [{ "count": 36, "item": "kubejs:red_mushroom_cap_piece" }]
+        "processingTime": 5,
+        "results": [{ "count": 6, "item": "kubejs:red_mushroom_cap_piece" }]
     }).id('dut_create:cap_from_red_mushroom')
     event.custom({
         "type": "create:cutting",
         "ingredients": [{ "item": "minecraft:brown_mushroom" }],
-        "processingTime": 100,
-        "results": [{ "count": 36, "item": "kubejs:brown_mushroom_cap_piece" }]
+        "processingTime": 5,
+        "results": [{ "count": 6, "item": "kubejs:brown_mushroom_cap_piece" }]
     }).id('dut_create:cap_from_brown_mushroom')
     event.custom({
         "type": "create:cutting",
         "ingredients": [{ "item": "ad_astra:aeronos_mushroom" }],
-        "processingTime": 100,
+        "processingTime": 5,
         "results": [
             { "item": "kubejs:aeronos_cap_piece" },
             { "item": "kubejs:aeronos_stem_piece" }
@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "create:cutting",
         "ingredients": [{ "item": "ad_astra:strophar_mushroom" }],
-        "processingTime": 100,
+        "processingTime": 5,
         "results": [
             { "item": "kubejs:strophar_cap_piece" },
             { "item": "kubejs:strophar_stem_piece" }

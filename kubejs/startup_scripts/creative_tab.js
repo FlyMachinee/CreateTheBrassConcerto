@@ -7,9 +7,10 @@ StartupEvents.registry("creative_mode_tab", tab => {
 	tab.create("kubejs:cbc_materials")
 		.icon(() => Item.of("kubejs:aluminum_slag"))
 		.content(() => [
+			"kubejs:unknown_prototype",
 			"kubejs:carbon_electrode",
 			'kubejs:salt',
-			'kubejs:kelp_dust',
+			//'kubejs:kelp_dust',
 			'kubejs:sulphur',
 			'kubejs:brine_gel',
 			'kubejs:lava_gel',

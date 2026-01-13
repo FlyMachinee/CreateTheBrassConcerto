@@ -138,25 +138,7 @@ ServerEvents.recipes(event => {
     "result": { "item": "create_sa:large_filling_tank" }
   }).id("dut_create:large_filling_tank")
   event.remove({ id: "create_sa:brass_jetpack_recipe" })
-
-  event.custom({
-    "type": "minecraft:crafting_shaped",
-    "category": "misc",
-    "key": {
-      "A": { "item": "create:encased_fan" },
-      "B": { "tag": "forge:ingots/brass" },
-      "C": { "item": "kubejs:mechanical_core" },
-      "D": { "tag": "dut_create:cogwheel" }
-    },
-    "pattern": [
-      "DBD",
-      "BCB",
-      "ABA"
-    ],
-    "result": { "item": "create_sa:brass_jetpack_chestplate" },
-    "show_notification": true
-  }).id("dut_create:brass_jetpack_chestplate")
-
+  event.remove({ id: "create_sa:netherite_jetpack_recipe" })
   event.remove({ id: 'create_sa:fan_component_recipe' })
   event.custom({
     "type": "minecraft:crafting_shaped",
@@ -178,17 +160,16 @@ ServerEvents.recipes(event => {
   event.remove({ id: "create_sa:blazing_sword_recipe" })
   event.remove({ id: "create_sa:zinc_handle_recipe" })
   event.replaceInput({ Input: "create_sa:zinc_handle" }, "create_sa:zinc_handle", "#forge:rods/tin")
-
   event.remove({ id: "create_sa:grapplin_whisk_recipe" })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "key": {
       "A": { "tag": "dut_create:cogwheel" },
-      "B": { "item": "kubejs:new_zinc_ingot" },
+      "B": { "item": "create:andesite_alloy" },
       "C": { "item": "create:minecart_coupling"},
       "D": { "item": "kubejs:electric_gear" },
-      "D": { "item": "create:whisk" }
+      "E": { "item": "create:whisk" }
     },
     "pattern": [
       "ABA",

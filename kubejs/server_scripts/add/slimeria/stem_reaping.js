@@ -93,26 +93,19 @@ ServerEvents.recipes(event => {
     }).id("dut_create:stem_reaping_machine/boom")
     StemReapingRecipe("ad_astra:aeronos_stem", [
         StemReapingItem("kubejs:aeronos_stem_piece", 16, "output"),
-        StemReapingItemChance("kubejs:aeronos_stem_piece", 12, 0.5),
-        StemReapingItemChance("kubejs:aeronos_stem_piece", 12, 0.5),
-        StemReapingItemChance("kubejs:aeronos_cap_piece", 12, 0.25),
-        StemReapingItemChance("ad_astra:aeronos_mushroom", 1, 0.05),
+        StemReapingItemChance("kubejs:aeronos_stem_piece", 8, 0.5),
+        StemReapingItemChance("kubejs:aeronos_cap_piece", 12, 0.25)
     ], "aeronos_stem", 10)
     StemReapingRecipe("ad_astra:strophar_stem", [
         StemReapingItem("kubejs:strophar_stem_piece", 16, "output"),
-        StemReapingItemChance("kubejs:strophar_stem_piece", 12, 0.5),
-        StemReapingItemChance("kubejs:strophar_stem_piece", 12, 0.5),
-        StemReapingItemChance("kubejs:strophar_cap_piece", 12, 0.25),
-        StemReapingItemChance("ad_astra:strophar_mushroom", 1, 0.05),
+        StemReapingItemChance("kubejs:strophar_stem_piece", 8, 0.5),
+        StemReapingItemChance("kubejs:strophar_cap_piece", 12, 0.25)
     ], "strophar_stem", 10)
     StemReapingRecipe("minecraft:mushroom_stem", [
         StemReapingItem("kubejs:stem_silk", 16, "output"),
-        StemReapingItemChance("kubejs:stem_silk", 12, 0.5),
-        StemReapingItemChance("kubejs:stem_silk", 12, 0.5),
-        StemReapingItemChance("kubejs:red_mushroom_cap_piece", 6, 0.25),
-        StemReapingItemChance("kubejs:brown_mushroom_cap_piece", 6, 0.25),
-        StemReapingItemChance("minecraft:red_mushroom", 1, 0.05),
-        StemReapingItemChance("minecraft:brown_mushroom", 1, 0.05),
+        StemReapingItemChance("kubejs:stem_silk", 8, 0.5),
+        StemReapingItemChance("kubejs:red_mushroom_cap_piece", 8, 0.25),
+        StemReapingItemChance("kubejs:brown_mushroom_cap_piece", 8, 0.25)
     ], "mushroom_stem", 10)
 
 

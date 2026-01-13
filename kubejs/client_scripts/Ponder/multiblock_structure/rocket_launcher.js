@@ -116,7 +116,7 @@ Ponder.registry((event) => {
         scene.text(60, "火箭发射台兼顾发射、接收和维护火箭的功能");
         scene.idle(80);
         scene.addKeyframe();
-        scene.text(60, "在发射时，你首先需要为发射台控制器提供冷却液、维修盒与燃料罐来维护火箭");
+        scene.text(60, "在发射时，你首先需要为发射台控制器提供冷冻剂、维修盒与燃料罐来维护火箭");
         scene.showControls(15, [7, 3, 5], "up").withItem("kubejs:cryogen_bucket")
         scene.overlay.showOutline("green", {}, [7, 3, 5], 80);
         scene.idle(20);

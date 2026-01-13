@@ -1,11 +1,12 @@
 ItemEvents.tooltip(event => {
+  event.add(['kubejs:unknown_prototype'], Text.translate("kubejs.tooltip.unknown_prototype"))
   event.add(['create:crushing_wheel', "create_sa:brass_drone_item", "create:deployer", "createoreexcavation:drilling_machine", "createoreexcavation:extractor", "ad_astra:tier_1_rocket", "design_decor:industrial_iron_boiler_large", "design_decor:zinc_boiler_large", "design_decor:brass_boiler_large", "design_decor:gold_boiler_large", "design_decor:copper_boiler_large", "design_decor:cast_iron_boiler_large", "design_decor:andesite_boiler_large"], Text.translate("kubejs.tooltip.worldcraft"))
   event.add(['geckojs:stepping_caculator'], Text.translate("kubejs.tooltip.stepping_caculator"))
   event.add(['#minecraft:saplings'], Text.translate("kubejs.tooltip.sappling"))
+  event.add(['minecraft:stone','minecraft:cobblestone'], Text.translate("kubejs.tooltip.stone"))
   event.add(["waystones:waystone",
     "waystones:sandy_waystone",
     "waystones:mossy_waystone",
-    "waystones:warp_plate",
     "waystones:portstone",
     "waystones:sharestone",
     "waystones:white_sharestone",

@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
       { "item": "ad_astra:moon_stone" },
       { "item": "ad_astra:moon_stone", "chance": 0.75 }
     ],
-    "processingTime": 75
+    "processingTime": 80
   }).id("dut_create:ad_astra/crushing/moon_deepslate")
   event.custom({
     "type": "create:crushing",
@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "ad_astra:moon_cobblestone" }
     ],
-    "processingTime": 50
+    "processingTime": 80
   }).id("dut_create:ad_astra/crushing/moon_stone")
   event.custom({
     "type": "create:crushing",
@@ -62,7 +62,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "ad_astra:moon_sand" }
     ],
-    "processingTime": 50
+    "processingTime": 80
   }).id("dut_create:ad_astra/crushing/moon_cobblestone")
   //管道箱
   event.remove({ output: 'ad_astra:fluid_pipe_duct' })
@@ -258,22 +258,6 @@ ServerEvents.recipes(event => {
   //氧气装载机
   event.remove({ output: 'ad_astra:oxygen_loader' })
   event.remove({ output: 'ad_astra:oxygen_distributor' })
-  event.custom({
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-      "#D#",
-      "BCB",
-      "#A#"
-    ],
-    "key": {
-      "#": { "tag": "forge:plates/brass" },
-      "A": { "item": "ad_astra:oxygen_gear" },
-      "B": { "item": "createdieselgenerators:canister" },
-      "C": { "item": "create:mechanical_pump" },
-      "D": { "item": "create:encased_fan" }
-    },
-    "result": { "item": "ad_astra:oxygen_distributor" }
-  }).id("dut_create:ad_astra/oxygen_distributor")
   //event.replaceOutput({}, '','')
   //event.remove({input: ''})
   //event.custom()
@@ -331,7 +315,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "ad_astra:steel_plate" },
-        { "amount": 150, "fluid": "kubejs:cryogen" }],
+        { "amount": 250, "fluid": "kubejs:cryogen" }],
         "results": [{ "item": "ad_astra:steel_plate" }]
       }
     ],
@@ -361,7 +345,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "ad_astra:steel_block" },
-        { "amount": 300, "fluid": "kubejs:cryogen" }],
+        { "amount": 500, "fluid": "kubejs:cryogen" }],
         "results": [{ "item": "ad_astra:steel_block" }]
       }
     ],

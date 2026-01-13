@@ -24,6 +24,7 @@ BlockEvents.rightClicked("create:fluid_pipe", event => {
     return
   }
   event.level.setBlockAndUpdate(Pos, BlockStates.setValue(BlockProperties[Face], Bool ? $Boolean.FALSE : $Boolean.TRUE))
+  
 })
 
 

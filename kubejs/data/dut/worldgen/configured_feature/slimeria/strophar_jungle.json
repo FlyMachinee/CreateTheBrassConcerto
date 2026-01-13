@@ -12,8 +12,12 @@
         "chance": 0.3
       },
       {
-        "feature": "dut:slimeria/jungle/jungle_strophar_carpet",
-        "chance": 0.05
+        "feature": "dut:slimeria/jungle/strophar_cap_pile",
+        "chance": 0.075
+      },
+      {
+        "feature": "dut:slimeria/jungle/strophar_stem_pile",
+        "chance": 0.025
       },
       {
         "feature": "dut:slimeria/jungle/jungle_strophar_tiny",

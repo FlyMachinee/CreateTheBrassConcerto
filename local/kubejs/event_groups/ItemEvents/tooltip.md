@@ -25,22 +25,27 @@ Note: Even if no fields are listed above, some methods are still available as fi
 
 | Name | Parameters | Return type | Static? |
 | ---- | ---------- | ----------- | ------- |
-| add | Ingredient, Object |  | void | ✘ |
 | isShift |  |  | boolean | ✘ |
-| isCtrl |  |  | boolean | ✘ |
-| isAlt |  |  | boolean | ✘ |
-| addToAll | Object |  | void | ✘ |
-| addAdvancedToAll | StaticTooltipHandlerFromJS |  | void | ✘ |
+| add | Ingredient, Object |  | void | ✘ |
 | addAdvanced | Ingredient, StaticTooltipHandlerFromJS |  | void | ✘ |
+| isCtrl |  |  | boolean | ✘ |
+| addToAll | Object |  | void | ✘ |
+| isAlt |  |  | boolean | ✘ |
+| addAdvancedToAll | StaticTooltipHandlerFromJS |  | void | ✘ |
 | exit | Object |  | Object | ✘ |
 | exit |  |  | Object | ✘ |
 | cancel | Object |  | Object | ✘ |
 | cancel |  |  | Object | ✘ |
-| success | Object |  | Object | ✘ |
 | success |  |  | Object | ✘ |
+| success | Object |  | Object | ✘ |
 
 
 ### Documented members:
+
+- `boolean isShift()`
+```
+Is shift key pressed.
+```
 
 - `void add(Ingredient var0, Object var1)`
 
@@ -52,19 +57,19 @@ Note: Even if no fields are listed above, some methods are still available as fi
 Adds text to all items matching the ingredient.
 ```
 
-- `boolean isShift()`
+- `void addAdvanced(Ingredient var0, StaticTooltipHandlerFromJS var1)`
+
+  Parameters:
+  - var0: Ingredient
+  - var1: StaticTooltipHandlerFromJS
+
 ```
-Is shift key pressed.
+Adds a dynamic tooltip handler to all items matching the ingredient.
 ```
 
 - `boolean isCtrl()`
 ```
 Is control key pressed.
-```
-
-- `boolean isAlt()`
-```
-Is alt key pressed.
 ```
 
 - `void addToAll(Object var0)`
@@ -76,6 +81,11 @@ Is alt key pressed.
 Adds text to all items.
 ```
 
+- `boolean isAlt()`
+```
+Is alt key pressed.
+```
+
 - `void addAdvancedToAll(StaticTooltipHandlerFromJS var0)`
 
   Parameters:
@@ -83,16 +93,6 @@ Adds text to all items.
 
 ```
 Adds a dynamic tooltip handler to all items.
-```
-
-- `void addAdvanced(Ingredient var0, StaticTooltipHandlerFromJS var1)`
-
-  Parameters:
-  - var0: Ingredient
-  - var1: StaticTooltipHandlerFromJS
-
-```
-Adds a dynamic tooltip handler to all items matching the ingredient.
 ```
 
 - `Object exit(Object var0)`
@@ -131,6 +131,13 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 `cancel` denotes a `false` outcome.
 ```
 
+- `Object success()`
+```
+Stops the event with default exit value. Execution will be stopped **immediately**.
+
+`success` denotes a `true` outcome.
+```
+
 - `Object success(Object var0)`
 
   Parameters:
@@ -138,13 +145,6 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 
 ```
 Stops the event with the given exit value. Execution will be stopped **immediately**.
-
-`success` denotes a `true` outcome.
-```
-
-- `Object success()`
-```
-Stops the event with default exit value. Execution will be stopped **immediately**.
 
 `success` denotes a `true` outcome.
 ```

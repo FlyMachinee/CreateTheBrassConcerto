@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
             "results": [
                 {"item":input.split(":")[0]+":waxed_"+input.split(":")[1]}
             ],
-            "processingTime": 50
+            "processingTime": 5
         }).id('dut_create:polymer_wax/'+input.split(":")[1])
         event.custom({
             "type": "vintageimprovements:pressurizing",
@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
             "results": [
                 {"item":input.split(":")[0]+":waxed_exposed_"+input.split(":")[1]}
             ],
-            "processingTime": 50
+            "processingTime": 5
         }).id('dut_create:polymer_wax/exposed_'+input.split(":")[1])
         event.custom({
             "type": "vintageimprovements:pressurizing",
@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
             "results": [
                 {"item":input.split(":")[0]+":waxed_weathered_"+input.split(":")[1]}
             ],
-            "processingTime": 50
+            "processingTime": 5
         }).id('dut_create:polymer_wax/weathered_'+input.split(":")[1])
         event.custom({
             "type": "vintageimprovements:pressurizing",
@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
             "results": [
                 {"item":input.split(":")[0]+":waxed_oxidized_"+input.split(":")[1]}
             ],
-            "processingTime": 50
+            "processingTime": 5
         }).id('dut_create:polymer_wax/oxidized_'+input.split(":")[1])
     }
     waxCopperBlock("minecraft:cut_copper")
@@ -73,7 +73,7 @@ ServerEvents.recipes(event => {
         "results": [
             {"item":"waxed_copper_block"}
         ],
-        "processingTime": 50
+        "processingTime": 5
     }).id('dut_create:polymer_wax/copper_block')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -86,7 +86,7 @@ ServerEvents.recipes(event => {
         "results": [
             {"item":"waxed_exposed_copper"}
         ],
-        "processingTime": 50
+        "processingTime": 5
     }).id('dut_create:polymer_wax/exposed_copper')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
         "results": [
             {"item":"waxed_weathered_copper"}
         ],
-        "processingTime": 50
+        "processingTime": 5
     }).id('dut_create:polymer_wax/weathered_copper')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -112,7 +112,7 @@ ServerEvents.recipes(event => {
         "results": [
             {"item":"waxed_oxidized_copper"}
         ],
-        "processingTime": 50
+        "processingTime": 5
     }).id('dut_create:polymer_wax/oxidized_copper')
     
 })

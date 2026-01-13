@@ -1,5 +1,5 @@
-const ItemDiscard = Java.loadClass("net.minecraftforge.event.entity.item.ItemExpireEvent")
-NativeEvents.onEvent(ItemDiscard, event => {
+const $ItemDiscard = Java.loadClass("net.minecraftforge.event.entity.item.ItemExpireEvent")
+NativeEvents.onEvent($ItemDiscard, event => {
     if (event.entity.block.biomeId != "ad_astra:orbit") {
         return
     }
@@ -10,7 +10,8 @@ NativeEvents.onEvent(ItemDiscard, event => {
     let random3 = Math.random() * 0.25 - 0.125
     event.entity.server.runCommandSilent(`execute as ${event.entity.uuid.toString()} at @s positioned ~ 356 ~ run summon armor_stand ~ ~ ~ {Tags:["dut_meteorite"],Motion:[${random1}d,-4.8d,${random3}d],Invisible:1b,DisabledSlots:4144896,Invulnerable:0b,ArmorItems:[{},{},{},{Count:1b,id:"minecraft:structure_block",tag:{}}]}`)
 })
-NativeEvents.onEvent('net.minecraftforge.event.entity.living.LivingEvent$LivingTickEvent', event => {
+const $LivingTick = Java.loadClass('net.minecraftforge.event.entity.living.LivingEvent$LivingTickEvent')
+NativeEvents.onEvent($LivingTick, event => {
     if (event.entity.type != "minecraft:armor_stand") {
         return
     }

@@ -50,7 +50,7 @@ Ponder.registry((event) => {
         scene.rotateCameraY(-45);
         scene.idle(40);
         scene.addKeyframe();
-        scene.text(60, "液压机仅在液压头处于顶端且其它一切正确时可以将水转换为液压液");
+        scene.text(60, "液压机仅在液压头处于顶端且其它一切正确时可以将水转换为结构液");
         scene.overlay.showOutline("blue", {}, [4, 3, 2], 30);
         scene.overlay.showOutline("green", {}, [3, 6, 4, 5, 13, 7], 30);
         scene.idle(80);
@@ -65,7 +65,7 @@ Ponder.registry((event) => {
         }
         scene.rotateCameraY(60);
         scene.idle(35);
-        scene.text(60, "当液压机拥有液压液时，如果控制液压头移动至底部，原料就会被（液压液将被消耗）");
+        scene.text(60, "当液压机拥有结构液时，如果控制液压头移动至底部，原料就会被（结构液将被消耗）");
         scene.addKeyframe();
         scene.idle(20);
         scene.overlay.showOutline("red", {}, [4, 3, 3], 30);
@@ -85,7 +85,7 @@ Ponder.registry((event) => {
         scene.world.flapFunnel([4.5, 3.5, 1], false);
         scene.world.createItemEntity([4.5, 3.5, 1], Direction.north, "17x create:iron_sheet");
         scene.idle(30);
-        scene.text(60, "接着只需要控制液压机复位即可让液压机重新产生液压液");
+        scene.text(60, "接着只需要控制液压机复位即可让液压机重新产生结构液");
         scene.idle(20);
         scene.overlay.showOutline("red", {}, [4, 3, 3], 30);
         scene.showControls(15, [4, 3, 3], "up").withItem("minecraft:redstone_torch")

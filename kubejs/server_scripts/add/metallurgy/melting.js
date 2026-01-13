@@ -3,35 +3,21 @@ ServerEvents.recipes(event => {
   //删除
   event.remove({ type: "createbigcannons:melting", not: { mod: 'kubejs' } })
   event.remove({ id: 'createbigcannons:compacting/forge_steel_ingot' })
-  function melting(item, fluid, nugget_time, heatlevel) {
+  function melting(item, fluid, ingot_time, heatlevel) {
     event.custom({
       "type": "createbigcannons:melting",
       "heatRequirement": heatlevel,
       "ingredients": [{ "tag": "forge:storage_blocks/" + item }],
-      "processingTime": nugget_time * 12,
+      "processingTime": ingot_time * 3,
       "results": [{ "amount": 810, "fluid": fluid }]
-    }).id("dut_create:melting/" + item + '_block');
-    event.custom({
-      "type": "createbigcannons:melting",
-      "heatRequirement": heatlevel,
-      "ingredients": [{ "tag": "forge:plates/" + item }],
-      "processingTime": nugget_time * 3,
-      "results": [{ "amount": 90, "fluid": fluid }]
-    }).id("dut_create:melting/" + item + '_sheet');
+    }).id("dut_create:melting/" + item + '_block')
     event.custom({
       "type": "createbigcannons:melting",
       "heatRequirement": heatlevel,
       "ingredients": [{ "tag": "forge:ingots/" + item }],
-      "processingTime": nugget_time * 4,
+      "processingTime": ingot_time ,
       "results": [{ "amount": 90, "fluid": fluid }]
-    }).id("dut_create:melting/" + item + '_ingot');
-    event.custom({
-      "type": "createbigcannons:melting",
-      "heatRequirement": heatlevel,
-      "ingredients": [{ "tag": "forge:nuggets/" + item }],
-      "processingTime": nugget_time,
-      "results": [{ "amount": 10, "fluid": fluid }]
-    }).id("dut_create:melting/" + item + '_nugget');
+    }).id("dut_create:melting/" + item + '_ingot')
     return 0
   }
   function compacting(item, fluid,item1) {
@@ -51,22 +37,10 @@ ServerEvents.recipes(event => {
   melting('copper', 'kubejs:copper', 20, "heated")
   melting('gold', 'kubejs:gold', 40, "heated")
   melting('tin', 'kubejs:tin', 20, "heated")
+  melting('new_zinc', 'kubejs:new_zinc', 20, "heated")
   melting('cast_iron', 'createbigcannons:molten_cast_iron', 20, "heated")
+  melting('aluminum', 'kubejs:aluminum', 30, "heated")
   
-  event.custom({
-    "type": "createbigcannons:melting",
-    "heatRequirement": "superheated",
-    "ingredients": [{ "tag": "forge:plates/aluminum" }],
-    "processingTime": 90,
-    "results": [{ "amount": 90, "fluid": "kubejs:aluminum" }]
-  }).id("dut_create:melting/aluminum_sheet");
-  event.custom({
-    "type": "createbigcannons:melting",
-    "heatRequirement": "superheated",
-    "ingredients": [{ "tag": "forge:ingots/aluminum" }],
-    "processingTime": 120,
-    "results": [{ "amount": 90, "fluid": "kubejs:aluminum" }]
-  }).id("dut_create:melting/aluminum_ingot");
   //compacting
   compacting("brass","kubejs:brass","create:brass_ingot")
   compacting("desh","kubejs:desh","ad_astra:desh_ingot")
@@ -77,4 +51,31 @@ ServerEvents.recipes(event => {
   compacting("tin","kubejs:tin","kubejs:tin_ingot")
   compacting("industrial_iron","kubejs:industrial_iron","kubejs:industrial_iron_ingot")
   compacting("aluminum","kubejs:aluminum","kubejs:aluminum_ingot")
+  
+  function cryogenCooldownMetal(input, output) {
+    event.custom({
+      "type": "vintageimprovements:pressurizing",
+      "secondaryFluidInput": 0,
+      "ingredients": [
+        { "fluid": "kubejs:cryogen", "amount": 100 },
+        { "fluid": input, "amount": 360 }
+      ],
+      "results": [
+        { "item": output, "count": 4 },
+      ],
+      "processingTime": 15
+    }).id("dut_create:fluid_cooldown/" + input.split(':')[1])
+  }
+  cryogenCooldownMetal("kubejs:aluminum", "kubejs:aluminum_ingot")
+  cryogenCooldownMetal("kubejs:industrial_iron", "kubejs:industrial_iron_ingot")
+  cryogenCooldownMetal("kubejs:brass", "create:brass_ingot")
+  cryogenCooldownMetal("kubejs:new_zinc", "kubejs:new_zinc_ingot")
+  cryogenCooldownMetal("kubejs:iron", "minecraft:iron_ingot")
+  cryogenCooldownMetal("kubejs:gold", "minecraft:gold_ingot")
+  cryogenCooldownMetal("kubejs:copper", "minecraft:copper_ingot")
+  cryogenCooldownMetal("createbigcannons:molten_steel", "ad_astra:steel_ingot")
+  cryogenCooldownMetal("createbigcannons:molten_cast_iron", "createbigcannons:cast_iron_ingot")
+  cryogenCooldownMetal("createbigcannons:molten_nethersteel", "createbigcannons:nethersteel_ingot")
+  cryogenCooldownMetal("kubejs:desh", "ad_astra:desh_ingot")
+  cryogenCooldownMetal("kubejs:tin", "kubejs:tin_ingot")
 })

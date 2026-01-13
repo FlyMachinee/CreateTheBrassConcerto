@@ -244,13 +244,13 @@ ServerEvents.recipes(event => {
 
     CrusherCommon([{ id: "kubejs:new_asurine", count: 64 }], [{ id: "kubejs:new_crushed_raw_zinc", count: 80 }], "zinc")
 
-    CrusherCommon([{ id: "#create:stone_types/crimsite", count: 64 }], [{ id: "create:crushed_raw_iron", count: 80 }], "iron")
+    CrusherCommon([{ id: "#create:stone_types/crimsite", count: 64 }], [{ id: "create:crushed_raw_iron", count: 96 }], "iron")
 
-    CrusherCommon([{ id: "#create:stone_types/ochrum", count: 64 }], [{ id: "create:crushed_raw_gold", count: 80 }], "gold")
+    CrusherCommon([{ id: "#create:stone_types/ochrum", count: 64 }], [{ id: "create:crushed_raw_gold", count: 96 }], "gold")
 
-    CrusherCommon([{ id: "#create:stone_types/veridium", count: 64 }], [{ id: "create:crushed_raw_copper", count: 80 }], "copper")
+    CrusherCommon([{ id: "#create:stone_types/veridium", count: 64 }], [{ id: "create:crushed_raw_copper", count: 96 }], "copper")
 
-    CrusherCommon([{ id: "kubejs:raw_tin", count: 64 }], [{ id: "create:crushed_raw_tin", count: 80 }], "tin")
+    CrusherCommon([{ id: "kubejs:raw_tin", count: 64 }], [{ id: "create:crushed_raw_tin", count: 96 }], "tin")
 
     CrusherCommon([{ id: "kubejs:aluminite", count: 64 }], [{ id: "kubejs:aluminite_powder", count: 80 }], "aluminite")
 

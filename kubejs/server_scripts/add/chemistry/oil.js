@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
     "type": "createdieselgenerators:distillation",
     "ingredients": [{ "fluidTag": "forge:gasoline", "amount": 400 }],
     "heatRequirement": "heated",
-    "processingTime": 100,
+    "processingTime": 90,
     "results": [
       { "fluid": "kubejs:natural_gas", "amount": 800 }
     ]
@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
     "type": "createdieselgenerators:distillation",
     "ingredients": [{ "fluidTag": "forge:diesel", "amount": 200 }],
     "heatRequirement": "heated",
-    "processingTime": 100,
+    "processingTime": 90,
     "results": [
       { "fluid": "createdieselgenerators:gasoline", "amount": 300 },
       { "fluid": "kubejs:natural_gas", "amount": 200 }
@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
     "type": "createdieselgenerators:distillation",
     "ingredients": [{ "fluidTag": "forge:crude_oil", "amount": 300 }],
     "heatRequirement": "heated",
-    "processingTime": 100,
+    "processingTime": 90,
     "results": [
       { "fluid": "createdieselgenerators:diesel", "amount": 100 },
       { "fluid": "minecraft:water", "amount": 50 },
@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "forge:gasoline", "amount": 800 }
     ],
     "heatRequirement": "superheated",
-    "processingTime": 50,
+    "processingTime": 36,
     "results": [
       { "fluid": "kubejs:natural_gas", "amount": 1600 }
     ]
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "forge:diesel", "amount": 600 }
     ],
     "heatRequirement": "superheated",
-    "processingTime": 50,
+    "processingTime": 36,
     "results": [
       { "fluid": "createdieselgenerators:gasoline", "amount": 800 },
       { "fluid": "kubejs:natural_gas", "amount": 800 }
@@ -79,7 +79,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "forge:crude_oil", "amount": 1200 }
     ],
     "heatRequirement": "superheated",
-    "processingTime": 50,
+    "processingTime": 36,
     "results": [
       { "fluid": "createloveandwar:bitumen_fluid", "amount": 200 },
       { "fluid": "createdieselgenerators:diesel", "amount": 400 },

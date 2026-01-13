@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:cyan_dye" },
       { "item": "minecraft:orange_dye", "chance": 0.25 }
     ],
-    "processingTime": 100
+    "processingTime": 10
   }).id("dut_create:crushing/warped_fungus")
   event.custom({
     "type": "create:crushing",
@@ -24,6 +24,6 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:red_dye" },
       { "item": "minecraft:orange_dye", "chance": 0.25 }
     ],
-    "processingTime": 100
+    "processingTime": 10
   }).id("dut_create:crushing/crimson_fungus")
 })

@@ -19,117 +19,57 @@ Note: Even if no fields are listed above, some methods are still available as fi
 
 | Name | Parameters | Return type | Static? |
 | ---- | ---------- | ----------- | ------- |
-| horseRunAroundLikeCrazy | int, double |  | void | ✘ |
-| waterAvoidingRandomFlying | int, double |  | void | ✘ |
-| moveTowardsRestriction | int, double |  | void | ✘ |
-| waterAvoidingRandomStroll | int, double, float |  | void | ✘ |
-| strollThroughVillage | int, int |  | void | ✘ |
-| climbOnTopOfPowderedSnow | int |  | void | ✘ |
 | panic | int, double |  | void | ✘ |
-| followOwner | int, double, float, float, boolean |  | void | ✘ |
-| sitWhenOrdered | int |  | void | ✘ |
-| avoidEntity | int, Class<E extends LivingEntity>, Predicate<LivingEntity>, float, double, double, Predicate<LivingEntity> |  | void | ✘ |
-| followParent | int, double |  | void | ✘ |
-| meleeAttack | int, double, boolean |  | void | ✘ |
-| moveThroughVillage | int, double, boolean, int, Supplier<Boolean> |  | void | ✘ |
-| tryFindWater | int |  | void | ✘ |
-| moveBackToVillage | int, double, boolean |  | void | ✘ |
-| moveTowardsTarget | int, double, float |  | void | ✘ |
-| leapAtTarget | int, float |  | void | ✘ |
-| randomLookAround | int |  | void | ✘ |
-| randomStroll | int, double, int, boolean |  | void | ✘ |
-| restrictSun | int |  | void | ✘ |
-| arbitraryGoal | int, Function<T extends Mob, Goal> |  | void | ✘ |
-| removeBlock | int, ResourceLocation, double, int |  | void | ✘ |
-| ocelotAttack | int |  | void | ✘ |
-| randomSwimming | int, double, int |  | void | ✘ |
-| rangedAttack | int, double, int, int, float |  | void | ✘ |
-| lookAtEntity | int, Class<E extends LivingEntity>, float, float, boolean |  | void | ✘ |
 | removeAllGoals |  |  | void | ✘ |
 | removeGoals | Function<GoalContext, Boolean> |  | void | ✘ |
-| eatGrass | int |  | void | ✘ |
-| followBoat | int |  | void | ✘ |
-| fleeSun | int, double |  | void | ✘ |
-| breathAir | int |  | void | ✘ |
+| removeBlock | int, ResourceLocation, double, int |  | void | ✘ |
+| arbitraryGoal | int, Function<T extends Mob, Goal> |  | void | ✘ |
+| avoidEntity | int, Class<E extends LivingEntity>, Predicate<LivingEntity>, float, double, double, Predicate<LivingEntity> |  | void | ✘ |
+| randomStroll | int, double, int, boolean |  | void | ✘ |
+| sitWhenOrdered | int |  | void | ✘ |
+| tryFindWater | int |  | void | ✘ |
+| ocelotAttack | int |  | void | ✘ |
+| lookAtEntity | int, Class<E extends LivingEntity>, float, float, boolean |  | void | ✘ |
+| leapAtTarget | int, float |  | void | ✘ |
+| moveTowardsTarget | int, double, float |  | void | ✘ |
+| meleeAttack | int, double, boolean |  | void | ✘ |
+| rangedAttack | int, double, int, int, float |  | void | ✘ |
+| restrictSun | int |  | void | ✘ |
+| moveThroughVillage | int, double, boolean, int, Supplier<Boolean> |  | void | ✘ |
+| randomLookAround | int |  | void | ✘ |
+| randomSwimming | int, double, int |  | void | ✘ |
+| followParent | int, double |  | void | ✘ |
+| followOwner | int, double, float, float, boolean |  | void | ✘ |
+| moveBackToVillage | int, double, boolean |  | void | ✘ |
 | breed | int, double, Class<? extends Animal> |  | void | ✘ |
+| followBoat | int |  | void | ✘ |
+| openDoor | int, boolean |  | void | ✘ |
+| tempt | int, double, Ingredient, boolean |  | void | ✘ |
+| eatGrass | int |  | void | ✘ |
+| customGoal | String, int, Predicate<T extends Mob>, Predicate<T extends Mob>, boolean, Consumer<T extends Mob>, Consumer<T extends Mob>, boolean, Consumer<T extends Mob> |  | void | ✘ |
+| breathAir | int |  | void | ✘ |
+| floatSwim | int |  | void | ✘ |
 | followMob | int, double, float, float |  | void | ✘ |
 | useItem | int, ItemStack, ResourceLocation, Predicate<T extends Mob> |  | void | ✘ |
 | breakDoor | int, int, Predicate<Difficulty> |  | void | ✘ |
-| customGoal | String, int, Predicate<T extends Mob>, Predicate<T extends Mob>, boolean, Consumer<T extends Mob>, Consumer<T extends Mob>, boolean, Consumer<T extends Mob> |  | void | ✘ |
-| floatSwim | int |  | void | ✘ |
-| openDoor | int, boolean |  | void | ✘ |
-| tempt | int, double, Ingredient, boolean |  | void | ✘ |
+| fleeSun | int, double |  | void | ✘ |
 | removeGoal | Class<? extends Goal> |  | void | ✘ |
+| climbOnTopOfPowderedSnow | int |  | void | ✘ |
+| waterAvoidingRandomFlying | int, double |  | void | ✘ |
+| strollThroughVillage | int, int |  | void | ✘ |
+| horseRunAroundLikeCrazy | int, double |  | void | ✘ |
+| moveTowardsRestriction | int, double |  | void | ✘ |
+| waterAvoidingRandomStroll | int, double, float |  | void | ✘ |
 | getEntity |  |  | Mob | ✘ |
 | exit | Object |  | Object | ✘ |
 | exit |  |  | Object | ✘ |
 | cancel | Object |  | Object | ✘ |
 | cancel |  |  | Object | ✘ |
-| success | Object |  | Object | ✘ |
 | success |  |  | Object | ✘ |
+| success | Object |  | Object | ✘ |
 
 
 ### Documented members:
-
-- `void horseRunAroundLikeCrazy(int priority, double speedModifier)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-
-```
-Adds a `RunAroundLikeCrazyGoal` to the entity, only applicable to **horse** mobs
-```
-
-- `void waterAvoidingRandomFlying(int priority, double speedModifier)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-
-```
-Adds a `WaterAvoidingRandomFlyingGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void moveTowardsRestriction(int priority, double speedModifier)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-
-```
-Adds a `MoveTowardsRestrictionGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void waterAvoidingRandomStroll(int priority, double speedModifier, float probability)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - probability: float- The probability, in the range [0, 1], that the entity picks a new position
-
-```
-Adds a `WaterAvoidRandomStrollingGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void strollThroughVillage(int priority, int interval)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - interval: int- Sets how often the goal 'refreshes'
-
-```
-Adds a `StrollThroughVillageGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void climbOnTopOfPowderedSnow(int priority)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-
-```
-Adds a `ClimbOnTopOfPowderSnowGoal` to the entity
-```
 
 - `void panic(int priority, double speedModifier)`
 
@@ -139,226 +79,6 @@ Adds a `ClimbOnTopOfPowderSnowGoal` to the entity
 
 ```
 Adds a `PanicGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void followOwner(int priority, double speedModifier, float startDistance, float stopDistance, boolean canFly)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - startDistance: float- The distance away from the owner the mob will start moving
-  - stopDistance: float- The distance away from the owner the mob will stop moving
-  - canFly: boolean- If the mob can teleport into leaves
-
-```
-Adds a `FollowOwnerGoal` to the entity, only applicable to **tamable** mobs
-```
-
-- `void sitWhenOrdered(int priority)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-
-```
-Adds a `SitWhenOrderedToGoal` to the entity, only applicable to **tamable** mobs
-```
-
-- `void avoidEntity(int priority, Class<E extends LivingEntity> entityClassToAvoid, Predicate<LivingEntity> avoidPredicate, float maxDist, double walkSpeedModifier, double sprintSpeedModifier, Predicate<LivingEntity> onAvoidEntityPredicate)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - entityClassToAvoid: Class<E extends LivingEntity>- The class of entity to avoid
-  - avoidPredicate: Predicate<LivingEntity>- The conditions under which an entity will be avoided
-  - maxDist: float- The maximum distance from a entity the mob will detect and flee from it
-  - walkSpeedModifier: double- Modifies the mob's speed when avoiding an entity
-  - sprintSpeedModifier: double- Modifies the mob's speed when avoiding an entity at close range
-  - onAvoidEntityPredicate: Predicate<LivingEntity>- An additional predicate for entity avoidance
-
-```
-Adds a `AvoidEntityGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void followParent(int priority, double speedModifier)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-
-```
-Adds a `FollowParentGoal` to the entity, only applicable to **animal** mobs
-```
-
-- `void meleeAttack(int priority, double speedModifier, boolean followTargetEventIfNotSeen)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - followTargetEventIfNotSeen: boolean- Determines if the entity should follow the target even if it doesn't see it
-
-```
-Adds a `MeleeAttackGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void moveThroughVillage(int priority, double speedModifier, boolean onlyAtNight, int distanceToPoi, Supplier<Boolean> canDealWithDoors)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - onlyAtNight: boolean- If this goal should only apply at night
-  - distanceToPoi: int- The minimum distance to a poi the mob must be to have it be considered 'visited'
-  - canDealWithDoors: Supplier<Boolean>- If doors can be opened to navigate as part of this goal
-
-```
-Adds a `MoveThroughVillageGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void tryFindWater(int priority)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-
-```
-Adds a `TryFindWaterGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void moveBackToVillage(int priority, double speedModifier, boolean checkNoActionTime)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - checkNoActionTime: boolean- Determines if the mob's noActionTime property should be checked
-
-```
-Adds a `MoveBackToVillageGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void moveTowardsTarget(int priority, double speedModifier, float distanceWithin)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - distanceWithin: float- The distance the target must be within to move towards it
-
-```
-Adds a `MoveTowardsTargetGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void leapAtTarget(int priority, float deltaY)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - deltaY: float- Sets the delta movement of the animal in the y-axis
-
-```
-Adds a `LeapAtTargetGoal` to the entity
-```
-
-- `void randomLookAround(int priority)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-
-```
-Adds a `RandomLookAroundGoal` to the entity
-```
-
-- `void randomStroll(int priority, double speedModifier, int interval, boolean checkNoActionTime)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - interval: int- Sets the interval at which the goal will be 'refreshed, any values below 1 will be 1.'
-  - checkNoActionTime: boolean- Determines if the mob's noActionTime property should be checked
-
-```
-Adds a `RandomStrollGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void restrictSun(int priority)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-
-```
-Adds a `RestrictSunGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void arbitraryGoal(int priority, Function<T extends Mob, Goal> goalSupplier)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - goalSupplier: Function<T extends Mob, Goal>- The goal supplier, a function that takes a Mob and returns a Goal
-
-```
-Enables the addition of arbitrary goals to an entity
-
-It is the responsibility of the user to ensure the goal is
-compatible with the entity
-
-Example of usage:
-=====================================
-builder.arbitraryGoal(3, entity -> new $PathFindToRaidGoal(entity))
-=====================================
-
-Note in the example the entity must be an instance of Raider
-```
-
-- `void removeBlock(int priority, ResourceLocation block, double speedModifier, int verticalSearchRange)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - block: ResourceLocation- The registry name of a block, the block to be removed
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - verticalSearchRange: int- The vertical range the mob will search for the block
-
-```
-Adds a `RemoveBlockGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void ocelotAttack(int priority)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-
-```
-Adds a `OcelotAttackGoal` to the entity
-```
-
-- `void randomSwimming(int priority, double speedModifier, int interval)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - interval: int- Sets the interval at which the goal will be refreshed
-
-```
-Adds a `RandomSwimmingGoal` to the entity, only applicable to **pathfinder** mobs
-```
-
-- `void rangedAttack(int priority, double speedModifier, int attackIntervalMin, int attackIntervalMax, float attackRadius)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - speedModifier: double- Sets the speed at which the mob should try to move
-  - attackIntervalMin: int- The minimum interval between attacks
-  - attackIntervalMax: int- The maximum interval between attacks
-  - attackRadius: float- The maximum distance something can be attacked from
-
-```
-Adds a `RangedAttackGoal` to the entity, only applicable to **ranged attack** mobs
-```
-
-- `void lookAtEntity(int priority, Class<E extends LivingEntity> targetClass, float lookDistance, float probability, boolean onlyHorizontal)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - targetClass: Class<E extends LivingEntity>- The entity class that should be looked at
-  - lookDistance: float- How far away the entity should be looked at
-  - probability: float- The probability, in the range [0, 1], that the goal may be used
-  - onlyHorizontal: boolean- Determines if the eye level must be the same to follow the target entity
-
-```
-Adds a `LookAtPlayerGoal` to the entity
 ```
 
 - `void removeAllGoals()`
@@ -389,41 +109,224 @@ e.removeGoals(context => {
 =====================================
 ```
 
-- `void eatGrass(int priority)`
+- `void removeBlock(int priority, ResourceLocation block, double speedModifier, int verticalSearchRange)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - block: ResourceLocation- The registry name of a block, the block to be removed
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - verticalSearchRange: int- The vertical range the mob will search for the block
+
+```
+Adds a `RemoveBlockGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void arbitraryGoal(int priority, Function<T extends Mob, Goal> goalSupplier)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - goalSupplier: Function<T extends Mob, Goal>- The goal supplier, a function that takes a Mob and returns a Goal
+
+```
+Enables the addition of arbitrary goals to an entity
+
+It is the responsibility of the user to ensure the goal is
+compatible with the entity
+
+Example of usage:
+=====================================
+builder.arbitraryGoal(3, entity -> new $PathFindToRaidGoal(entity))
+=====================================
+
+Note in the example the entity must be an instance of Raider
+```
+
+- `void avoidEntity(int priority, Class<E extends LivingEntity> entityClassToAvoid, Predicate<LivingEntity> avoidPredicate, float maxDist, double walkSpeedModifier, double sprintSpeedModifier, Predicate<LivingEntity> onAvoidEntityPredicate)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - entityClassToAvoid: Class<E extends LivingEntity>- The class of entity to avoid
+  - avoidPredicate: Predicate<LivingEntity>- The conditions under which an entity will be avoided
+  - maxDist: float- The maximum distance from a entity the mob will detect and flee from it
+  - walkSpeedModifier: double- Modifies the mob's speed when avoiding an entity
+  - sprintSpeedModifier: double- Modifies the mob's speed when avoiding an entity at close range
+  - onAvoidEntityPredicate: Predicate<LivingEntity>- An additional predicate for entity avoidance
+
+```
+Adds a `AvoidEntityGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void randomStroll(int priority, double speedModifier, int interval, boolean checkNoActionTime)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - interval: int- Sets the interval at which the goal will be 'refreshed, any values below 1 will be 1.'
+  - checkNoActionTime: boolean- Determines if the mob's noActionTime property should be checked
+
+```
+Adds a `RandomStrollGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void sitWhenOrdered(int priority)`
 
   Parameters:
   - priority: int- The priority of the goal
 
 ```
-Adds a `EatBlockGoal` to the entity
+Adds a `SitWhenOrderedToGoal` to the entity, only applicable to **tamable** mobs
 ```
 
-- `void followBoat(int priority)`
+- `void tryFindWater(int priority)`
 
   Parameters:
   - priority: int- The priority of the goal
 
 ```
-Adds a `FollowBoatGoal` to the entity, only applicable to **pathfinder** mobs
+Adds a `TryFindWaterGoal` to the entity, only applicable to **pathfinder** mobs
 ```
 
-- `void fleeSun(int priority, double speedModifier)`
+- `void ocelotAttack(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `OcelotAttackGoal` to the entity
+```
+
+- `void lookAtEntity(int priority, Class<E extends LivingEntity> targetClass, float lookDistance, float probability, boolean onlyHorizontal)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - targetClass: Class<E extends LivingEntity>- The entity class that should be looked at
+  - lookDistance: float- How far away the entity should be looked at
+  - probability: float- The probability, in the range [0, 1], that the goal may be used
+  - onlyHorizontal: boolean- Determines if the eye level must be the same to follow the target entity
+
+```
+Adds a `LookAtPlayerGoal` to the entity
+```
+
+- `void leapAtTarget(int priority, float deltaY)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - deltaY: float- Sets the delta movement of the animal in the y-axis
+
+```
+Adds a `LeapAtTargetGoal` to the entity
+```
+
+- `void moveTowardsTarget(int priority, double speedModifier, float distanceWithin)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - distanceWithin: float- The distance the target must be within to move towards it
+
+```
+Adds a `MoveTowardsTargetGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void meleeAttack(int priority, double speedModifier, boolean followTargetEventIfNotSeen)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - followTargetEventIfNotSeen: boolean- Determines if the entity should follow the target even if it doesn't see it
+
+```
+Adds a `MeleeAttackGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void rangedAttack(int priority, double speedModifier, int attackIntervalMin, int attackIntervalMax, float attackRadius)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - attackIntervalMin: int- The minimum interval between attacks
+  - attackIntervalMax: int- The maximum interval between attacks
+  - attackRadius: float- The maximum distance something can be attacked from
+
+```
+Adds a `RangedAttackGoal` to the entity, only applicable to **ranged attack** mobs
+```
+
+- `void restrictSun(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `RestrictSunGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void moveThroughVillage(int priority, double speedModifier, boolean onlyAtNight, int distanceToPoi, Supplier<Boolean> canDealWithDoors)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - onlyAtNight: boolean- If this goal should only apply at night
+  - distanceToPoi: int- The minimum distance to a poi the mob must be to have it be considered 'visited'
+  - canDealWithDoors: Supplier<Boolean>- If doors can be opened to navigate as part of this goal
+
+```
+Adds a `MoveThroughVillageGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void randomLookAround(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `RandomLookAroundGoal` to the entity
+```
+
+- `void randomSwimming(int priority, double speedModifier, int interval)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - interval: int- Sets the interval at which the goal will be refreshed
+
+```
+Adds a `RandomSwimmingGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void followParent(int priority, double speedModifier)`
 
   Parameters:
   - priority: int- The priority of the goal
   - speedModifier: double- Sets the speed at which the mob should try to move
 
 ```
-Adds a `FleeSunGoal` to the entity, only applicable to **pathfinder** mobs
+Adds a `FollowParentGoal` to the entity, only applicable to **animal** mobs
 ```
 
-- `void breathAir(int priority)`
+- `void followOwner(int priority, double speedModifier, float startDistance, float stopDistance, boolean canFly)`
 
   Parameters:
   - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - startDistance: float- The distance away from the owner the mob will start moving
+  - stopDistance: float- The distance away from the owner the mob will stop moving
+  - canFly: boolean- If the mob can teleport into leaves
 
 ```
-Adds a `BreathAirGoal` to the entity, only applicable to **pathfinder** mobs
+Adds a `FollowOwnerGoal` to the entity, only applicable to **tamable** mobs
+```
+
+- `void moveBackToVillage(int priority, double speedModifier, boolean checkNoActionTime)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - checkNoActionTime: boolean- Determines if the mob's noActionTime property should be checked
+
+```
+Adds a `MoveBackToVillageGoal` to the entity, only applicable to **pathfinder** mobs
 ```
 
 - `void breed(int priority, double speedModifier, Class<? extends Animal> partnerClass)`
@@ -435,6 +338,81 @@ Adds a `BreathAirGoal` to the entity, only applicable to **pathfinder** mobs
 
 ```
 Adds a `BreedGoal` to the entity, only applicable to **animal** mobs
+```
+
+- `void followBoat(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `FollowBoatGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void openDoor(int priority, boolean closeDoor)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - closeDoor: boolean- If the entity should also close doors
+
+```
+Adds a `OpenDoorGoal` to the entity
+```
+
+- `void tempt(int priority, double speedModifier, Ingredient temptItems, boolean canScare)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - temptItems: Ingredient- The ingredient that determines what items tempt the mob
+  - canScare: boolean- If the mob can be scared by getting to close to the tempter
+
+```
+Adds a `TemptGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void eatGrass(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `EatBlockGoal` to the entity
+```
+
+- `void customGoal(String name, int priority, Predicate<T extends Mob> canUse, Predicate<T extends Mob> canContinueToUse, boolean isInterruptable, Consumer<T extends Mob> start, Consumer<T extends Mob> stop, boolean requiresUpdateEveryTick, Consumer<T extends Mob> tick)`
+
+  Parameters:
+  - name: String- The name of the custom goal
+  - priority: int- The priority of the goal
+  - canUse: Predicate<T extends Mob>- Determines if the entity can use the goal
+  - canContinueToUse: Predicate<T extends Mob>- Determines if the entity can continue to use the goal, may be null
+  - isInterruptable: boolean- If the goal may be interrupted
+  - start: Consumer<T extends Mob>- The action to perform when the goal starts
+  - stop: Consumer<T extends Mob>- The action to perform when the goal stops
+  - requiresUpdateEveryTick: boolean- If the goal needs to be updated every tick
+  - tick: Consumer<T extends Mob>- The action to perform when the goal ticks
+
+```
+Adds a custom goal to the entity
+```
+
+- `void breathAir(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `BreathAirGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void floatSwim(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `FloatGoal` to the entity
 ```
 
 - `void followMob(int priority, double speedModifier, float stopDistance, float areaSize)`
@@ -472,52 +450,14 @@ Adds a `UseItemGoal` to the entity
 Adds a `BreakDoorGoal` to the entity
 ```
 
-- `void customGoal(String name, int priority, Predicate<T extends Mob> canUse, Predicate<T extends Mob> canContinueToUse, boolean isInterruptable, Consumer<T extends Mob> start, Consumer<T extends Mob> stop, boolean requiresUpdateEveryTick, Consumer<T extends Mob> tick)`
-
-  Parameters:
-  - name: String- The name of the custom goal
-  - priority: int- The priority of the goal
-  - canUse: Predicate<T extends Mob>- Determines if the entity can use the goal
-  - canContinueToUse: Predicate<T extends Mob>- Determines if the entity can continue to use the goal, may be null
-  - isInterruptable: boolean- If the goal may be interrupted
-  - start: Consumer<T extends Mob>- The action to perform when the goal starts
-  - stop: Consumer<T extends Mob>- The action to perform when the goal stops
-  - requiresUpdateEveryTick: boolean- If the goal needs to be updated every tick
-  - tick: Consumer<T extends Mob>- The action to perform when the goal ticks
-
-```
-Adds a custom goal to the entity
-```
-
-- `void floatSwim(int priority)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-
-```
-Adds a `FloatGoal` to the entity
-```
-
-- `void openDoor(int priority, boolean closeDoor)`
-
-  Parameters:
-  - priority: int- The priority of the goal
-  - closeDoor: boolean- If the entity should also close doors
-
-```
-Adds a `OpenDoorGoal` to the entity
-```
-
-- `void tempt(int priority, double speedModifier, Ingredient temptItems, boolean canScare)`
+- `void fleeSun(int priority, double speedModifier)`
 
   Parameters:
   - priority: int- The priority of the goal
   - speedModifier: double- Sets the speed at which the mob should try to move
-  - temptItems: Ingredient- The ingredient that determines what items tempt the mob
-  - canScare: boolean- If the mob can be scared by getting to close to the tempter
 
 ```
-Adds a `TemptGoal` to the entity, only applicable to **pathfinder** mobs
+Adds a `FleeSunGoal` to the entity, only applicable to **pathfinder** mobs
 ```
 
 - `void removeGoal(Class<? extends Goal> goal)`
@@ -533,6 +473,66 @@ Example of usage:
 let $PanicGoal = Java.loadClass("net.minecraft.world.entity.ai.goal.PanicGoal")
 builder.removeGoal($PanicGoal)
 =====================================
+```
+
+- `void climbOnTopOfPowderedSnow(int priority)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+
+```
+Adds a `ClimbOnTopOfPowderSnowGoal` to the entity
+```
+
+- `void waterAvoidingRandomFlying(int priority, double speedModifier)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+
+```
+Adds a `WaterAvoidingRandomFlyingGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void strollThroughVillage(int priority, int interval)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - interval: int- Sets how often the goal 'refreshes'
+
+```
+Adds a `StrollThroughVillageGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void horseRunAroundLikeCrazy(int priority, double speedModifier)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+
+```
+Adds a `RunAroundLikeCrazyGoal` to the entity, only applicable to **horse** mobs
+```
+
+- `void moveTowardsRestriction(int priority, double speedModifier)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+
+```
+Adds a `MoveTowardsRestrictionGoal` to the entity, only applicable to **pathfinder** mobs
+```
+
+- `void waterAvoidingRandomStroll(int priority, double speedModifier, float probability)`
+
+  Parameters:
+  - priority: int- The priority of the goal
+  - speedModifier: double- Sets the speed at which the mob should try to move
+  - probability: float- The probability, in the range [0, 1], that the entity picks a new position
+
+```
+Adds a `WaterAvoidRandomStrollingGoal` to the entity, only applicable to **pathfinder** mobs
 ```
 
 - `Object exit(Object var0)`
@@ -571,6 +571,13 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 `cancel` denotes a `false` outcome.
 ```
 
+- `Object success()`
+```
+Stops the event with default exit value. Execution will be stopped **immediately**.
+
+`success` denotes a `true` outcome.
+```
+
 - `Object success(Object var0)`
 
   Parameters:
@@ -578,13 +585,6 @@ Cancels the event with default exit value. Execution will be stopped **immediate
 
 ```
 Stops the event with the given exit value. Execution will be stopped **immediately**.
-
-`success` denotes a `true` outcome.
-```
-
-- `Object success()`
-```
-Stops the event with default exit value. Execution will be stopped **immediately**.
 
 `success` denotes a `true` outcome.
 ```

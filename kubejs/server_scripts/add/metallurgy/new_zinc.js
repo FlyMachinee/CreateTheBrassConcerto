@@ -76,7 +76,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:new_crushed_raw_zinc" }
         ],
         "results": [
-            { "item": "kubejs:zinc_nugget", "count": 9 }
+            { "item": "kubejs:new_zinc_nugget", "count": 9 }
         ]
     }).id("dut_create:new_zinc/splash")
     //杆

@@ -1,4 +1,14 @@
 ServerEvents.recipes(event => {
+    //盐水蒸馏
+    event.custom({
+        "type": "createdieselgenerators:basin_fermenting",
+        "heatRequirement": "heated",
+        "ingredients": [
+            { "fluid": "kubejs:saline_water", "amount": 500 }
+        ],
+        "processingTime": 60,
+        "results": [{ "item": "kubejs:salt", "count": 2 }]
+    }).id('dut_create:ferment/saline_water')
     //一般发酵
     event.remove({ id: 'createdieselgenerators:basin_fermenting/fermentable' })
     event.custom({
@@ -14,6 +24,25 @@ ServerEvents.recipes(event => {
             { "fluid": "createdieselgenerators:ethanol", "amount": 200 }
         ]
     }).id('dut_create:ferment/fermentable')
+    //甜浆果发酵
+    event.custom({
+        "type": "createdieselgenerators:basin_fermenting",
+        "ingredients": [
+            { "item": 'minecraft:sweet_berries' },
+            { "item": 'minecraft:sweet_berries' },
+            { "item": 'minecraft:sweet_berries' },
+            { "item": 'minecraft:sweet_berries' },
+            { "item": 'minecraft:sweet_berries' },
+            { "item": 'minecraft:sweet_berries' },
+            { "fluid": "minecraft:water", "amount": 100 },
+            { "item": "createdieselgenerators:wood_chip" },
+            { "item": "createdieselgenerators:wood_chip" }
+        ],
+        "processingTime": 600,
+        "results": [
+            { "fluid": "createdieselgenerators:ethanol", "amount": 200 }
+        ]
+    }).id('dut_create:ferment/berries')
     //面粉发酵
     event.remove({ id: 'createdieselgenerators:basin_fermenting/dough' })
     event.custom({

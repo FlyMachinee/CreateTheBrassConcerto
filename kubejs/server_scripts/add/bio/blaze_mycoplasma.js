@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:ethylene", "amount": 250 },
       { "item": "kubejs:blaze_mycoplasma", "count": 2 },
     ],
-    "processingTime": 100
+    "processingTime": 15
   }).id('dut_create:blaze_mycoplasma/ethylene')
   //聚乙烯
   event.custom({
@@ -70,7 +70,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:polymer", "amount": 125 }
     ],
-    "processingTime": 100
+    "processingTime": 15
   }).id('dut_create:blaze_mycoplasma/polymer')
   //合成天然气
   event.custom({
@@ -86,7 +86,7 @@ ServerEvents.recipes(event => {
       { "fluid": "minecraft:water", "amount": 500 },
       { "fluid": "kubejs:natural_gas", "amount": 250 }
     ],
-    "processingTime": 100
+    "processingTime": 15
   }).id('dut_create:blaze_mycoplasma/natural_gas_from_co2')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -100,7 +100,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:natural_gas", "amount": 1000 }
     ],
-    "processingTime": 300
+    "processingTime": 25
   }).id('dut_create:blaze_mycoplasma/natural_gas_from_ethylene')
   //氨
   event.custom({
@@ -114,7 +114,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:ammonia", "amount": 300 }
     ],
-    "processingTime": 400
+    "processingTime": 60
   }).id('dut_create:blaze_mycoplasma/ammonia_from_nitrogen_with_iron')
   //黄铜
   event.custom({

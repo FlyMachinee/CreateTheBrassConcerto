@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
         "type": "vintageimprovements:vacuumizing",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }], 
-        "processingTime": 200
+        "processingTime": 20
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_fluid" }
@@ -51,7 +51,7 @@ ServerEvents.recipes(event => {
     "type": "createdieselgenerators:distillation",
     "ingredients": [{ "fluid": "kubejs:refined_oil", "amount": 150 }],
     "heatRequirement": "heated",
-    "processingTime": 200,
+    "processingTime": 180,
     "results": [
       { "fluid": "kubejs:lube_oil", "amount": 75 },
       { "fluid": "createdieselgenerators:diesel", "amount": 100 },
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:refined_oil", "amount": 1350 }
     ],
     "heatRequirement": "superheated",
-    "processingTime": 200,
+    "processingTime": 180,
     "results": [
       { "fluid": "kubejs:lube_oil", "amount": 675 },
       { "fluid": "createdieselgenerators:diesel", "amount": 900 },

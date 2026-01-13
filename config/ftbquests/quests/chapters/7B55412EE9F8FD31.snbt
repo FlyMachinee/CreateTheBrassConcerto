@@ -1,0 +1,413 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "7B55412EE9F8FD31"
+	group: "5997E69EB327A306"
+	icon: "kubejs:red_mushroom_cap_piece"
+	id: "7B55412EE9F8FD31"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&e生长阶段数: &r&a8"
+				""
+				"&e单株产出(无时运): &r&a2.71小麦种子&r+&a1小麦"
+				"通过粉碎，产出将变为&a2.96小麦种子&r与&a1.5小麦粉"
+				""
+				"&e糖转化比例: &r"
+				"&a8:10(小麦粉)"
+				"&a8:12(面团)"
+				""
+				"&e无土栽培消耗: &r每个种子若使用栽培获取需要5mB氮肥，注液每次75mB氮肥，合计&a80mB氮肥"
+				""
+				"&e无土栽培产出: &r"
+				"1小麦种子栽培产生20小麦;"
+				"&e合计:"
+				"&a5小麦种子与30小麦粉，净产出4小麦种子与30小麦粉"
+			]
+			icon: "minecraft:wheat"
+			id: "7CB5AF95F3EBBDE3"
+			tasks: [{
+				id: "58E15F50F490C835"
+				type: "checkmark"
+			}]
+			title: "小麦"
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			description: [
+				"&e生长阶段数: &r&a8"
+				""
+				"&e单株产出(无时运): &r&a2.71胡萝卜"
+				""
+				"&e糖转化比例: &r不可转化"
+				""
+				"&e无土栽培消耗: &r&a胡萝卜每次栽培消耗氮肥75mB"
+				""
+				"&e无土栽培产出: &r&a1胡萝卜栽培产出30胡萝卜，净产出29胡萝卜"
+			]
+			icon: "minecraft:carrot"
+			id: "1B940F0C23DEB51A"
+			tasks: [{
+				id: "6793260CE4166A05"
+				type: "checkmark"
+			}]
+			title: "胡萝卜"
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			description: [
+				"&e生长阶段数: &r&a8"
+				""
+				"&e单株产出(无时运): &r&a3.71马铃薯&r+&a0.02毒马铃薯"
+				""
+				"&e糖转化比例: &r&a8:12"
+				""
+				"&e无土栽培消耗: &r马铃薯注液每次75mB氮肥，毒马铃薯注液每次25mB氮肥，合计&a100mB氮肥"
+				""
+				"&e无土栽培产出: "
+				"1马铃薯栽培产生0.5毒马铃薯与16马铃薯；"
+				"1毒马铃薯栽培产生27马铃薯；"
+				"&e合计:"
+				"&a1马铃薯栽培产出43马铃薯，净产出42马铃薯"
+			]
+			icon: "minecraft:potato"
+			id: "7DF80D3B4CEA452A"
+			tasks: [{
+				id: "4C1C0968C4A3E733"
+				type: "checkmark"
+			}]
+			title: "马铃薯"
+			x: -3.5d
+			y: -2.0d
+		}
+		{
+			description: [
+				"&e糖转化比例: &r不可转化"
+				""
+				"&e无土栽培消耗: &r&a毒马铃薯注液每次25mB氮肥"
+				""
+				"&e无土栽培产出: &r&a1毒马铃薯栽培产生27马铃薯"
+			]
+			icon: "minecraft:poisonous_potato"
+			id: "3FECCB75D8F23C5D"
+			tasks: [{
+				id: "62AEF61B42540058"
+				type: "checkmark"
+			}]
+			title: "毒马铃薯"
+			x: -3.5d
+			y: -1.0d
+		}
+		{
+			description: [
+				"&e生长阶段数: &r&a4"
+				""
+				"&e单株产出(无时运): &r&a2.71甜菜种子&r+&a1甜菜根"
+				""
+				"&e糖转化比例: &r"
+				"&a1:1(加热辊压)"
+				"&a8:12(发酵)"
+				""
+				"&e无土栽培消耗: &r每个种子若使用栽培获取需要5mB氮肥，注液每次75mB氮肥，合计&a80mB氮肥"
+				""
+				"&e无土栽培产出: &r&a1甜菜种子栽培产生30甜菜根"
+			]
+			icon: "minecraft:beetroot"
+			id: "36E58CE409CEEFE9"
+			tasks: [{
+				id: "7362C1DA42A561EE"
+				type: "checkmark"
+			}]
+			title: "甜菜根"
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			description: [
+				"&e生长阶段数: &r&a4(成熟后持续产出)"
+				""
+				"&e单株产出(无时运): &r生长等级2时为&a1.5甜浆果&r，生长等级3时为&a2.5甜浆果"
+				""
+				"&e糖转化比例: &r&a12:6"
+				""
+				"&e无土栽培消耗: &r&a甜浆果每次栽培消耗氮肥25mB"
+				""
+				"&e无土栽培产出: &r&a1甜浆果栽培产出9甜浆果，净产出8甜浆果"
+			]
+			icon: "minecraft:sweet_berries"
+			id: "50FA0E6718C878E7"
+			tasks: [{
+				id: "38EDF15BE88B0295"
+				type: "checkmark"
+			}]
+			title: "甜浆果"
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			description: ["&e菌柄收割机产出: &r&a1孑孓菌柄=20菌柄碎+3菌盖碎"]
+			icon: "ad_astra:strophar_stem"
+			id: "4165C1252291E63E"
+			tasks: [{
+				id: "40DFB106BF45838D"
+				item: "kubejs:strophar_stem_piece"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 4.0d
+		}
+		{
+			description: ["&e菌柄收割机产出: &r&a1空果菌柄=20菌柄碎+3菌盖碎"]
+			icon: "ad_astra:aeronos_stem"
+			id: "53DFC776001B4A01"
+			tasks: [{
+				id: "7CF7A7AD59B5C83E"
+				item: "kubejs:aeronos_stem_piece"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			description: ["&e菌柄收割机产出: &r&a1蘑菇柄=20菌柄丝+2红色蘑菇菌盖碎+2棕色蘑菇菌盖碎"]
+			icon: "minecraft:mushroom_stem"
+			id: "49E216742778338C"
+			tasks: [{
+				id: "0E81FB3347718822"
+				item: "kubejs:stem_silk"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 4.0d
+		}
+		{
+			description: [
+				"&e孢子转化比例: &r"
+				"&a1菌盖碎=13.3...mB红色蘑菇孢子(分液)"
+				"&a1菌盖碎+1安山合金/工业铁粒=50mB红色蘑菇孢子(发酵)"
+				"&a4菌盖碎+1铝渣=250mB红色蘑菇孢子(发酵)"
+				""
+				"&e基础产出: &r&a1红色蘑菇=6菌盖碎(切割)"
+				""
+				"&e菌盖收割机产出: &r&a1红色蘑菇块=20菌盖碎+3菌柄丝+0.25红色蘑菇"
+			]
+			icon: "minecraft:red_mushroom_block"
+			id: "7E10C3E8D4CEAD45"
+			tasks: [{
+				id: "6EFDD1E3BB0A5059"
+				item: "kubejs:red_mushroom_cap_piece"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 3.0d
+		}
+		{
+			description: [
+				"&e孢子转化比例: &r"
+				"&a1菌盖碎=13.3...mB棕色蘑菇孢子(分液)"
+				"&a1菌盖碎+1安山合金/工业铁粒=50mB棕色蘑菇孢子(发酵)"
+				"&a4菌盖碎+1铝渣=250mB棕色蘑菇孢子(发酵)"
+				""
+				"&e基础产出: &r&a1棕色蘑菇=6菌盖碎(切割)"
+				""
+				"&e菌盖收割机产出: &r&a1棕色蘑菇块=20菌盖碎+3菌柄丝+0.25棕色蘑菇"
+			]
+			icon: "minecraft:brown_mushroom_block"
+			id: "24B921E4CDB282D5"
+			tasks: [{
+				id: "4DDD667043724052"
+				item: "kubejs:brown_mushroom_cap_piece"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 3.0d
+		}
+		{
+			description: [
+				"&e孢子转化比例: &r"
+				"&a1菌盖碎=13.3...mB空果孢子(分液)"
+				""
+				"&e基础产出: &r&a1空果菇=1菌盖碎+1菌柄碎(切割)"
+				""
+				"&e菌盖收割机产出: &r&a1空果伞盖=20菌盖碎+3菌柄碎+0.25空果菇"
+			]
+			icon: "ad_astra:aeronos_cap"
+			id: "6EAF7CD1CEE238FB"
+			tasks: [{
+				id: "7EC251B301AB6FE4"
+				item: "kubejs:aeronos_cap_piece"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			description: [
+				"&e孢子转化比例: &r&a"
+				"&a1菌盖碎=13.3...mB孢子(分液)"
+				""
+				"&e基础产出: &r&a1孑孓菇=1菌盖碎+1菌柄碎(切割)"
+				""
+				"&e菌盖收割机产出: &r&a1孑孓伞盖=20菌盖碎+3菌柄碎+0.25孑孓菇"
+			]
+			icon: "ad_astra:strophar_cap"
+			id: "27A6443B261981E9"
+			tasks: [{
+				id: "0983D3D5803FA056"
+				item: "kubejs:strophar_cap_piece"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 3.0d
+		}
+		{
+			description: ["1个喷灌器&e每4秒&r消耗&e500mB骨粉稀释液&r使周围&e5*1*5区域&r内的全部作物&e(24格)&r&a生长阶段+1"]
+			id: "690C388257F7948C"
+			subtitle: "永远不要小瞧了喷灌器的效率！"
+			tasks: [{
+				id: "36B141CB43BA8A42"
+				item: "create_things_and_misc:sprinkler"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -3.5d
+		}
+		{
+			description: [
+				"&a一个满效率的3*3分馏塔处理液态空气时，每秒可以生产800mB氮气"
+				""
+				"&e800mB氮气可以转化为1600mB氮肥"
+				""
+				"&a这意味着可以在1秒内："
+				"&e-完全使用无土栽培净生产672马铃薯"
+				"&e-完全使用无土栽培净生产600小麦粉与100小麦种子"
+				"&e-完全使用无土栽培净生产600甜菜根"
+				""
+				"另外一提的是，无土栽培的废料一般而言就是返还输入——除了土豆！"
+			]
+			id: "13A1E51E3BF70F58"
+			subtitle: "更不要小瞧了氮肥的效率！"
+			tasks: [{
+				id: "0EB8E4A15F0CE354"
+				item: "kubejs:nitrogen_fertilizer_bucket"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -3.5d
+		}
+		{
+			description: [
+				"使用泥坯催化棕色蘑菇生长，操作请查看思索"
+				""
+				"&e单次消耗: &r&a250mB棕色蘑菇孢子"
+				""
+				"&e理想比例: &r&a4"
+				""
+				"&a对于每一种蘑菇，其都有可能生长为对应的菌柄或菌盖。每一种蘑菇都有一个菌盖：菌柄的理想比值&r"
+				""
+				"&a在生长时，生长范围内的每一格方块会&r&e同步&r&a根据自身周围3*3*3&e（不包括自身）&r的范围的状态做如下判定：&r"
+				"&6-当此处为空气："
+				"&e若周围有6~12个菌类，则它变为菌类。如果周围菌盖更多则有75%概率变为菌盖，反之则有75%概率变为菌柄"
+				"&6-当此处为菌类："
+				"&e若周围菌类少于3或多于8，则它会死去并变为空气"
+				"&e若周围菌类介于3与8之间，则它会根据周围菌盖数与菌柄数之比决定是否转换它的形态。如果比值偏离了理想比值，则它有50%的概率转变自己的形态使比值倾向于理想比值"
+			]
+			icon: "minecraft:brown_mushroom"
+			id: "1C5B7F59B5EFF434"
+			tasks: [{
+				id: "125F6BA69EBD911A"
+				item: "minecraft:packed_mud"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			description: [
+				"使用苔藓块催化红色蘑菇生长，操作请查看思索"
+				""
+				"&e单次消耗: &r&a250mB红色蘑菇孢子"
+				""
+				"&e理想比例: &r&a6"
+				""
+				"&a对于每一种蘑菇，其都有可能生长为对应的菌柄或菌盖。每一种蘑菇都有一个菌盖：菌柄的理想比值&r"
+				""
+				"&a在生长时，生长范围内的每一格方块会&r&e同步&r&a根据自身周围3*3*3&e（不包括自身）&r的范围的状态做如下判定：&r"
+				"&6-当此处为空气："
+				"&e若周围有6~12个菌类，则它变为菌类。如果周围菌盖更多则有75%概率变为菌盖，反之则有75%概率变为菌柄"
+				"&6-当此处为菌类："
+				"&e若周围菌类少于3或多于8，则它会死去并变为空气"
+				"&e若周围菌类介于3与8之间，则它会根据周围菌盖数与菌柄数之比决定是否转换它的形态。如果比值偏离了理想比值，则它有50%的概率转变自己的形态使比值倾向于理想比值"
+			]
+			icon: "minecraft:red_mushroom"
+			id: "12C35CCCC8D029D5"
+			tasks: [{
+				id: "6013F1F253F15376"
+				item: "minecraft:moss_block"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			description: [
+				"使用陨石催化孑孓菇生长，操作请查看思索"
+				""
+				"&e单次消耗: &r&a250mB孑孓孢子"
+				""
+				"&e理想比例: &r&a3"
+				""
+				"&a对于每一种蘑菇，其都有可能生长为对应的菌柄或菌盖。每一种蘑菇都有一个菌盖：菌柄的理想比值&r"
+				""
+				"&a在生长时，生长范围内的每一格方块会&r&e同步&r&a根据自身周围3*3*3&e（不包括自身）&r的范围的状态做如下判定：&r"
+				"&6-当此处为空气："
+				"&e若周围有6~12个菌类，则它变为菌类。如果周围菌盖更多则有75%概率变为菌盖，反之则有75%概率变为菌柄"
+				"&6-当此处为菌类："
+				"&e若周围菌类少于3或多于8，则它会死去并变为空气"
+				"&e若周围菌类介于3与8之间，则它会根据周围菌盖数与菌柄数之比决定是否转换它的形态。如果比值偏离了理想比值，则它有50%的概率转变自己的形态使比值倾向于理想比值"
+			]
+			icon: "ad_astra:strophar_mushroom"
+			id: "26F7EF04B3D51C93"
+			tasks: [{
+				id: "50686BED14C60800"
+				item: "ad_astra:sky_stone"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 1.5d
+		}
+		{
+			description: [
+				"使用砾岩催化空果菇生长，操作请查看思索"
+				""
+				"&e单次消耗: &r&a250mB空果孢子"
+				""
+				"&e理想比例: &r&a5"
+				""
+				"&a对于每一种蘑菇，其都有可能生长为对应的菌柄或菌盖。每一种蘑菇都有一个菌盖：菌柄的理想比值&r"
+				""
+				"&a在生长时，生长范围内的每一格方块会&r&e同步&r&a根据自身周围3*3*3&e（不包括自身）&r的范围的状态做如下判定：&r"
+				"&6-当此处为空气："
+				"&e若周围有6~12个菌类，则它变为菌类。如果周围菌盖更多则有75%概率变为菌盖，反之则有75%概率变为菌柄"
+				"&6-当此处为菌类："
+				"&e若周围菌类少于3或多于8，则它会死去并变为空气"
+				"&e若周围菌类介于3与8之间，则它会根据周围菌盖数与菌柄数之比决定是否转换它的形态。如果比值偏离了理想比值，则它有50%的概率转变自己的形态使比值倾向于理想比值"
+			]
+			icon: "ad_astra:aeronos_mushroom"
+			id: "138FCB070959CD31"
+			tasks: [{
+				id: "02556A53DD901463"
+				item: "ad_astra:conglomerate"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+	]
+	subtitle: ["农作物生产相关数据"]
+	title: "农作物"
+}

@@ -9,7 +9,7 @@ const MultiBlockRecipe = {
 	'kubejs:airdrop_station': ["dut_create:airdrop_station/empty"],
 	"kubejs:condenser": ['dut_create:condenser/overworld/air_fluid_liquefaction'],
 	"kubejs:hydropress": ["dut_create:hydropress/get_fluid"],
-	"kubejs:blasting_compressor": ['blasting_compressor/coal_block'],
+	"kubejs:blasting_compressor": ['dut_create:blasting_compressor/coal_block'],
 	"kubejs:alloy_furnace": ["dut_create:alloy_furnace/industrial_iron"],
 	"kubejs:huge_crusher": ["dut_create:huge_crusher/fluid"],
 	"kubejs:shaft_furnace": ["dut_create:shaft_furnace/desh"],
@@ -23,8 +23,9 @@ const $CustomMachineRenderer = Java.loadClass('fr.frinn.custommachinery.client.r
 const $GogglesItem = Java.loadClass('com.simibubi.create.content.equipment.goggles.GogglesItem')
 PlayerEvents.tick(event => {
 	let Item = event.player.offHandItem
+	if (Item == null) { return }
 	if (!Item.hasTag('dut_create:multiblock_display')) { return }
-	if (event.level.time & 10 != 0) { return }
+	if (event.level.time % 10 != 0) { return }
 	else {
 		$CustomMachineRenderer.addBlocksRenderById(MultiBlockRecipe[Item.id][0], 1000, false)
 	}
@@ -32,9 +33,10 @@ PlayerEvents.tick(event => {
 PlayerEvents.tick(event => {
 	if (!$GogglesItem.isWearingGoggles(event.player)) { return }
 	let viewBlock = event.player.rayTrace(event.player.getAttributeValue("forge:block_reach") + 1, true).block
+	if (viewBlock == null) { return }
 	if (!viewBlock.hasTag('dut_create:multiblock_display')) { return }
 	if (!Client.isAltDown()) {
-		if (event.level.time & 10 != 0) {
+		if (event.level.time % 10 != 0) {
 			event.player.setStatusMessage(Text.translate("kubejs.message.multblock_display"))
 		}
 		return

@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
       "amount": 1000
     },
     "superheated": true,
-    "burnTime": 12000
+    "burnTime": 8000
   }).id("dut_create:liquid_burning/ammonia")
   //润滑油
   event.custom({
@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
       "amount": 1000
     },
     "superheated": true,
-    "burnTime": 2000
+    "burnTime": 1000
   }).id("dut_create:liquid_burning/lube_oil")
   //精炼油
   event.custom({
@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
       "fluidTag": "forge:biodiesel",
       "amount": 1000
     },
-    "burnTime": 8000,
+    "burnTime": 4000,
     "superheated": true,
     "conditions": [
       {
@@ -67,17 +67,17 @@ ServerEvents.recipes(event => {
   //柴油
   event.remove({ id: 'createaddition:liquid_burning/diesel' })
   event.custom({
-    "type":"createaddition:liquid_burning",
+    "type": "createaddition:liquid_burning",
     "input": {
-          "fluidTag": "forge:diesel",
-          "amount": 1000
+      "fluidTag": "forge:diesel",
+      "amount": 1000
     },
     "burnTime": 16000,
     "conditions": [
-        {
-            "fluidTag": "forge:diesel",
-            "type": "createaddition:has_fluid_tag"
-        }
+      {
+        "fluidTag": "forge:diesel",
+        "type": "createaddition:has_fluid_tag"
+      }
     ]
   }).id("dut_create:liquid_burning/diesel")
   //汽油

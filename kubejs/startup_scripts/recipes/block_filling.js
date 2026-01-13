@@ -23,8 +23,8 @@ CreateEvents.spoutHandler((event) => {
                                 i = 0
                             }
                         }
-                        block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
-                        block.level.server.runCommandSilent(`/particle minecraft:block ${outputList[i]} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)//粒子效果
+                        block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                        block.level.runCommandSilent(`/particle minecraft:block ${outputList[i]} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)//粒子效果
                         block.set(outputList[i])
                     }
                     return fluidInput.amount//消耗量
@@ -50,9 +50,9 @@ CreateEvents.spoutHandler((event) => {
                     if (block.down.id == "create:depot") {
                         if (block.down.entityData?.HeldItem == undefined) {
                             if (!simulate) {
-                                block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
-                                block.level.server.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value ` + output)
+                                block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                                block.level.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
+                                block.level.runCommandSilent(`/data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value ` + output)
                                 block.set("minecraft:air")
                             }
                             return fluidInput.amount//消耗量
@@ -80,9 +80,9 @@ CreateEvents.spoutHandler((event) => {
                     if (block.down.id == "create:depot") {
                         if (block.down.entityData?.HeldItem == undefined) {
                             if (!simulate) {
-                                block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
-                                block.level.server.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value ` + output)
+                                block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                                block.level.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
+                                block.level.runCommandSilent(`/data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value ` + output)
                             }
                             return fluidInput.amount//消耗量
                         }
@@ -119,19 +119,19 @@ CreateEvents.spoutHandler((event) => {
     blockFillingBasic(
         "dut_create:copper_transform",
         'minecraft:copper_block',
-        { id: "kubejs:zinc", amount: 810 },
+        { id: "kubejs:gold", amount: 810 },
         ['create:brass_block']
     )
     blockFillingBasic(
-        "dut_create:zinc_transform",
-        'create:zinc_block',
+        "dut_create:gold_transform",
+        'minecraft:gold_block',
         { id: "kubejs:copper", amount: 810 },
         ['create:brass_block']
     )
     blockFillingItem(
         "dut_create:rose_quartz",
         "minecraft:amethyst_cluster",
-        { id: "createdieselgenerators:ethanol", amount: 500 },
+        { id: "createdieselgenerators:ethanol", amount: 250 },
         "{id:'create:rose_quartz',Count:1b}"
     )
     blockFillingExtraItem(
@@ -161,9 +161,9 @@ CreateEvents.spoutHandler((event) => {
             }
             if (fluid.id == "minecraft:water" && fluid.amount >= 50 && startable) {
                 if (!simulate) {
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
-                    block.level.server.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
-                    block.level.server.runCommandSilent(`/setblock ${block[i].x} ${block[i].y} ${block[i].z} minecraft:small_amethyst_bud[facing=${i}]`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                    block.level.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
+                    block.level.runCommandSilent(`/setblock ${block[i].x} ${block[i].y} ${block[i].z} minecraft:small_amethyst_bud[facing=${i}]`)
                 }
                 return 50
             }
@@ -177,9 +177,9 @@ CreateEvents.spoutHandler((event) => {
             if (fluid.id == "minecraft:water" && fluid.amount >= 50) {
                 if (!simulate) {
                     let face = block.properties.facing.toString()
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
-                    block.level.server.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
-                    block.level.server.runCommandSilent(`/setblock ${block.x} ${block.y} ${block.z} minecraft:amethyst_cluster[facing=${face}]`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                    block.level.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
+                    block.level.runCommandSilent(`/setblock ${block.x} ${block.y} ${block.z} minecraft:amethyst_cluster[facing=${face}]`)
                 }
                 return 50
             }
@@ -193,9 +193,9 @@ CreateEvents.spoutHandler((event) => {
             if (fluid.id == "minecraft:water" && fluid.amount >= 50) {
                 if (!simulate) {
                     let face = block.properties.facing.toString()
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
-                    block.level.server.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
-                    block.level.server.runCommandSilent(`/setblock ${block.x} ${block.y} ${block.z} minecraft:large_amethyst_bud[facing=${face}]`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                    block.level.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
+                    block.level.runCommandSilent(`/setblock ${block.x} ${block.y} ${block.z} minecraft:large_amethyst_bud[facing=${face}]`)
                 }
                 return 50
             }
@@ -209,9 +209,9 @@ CreateEvents.spoutHandler((event) => {
             if (fluid.id == "minecraft:water" && fluid.amount >= 50) {
                 if (!simulate) {
                     let face = block.properties.facing
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
-                    block.level.server.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
-                    block.level.server.runCommandSilent(`/setblock ${block.x} ${block.y} ${block.z} minecraft:medium_amethyst_bud[facing=${face}]`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                    block.level.runCommandSilent(`/particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
+                    block.level.runCommandSilent(`/setblock ${block.x} ${block.y} ${block.z} minecraft:medium_amethyst_bud[facing=${face}]`)
                 }
                 return 50
             }

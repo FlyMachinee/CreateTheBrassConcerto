@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:refined_oil", "amount": 200 }
     ],
-    "processingTime": 300
+    "processingTime": 50
   }).id('dut_create:plantoil_steam_liquefaction')
   //种子油液化
   event.custom({
@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createdieselgenerators:crude_oil", "amount": 250 }
     ],
-    "processingTime": 300
+    "processingTime": 70
   }).id('dut_create:plantoil_liquefaction')
   //生物质蒸汽液化
   event.custom({
@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:refined_oil", "amount": 200 }
     ],
-    "processingTime": 300
+    "processingTime": 40
   }).id('dut_create:biomass_steam_liquefaction')
   //生物质液化
   event.custom({
@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "fluid": "minecraft:water", "amount": 300 }
     ],
-    "processingTime": 300,
+    "processingTime": 60,
     "results": [
       { "fluid": "createdieselgenerators:crude_oil", "amount": 300 }
     ]
@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:refined_oil", "amount": 250 }
     ],
-    "processingTime": 300
+    "processingTime": 70
   }).id('dut_create:coal_steam_liquefaction')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -91,7 +91,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "kubejs:refined_oil", "amount": 250 }
     ],
-    "processingTime": 300
+    "processingTime": 90
   }).id('dut_create:coal_steam_liquefaction1')
   //煤炭液化
   event.custom({
@@ -109,7 +109,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createdieselgenerators:crude_oil", "amount": 500 }
     ],
-    "processingTime": 300
+    "processingTime": 110
   }).id('dut_create:coal_liquefaction')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -126,6 +126,6 @@ ServerEvents.recipes(event => {
     "results": [
       { "fluid": "createdieselgenerators:crude_oil", "amount": 500 }
     ],
-    "processingTime": 300
+    "processingTime": 90
   }).id('dut_create:coal_liquefaction1')
 })

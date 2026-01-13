@@ -7,28 +7,6 @@ ServerEvents.recipes(event => {
   //骨粉二氧化碳
   event.custom({
     "type": "vintageimprovements:pressurizing",
-    "secondaryFluidOutput": 0,
-    "ingredients": [
-      { "item": "minecraft:bone_meal" },
-      { "fluid": "kubejs:muriatic_acid", "amount": 500 }
-    ],
-    "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
-    { "fluid": "kubejs:saline_water", "amount": 250 }],
-    "processingTime": 200
-  }).id('dut_create:co2_from_caco3_1')
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidOutput": 0,
-    "ingredients": [
-      { "item": "minecraft:bone_meal" },
-      { "fluid": "kubejs:nitric_acid", "amount": 500 }
-    ],
-    "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
-    { "fluid": "kubejs:saline_water", "amount": 250 }],
-    "processingTime": 200
-  }).id('dut_create:co2_from_caco3_2')
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
     "heatRequirement": "superheated",
     "secondaryFluidOutput": 0,
     "ingredients": [
@@ -39,7 +17,7 @@ ServerEvents.recipes(event => {
     ],
     "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 1000 },
     { "item": "kubejs:salt", "count":4 }],
-    "processingTime": 200
+    "processingTime": 40
   }).id('dut_create:co2_from_caco3')
   //甲烷二氧化碳
   event.custom({
@@ -52,7 +30,7 @@ ServerEvents.recipes(event => {
     ],
     "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
     { "fluid": "minecraft:water", "amount": 500 }],
-    "processingTime": 200
+    "processingTime": 10
   }).id('dut_create:co2_from_ch4')
   //木炭二氧化碳
   event.custom({
@@ -64,7 +42,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "forge:oxygen", "amount": 250 }
     ],
     "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 }],
-    "processingTime": 200
+    "processingTime": 60
   }).id('dut_create:co2_from_charcoal')
   //煤二氧化碳
   event.custom({
@@ -76,7 +54,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "forge:oxygen", "amount": 250 }
     ],
     "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 }],
-    "processingTime": 200
+    "processingTime": 40
   }).id('dut_create:co2_from_coal')
   event.custom({
     "type": "vintageimprovements:pressurizing",
@@ -87,7 +65,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "forge:oxygen", "amount": 250 }
     ],
     "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 }],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:co2_from_crushed_coal')
   //石墨烯-胶带粘黏法
   event.custom({
@@ -129,7 +107,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:graphene_coil", "chance": 0.5 },
       { "item": "kubejs:graphene_coil", "chance": 0.5 }
     ],
-    "processingTime": 200
+    "processingTime": 20
   }).id('dut_create:graphene_coil_from_sic_basic')
   //碳化硅-初级配方
   event.custom({
@@ -144,7 +122,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:carborundum","chance":0.5 },
       { "fluid": "kubejs:carbon_dioxide", "amount": 250 }
     ],
-    "processingTime": 200
+    "processingTime": 25
   }).id('dut_create:carborundum')
   
 })

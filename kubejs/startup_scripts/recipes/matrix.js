@@ -80,7 +80,7 @@ CreateEvents.spoutHandler((event) => {
                         if (block.down.entityData?.HeldItem == undefined) {
                             if (!simulate) {
                                 let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                block.level.runCommandSilent(`/data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = [matrix2x2Add(A, B)].concat(item.slice(2))
@@ -90,8 +90,8 @@ CreateEvents.spoutHandler((event) => {
                                     C[i][1][0] = $Integer.valueOf(String(C[i][1][0]))
                                     C[i][1][1] = $Integer.valueOf(String(C[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
-                                block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                                block.level.runCommandSilent(`/data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
+                                block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
                         }
@@ -112,7 +112,7 @@ CreateEvents.spoutHandler((event) => {
                         if (block.down.entityData?.HeldItem == undefined) {
                             if (!simulate) {
                                 let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                block.level.runCommandSilent(`/data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = [matrix2x2Subtract(B, A)].concat(item.slice(2))
@@ -122,8 +122,8 @@ CreateEvents.spoutHandler((event) => {
                                     C[i][1][0] = $Integer.valueOf(String(C[i][1][0]))
                                     C[i][1][1] = $Integer.valueOf(String(C[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
-                                block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                                block.level.runCommandSilent(`/data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
+                                block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
                         }
@@ -144,7 +144,7 @@ CreateEvents.spoutHandler((event) => {
                         if (block.down.entityData?.HeldItem == undefined) {
                             if (!simulate) {
                                 let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                block.level.runCommandSilent(`/data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = [B, A].concat(item.slice(2))
@@ -154,8 +154,8 @@ CreateEvents.spoutHandler((event) => {
                                     C[i][1][0] = $Integer.valueOf(String(C[i][1][0]))
                                     C[i][1][1] = $Integer.valueOf(String(C[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
-                                block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                                block.level.runCommandSilent(`/data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
+                                block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
                         }
@@ -176,7 +176,7 @@ CreateEvents.spoutHandler((event) => {
                         if (block.down.entityData?.HeldItem == undefined) {
                             if (!simulate) {
                                 let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                block.level.runCommandSilent(`/data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = item[2] || [[0, 0], [0, 0]]
@@ -187,8 +187,8 @@ CreateEvents.spoutHandler((event) => {
                                     D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                                     D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                                block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                                block.level.runCommandSilent(`/data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                                block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
                         }
@@ -209,7 +209,7 @@ CreateEvents.spoutHandler((event) => {
                         if (block.down.entityData?.HeldItem == undefined) {
                             if (!simulate) {
                                 let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                block.level.server.runCommandSilent(`/data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                                 let A = item[item.length - 1] || [[0, 0], [0, 0]]
                                 let D = [A].concat(item.slice(0, -1))
                                 for (let i = 0; i < D.length; i++) {
@@ -218,8 +218,8 @@ CreateEvents.spoutHandler((event) => {
                                     D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                                     D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                                block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                                block.level.runCommandSilent(`/data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                                block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
                         }
@@ -269,15 +269,15 @@ CreateEvents.spoutHandler((event) => {
                     for (let i = 0; i < D.length; i++) {
                         D[i] = matrix2x2Transposition(D[i])
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
+                    block.level.runCommandSilent(`/data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                    block.level.runCommandSilent(`/data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
@@ -324,15 +324,15 @@ CreateEvents.spoutHandler((event) => {
                     for (let i = 0; i < D.length; i++) {
                         D[i] = matrix2x2Invertedposition(D[i])
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
+                    block.level.runCommandSilent(`/data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                    block.level.runCommandSilent(`/data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
@@ -376,16 +376,16 @@ CreateEvents.spoutHandler((event) => {
                 if (B?.id != "kubejs:matrix_2") { return 0 }
                 if (!simulate) {
                     let D = matrixAdd(JSON.parse(A.tag.matrix.toString()), JSON.parse(B.tag.matrix.toString()))
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                    block.level.runCommandSilent(`/data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
@@ -430,9 +430,9 @@ CreateEvents.spoutHandler((event) => {
                 if (!simulate) {
                     let D = matrixSubtract(JSON.parse(A.tag.matrix.toString()), JSON.parse(B.tag.matrix.toString()))
 
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
 
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
 
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
@@ -441,9 +441,9 @@ CreateEvents.spoutHandler((event) => {
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
 
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    block.level.runCommandSilent(`/data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
 
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
@@ -487,16 +487,16 @@ CreateEvents.spoutHandler((event) => {
                 if (B?.id != "kubejs:matrix_2") { return 0 }
                 if (!simulate) {
                     let D = JSON.parse(B.tag.matrix.toString()).concat(JSON.parse(A.tag.matrix.toString()))
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                    block.level.runCommandSilent(`/data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 125
             }
@@ -547,16 +547,16 @@ CreateEvents.spoutHandler((event) => {
                     for (let i = 0; i < MatrixB.length; i++) {
                         D[i] = matrix2x2Multiply(MatrixA, MatrixB[i])
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${placard.pos.x} ${placard.pos.y} ${placard.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
+                    block.level.runCommandSilent(`/data modify block ${placard.pos.x} ${placard.pos.y} ${placard.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                    block.level.runCommandSilent(`/data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
@@ -606,16 +606,16 @@ CreateEvents.spoutHandler((event) => {
                     for (let i = 0; i < MatrixB.length; i++) {
                         D[i] = matrix2x2Multiply(MatrixB[i], MatrixA)
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${placard.pos.x} ${placard.pos.y} ${placard.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    block.level.runCommandSilent(`/data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
+                    block.level.runCommandSilent(`/data modify block ${placard.pos.x} ${placard.pos.y} ${placard.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.level.dimension} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
-                    block.level.server.runCommandSilent(`/playsound create:spout block @a ${block.pos.x} ${block.pos.y} ${block.pos.z}`)
+                    block.level.runCommandSilent(`/data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }

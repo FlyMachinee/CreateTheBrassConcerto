@@ -52,7 +52,7 @@ function assemblyCodeTo8BitCode(code) {
     while (Code.length < 4) {
         Code.push("0")
     }
-    //转化为8位汇编码，但是以十进制表示
+    //转化为8位字节码，但是以十进制表示
     let assemblycode = `${To8BitCode(Code[0])} ${To8BitCode(Code[1])} ${To8BitCode(Code[2])} ${To8BitCode(Code[3])}`
     //如果有问题，抛出错误并返回对应的code
     if (!(/^[0-9 ]*$/.test(assemblycode))) { return { success: false, assemblycode: assemblycode } }

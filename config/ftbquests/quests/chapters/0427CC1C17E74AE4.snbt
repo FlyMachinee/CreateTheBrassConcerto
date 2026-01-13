@@ -1326,6 +1326,28 @@
 			x: 6.0d
 			y: 0.5d
 		}
+		{
+			description: ["找不到油焦？这里可以帮你！"]
+			disable_toast: true
+			icon: "createloveandwar:tar_clump"
+			id: "069D66332D72F0AE"
+			rewards: [{
+				auto: "disabled"
+				count: 8
+				exclude_from_claim_all: true
+				id: "2F1CE86B310916FC"
+				item: "createloveandwar:tar_clump"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5D0DF11190C120C7"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			title: "油焦"
+			x: 6.0d
+			y: -1.5d
+		}
 	]
 	title: "小卖部"
 }

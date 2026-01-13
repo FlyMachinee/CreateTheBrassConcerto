@@ -444,7 +444,6 @@ ServerEvents.recipes(event => {
       {
         "type": "create:pressing",
         "ingredients": [{ "item": "create:iron_sheet" }],
-        "processingTime": 70,
         "results": [{ "item": "create:iron_sheet" }]
       }
     ],
@@ -469,7 +468,6 @@ ServerEvents.recipes(event => {
       {
         "type": "create:pressing",
         "ingredients": [{ "item": "kubejs:incomplete_bearing" }],
-        "processingTime": 70,
         "results": [{ "item": "kubejs:incomplete_bearing" }]
       }
     ],
@@ -494,13 +492,12 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_bearing" },
-        { "fluidTag": "dut_create:plantoil", "amount": 125 }],
+        { "fluidTag": "dut_create:plantoil", "amount": 250 }],
         "results": [{ "item": "kubejs:incomplete_bearing" }]
       },
       {
         "type": "create:pressing",
         "ingredients": [{ "item": "kubejs:incomplete_bearing" }],
-        "processingTime": 70,
         "results": [{ "item": "kubejs:incomplete_bearing" }]
       }
     ],

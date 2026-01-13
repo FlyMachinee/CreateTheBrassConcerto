@@ -115,7 +115,7 @@ ServerEvents.recipes(event => {
         ],
         "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
         { "item": "kubejs:carbon_electrode","count":4 }],
-        "processingTime": 200
+        "processingTime": 50
     }).id('dut_create:carbon_electrode')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -132,7 +132,7 @@ ServerEvents.recipes(event => {
         ],
         "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
         { "item": "kubejs:carbon_electrode","count":1 }],
-        "processingTime": 200
+        "processingTime": 50
     }).id('dut_create:carbon_electrode1')
     event.custom({
         "type": "vintageimprovements:pressurizing",
@@ -144,7 +144,7 @@ ServerEvents.recipes(event => {
         ],
         "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
         { "item": "kubejs:carbon_electrode","count":6 }],
-        "processingTime": 200
+        "processingTime": 50
     }).id('dut_create:carbon_electrode2')
     //大型电解池
     event.custom({

@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
     //一次性电池
     event.custom({
         "type": "create:sequenced_assembly",
-        "ingredient": { "tag": "forge:plates/gold", "count": 1 },
+        "ingredient": { "item": "create:golden_sheet" },
         "results": [
             { "item": "kubejs:disposable_battery" }
         ],
@@ -58,28 +58,28 @@ ServerEvents.recipes(event => {
         "sequence": [
             {
                 "type": "create:filling",
-                "ingredients": [{ "tag": "forge:plates/gold" },
+                "ingredients": [{ "item": "create:golden_sheet" },
                 { "amount": 250, "fluid": "create_enchantment_industry:experience" }],
-                "results": [{ "tag": "forge:plates/gold" }]
+                "results": [{ "item": "create:golden_sheet" }]
             },
             {
                 "type": "create:deploying",
                 "ingredients": [
-                    { "tag": "forge:plates/gold" },
+                    { "item": "create:golden_sheet" },
                     { "tag": "forge:plates/copper" }
                 ],
-                "results": [{ "tag": "forge:plates/gold" }]
+                "results": [{ "item": "create:golden_sheet"}]
             },
             {
                 "type": "create:deploying",
                 "ingredients": [
-                    { "tag": "forge:plates/gold" },
+                    { "item": "create:golden_sheet" },
                     { "item": "kubejs:graphite" }
                 ],
-                "results": [{ "tag": "forge:plates/gold" }]
+                "results": [{ "item": "create:golden_sheet" }]
             }
         ],
-        "transitionalItem": { "tag": "forge:plates/gold" }
+        "transitionalItem": { "item": "create:golden_sheet" }
     }).id("dut_create:disposable_battery_from_experience")
     event.custom({
         "type": "create:sequenced_assembly",
@@ -248,5 +248,6 @@ ServerEvents.recipes(event => {
             "count": 1
         },
         "energy": 21600,
+        "maxChargeRate":720
     }).id("dut_create:charging/electrolyzer")
 })

@@ -3,7 +3,7 @@
 	allow_bullet_break_blocks = true
 	allow_bullet_create_explosions = true
 	allow_bullet_create_fire = true
-	allow_bullet_casing_drops = true
+	allow_bullet_casing_drops = false
 	allow_summon_npc = true
 	#Range: 0.0 ~ 1000.0
 	summon_npc_min_distance = 400.0

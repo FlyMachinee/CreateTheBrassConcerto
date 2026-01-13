@@ -15,9 +15,11 @@
 #078 ad_astra:martian_wastelands
 #7F2 ad_astra:mercury_deltas
 #653 minecraft:nether_wastes
+#02C dut:nitrolithic_shore
 #4F1 minecraft:ocean
 #1D5 ad_astra:orbit
 #255 minecraft:small_end_islands
+#534 dut:spore_jungle
 #5E9 dut:thalassgel
 #400 minecraft:the_end
 #59B ad_astra:venus_wastelands

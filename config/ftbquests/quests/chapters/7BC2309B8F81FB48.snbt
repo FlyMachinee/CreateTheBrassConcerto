@@ -5,7 +5,7 @@
 	group: "6EA46263F86F561F"
 	icon: "create:steam_engine"
 	id: "7BC2309B8F81FB48"
-	order_index: 2
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
@@ -45,12 +45,16 @@
 		}
 		{
 			dependencies: ["57005A71B5688770"]
-			description: ["金是十分有用的矿石，可以用于制作一些重要的合金"]
+			description: [
+				"金是十分有用的矿石，可以用于制作一些重要的合金"
+				""
+				"你可以选择去地下或下界挖一些、去遗迹中寻找，或是等到批量生产铁之后，再从凝灰岩中获取它！"
+			]
 			id: "6C50D97F2E3C3F38"
 			rewards: [{
 				count: 32
 				id: "2A97902D5D617D9A"
-				item: "create:crushed_raw_gold"
+				item: "create:ochrum"
 				type: "item"
 			}]
 			subtitle: "基础矿石-金"
@@ -65,19 +69,25 @@
 		}
 		{
 			dependencies: ["57005A71B5688770"]
-			description: ["传送带是核心的物流方式之一，为了制作传送带，请收集大量的海带！"]
+			description: ["传送带是最为核心的物流方式——为了制作传送带，你会需要这些海带的！"]
+			icon: "minecraft:kelp"
 			id: "31B47BA34C8D4477"
-			rewards: [{
-				count: 9
-				id: "706F162713DAF9DF"
-				item: "minecraft:dried_kelp_block"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 9
+					id: "706F162713DAF9DF"
+					item: "minecraft:dried_kelp_block"
+					type: "item"
+				}
+				{
+					id: "732FC177845AD00B"
+					item: "minecraft:kelp"
+					type: "item"
+				}
+			]
 			tasks: [{
-				count: 64L
-				id: "2FF72188B474C9C7"
-				item: "minecraft:kelp"
-				type: "item"
+				id: "596035776F88540D"
+				type: "checkmark"
 			}]
 			title: "带带你的"
 			x: 1.0d
@@ -89,7 +99,7 @@
 				""
 				"为了建造更加有效的移动结构，粘液球是必须的！"
 				""
-				"粘液球可以由黄绿色染料与面团制作、可以由岩浆膏离心、可以利用聚乙烯合成...或者从一种生物——史莱姆——身上获取——&e不过，史莱姆并不存在于绝大部分星球之上，在地球上也仅能在一些古老的遗迹中看到它们的踪迹&r"
+				"粘液球可以由面团制作、由岩浆膏离心、可以利用聚乙烯合成...或者从一种生物——史莱姆——身上获取——&e不过，史莱姆并不存在于绝大部分星球之上，在地球上也仅能在一些古老的遗迹中看到它们的踪迹&r"
 				""
 				"&a沼泽地和某些地方的地下...？你在说什么，这是来自你故乡的知识吗？那里也有史莱姆吗？"
 			]
@@ -114,58 +124,15 @@
 		{
 			dependencies: ["57005A71B5688770"]
 			description: [
-				"安山岩是开启工业的必备材料！"
-				"为了安山合金，对安山岩使用黄铜镐吧！"
+				"铜是流体系统的主要材料，同时也是制作黄铜的材料之一"
+				""
+				"你的飞船上就有一些，你可以用它们作为启动资金！"
 			]
-			id: "6170726DD12211A8"
-			rewards: [{
-				count: 64
-				id: "072FDE5524B64784"
-				item: "minecraft:andesite"
-				type: "item"
-			}]
-			subtitle: "基础材料-安山岩"
-			tasks: [{
-				count: 32L
-				id: "3BEF42D2055745D5"
-				item: "minecraft:andesite"
-				type: "item"
-			}]
-			title: "挖呀挖呀挖"
-			x: 0.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["57005A71B5688770"]
-			description: [
-				"建造动力钻头等工作部件、制造安山合金、制造烈焰人燃烧室......"
-				"这些都需要大量的铁！"
-			]
-			id: "0A300217BFFF0EFE"
-			rewards: [{
-				count: 32
-				id: "58BE0FE9D9179FB6"
-				item: "create:crushed_raw_iron"
-				type: "item"
-			}]
-			tasks: [{
-				count: 16L
-				id: "5A84CDFB5FC8154E"
-				item: "minecraft:iron_ingot"
-				type: "item"
-			}]
-			title: "定订腚啶锭"
-			x: 1.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["57005A71B5688770"]
-			description: ["铜是流体系统的主要材料，同时也是制作黄铜的材料之一"]
 			id: "5657783EBC7A2614"
 			rewards: [{
 				count: 64
 				id: "315B433CE6CA5836"
-				item: "create:crushed_raw_copper"
+				item: "create:veridium"
 				type: "item"
 			}]
 			subtitle: "基础材料-铜"
@@ -187,27 +154,20 @@
 			]
 			icon: "minecraft:stripped_spruce_log"
 			id: "6901F25ADD92F25D"
-			rewards: [
-				{
-					count: 64
-					id: "7CE58311B27DB719"
-					item: "createdieselgenerators:chip_wood_block"
-					type: "item"
-				}
-				{
-					id: "1856C7EF7268A57F"
-					item: "minecraft:kelp"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 64
+				id: "7CE58311B27DB719"
+				item: "createdieselgenerators:chip_wood_block"
+				type: "item"
+			}]
 			subtitle: "基础材料-原木"
 			tasks: [{
 				id: "37A049902493CD40"
 				type: "checkmark"
 			}]
 			title: "木林森"
-			x: 0.0d
-			y: -4.0d
+			x: 1.0d
+			y: -2.5d
 		}
 		{
 			description: [
@@ -240,8 +200,8 @@
 					type: "item"
 				}
 			]
-			shape: "rsquare"
-			size: 1.25d
+			shape: "gear"
+			size: 1.5d
 			subtitle: "万物起源"
 			tasks: [{
 				id: "206BF91028236D4D"
@@ -250,7 +210,7 @@
 			}]
 			title: "要开始加速咯！"
 			x: 0.0d
-			y: 2.5d
+			y: 2.25d
 		}
 		{
 			dependencies: ["00B48F1BEA0C0EFF"]
@@ -279,7 +239,8 @@
 		{
 			dependencies: ["18B4AAE5B37A74FF"]
 			description: [
-				"对去皮原木使用安山合金可以创建安山机壳"
+				"对木屑、原木、去皮原木使用安山合金可以创建安山机壳"
+				""
 				"你需要用它制作机械核心"
 			]
 			id: "447805012105BE20"
@@ -471,15 +432,13 @@
 				"&e除此以外，辊压机还可用于批量生产绯红岩、皓蓝石等基础资源&r"
 				""
 				"为了获得金属板，请制作至少一个动力辊压机！"
-				""
-				"&e满转速的动力辊压机的工作盆压块时间为10tick，而压片时间为11tick（有时为12tick）！&r"
 			]
 			id: "66E89DB9217359ED"
 			rewards: [
 				{
 					count: 64
 					id: "171286EE1E3F722D"
-					item: "create:crushed_raw_iron"
+					item: "create:crimsite"
 					type: "item"
 				}
 				{
@@ -609,16 +568,12 @@
 		}
 		{
 			dependencies: ["66E89DB9217359ED"]
-			description: [
-				"你可以通过用动力搅拌器搅拌岩浆和水的方式快速获得大量圆石！"
-				""
-				"&e满转速的动力搅拌器工作时间为17tick！&r"
-			]
+			description: ["你可以通过用动力搅拌器搅拌岩浆和水的方式快速获得大量圆石！"]
 			id: "7FE5AB2587E7BC6A"
 			rewards: [{
 				count: 64
 				id: "1D33AB6451A20041"
-				item: "create:crushed_raw_gold"
+				item: "create:ochrum"
 				type: "item"
 			}]
 			subtitle: "工作元件-动力搅拌器"
@@ -824,8 +779,6 @@
 				"[ \"在\", { \"text\": \"史莱姆的乐谱\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"35F0C3FF989DA797\" } }, \"中查看可以无限抽取的流体列表！（点击横线跳转）\" ]"
 				""
 				"&a顺便一提，经过我的技术改进，动力泵现在的扬程是24格！&r"
-				""
-				"&e满转速的动力泵工作速率为2560mB/s！（128mB/tick）&r"
 			]
 			id: "4D065E793F1933EB"
 			rewards: [{
@@ -922,8 +875,6 @@
 				"虽然你的飞船上有两个我看不懂的结构已经被这个世界转化为了粉碎轮，但你总不能一直用那两个粉碎轮吧"
 				""
 				"&a你可以使用世界合成的方式制造它，请查看思索！&r"
-				""
-				"&e在大部分情况下，满转速的粉碎轮处理一组物品的时间为69tick，而部分特殊配方——比如粉碎木屑——拥有极快的处理速度！&r"
 			]
 			icon: "create:crushing_wheel"
 			id: "63B2F182F14905E0"
@@ -957,9 +908,9 @@
 				""
 				"它思索中关于配方的内容已经有些过时了，还是查看JEI吧！"
 				""
-				"&a使用基础的配方（作物+木屑+水）发酵乙醇的时间为恒定的25秒，而其它的发酵配方时长各有不同，从半秒到几十秒均有！&r你应当通过你的需求、作物产出和配方时长对你需要多少发酵盆进行计算，而不是盲目地设置数量！"
+				"&e你应当通过你的需求、作物产出和配方时长对你需要多少发酵盆进行计算，而不是盲目地设置数量！"
 				""
-				"发酵产生的乙醇可以用于制作&e生物柴油&r——一种可以提供&e超级加热&r的燃料！需要注意的是，它并不适合在柴油机中使用"
+				"发酵产生的乙醇可以用于制作&e生物柴油&r——一种可以提供&e超级加热&r的燃料！需要注意的是，它并不适合在柴油机中使用；除此以外，它还可以用于制作&e乙烯&r！"
 				""
 				"在此为你提供以下数据："
 				"在没有&e时运&r魔咒的情况下——"
@@ -1343,48 +1294,20 @@
 		{
 			dependencies: ["583C961608F1EB5E"]
 			description: [
-				"喷气背包让你可以在地面附近飞行"
+				"飞行戒指能够赋予你两种飞行，一种是能够悬停的自由飞行，一种是如烟花鞘翅般的高速飞行"
 				""
-				"这在工程中非常方便！"
+				"单击空格进入鞘翅飞行"
 				""
-				"手持便携液体储罐对水右键即可装水"
+				"疾跑时单击空格进入烟花鞘翅飞行"
 				""
-				"手持便携燃料储罐对岩浆右键即可装填燃料"
-				""
-				"便携储罐只需要放在身上就可以自动为喷气背包等设备提供动力"
+				"双击空格进入自由飞行"
 			]
 			id: "70806CB53335AB3C"
-			tasks: [
-				{
-					id: "4A79E4C32566CA5E"
-					item: {
-						Count: 1
-						id: "create_sa:brass_jetpack_chestplate"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "33BA44EA18A06551"
-					item: {
-						Count: 1
-						id: "create_sa:large_fueling_tank"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "17306C58BB96E0B5"
-					item: {
-						Count: 1
-						id: "create_sa:large_filling_tank"
-						tag: { }
-					}
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "3DADC9710B607D88"
+				item: "balancedflight:ascended_flight_ring"
+				type: "item"
+			}]
 			title: "起飞！"
 			x: -5.5d
 			y: 1.625d
@@ -1758,13 +1681,13 @@
 			}]
 			title: "自动化任务"
 			x: 0.0d
-			y: -5.749999999999999d
+			y: -1.5d
 		}
 		{
 			description: [
 				"你可以用这个罐子方便且安全地搬运液体"
 				""
-				"它是一个存量为8B的流体潜影盒。不仅如此，它还可以像桶那样与工作盆交互，并可以盛装不足1B的流体"
+				"它是一个存量为16B的流体潜影盒。不仅如此，它还可以像桶那样与工作盆交互，并可以盛装不足1B的流体"
 				""
 				"在此之外，你还可以用它设置流体过滤"
 			]
@@ -1791,7 +1714,7 @@
 				type: "item"
 			}]
 			x: -1.0d
-			y: -1.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["447805012105BE20"]
@@ -1861,8 +1784,6 @@
 				"你也许在疑惑要如何合成它，&e或许可以查看它思索的最后一节？&r"
 				""
 				"&a需要注意的是，机械手不止有这一种获取方式！&r"
-				""
-				"&e满转速的机械手的组装时间为6tick！此外的工作时间为8tick！&r"
 			]
 			id: "2ECE50D43DDBC159"
 			rewards: [
@@ -1945,8 +1866,6 @@
 			dependency_requirement: "one_completed"
 			description: [
 				"橡胶和海带都可以用于制作传送带、分液器、漏斗、隧道等物品"
-				""
-				"&e对于安山漏斗和黄铜漏斗而言，输出速度都是9tick/次，而输入速度则没有上限&r"
 				""
 				"在过去，曾经存在着一些能够天然产出橡胶的生物，但现在它们已经全部灭绝了。如果你想要获取橡胶，只能通过人工合成的方式"
 			]
@@ -2367,8 +2286,6 @@
 				"储物抽屉是十分好用的存储工具，它能存储大量同种物品！"
 				""
 				"你可以制作它的各种升级和抽屉钥匙来提升和拓展它的功能——锁定、销毁、存量转信、隐藏图标......"
-				""
-				"顺便一提，最好用的存储升级是绿宝石存储升级"
 				""
 				"单击右键存入手上物品，双击右键存入身上所有对应物品"
 				""
@@ -2862,9 +2779,7 @@
 		}
 		{
 			description: [
-				"你可能已经体验过反复为便携式流体储罐和便携式燃料储罐添加燃料的不便之处了"
-				""
-				"那么，不妨用我所发明的仪式制作一个无限便携流体储罐！它可以为你的便携设备提供无限的燃料和水！"
+				"不妨用我所发明的仪式制作一个无限便携流体储罐！它可以为你的便携设备提供无限的燃料和水！"
 				""
 				"&e由于一些特别的原因，它的配方是变化的——但应该影响不大！如果你的配方非常难，也不用担心——就如同我前面说的那样：它不是一成不变的！&r"
 			]
@@ -3133,13 +3048,15 @@
 			}]
 			title: "它是无限的"
 			x: 0.0d
-			y: -1.0d
+			y: 0.5d
 		}
 		{
 			description: [
 				"这是个单纯的抓钩！"
 				""
 				"但是在低重力环境下也许会有意想不到的机动效果！"
+				""
+				"它需要燃料和水——你可以使用创造便携燃料储罐！"
 			]
 			id: "6107D95BEFCAAB6B"
 			tasks: [{
@@ -3462,7 +3379,7 @@
 				type: "item"
 			}]
 			x: 1.0d
-			y: -1.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["0BEFDE24534261C5"]
@@ -3607,7 +3524,7 @@
 				"{@pagebreak}"
 				"以合金炉同时处理粉碎铁和粉碎铜为例，首先我们解决输入问题"
 				""
-				"可以注意到，合金炉单次处理粉碎铁为81个，粉碎铜为54个，它们有最小公约数27"
+				"可以注意到，合金炉单次处理粉碎铁为81个，粉碎铜为54个，它们有最大公约数27"
 				""
 				"我们不妨思考使用黄铜漏斗进行27物品输入，不论我们以何样的顺序来输入铁和铜，只要在三次输入内不会堵住，那么合金炉就一定会有可以处理的配方（3*27=81）"
 				""
@@ -3615,103 +3532,10 @@
 				""
 				"如果我们输入的速度超过了合金炉的处理速度，那么合金炉仍然会卡住——但是通过简单的计算就能知道，黄铜漏斗每9gt输入27物品远远未达到合金炉对应配方的处理速度——所以，我们通过这种方式输入永远不会使合金炉卡住"
 				""
-				"那么我们要如何解决流体的抽取问题？一种方案是使用软管滑轮配合智能流体管道！"
+				"那么我们要如何解决流体的抽取问题？一种方案是使用软管滑轮配合智能流体管道！——一个更好的方案是，使用液压机处理输出流体！"
 			]
 			id: "30CD2348B60180E6"
 			rewards: [
-				{
-					id: "1A9FE87E4C042752"
-					item: {
-						Count: 1
-						id: "minecraft:barrel"
-						tag: {
-							BlockEntityTag: {
-								Items: [
-									{
-										Count: 4b
-										Slot: 0b
-										id: "design_decor:metal_support"
-									}
-									{
-										Count: 9b
-										Slot: 1b
-										id: "design_decor:diagonal_girder"
-									}
-									{
-										Count: 4b
-										Slot: 2b
-										id: "design_decor:andesite_floodlight"
-									}
-									{
-										Count: 9b
-										Slot: 3b
-										id: "createaddition:straw"
-									}
-									{
-										Count: 15b
-										Slot: 4b
-										id: "create:metal_girder"
-									}
-									{
-										Count: 4b
-										Slot: 5b
-										id: "design_decor:industrial_iron_boiler_large"
-									}
-									{
-										Count: 16b
-										Slot: 6b
-										id: "create:industrial_iron_block"
-									}
-									{
-										Count: 1b
-										Slot: 7b
-										id: "railways:smokestack_oilburner"
-									}
-									{
-										Count: 4b
-										Slot: 8b
-										id: "create:andesite_funnel"
-									}
-									{
-										Count: 6b
-										Slot: 9b
-										id: "design_decor:diagonal_metal_support"
-									}
-									{
-										Count: 1b
-										Slot: 10b
-										id: "design_decor:stepped_lever"
-									}
-									{
-										Count: 4b
-										Slot: 11b
-										id: "design_decor:industrial_iron_boiler"
-									}
-									{
-										Count: 19b
-										Slot: 12b
-										id: "design_decor:iron_railing"
-									}
-									{
-										Count: 9b
-										Slot: 13b
-										id: "design_decor:ornate_grate"
-									}
-									{
-										Count: 9b
-										Slot: 14b
-										id: "create:blaze_burner"
-									}
-								]
-								id: "minecraft:barrel"
-							}
-							display: {
-								Name: "{\"translate\":\"block.kubejs.alloy_furnace\",\"italic\":false}"
-							}
-						}
-					}
-					type: "item"
-				}
 				{
 					count: 3
 					id: "43256B014974310B"
@@ -3961,6 +3785,99 @@
 					team_reward: false
 					type: "item"
 				}
+				{
+					id: "3477FC8E55FDFFE4"
+					item: {
+						Count: 1
+						id: "minecraft:barrel"
+						tag: {
+							BlockEntityTag: {
+								Items: [
+									{
+										Count: 16b
+										Slot: 0b
+										id: "create:industrial_iron_block"
+									}
+									{
+										Count: 9b
+										Slot: 1b
+										id: "design_decor:ornate_grate"
+									}
+									{
+										Count: 4b
+										Slot: 2b
+										id: "design_decor:industrial_iron_boiler_large"
+									}
+									{
+										Count: 4b
+										Slot: 3b
+										id: "design_decor:industrial_iron_boiler"
+									}
+									{
+										Count: 1b
+										Slot: 4b
+										id: "railways:smokestack_oilburner"
+									}
+									{
+										Count: 15b
+										Slot: 5b
+										id: "create:metal_girder"
+									}
+									{
+										Count: 6b
+										Slot: 6b
+										id: "design_decor:diagonal_metal_support"
+									}
+									{
+										Count: 4b
+										Slot: 7b
+										id: "design_decor:metal_support"
+									}
+									{
+										Count: 9b
+										Slot: 8b
+										id: "create:blaze_burner"
+									}
+									{
+										Count: 4b
+										Slot: 9b
+										id: "create:andesite_funnel"
+									}
+									{
+										Count: 8b
+										Slot: 10b
+										id: "design_decor:iron_railing"
+									}
+									{
+										Count: 8b
+										Slot: 11b
+										id: "design_decor:diagonal_girder"
+									}
+									{
+										Count: 4b
+										Slot: 12b
+										id: "design_decor:andesite_floodlight"
+									}
+									{
+										Count: 1b
+										Slot: 13b
+										id: "design_decor:stepped_lever"
+									}
+									{
+										Count: 9b
+										Slot: 14b
+										id: "createaddition:straw"
+									}
+								]
+								id: "minecraft:barrel"
+							}
+							display: {
+								Name: "{\"translate\":\"block.kubejs.alloy_furnace\",\"italic\":false}"
+							}
+						}
+					}
+					type: "item"
+				}
 			]
 			shape: "gear"
 			subtitle: "你的第一个多方块机器"
@@ -4062,7 +3979,7 @@
 			description: [
 				"巨型粉碎机是一种大型粉碎机器，可以快速处理&c部分&r粉碎配方——除此以外，&e部分粉碎配方只能通过巨型粉碎机执行！&r"
 				""
-				"&e一台巨型粉碎机的效率可以达到69对粉碎轮！它的理论极限为每小时处理4608000份原料（对大部分配方而言）&r——除此以外，如果你的原料输入速度充足，它的所有配方都可以以两倍的处理量运行——也就是说，&e你可以将效率提升至每小时处理9216000份原料（对大部分配方而言）&r"
+				"&e一台巨型粉碎机的常规处理速度为每小时处理4608000份原料（对大部分配方而言）&r——除此以外，如果你的原料输入速度充足，它的所有配方都可以以两倍的处理量运行——也就是说，&e你可以将效率提升至每小时处理9216000份原料（对大部分配方而言）&r"
 				""
 				"[ \"如果你遇到问题，可以查看\", { \"text\": \"工程之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4FB506D4FED99495\" } }, \"！\" ]"
 				""
@@ -4309,7 +4226,7 @@
 			}]
 			title: "应急工业平台"
 			x: 0.0d
-			y: 0.625d
+			y: -4.5d
 		}
 		{
 			dependencies: ["66E89DB9217359ED"]
@@ -4323,8 +4240,6 @@
 				"你可以在&aJEI&r中查看注液器的一般配方，或者在&a思索&r中查看&e方块注液&r配方！"
 				""
 				"你可以在&e安山合金&r的思索中查看方块注液的一个例子"
-				""
-				"&e注液器工作时间为21tick！&r"
 			]
 			id: "4C7F4AB89C420568"
 			tasks: [{
@@ -4339,9 +4254,9 @@
 		{
 			dependencies: ["1937330ACAF9F87C"]
 			description: [
-				"为了生产安山合金，你会用到工作盆铸造盖的！"
+				"为了生产基础金属和安山合金，你会用到工作盆铸造盖的！"
 				""
-				"通过它，你可以使用工作盆来融化金属，并利用得到的熔融金属进行其它操作——比如进行方块注液，或是搅拌生产合金！"
+				"通过它，你可以使用工作盆来将金属岩铸造成锭，融化金属，并利用得到的熔融金属进行其它操作——比如进行方块注液，或是搅拌生产合金！"
 				""
 				"&e收下这个永恒加热燃烧室吧，它可以持续燃烧一个难以想象地长的时间——以至于与永恒无异。在未来，你可以利用信息素来制造它——不过那还很遥远&r"
 				""
@@ -4458,35 +4373,6 @@
 			y: 7.0d
 		}
 		{
-			description: [
-				"&e由于很多路径之间可以相互替代，所以你可能遇上一些麻烦：我的目标到底是什么？"
-				""
-				"&a为了回到你的故乡，你可以暂时以以下的关键节点进行初步发展："
-				""
-				"&61.金属生产"
-				""
-				"&62.超级加热生产"
-				""
-				"&63.三种集成电路板"
-				""
-				"&64.微生物与炼钢"
-				""
-				"&65.星际物流网络"
-				""
-				"&e不同节点之间存在大量的可选路线以及分支内容，你可以根据你的需要去选择它们！"
-				""
-				"[ \"而关于金属生产，你可以点击横线部分跳转到\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"！\" ]"
-			]
-			id: "33462C3746610C92"
-			tasks: [{
-				id: "3795038B7C257D7C"
-				title: "整体目标"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: 5.0d
-		}
-		{
 			dependencies: ["30CD2348B60180E6"]
 			description: [
 				"液压机是一种大型辊压机器，可以快速处理金属流体以及强度较低的金属块"
@@ -4503,6 +4389,10 @@
 				""
 				"{@pagebreak}"
 				"本质上来说，你不需要检测液压机内部是否已经填满——你只需要让它持续运转即可！"
+				""
+				"液压机可以用来高效处理多种液体混杂的情况——比如多配方工作的合金炉！"
+				""
+				"{image:kubejs:textures/ftb/hydropress.png width:120 height:100 align:center}"
 			]
 			id: "20E4FDEECA16AAB1"
 			rewards: [{
@@ -4620,5 +4510,5 @@
 		}
 	]
 	subtitle: ["齿轮和传动杆"]
-	title: "人类改造蒸汽，蒸汽改造人类"
+	title: "※人类改造蒸汽，蒸汽改造人类"
 }

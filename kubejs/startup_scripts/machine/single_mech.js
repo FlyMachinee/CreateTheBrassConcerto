@@ -44,17 +44,27 @@ StartupEvents.registry('block', event => {
 		.notSolid()
 		.defaultCutout()
 		.blockEntity(info => {
+			info.tick(be => {
+				let { level, block, persistentData } = be
+				if (!persistentData.contains("energy")) {
+					persistentData.energy = 0
+				}
+				if ((level.day || block.biomeId == "ad_astra:orbit") && block.up.canSeeSky) {
+					persistentData.energy = 60
+				}
+			})
 			info.attachCapability(CapabilityBuilder.ENERGY.customBlockEntity()
 				.canExtract(() => true)
-				.getEnergyStored(i => 60)
+				.getEnergyStored(i => i.persistentData.energy || 0)
 				.getMaxEnergyStored(i => 60)
 				.extractEnergy((be, i, sim) => {
-					let { level, blockPos } = be
-					let block = level.getBlock(blockPos)
-					if ((level.day || block.biomeId == "ad_astra:orbit") && block.up.canSeeSky) {
-						return 60
+					let pdata = be.persistentData
+					if (!pdata.contains("energy")) {
+						pdata.energy = 0
 					}
-					return 0
+					let energy = Math.min(60, i, pdata.energy)
+					pdata.energy -= energy
+					return energy
 				})
 			)
 		})

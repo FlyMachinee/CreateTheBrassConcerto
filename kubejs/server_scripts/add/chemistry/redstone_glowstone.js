@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
       "results": [
         { "item": "minecraft:redstone", "count": 4 }
       ],
-      "processingTime": 100
+      "processingTime": 15
     }).id("dut_create:filling/fast_redstone_from_" + a.split(":")[0] + "_" + a.split(":")[1]);
   }
   function createRecipe1(a, b) {
@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
       "results": [
         { "item": "minecraft:redstone", "count": 4 }
       ],
-      "processingTime": 100
+      "processingTime": 15
     }).id("dut_create:filling/fast_redstone_from_" + a.split(":")[0] + "_" + a.split(":")[1]);
   }
   //createRecipe("createloveandwar:kerosene", 45)
@@ -84,6 +84,6 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "minecraft:glowstone_dust", "count": 4 }
     ],
-    "processingTime": 100
+    "processingTime": 45
   }).id("dut_create:pressurizing/glowstone_dust")
 })

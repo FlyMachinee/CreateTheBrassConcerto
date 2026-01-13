@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
                 "ingredients": [{ "item": "ad_astra:sky_stone" }],
                 "results": [{ "item": "ad_astra:sky_stone", }],
                 "speedLimits": 3,
-                "processingTime": 200
+                "processingTime": 80
             }],
         "transitionalItem": {
             "item": "ad_astra:sky_stone"

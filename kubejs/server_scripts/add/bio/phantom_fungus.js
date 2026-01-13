@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:dragon_breath", "count": 4 },
       { "item": "kubejs:phantom_fungus" }
     ],
-    "processingTime": 200
+    "processingTime": 30
   }).id('dut_create:ender_dragon/dragon_breath')
   event.custom({
     "type": "create:sequenced_assembly",
@@ -100,5 +100,4 @@ ServerEvents.recipes(event => {
     ],
     "transitionalItem": { "item": "minecraft:dragon_egg" }
   }).id("dut_create:ender_dragon/dragon_egg2")
-
 })

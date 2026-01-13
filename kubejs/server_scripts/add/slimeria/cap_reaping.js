@@ -94,32 +94,28 @@ ServerEvents.recipes(event => {
     }).id("dut_create:cap_reaping_machine/boom")
     CapReapingRecipe("ad_astra:aeronos_cap", [
         CapReapingItem("kubejs:aeronos_cap_piece", 16, "output"),
-        CapReapingItemChance("kubejs:aeronos_cap_piece", 12, 0.5),
-        CapReapingItemChance("kubejs:aeronos_cap_piece", 12, 0.5),
+        CapReapingItemChance("kubejs:aeronos_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:aeronos_stem_piece", 12, 0.25),
-        CapReapingItemChance("ad_astra:aeronos_mushroom", 1, 0.05),
+        CapReapingItemChance("ad_astra:aeronos_mushroom", 1, 0.25),
     ], "aeronos_cap", 10)
     CapReapingRecipe("ad_astra:strophar_cap", [
         CapReapingItem("kubejs:strophar_cap_piece", 16, "output"),
-        CapReapingItemChance("kubejs:strophar_cap_piece", 12, 0.5),
-        CapReapingItemChance("kubejs:strophar_cap_piece", 12, 0.5),
+        CapReapingItemChance("kubejs:strophar_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:strophar_stem_piece", 12, 0.25),
-        CapReapingItemChance("ad_astra:strophar_mushroom", 1, 0.05),
+        CapReapingItemChance("ad_astra:strophar_mushroom", 1, 0.25),
     ], "strophar_cap", 10)
 
     CapReapingRecipe("minecraft:red_mushroom_block", [
         CapReapingItem("kubejs:red_mushroom_cap_piece", 16, "output"),
-        CapReapingItemChance("kubejs:red_mushroom_cap_piece", 12, 0.5),
-        CapReapingItemChance("kubejs:red_mushroom_cap_piece", 12, 0.5),
+        CapReapingItemChance("kubejs:red_mushroom_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:stem_silk", 12, 0.25),
-        CapReapingItemChance("minecraft:red_mushroom", 1, 0.05),
+        CapReapingItemChance("minecraft:red_mushroom", 1, 0.25),
     ], "red_mushroom_block", 10)
     CapReapingRecipe("minecraft:brown_mushroom_block", [
         CapReapingItem("kubejs:brown_mushroom_cap_piece", 16, "output"),
-        CapReapingItemChance("kubejs:brown_mushroom_cap_piece", 12, 0.5),
-        CapReapingItemChance("kubejs:brown_mushroom_cap_piece", 12, 0.5),
+        CapReapingItemChance("kubejs:brown_mushroom_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:stem_silk", 12, 0.25),
-        CapReapingItemChance("minecraft:brown_mushroom", 1, 0.05),
+        CapReapingItemChance("minecraft:brown_mushroom", 1, 0.25),
     ], "brown_mushroom_block", 10)
 
 })

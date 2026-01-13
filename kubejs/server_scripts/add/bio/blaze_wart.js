@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
       { "item": inputItem }
       ],
       "results": [{ "item": eggId, "chance": chance }],
-      "processingTime": 300
+      "processingTime": 60
     }).id("dut_create:blaze_wart/get_" + eggId.split(":")[1] + a);
     return 0
   }
@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
         { "item": flower }
         ],
         "results": eggIdList,
-        "processingTime": 300
+        "processingTime": 60
       }).id("dut_create:blaze_wart/get_" + id);
     return 0
   }
@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
       { "amount": 250, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" } },
       { "item": "kubejs:blaze_wart" }
     ],
-    "processingTime": 120
+    "processingTime": 15
   }).id('dut_create:blaze_wart/awkward_potion')
   //刷怪蛋制造
   getSpawnEgg("minecraft:beef", "minecraft:cow_spawn_egg", 1, "")
@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
   //getSpawnEgg("iceandfire:amphithere_skull", 'iceandfire:spawn_egg_amphithere', 1, "")
   //getSpawnEgg("iceandfire:seaserpent_skull", 'iceandfire:spawn_egg_sea_serpent', 1, "")
   //getSpawnEgg("iceandfire:cockatrice_skull", 'iceandfire:spawn_egg_cockatrice', 1, "")
-  getSpawnEgg('iceandfire:ectoplasm', 'iceandfire:spawn_egg_ghost', 1, "")
+  //getSpawnEgg('iceandfire:ectoplasm', 'iceandfire:spawn_egg_ghost', 1, "")
   //getSpawnEgg('iceandfire:myrmex_jungle_resin', 'iceandfire:myrmex_jungle_egg', 1, "")
   //getSpawnEgg('iceandfire:myrmex_desert_resin', 'iceandfire:myrmex_desert_egg', 1, "")
   getDragonEgg("iceandfire:fire_lily", [
@@ -118,7 +118,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "item": "createaddition:biomass" }
     ],
-    "processingTime": 120,
+    "processingTime": 20,
     "results": [
       { "item": "minecraft:beef", "count": 3 },
       { "amount": 250, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:thick" } }
@@ -135,7 +135,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "item": "createaddition:biomass" }
     ],
-    "processingTime": 120,
+    "processingTime": 20,
     "results": [
       { "item": "minecraft:porkchop", "count": 4 },
       { "amount": 100, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:thick" } }
@@ -149,7 +149,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "item": "createaddition:biomass" }
     ],
-    "processingTime": 120,
+    "processingTime": 20,
     "results": [
       { "item": "minecraft:cod", "count": 3 },
       { "amount": 150, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:thick" } }
@@ -163,7 +163,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "item": "createaddition:biomass" }
     ],
-    "processingTime": 120,
+    "processingTime": 20,
     "results": [
       { "item": "minecraft:ink_sac", "count": 4 },
       { "amount": 150, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:thick" } }
@@ -177,7 +177,7 @@ ServerEvents.recipes(event => {
       { "item": "createaddition:biomass" },
       { "item": "createaddition:biomass" }
     ],
-    "processingTime": 120,
+    "processingTime": 20,
     "results": [
       { "item": "minecraft:pufferfish", "count": 3 },
       { "amount": 500, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:thick" } }

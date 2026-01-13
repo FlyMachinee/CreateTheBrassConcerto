@@ -25,6 +25,6 @@ ServerEvents.recipes(event => {
             { "fluid": "vintageimprovements:sulfuric_acid", "amount": 300 },
             { "item": "createbigcannons:congealed_nitro", "count": 6 }
         ],
-        "processingTime": 600
+        "processingTime": 50
     }).id('dut_create:congealed_nitro')
 })

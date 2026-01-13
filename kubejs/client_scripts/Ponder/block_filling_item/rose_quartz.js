@@ -31,7 +31,7 @@ Ponder.registry((event) => {
         scene.overlay.showOutline("red", { "glue": true }, [6, 1, 1, 8, 1, 7], 120);
         scene.text(120, "需要空的置物台\n物品产出：1x 玫瑰石英", [4.5, 1.5, 4.5]);
         scene.overlay.showOutline("green", { "glue": true }, [4, 1, 4], 120);
-        scene.text(120, "流体消耗：500mB 乙醇", [4.5, 5.5, 4.5]);
+        scene.text(120, "流体消耗：250mB 乙醇", [4.5, 5.5, 4.5]);
         scene.overlay.showOutline("green", { "glue": true }, [4, 1, 1], 120);
         scene.text(120, "消耗方块", [4.5, 2.5, 4.5]);
         scene.overlay.showOutline("red", { "glue": true }, [4, 2, 4], 120);

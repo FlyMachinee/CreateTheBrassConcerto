@@ -114,12 +114,6 @@
         "weight": 50
       },
       {
-        "type": "minecraft:creeper",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 50
-      },
-      {
         "type": "minecraft:slime",
         "maxCount": 3,
         "minCount": 1,

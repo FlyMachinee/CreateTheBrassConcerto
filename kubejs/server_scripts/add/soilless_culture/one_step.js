@@ -1,12 +1,12 @@
 ServerEvents.recipes(event => {
   //
-  function createRecipe(a, b, c, d) {
+  function createRecipe(a, b, c, d, f) {
     let e = "dut_create:soilless_culture/one_step/" + a.split(":")[1]
     event.custom({
       "type": "create:sequenced_assembly",
       "ingredient": { "item": a },
       "results": [
-        { "item": a, "count": 8, "chance": d }, { "item": a, "chance": 1 - d }
+        { "item": a, "count": f, "chance": d }, { "item": a, "chance": 1 - d }
       ],
       "loops": 1,
       "sequence": [
@@ -21,21 +21,20 @@ ServerEvents.recipes(event => {
     }).id(e);
     return 0
   }
-  createRecipe("minecraft:nether_wart", "vintageimprovements:sulfur_dioxide", 25, 0.12)
-  createRecipe("minecraft:glow_berries", "kubejs:nitrogen_fertilizer", 25, 0.25)
-  createRecipe("minecraft:sweet_berries", "kubejs:nitrogen_fertilizer", 25, 0.36)
-  createRecipe("minecraft:sugar_cane", "kubejs:nitrogen_fertilizer", 25, 0.5)
-  createRecipe("minecraft:bamboo", "kubejs:nitrogen_fertilizer", 5, 0.75)
-  createRecipe("minecraft:kelp", "kubejs:nitrogen_fertilizer", 25, 0.80)
-  createRecipe("minecraft:cocoa_beans", "kubejs:nitrogen_fertilizer", 25, 0.36)
+  createRecipe("minecraft:nether_wart", "vintageimprovements:sulfur_dioxide", 25, 0.5, 9)
+  createRecipe("minecraft:glow_berries", "kubejs:nitrogen_fertilizer", 25, 0.5, 17)
+  createRecipe("minecraft:sweet_berries", "kubejs:nitrogen_fertilizer", 25, 0.5, 17)
+  createRecipe("minecraft:sugar_cane", "kubejs:nitrogen_fertilizer", 25, 0.5, 7)
+  createRecipe("minecraft:bamboo", "kubejs:nitrogen_fertilizer", 25, 0.5, 9)
+  createRecipe("minecraft:kelp", "kubejs:nitrogen_fertilizer", 25, 0.80, 13)
+  createRecipe("minecraft:cocoa_beans", "kubejs:nitrogen_fertilizer", 25, 0.36, 9)
   //种子增殖
-  createRecipe("minecraft:beetroot_seeds", "kubejs:nitrogen_fertilizer", 25, 0.75)
-  createRecipe("minecraft:wheat_seeds", "kubejs:nitrogen_fertilizer", 25, 0.9)
-  createRecipe("supplementaries:flax_seeds", "kubejs:nitrogen_fertilizer", 25, 0.75)
-  createRecipe("minecraft:chorus_flower", "kubejs:chlorine", 50, 0.25)
-  createRecipe("minecraft:cactus", "kubejs:nitrogen_fertilizer", 75, 0.16)
-  createRecipe("minecraft:sea_pickle", "kubejs:nitrogen_fertilizer", 75, 0.5)
-  Ingredient.of("#minecraft:flowers").itemIds.forEach(i => createRecipe(i, "kubejs:nitrogen_fertilizer", 75, 0.5))
+  createRecipe("minecraft:beetroot_seeds", "kubejs:nitrogen_fertilizer", 25, 0.5, 11)
+  createRecipe("minecraft:wheat_seeds", "kubejs:nitrogen_fertilizer", 25, 0.5, 11)
+  createRecipe("minecraft:chorus_flower", "kubejs:chlorine", 50, 0.5, 7)
+  createRecipe("minecraft:cactus", "kubejs:nitrogen_fertilizer", 75, 0.5, 7)
+  createRecipe("minecraft:sea_pickle", "kubejs:nitrogen_fertilizer", 75, 0.5, 5)
+  Ingredient.of("#minecraft:flowers").itemIds.forEach(i => createRecipe(i, "kubejs:nitrogen_fertilizer", 75, 0.5, 9))
   //南瓜
   event.custom({
     "type": "create:sequenced_assembly",

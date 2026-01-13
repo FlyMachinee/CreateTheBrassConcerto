@@ -52,9 +52,9 @@ ServerEvents.recipes(event => {
     "machine": "dut:culture_bin",
     "time": 120,
     "requirements": [
-      CultureBinItemInput("iceandfire:ectoplasm", 3),
+      CultureBinItemInput("iceandfire:ectoplasm", 6),
       CultureBinItemInput("create:refined_radiance", 1),
-      CultureBinItemChance("iceandfire:ghost_ingot", 1, 0.25)
+      CultureBinItemChance("iceandfire:ghost_ingot", 1, 1)
     ]
   }).id("dut_create:culture_bin/ghost_ingot")
 
@@ -227,7 +227,7 @@ ServerEvents.recipes(event => {
     "time": 80,
     "requirements": [
       CultureBinFluid("minecraft:water", "input", 300),
-      CultureBinFluid("createdieselgenerators:ethanol", "output", 1750),
+      CultureBinFluid("createdieselgenerators:ethanol", "output", 1500),
       CultureBinItemInput("minecraft:sugar", 6),
       CultureBinItemInput("kubejs:yeast", 1),
       CultureBinItemChance("kubejs:yeast", 1, 1)
@@ -236,7 +236,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
-    "time": 70,
+    "time": 60,
     "requirements": [
       CultureBinFluid("minecraft:water", "input", 500),
       CultureBinFluid("kubejs:carbon_dioxide", "output", 500),
@@ -244,10 +244,22 @@ ServerEvents.recipes(event => {
       CultureBinItemInput("kubejs:yeast", 1),
       CultureBinItemChance("kubejs:yeast", 1, 1),
       CultureBinItemChance("kubejs:yeast", 1, 0.25),
-      CultureBinItemChance("minecraft:sugar", 8, 1),
-      CultureBinItemChance("minecraft:sugar", 6, 0.75)
+      CultureBinItemChance("minecraft:sugar", 12, 1)
     ]
-  }).id("dut_create:culture_bin/yeast/ferment_sugar_from_yeast")
+  }).id("dut_create:culture_bin/yeast/ferment_sugar_from_fermentable")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:culture_bin",
+    "time": 60,
+    "requirements": [
+      CultureBinFluid("minecraft:water", "input", 250),
+      CultureBinFluid("kubejs:carbon_dioxide", "output", 250),
+      CultureBinItemInput('minecraft:sweet_berries', 12),
+      CultureBinItemInput("kubejs:yeast", 1),
+      CultureBinItemChance("kubejs:yeast", 1, 1),
+      CultureBinItemChance("minecraft:sugar", 6, 1)
+    ]
+  }).id("dut_create:culture_bin/yeast/ferment_sugar_from_berries")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
@@ -259,8 +271,7 @@ ServerEvents.recipes(event => {
       CultureBinItemInput("kubejs:yeast", 1),
       CultureBinItemChance("kubejs:yeast", 1, 1),
       CultureBinItemChance("kubejs:yeast", 1, 0.25),
-      CultureBinItemChance("minecraft:sugar", 8, 1),
-      CultureBinItemChance("minecraft:sugar", 6, 0.75),
+      CultureBinItemChance("minecraft:sugar", 10, 1),
     ]
   }).id("dut_create:culture_bin/yeast/ferment_sugar_from_yeast1")
   event.custom({
@@ -269,7 +280,7 @@ ServerEvents.recipes(event => {
     "time": 80,
     "requirements": [
       CultureBinFluid("kubejs:saline_water", "input", 500),
-      CultureBinFluid("createaddition:seed_oil", "output", 1500),
+      CultureBinFluid("createaddition:seed_oil", "output", 1000),
       CultureBinItemInput("kubejs:yeast", 1),
       CultureBinItemInput("minecraft:sugar", 6),
       CultureBinItemChance("kubejs:yeast", 1, 1)
@@ -576,12 +587,12 @@ ServerEvents.recipes(event => {
     "time": 60,
     "requirements": [
       CultureBinDimension(["minecraft:overworld", "ad_astra:earth_orbit"]),
-      CultureBinFluid("kubejs:slime_colloid", "input", 750),
+      CultureBinFluid("kubejs:slime_colloid", "input", 250),
       CultureBinItemInput("kubejs:blaze_wart", 1),
       CultureBinItemInput("minecraft:soul_soil", 1),
       CultureBinItemChance("kubejs:blaze_wart", 1, 1),
       CultureBinItemChance("minecraft:soul_soil", 1, 1),
-      CultureBinItemChance("iceandfire:ectoplasm", 3, 1)
+      CultureBinItemChance("iceandfire:ectoplasm", 6, 1)
     ]
   }).id("dut_create:culture_bin/ectoplasm")
   event.custom({

@@ -5,7 +5,7 @@
 	group: "6B818C6F92D84205"
 	icon: "kubejs:empty_culture_plate"
 	id: "7D0B86274F2BBB99"
-	order_index: 5
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -105,7 +105,7 @@
 			description: [
 				"泥炭原虫栖息在沼泽地、蘑菇地和茂盛的丛林中"
 				""
-				"它能够将泥胚转化为木炭，然后在将木炭转化为煤炭的同时将泥巴转化为泥胚"
+				"&e它能够将木炭转化为煤炭——从而在煤的生产中起着决定性作用！"
 				""
 				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
 			]
@@ -123,9 +123,7 @@
 			description: [
 				"金属原虫是一种能够将基础金属彼此转化的微生物"
 				""
-				"于是，通过它，你终于可以批量生产银了"
-				""
-				"&e你可以在一些比较古老的矿物中发现它&r"
+				"&e你可以在下界合金碎片中发现它——使用暗影钢即可批量生产下界合金！&r"
 			]
 			id: "09A9BB62F0A2D207"
 			tasks: [{
@@ -847,6 +845,213 @@
 			}]
 			x: -2.0d
 			y: -2.0d
+		}
+		{
+			dependencies: ["51950D03F6955270"]
+			description: [
+				"&e工业高炉是一种大型多方块机器！&r你需要在核心附近建造指定的结构（可以是不同朝向的）来使用它！"
+				""
+				"你需要通过工业高炉来生产钢、戴斯等高级金属。&e如果你觉得输氧太慢，那么不妨试试高速卸罐机！&r"
+				""
+				"在思索中查看使用方式！"
+				""
+				"如果你不知道如何正确输入物品的话，请查看&a机械动力之页&r的&e混带&r一节！"
+				""
+				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
+				""
+				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
+			]
+			id: "62A2FDFE9317F04D"
+			rewards: [
+				{
+					id: "2684EA15F3BCF893"
+					item: {
+						Count: 1
+						id: "minecraft:barrel"
+						tag: {
+							BlockEntityTag: {
+								Items: [
+									{
+										Count: 63b
+										Slot: 0b
+										id: "design_decor:ornate_grate"
+									}
+									{
+										Count: 4b
+										Slot: 1b
+										id: "create:andesite_funnel"
+									}
+									{
+										Count: 4b
+										Slot: 2b
+										id: "create:andesite_bars"
+									}
+									{
+										Count: 8b
+										Slot: 3b
+										id: "design_decor:brass_lamp"
+									}
+									{
+										Count: 12b
+										Slot: 4b
+										id: "design_decor:industrial_iron_boiler"
+									}
+									{
+										Count: 3b
+										Slot: 5b
+										id: "create:mechanical_pump"
+									}
+									{
+										Count: 3b
+										Slot: 6b
+										id: "design_decor:industrial_iron_boiler_large"
+									}
+									{
+										Count: 11b
+										Slot: 7b
+										id: "ad_astra:iron_plating_slab"
+									}
+									{
+										Count: 2b
+										Slot: 8b
+										id: "design_decor:brass_boiler_large"
+									}
+									{
+										Count: 6b
+										Slot: 9b
+										id: "create:cogwheel"
+									}
+									{
+										Count: 3b
+										Slot: 10b
+										id: "design_decor:brass_boiler"
+									}
+									{
+										Count: 4b
+										Slot: 11b
+										id: "create_things_and_misc:brass_brick_slab"
+									}
+									{
+										Count: 9b
+										Slot: 12b
+										id: "design_decor:diagonal_metal_support"
+									}
+									{
+										Count: 24b
+										Slot: 13b
+										id: "create:metal_girder"
+									}
+								]
+								id: "minecraft:barrel"
+							}
+							display: {
+								Lore: ["{\"text\":\"I\"}"]
+								Name: "{\"translate\":\"block.kubejs.shaft_furnace\",\"italic\":false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "13CDAC3D6DA18BCD"
+					item: {
+						Count: 1
+						id: "minecraft:barrel"
+						tag: {
+							BlockEntityTag: {
+								Items: [
+									{
+										Count: 1b
+										Slot: 0b
+										id: "design_decor:stepped_lever"
+									}
+									{
+										Count: 1b
+										Slot: 1b
+										id: "railways:smokestack_oilburner"
+									}
+									{
+										Count: 4b
+										Slot: 2b
+										id: "create:brass_funnel"
+									}
+									{
+										Count: 54b
+										Slot: 3b
+										id: "create:fluid_tank"
+									}
+									{
+										Count: 12b
+										Slot: 4b
+										id: "create:copper_casing"
+									}
+									{
+										Count: 15b
+										Slot: 5b
+										id: "design_decor:iron_railing"
+									}
+									{
+										Count: 3b
+										Slot: 6b
+										id: "design_decor:copper_boiler"
+									}
+									{
+										Count: 15b
+										Slot: 7b
+										id: "ad_astra:iron_pillar"
+									}
+									{
+										Count: 22b
+										Slot: 8b
+										id: "create:industrial_iron_block"
+									}
+									{
+										Count: 9b
+										Slot: 9b
+										id: "create:fluid_pipe"
+									}
+									{
+										Count: 48b
+										Slot: 10b
+										id: "create:railway_casing"
+									}
+									{
+										Count: 9b
+										Slot: 11b
+										id: "createaddition:straw"
+									}
+									{
+										Count: 9b
+										Slot: 12b
+										id: "create:blaze_burner"
+									}
+									{
+										Count: 12b
+										Slot: 13b
+										id: "design_decor:diagonal_girder"
+									}
+								]
+								id: "minecraft:barrel"
+							}
+							display: {
+								Lore: ["{\"text\":\"II\"}"]
+								Name: "{\"translate\":\"block.kubejs.shaft_furnace\",\"italic\":false}"
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "235D5CEF0D331ACE"
+				item: "kubejs:shaft_furnace"
+				type: "item"
+			}]
+			title: "大炼钢铁！"
+			x: 0.0d
+			y: 3.75d
 		}
 	]
 	subtitle: ["那些看不见的"]

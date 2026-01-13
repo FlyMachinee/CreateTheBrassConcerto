@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
         "type": "createdieselgenerators:distillation",
         "ingredients": [{ "fluid": "minecraft:water", "amount": 500 }],
         "heatRequirement": "superheated",
-        "processingTime": 1200,
+        "processingTime": 1800,
         "results": [
             { "fluid": "kubejs:oxygen", "amount": 250 },
             { "fluid": "kubejs:hydrogen", "amount": 500 }

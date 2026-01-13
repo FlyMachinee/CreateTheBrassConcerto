@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "fluid": "kubejs:lube_oil", "amount": 100 }
         ],
-        "processingTime": 800
+        "processingTime": 120
     }).id('dut_create:lube_from_oil')
     //除杂润滑油
     event.custom({
@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
       "results": [
         { "fluid": "kubejs:lube_oil", "amount": 250 }
       ],
-      "processingTime": 200
+      "processingTime": 40
     }).id('dut_create:blaze_mycoplasma/lube_from_oil_with_so2')
     event.custom({
       "type": "vintageimprovements:pressurizing",
@@ -46,6 +46,6 @@ ServerEvents.recipes(event => {
       "results": [
         { "fluid": "kubejs:lube_oil", "amount": 500 }
       ],
-      "processingTime": 150
+      "processingTime": 50
     }).id('dut_create:blaze_mycoplasma/lube_from_refined_oil_with_so2')
 })

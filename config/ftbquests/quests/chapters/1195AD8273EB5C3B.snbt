@@ -1,0 +1,368 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "1195AD8273EB5C3B"
+	group: "5997E69EB327A306"
+	icon: "kubejs:rubber"
+	id: "1195AD8273EB5C3B"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&e满速物流效率: &r&a1 stack / 2 tick"
+				""
+				"&e是否是开放容器: &r&a是"
+				""
+				"&e特殊性质: &r"
+				"&a可以将物品直接输入末端连接的开放容器中"
+			]
+			id: "6CAB9C160B07BE4F"
+			tasks: [{
+				id: "5641CED45C16B7DE"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			id: "341A1A36A1151F77"
+			tasks: [{
+				id: "2C4C9DEE9264B4B4"
+				item: "create:item_drain"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			id: "546333FD9C77AE77"
+			tasks: [{
+				id: "126AB66ABF8E6749"
+				item: "create:chute"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			id: "141C7D05B3E993F3"
+			tasks: [{
+				id: "518029DB88A3EBF8"
+				item: "create:smart_chute"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			id: "663EE5A98F902F68"
+			tasks: [{
+				id: "10E427214C4897C7"
+				item: "create:mechanical_pump"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			description: [
+				"&e最高时速: &r&a2m / tick(无燃料) 4m / tick(有燃料)"
+				""
+				"&e特殊性质: &r"
+				"&a列车可以跨越未加载的区块"
+				"&a列车可以跨越下界传送门"
+				"&a手动行驶列车的速度仅有自动列车的75%"
+			]
+			id: "284188A665FFDCEB"
+			tasks: [{
+				id: "63BFE6A4999F3BB0"
+				item: "create:controls"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			description: [""]
+			id: "0723F24E9778C76C"
+			tasks: [{
+				id: "6AD09C599225098F"
+				item: "create:andesite_funnel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			id: "25FD1B7EB4DB664A"
+			tasks: [{
+				id: "5B93CE49431E40BC"
+				item: "create:andesite_tunnel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			id: "63796B2D40071014"
+			tasks: [{
+				id: "646E12E80C54921C"
+				item: "create:brass_funnel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			description: [""]
+			id: "496D61BD7F5D783E"
+			tasks: [{
+				id: "6DFFDF4E07CB2530"
+				item: "create:brass_tunnel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			description: [
+				"&e特殊性质: &r"
+				"&a仅能用于向列车上的燃料储罐添加岩浆"
+			]
+			id: "78272EA7C1EABFDC"
+			tasks: [{
+				id: "4C9531F12982DC37"
+				item: "railways:portable_fuel_interface"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			description: ["&a用于对移动结构进行流体IO"]
+			id: "3E2666CBD8A88016"
+			tasks: [{
+				id: "12DE20EEEA80625E"
+				item: "create:portable_fluid_interface"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			description: ["&a用于对移动结构进行物品IO"]
+			id: "00D163F6A770C7F2"
+			tasks: [{
+				id: "680C94C9D68995CA"
+				item: "create:portable_storage_interface"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			description: ["&a用于对移动结构进行能量IO"]
+			id: "6075DA48C144080D"
+			tasks: [{
+				id: "3B968D1BF1DBF99C"
+				item: "createaddition:portable_energy_interface"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			description: [
+				"&e满速物流效率: &r&a32B / tick"
+				""
+				"&e是否是开放容器: &r&a否"
+			]
+			id: "1E7965EEBC9E978A"
+			tasks: [
+				{
+					id: "3CAF8C470766EA99"
+					item: "kubejs:filling_machine"
+					type: "item"
+				}
+				{
+					id: "2FE1F7333E36CBEF"
+					item: "kubejs:emptying_machine"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			description: [
+				"&e满速物流效率: &r&a8 stack / 320 tick"
+				""
+				"&e特殊性质: &r"
+				"&a自轨道中发射仅需1/12的材料消耗"
+				"&a可以使用坐标数据芯片自行配置落点"
+			]
+			id: "40465F21E1FEFE55"
+			tasks: [{
+				id: "447AB1DEF0860A0C"
+				item: "kubejs:carrier_rocket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: [
+				"&e满速物流效率: &r&a180 stack / 440 tick(单次发射 410tick 修复耐久每点 30tick)"
+				""
+				"&e特殊性质: &r"
+				"&a只能从星球地面发射"
+			]
+			id: "0A6B36BD2C9EECAE"
+			tasks: [{
+				id: "16420C6DFF1BD79E"
+				item: {
+					Count: 1
+					id: "kubejs:space_elevator"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"&e满速物流效率: &r&a8 stack / 60 tick"
+				""
+				"&e特殊性质: &r"
+				"&a空投舱会被任意非空气方块阻挡"
+			]
+			id: "365E660CEBECA467"
+			tasks: [{
+				id: "40627E6B61211874"
+				item: "kubejs:airdrop_station"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"&e满速物流效率: &r&a管道接触面数*150mB / tick"
+				""
+				"&e特殊性质: &r"
+				"&a可以使用特殊的扳手调整输入输出模式"
+				"&a可以用于运送多种流体"
+			]
+			id: "748D31144355BDCB"
+			tasks: [{
+				id: "76D06ABD32B30A6F"
+				item: "ad_astra:desh_fluid_pipe"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"&e满速物流效率: &r&a管道接触面数*500mB / tick"
+				""
+				"&e特殊性质: &r"
+				"&a可以使用特殊的扳手调整输入输出模式"
+				"&a可以用于运送多种流体"
+			]
+			id: "03F89F644071B3E5"
+			tasks: [{
+				id: "05F873F5757D0482"
+				item: "ad_astra:ostrum_fluid_pipe"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			description: [
+				"&e特殊性质: &r"
+				"&a可以连接 50格(切比雪夫距离) 范围内的所有抽屉"
+			]
+			id: "066FB3498F95BF0C"
+			tasks: [{
+				id: "5DAE1E224C8392B0"
+				item: "storagedrawers:controller"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			description: [
+				"小型连接器最高可以传输 &e16384 FE/t&r"
+				""
+				"其连接范围为  &e24 格"
+				""
+				"最大连接数为  &e4"
+			]
+			id: "2BBBE26B70ADD9C7"
+			tasks: [{
+				id: "5D7A4C7ABC016947"
+				item: "createaddition:connector"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			description: [
+				"大型连接器最高可以传输 &e80000 FE/t&r"
+				""
+				"其连接范围为  &e48 格"
+				""
+				"最大连接数为  &e4"
+			]
+			id: "7D855B1224409D28"
+			tasks: [{
+				id: "458BDF127B1C1251"
+				item: "createaddition:large_connector"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			description: [
+				"&e满速物流效率: &r"
+				"&a1 物品 / 20 tick"
+				"&a250mB 流体 / 20 tick"
+				""
+				"&e特殊性质: &r"
+				"&a可以使用红石信号禁用"
+				"&a可以从含水方块中无限取水"
+				"&a最小流体运输单位为250mB"
+			]
+			id: "241DB7796BD62A81"
+			tasks: [{
+				id: "625AC1137B34464C"
+				item: "supplementaries:faucet"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			description: ["大部分物流元件的工作效率均经过了改进——它们现在的物流效率变得易于计算了！"]
+			id: "45F78676CAF15AF5"
+			tasks: [{
+				id: "36CDF7EB7A54B577"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: -2.5d
+		}
+	]
+	subtitle: ["物流元件相关数据"]
+	title: "物流系统"
+}

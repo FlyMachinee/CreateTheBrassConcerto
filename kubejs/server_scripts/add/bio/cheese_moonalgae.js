@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:salt" },
       { "item": "kubejs:salt" }
     ],
-    "processingTime": 400,
+    "processingTime": 240,
     "results": [
       { "item": "ad_astra:cheese","count":2 },
       { "item": "ad_astra:cheese","chance":0.5 },

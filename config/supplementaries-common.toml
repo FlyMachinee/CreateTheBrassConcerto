@@ -342,7 +342,7 @@
 		quiver_pickup = true
 
 	[tools.slice_map]
-		enabled = false
+		enabled = true
 		#Multiplier that will be applied by slice maps to lower their range compared to normal maps
 		#Range: 0.0 ~ 1.0
 		range_multiplier = 0.25

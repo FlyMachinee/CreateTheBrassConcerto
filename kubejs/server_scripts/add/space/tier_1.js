@@ -6,31 +6,31 @@ ServerEvents.recipes(event => {
   //event.custom({})
   //give @s ad_astra:tier_1_rocket{BotariumData:{StoredFluids:[{Fluid:"kubejs:rocket_fuel",Amount:3000}]}}
 
-  
-  event.remove({id:"ad_astra:gravity_normalizer"})
+
+  event.remove({ id: "ad_astra:gravity_normalizer" })
   event.custom({
-      "type": "minecraft:crafting_shaped",
-      "category": "misc",
-      "key": {
-          "B": { "item": "create:chromatic_compound" },
-          "C": { "tag": "forge:plates/desh" },
-          "D": { "item": "create:refined_radiance_casing" },
-          "E": { "item": "kubejs:light_composite_plate" }
-      },
-      "pattern": [
-          " B ",
-          "EDE",
-          "CCC"
-      ],
-      "result": { "item": "ad_astra:gravity_normalizer" },
-      "show_notification": true
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "B": { "item": "create:chromatic_compound" },
+      "C": { "tag": "forge:plates/desh" },
+      "D": { "item": "create:refined_radiance_casing" },
+      "E": { "item": "kubejs:light_composite_plate" }
+    },
+    "pattern": [
+      " B ",
+      "EDE",
+      "CCC"
+    ],
+    "result": { "item": "ad_astra:gravity_normalizer" },
+    "show_notification": true
   }).id("dut_create:gravity_normalizer")
   //TI-69
   event.remove({ output: 'ad_astra:ti_69' })
   event.custom({
     "type": "create:deploying",
     "ingredients": [
-      { "item": "kubejs:aluminum_hard_disk","nbt":{Damage:1024} },
+      { "item": "kubejs:aluminum_hard_disk", "nbt": { Damage: 1024 } },
       { "item": "create:framed_glass_pane" }
     ],
     "results": [{ "item": "ad_astra:ti_69" }]
@@ -41,82 +41,63 @@ ServerEvents.recipes(event => {
   //宇航服
   event.remove({ output: 'ad_astra:space_helmet' })
   event.custom({
-    "type": "create:mechanical_crafting",
-    "acceptMirrored": true,
+    "type": "minecraft:crafting_shaped",
     "key": {
-      "A": { "item": "create:precision_mechanism" },
-      "B": { "item": "create:mechanical_pump" },
-      "C": { "item": "create:smart_fluid_pipe" },
-      "D": { "item": "create:fluid_valve" },
       "E": { "item": "create:redstone_link" },
       "F": { "item": "create:framed_glass" },
       "G": { "item": "kubejs:fiber_fabric" },
       "H": { "tag": "forge:plates/steel" }
     },
     "pattern": [
-      " FFF ",
-      "FFGGB",
-      "FGEHD",
-      "FGAHC",
-      " HHH "
+      "FFG",
+      "FGE",
+      "FGH"
     ],
     "result": { "item": "ad_astra:space_helmet" }
   }
   ).id("dut_create:ad_astra/space_helmet")
   event.remove({ output: 'ad_astra:space_suit' })
   event.custom({
-    "type": "create:mechanical_crafting",
-    "acceptMirrored": true,
+    "type": "minecraft:crafting_shaped",
     "key": {
       "B": { "item": "kubejs:fiber_fabric" },
       "A": { "tag": "forge:plates/steel" },
       "C": { "item": "ad_astra:oxygen_gear" },
-      "D": { "item": "ad_astra:gas_tank" },
-      "E": { "item": "create:redstone_link" },
-      "F": { "item": "create:precision_mechanism" },
+      "D": { "item": "ad_astra:gas_tank" }
     },
     "pattern": [
-      " BBCE",
-      "BBBDE",
-      "BBBDF",
-      "BBBAA",
-      "BBB  ",
+      "BCD",
+      "BAD",
+      "BAA"
     ],
     "result": { "item": "ad_astra:space_suit" }
   }
   ).id("dut_create:ad_astra/space_suit")
   event.remove({ output: 'ad_astra:space_pants' })
   event.custom({
-    "type": "create:mechanical_crafting",
-    "acceptMirrored": true,
+    "type": "minecraft:crafting_shaped",
     "key": {
       "B": { "item": "kubejs:fiber_fabric" },
       "A": { "tag": "forge:plates/steel" }
     },
     "pattern": [
-      "AAAAA",
-      "ABBBA",
-      "BBBBB",
-      "BB BB",
-      "BB BB",
-      "AA AA",
+      "AAA",
+      "BBB",
+      "B B"
     ],
     "result": { "item": "ad_astra:space_pants" }
   }
   ).id("dut_create:ad_astra/space_pants")
   event.remove({ output: 'ad_astra:space_boots' })
   event.custom({
-    "type": "create:mechanical_crafting",
-    "acceptMirrored": true,
+    "type": "minecraft:crafting_shaped",
     "key": {
       "B": { "item": "kubejs:fiber_fabric" },
       "A": { "tag": "forge:plates/steel" }
     },
     "pattern": [
-      " AA AA ",
-      " BB BB ",
-      "ABB BBA",
-      "AAA AAA",
+      "A A",
+      "B B"
     ],
     "result": { "item": "ad_astra:space_boots" }
   }
@@ -174,7 +155,7 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "item": "kubejs:mechanical_core" },
         { "amount": 1000, "fluid": "kubejs:duraplas" }],
         "results": [{ "item": "kubejs:mechanical_core" }],
-        "processingTime": 300
+        "processingTime": 45
       },
       {
         "type": "create:deploying",
@@ -242,7 +223,7 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "item": "kubejs:incomplete_parts_box" },
         { "amount": 250, "fluid": "kubejs:nitrogen" }],
         "results": [{ "item": "kubejs:incomplete_parts_box" }],
-        "processingTime": 100
+        "processingTime": 15
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_parts_box" }

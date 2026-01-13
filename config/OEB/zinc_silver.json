@@ -31,7 +31,8 @@
     },
     {
         "match": [
-            "iceandfire:silver_pile"
+            "iceandfire:silver_pile",
+            "minecraft:ender_chest"
         ],
         "result": "minecraft:air"
     },
