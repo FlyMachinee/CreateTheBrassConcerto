@@ -1,3 +1,11 @@
+JEIEvents.information(event=>{
+    event.addItem("kubejs:unknown_prototype",[
+        Text.translate('kubejs.jei_info.unknown_prototype.1'),
+        Text.translate('kubejs.jei_info.unknown_prototype.2'),
+        Text.translate('kubejs.jei_info.unknown_prototype.3'),
+        Text.translate('kubejs.jei_info.unknown_prototype.4')
+    ])
+})
 JEIEvents.hideItems(event => {
     event.hide([
         "createaddition:bioethanol_bucket",
@@ -77,11 +85,6 @@ JEIEvents.removeRecipes(event => {
         [
             "dut_create:blaze_mycoplasma/blaze_burner_manual_only",
             "dut_create:deploying/crushing_wheel"
-        ]
-    )
-    event.remove('create:deploying',
-        [
-            "dut_create:andesite_alloy_manual_only_using_deployer"
         ]
     )
     event.remove('create:emptying',

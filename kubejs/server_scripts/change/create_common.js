@@ -25,6 +25,7 @@ ServerEvents.recipes(event => {
     "results": [{ "item": "create:sturdy_sheet", "count": 2 }]
   }).id("dut_create:sturdy_sheet")
   //安山合金
+  /*
   event.custom({
     "type": "create:item_application",
     "ingredients": [
@@ -34,6 +35,7 @@ ServerEvents.recipes(event => {
     "results": [{ "item": "create:andesite_alloy" }]
   }).id("dut_create:andesite_alloy_manual_only")
   event.remove({ id: "dut_create:andesite_alloy_manual_only_using_deployer" })
+  */
   //event.recipes.create.item_application("create:andesite_alloy",["minecraft:andesite",["minecraft:iron_nugget", "create:zinc_nugget"]] ).id("dut_create:andesite_alloy_manual_only")
   //玫瑰石英灯
   event.remove({ id: "create:crafting/kinetics/rose_quartz_lamp" })

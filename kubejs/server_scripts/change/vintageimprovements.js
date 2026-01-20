@@ -4,17 +4,17 @@ ServerEvents.recipes(event => {
   //event.remove({input: ''})
   //event.custom()
   //event.remove({input:'',not:{mod:'kubejs'}})
-  event.remove({ id:"vintageimprovements:milling/sulfur" })
-  event.remove({ id:"vintageimprovements:craft/sulfur_nuggets_to_item" })
-  event.remove({ id:"vintageimprovements:craft/sulfur_items_to_block" })
-  event.remove({ id:"vintageimprovements:craft/sulfur_item_to_nuggets" })
-  event.remove({ id:"vintageimprovements:craft/sulfur_block_to_items" })
-  event.remove({ id:"vintageimprovements:coiling/electrum_rod" })
-  event.remove({ id:"vintageimprovements:coiling/electrum_wire" })
+  event.remove({ id: "vintageimprovements:milling/sulfur" })
+  event.remove({ id: "vintageimprovements:craft/sulfur_nuggets_to_item" })
+  event.remove({ id: "vintageimprovements:craft/sulfur_items_to_block" })
+  event.remove({ id: "vintageimprovements:craft/sulfur_item_to_nuggets" })
+  event.remove({ id: "vintageimprovements:craft/sulfur_block_to_items" })
+  event.remove({ id: "vintageimprovements:coiling/electrum_rod" })
+  event.remove({ id: "vintageimprovements:coiling/electrum_wire" })
   //板
-  event.remove({ type:"vintageimprovements:hammering" })
-  event.remove({ type:"vintageimprovements:auto_smithing"})
-  event.remove({ type:"vintageimprovements:auto_upgrade"})
+  event.remove({ type: "vintageimprovements:hammering" })
+  event.remove({ type: "vintageimprovements:auto_smithing" })
+  event.remove({ type: "vintageimprovements:auto_upgrade" })
   event.remove({ id: "vintageimprovements:craft/helve_hammer_slot_cover" })
   event.remove({ id: "vintageimprovements:mechanical_crafting/helve_hammer" })
   event.remove({ id: "vintageimprovements:pressing/andesite_alloy" })
@@ -29,19 +29,19 @@ ServerEvents.recipes(event => {
   event.remove({ id: "vintageimprovements:pressing/refined_radiance" })
   event.remove({ id: "vintageimprovements:rolling/refined_radiance" })
   event.remove({ id: "vintageimprovements:rolling/refined_radiance_plate" })
-  function removeMaterial(material){
-  event.remove({ id: "vintageimprovements:pressing/"+material+"_ingot" })
-  event.remove({ id: "vintageimprovements:rolling/"+material+"_ingot" })
-  event.remove({ id: "vintageimprovements:rolling/"+material+"_plate" })
-  event.remove({ id: "vintageimprovements:coiling/"+material+"_rod" })
-  event.remove({ id: "vintageimprovements:coiling/"+material+"_wire" })
+  function removeMaterial(material) {
+    event.remove({ id: "vintageimprovements:pressing/" + material + "_ingot" })
+    event.remove({ id: "vintageimprovements:rolling/" + material + "_ingot" })
+    event.remove({ id: "vintageimprovements:rolling/" + material + "_plate" })
+    event.remove({ id: "vintageimprovements:coiling/" + material + "_rod" })
+    event.remove({ id: "vintageimprovements:coiling/" + material + "_wire" })
   }
-  function removeMaterial1(material){
-  event.remove({ id: "vintageimprovements:pressing/"+material })
-  event.remove({ id: "vintageimprovements:rolling/"+material })
-  event.remove({ id: "vintageimprovements:rolling/"+material+"_plate" })
-  event.remove({ id: "vintageimprovements:coiling/"+material+"_rod" })
-  event.remove({ id: "vintageimprovements:coiling/"+material+"_wire" })
+  function removeMaterial1(material) {
+    event.remove({ id: "vintageimprovements:pressing/" + material })
+    event.remove({ id: "vintageimprovements:rolling/" + material })
+    event.remove({ id: "vintageimprovements:rolling/" + material + "_plate" })
+    event.remove({ id: "vintageimprovements:coiling/" + material + "_rod" })
+    event.remove({ id: "vintageimprovements:coiling/" + material + "_wire" })
   }
   removeMaterial("vanadium")
   removeMaterial("amethyst_bronze")
@@ -74,11 +74,25 @@ ServerEvents.recipes(event => {
   removeMaterial("refined_obsidian")
   removeMaterial("invar")
   removeMaterial("blaze")
+  function Coil(input3,output3,input4,output4,time) {
+    event.custom({
+      "type": "vintageimprovements:coiling",
+      "processingTime": time,
+      "input": { "item": input3 },
+      "result": { "item": output3 }
+    }).id("dut_create:coiling/"+input3.split(":")[1])
+    event.custom({
+      "type": "vintageimprovements:coiling",
+      "processingTime": time,
+      "input": { "item": input4 },
+      "result": { "item": output4 }
+    }).id("dut_create:coiling/"+input3.split(":")[1])
+  }
   //event.remove({id:"vintageimprovements:pressing"})
   event.remove({ output: "minecraft:netherite_upgrade_smithing_template", not: { mod: "kubejs" } })
   //
-  event.remove({id: 'vintageimprovements:craft/spring_coiling_machine_wheel' })
-  event.remove({id: 'vintageimprovements:craft/spring_coiling_machine' })
+  event.remove({ id: 'vintageimprovements:craft/spring_coiling_machine_wheel' })
+  event.remove({ id: 'vintageimprovements:craft/spring_coiling_machine' })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",
@@ -93,7 +107,7 @@ ServerEvents.recipes(event => {
       "ACD",
       "B  "
     ],
-    "result": { "item": "vintageimprovements:spring_coiling_machine"},
+    "result": { "item": "vintageimprovements:spring_coiling_machine" },
     "show_notification": true
   }).id("dut_create:spring_coiling_machine")
   event.replaceInput({ input: 'create:shaft', id: 'vintageimprovements:craft/centrifuge' }, 'create:shaft', 'kubejs:bearing')
@@ -112,6 +126,6 @@ ServerEvents.recipes(event => {
   }).id("dut_create:smithing_template")
   event.remove({ id: "vintageimprovements:pressurizing/copper_sulfate" })
   //红石组件
-  event.remove({id:"vintageimprovements:sequenced_assembly/redstone_module"})
-  
+  event.remove({ id: "vintageimprovements:sequenced_assembly/redstone_module" })
+
 })

@@ -125,6 +125,7 @@ ServerEvents.commandRegistry(event => {
             p.persistentData.teleport.lastpoint.pos.z = p.z
             p.persistentData.teleport.lastpoint.dimension = p.level.dimension.toString()
             p.persistentData.needRespawn = true
+            p.persistentData.FreeCaming = false
             p.runCommandSilent(`/curios clear @s`)
             p.setGameMode("spectator")
             p.inventory.clear()
@@ -139,18 +140,23 @@ ServerEvents.commandRegistry(event => {
             /**@type {Internal.ServerPlayer} */
             let p = result.source.player
             if (p == null) { return 0 }
-            if (p.persistentData.needRespawn = true) { return 0 }
+            if (p.persistentData.needRespawn) { return 0 }
             //存储当前坐标点
-            p.persistentData.teleport.lastpoint.pos = {}
-            p.persistentData.teleport.lastpoint.pos.x = p.x
-            p.persistentData.teleport.lastpoint.pos.y = p.y
-            p.persistentData.teleport.lastpoint.pos.z = p.z
-            p.persistentData.teleport.lastpoint.dimension = p.level.dimension.toString()
+            try {
+                p.persistentData.teleport.lastpoint.pos = {}
+                p.persistentData.teleport.lastpoint.pos.x = p.x
+                p.persistentData.teleport.lastpoint.pos.y = p.y
+                p.persistentData.teleport.lastpoint.pos.z = p.z
+                p.persistentData.teleport.lastpoint.dimension = p.level.dimension.toString()
 
-            p.setGameMode("spectator")
-            p.setStatusMessage(Text.translate("kubejs.message.redeploy_tips"))
-            p.persistentData.needRespawn = true
-            p.addItemCooldown("kubejs:unknown_prototype", 20)
+                p.persistentData.needRespawn = true
+                p.persistentData.FreeCaming = false
+                p.setGameMode("spectator")
+                p.setStatusMessage(Text.translate("kubejs.message.redeploy_tips"))
+                p.addItemCooldown("kubejs:unknown_prototype", 20)
+            } catch (e) {
+                console.log(e)
+            }
             return 1
         })
     )

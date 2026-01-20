@@ -120,44 +120,44 @@ ServerEvents.recipes(event => {
   //不死图腾
   event.custom({
     "type": "create:sequenced_assembly",
-    "ingredient": { "item": "createaddition:electrum_ingot" },
+    "ingredient": { "item": "minecraft:gold_ingot" },
     "loops": 1,
     "results": [{ "item": "minecraft:totem_of_undying"}],
     "sequence": [
       {
         "type": "create:deploying",
-        "ingredients": [{ "item": "createaddition:electrum_ingot" },
+        "ingredients": [{ "item": "minecraft:gold_ingot" },
         { "item": "minecraft:emerald" }],
-        "results": [{ "item": "createaddition:electrum_ingot" }]
+        "results": [{ "item": "minecraft:gold_ingot" }]
       },
       {
         "type": "create:deploying",
-        "ingredients": [{ "item": "createaddition:electrum_ingot" },
+        "ingredients": [{ "item": "minecraft:gold_ingot" },
         { "item": "createaddition:electrum_sheet" }],
-        "results": [{ "item": "createaddition:electrum_ingot" }]
+        "results": [{ "item": "minecraft:gold_ingot" }]
       },
       {
         "type": "vintageimprovements:laser_cutting",
-        "ingredients": [{ "item": "createaddition:electrum_ingot" }],
-        "results": [{ "item": "createaddition:electrum_ingot"}],
+        "ingredients": [{ "item": "minecraft:gold_ingot" }],
+        "results": [{ "item": "minecraft:gold_ingot"}],
         "energy": 48000,
         "maxChargeRate": 400
       },
       {
         "type": "create:filling",
-        "ingredients": [{ "item": "createaddition:electrum_ingot" },
+        "ingredients": [{ "item": "minecraft:gold_ingot" },
         { "amount": 500, "fluid": "create_enchantment_industry:hyper_experience" }],
-        "results": [{ "item": "createaddition:electrum_ingot" }]
+        "results": [{ "item": "minecraft:gold_ingot" }]
       },
       {
         "type":"vintageimprovements:polishing",
         "speedLimits": 1,
-        "ingredients": [{"item": "createaddition:electrum_ingot"}],
-        "results": [{"item": "createaddition:electrum_ingot"}],
+        "ingredients": [{"item": "minecraft:gold_ingot"}],
+        "results": [{"item": "minecraft:gold_ingot"}],
         "processingTime": 60
       }
     ],
-    "transitionalItem": { "item": "createaddition:electrum_ingot" }
+    "transitionalItem": { "item": "minecraft:gold_ingot" }
   }).id("dut_create:sequenced_assembly/totem_of_undying")
   //附魔金苹果
   event.remove({ output: 'minecraft:enchanted_golden_apple', not: { mod: 'kubejs' } })

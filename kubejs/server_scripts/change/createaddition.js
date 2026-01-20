@@ -7,6 +7,11 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'createaddition:crafting/diamond_grit_sandpaper' })
   event.remove({ id: "createaddition:crushing/diamond" })
   event.remove({ id: 'createaddition:liquid_burning/biofuel' })
+  event.remove({ id: 'createaddition:crafting/electrum_amulet' })
+  event.remove({ id: 'createaddition:crafting/electrum_ingot' })
+  event.remove({ id: 'createaddition:crafting/electrum_nugget' })
+  event.remove({ id: 'createaddition:crafting/electrum_spool' })
+  event.remove({ id: 'createaddition:crafting/large_connector_electrum' })
   event.custom({
     "type": "minecraft:crafting_shapeless",
     "ingredients": [{ "item": "createaddition:biomass_pellet_block" }],
@@ -54,7 +59,8 @@ ServerEvents.recipes(event => {
     ]
   }).id("dut_create:seed_oil_mixing")
   //蓄电池
-  event.remove({ output: 'createaddition:modular_accumulator', mod: 'createaddition' })
+  event.remove({ id: 'createaddition:crafting/modular_accumulator_electrum' })
+  event.remove({ id: 'createaddition:crafting/modular_accumulator_gold' })
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": { "tag": "forge:storage_blocks/copper" },
@@ -89,7 +95,7 @@ ServerEvents.recipes(event => {
     "transitionalItem": { "item": "kubejs:incomplete_copper_box" }
   }).id("dut_create:modular_accumulator")
   //发电机
-  event.remove({ output: 'createaddition:alternator', not: { mod: 'kubejs' } })
+  event.remove({ id: 'createaddition:mechanical_crafting/alternator' })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",
@@ -108,7 +114,7 @@ ServerEvents.recipes(event => {
     "show_notification": true
   }).id("dut_create:alternator")
   //电动马达
-  event.remove({ output: 'createaddition:electric_motor', not: { mod: 'kubejs' } })
+  event.remove({ id: 'createaddition:mechanical_crafting/electric_motor' })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",
@@ -127,7 +133,7 @@ ServerEvents.recipes(event => {
     "show_notification": true
   }).id("dut_create:electric_motor")
   //特斯拉线圈
-  event.remove({ output: 'createaddition:tesla_coil', not: { mod: 'kubejs' } })
+  event.remove({ id: 'createaddition:mechanical_crafting/tesla_coil' })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",
@@ -147,7 +153,8 @@ ServerEvents.recipes(event => {
     "show_notification": true
   }).id("dut_create:tesla_coil")
   //电容
-  event.remove({ output: 'createaddition:capacitor', not: { mod: 'kubejs' } })
+  event.remove({ id: 'createaddition:crafting/capacitor_1' })
+  event.remove({ id: 'createaddition:crafting/capacitor_2' })
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",

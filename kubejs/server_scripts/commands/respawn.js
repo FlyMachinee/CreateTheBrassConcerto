@@ -3,13 +3,14 @@ NativeEvents.onEvent("highest", true, $LivingDeath, e => {
     let event = e
     /**@type {Internal.Entity} */
     let entity = event.entity
-    if (entity.type=="minecraft:ender_dragon"){
-        entity.level.runCommandSilent(`/summon item ${entity.x} ${entity.y} ${entity.z} {Glowing:1b,NoGravity:1b,Invulnerable:1b,Item:{id:"kubejs:phantom_fungus",Count:${randomOne(3,9).toString()}b}}`)
+    if (entity.type == "minecraft:ender_dragon") {
+        entity.level.runCommandSilent(`/summon item ${entity.x} ${entity.y} ${entity.z} {Glowing:1b,NoGravity:1b,Invulnerable:1b,Item:{id:"kubejs:phantom_fungus",Count:${randomOne(3, 9).toString()}b}}`)
     }
     if (!entity.isPlayer()) { return }
     /**@type {Internal.ServerPlayer} */
     let player = entity
     player.persistentData.needRespawn = true
+    player.persistentData.FreeCaming = false
     player.addItemCooldown("kubejs:unknown_prototype", 20)
 
     if (player.y <= player.level.dimensionType().minY() - 64) {
@@ -45,6 +46,7 @@ NetworkEvents.dataReceived("isPlayerAltDown", event => {
     }
     if (event.data.Alt == true && !event.player.cooldowns.isOnCooldown("kubejs:unknown_prototype")) {
         event.player.persistentData.needRespawn = false
+        event.player.persistentData.FreeCaming = false
         event.player.setGameMode("survival")
         event.player.setStatusMessage(Text.translate("kubejs.message.redeploy"))
     }

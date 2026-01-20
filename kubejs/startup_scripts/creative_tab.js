@@ -4,7 +4,7 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 });
 StartupEvents.registry("creative_mode_tab", tab => {
 	//基础材料
-	tab.create("kubejs:cbc_materials")
+	tab.create("cbc:aaa_materials")
 		.icon(() => Item.of("kubejs:aluminum_slag"))
 		.content(() => [
 			"kubejs:unknown_prototype",
@@ -111,7 +111,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.materials")
 	//零部件
-	tab.create("kubejs:cbc_parts")
+	tab.create("cbc:aaa_parts")
 		.icon(() => Item.of("kubejs:mechanical_core"))
 		.content(() => [
 			'create:shadow_steel_casing',
@@ -165,7 +165,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.parts")
 	//食物与工具
-	tab.create("kubejs:cbc_tool_food")
+	tab.create("cbc:aaa_tool_food")
 		.icon(() => Item.of("kubejs:slime_cola_can"))
 		.content(() => [
 			'kubejs:anti_warden_bomb',
@@ -202,7 +202,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.food_tool")
 	//桶装流体
-	tab.create("kubejs:cbc_bucket")
+	tab.create("cbc:aaa_bucket")
 		.icon(() => Item.of("kubejs:slime_colloid_bucket"))
 		.content(() => [
 			Item.of('create:creative_fluid_tank', '{BlockEntityTag:{TankContent:{Amount:32000,FluidName:"create_things_and_misc:diluted_bonemeal"}},display:{Name:\'{"translate":"fluid.create_things_and_misc.diluted_bonemeal","italic":false}\'}}'),
@@ -279,7 +279,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.bucket")
 	//机器
-	tab.create("kubejs:cbc_machine")
+	tab.create("cbc:aaa_machine")
 		.icon(() => Item.of("kubejs:solar_panel"))
 		.content(() => [
 			'kubejs:creative_motor_blueprint',
@@ -345,7 +345,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.machine")
 	//生物工程
-	tab.create("kubejs:cbc_bio")
+	tab.create("cbc:aaa_bio")
 		.icon(() => Item.of("kubejs:mycetozoan"))
 		.content(() => [
 			"kubejs:covariant_reactor",
@@ -406,7 +406,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.bio")
 	//精算工程
-	tab.create("kubejs:cbc_caculate")
+	tab.create("cbc:aaa_caculate")
 		.icon(() => Item.of("kubejs:aluminum_hard_disk"))
 		.content(() => [
 			'geckojs:stepping_caculator',
@@ -433,7 +433,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.caculate")
 	//太空时代
-	tab.create("kubejs:cbc_space")
+	tab.create("cbc:aaa_space")
 		.icon(() => Item.of("kubejs:satellite"))
 		.content(() => [
 			"kubejs:emergency_industrial_platform_space",
@@ -487,7 +487,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		])
 		.displayName = Text.translatable("kubejs.creative_tab.space")
 	//未完成零部件
-	tab.create("kubejs:cbc_incomplete")
+	tab.create("cbc:aaa_incomplete")
 		.icon(() => Item.of("kubejs:incomplete_parts_box"))
 		.content(() => [
 			'kubejs:substrate',

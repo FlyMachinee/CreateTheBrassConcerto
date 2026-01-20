@@ -23,7 +23,7 @@ const DimensionNameKey = {
     "ad_astra:moon_orbit": "planet.dut.moon_orbit"
 }
 /**
- * 
+ * @name 尝试创建tag
  * @param {Internal.CompoundTag} pdata 
  * @param {string} tag 
  * @param {any} basic 

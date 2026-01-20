@@ -69,7 +69,7 @@ CreateEvents.spoutHandler((event) => {
                         case 0:
                             if (5 < cell && cell < 13) {
                                 //如果周围有6~12个活细胞则变为活细胞，A多有75%变为A，B多有75%变为B
-                                if (a > b && Math.random() >= 0.75) {
+                                if (a > b && Math.random() <= 0.75) {
                                     block.offset(i1 - 2, dy + i2 - 2, i3 - 2).set(blockAid)
                                     break
                                 }
@@ -123,9 +123,9 @@ CreateEvents.spoutHandler((event) => {
                     if (!simulate) {
                         slimes3dConway(block, -3, output[0], output[1], AoverB)
                         block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
-                        block.level.server.runCommandSilent(`/particle minecraft:spore_blossom_air ${block.pos.x} ${block.pos.y - 3} ${block.pos.z} 0.75 0.75 0.75 0.3 8`)
+                        block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run particle minecraft:spore_blossom_air ${block.pos.x} ${block.pos.y - 3} ${block.pos.z} 0.75 0.75 0.75 0.3 8`)
                     }
-                    return 50
+                    return 250
                 }
                 return 0;
             }
