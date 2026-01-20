@@ -1,0 +1,9 @@
+[
+ {
+   "match": [
+     "balancedflight:flight_anchor",
+     "ad_astra:oxygen_distributor"
+   ],
+   "result": "minecraft:air"
+ }
+]
