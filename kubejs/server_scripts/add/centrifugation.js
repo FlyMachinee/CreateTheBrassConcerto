@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
         ],
         "results": [
             { "item": "minecraft:white_dye" },
-            { "item": "minecraft:greeb_dye" }
+            { "item": "minecraft:green_dye" }
         ],
         "processingTime": 5
     }).id("dut_create:centrifugation/lime_dye")

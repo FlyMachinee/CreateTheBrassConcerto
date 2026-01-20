@@ -4,10 +4,25 @@
         {
             "type": "minecraft:block_predicate_filter",
             "predicate": {
-                "type": "minecraft:not",
-                "predicate": {
-                    "type": "minecraft:replaceable"
-                }
+                "type": "all_of",
+                "predicates": [
+                    {
+                        "type": "minecraft:not",
+                        "predicate": {
+                            "type": "minecraft:replaceable"
+                        }
+                    },
+                    {
+                        "type": "minecraft:not",
+                        "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": [
+                                "minecraft:bedrock",
+                                "minecraft:sculk"
+                            ]
+                        }
+                    }
+                ]
             }
         }
     ]

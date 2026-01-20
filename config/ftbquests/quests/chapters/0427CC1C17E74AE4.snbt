@@ -1348,6 +1348,25 @@
 			x: 6.0d
 			y: -1.5d
 		}
+		{
+			description: [""]
+			disable_toast: true
+			icon: "minecraft:netherite_upgrade_smithing_template"
+			id: "64B641B66BC97259"
+			rewards: [{
+				id: "53B5B7ED557DB1A4"
+				item: "minecraft:netherite_upgrade_smithing_template"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1D78F94A766315CF"
+				item: "kubejs:coin_diamond"
+				type: "item"
+			}]
+			title: "锻造模板"
+			x: 6.0d
+			y: -2.5d
+		}
 	]
 	title: "小卖部"
 }

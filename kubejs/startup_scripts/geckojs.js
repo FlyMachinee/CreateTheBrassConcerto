@@ -29,7 +29,9 @@ StartupEvents.registry("item", event => {
             if (entity.player && entity.getOffHandItem().id == "kubejs:tin_hard_disk") {
                 let player = entity
                 player.offHandItem.damageValue -= Math.min(Math.floor(512 - 6.4 * tick), player.offHandItem.damageValue)
-                player.setStatusMessage(Text.translate("kubejs.tooltip.stepping_caculator_stop"))
+                if (tick<80){
+                    return player.setStatusMessage(Text.translate("kubejs.tooltip.stepping_caculator_stop"))
+                }
             }
             return itemstack
         })

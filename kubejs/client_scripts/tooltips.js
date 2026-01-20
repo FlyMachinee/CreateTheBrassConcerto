@@ -1,4 +1,6 @@
 ItemEvents.tooltip(event => {
+  event.add(['create:blaze_burner'], Text.translate("kubejs.tooltip.blaze_burner"))
+  event.add(['create:andesite_alloy'], Text.translate("kubejs.tooltip.andesite_alloy"))
   event.add(['kubejs:unknown_prototype'], Text.translate("kubejs.tooltip.unknown_prototype"))
   event.add(['create:crushing_wheel', "create_sa:brass_drone_item", "create:deployer", "createoreexcavation:drilling_machine", "createoreexcavation:extractor", "ad_astra:tier_1_rocket", "design_decor:industrial_iron_boiler_large", "design_decor:zinc_boiler_large", "design_decor:brass_boiler_large", "design_decor:gold_boiler_large", "design_decor:copper_boiler_large", "design_decor:cast_iron_boiler_large", "design_decor:andesite_boiler_large"], Text.translate("kubejs.tooltip.worldcraft"))
   event.add(['geckojs:stepping_caculator'], Text.translate("kubejs.tooltip.stepping_caculator"))

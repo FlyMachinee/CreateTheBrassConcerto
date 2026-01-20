@@ -119,50 +119,15 @@
     },
     {
         "matchItems": [
-            "iceandfire:silver_pile"
-        ],
-        "resultItems": "kubejs:unknown_prototype"
-    },
-    {
-        "matchItems": [
-            "createaddition:electrum_sheet"
-        ],
-        "resultItems": "create:golden_sheet"
-    },
-    {
-        "matchItems": [
-            "createaddition:electrum_ingot"
-        ],
-        "resultItems": "minecraft:gold_ingot"
-    },
-    {
-        "matchItems": [
-            "createaddition:electrum_nugget"
-        ],
-        "resultItems": "minecraft:gold_nugget"
-    },
-    {
-        "matchItems": [
-            "createaddition:electrum_rod"
-        ],
-        "resultItems": "createaddition:gold_rod"
-    },
-    {
-        "matchItems": [
-            "createaddition:electrum_wire"
-        ],
-        "resultItems": "createaddition:gold_wire"
-    },
-    {
-        "matchItems": [
-            "vintageimprovements:electrum_spring"
-        ],
-        "resultItems": "vintageimprovements:golden_spring"
-    },
-    {
-        "matchItems": [
+            "iceandfire:silver_pile",
+            "createaddition:electrum_sheet",
+            "createaddition:electrum_ingot",
+            "createaddition:electrum_nugget",
+            "createaddition:electrum_rod",
+            "createaddition:electrum_wire",
+            "vintageimprovements:electrum_spring",
             "vintageimprovements:small_electrum_spring"
         ],
-        "resultItems": "vintageimprovements:small_golden_spring"
+        "resultItems": "kubejs:unknown_prototype"
     }
 ]
