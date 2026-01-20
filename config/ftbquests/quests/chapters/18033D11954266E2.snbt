@@ -9,51 +9,21 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"&a众所周知，在黄铜协奏曲中，九级锅炉是一种&r&6《前期要花很久才能搞出来的东西》&r&a——那么你最短能用时多久能开始实现它呢？&r"
-				""
-				"&e在生存模式，困难难度下，不得开启作弊，不得额外更改FTB模组设置，不得额外添加模组，不得调整随机刻速度，不得开启流动岩浆转化为岩浆源，不得使用蓝图炮打印带吸管的燃烧室，以建造一台可稳定运行并输出147456su应力的九级锅炉为结束标志&r"
-				""
-				"将存档向作者提交或在B站等平台提供全程录像，你的纪录将被放入此处！此挑战不接收时长超过20分钟的纪录！以下是通关列表:"
-				""
-				"&a1.ShiroishiKaori&r "
-				"-&6RSG&r&e-版本Beta0.7.0，00:13:48&r"
-				""
-				"&a2.ShiroishiKaori&r "
-				"-&6RSG&r&e-版本Beta0.7.0，00:10:55&r"
-				""
-				"&a3.shelwind(cildiant)&r "
-				"-&6RSG&r&e-版本Beta0.7.0，00:08:58&r"
-				""
-				"&a特别纪录.ShadoWistle&r "
-				"-&6？&r&e-发现了一个描述bug：如果仅要求九级炉，那么不需要蒸汽引擎，只需要蒸汽笛即可&r"
-			]
+			description: ["{ftbquests.chapter_18033D11954266E2.quest_2BC66362B16161D4.desc_01}"]
 			icon: "supplementaries:faucet"
 			id: "2BC66362B16161D4"
-			subtitle: "看到神秘评论绷不住了，于是有此挑战"
+			subtitle: "{ftbquests.chapter_18033D11954266E2.quest_2BC66362B16161D4.subtitle}"
 			tasks: [{
 				id: "0BA27E8299EB355A"
-				title: "连接"
+				title: "{ftbquests.chapter_18033D11954266E2.quest_2BC66362B16161D4.task_0BA27E8299EB355A.title}"
 				type: "checkmark"
 			}]
-			title: "《前期锅炉都要搞很久》"
+			title: "{ftbquests.chapter_18033D11954266E2.quest_2BC66362B16161D4.title}"
 			x: 0.0d
 			y: 1.0d
 		}
 		{
-			description: [
-				"&6纪录信息：&r"
-				""
-				"&a规则：&r&eRSG&r "
-				""
-				"&a版本：&r&eBeta0.7.0&r"
-				""
-				"&a附加规则：&r&e无&r"
-				""
-				"&a时长：&r&e00:08:58&r"
-				""
-				"&a留言：&r&e就算是只有个位数fps我也要玩cbc😭&r"
-			]
+			description: ["{ftbquests.chapter_18033D11954266E2.quest_59452E3FE8C4AE81.desc_01}"]
 			icon: {
 				Count: 1
 				id: "minecraft:player_head"
@@ -108,10 +78,10 @@
 				}
 				type: "item"
 			}]
-			title: "RSG纪录保持者"
+			title: "{ftbquests.chapter_18033D11954266E2.quest_59452E3FE8C4AE81.title}"
 			x: 0.0d
 			y: 2.5d
 		}
 	]
-	title: "锅炉速通挑战"
+	title: "{ftbquests.chapter_18033D11954266E2.title}"
 }

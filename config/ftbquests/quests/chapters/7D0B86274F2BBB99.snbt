@@ -10,15 +10,7 @@
 	quests: [
 		{
 			dependencies: ["12791AC9AE74A060"]
-			description: [
-				"&a相信到这里，你已经准备好了化工与电力的基础。&r"
-				""
-				"在将目光放到群星之间之前，让我们先关注怎样让这片土地上的微生物也成为我们的助力。"
-				""
-				"这些细微的生物能帮助我们创造最伟大的工程。"
-				""
-				"&e在这一小节中，你需要翻山越岭，寻找各种不同微生物的聚居地，并学会怎样使用它们来让生产更高端、更高效。&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_3456E20C70FA102A.desc_01}"]
 			id: "3456E20C70FA102A"
 			shape: "gear"
 			size: 1.25d
@@ -26,7 +18,7 @@
 				id: "70FE2BD16CEFD753"
 				type: "checkmark"
 			}]
-			title: "看向细微之处"
+			title: "{ftbquests.chapter_7D0B86274F2BBB99.quest_3456E20C70FA102A.title}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -36,31 +28,14 @@
 				"223775466012800D"
 			]
 			description: [
-				"让我们从培养仓开始吧！"
-				""
-				"黄铜培养仓是获得大部分微生物的必须设备"
-				""
-				"&a黄铜培养仓可以自动向周围（六向）的容器输出产物——而传送带也是容器！&r"
-				""
-				"&e黄铜培养仓会以如下次序依次检测并输出：下-上-北-南-西-东&r"
-				""
-				"&e黄铜培养仓会使得它附近未设置过滤的溜槽不能正常工作——内在逻辑是对于自动输出而言，未设置过滤=仅有空气能通过过滤！&r"
-				""
-				"&a你一般需要在对应的生物群系使用合适的培养基来获得对应的微生物&r。对于大部分微生物来说，你只需要获得第一个母本，接着就可以大量培养了"
-				""
-				"&e你可以在配方中查看微生物具体需要的生物群系，将鼠标移至左下角的空白地图图标处即可显示&r"
+				"{ftbquests.chapter_7D0B86274F2BBB99.quest_2BDD1C7FA08793B2.desc_01}"
 				"{image:kubejs:textures/ftb/culture_bin.png width:100 height:120 align:left}"
-				"&e你可以在思索中查看如何进行精确混带！&r"
-				""
+				"{ftbquests.chapter_7D0B86274F2BBB99.quest_2BDD1C7FA08793B2.desc_02}"
 				"{@pagebreak}"
-				"黄铜培养仓的一个重要问题就是菌种的回流"
-				""
-				"你可以充分利用黄铜培养仓的自动输出来达成这一点"
-				""
-				"使用容器拓展端口可以让黄铜培养仓向自己自动输出"
+				"{ftbquests.chapter_7D0B86274F2BBB99.quest_2BDD1C7FA08793B2.desc_03}"
 				"{image:kubejs:textures/ftb/bin_io.png width:100 height:80 align:center}"
 				"{image:kubejs:textures/ftb/bin_cycle.png width:100 height:80 align:center}"
-				"当然，你也可以直接将产物全部导出再单独回流"
+				"{ftbquests.chapter_7D0B86274F2BBB99.quest_2BDD1C7FA08793B2.desc_04}"
 			]
 			id: "2BDD1C7FA08793B2"
 			size: 1.5d
@@ -76,21 +51,13 @@
 					type: "item"
 				}
 			]
-			title: "温床"
+			title: "{ftbquests.chapter_7D0B86274F2BBB99.quest_2BDD1C7FA08793B2.title}"
 			x: 0.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"异彩原虫是一种来自于末地的微生物，它们代表着末地曾经繁华的过去。"
-				""
-				"在大撕裂中，末地的几乎所有水源被抽干并汇入了主世界，于是异彩原虫的祖先们的生存也变得艰难了起来。经过若干年的演化，几乎不需要水分的异彩原虫代替了它的祖先们。"
-				""
-				"你可以使用它来转化不同的染料，并制造异彩废料"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_5F6416692710B704.desc_01}"]
 			id: "5F6416692710B704"
 			tasks: [{
 				id: "7514E5DCFF7C0B82"
@@ -102,13 +69,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"泥炭原虫栖息在沼泽地、蘑菇地和茂盛的丛林中"
-				""
-				"&e它能够将木炭转化为煤炭——从而在煤的生产中起着决定性作用！"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_791989AD3A1B2555.desc_01}"]
 			id: "791989AD3A1B2555"
 			tasks: [{
 				id: "5311564F6C215DDB"
@@ -120,11 +81,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"金属原虫是一种能够将基础金属彼此转化的微生物"
-				""
-				"&e你可以在下界合金碎片中发现它——使用暗影钢即可批量生产下界合金！&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_09A9BB62F0A2D207.desc_01}"]
 			id: "09A9BB62F0A2D207"
 			tasks: [{
 				id: "20487F4CF2326485"
@@ -136,17 +93,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"蓝焰衣原体是烈焰支原体的祖先，它们曾在大撕裂带来的大量高能燃料中生存，但在下界的高能燃料逐渐枯竭后便渐渐从下界中消失"
-				""
-				"你可以利用它们来创造比超级加热更高温的环境，这将能够用于诸多重要的配方——比如过热蒸汽、碳化硅、石墨烯"
-				""
-				"除此以外，它也是踏入太空时代的必备品——它可以用于炼钢"
-				""
-				"如果你需要大量的衣原体，你可以考虑通过烈焰蛋糕来生产"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_70B71AF12951D64D.desc_01}"]
 			id: "70B71AF12951D64D"
 			rewards: [{
 				count: 3
@@ -408,13 +355,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"烈焰支原体主要生活在下界，消耗着下界中的燃料来维持下界的温度。"
-				""
-				"你可以用它来优化一部分配方，或是用它来生产另一种微生物"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_01AB3C68997C8589.desc_01}"]
 			id: "01AB3C68997C8589"
 			tasks: [{
 				id: "394CDF613B534EDD"
@@ -426,11 +367,7 @@
 		}
 		{
 			dependencies: ["01AB3C68997C8589"]
-			description: [
-				"烈焰疣是烈焰支原体与地狱疣发生遗传因子混杂从而产生的新物种"
-				""
-				"它的代谢产物能将水转变为粗制的药水，并且能够对一些生物细胞进行重组，将其重新变为干细胞。"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_74DB48C08698EBE6.desc_01}"]
 			id: "74DB48C08698EBE6"
 			size: 1.0d
 			tasks: [{
@@ -443,15 +380,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"酵母菌栖息在那些有充足植物纤维的环境中"
-				""
-				"作为主世界最强大的真菌，酵母菌能够产生杀死许多微生物的环境：它能够消耗大量的氧气从而创造厌氧环境，能够产生乙醇这种能杀死许多微生物的有毒物质。除此以外，它还能在高盐环境下存活。"
-				""
-				"你可以利用它来更快速的生产糖、种子油和乙醇"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_0A02BCD3D4754B70.desc_01}"]
 			id: "0A02BCD3D4754B70"
 			tasks: [{
 				id: "6B36A449466DA363"
@@ -463,13 +392,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"杂菌是那些暂时没有发现特别用途的(或是还未能找出到底是哪种微生物在生效)微生物的统称"
-				""
-				"虽然没有特别的用途，但是和其它微生物一样，你也可以将它制作成生物质"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_0AB1CFD29C12441F.desc_01}"]
 			id: "0AB1CFD29C12441F"
 			tasks: [{
 				id: "76CD5E64CED4AFE6"
@@ -481,13 +404,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"乳酪月藻是一种只栖息在月球上的藻类"
-				""
-				"它能够将牛奶变成乳酪，并且能够产生戴斯矿"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_734B06D72A4E973A.desc_01}"]
 			id: "734B06D72A4E973A"
 			tasks: [{
 				id: "7FADE336BDE3197E"
@@ -499,13 +416,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"幽匿是一种厌光的食腐微生物，它们能够利用各种生物的死亡来壮大自己"
-				""
-				"幽匿催发体就是幽匿集群中富有生殖能力的那部分，它们能够产生各种幽匿产物，并且一样拥有强大的产生经验的能力。"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_10286F0C77CB613E.desc_01}"]
 			id: "10286F0C77CB613E"
 			tasks: [{
 				id: "0052B84DEC657D09"
@@ -517,7 +428,7 @@
 		}
 		{
 			dependencies: ["10286F0C77CB613E"]
-			description: ["你可以用刷怪笼配合刷怪蛋来量产一些生物"]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_49EF1E7F1C530D82.desc_01}"]
 			id: "49EF1E7F1C530D82"
 			tasks: [{
 				id: "7004F74A65CC19E9"
@@ -529,11 +440,7 @@
 		}
 		{
 			dependencies: ["5F6416692710B704"]
-			description: [
-				"通过生产出的异彩废料，你能够生产一种新的材料——异彩化合物"
-				""
-				"异彩化合物本身并不出彩，但重要的是它能够被转化为一些优质的材料——比如光辉石"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_65D586886AC6EA4E.desc_01}"]
 			id: "65D586886AC6EA4E"
 			tasks: [{
 				id: "704E3FB108650638"
@@ -549,10 +456,7 @@
 		}
 		{
 			dependencies: ["70B71AF12951D64D"]
-			description: [
-				"碳化硅是一种十分耐高温的陶瓷材料"
-				"除了航天工程以外，你还可以用它作为打磨材料"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_47BC32DC714C9254.desc_01}"]
 			id: "47BC32DC714C9254"
 			tasks: [{
 				id: "0599C0AD8738FCF3"
@@ -564,17 +468,7 @@
 		}
 		{
 			dependencies: ["734B06D72A4E973A"]
-			description: [
-				"虽然听起来很奇怪——但奶酪也是戴斯生产必不可少的一环"
-				""
-				"你可以考虑使用以下三种方式在月球获取牛奶："
-				""
-				"1.通过氧气分配器创造有氧环境，然后在月球饲育牛"
-				""
-				"2.通过笼子装载一头小牛，笼中小牛也可用于挤奶"
-				""
-				"3.通过乳信息素催化生产牛奶"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_4040B38F2391915F.desc_01}"]
 			id: "4040B38F2391915F"
 			tasks: [{
 				id: "6E90EBD94452460D"
@@ -586,11 +480,7 @@
 		}
 		{
 			dependencies: ["09A9BB62F0A2D207"]
-			description: [
-				"金属原虫生产矿物时会产生大量的石灰岩——这也许解释了为什么主世界在富集了如此巨量的水资源的同时仍然以陆地为主"
-				""
-				"但是这么多的石灰岩要用来做什么呢？"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_5A7E5BFAEBA51789.desc_01}"]
 			id: "5A7E5BFAEBA51789"
 			tasks: [{
 				id: "7F922DD5BB1DB820"
@@ -602,10 +492,7 @@
 		}
 		{
 			dependencies: ["47BC32DC714C9254"]
-			description: [
-				"石墨烯是一种性质优良的碳材料"
-				"你将在航天工程中大量使用它"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_2683F194D0509D7F.desc_01}"]
 			id: "2683F194D0509D7F"
 			tasks: [{
 				id: "096EDF7AD0C269B5"
@@ -617,7 +504,7 @@
 		}
 		{
 			dependencies: ["2683F194D0509D7F"]
-			description: ["纤维布是经特殊浸润处理的无纺碳纤维，能够起到良好的密封、隔热作用，是制作航天服的核心材料"]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_5307FD0D591208ED.desc_01}"]
 			id: "5307FD0D591208ED"
 			tasks: [{
 				id: "59780606FA088B25"
@@ -629,7 +516,7 @@
 		}
 		{
 			dependencies: ["70B71AF12951D64D"]
-			description: ["你可以使用蓝焰衣原体来装填黄铜区块加载器！"]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_2A2EA60680E51644.desc_01}"]
 			id: "2A2EA60680E51644"
 			tasks: [{
 				id: "6F757C62AAE7EDE9"
@@ -641,22 +528,7 @@
 		}
 		{
 			dependencies: ["2A2EA60680E51644"]
-			description: [
-				"&e大型电解池是一种多方块机器！&r你需要在核心附近建造指定的结构来使用它！"
-				""
-				"&6如果配方进行时电量不足，你将丢失全部的原料！&r"
-				""
-				"利用大型电解池，你可以更快速的进行电解配方，并且还可以进行一些独特的配方！"
-				"在思索中查看使用方式！"
-				""
-				"&e碳素电极可能会在排出阴阳极物品/流体产物之后损坏，概率为每次配方1%——注意，阴极产物与阳极产物损坏电极的事件是独立的！&r"
-				""
-				"特别地，电解水并不消耗电极"
-				""
-				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
-				""
-				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！一般而言，重新进入存档可以解决99%的问题&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_2D9647851BA4A80A.desc_01}"]
 			id: "2D9647851BA4A80A"
 			rewards: [{
 				id: "04E2CBC475CD3DF4"
@@ -766,19 +638,13 @@
 				item: "kubejs:electrolytic_cell"
 				type: "item"
 			}]
-			title: "更好的电解器!"
+			title: "{ftbquests.chapter_7D0B86274F2BBB99.quest_2D9647851BA4A80A.title}"
 			x: 1.5d
 			y: 4.0d
 		}
 		{
 			dependencies: ["2D9647851BA4A80A"]
-			description: [
-				"现在，你应该能够制作塑钢这一用于制作高级工具的绝佳材料了"
-				""
-				"利用塑钢，你可以制作冲击钻和动力剑，它们会是很好用的装备——&e你甚至能使用冲击钻破坏基岩！&r"
-				""
-				"此外，你也可以制作专家级的枪械工作台了"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_2C5CB3C758745694.desc_01}"]
 			id: "2C5CB3C758745694"
 			tasks: [
 				{
@@ -804,19 +670,13 @@
 					type: "item"
 				}
 			]
-			title: "打工人套件"
+			title: "{ftbquests.chapter_7D0B86274F2BBB99.quest_2C5CB3C758745694.title}"
 			x: 2.0d
 			y: 5.5d
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"谐振原虫是一种行星轨道附近广泛存在的微生物，以宇宙空间中的辐射为生"
-				""
-				"它们拥有产生激光、辐射转化、存储数据、操纵空间等能力，可以用于许多重要配方，并且将成为你轨道工业的基石！"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_19C2E67BCF1BDF1F.desc_01}"]
 			id: "19C2E67BCF1BDF1F"
 			tasks: [{
 				id: "790EA78883DAC254"
@@ -828,15 +688,7 @@
 		}
 		{
 			dependencies: ["2BDD1C7FA08793B2"]
-			description: [
-				"在制作强力胶时，你可能已经发现了史莱姆这种生物的重要性。"
-				""
-				"而史莱姆的共生生物——粘菌，将这种生物的重要性提升到了无与伦比的高度！"
-				""
-				"粘菌可以用于批量生产史莱姆粘液、史莱姆粘胶和史莱姆凝脂，是工业生产中十分重要的中和剂与粘合剂。"
-				""
-				"&e你可以在配方左下角的空白地图图标中查看该微生物具体需要的生物群系&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_17D4B444F46EB159.desc_01}"]
 			id: "17D4B444F46EB159"
 			tasks: [{
 				id: "0DE05014FAF9CA77"
@@ -848,19 +700,7 @@
 		}
 		{
 			dependencies: ["51950D03F6955270"]
-			description: [
-				"&e工业高炉是一种大型多方块机器！&r你需要在核心附近建造指定的结构（可以是不同朝向的）来使用它！"
-				""
-				"你需要通过工业高炉来生产钢、戴斯等高级金属。&e如果你觉得输氧太慢，那么不妨试试高速卸罐机！&r"
-				""
-				"在思索中查看使用方式！"
-				""
-				"如果你不知道如何正确输入物品的话，请查看&a机械动力之页&r的&e混带&r一节！"
-				""
-				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
-				""
-				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
-			]
+			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_62A2FDFE9317F04D.desc_01}"]
 			id: "62A2FDFE9317F04D"
 			rewards: [
 				{
@@ -1049,11 +889,11 @@
 				item: "kubejs:shaft_furnace"
 				type: "item"
 			}]
-			title: "大炼钢铁！"
+			title: "{ftbquests.chapter_7D0B86274F2BBB99.quest_62A2FDFE9317F04D.title}"
 			x: 0.0d
 			y: 3.75d
 		}
 	]
-	subtitle: ["那些看不见的"]
-	title: "最微小的伟大"
+	subtitle: ["{ftbquests.chapter_7D0B86274F2BBB99.subtitle_1}"]
+	title: "{ftbquests.chapter_7D0B86274F2BBB99.title}"
 }

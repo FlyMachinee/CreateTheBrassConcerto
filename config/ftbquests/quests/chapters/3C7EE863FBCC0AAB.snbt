@@ -10,27 +10,19 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"你也许在疑惑什么是各种金属的增殖——那么这份乐谱应当会帮到你！"
-				""
-				"&e它暂时只包含了初期使用的矿物生产方法！&r"
-			]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_4B74E620CC367150.desc_01}"]
 			id: "4B74E620CC367150"
 			shape: "gear"
 			tasks: [{
 				id: "5B3FF222CFBBA2D0"
-				title: "欢迎来到冶金之页！"
+				title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_4B74E620CC367150.task_5B3FF222CFBBA2D0.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.5d
 		}
 		{
-			description: [
-				"&e绯红岩可以被工作盆铸造盖铸造为1铁锭！&r"
-				""
-				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
-			]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_2D5F34751921A307.desc_01}"]
 			id: "2D5F34751921A307"
 			size: 1.25d
 			tasks: [{
@@ -38,16 +30,12 @@
 				item: "create:crimsite"
 				type: "item"
 			}]
-			title: "冶金之页-绯红岩"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_2D5F34751921A307.title}"
 			x: 1.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"&e辉绿岩可以被工作盆铸造盖铸造为1铜锭！&r"
-				""
-				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
-			]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_76917EBDECCF58F8.desc_01}"]
 			id: "76917EBDECCF58F8"
 			size: 1.25d
 			tasks: [{
@@ -55,16 +43,12 @@
 				item: "create:veridium"
 				type: "item"
 			}]
-			title: "冶金之页-辉绿岩"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_76917EBDECCF58F8.title}"
 			x: -1.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"&e赭金砂可以被工作盆铸造盖铸造为1金锭！&r"
-				""
-				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
-			]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_4991EB347AB72808.desc_01}"]
 			id: "4991EB347AB72808"
 			size: 1.25d
 			tasks: [{
@@ -72,16 +56,12 @@
 				item: "create:ochrum"
 				type: "item"
 			}]
-			title: "冶金之页-赭金砂"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_4991EB347AB72808.title}"
 			x: -3.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"&e锡石可以被工作盆铸造盖铸造为1锡锭！&r"
-				""
-				"&e你可以通过工作盆的自动导出模式来避免使用黄铜漏斗过滤输出！&r"
-			]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_12DB85A684EB6DA8.desc_01}"]
 			id: "12DB85A684EB6DA8"
 			size: 1.25d
 			tasks: [{
@@ -89,13 +69,13 @@
 				item: "kubejs:raw_tin"
 				type: "item"
 			}]
-			title: "冶金之页-锡石"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_12DB85A684EB6DA8.title}"
 			x: 3.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["4991EB347AB72808"]
-			description: ["&a金锭&r可以被动力辊压机压成&e1&r个&a金板&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_1F3DF392BF8DCB5E.desc_01}"]
 			id: "1F3DF392BF8DCB5E"
 			tasks: [{
 				id: "206CC74C98323FBF"
@@ -107,7 +87,7 @@
 		}
 		{
 			dependencies: ["76917EBDECCF58F8"]
-			description: ["&a铜锭&r可以被动力辊压机压成&e1&r个&a铜板&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_2806BF2F9EF4B768.desc_01}"]
 			id: "2806BF2F9EF4B768"
 			tasks: [{
 				id: "1E46556657C61990"
@@ -119,7 +99,7 @@
 		}
 		{
 			dependencies: ["2D5F34751921A307"]
-			description: ["&a铁锭&r可以被动力辊压机压成&e1&r个&a铁板&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_5D6A2CB9FEC83A1E.desc_01}"]
 			id: "5D6A2CB9FEC83A1E"
 			tasks: [{
 				id: "1451D4FE8B5B2914"
@@ -131,7 +111,7 @@
 		}
 		{
 			dependencies: ["12DB85A684EB6DA8"]
-			description: ["&a锡锭&r可以被动力辊压机压成&e1&r个&a锡板&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_2C21F8C4DD0A5B12.desc_01}"]
 			id: "2C21F8C4DD0A5B12"
 			tasks: [{
 				id: "6EEC813299FEF97B"
@@ -143,7 +123,7 @@
 		}
 		{
 			dependencies: ["1F3DF392BF8DCB5E"]
-			description: ["&e金板 + 250mB岩浆 = 2赭金砂&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_27EAC2260635A0E2.desc_01}"]
 			id: "27EAC2260635A0E2"
 			tasks: [{
 				id: "3902858E0F984B06"
@@ -155,7 +135,7 @@
 		}
 		{
 			dependencies: ["2806BF2F9EF4B768"]
-			description: ["&e铜板 + 250mB水 = 2辉绿岩&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_1920229728025683.desc_01}"]
 			id: "1920229728025683"
 			tasks: [{
 				id: "6BF968013B4ED5B8"
@@ -167,7 +147,7 @@
 		}
 		{
 			dependencies: ["5D6A2CB9FEC83A1E"]
-			description: ["&e铁板 + 250mB岩浆 = 2绯红岩&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_0E14C183837BDA2E.desc_01}"]
 			id: "0E14C183837BDA2E"
 			tasks: [{
 				id: "3A5A4CEB4436BAE5"
@@ -179,7 +159,7 @@
 		}
 		{
 			dependencies: ["2C21F8C4DD0A5B12"]
-			description: ["&e锡板 + 250mB水 = 2锡石&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_05E7404BB4D13F6A.desc_01}"]
 			id: "05E7404BB4D13F6A"
 			tasks: [{
 				id: "3248CA636A4146D4"
@@ -191,7 +171,7 @@
 		}
 		{
 			dependencies: ["27EAC2260635A0E2"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_624CB4466E943732.desc_01}"]
 			id: "624CB4466E943732"
 			size: 1.25d
 			tasks: [{
@@ -199,13 +179,13 @@
 				item: "create:ochrum"
 				type: "item"
 			}]
-			title: "冶金之页-赭金砂"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_624CB4466E943732.title}"
 			x: -3.0d
 			y: 6.5d
 		}
 		{
 			dependencies: ["1920229728025683"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_0662E34246691544.desc_01}"]
 			id: "0662E34246691544"
 			size: 1.25d
 			tasks: [{
@@ -213,13 +193,13 @@
 				item: "create:veridium"
 				type: "item"
 			}]
-			title: "冶金之页-辉绿岩"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_0662E34246691544.title}"
 			x: -1.0d
 			y: 6.5d
 		}
 		{
 			dependencies: ["0E14C183837BDA2E"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_7F9AB0A99547F1AC.desc_01}"]
 			id: "7F9AB0A99547F1AC"
 			size: 1.25d
 			tasks: [{
@@ -227,13 +207,13 @@
 				item: "create:crimsite"
 				type: "item"
 			}]
-			title: "冶金之页-绯红岩"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_7F9AB0A99547F1AC.title}"
 			x: 1.0d
 			y: 6.5d
 		}
 		{
 			dependencies: ["05E7404BB4D13F6A"]
-			description: ["&e经过如此的一个循环，你的矿物就变多了！（也许是2倍，也许是更多！）&r"]
+			description: ["{ftbquests.chapter_3C7EE863FBCC0AAB.quest_27BEAE1DC6A31482.desc_01}"]
 			id: "27BEAE1DC6A31482"
 			size: 1.25d
 			tasks: [{
@@ -241,17 +221,14 @@
 				item: "kubejs:raw_tin"
 				type: "item"
 			}]
-			title: "冶金之页-锡石"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_27BEAE1DC6A31482.title}"
 			x: 3.0d
 			y: 6.5d
 		}
 		{
 			description: [
-				"在你开始金属增殖之前，你首先应当拥有无限的岩浆源！"
-				""
-				"在主世界的地下和下界都拥有大量的天然岩浆池，其中很多都超过了512立方！"
-				""
-				"[ \"如果你疑惑如何提交此任务，可以查看第一乐章第一节任务中的\", { \"text\": \"自动化任务！\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2A43D8C247527035\" } } ]"
+				"{ftbquests.chapter_3C7EE863FBCC0AAB.quest_1648A078C72264C7.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_3C7EE863FBCC0AAB.quest_1648A078C72264C7.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"2A43D8C247527035\"}, \"translate\": \"ftbquests.chapter_3C7EE863FBCC0AAB.quest_1648A078C72264C7.desc_02.rich_02\"}]"
 			]
 			id: "1648A078C72264C7"
 			rewards: [{
@@ -267,10 +244,10 @@
 				id: "4FC71F0DF62DA426"
 				type: "fluid"
 			}]
-			title: "冶金之页-无限岩浆"
+			title: "{ftbquests.chapter_3C7EE863FBCC0AAB.quest_1648A078C72264C7.title}"
 			x: 0.0d
 			y: -1.0d
 		}
 	]
-	title: "乐谱-冶金之页"
+	title: "{ftbquests.chapter_3C7EE863FBCC0AAB.title}"
 }

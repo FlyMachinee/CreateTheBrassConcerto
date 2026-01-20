@@ -19,17 +19,7 @@
 				"038403EDBDA076AB"
 				"37DE1583F992DD4B"
 			]
-			description: [
-				"钢是飞向太空的必备材料！"
-				"使用&e高炉、密封压缩机和爆破压缩机&r来制作它！"
-				"首先在&e高炉&r中利用&a石灰石、蓝焰衣原体和粉碎煤&r将工业铁变为半成品钢"
-				""
-				"接着，使用&e密封压缩机&r在&a超级加热&r下&a吹入氨气或粗制药水&r将半成品钢变为钢水。在此过程中，将损失50%的质量"
-				""
-				"然后，使用&e密封压缩机&r&a吹入冷冻剂&r将钢水变为钢块。"
-				""
-				"最后，使用&e爆破压缩机&r将钢块压缩为钢板！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_2C70A7487912B250.desc_01}"]
 			id: "2C70A7487912B250"
 			size: 1.5d
 			tasks: [{
@@ -37,19 +27,13 @@
 				item: "ad_astra:steel_ingot"
 				type: "item"
 			}]
-			title: "致密金属"
+			title: "{ftbquests.chapter_271FE7753AA4A820.quest_2C70A7487912B250.title}"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["2C70A7487912B250"]
-			description: [
-				"火箭上有大量的零件——这些零件大多寿命不长，需要在每次发射后更换"
-				""
-				"所以你需要提前准备好更换的零件"
-				""
-				"&a对它按U查看为火箭更换零件的配方&r"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_6FEB0A4901D3218C.desc_01}"]
 			id: "6FEB0A4901D3218C"
 			tasks: [{
 				id: "31D30233C2C3BE66"
@@ -61,13 +45,7 @@
 		}
 		{
 			dependencies: ["2C70A7487912B250"]
-			description: [
-				"这个燃料储罐是一次性的，每次发射后都需要重新为火箭装填"
-				""
-				"&a对它按U查看为火箭装填燃料的配方&r"
-				""
-				"&e它配方中的液体应添加在工作盆中！&r"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_0DAF0D205C441E45.desc_01}"]
 			id: "0DAF0D205C441E45"
 			tasks: [{
 				id: "2B895D39CECB2DDC"
@@ -79,15 +57,7 @@
 		}
 		{
 			dependencies: ["2C70A7487912B250"]
-			description: [
-				"钢制引擎是最基础的火箭引擎"
-				""
-				"它是一次性的，每次发射后都需要更换"
-				""
-				"&a对它按U查看为火箭更换引擎的配方&r"
-				""
-				"&e它配方中的液体应添加在工作盆中！&r"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_59AE4AFD32C80669.desc_01}"]
 			id: "59AE4AFD32C80669"
 			tasks: [{
 				id: "3438A97BA9F93ADC"
@@ -105,20 +75,7 @@
 				"0F584EFA37EF490D"
 				"010F56E110CF0F3A"
 			]
-			description: [
-				"&a火箭的箭体需要在通过世界合成的方式合成，具体请查看思索&r"
-				""
-				"在获得箭体后，你还需要为其加装引擎、配件和燃料，完成所有准备的火箭需要在放置在发射台上发射"
-				""
-				"&e有些配方你也许无法直接查看——比如如何为火箭提供燃料——那是一些遗留下来的小问题，你可以通过对它们的材料按U来查看它们的配方&r"
-				""
-				"当然，你还需要准备更多的东西——你需要还需要考虑到达后的基地建设与返程"
-				""
-				"&a如果你要建设轨道空间站，那么你还需要准备空间站所需的材料！&r不同空间站使用不同材料建造，可以在拓荒指南中查看！"
-				""
-				"至于火箭的操作？"
-				"发射时只需要按下空格，但是&c降落时需要在合适的高度开始按住空格减速，否则火箭将会爆炸！&r"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_51EEA6FC7337439F.desc_01}"]
 			id: "51EEA6FC7337439F"
 			tasks: [
 				{
@@ -140,19 +97,7 @@
 			y: 3.5d
 		}
 		{
-			description: [
-				"为了更进一步的发展，你需要前往太空"
-				""
-				"在近地轨道、月球轨道和月球上建造空间站与基地，获取地球上十分缺乏的材料，发展更高级的工业和星际物流！"
-				""
-				"为了在月球建立工业基地，你需要做好充分的准备，你需要习惯低重力环境，需要学会开发新的资源，还需要学会面对外星上的怪物威胁和探索外星的文明遗迹。"
-				""
-				"&e正常来说，你需要通过观星等方式获取一个星球的轨道信息后才能进行发射任务——但凑巧的是，我可以为你代劳。所以，你可以直接前往近地轨道、月球和月球轨道！&r"
-				""
-				"现在，开始吧！"
-				""
-				"&e这是你真正前往太空的第一步！&r"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_37DE1583F992DD4B.desc_01}"]
 			id: "37DE1583F992DD4B"
 			rewards: [{
 				id: "37CB0CB12546E63C"
@@ -161,7 +106,7 @@
 			}]
 			tasks: [{
 				id: "414C48268203F9E6"
-				title: "前往月球吧！"
+				title: "{ftbquests.chapter_271FE7753AA4A820.quest_37DE1583F992DD4B.task_414C48268203F9E6.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -169,15 +114,7 @@
 		}
 		{
 			dependencies: ["2C70A7487912B250"]
-			description: [
-				"航天服是你在外星球生存的必须品......吗？"
-				""
-				"我发现你从另一个世界带来的那套设备似乎还“能用”"
-				""
-				"只要你不被液体或细雪浸没，它就可以持续为你供应氧气与适宜的温度——所以基本上来说，你是不需要航天服的"
-				""
-				"当然，你仍然可以穿上它，就当是好看了！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_010F56E110CF0F3A.desc_01}"]
 			id: "010F56E110CF0F3A"
 			tasks: [
 				{
@@ -226,17 +163,13 @@
 					type: "item"
 				}
 			]
-			title: "航天服"
+			title: "{ftbquests.chapter_271FE7753AA4A820.quest_010F56E110CF0F3A.title}"
 			x: -1.5d
 			y: 3.0d
 		}
 		{
 			dependencies: ["2C70A7487912B250"]
-			description: [
-				"虽然这可能没什么用，但这台设备可以测算附近的温度和重力系数！"
-				""
-				"重力模拟器可以允许你调整它附近的重力系数——不久后你就能制造它了！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_0F584EFA37EF490D.desc_01}"]
 			id: "0F584EFA37EF490D"
 			rewards: [{
 				id: "581EB7EF0E15FB9F"
@@ -254,15 +187,8 @@
 		{
 			dependencies: ["51EEA6FC7337439F"]
 			description: [
-				"&a恭喜你登上月球！&r"
-				""
-				"但先别急着高兴——你还有许多事情需要做。你需要在月球建立自己的基地，而月球的环境并不良好。"
-				""
-				"月球在很久以前拥有充足的氧气、熊熊燃烧的内核、完整的生态系统和发达的古代文明——但大撕裂改变了这一切。大撕裂破坏了月球的生态系统，吸走了月球内核的大半能量，最终导致月球变成了这样一个冰冷的星球。"
-				""
-				"为了在这里建立基地，&a你需要想办法获取足够的氢和氧，各种燃料和矿物，以及氮等气体。幸运的是，这里的工业废料可以为你提供帮助。&r相信这对于现在的你而言并不算特别困难，你应该能够找到获取它们的办法。"
-				""
-				"[ \"如果你实在没有头绪，可以在乐谱中查看刚刚为你解锁的\", { \"text\": \"拓荒之页！\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7E616A7217320035\" } } ]"
+				"{ftbquests.chapter_271FE7753AA4A820.quest_1CAE801EB30A50F9.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_1CAE801EB30A50F9.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"7E616A7217320035\"}, \"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_1CAE801EB30A50F9.desc_02.rich_02\"}]"
 			]
 			id: "1CAE801EB30A50F9"
 			rewards: [
@@ -529,42 +455,26 @@
 				id: "0A2C818F8C33EC91"
 				type: "advancement"
 			}]
-			title: "回家的第一步"
+			title: "{ftbquests.chapter_271FE7753AA4A820.quest_1CAE801EB30A50F9.title}"
 			x: 0.0d
 			y: 5.25d
 		}
 		{
 			dependencies: ["1CAE801EB30A50F9"]
-			description: [
-				"你也许已经在地球上见过这种矿物了，但是你无法通过地球的材料完成熔炼。"
-				""
-				"粗戴斯的还原条件较为苛刻，你需要月壤中的某种特殊成分才能完成对粗戴斯的还原"
-				""
-				"或者，你也许可以找到另一种方式制作戴斯？"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_464972F2946AF5A6.desc_01}"]
 			id: "464972F2946AF5A6"
 			tasks: [{
 				id: "1BEB0B8A837D00C6"
 				item: "ad_astra:desh_ingot"
 				type: "item"
 			}]
-			title: "乳酪金属"
+			title: "{ftbquests.chapter_271FE7753AA4A820.quest_464972F2946AF5A6.title}"
 			x: -1.5d
 			y: 4.5d
 		}
 		{
 			dependencies: ["1CAE801EB30A50F9"]
-			description: [
-				"铝工业是太空工程、精算工程等工业方向的基础！"
-				""
-				"在月球寻找并开发&e铝矿脉&r，你需要&e巨型粉碎机&r、&e工业高炉&r、&e大量闪长合金&r（&a你应该没有把它们全部销毁吧？&r）、&e大量的电能&r、&e大型电解池&r以及&e合金炉&r！"
-				""
-				"以铝为基础，你可以改善炼钢效率、通过铝热剂培育蓝焰衣原体；生产&e轻质复合板&r、&e散热元件&r、&e各种火箭零件&r、&a粘胶&r等材料，从而全面进入下一个生产阶段！"
-				""
-				"除此以外，以钨、铝、钢、聚合物复合成的高级合金——&a塑钢&r，能够制造更加强力的工具！"
-				""
-				"实际上而言，铝在地球上并不罕见——比如蓝宝石、粘土、绿宝石中也同样含有铝，但它们需要更先进的技术才能进行提炼"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_37C5D70E6BC760CF.desc_01}"]
 			id: "37C5D70E6BC760CF"
 			tasks: [{
 				id: "697557C50EBA8CC2"
@@ -576,11 +486,7 @@
 		}
 		{
 			dependencies: ["39E57EA5F66BA411"]
-			description: [
-				"轻质复合板是绝佳的火箭外壳材料，使用铝和铜复合或是碳纤维与铜复合而成"
-				""
-				"&e它配方之一的最后一步的冷冻剂应添加在工作盆中！&r"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_26109FCB1D427253.desc_01}"]
 			id: "26109FCB1D427253"
 			tasks: [{
 				id: "7B1FED24F2E6AF9E"
@@ -592,13 +498,7 @@
 		}
 		{
 			dependencies: ["1CAE801EB30A50F9"]
-			description: [
-				"在制作强力胶时，你可能已经发现了史莱姆这种生物的重要性。"
-				""
-				"而史莱姆的共生生物——粘菌，将这种生物的重要性提升到了无与伦比的高度！"
-				""
-				"你需要修建空间站或是利用大量的花岗合金产生的微量辐射来获取这种微生物！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_39E57EA5F66BA411.desc_01}"]
 			id: "39E57EA5F66BA411"
 			tasks: [{
 				id: "3DDE8D38AF7CDEB5"
@@ -610,11 +510,7 @@
 		}
 		{
 			dependencies: ["464972F2946AF5A6"]
-			description: [
-				"火箭维修盒可以用于制作能够自动化星际运输的运载火箭"
-				""
-				"在每次发射后，你都需要火箭维修盒来修复在太空中受损的运载火箭。"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_674C22808372B20B.desc_01}"]
 			id: "674C22808372B20B"
 			tasks: [{
 				id: "14689C4417285050"
@@ -626,11 +522,7 @@
 		}
 		{
 			dependencies: ["1454D1A448CB429E"]
-			description: [
-				"散热元件是火箭、卫星等高级设备的必需品"
-				""
-				"你需要在每次使用卫星后为之补充！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_7DE3F77D4A648908.desc_01}"]
 			id: "7DE3F77D4A648908"
 			tasks: [{
 				id: "6DC5DDFB2D23AC8D"
@@ -645,7 +537,7 @@
 				"26109FCB1D427253"
 				"5298370E29854902"
 			]
-			description: ["火箭陀螺仪是火箭使用的高级导航设备！"]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_6D46DF6D78C8AB63.desc_01}"]
 			id: "6D46DF6D78C8AB63"
 			tasks: [{
 				id: "009814EBD5BC270D"
@@ -657,7 +549,7 @@
 		}
 		{
 			dependencies: ["26109FCB1D427253"]
-			description: ["为了适配火箭、卫星等设备的用电环境，你需要一些更特别的接电器！"]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_5298370E29854902.desc_01}"]
 			id: "5298370E29854902"
 			tasks: [{
 				id: "2CB6BDEB3507439E"
@@ -672,11 +564,7 @@
 				"7DE3F77D4A648908"
 				"209E012ED51F7563"
 			]
-			description: [
-				"火箭构件是火箭的基本组成"
-				""
-				"你只能通过序列组装的方式来制作它"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_6C682679F1590F9C.desc_01}"]
 			id: "6C682679F1590F9C"
 			tasks: [{
 				id: "6388C243AE105A36"
@@ -688,11 +576,7 @@
 		}
 		{
 			dependencies: ["6B9C8BA61BB374C6"]
-			description: [
-				"火箭气瓶用于装载火箭所需的燃料氧化剂"
-				""
-				"使用自动化构筑站来快速制作它！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_44087A421EA35356.desc_01}"]
 			id: "44087A421EA35356"
 			tasks: [{
 				id: "7CB09AD29B4521C5"
@@ -707,11 +591,7 @@
 				"6B9C8BA61BB374C6"
 				"44087A421EA35356"
 			]
-			description: [
-				"你可以使用若干种不同的燃料来填充火箭燃料罐"
-				""
-				"在每次发射后，你都需要重新补充它！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_209E012ED51F7563.desc_01}"]
 			id: "209E012ED51F7563"
 			tasks: [{
 				id: "7877A5B32144682A"
@@ -723,11 +603,7 @@
 		}
 		{
 			dependencies: ["1454D1A448CB429E"]
-			description: [
-				"铝渣和铝之间的转换并非是无损的，并且不能直接转换！"
-				""
-				"我认为你应当注意这一点"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_6B9C8BA61BB374C6.desc_01}"]
 			id: "6B9C8BA61BB374C6"
 			tasks: [{
 				id: "0AFE8F80D7C2B88A"
@@ -739,7 +615,7 @@
 		}
 		{
 			dependencies: ["37C5D70E6BC760CF"]
-			description: ["你必须使用铝土粉冶炼熔融氧化铝，以避免高炉堵塞！"]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_1454D1A448CB429E.desc_01}"]
 			id: "1454D1A448CB429E"
 			tasks: [{
 				id: "42F4229C195220DA"
@@ -757,13 +633,8 @@
 				"209E012ED51F7563"
 			]
 			description: [
-				"货运火箭是一种只需要简单维护的可重复利用火箭——你只需要在发射时提供导航数据，并在每次发射后提供维修盒、燃料罐和冷却剂即可"
-				""
-				"它不止可以运货，还可以载人"
-				""
-				"它将成为你星际物流系统的起点！"
-				""
-				"[ \"如果你需要运送流体的话，你可以考虑使用\", { \"text\": \"密封储罐\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"37B807F2628934C1\" } }, \"！\" ]"
+				"{ftbquests.chapter_271FE7753AA4A820.quest_19EACEC5C977A2FA.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_19EACEC5C977A2FA.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"37B807F2628934C1\"}, \"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_19EACEC5C977A2FA.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_19EACEC5C977A2FA.desc_02.rich_03\"}]"
 			]
 			icon: {
 				Count: 1
@@ -1047,15 +918,7 @@
 		}
 		{
 			dependencies: ["37DE1583F992DD4B"]
-			description: [
-				"你也许发现了：在月球，你需要大量的奶来生产乳酪这一重要原料"
-				""
-				"&a为了稳定地获取牛奶，你有三种可选方案：&r"
-				""
-				"&e1-使用&r&a氧气分配器&r&e提供氧气，在范围内饲养牛&r"
-				"&e2-使用&r&a笼子&r&e捕捉幼年牛——包含了牛的笼子同样可以用于挤奶！（无需氧气）&r"
-				"&e3-使用&r&a信息素&r&e作为催化剂合成牛奶！&r"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_1D258DC971D88A17.desc_01}"]
 			id: "1D258DC971D88A17"
 			rewards: [{
 				id: "73EA7F220FD9D021"
@@ -1191,11 +1054,11 @@
 				item: "minecraft:milk_bucket"
 				type: "item"
 			}]
-			title: "我需要牛奶！"
+			title: "{ftbquests.chapter_271FE7753AA4A820.quest_1D258DC971D88A17.title}"
 			x: 0.0d
 			y: -3.0d
 		}
 	]
-	subtitle: ["沐浴在亿万星辰之中"]
-	title: "一艘船越过地球"
+	subtitle: ["{ftbquests.chapter_271FE7753AA4A820.subtitle_1}"]
+	title: "{ftbquests.chapter_271FE7753AA4A820.title}"
 }

@@ -17,22 +17,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"【第一届CBC挑战赛】火箭专家赛！"
-				"使用&e生存模式&r，&e非和平难度&r，建造一个地球-月球往返的运载火箭自动物流系统！(要求将戴斯锭&e(可以装箱或者打包成块等)&r从月球地面运送至地球地面，并将在地球地面生产的任意物品运送至月球)"
-				""
-				"&e版本必须为最新版本&r，两地火箭的收发射间隔不得长于四倍的发射配方时长（视情况适当缩减）"
-				""
-				"物流系统本身不得使用AE2与LaserIO模组的物品、方块、流体，其余产线无限制！&e任何生产运输过程中使用了相关部件的产线不能接入物流系统中，否则将被判无效&r"
-				""
-				"&a建造过程不得作弊，存档上传至交流群内或在B站等网站公开发布并@作者查看&r"
-				""
-				"&a第一个完成挑战赛的玩家将获得一次许愿机会，向整合包内加入自己想要的东西！如果愿望过于离谱实在无法完成，将会被更改为向游戏内添加一个该玩家的专属荣誉物品！&r"
-				""
-				"&a所有完成挑战赛的玩家将会在星空名人堂中留名出现&r"
-				""
-				"&6已结束：2025.05.21-10:05:39&r"
-			]
+			description: ["{ftbquests.chapter_07173FB5E90D0307.quest_530AC99F3C5A3000.desc_01}"]
 			icon: {
 				Count: 1
 				id: "kubejs:carrier_rocket"
@@ -43,24 +28,14 @@
 			id: "530AC99F3C5A3000"
 			tasks: [{
 				id: "68267C80D8B13DA3"
-				title: "第一届火箭专家赛！"
+				title: "{ftbquests.chapter_07173FB5E90D0307.quest_530AC99F3C5A3000.task_68267C80D8B13DA3.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"&6纪录信息：&r"
-				""
-				"&a版本：&r&eBeta0.5.14-Release1.0l&r"
-				""
-				"&a完成时间：&r&e2025.05.09-23:50:19&r&6(+00:10:00)&r"
-				""
-				"&a留言：&r&e飞线怎么了，又不是不能用！&r"
-				""
-				"&a愿望：&r&e随机产线！&r"
-			]
+			description: ["{ftbquests.chapter_07173FB5E90D0307.quest_2B298EB1F0A66FCE.desc_01}"]
 			icon: {
 				Count: 1
 				id: "minecraft:player_head"
@@ -116,23 +91,15 @@
 					}
 				}
 				id: "0FF52D6180FB8E40"
-				title: "Aoreci"
+				title: "{ftbquests.chapter_07173FB5E90D0307.quest_2B298EB1F0A66FCE.task_0FF52D6180FB8E40.title}"
 				type: "custom"
 			}]
-			title: "第一届冠军-Aoreci"
+			title: "{ftbquests.chapter_07173FB5E90D0307.quest_2B298EB1F0A66FCE.title}"
 			x: 0.0d
 			y: 1.5d
 		}
 		{
-			description: [
-				"&6纪录信息：&r"
-				""
-				"&a版本：&r&eBeta0.5.15-Release1.0m&r"
-				""
-				"&a完成时间：&r&e2025.05.16-12:42:23&r"
-				""
-				"&a留言：&r&e手搓怎么了？太空阶段我照样一路手搓！&r"
-			]
+			description: ["{ftbquests.chapter_07173FB5E90D0307.quest_2D0160A9AEA39FAD.desc_01}"]
 			icon: {
 				Count: 1
 				id: "minecraft:player_head"
@@ -188,23 +155,15 @@
 					}
 				}
 				id: "7645E24741A462DB"
-				title: "suring_ice"
+				title: "{ftbquests.chapter_07173FB5E90D0307.quest_2D0160A9AEA39FAD.task_7645E24741A462DB.title}"
 				type: "custom"
 			}]
-			title: "第一届亚军-suring_ice"
+			title: "{ftbquests.chapter_07173FB5E90D0307.quest_2D0160A9AEA39FAD.title}"
 			x: -1.25d
 			y: 2.5d
 		}
 		{
-			description: [
-				"&6纪录信息：&r"
-				""
-				"&a版本：&r&eBeta0.5.16-Release1.0n&r"
-				""
-				"&a完成时间：&r&e2025.05.18-10:05:39&r"
-				""
-				"&a留言：&r&e&r"
-			]
+			description: ["{ftbquests.chapter_07173FB5E90D0307.quest_01DA437693C3E2EF.desc_01}"]
 			icon: {
 				Count: 1
 				id: "minecraft:player_head"
@@ -252,23 +211,15 @@
 					}
 				}
 				id: "3F101DECB256A53C"
-				title: "qcyt17"
+				title: "{ftbquests.chapter_07173FB5E90D0307.quest_01DA437693C3E2EF.task_3F101DECB256A53C.title}"
 				type: "custom"
 			}]
-			title: "第一届季军-qcyt17"
+			title: "{ftbquests.chapter_07173FB5E90D0307.quest_01DA437693C3E2EF.title}"
 			x: 1.25d
 			y: 2.5d
 		}
 		{
-			description: [
-				"&6纪录信息：&r"
-				""
-				"&a版本：&r&eBeta0.5.16-Release1.0n&r"
-				""
-				"&a完成时间：&r&e2025.05.20-10:13:00&r&6(+6:00:00)&r"
-				""
-				"&a留言：&r&e密堆怎么了？等等我电脑冒烟了&r"
-			]
+			description: ["{ftbquests.chapter_07173FB5E90D0307.quest_0B4459CF22A15A2B.desc_01}"]
 			icon: {
 				Count: 1
 				id: "minecraft:player_head"
@@ -316,14 +267,14 @@
 					}
 				}
 				id: "273C122F28BEFD2E"
-				title: "MZ_sdsyl"
+				title: "{ftbquests.chapter_07173FB5E90D0307.quest_0B4459CF22A15A2B.task_273C122F28BEFD2E.title}"
 				type: "custom"
 			}]
-			title: "MZ_sdsyl"
+			title: "{ftbquests.chapter_07173FB5E90D0307.quest_0B4459CF22A15A2B.title}"
 			x: 0.0d
 			y: 3.5d
 		}
 	]
-	subtitle: ["2025.4.29-2025.5.6"]
-	title: "第一届CBC挑战赛-火箭专家赛"
+	subtitle: ["{ftbquests.chapter_07173FB5E90D0307.subtitle_1}"]
+	title: "{ftbquests.chapter_07173FB5E90D0307.title}"
 }

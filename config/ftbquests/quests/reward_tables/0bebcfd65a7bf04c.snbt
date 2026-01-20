@@ -10,5 +10,5 @@
 		{ item: "kubejs:emergency_industrial_platform_lime" }
 		{ item: "kubejs:emergency_industrial_platform_lime_block" }
 	]
-	title: "工业平台"
+	title: "{ftbquests.reward_0bebcfd65a7bf04c.title}"
 }

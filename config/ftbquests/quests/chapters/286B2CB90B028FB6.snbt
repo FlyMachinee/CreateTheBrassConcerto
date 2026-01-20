@@ -10,25 +10,9 @@
 	quests: [
 		{
 			description: [
-				"&a如果觉得史莱姆干的好的话，欢迎为史莱姆提供饭票！&r"
+				"{ftbquests.chapter_286B2CB90B028FB6.quest_3317421791085996.desc_01}"
 				"{image:kubejs:textures/ftb/slime_reward.png width:80 height:80 align:center}"
-				"&a感谢以下uu以及一些匿名或未提供游戏id的uu们为史莱姆提供饭票，是按时间先后排序的喵：&r"
-				""
-				"&eshelwind&r&6(被盗)&r&e现用账号: cildiant"
-				"&e二律背反（没给id）"
-				"&eqcyt17"
-				"&esuring_ice"
-				"&ewuxinfashi"
-				"&eTipsy?（没给id）"
-				"&eShiroi_Sakana"
-				"&e修狗（没给id）"
-				"&e霁修（没给id）"
-				"&ecncngy"
-				"&e一只键盘虾"
-				"&eLao_xianbing"
-				"&eyizhisanchu"
-				"&eCarbon-Trioxide"
-				"&e（若干没有给id也没分出来是谁的uu）&r"
+				"{ftbquests.chapter_286B2CB90B028FB6.quest_3317421791085996.desc_02}"
 			]
 			icon: "kubejs:slime_cola_can"
 			id: "3317421791085996"
@@ -36,24 +20,12 @@
 				id: "296021ABD79E855F"
 				type: "checkmark"
 			}]
-			title: "这里是赞助鸣谢喵！"
+			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_3317421791085996.title}"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"交流群内有很多有意思的群友和群友们制作的蓝图，同时也可以获得第一手（大概？）的整合包开发信息！"
-				""
-				"&aDiscord频道&r&ehttps://discord.gg/eNF5nzxxCg"
-				""
-				"&a一群&r&e560712538&r"
-				""
-				"&a二群&r&e746271641&r"
-				""
-				"&a三群&r&e1043699036&r"
-				""
-				"&aQQ频道&r&epd25557826&r"
-			]
+			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_4FA915FD2CAACEEA.desc_01}"]
 			icon: "railways:semaphore"
 			id: "4FA915FD2CAACEEA"
 			shape: "hexagon"
@@ -62,33 +34,12 @@
 				id: "65AFF41B346AED13"
 				type: "checkmark"
 			}]
-			title: "这里是官方交流群和频道！"
+			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_4FA915FD2CAACEEA.title}"
 			x: 0.0d
 			y: -1.5d
 		}
 		{
-			description: [
-				"&aQQ:"
-				"&e384362798"
-				""
-				"&abilibili:"
-				"&ehttps://space.bilibili.com/310622238"
-				""
-				"&aMC百科:"
-				"&ehttps://bbsmc.net/user/Slimeli_"
-				""
-				"&aGitHub:"
-				"&ehttps://github.com/Slimeli-32767"
-				""
-				"&aBBSMC:"
-				"&ehttps://bbsmc.net/user/Slimeli_"
-				""
-				"&aXyeBBS:"
-				"&ehttps://www.xyebbs.com/members/952"
-				""
-				"&aCurseForge:"
-				"&ehttps://www.curseforge.com/members/slimeli_/projects"
-			]
+			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_0D9EC291C4C46B00.desc_01}"]
 			icon: {
 				Count: 1
 				id: "minecraft:player_head"
@@ -115,49 +66,21 @@
 			id: "0D9EC291C4C46B00"
 			shape: "circle"
 			size: 1.25d
-			subtitle: "经常失踪、没看到你、已读不回、已读乱回"
+			subtitle: "{ftbquests.chapter_286B2CB90B028FB6.quest_0D9EC291C4C46B00.subtitle}"
 			tasks: [{
 				id: "0BD64EADD18734A6"
 				type: "checkmark"
 			}]
-			title: "如果有其他事务，联系作者"
+			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_0D9EC291C4C46B00.title}"
 			x: 0.0d
 			y: 1.5d
 		}
 		{
-			description: [
-				"&a在这里书写的是一些这个整合包的一部分可以公开的开发原则，你可以在这里看到哪些内容绝不会被加入、我会致力于做什么以及我会致力于避免什么&r"
-				""
-				"-在不影响核心玩法的前提下，尽可能提供便利"
-				""
-				"-不制作任何无意义地消磨玩家时间的内容"
-				""
-				"-当存在多个可选路径时，至少直接明确地向玩家展示其中一条"
-				""
-				"-除作为“轮椅”的LaserIO外，任何物流元件、物流系统应当尽可能避免同时满足以下条件中的两条，不得出现同时满足三条的情况：1.高运力 2.智能化 3.全端可用 4.无线连接 5.高性能压力"
-				""
-				"-（除游戏结束时才可获取的内容以外）不添加任何货运火箭、太空电梯、轨道空投炮、火车、传送带、管道的完全上位替代"
-				""
-				"-任何存储元件不得同时满足：1.可随意搬运 2.存量数量级大于工程师工具箱"
-				""
-				"-避免出现毫无作用的中间产物"
-				""
-				"-避免出现大量不同的多用途基础材料"
-				""
-				"-避免出现解法唯一（除非本身足够复杂）"
-				""
-				"-避免出现手动搬运材料（能工智人物流）"
-				""
-				"-避免出现被大量整合包使用过的内容"
-				""
-				"-避免出现连续的同种配方"
-				""
-				"-美术与剧情设定必须为游戏性让步"
-			]
+			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_3C72E5FF717E8B10.desc_01}"]
 			id: "3C72E5FF717E8B10"
 			tasks: [{
 				id: "64D6A22BAF9B0228"
-				title: "一些开发原则"
+				title: "{ftbquests.chapter_286B2CB90B028FB6.quest_3C72E5FF717E8B10.task_64D6A22BAF9B0228.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -165,16 +88,7 @@
 		}
 		{
 			dependencies: ["28247D1DB799E33A"]
-			description: [
-				"&c在没有作者允许的情况下，任何人不得以任何形式挪用本整合包制作的美术和文本资源！&r"
-				""
-				"&c在没有作者允许的情况下，任何人不得以任何形式&n以此整合包的名义&r&c宣传、分发经过了二次修改代码的整合包内容！&r"
-				""
-				"本整合包的其余部分采用&aCC-BY-SA-NC 4.0&r协议"
-				""
-				"GitHub:"
-				"&ohttps://github.com/Slimeli-32767/CreateTheBrassConcerto"
-			]
+			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_171ABF59A33679E1.desc_01}"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			icon: "design_decor:glitch_warning_sign"
@@ -188,46 +102,16 @@
 				id: "1A016C6F5E9842CB"
 				type: "checkmark"
 			}]
-			title: "开源协议"
+			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_171ABF59A33679E1.title}"
 			x: 2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["28247D1DB799E33A"]
 			description: [
-				"不知不觉这个整合包就要两岁了。&e磕磕绊绊，反反复复，寻寻觅觅&r，是这个整合包开发过程中最真实的写照"
-				""
-				"&e自这个整合包公开发布以来，在经历了数轮大型更新、内容重做和优化之后，这个整合包已与它刚刚发布时完全不同。&r在这一年里，我的策划实力和代码水平有了长足的进步——这使得我在新内容的制作和已有内容的改进上变得更加轻松自如。&a星际物流、太空电梯、轨道采矿、自动贸易、方块注液、信息素、物品统一......&r大量的内容填充与修改已经使这个整合包超出了我当初所预期达到的高度"
-				""
-				"不过，不得不承认的是，在经过了持续一年的高强度开发之后，我现在处于一个想法匮乏的矛盾状态——一方面，逐步增长的策划能力和代码水平使得我能不断发现此前的不足之处来加以改进；另一方面，在整合包的下一阶段更新（终局星球史莱利亚）上，我的想法却愈发模糊且难以涌现了"
-				""
-				"&e在六月份时，我曾经有过一个清晰的史莱利亚规划——但随着整合包的发展变化，那个规划只能说完全过时了。我不得不重新去考量当初规划的每一处细节，以及尝试去重新制作一份新的企划——至少目前而言，我在这方面遇到了很大的困难"
-				""
-				"也许未来的某一天我会突然灵感迸发从而迅速完成史莱利亚的开发规划，也或许我会不得不暂停整合包的开发并休息一段时间（或是尝试一个新的项目？）——谁知道呢？到时候再说吧"
-				""
-				"&e最后，在这2025年的最后一天，祝大家新年快乐，感谢大家一路以来的陪伴"
-				""
-				"&a感谢支持，理解万岁！"
-				""
-				""
+				"{ftbquests.chapter_286B2CB90B028FB6.quest_5883F20C7B6430AF.desc_01}"
 				"{@pagebreak}"
-				"这个整合包自2024年3月中旬立项，最初只是为了给社团做个暑期服——没想到内容越做越多了。&e我无法抑制我把新想法塞进ToDoList的冲动。&r"
-				""
-				"这是我的第一个整合包，第一次使用Kubejs、CM等模组。从2024年3月到2024年9月这段时间，这个整合包走了大量的弯路、踩了大量的坑、堆积如山的ToDoList和BugList让我一度失去继续开发的信心。"
-				""
-				"这段时间是最难熬的。最初那段时间我还不会使用CurseForge打包，每次更新都是手动组出一个几百MB的压缩包，还要尽力去分辨其中的开发端mod和客户端mod，并向测试玩家们解释该怎样使用它。KubeJS我也一窍不通——除了我十分熟悉的数据包外，我几乎没有什么额外内容的修改和添加手段。"
-				""
-				"在内容上，模组列表反复更换而没有认真筛选过这些mod的兼容性、稳定性和可玩性。许多已经做好的魔改最后因为模组冲突或是一些小bug而付诸东流，这不仅浪费了我大量的时间，也消磨了许多测试玩家对这个整合包的信心——更新越来越慢、服务器玩家越来越少、服务器越来越卡......配合上现实中的学业压力，那时我确实扛不住了。"
-				""
-				"在摆烂了将近半年后：2025年2月份，我重启了整合包的更新。"
-				""
-				"通过半年的试错、半年的技术积累、半年的美术积蓄、半年的思考，我逐渐有了适合自己的开发流程。"
-				""
-				"开发的进程逐渐走上正轨——除了依然人手、时间不足以外，其它的意外状况已经很少发生——这甚至让我有空余去优化一些一直没有处理的美术资源。"
-				""
-				"&e这个项目还很新，很稚嫩，它还远没有达到我在2024年所构想的那个图景。&r"
-				""
-				"&a感谢各位的支持，我会尽力完成它的——希望在毕业之后我还能有时间来更新这个项目。&r"
+				"{ftbquests.chapter_286B2CB90B028FB6.quest_5883F20C7B6430AF.desc_02}"
 			]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
@@ -237,70 +121,13 @@
 				id: "572ED2AC3F4FAAE4"
 				type: "checkmark"
 			}]
-			title: "史莱姆树洞"
+			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_5883F20C7B6430AF.title}"
 			x: 0.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["28247D1DB799E33A"]
-			description: [
-				"并不完全是！"
-				"许多人在这过程中为我提供了帮助！包括bug测试和平衡性建议等等！"
-				"并且现在我也不再是单独开发了！"
-				"关于制作团队，可以查看本页最上方的任务"
-				""
-				"&a测试服提供&r - &b大连理工大学·DUT.Craft社&r"
-				""
-				"&a需要注意的是，由于仍然处于早期版本，所以内容难免有诸多错漏。如果你发现了问题，请向我反馈！&r"
-				""
-				"&a由于本整合包的制作工作基本仅由作者一人完成，所以许多美工与任务细节还尚未来得及进行优化处理，敬请谅解！&r"
-				""
-				"特别鸣谢："
-				"&aJSI Production Team&r 提供卫星探矿与经典改进bug修复代码"
-				"&e&o主页：https://github.com/Jasons-impart&r&r"
-				""
-				"&a(MC百科)Westernat&r 提供GeckoJS教学"
-				""
-				"&a东南大学Minecraft·六朝松信标社&r"
-				""
-				"&a(MC百科)惜念&r 提供ModernFix性能优化的建议"
-				""
-				"&a75567&r 服务端制作"
-				""
-				"&a黄铜琥珀 安山林立(bilibili: Apertyotis)&r 提供Create Things and Miscs bug、经典改进、柴油动力、Create Love and War、CM、锦致装饰、Create Stuff Additions优化代码及bug修复代码"
-				""
-				"&a以及其它许许多多KubeJS交流群的群友大佬们的答疑解惑！"
-				""
-				"以下名单随机排序，不分先后，如无注明则为为正版ID"
-				"&eASL_0921&r"
-				"&eFlgship&r"
-				"&eSaibaMomoi_&r"
-				"&eTaotaoduang&r"
-				"&eCHNAxero_Hua&r"
-				"&eLiuMuAoo&r"
-				"&e(bilibili)伪装成御坂妹的黑子&r"
-				"&eMacharius_Aya&r"
-				"&egetdark&r"
-				"&ehk11238981&r"
-				"&eevan_hsieh&r"
-				"&eLifetimeak12&r"
-				"&eYukihareNya&r"
-				"&elbuki_Suika&r"
-				"&ePotato_Champion&r"
-				"&eShiroishiKaori&r"
-				"&ejlwlp&r"
-				"&eXrisium&r"
-				"&exiaofujun163&r"
-				"&eIceBamboo2429&r"
-				"&eReciLattice&r"
-				"&eqcyt17&r"
-				"&e(bilibili)虚影狐&r"
-				"&eshelwind&r&6(被盗)&r&e现用账号: cildiant&r"
-				"&esuring_ice&r"
-				"&eAmanitaBot&r"
-				"&ecncngy&r"
-				"&eGratel001&r"
-			]
+			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_31CD0E0DEA55F4EF.desc_01}"]
 			hide_dependency_lines: true
 			icon: "kubejs:mycetozoan"
 			id: "31CD0E0DEA55F4EF"
@@ -312,12 +139,12 @@
 			}]
 			tasks: [{
 				id: "702622EC112F698D"
-				title: "这是你自己完成的吗？"
+				title: "{ftbquests.chapter_286B2CB90B028FB6.quest_31CD0E0DEA55F4EF.task_702622EC112F698D.title}"
 				type: "checkmark"
 			}]
 			x: -2.0d
 			y: 0.0d
 		}
 	]
-	title: "史莱姆树洞"
+	title: "{ftbquests.chapter_286B2CB90B028FB6.title}"
 }

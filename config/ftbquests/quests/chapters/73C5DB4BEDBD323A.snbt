@@ -10,38 +10,10 @@
 	quests: [
 		{
 			description: [
-				"你不知道该做些什么？那么也许你需要一些小指引"
-				""
-				"这里为你梳理了一些较为基础的生产线的树状图，并且为你简单分析了不同路线之间的优劣"
-				""
-				"&e这一节中出现的所有机器效率默认为机器满转速且原料供应充足状态下的工作效率！&r"
-				""
-				"&e——需要注意的是，我不可能一直帮你完成这一部分的工作，在未来，你总是要学会如何分析需要建造什么产线、如何分析不同路线之间的优劣......&r"
-				""
-				"&a如果一些材料没有在这里出现，那么或许代表着你暂时不需要完全自动化，也或许代表着你暂时完全不需要生产它&r"
-				""
-				"在这里的一部分产线也并非必须，但它们可以一定程度上让你发展更加顺畅！"
-				""
-				"还有一些现阶段其实不需要完全自动化的物品也放入了这里——它们的任务不需要提交物品"
-				""
-				"你可能会发现一些其它章节的材料——时刻记住，章节之间没有较强的线性关系！"
-				""
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_0A2725742D4BE8A2.desc_01}"
 				"{@pagebreak}"
-				"&a为了回到你的故乡，你可以暂时以以下的关键节点进行初步发展："
-				""
-				"&61.金属生产"
-				""
-				"&62.超级加热生产"
-				""
-				"&63.三种集成电路板"
-				""
-				"&64.微生物与炼钢"
-				""
-				"&65.星际物流网络"
-				""
-				"&e不同节点之间存在大量的可选路线以及分支内容，你可以根据你的需要去选择它们！"
-				""
-				"[ \"而关于金属生产，你可以点击横线部分跳转到\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"！\" ]"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_0A2725742D4BE8A2.desc_02}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_0A2725742D4BE8A2.desc_03.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4B74E620CC367150\"}, \"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_0A2725742D4BE8A2.desc_03.rich_02\"}, {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_0A2725742D4BE8A2.desc_03.rich_03\"}]"
 			]
 			id: "0A2725742D4BE8A2"
 			rewards: [{
@@ -55,18 +27,12 @@
 				id: "48EB7F20128B20A5"
 				type: "checkmark"
 			}]
-			title: "我不知道该做什么"
+			title: "{ftbquests.chapter_73C5DB4BEDBD323A.quest_0A2725742D4BE8A2.title}"
 			x: -7.5d
 			y: -0.625d
 		}
 		{
-			description: [
-				"木屑可以代替&e木板&r、&e原木&r或&e去皮原木&r进行合成——用于制作&a木棍、齿轮、箱子、机壳、木炭&r..."
-				""
-				"甚至于说，它本身就可以被压制为各种类型的木板，或是车削为各种类型的原木！"
-				""
-				"&a特别的，粉碎木屑块可以获得比原料更多的木屑！&r"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_09F84DC709422089.desc_01}"]
 			id: "09F84DC709422089"
 			rewards: [
 				{
@@ -96,24 +62,11 @@
 		}
 		{
 			description: [
-				"种子和农产品可以用于制作种子油、乙醇、生物质"
-				""
-				"我推荐你使用&d喷灌器&r配合&d骨粉稀释液&r建造全自动农场！"
-				"[ \"如果你感兴趣的话，你可以查看右侧\", { \"text\": \"骨粉\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"6DCA5199790871D9\" } }, \"相关的任务，或是直接点击横线跳转（所有横线都是能点击跳转的！）\" ]"
-				""
-				"此外，相比其它作物，我更推荐你在前期种植小麦和土豆"
-				""
-				"在未来，你可以更进一步通过氮肥进行无土栽培，到时也许会有更合适的作物！"
-				""
-				"在没有&e时运&r魔咒的情况下——"
-				"&a1株小麦&r平均产出&e2.71小麦种子&r+&e1小麦&r"
-				"&a1株马铃薯&r平均产出&e3.71马铃薯&r+&e0.02毒马铃薯&r"
-				"&a1株甜菜&r平均产出&e2.71甜菜种子&r+&e1甜菜根&r"
-				"&a1株胡萝卜&r平均产出&e2.71胡萝卜&r"
-				""
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_28F4B4206A2C4875.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_28F4B4206A2C4875.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"6DCA5199790871D9\"}, \"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_28F4B4206A2C4875.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_28F4B4206A2C4875.desc_02.rich_03\"}]"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_28F4B4206A2C4875.desc_03}"
 				"{@pagebreak}"
-				"植株在种下时或收割后的生长等级为0，生长等级达到最高时成熟"
-				"小麦、胡萝卜、马铃薯的最高生长等级为7；甜菜的最高生长等级为4；西瓜和南瓜则是在成熟后以提升生长等级的概率产生果实"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_28F4B4206A2C4875.desc_04}"
 			]
 			id: "28F4B4206A2C4875"
 			rewards: [
@@ -163,21 +116,7 @@
 		}
 		{
 			dependencies: ["261F377F113598D4"]
-			description: [
-				"安山合金至少有4种生产方式，其中只有1种是你当前可用的！"
-				""
-				"&a-1.(当前可用)&r使用&e方块注液&r，通过熔融铁或熔融工业铁直接获取安山合金；具体请查看安山合金的思索！"
-				"&e使用这种方式可以无需额外生产安山岩就能非常方便地获取大量安山合金！这一条路线在建造出合金炉之后还会获得进一步升级——合金炉可以比工作盆熔融更快地生产熔融金属"
-				""
-				"&c-2.&r使用合金炉熔炼粉碎矿物副产出安山合金；"
-				"&e由于安山合金是副产出，所以你会需要销毁流体来保证有充足的安山合金产出！"
-				""
-				"&c-3.&r回收塑料罐副产出安山合金；"
-				"&e你需要到达月球之后才能从月球上的工业废料中取得大量无用的塑料罐！"
-				""
-				"&c-4.&r使用轨道卫星收发站挖掘太空黄铜副产出安山合金；"
-				"&e你需要到达月球之后并开发戴斯之后才能使用此方案！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_5F5A767FA46F447C.desc_01}"]
 			id: "5F5A767FA46F447C"
 			rewards: [
 				{
@@ -205,15 +144,7 @@
 			y: 4.5d
 		}
 		{
-			description: [
-				"&e笼子&r可以将鸡关起来——"
-				"关在笼子里的鸡就是单纯的产蛋机器！"
-				"&a使用机械手手持薯条喂食笼子中的鸡就可以立即产生一个蛋！&r"
-				""
-				"鸡蛋在缠魂为烂鸡蛋后可以用于制作硫粉和骨粉——当然你以后也可以使用其它方式来制作"
-				""
-				"或者你也可以单纯拿来吃"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_4ACCEA3F60D65059.desc_01}"]
 			id: "4ACCEA3F60D65059"
 			rewards: [{
 				count: 16
@@ -233,17 +164,7 @@
 			y: -0.5d
 		}
 		{
-			description: [
-				"紫水晶是重要的电子工业原料，可以用于制作单晶硅板"
-				""
-				"你主要可以通过三种方式获取第一个紫水晶：1.在地下的紫晶洞中挖掘获取；2.在下界挖掘石英矿石掉落；3.石英缠魂变为紫水晶"
-				""
-				"&e可以通过注液紫水晶母岩的方式令之增殖，然后使用振动的方式来分解水晶簇&r"
-				""
-				"在未来，你能够无限制造盐水以后，你可以使用更为高效的加热加压方式来获取水晶簇！"
-				""
-				"除此以外，它还可以用于生产紫色染料或者石英"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_3A89BFFFB39F5297.desc_01}"]
 			id: "3A89BFFFB39F5297"
 			rewards: [
 				{
@@ -272,15 +193,7 @@
 			y: 3.5d
 		}
 		{
-			description: [
-				"可以使用矿车结构收集海带，海带也可以用于制糖"
-				""
-				"然后使用鼓风机批量烟熏获得干海带"
-				""
-				"你需要海带来制作传送带、漏斗、隧道、软管滑轮......它们都是你工厂的重要组件！"
-				""
-				"不仅如此，干海带还将是化学工业的重要原料！但也许你可以通过某些方式来大幅减少干海带的需求！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_1D3F143AEE15CCBC.desc_01}"]
 			id: "1D3F143AEE15CCBC"
 			rewards: [{
 				count: 64
@@ -302,13 +215,7 @@
 		}
 		{
 			dependencies: ["3A89BFFFB39F5297"]
-			description: [
-				"石英可以用来制作玫瑰石英、&e经验颗粒&r等物品"
-				""
-				"可以通过&e粉碎紫水晶&r、石英增殖（与岩浆搅拌）、洗涤粉碎金矿等方式获得它"
-				""
-				"显然，紫水晶是最好的来源"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_4C8F9302F1673F2E.desc_01}"]
 			id: "4C8F9302F1673F2E"
 			rewards: [{
 				count: 32
@@ -331,11 +238,7 @@
 				"5F5A767FA46F447C"
 				"09F84DC709422089"
 			]
-			description: [
-				"安山机壳当然是需要量产的！"
-				""
-				"在你能够批量生产工业铁之前，最好的方案是使用&e木屑块&r与安山合金来制作它！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_241467A9149EFB99.desc_01}"]
 			id: "241467A9149EFB99"
 			rewards: [
 				{
@@ -364,11 +267,8 @@
 		{
 			dependencies: ["7D452424A8C15F35"]
 			description: [
-				"沙子可以通过粉碎砂砾获得，并且还可以额外获取你需要的泥土！"
-				""
-				"注意，研磨砂砾并不能产出沙子，它产出的是燧石"
-				""
-				"[ \"你需要沙子来使用\", { \"text\": \"蓝图构筑站\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"56F4799B252FC6AE\" } } ,\"制造多方块机器的材料包\"]"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_7D8B20E711BD8E8A.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_7D8B20E711BD8E8A.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"56F4799B252FC6AE\"}, \"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_7D8B20E711BD8E8A.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_7D8B20E711BD8E8A.desc_02.rich_03\"}]"
 			]
 			id: "7D8B20E711BD8E8A"
 			rewards: [{
@@ -389,15 +289,7 @@
 		}
 		{
 			dependencies: ["1A115EF233394340"]
-			description: [
-				"圆石是工业的食粮！"
-				""
-				"&e你可以通过在工作盆中搅拌岩浆和水的方式方便地获得大量的圆石！&r"
-				""
-				"如果你还没有计算过的话，那么以下数据或许会帮到你："
-				""
-				"&e一台满效率的动力搅拌器每小时能够生产约67765个圆石！&r"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_234B8765235D4601.desc_01}"]
 			id: "234B8765235D4601"
 			rewards: [{
 				count: 32
@@ -418,11 +310,7 @@
 		}
 		{
 			dependencies: ["234B8765235D4601"]
-			description: [
-				"砂砾可以通过粉碎/研磨圆石获得"
-				""
-				"考虑到效率（因为你也许需要大量的砂砾！），你更应该选择通过粉碎进行生产！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7D452424A8C15F35.desc_01}"]
 			id: "7D452424A8C15F35"
 			rewards: [{
 				count: 32
@@ -442,15 +330,7 @@
 		}
 		{
 			dependencies: ["241467A9149EFB99"]
-			description: [
-				"机械核心是制作各种机械元件的基础——"
-				""
-				"对于那些常用的机械元件，你最好能够制作它们的自动化——不需要多高的产量，只需要有即可！这种生产模式有一个很有趣的名字：超市"
-				""
-				"超市指的就是对于一些常用的杂七杂八的物品，将它们的生产整合到一起（&e并不追求效率，能全自动或半自动生产即可&r）作为一个较为独立的工厂（或者说，黑盒），&a不输出给其它产线，而单纯供给给你手工使用。&r这种工厂的产物存储数量也往往不多，以避免过度消耗材料"
-				""
-				"使用这种模式生产常用的生产线建设部件并额外生产一些常用的合成材料是非常好的选择，&e可以节省你修建产线时大量的前期材料准备时间！&r"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_2462E9E2A019A8A6.desc_01}"]
 			id: "2462E9E2A019A8A6"
 			rewards: [{
 				count: 4
@@ -471,17 +351,7 @@
 		}
 		{
 			dependencies: ["7D452424A8C15F35"]
-			description: [
-				"泥土可以通过一个简单的循环来增殖！"
-				""
-				"2泥土+2砂砾=4砂土"
-				""
-				"4砂土可以搅拌或者使用锄头翻地变为4泥土，从而实现了泥土翻倍"
-				""
-				"或者，你可以考虑使用岩浆与盐水接触来直接产生砂土！"
-				""
-				"在未来，你还可以利用类似的方式快速生产泥巴并进一步生产泥坯，随后应用于工业中！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_0B2C98F57F6557DE.desc_01}"]
 			id: "0B2C98F57F6557DE"
 			rewards: [{
 				count: 32
@@ -502,11 +372,9 @@
 		{
 			dependencies: ["1A115EF233394340"]
 			description: [
-				"这几种金属可以说是工厂建设的基石，你肯定需要批量生产它们！"
-				""
-				"[ \"你可以在\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"中看到生产方式，点击横线部分即可跳转！\" ]"
-				""
-				"&e积极探索其它乐章的生产方式！有时你会发现一些虽然复杂一些，但现阶段也是可用的，并且效率极大幅提高的生产方式！&r"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4B74E620CC367150\"}, \"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_02.rich_03\"}]"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_03}"
 			]
 			id: "261F377F113598D4"
 			rewards: [
@@ -547,16 +415,15 @@
 					type: "item"
 				}
 			]
-			title: "金属生产"
+			title: "{ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.title}"
 			x: 0.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["7D452424A8C15F35"]
 			description: [
-				"锡是制作许多多方块所必须的一种材料，你需要用它来制作锡制机械硬盘"
-				""
-				"[ \"你可以在\", { \"text\": \"冶金之页\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4B74E620CC367150\" } }, \"中看到生产方式，点击横线部分即可跳转！\" ]"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_114A5ADC379C607D.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_114A5ADC379C607D.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4B74E620CC367150\"}, \"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_114A5ADC379C607D.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_114A5ADC379C607D.desc_02.rich_03\"}]"
 			]
 			id: "114A5ADC379C607D"
 			tasks: [{
@@ -564,27 +431,13 @@
 				item: "kubejs:raw_tin"
 				type: "item"
 			}]
-			title: "大型机械的准备"
+			title: "{ftbquests.chapter_73C5DB4BEDBD323A.quest_114A5ADC379C607D.title}"
 			x: 0.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["28F4B4206A2C4875"]
-			description: [
-				"种子油拥有大量的用途！"
-				""
-				"除了作为润滑油的下位替代、生产生物柴油、红石、生物质以外，它还可以用于制作原油、作为还说的过去的柴油机燃料以及用来炸薯条！"
-				""
-				"虽然你有许多方式生产种子油，但你现在多半还无法制作黄铜培养仓也无法获取酵母菌，也没有大量的盐水可以使用"
-				""
-				"于是只有两种路线可供选择——动力辊压机辊压种子或是动力搅拌器加热搅拌种子"
-				""
-				"动力辊压机虽然不需要加热，但是产量更低"
-				""
-				"动力搅拌器虽然需要加热，但是产量更高"
-				""
-				"一般而言，我会推荐加热搅拌，但你也可以自行考量"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_1D582DE321203330.desc_01}"]
 			id: "1D582DE321203330"
 			tasks: [{
 				id: "1EEA45148F6DD745"
@@ -596,15 +449,7 @@
 		}
 		{
 			dependencies: ["28F4B4206A2C4875"]
-			description: [
-				"除了生产生物柴油外，乙醇还可以用于制作红石和乙烯！"
-				""
-				"虽然你有许多方式生产乙醇，但你现在多半还无法制作黄铜培养仓也无法获取酵母菌"
-				""
-				"通过简单的查阅就可以发现，使用&e小麦粉/土豆+木屑+水来发酵乙醇&r是现阶段对农业生产要求最低的方式！这也是为什么我推荐你种植小麦与土豆！"
-				""
-				"&a该配方的运行时长为恒定的25秒，你可以根据这个数值来计算你需要多少发酵盆，以及需要多大的农田&r"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_0648CDB30F0B2F70.desc_01}"]
 			id: "0648CDB30F0B2F70"
 			tasks: [{
 				id: "020BF6A674E7278C"
@@ -620,22 +465,9 @@
 				"0648CDB30F0B2F70"
 			]
 			description: [
-				"对于现阶段而言，你应当使用种子油与乙醇制作生物柴油——在未来你也许可以使用汽油代替种子油"
-				""
-				"你有两种方式将种子油与乙醇制作成生物柴油——搅拌或是加热加压"
-				""
-				"明显地，加热加压的方式可以用更少的原料提供更多的生物柴油"
-				""
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_253A7891D47C41D2.desc_01}"
 				"{@pagebreak}"
-				"还记得小麦植株的产出数据吗？2.71小麦种子与1小麦！"
-				""
-				"通过粉碎，产出将变为2.96小麦种子与1.5小麦粉"
-				""
-				"使用&e加热搅拌&r获取种子油、&e小麦粉木屑发酵&r获取乙醇，产出将变为&a370mB种子油与300mB乙醇&r"
-				""
-				"如果你把这些产物优先用于制作生物柴油，那么还会有70mB的种子油盈余可以用于制作其它材料——但我不建议这样做"
-				""
-				"通过查看JEI页面可以知道，&e1B生物柴油可以提供6分钟的超级加热&r——这意味着如果你不需要制作萤石或者用生物柴油制作红石的话，你暂时并不需要太高的生物柴油生产量！你完全可以将这些原料另做它用！"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_253A7891D47C41D2.desc_02}"
 			]
 			id: "253A7891D47C41D2"
 			rewards: [{
@@ -654,13 +486,7 @@
 		}
 		{
 			dependencies: ["261F377F113598D4"]
-			description: [
-				"至少就目前的阶段而言，我认为这两种金属板是应当有自动生产的"
-				""
-				"大量的配方需要铁板，此外你需要大量的铜板用于制作管道和储罐"
-				""
-				"一个很简单的自动生产——比如一台动力辊压机和一个木桶——就能满足你的大部分需求，并节省你大量的时间！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_16700765BEF18DE8.desc_01}"]
 			id: "16700765BEF18DE8"
 			rewards: [
 				{
@@ -691,22 +517,12 @@
 					type: "item"
 				}
 			]
-			title: "金属板材"
+			title: "{ftbquests.chapter_73C5DB4BEDBD323A.quest_16700765BEF18DE8.title}"
 			x: -1.5d
 			y: 4.5d
 		}
 		{
-			description: [
-				"你可以通过粉碎下界岩来生产余烬面粉——在未来还可以使用合金炉"
-				""
-				"余烬面粉可以注液岩浆而重新成为下界岩——或者你也可以直接注液圆石来获取下界岩"
-				""
-				"你需要余烬面粉来生产红石，进一步生产荧石粉"
-				""
-				"当然，你也可以使用洗涤碎矿的方式来生产它们——不过那相对更低效"
-				""
-				"你可以注意到，使用种子油和乙醇制作红石是较为低效的——而生物柴油一桶可以产出40个红石！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_0E8312316BE02AE0.desc_01}"]
 			id: "0E8312316BE02AE0"
 			shape: "gear"
 			size: 1.25d
@@ -722,11 +538,7 @@
 		}
 		{
 			dependencies: ["3A89BFFFB39F5297"]
-			description: [
-				"单晶硅板是制作电路板的必备材料——除此以外，你还可以用它来制作碳化硅等材料"
-				""
-				"它的生产十分简单，在此便不赘述"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_2F4AD170B3648627.desc_01}"]
 			id: "2F4AD170B3648627"
 			rewards: [{
 				count: 24
@@ -746,19 +558,7 @@
 		}
 		{
 			dependencies: ["0E8312316BE02AE0"]
-			description: [
-				"余烬面粉只需要注入部分燃料，就可以变为红石！"
-				""
-				"对于工厂早期阶段而言，可选的选择无非是种子油、乙醇、生物柴油、氢气"
-				""
-				"在没有电解以前，你生产氢气非常困难（水的热解），可以首先排除"
-				""
-				"种子油与乙醇虽然简单，但你可以发现这样的需求量非常巨大——一桶种子油只能制作8个红石，而一桶乙醇只能制作6.67个红石！"
-				""
-				"所以，你应当使用生物柴油——一桶生物柴油就能制作40个红石！"
-				""
-				"或者，你也可以跳过红石的生产，请查看玫瑰石英的方块注液！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_186B9689DA623C63.desc_01}"]
 			id: "186B9689DA623C63"
 			rewards: [{
 				id: "648C802FA7430D14"
@@ -781,19 +581,7 @@
 		}
 		{
 			dependencies: ["00A004E672F8FD67"]
-			description: [
-				"你有许多选择来生产磨制玫瑰石英！"
-				""
-				"如果你从玫瑰石英出发，那么你可以选择砂纸打磨、砂带磨床、碳化硅打磨——它们都是你现在可以选择的路线！"
-				""
-				"砂带磨床体积更小，不过需要控制转速，并且效率低下"
-				""
-				"砂纸打磨速度最快，但是体积相对较大"
-				""
-				"碳化硅打磨介于两者之间——较为简单，效率也还可以"
-				""
-				"在未来，你可以使用更为高效的自动化组装机来代替它们"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_4C0F977C66E23537.desc_01}"]
 			id: "4C0F977C66E23537"
 			rewards: [{
 				count: 8
@@ -816,11 +604,7 @@
 				"4C0F977C66E23537"
 				"16700765BEF18DE8"
 			]
-			description: [
-				"制作电子管是一件稀松平常的事——无聊的磨制玫瑰石英与铁板组装"
-				""
-				"不过，有另一种思路也是可用的——使用机床将磨制玫瑰石英车削为电子管"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7BA9CFF9B5FC09E0.desc_01}"]
 			id: "7BA9CFF9B5FC09E0"
 			tasks: [{
 				consume_items: true
@@ -838,21 +622,7 @@
 				"4C0F977C66E23537"
 				"2F4AD170B3648627"
 			]
-			description: [
-				"在起步阶段，你有两种集成电路板的生产方式可以选择："
-				""
-				"&e1.铜板+磨制玫瑰石英+种子油&r"
-				""
-				"&e2.黄铜板+电子管+冷冻剂&r"
-				""
-				"第一条路线较为简单，但是对玫瑰石英的需求更大，而且需要大量种子油"
-				""
-				"第二条路线更为高效，但是需要更多其它的材料"
-				""
-				"你并不一定要现在就制作集成电路板的完全自动化，一个半自动的产线便已经暂时足够使用！"
-				""
-				"如果你希望现在就进行完全自动化的话，那么我认为使用第一条路线，并通过方块注液获取玫瑰石英是较好的选择！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7D030EAF311A861E.desc_01}"]
 			id: "7D030EAF311A861E"
 			shape: "rsquare"
 			tasks: [{
@@ -869,13 +639,7 @@
 				"7FB10775D5107426"
 				"071CB4D05F53F81F"
 			]
-			description: [
-				"电气齿轮组需要滚珠轴承、大齿轮与电子管"
-				""
-				"你完全可以先使用一个半自动化的产线"
-				""
-				"在未来，你可以首先将大齿轮替换为工业大齿轮——接着用自动化组装机来代替序列组装！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_73D8518A5C102402.desc_01}"]
 			id: "73D8518A5C102402"
 			shape: "rsquare"
 			tasks: [{
@@ -892,16 +656,7 @@
 				"1D3F143AEE15CCBC"
 			]
 			description: [
-				"在上一个任务节点，我已经向你描述过超市的概念，那么这是我认为在现阶段你应当整合进入超市进行生产（你可以自行判断哪些适合全自动，哪些适合半自动）的零部件！"
-				""
-				"除此以外，在获得车床后，你也许可以考虑将流体储罐也加入其中！"
-				""
-				"&a你可以使用机械手或是物流集合来简单地生产它们！&r"
-				""
-				"至于合成原料，我推荐你将&e铁板、铜板、坚固板、滚珠轴承、电气齿轮组、集成电路板&r也半自动地整合进超市（并没有太多做成全自动的必要）"
-				""
-				"下面是一个早期版本的超市示例："
-				""
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_7FB10775D5107426.desc_01}"
 				"{image:kubejs:textures/ftb/market.png width:180 height:80 align:center}"
 				"{image:kubejs:textures/ftb/market1.png width:100 height:80 align:center}"
 			]
@@ -955,23 +710,13 @@
 					type: "item"
 				}
 			]
-			title: "自动化的好帮手——超市"
+			title: "{ftbquests.chapter_73C5DB4BEDBD323A.quest_7FB10775D5107426.title}"
 			x: 0.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["4ACCEA3F60D65059"]
-			description: [
-				"硫粉可以制作为二氧化硫、三氧化硫与硫酸，还可以用于制作人工橡胶；二氧化硫可以用于无土栽培诡异菌、绯红菌、下界疣、枪药珠，并进一步获得二氧化氮、火药、染料"
-				""
-				"在未来，它将参与大量的化工配方"
-				""
-				"对于现在的你而言，它可以用于制作硫酸，从而制作乙烯！"
-				""
-				"不过，这种用途实际上并不消耗硫酸，产出的二氧化硫可以重新制作为硫酸！"
-				""
-				"除了使用烂鸡蛋以外，你还可以通过焦黑熔渣来自动化获取硫粉，未来你还可以使用甲烷或矿脉"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_6576248CA7273C50.desc_01}"]
 			id: "6576248CA7273C50"
 			rewards: [{
 				id: "7369AACAD686FC52"
@@ -990,33 +735,11 @@
 		}
 		{
 			description: [
-				"&a你可以通过平凡的药水将骨粉变为骨头，从而生产骨粉&r——或者，你也可以通过粉碎石灰岩、粉碎方解石等方式！"
-				""
-				"骨粉在与水搅拌后能生产出可以用于批量催熟作物的&d骨粉稀释液&r，具体&e请查看喷灌器的思索！&r"
-				""
-				"&a在生产骨粉稀释液时，你完全可以使用工作盆的自动导出功能，而不必使用智能流体管道！"
-				""
-				"这里提供不同植物的生长阶段数的数据，植物会在最后一个生长阶段成熟："
-				""
-				"&a小麦&r拥有&a 8 &e个生长阶段"
-				"&a马铃薯&r拥有&a 8 &e个生长阶段"
-				"&a胡萝卜&r拥有&a 8 &e个生长阶段"
-				"&a甜菜&r拥有&a 4 &e个生长阶段"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_6DCA5199790871D9.desc_01}"
 				"{@pagebreak}"
-				"如果你对喷灌器的效率有疑问，那么下一页将会解答其中绝大部分——但我更推荐你独立思考！"
-				""
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_6DCA5199790871D9.desc_02}"
 				"{@pagebreak}"
-				"首先我们需要生产骨头，于是我们从骨头制作的配方看起"
-				""
-				"&e发酵盆发酵4秒消耗50mB平凡的药水把3骨粉变3根骨头，1骨头可以通过砂带磨床变为4骨粉"
-				""
-				"为了制作平凡的药水，我们需要使用糖、红石、烈焰粉等材料，这里我们选择可以直接由甜菜产出的糖作为示例。&e1甜菜=1糖=1000mB平凡的药水&r"
-				""
-				"1个喷灌器每4秒消耗500mB骨粉稀释液催熟24格作物（使其生长阶段+1），也就是12秒生产24甜菜&e（因为甜菜总共有4个生长阶段）&r，则1秒生产2甜菜=2糖=2000mB平凡的药水"
-				""
-				"综上计算可得：1个喷灌器甜菜田可以供应160发酵盆每秒生产360骨粉产生45000mB骨粉稀释液（未减去喷灌器自身消耗）"
-				""
-				"也就是&a每秒净产出44875mB骨粉稀释液从而供应359个喷灌器持续催熟8616格农田"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_6DCA5199790871D9.desc_03}"
 			]
 			id: "6DCA5199790871D9"
 			rewards: [
@@ -1043,11 +766,7 @@
 		}
 		{
 			dependencies: ["6DCA5199790871D9"]
-			description: [
-				"盐可以从骨粉中获取！"
-				""
-				"你可以用盐生产薯条，或是为化工做准备！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_11B3D102810496A2.desc_01}"]
 			id: "11B3D102810496A2"
 			rewards: [{
 				id: "79DDF8459C71F6B9"
@@ -1069,15 +788,7 @@
 				"5F5A767FA46F447C"
 				"16700765BEF18DE8"
 			]
-			description: [
-				"对于现在阶段来说，你生产滚珠轴承的方法只有两种，一是铁板、安山合金、铁/锡粒、种子油；二是使用动力轴承进行加工！"
-				""
-				"它并不复杂，只需要一些最基础的操作"
-				""
-				"你可以直接修建全自动的产线，或者先使用半自动产线获取一些"
-				""
-				"在未来，你可以使用工业铁和润滑油来生产，也可以用自动化组装机来代替序列组装！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_071CB4D05F53F81F.desc_01}"]
 			id: "071CB4D05F53F81F"
 			shape: "rsquare"
 			tasks: [{
@@ -1093,15 +804,7 @@
 				"7D030EAF311A861E"
 				"59E7BBE6A1611092"
 			]
-			description: [
-				"精密构件应该是你目前能接触到的工序最多的元件"
-				""
-				"但是你暂时并不会用到那么多！"
-				""
-				"在未来，你可以用自动化构筑站来快速生产它"
-				""
-				"就目前而言，精密构件最可观的用途是制造机床、分馏塔控制器等重要元件！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7E7AE206A66030D8.desc_01}"]
 			id: "7E7AE206A66030D8"
 			rewards: [
 				{
@@ -1126,11 +829,7 @@
 		}
 		{
 			dependencies: ["26F5F19A7327F11A"]
-			description: [
-				"坚固板的生产是较为简单的——你目前也不需要太多的坚固板"
-				""
-				"在未来，你可以用自动化组装机来生产它"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_59E7BBE6A1611092.desc_01}"]
 			id: "59E7BBE6A1611092"
 			rewards: [{
 				count: 36
@@ -1150,24 +849,9 @@
 		}
 		{
 			description: [
-				"无限岩浆是你工业区的基石之一！"
-				""
-				"它可以生产出无穷无尽的石材"
-				""
-				"它可以生产出无穷无尽的金属"
-				""
-				"它可以生产出无穷无尽的黑曜石与下界岩"
-				""
-				"它可以为烈焰人燃烧室提供无限的普通加热燃料"
-				""
-				"建造一个512立方的无限岩浆池以获取无限燃料！"
-				""
-				"&e或者，主世界的地下和地狱都拥有许多大型的岩浆池甚至岩浆海！&r"
-				""
-				"（推荐大小：8*8*8）"
-				"[ \"在\", { \"text\": \"史莱姆的乐谱\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"35F0C3FF989DA797\" } }, \"中查看可以无限抽取的流体列表！\" ]"
-				""
-				"如果你还不知道的话，横线部分是可以点击跳转到对应位置的！"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_1A115EF233394340.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_1A115EF233394340.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"35F0C3FF989DA797\"}, \"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_1A115EF233394340.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_1A115EF233394340.desc_02.rich_03\"}]"
+				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_1A115EF233394340.desc_03}"
 			]
 			id: "1A115EF233394340"
 			rewards: [
@@ -1200,13 +884,7 @@
 				"186B9689DA623C63"
 				"0648CDB30F0B2F70"
 			]
-			description: [
-				"你可以使用常规的方式——搅拌红石和石英来生成玫瑰石英"
-				""
-				"但是目前而言，你的红石产量应该不大"
-				""
-				"&a所以，你可以考虑使用方块注液的方式来制作它！具体请查看思索！&r"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_00A004E672F8FD67.desc_01}"]
 			id: "00A004E672F8FD67"
 			rewards: [{
 				count: 4
@@ -1225,21 +903,7 @@
 			y: 2.5d
 		}
 		{
-			description: [
-				"通过黑曜石可以获得坚固板"
-				""
-				"而生产黑曜石的方法很多——"
-				""
-				"你可以用水将岩浆源转化为黑曜石"
-				""
-				"你可以用冷冻剂与岩浆接触生成黑曜石"
-				""
-				"你可以用冷冻剂与岩浆搅拌获取黑曜石"
-				""
-				"你可以洗涤岩浆块来获取黑曜石"
-				""
-				"你应该很容易就能分辨它们之间的优劣！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_26F5F19A7327F11A.desc_01}"]
 			id: "26F5F19A7327F11A"
 			shape: "gear"
 			size: 1.1d
@@ -1253,11 +917,7 @@
 		}
 		{
 			dependencies: ["114A5ADC379C607D"]
-			description: [
-				"如果你需要建造多方块，那么你显然需要硬盘！"
-				""
-				"你暂时不必自动化生产它！"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_69DFF2C19952AC52.desc_01}"]
 			id: "69DFF2C19952AC52"
 			shape: "rsquare"
 			tasks: [{
@@ -1275,23 +935,7 @@
 			y: -0.5d
 		}
 		{
-			description: [
-				"&a一般来说，同一物品的每种配方相较于其它配方而言至多满足以下四个条件之中的三者：&r"
-				"&61.效率高"
-				"&62.易于设计"
-				"&63.原料少"
-				"&64.科技要求低"
-				""
-				"&e如果有配方同时满足这四者，那么多半是你看错了"
-				""
-				"&e我们抉择配方就是根据我们所需要制作的物品的性质来平衡这四种条件之间的权重"
-				""
-				"科技要求往往只会对我们产生临时性的影响，所以我们往往不去考虑它。一般来说，我们都会把效率高和易于设计排在最前面。但是如果它的每个原料都十分昂贵，那么我们也许会把原料少排在更前"
-				""
-				"你可以参考这样的思路，并进一步推导出诸如“如果效率最低的配方效率都可以接受，那么效率的权重就可以忽视”这样的配方选取原则！"
-				""
-				"&e或者你也可以始终以一种要素作为最高优先级——这方面并没有绝对的优劣，因为你不需要去和它人比较&r"
-			]
+			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7260D809852A0860.desc_01}"]
 			icon: "minecraft:name_tag"
 			id: "7260D809852A0860"
 			rewards: [{
@@ -1302,13 +946,13 @@
 			shape: "rsquare"
 			tasks: [{
 				id: "6AA92FEF7D4B43CD"
-				title: "判断配方的一般方法"
+				title: "{ftbquests.chapter_73C5DB4BEDBD323A.quest_7260D809852A0860.task_6AA92FEF7D4B43CD.title}"
 				type: "checkmark"
 			}]
 			x: -3.0d
 			y: -0.5d
 		}
 	]
-	subtitle: ["基础工厂的生产树！"]
-	title: "乐谱-工厂的脉络"
+	subtitle: ["{ftbquests.chapter_73C5DB4BEDBD323A.subtitle_1}"]
+	title: "{ftbquests.chapter_73C5DB4BEDBD323A.title}"
 }

@@ -14,18 +14,13 @@
 	quests: [
 		{
 			can_repeat: false
-			description: [
-				"这里可以买卖一些基础材料"
-				"也可以买卖一些重要的物品"
-				""
-				"由于仪式所能承载的物质交换频率和种类有限，所以这里的贸易项目很少，并且暂时均无法进行自动化——直到你制作出&e自动化贸易终端&r"
-			]
+			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_1703A096AFF92C0D.desc_01}"]
 			id: "1703A096AFF92C0D"
 			shape: "hexagon"
-			subtitle: "欢迎来到商店"
+			subtitle: "{ftbquests.chapter_0427CC1C17E74AE4.quest_1703A096AFF92C0D.subtitle}"
 			tasks: [{
 				id: "7509CE0525A4E558"
-				title: "让货币流动起来！"
+				title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_1703A096AFF92C0D.task_7509CE0525A4E558.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -47,7 +42,7 @@
 				item: "kubejs:coin_copper"
 				type: "item"
 			}]
-			title: "火把"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_1F6E2643FD4019A4.title}"
 			x: 0.0d
 			y: -4.0d
 		}
@@ -67,7 +62,7 @@
 				item: "kubejs:coin_copper"
 				type: "item"
 			}]
-			title: "面包"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_2B4E8AC416B1BA63.title}"
 			x: -1.0d
 			y: -4.0d
 		}
@@ -86,7 +81,7 @@
 				item: "kubejs:coin_iron"
 				type: "item"
 			}]
-			title: "圆石"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_652B492FE94BE8A6.title}"
 			x: 1.0d
 			y: -4.0d
 		}
@@ -106,7 +101,7 @@
 				item: "kubejs:coin_copper"
 				type: "item"
 			}]
-			title: "木材"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_0983663765C7BD2F.title}"
 			x: -2.0d
 			y: -4.0d
 		}
@@ -126,7 +121,7 @@
 				item: "kubejs:coin_iron"
 				type: "item"
 			}]
-			title: "经验颗粒"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_089B62FB6C6C63EF.title}"
 			x: 2.0d
 			y: -4.0d
 		}
@@ -144,7 +139,7 @@
 				item: "kubejs:coin_iron"
 				type: "item"
 			}]
-			title: "背包"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_775065AC5AEFBFA7.title}"
 			x: -2.0d
 			y: -5.0d
 		}
@@ -163,7 +158,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "钻石背包"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_402E27B446213701.title}"
 			x: 1.0d
 			y: -5.0d
 		}
@@ -182,7 +177,7 @@
 				item: "kubejs:coin_emerald"
 				type: "item"
 			}]
-			title: "合金背包"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_6945970170027D40.title}"
 			x: 2.0d
 			y: -5.0d
 		}
@@ -202,7 +197,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "压缩抽屉"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_6342694DE592514E.title}"
 			x: -2.0d
 			y: -6.0d
 		}
@@ -220,7 +215,7 @@
 				item: { Count: 16, id: "kubejs:coin_gold" }
 				type: "item"
 			}]
-			title: "抽屉控制器"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_0BAD11D1D1B062DB.title}"
 			x: -1.0d
 			y: -6.0d
 		}
@@ -240,7 +235,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "绿宝石升级"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_327DFF1DC6387CD3.title}"
 			x: 0.0d
 			y: -6.0d
 		}
@@ -259,7 +254,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "销毁升级"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_48762FAB6C838FC0.title}"
 			x: 1.0d
 			y: -6.0d
 		}
@@ -278,7 +273,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "抽屉降级"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_680D41118B0B1351.title}"
 			x: 2.0d
 			y: -6.0d
 		}
@@ -707,7 +702,7 @@
 				item: { Count: 16, id: "kubejs:coin_gold" }
 				type: "item"
 			}]
-			title: "幻渺列车轨道"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_2040CC5CE6AC31FA.title}"
 			x: -2.0d
 			y: -7.0d
 		}
@@ -726,7 +721,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "单轨"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_17F2A99A6A502C81.title}"
 			x: 2.0d
 			y: -7.0d
 		}
@@ -744,7 +739,7 @@
 				item: "kubejs:coin_netherite"
 				type: "item"
 			}]
-			title: "龙蛋"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_7629531E00AF09CA.title}"
 			x: 6.0d
 			y: -0.5d
 		}
@@ -762,7 +757,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "鸡蛇"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_250CD20C0C8CA03F.title}"
 			x: 5.0d
 			y: -1.5d
 		}
@@ -782,7 +777,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "龙食"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_470962C398A54CC1.title}"
 			x: 4.0d
 			y: 1.5d
 		}
@@ -802,7 +797,7 @@
 				item: "kubejs:coin_iron"
 				type: "item"
 			}]
-			title: "史莱姆可乐"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_6398A35464A16CE2.title}"
 			x: 4.0d
 			y: 2.5d
 		}
@@ -822,7 +817,7 @@
 				item: "kubejs:coin_iron"
 				type: "item"
 			}]
-			title: "大份薯条"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_0B1335153D05C970.title}"
 			x: 5.0d
 			y: 2.5d
 		}
@@ -861,11 +856,7 @@
 			y: -2.5d
 		}
 		{
-			description: [
-				"有的时候你实在是暂时找不到刷怪笼，那么这个交易应该能帮到你！"
-				""
-				"不过这并非长久之计，也许在某些意想不到之处会有解决方案？"
-			]
+			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_6F9B29ABDF98A682.desc_01}"]
 			disable_toast: true
 			icon: "create:blaze_burner"
 			id: "6F9B29ABDF98A682"
@@ -886,12 +877,12 @@
 				}
 				type: "item"
 			}]
-			title: "烈焰人燃烧室"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_6F9B29ABDF98A682.title}"
 			x: 0.0d
 			y: -2.0d
 		}
 		{
-			description: ["全国人民都买得起的钻头！"]
+			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_3996A5563C6AE089.desc_01}"]
 			icon: {
 				Count: 1
 				id: "kubejs:steel_impact_drill"
@@ -917,12 +908,12 @@
 				item: { Count: 7499, id: "kubejs:coin_netherite" }
 				type: "item"
 			}]
-			title: "塑钢冲击钻"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_3996A5563C6AE089.title}"
 			x: -1.0d
 			y: -7.0d
 		}
 		{
-			description: ["全国人民都买得起的武器！"]
+			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_77E80E82C63B53CF.desc_01}"]
 			icon: {
 				Count: 1
 				id: "kubejs:steel_power_sword"
@@ -948,7 +939,7 @@
 				item: { Count: 7499, id: "kubejs:coin_netherite" }
 				type: "item"
 			}]
-			title: "塑钢动力剑"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_77E80E82C63B53CF.title}"
 			x: 1.0d
 			y: -7.0d
 		}
@@ -1027,7 +1018,7 @@
 				item: "kubejs:coin_emerald"
 				type: "item"
 			}]
-			title: "蛙明灯"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_2424179ED9F2A14B.title}"
 			x: 5.0d
 			y: -0.5d
 		}
@@ -1046,7 +1037,7 @@
 				item: "kubejs:coin_emerald"
 				type: "item"
 			}]
-			title: "蛙明灯"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_09CD402DB6757640.title}"
 			x: 5.0d
 			y: 0.5d
 		}
@@ -1065,12 +1056,12 @@
 				item: "kubejs:coin_emerald"
 				type: "item"
 			}]
-			title: "蛙明灯"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_74DD616545E42CFA.title}"
 			x: 5.0d
 			y: 1.5d
 		}
 		{
-			description: ["程序专属线程撕裂者！"]
+			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_7B7B718155FDC618.desc_01}"]
 			icon: "sophisticatedbackpacks:stack_upgrade_omega_tier"
 			id: "7B7B718155FDC618"
 			rewards: [{
@@ -1084,7 +1075,7 @@
 				item: "kubejs:coin_netherite"
 				type: "item"
 			}]
-			title: "Ω堆叠升级"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_7B7B718155FDC618.title}"
 			x: 0.0d
 			y: -5.0d
 		}
@@ -1156,7 +1147,7 @@
 				item: "kubejs:coin_emerald"
 				type: "item"
 			}]
-			title: "跃兔鞋"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_3E8AEA60B39E665F.title}"
 			x: 4.0d
 			y: -2.5d
 		}
@@ -1175,7 +1166,7 @@
 				item: "kubejs:coin_diamond"
 				type: "item"
 			}]
-			title: "猫咪拖鞋"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_05C0C8BCCC9AA1D1.title}"
 			x: 4.0d
 			y: -1.5d
 		}
@@ -1193,16 +1184,12 @@
 				item: "kubejs:coin_diamond"
 				type: "item"
 			}]
-			title: "夜视仪"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_3A233F7892B3DD89.title}"
 			x: 4.0d
 			y: -0.5d
 		}
 		{
-			description: [
-				"你也可以在月球的工业废料中或是在史莱利亚的遗迹中发现它！"
-				""
-				"只需要获取第一份——之后就可以通过计算数据进行复制了！"
-			]
+			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_31FD44B7E9FAB30E.desc_01}"]
 			icon: "kubejs:creative_motor_blueprint"
 			id: "31FD44B7E9FAB30E"
 			rewards: [{
@@ -1216,7 +1203,7 @@
 				item: "kubejs:coin_netherite"
 				type: "item"
 			}]
-			title: "应力之源"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_31FD44B7E9FAB30E.title}"
 			x: 0.0d
 			y: -7.0d
 		}
@@ -1235,7 +1222,7 @@
 				item: "kubejs:coin_diamond"
 				type: "item"
 			}]
-			title: "铜泽羽鹗颅骨"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_0AA33701C9B5ED0F.title}"
 			x: 6.0d
 			y: 2.5d
 		}
@@ -1253,7 +1240,7 @@
 				item: "kubejs:coin_diamond"
 				type: "item"
 			}]
-			title: "黑曜石头颅"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_61B4B0A99554EFC2.title}"
 			x: 4.0d
 			y: 0.5d
 		}
@@ -1273,7 +1260,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "无壳子弹"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_614AF8CA31BE90F4.title}"
 			x: 5.0d
 			y: -2.5d
 		}
@@ -1304,7 +1291,7 @@
 				item: "kubejs:coin_diamond"
 				type: "item"
 			}]
-			title: "幻灵剑"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_25E590E39274F631.title}"
 			x: 6.0d
 			y: 1.5d
 		}
@@ -1322,12 +1309,12 @@
 				item: "kubejs:coin_netherite"
 				type: "item"
 			}]
-			title: "龙蛋"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_40C14FFEBA2165F4.title}"
 			x: 6.0d
 			y: 0.5d
 		}
 		{
-			description: ["找不到油焦？这里可以帮你！"]
+			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_069D66332D72F0AE.desc_01}"]
 			disable_toast: true
 			icon: "createloveandwar:tar_clump"
 			id: "069D66332D72F0AE"
@@ -1344,12 +1331,12 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "油焦"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_069D66332D72F0AE.title}"
 			x: 6.0d
 			y: -1.5d
 		}
 		{
-			description: [""]
+			description: [ ]
 			disable_toast: true
 			icon: "minecraft:netherite_upgrade_smithing_template"
 			id: "64B641B66BC97259"
@@ -1363,10 +1350,10 @@
 				item: "kubejs:coin_diamond"
 				type: "item"
 			}]
-			title: "锻造模板"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_64B641B66BC97259.title}"
 			x: 6.0d
 			y: -2.5d
 		}
 	]
-	title: "小卖部"
+	title: "{ftbquests.chapter_0427CC1C17E74AE4.title}"
 }

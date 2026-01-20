@@ -1,12 +1,12 @@
 {
 	chapter_groups: [
-		{ id: "26D57AC038FF3413", title: "史莱姆的乐谱-技巧与指南" }
-		{ id: "5997E69EB327A306", title: "乐谱-量化与配平之章(施工中...)" }
-		{ id: "6EA46263F86F561F", title: "第一乐章-啮合之音" }
-		{ id: "6B818C6F92D84205", title: "第二乐章-钢铁之血" }
-		{ id: "05CDF1EA7F8CFC5D", title: "第三乐章-群星伊始" }
-		{ id: "12064763B96B71BC", title: "第四乐章-(施工中...)" }
-		{ id: "13182EA939D9B58C", title: "中场休息" }
-		{ id: "62FF2E225AA2A9EF", title: "星空名人堂" }
+		{ id: "26D57AC038FF3413", title: "{ftbquests.group_26D57AC038FF3413.title}" }
+		{ id: "5997E69EB327A306", title: "{ftbquests.group_5997E69EB327A306.title}" }
+		{ id: "6EA46263F86F561F", title: "{ftbquests.group_6EA46263F86F561F.title}" }
+		{ id: "6B818C6F92D84205", title: "{ftbquests.group_6B818C6F92D84205.title}" }
+		{ id: "05CDF1EA7F8CFC5D", title: "{ftbquests.group_05CDF1EA7F8CFC5D.title}" }
+		{ id: "12064763B96B71BC", title: "{ftbquests.group_12064763B96B71BC.title}" }
+		{ id: "13182EA939D9B58C", title: "{ftbquests.group_13182EA939D9B58C.title}" }
+		{ id: "62FF2E225AA2A9EF", title: "{ftbquests.group_62FF2E225AA2A9EF.title}" }
 	]
 }

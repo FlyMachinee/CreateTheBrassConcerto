@@ -24,21 +24,7 @@
 				"11EC5F1E862ABDEE"
 				"35887E2A0857ECD0"
 			]
-			description: [
-				"恭喜你！"
-				""
-				"&e从地下第一个安山岩的挖掘开始，到水车时代的动力机器，再到轰隆作响的蒸汽引擎，你已经历了许多&r"
-				""
-				"&e现在，你算是在这个世界初步站稳脚跟了&r"
-				""
-				"&e这一小节中所有的产线都会是你以后需要的&r"
-				""
-				"你也许很迫切地想要回到故乡，但是先不要着急——你还有很长的路要走"
-				""
-				"收下这些材料吧，它能让你的旅程更加顺利"
-				""
-				"&a如果你不想完成这一节，也许可以找找有什么其它方式获取塑料？&r"
-			]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_35190B69DD7E29C9.desc_01}"]
 			id: "35190B69DD7E29C9"
 			rewards: [
 				{
@@ -183,16 +169,12 @@
 				id: "6058BEFE7A83E822"
 				type: "checkmark"
 			}]
-			title: "恭喜完成第一乐章！"
+			title: "{ftbquests.chapter_67F08BC47932ED89.quest_35190B69DD7E29C9.title}"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"铁可以来源于绯红岩粉碎"
-				""
-				"安山合金可以来源于各种矿物在合金炉中熔炼，它作为一种副产物而出现"
-			]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_78ACA050FAECEFBF.desc_01}"]
 			id: "78ACA050FAECEFBF"
 			rewards: [
 				{
@@ -460,7 +442,7 @@
 			y: -2.5d
 		}
 		{
-			description: ["赭金砂是金无限增殖的方式"]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_7EDBA88835D0557A.desc_01}"]
 			id: "7EDBA88835D0557A"
 			rewards: [
 				{
@@ -734,7 +716,7 @@
 			y: -2.0d
 		}
 		{
-			description: ["辉绿岩是铜无限增殖的方式"]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_628AB3A3531C391C.desc_01}"]
 			id: "628AB3A3531C391C"
 			rewards: [
 				{
@@ -1002,7 +984,7 @@
 			y: 0.0d
 		}
 		{
-			description: ["[ \"你可以在\", { \"text\": \"工厂的脉络\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"5F5A767FA46F447C\" } }, \"一节查看安山合金的批量生产方式！\" ]"]
+			description: ["[\"\", {\"translate\": \"ftbquests.chapter_67F08BC47932ED89.quest_69E7E664297C1386.desc_01.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"5F5A767FA46F447C\"}, \"translate\": \"ftbquests.chapter_67F08BC47932ED89.quest_69E7E664297C1386.desc_01.rich_02\"}, {\"translate\": \"ftbquests.chapter_67F08BC47932ED89.quest_69E7E664297C1386.desc_01.rich_03\"}]"]
 			id: "69E7E664297C1386"
 			rewards: [
 				{
@@ -1270,11 +1252,7 @@
 			y: -1.0d
 		}
 		{
-			description: [
-				"你可以使用冷冻剂和岩浆搅拌来获取大量黑曜石！"
-				""
-				"或者也可以向黑曜石注入水和岩浆！"
-			]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_45E0470B21054974.desc_01}"]
 			id: "45E0470B21054974"
 			rewards: [
 				{
@@ -1542,13 +1520,7 @@
 			y: 1.0d
 		}
 		{
-			description: [
-				"余烬面粉由地狱岩粉碎产生"
-				""
-				"你可以使用岩浆注液的方式生产地狱岩"
-				""
-				"你需要用它来生产红石、萤石、烈焰蛋糕......"
-			]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_5F8E3782411572E8.desc_01}"]
 			id: "5F8E3782411572E8"
 			rewards: [
 				{
@@ -1815,11 +1787,7 @@
 			y: 2.0d
 		}
 		{
-			description: [
-				"基础材料，无需多言"
-				""
-				"你可以用它炼制原油、在未来快速大量地生产经验（如果你只需要少量的话，可以考虑粉碎石英）、合成肉......"
-			]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_1429BE0426CA8DCC.desc_01}"]
 			id: "1429BE0426CA8DCC"
 			rewards: [
 				{
@@ -2087,11 +2055,7 @@
 			y: 2.0d
 		}
 		{
-			description: [
-				"基础材料，无需多言"
-				""
-				"红石的量产和石英的量产有许多方式，你可以自己选择！"
-			]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_1B0EC81DAFE0EFA8.desc_01}"]
 			id: "1B0EC81DAFE0EFA8"
 			rewards: [
 				{
@@ -2359,7 +2323,7 @@
 			y: 1.0d
 		}
 		{
-			description: ["基础材料，无需多言"]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_3062DA7402E9F52F.desc_01}"]
 			id: "3062DA7402E9F52F"
 			rewards: [
 				{
@@ -2627,7 +2591,7 @@
 			y: 0.0d
 		}
 		{
-			description: ["物流集合可以用于快速制作各种基础部件，你会爱上它的！"]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_1F4ACCB40224ECAD.desc_01}"]
 			id: "1F4ACCB40224ECAD"
 			rewards: [
 				{
@@ -2895,7 +2859,7 @@
 			y: -1.0d
 		}
 		{
-			description: ["电路板也是应当自动化的——你在建造机器时会经常用到它！"]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_11EC5F1E862ABDEE.desc_01}"]
 			id: "11EC5F1E862ABDEE"
 			rewards: [
 				{
@@ -3162,13 +3126,7 @@
 			y: -2.0d
 		}
 		{
-			description: [
-				"生物柴油可以提供超级加热"
-				""
-				"即使在下一章节也是十分优秀的燃料！"
-				""
-				"不过需要注意的是，它并不适合供给柴油机使用！"
-			]
+			description: ["{ftbquests.chapter_67F08BC47932ED89.quest_35887E2A0857ECD0.desc_01}"]
 			id: "35887E2A0857ECD0"
 			rewards: [
 				{
@@ -3432,11 +3390,11 @@
 				id: "66B6E53BD815FBDE"
 				type: "fluid"
 			}]
-			title: "超级加热？"
+			title: "{ftbquests.chapter_67F08BC47932ED89.quest_35887E2A0857ECD0.title}"
 			x: 0.0d
 			y: 2.5d
 		}
 	]
-	subtitle: ["你可以直接开启下一章！章末小结不是必须的！"]
-	title: "章末小结-机械不会辜负"
+	subtitle: ["{ftbquests.chapter_67F08BC47932ED89.subtitle_1}"]
+	title: "{ftbquests.chapter_67F08BC47932ED89.title}"
 }
