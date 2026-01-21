@@ -8,6 +8,6 @@
 	order_index: 5
 	quest_links: [ ]
 	quests: [ ]
-	subtitle: ["地球很大，但也很小"]
-	title: "章末小结-因为宇宙就在眼前"
+	subtitle: ["{ftbquests.chapter_72E96633A44DA34A.subtitle_1}"]
+	title: "{ftbquests.chapter_72E96633A44DA34A.title}"
 }

@@ -8,5 +8,5 @@
 	order_index: 1
 	quest_links: [ ]
 	quests: [ ]
-	title: "紫颂之歌(施工中)"
+	title: "{ftbquests.chapter_111_5.title}"
 }

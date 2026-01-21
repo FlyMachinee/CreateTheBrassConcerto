@@ -55,7 +55,7 @@ Ponder.registry((event) => {
         scene.text(60, "请注意：控制器应面朝前方！", [4, 3, 4]).attachKeyFrame();
         scene.overlay.showOutline("red", {}, [4, 3, 4], 30);
         scene.idle(80);
-        scene.text(60, "除此以外，你还可以将这里换成控制器传动方块、容器扩展端口、集装箱或保险库！", [4, 3, 5]).attachKeyFrame();
+        scene.text(60, "除此以外，你还可以将这里换成抽屉、容器扩展端口、集装箱或保险库！", [4, 3, 5]).attachKeyFrame();
         scene.overlay.showOutline("red", {}, [4, 3, 5], 30);
         scene.idle(80);
         scene.addKeyframe();

@@ -25,6 +25,6 @@
 	}
 	pause_game: true
 	progression_mode: "flexible"
-	title: "机械动力:黄铜协奏曲"
+	title: "{ftbquests.data.title}"
 	version: 13
 }

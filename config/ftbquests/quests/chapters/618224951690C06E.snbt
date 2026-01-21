@@ -11,28 +11,20 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"也许你已经在感慨化工是如此的复杂——那么我相信这份乐谱会帮到你的！"
-				""
-				"这一份乐谱仅包含部分重要材料的部分获取方式以及部分用途，剩余的方法等待你自己去发掘！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_1424EC1D4D35B3D4.desc_01}"]
 			id: "1424EC1D4D35B3D4"
 			shape: "gear"
 			size: 1.15d
 			tasks: [{
 				id: "5BA4D858F0C78BA8"
-				title: "欢迎来到化工之页！"
+				title: "{ftbquests.chapter_618224951690C06E.quest_1424EC1D4D35B3D4.task_5BA4D858F0C78BA8.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 0.575d
 		}
 		{
-			description: [
-				"使用大气冷凝机获取液态空气后，你就可以利用空气之中的宝贵资源了！"
-				""
-				"各个拥有大气的维度的大气成分各不相同，这里以最基础的主世界大气为例！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_168F65EFCEF849A1.desc_01}"]
 			id: "168F65EFCEF849A1"
 			size: 1.5d
 			tasks: [{
@@ -40,79 +32,59 @@
 				item: "kubejs:air_fluid_bucket"
 				type: "item"
 			}]
-			title: "化工之页-大气中的珍贵资源！"
+			title: "{ftbquests.chapter_618224951690C06E.quest_168F65EFCEF849A1.title}"
 			x: 0.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["168F65EFCEF849A1"]
-			description: [
-				"氮气，无论是制作硝酸、氨气还是氮肥，你都会大量地需要它的！"
-				""
-				"此外，它还经常在工业中充当保护气"
-				""
-				"幸好，大气中并不缺乏它！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_6F45E0399ACE6AF4.desc_01}"]
 			id: "6F45E0399ACE6AF4"
 			tasks: [{
 				id: "219FAEC777BA0667"
 				item: "kubejs:nitrogen_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氮气"
+			title: "{ftbquests.chapter_618224951690C06E.quest_6F45E0399ACE6AF4.title}"
 			x: -1.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["168F65EFCEF849A1"]
-			description: [
-				"作为最常用的氧化剂，氧气参与到了各个工业门类之中！"
-				""
-				"你需要它来制作二氧化碳、二氧化氮、半成品钢、熔融氧化铝等一系列产品！"
-				""
-				"此外，在外太空，你也需要主动生产氧气！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_1003AB11618384CD.desc_01}"]
 			id: "1003AB11618384CD"
 			tasks: [{
 				id: "427560BA5BF0C766"
 				item: "kubejs:oxygen_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氧气"
+			title: "{ftbquests.chapter_618224951690C06E.quest_1003AB11618384CD.title}"
 			x: 1.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["4B4B993B47BBD531"]
-			description: [
-				"你可以通过电解水、热解水等方式获取氢气"
-				""
-				"它可以作为燃料，也可以作为原料"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_5C320AB6DCF23118.desc_01}"]
 			id: "5C320AB6DCF23118"
 			tasks: [{
 				id: "109C9CE0B13E36E4"
 				item: "kubejs:hydrogen_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氢气"
+			title: "{ftbquests.chapter_618224951690C06E.quest_5C320AB6DCF23118.title}"
 			x: -2.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["1003AB11618384CD"]
-			description: [
-				"二氧化碳参与了一些重要的化工配方"
-				""
-				"你可以用它合成甲烷、可以用它合成氮肥、也可以用它合成复合钻井液！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_416F0ADC3C8B6DBA.desc_01}"]
 			id: "416F0ADC3C8B6DBA"
 			tasks: [{
 				id: "7E1616A89B2A539B"
 				item: "kubejs:carbon_dioxide_bucket"
 				type: "item"
 			}]
-			title: "化工之页-二氧化碳"
+			title: "{ftbquests.chapter_618224951690C06E.quest_416F0ADC3C8B6DBA.title}"
 			x: 2.5d
 			y: 3.5d
 		}
@@ -121,14 +93,14 @@
 				"1003AB11618384CD"
 				"6F45E0399ACE6AF4"
 			]
-			description: [""]
+			description: [ ]
 			id: "6A23C0EF1A675EE6"
 			tasks: [{
 				id: "07A305E9CC72D371"
 				item: "kubejs:nitrogen_dioxide_bucket"
 				type: "item"
 			}]
-			title: "化工之页-二氧化氮"
+			title: "{ftbquests.chapter_618224951690C06E.quest_6A23C0EF1A675EE6.title}"
 			x: 1.0d
 			y: 5.0d
 		}
@@ -137,18 +109,14 @@
 				"5C320AB6DCF23118"
 				"6F45E0399ACE6AF4"
 			]
-			description: [
-				"在很久以前，一位伟大而富有争议的工程师——&e哈勃&r——发明了通过氮气和氢气直接合成氨气的方法"
-				""
-				"哈勃法的发明让农业生产变得十分高效——&e通过氮肥，你无需种田即可通过无土栽培快速获取各种作物！&r"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_560AB60756F982FB.desc_01}"]
 			id: "560AB60756F982FB"
 			tasks: [{
 				id: "0ED1944147B38BA7"
 				item: "kubejs:ammonia_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氨气"
+			title: "{ftbquests.chapter_618224951690C06E.quest_560AB60756F982FB.title}"
 			x: -1.0d
 			y: 5.0d
 		}
@@ -157,65 +125,53 @@
 				"6A23C0EF1A675EE6"
 				"560AB60756F982FB"
 			]
-			description: [
-				"通过直接将二氧化氮通入水中，你可以简单地获取硝酸"
-				""
-				"不过这种方法会导致一部分氮被浪费"
-				""
-				"而通过电解氨气和氧气，你可以快速且无氮损耗地制取硝酸"
-				""
-				"虽然一部分氨气变成了二氧化氮，但是你依然可以用氨气将它们变回氮气"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_5F583F35C798556F.desc_01}"]
 			id: "5F583F35C798556F"
 			tasks: [{
 				id: "6C46D9D0A78B2532"
 				item: "kubejs:nitric_acid_bucket"
 				type: "item"
 			}]
-			title: "化工之页-硝酸"
+			title: "{ftbquests.chapter_618224951690C06E.quest_5F583F35C798556F.title}"
 			x: 1.0d
 			y: 6.5d
 		}
 		{
 			dependencies: ["5C320AB6DCF23118"]
-			description: [
-				"氢气可以合成甲烷！"
-				""
-				"而甲烷可以制作乙烯！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_0878EC7C553CB0F2.desc_01}"]
 			id: "0878EC7C553CB0F2"
 			tasks: [{
 				id: "51F6EC4BB61FFC01"
 				item: "kubejs:natural_gas_bucket"
 				type: "item"
 			}]
-			title: "化工之页-桶装甲烷"
+			title: "{ftbquests.chapter_618224951690C06E.quest_0878EC7C553CB0F2.title}"
 			x: -4.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["5C320AB6DCF23118"]
-			description: ["氢气是制作润滑油必不可少的原料！"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_07667205B1B2914E.desc_01}"]
 			id: "07667205B1B2914E"
 			tasks: [{
 				id: "6C60CF37591C4EF2"
 				item: "kubejs:lube_oil_bucket"
 				type: "item"
 			}]
-			title: "化工之页-桶装润滑油"
+			title: "{ftbquests.chapter_618224951690C06E.quest_07667205B1B2914E.title}"
 			x: -4.0d
 			y: 5.0d
 		}
 		{
 			dependencies: ["5C320AB6DCF23118"]
-			description: ["氢气可以用于人工合成原油！"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_606391D29DF80609.desc_01}"]
 			id: "606391D29DF80609"
 			tasks: [{
 				id: "48E3DC368835F875"
 				item: "createdieselgenerators:crude_oil_bucket"
 				type: "item"
 			}]
-			title: "化工之页-原油桶"
+			title: "{ftbquests.chapter_618224951690C06E.quest_606391D29DF80609.title}"
 			x: -2.5d
 			y: 5.0d
 		}
@@ -226,84 +182,64 @@
 				item: "minecraft:water_bucket"
 				type: "item"
 			}]
-			title: "化工之页-水"
+			title: "{ftbquests.chapter_618224951690C06E.quest_4B4B993B47BBD531.title}"
 			x: -2.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["416F0ADC3C8B6DBA"]
-			description: [
-				"氢气可以合成甲烷！"
-				""
-				"而甲烷可以制作乙烯！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_38CB54DECAB80B4C.desc_01}"]
 			id: "38CB54DECAB80B4C"
 			tasks: [{
 				id: "1709614ACB26DED2"
 				item: "kubejs:natural_gas_bucket"
 				type: "item"
 			}]
-			title: "化工之页-桶装甲烷"
+			title: "{ftbquests.chapter_618224951690C06E.quest_38CB54DECAB80B4C.title}"
 			x: 4.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["560AB60756F982FB"]
-			description: [
-				"氮肥是农业生产的革命！"
-				""
-				"有了它，你的生产不再受制于环境！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_4B343450AA9DD1F4.desc_01}"]
 			id: "4B343450AA9DD1F4"
 			tasks: [{
 				id: "2FA5D7AE5D04BE92"
 				item: "kubejs:nitrogen_fertilizer_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氮肥"
+			title: "{ftbquests.chapter_618224951690C06E.quest_4B343450AA9DD1F4.title}"
 			x: -1.0d
 			y: 6.5d
 		}
 		{
 			dependencies: ["416F0ADC3C8B6DBA"]
-			description: ["一位伟大的工程师——&e侯德榜&r——发明了这种工序简洁、原料简单的生产方法，可以用于快速生产大量的氮肥！"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_60A79D471B48E339.desc_01}"]
 			id: "60A79D471B48E339"
 			tasks: [{
 				id: "27BD9885F09B4AF5"
 				item: "kubejs:nitrogen_fertilizer_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氮肥"
+			title: "{ftbquests.chapter_618224951690C06E.quest_60A79D471B48E339.title}"
 			x: 2.5d
 			y: 5.0d
 		}
 		{
 			dependencies: ["416F0ADC3C8B6DBA"]
-			description: [
-				"复合钻井液需要四种不同的化工流体参与"
-				""
-				"氢氧化钠、硝酸、二氧化碳、液态经验"
-				""
-				"你需要它来开发奇异石油、铝、月球戴斯等矿脉！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_5C8E742F48C9FCD8.desc_01}"]
 			id: "5C8E742F48C9FCD8"
 			tasks: [{
 				id: "39E982597A720795"
 				item: "kubejs:drilling_fluid_bucket"
 				type: "item"
 			}]
-			title: "化工之页-复合钻井液"
+			title: "{ftbquests.chapter_618224951690C06E.quest_5C8E742F48C9FCD8.title}"
 			x: 4.0d
 			y: 5.0d
 		}
 		{
-			description: [
-				"在从海带或是矿石中提取出盐分之后，你就可以考虑盐水化工了！"
-				""
-				"盐水的产物广泛用于各个工业门类！"
-				""
-				"除此以外，你还可以使用盐水直接发酵出种子油！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_22A3AF321C05DED8.desc_01}"]
 			id: "22A3AF321C05DED8"
 			size: 1.5d
 			tasks: [{
@@ -311,16 +247,12 @@
 				item: "kubejs:saline_water_bucket"
 				type: "item"
 			}]
-			title: "化工之页-海洋秘宝"
+			title: "{ftbquests.chapter_618224951690C06E.quest_22A3AF321C05DED8.title}"
 			x: 0.0d
 			y: 8.25d
 		}
 		{
-			description: [
-				"硫磺主要用于生产硫酸——而硫酸拥有大量的用途！"
-				""
-				"你可以通过矿脉、甲烷、焦黑熔渣等方式获取硫磺"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_439D1C99871DD71E.desc_01}"]
 			id: "439D1C99871DD71E"
 			size: 1.5d
 			tasks: [{
@@ -328,153 +260,117 @@
 				item: "kubejs:sulphur"
 				type: "item"
 			}]
-			title: "化工之页-硫磺"
+			title: "{ftbquests.chapter_618224951690C06E.quest_439D1C99871DD71E.title}"
 			x: 0.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["22A3AF321C05DED8"]
-			description: [
-				"氯气，一种强氧化性的酸性气体，在工业上有着广泛的用途！"
-				""
-				"你可以将其作漂白剂从而将染色的物件漂白"
-				""
-				"你还可以用它来无土栽培各种末地作物，或是获取末地石！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_63961ACF2D581A49.desc_01}"]
 			id: "63961ACF2D581A49"
 			tasks: [{
 				id: "4D15635350E595EC"
 				item: "kubejs:chlorine_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氯气"
+			title: "{ftbquests.chapter_618224951690C06E.quest_63961ACF2D581A49.title}"
 			x: -1.0d
 			y: 9.5d
 		}
 		{
 			dependencies: ["22A3AF321C05DED8"]
-			description: ["氢氧化钠是重要的强碱性原料"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_7FE3FD901CE17FB5.desc_01}"]
 			id: "7FE3FD901CE17FB5"
 			tasks: [{
 				id: "73F875F64E4ADD1C"
 				item: "kubejs:caustic_soda_bucket"
 				type: "item"
 			}]
-			title: "化工之页-氢氧化钠"
+			title: "{ftbquests.chapter_618224951690C06E.quest_7FE3FD901CE17FB5.title}"
 			x: 1.0d
 			y: 9.5d
 		}
 		{
 			dependencies: ["63961ACF2D581A49"]
-			description: [
-				"聚氯乙烯是氯气最重要的产物！"
-				""
-				"你需要用它来制作大量重要的高级物件，比如黄绿色电路板、石墨电极、轻质复合板、零件盒......"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_2390D447CF69285A.desc_01}"]
 			id: "2390D447CF69285A"
 			tasks: [{
 				id: "6CCC89C28EC95DAE"
 				item: "kubejs:duraplas_bucket"
 				type: "item"
 			}]
-			title: "化工之页-聚氯乙烯"
+			title: "{ftbquests.chapter_618224951690C06E.quest_2390D447CF69285A.title}"
 			x: -2.5d
 			y: 9.5d
 		}
 		{
 			dependencies: ["7FE3FD901CE17FB5"]
-			description: [
-				"氢氧化钠是铝工业必不可少的一种原料！"
-				""
-				"你需要用它将铝土完全转变为氧化铝"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_42CC40713CDAEA1C.desc_01}"]
 			id: "42CC40713CDAEA1C"
 			tasks: [{
 				id: "55166463FFEA23E9"
 				item: "kubejs:fused_alumina_bucket"
 				type: "item"
 			}]
-			title: "化工之页-熔融氧化铝"
+			title: "{ftbquests.chapter_618224951690C06E.quest_42CC40713CDAEA1C.title}"
 			x: 1.0d
 			y: 11.0d
 		}
 		{
 			dependencies: ["63961ACF2D581A49"]
-			description: [
-				"盐酸是氯气的重要产物，你需要用它来制作黄绿色电路板"
-				""
-				"将氯气通入水或氢氧化钠可以制取盐酸"
-				""
-				"在制作聚氯乙烯时也会产生盐酸"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_4C56978CB36074B9.desc_01}"]
 			id: "4C56978CB36074B9"
 			tasks: [{
 				id: "4E604AD825D5265C"
 				item: "kubejs:muriatic_acid_bucket"
 				type: "item"
 			}]
-			title: "化工之页-盐酸"
+			title: "{ftbquests.chapter_618224951690C06E.quest_4C56978CB36074B9.title}"
 			x: -2.5d
 			y: 11.0d
 		}
 		{
 			dependencies: ["63961ACF2D581A49"]
-			description: ["你可以将氯气与二氧化硫、水混合来制取硫酸和盐酸！"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_60CECDD064D341B2.desc_01}"]
 			id: "60CECDD064D341B2"
 			tasks: [{
 				id: "662A1770F532EA6F"
 				item: "vintageimprovements:sulfuric_acid_bucket"
 				type: "item"
 			}]
-			title: "化工之页-桶装硫酸"
+			title: "{ftbquests.chapter_618224951690C06E.quest_60CECDD064D341B2.title}"
 			x: -1.0d
 			y: 11.0d
 		}
 		{
 			dependencies: ["7FE3FD901CE17FB5"]
-			description: [
-				"氢氧化钠可以用于人造海绵——你可以利用海绵和水龙头进行废液消耗"
-				""
-				"或是让机械手对工作盆使用海绵"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_600E8D55FF0D4D78.desc_01}"]
 			id: "600E8D55FF0D4D78"
 			tasks: [{
 				id: "094BC389E558B596"
 				item: "minecraft:sponge"
 				type: "item"
 			}]
-			title: "化工之页-人造海绵"
+			title: "{ftbquests.chapter_618224951690C06E.quest_600E8D55FF0D4D78.title}"
 			x: 2.5d
 			y: 9.5d
 		}
 		{
 			dependencies: ["7FE3FD901CE17FB5"]
-			description: [
-				"复合钻井液需要四种不同的化工流体参与"
-				""
-				"氢氧化钠、硝酸、二氧化碳、液态经验"
-				""
-				"你需要它来开发奇异石油、铝、月球戴斯等矿脉！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_202C0CAFCB39399A.desc_01}"]
 			id: "202C0CAFCB39399A"
 			tasks: [{
 				id: "3FEA07B83C8871F5"
 				item: "kubejs:drilling_fluid_bucket"
 				type: "item"
 			}]
-			title: "化工之页-复合钻井液"
+			title: "{ftbquests.chapter_618224951690C06E.quest_202C0CAFCB39399A.title}"
 			x: 2.5d
 			y: 11.0d
 		}
 		{
 			dependencies: ["439D1C99871DD71E"]
-			description: [
-				"硫粉可以首先被加热氧化为二氧化硫"
-				""
-				"然后消耗铁粉并超级加热转化为三氧化硫"
-				""
-				"最后通入水中变为硫酸"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_6D5A338AE1176A84.desc_01}"]
 			id: "6D5A338AE1176A84"
 			shape: "hexagon"
 			size: 1.25d
@@ -483,138 +379,116 @@
 				item: "vintageimprovements:sulfuric_acid_bucket"
 				type: "item"
 			}]
-			title: "化工之页-桶装硫酸"
+			title: "{ftbquests.chapter_618224951690C06E.quest_6D5A338AE1176A84.title}"
 			x: 0.0d
 			y: -3.125d
 		}
 		{
 			dependencies: ["439D1C99871DD71E"]
-			description: [
-				"你可以将硫粉制作为大量火药"
-				""
-				"你在维持爆破压缩机的运行时会需要它的！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_605AD4F3A6AF17E4.desc_01}"]
 			id: "605AD4F3A6AF17E4"
 			tasks: [{
 				id: "6A9ED6E3B34B961E"
 				item: "minecraft:gunpowder"
 				type: "item"
 			}]
-			title: "化工之页-火药"
+			title: "{ftbquests.chapter_618224951690C06E.quest_605AD4F3A6AF17E4.title}"
 			x: 1.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["439D1C99871DD71E"]
-			description: ["人造橡胶可以用于代替海带来制作传送带、漏斗、隧道等物品！"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_41AC5CA3C11FBDB6.desc_01}"]
 			id: "41AC5CA3C11FBDB6"
 			tasks: [{
 				id: "30A4C27EF26ED668"
 				item: "kubejs:rubber"
 				type: "item"
 			}]
-			title: "化工之页-人工橡胶"
+			title: "{ftbquests.chapter_618224951690C06E.quest_41AC5CA3C11FBDB6.title}"
 			x: -1.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["6D5A338AE1176A84"]
-			description: ["通过消耗暗影钢与硫酸，你可以批量增殖下界合金"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_57011D295D66EDB0.desc_01}"]
 			id: "57011D295D66EDB0"
 			tasks: [{
 				id: "6CF68C24C81EF62C"
 				item: "create:shadow_steel"
 				type: "item"
 			}]
-			title: "化工之页-合金增殖"
+			title: "{ftbquests.chapter_618224951690C06E.quest_57011D295D66EDB0.title}"
 			x: -1.5d
 			y: -3.0d
 		}
 		{
 			dependencies: ["6D5A338AE1176A84"]
-			description: [
-				"你可以使用硫酸和异彩原虫来转化各种染料"
-				""
-				"此外，硫酸也能用于繁殖异彩原虫"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_2EECDE3D606FE209.desc_01}"]
 			id: "2EECDE3D606FE209"
 			tasks: [{
 				id: "36D0F583F0FDAB5D"
 				item: "kubejs:chromatic_protozoa"
 				type: "item"
 			}]
-			title: "化工之页-染料工业"
+			title: "{ftbquests.chapter_618224951690C06E.quest_2EECDE3D606FE209.title}"
 			x: 1.5d
 			y: -3.0d
 		}
 		{
 			dependencies: ["6D5A338AE1176A84"]
-			description: ["硫酸可以被用于制作蓄电池——这是你第一种大量存储电能的方法！"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_151C84BF7A1C1836.desc_01}"]
 			id: "151C84BF7A1C1836"
 			tasks: [{
 				id: "4A759EE3996BAF20"
 				item: "createaddition:modular_accumulator"
 				type: "item"
 			}]
-			title: "化工之页-电能存储"
+			title: "{ftbquests.chapter_618224951690C06E.quest_151C84BF7A1C1836.title}"
 			x: -1.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["6D5A338AE1176A84"]
-			description: [
-				"硫酸可以用于将乙醇转化为乙烯，从而生产聚乙烯这一重要材料"
-				""
-				"在这个过程中，250mB的硫酸将被转化为250mB的二氧化硫，剩余的750mB硫酸也会进入输出槽。&a需要注意的是，工作盆输出槽中的流体不会自动与输入槽合并！&r&e你可以考虑使用工作盆的自动导出功能将流体导出，从而避免使用智能流体管道！&r"
-				""
-				"你可以在将二氧化硫转化回硫酸后将它们重进放回输入槽——这样你便无需输入更多的硫！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_2D3DBC1B834A5513.desc_01}"]
 			id: "2D3DBC1B834A5513"
 			tasks: [{
 				id: "2D39051A4E6420AA"
 				item: "kubejs:ethylene_bucket"
 				type: "item"
 			}]
-			title: "化工之页-乙醇消去"
+			title: "{ftbquests.chapter_618224951690C06E.quest_2D3DBC1B834A5513.title}"
 			x: 0.0d
 			y: -4.5d
 		}
 		{
 			dependencies: ["6D5A338AE1176A84"]
-			description: ["硫酸也可以用于制作硝粉——它可以作为火药的替代"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_08A63ED35D51F2CD.desc_01}"]
 			id: "08A63ED35D51F2CD"
 			tasks: [{
 				id: "598497480004DB9E"
 				item: "createbigcannons:congealed_nitro"
 				type: "item"
 			}]
-			title: "化工之页-军事升级"
+			title: "{ftbquests.chapter_618224951690C06E.quest_08A63ED35D51F2CD.title}"
 			x: 1.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["416F0ADC3C8B6DBA"]
-			description: [
-				"史莱姆可乐是一种优质的饮品！"
-				""
-				"没有人能拒绝一杯加冰的、咕嘟咕嘟冒泡的、带有焦糖味与茶香的饮料！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_2F3227F0C54B470E.desc_01}"]
 			id: "2F3227F0C54B470E"
 			tasks: [{
 				id: "37192FB196725B80"
 				item: "kubejs:slime_cola_bucket"
 				type: "item"
 			}]
-			title: "化工之页-带来快乐之水"
+			title: "{ftbquests.chapter_618224951690C06E.quest_2F3227F0C54B470E.title}"
 			x: 2.5d
 			y: 2.0d
 		}
 		{
-			description: [
-				"煤炭可以通过矿脉、&e泥炭原虫&r、焦黑熔渣、可燃冰等方式进行自动化！"
-				""
-				"需要注意的是，焦黑熔渣和可燃冰只能获取粉碎煤！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_29D37FBCB9DBB4FC.desc_01}"]
 			id: "29D37FBCB9DBB4FC"
 			size: 1.5d
 			tasks: [{
@@ -622,56 +496,46 @@
 				item: "minecraft:coal"
 				type: "item"
 			}]
-			title: "化工之页-碳工业"
+			title: "{ftbquests.chapter_618224951690C06E.quest_29D37FBCB9DBB4FC.title}"
 			x: 0.0d
 			y: -6.75d
 		}
 		{
 			dependencies: ["29D37FBCB9DBB4FC"]
-			description: [
-				"石墨是煤的另一种产物"
-				""
-				"你可以用它来制作碳化硅、石墨烯等重要材料！"
-				""
-				"也可以直接制成电池、电解器、石墨电极等元件！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_53B568B85DEFD683.desc_01}"]
 			id: "53B568B85DEFD683"
 			tasks: [{
 				id: "2ECCF5E584F93500"
 				item: "kubejs:graphite"
 				type: "item"
 			}]
-			title: "化工之页-石墨"
+			title: "{ftbquests.chapter_618224951690C06E.quest_53B568B85DEFD683.title}"
 			x: 1.5d
 			y: -7.5d
 		}
 		{
 			dependencies: ["29D37FBCB9DBB4FC"]
-			description: ["煤可以用于合成原油——粉碎煤也可以"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_22ED5464FFDF5C83.desc_01}"]
 			id: "22ED5464FFDF5C83"
 			tasks: [{
 				id: "5354F2E7F4BF55AA"
 				item: "createdieselgenerators:crude_oil_bucket"
 				type: "item"
 			}]
-			title: "化工之页-煤液化"
+			title: "{ftbquests.chapter_618224951690C06E.quest_22ED5464FFDF5C83.title}"
 			x: 1.5d
 			y: -6.0d
 		}
 		{
 			dependencies: ["29D37FBCB9DBB4FC"]
-			description: [
-				"煤可以用于制作沥青"
-				""
-				"然而木炭也可以"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_6E29043C5FACFC7D.desc_01}"]
 			id: "6E29043C5FACFC7D"
 			tasks: [{
 				id: "1E5405131C89D498"
 				item: "createloveandwar:bitumen_bucket"
 				type: "item"
 			}]
-			title: "化工之页-奇妙的沥青"
+			title: "{ftbquests.chapter_618224951690C06E.quest_6E29043C5FACFC7D.title}"
 			x: -1.5d
 			y: -6.0d
 		}
@@ -683,78 +547,62 @@
 				item: "kubejs:crushed_coal"
 				type: "item"
 			}]
-			title: "化工之页-粉碎煤"
+			title: "{ftbquests.chapter_618224951690C06E.quest_7A35850F4C2BE0BB.title}"
 			x: -1.5d
 			y: -7.5d
 		}
 		{
 			dependencies: ["29D37FBCB9DBB4FC"]
-			description: [
-				"煤可以用于合成奇异石油——粉碎煤也可以"
-				""
-				"等到了月球，也许还可以试试乳酪"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_54A3F1A5373ACFFC.desc_01}"]
 			id: "54A3F1A5373ACFFC"
 			tasks: [{
 				id: "32A50BE7F9780CE1"
 				item: "kubejs:refined_oil_bucket"
 				type: "item"
 			}]
-			title: "化工之页-高级煤液化"
+			title: "{ftbquests.chapter_618224951690C06E.quest_54A3F1A5373ACFFC.title}"
 			x: 0.0d
 			y: -8.5d
 		}
 		{
 			dependencies: ["7A35850F4C2BE0BB"]
-			description: ["粉碎煤的最重要用途便是冶炼钢铁！"]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_765C28D8177EE2D7.desc_01}"]
 			id: "765C28D8177EE2D7"
 			tasks: [{
 				id: "2BE9CABF9D4642ED"
 				item: "kubejs:incomplete_steel_bucket"
 				type: "item"
 			}]
-			title: "化工之页-钢铁"
+			title: "{ftbquests.chapter_618224951690C06E.quest_765C28D8177EE2D7.title}"
 			x: -1.5d
 			y: -9.0d
 		}
 		{
 			dependencies: ["53B568B85DEFD683"]
-			description: [
-				"碳化硅由石墨和石英制成，你也可以使用硅来制作"
-				""
-				"它可以用于打磨，也可以用于制作透镜，也可以作为储氢材料！"
-				""
-				"更重要的是，它可以用于制作石墨烯！"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_2F749C239E35F87B.desc_01}"]
 			id: "2F749C239E35F87B"
 			tasks: [{
 				id: "5B5810ACAFE61732"
 				item: "kubejs:carborundum"
 				type: "item"
 			}]
-			title: "化工之页-碳化硅"
+			title: "{ftbquests.chapter_618224951690C06E.quest_2F749C239E35F87B.title}"
 			x: 1.5d
 			y: -9.0d
 		}
 		{
 			dependencies: ["2F749C239E35F87B"]
-			description: [
-				"石墨烯是碳工业的重要原料！"
-				""
-				"它用于批量制造&e石墨电极&r、&e纤维布&r等材料！"
-				""
-				"还可以用于量产太阳能板"
-			]
+			description: ["{ftbquests.chapter_618224951690C06E.quest_48F66657F0A269B0.desc_01}"]
 			id: "48F66657F0A269B0"
 			tasks: [{
 				id: "2987AAA62FE90384"
 				item: "kubejs:graphene_coil"
 				type: "item"
 			}]
-			title: "化工之页-石墨烯"
+			title: "{ftbquests.chapter_618224951690C06E.quest_48F66657F0A269B0.title}"
 			x: 0.0d
 			y: -10.0d
 		}
 	]
-	title: "乐谱-化工之页"
+	title: "{ftbquests.chapter_618224951690C06E.title}"
 }

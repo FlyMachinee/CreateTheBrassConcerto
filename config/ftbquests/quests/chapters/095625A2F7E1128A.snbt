@@ -9,37 +9,21 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"现在我们开始学习化工系统吧!"
-				""
-				"无数个世代在地下积累的资源将成为你的助力"
-				""
-				"它将为你带来大量的好处：&a更优质的燃料、更强大的动力源、更高的矿物产量、更多能够量产的物件......&r"
-				""
-				"不过它十分复杂且需要大量(真的很多!)的铜，希望你能有所准备!"
-				""
-				"&e在这一章，不同的任务之间跨度变得愈发巨大，有时许多天都没有推进到下一个任务是很正常的！&r"
-				""
-				"&e只要思想不滑坡，办法总比困难多！&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2CD7DA25D6F102FC.desc_01}"]
 			id: "2CD7DA25D6F102FC"
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
 				id: "56575F9B3D4DE908"
-				title: "欢迎来到机械动力！"
+				title: "{ftbquests.chapter_095625A2F7E1128A.quest_2CD7DA25D6F102FC.task_56575F9B3D4DE908.title}"
 				type: "checkmark"
 			}]
-			title: "事情开始变得复杂了"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2CD7DA25D6F102FC.title}"
 			x: 6.0d
 			y: 4.0d
 		}
 		{
-			description: [
-				"使用骨粉来获取盐！"
-				""
-				"盐在工业中有十分重要的地位——不过你暂时还无法运用它"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_52744CC68AA87354.desc_01}"]
 			id: "52744CC68AA87354"
 			shape: "gear"
 			size: 1.5d
@@ -48,19 +32,13 @@
 				item: "minecraft:bone_meal"
 				type: "item"
 			}]
-			title: "超级加热它！"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_52744CC68AA87354.title}"
 			x: 4.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["52744CC68AA87354"]
-			description: [
-				"哦，除了工业，它还可以吃"
-				""
-				"你可以使用电解器来电解饱和盐水——从而获取氢氧化钠与氯气！"
-				""
-				"在未来，你可以使用大型电解池来代替电解器！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5495F2B5448CFC5B.desc_01}"]
 			id: "5495F2B5448CFC5B"
 			tasks: [{
 				id: "59E737290E040E54"
@@ -71,11 +49,7 @@
 			y: 5.5d
 		}
 		{
-			description: [
-				"为了制作原油探测器，你首先需要获取原油！"
-				""
-				"你可以在海上的石油喷泉或海洋地下的含油层发现世界中的原油"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_13C620410D54B082.desc_01}"]
 			id: "13C620410D54B082"
 			tasks: [{
 				id: "5D30EDADE7631EDC"
@@ -86,21 +60,15 @@
 						value: "dut_create:buckets/crude_oil"
 					}
 				}
-				title: "Any #dut_create:buckets/crude_oil"
+				title: "{ftbquests.chapter_095625A2F7E1128A.quest_13C620410D54B082.task_5D30EDADE7631EDC.title}"
 				type: "item"
 			}]
-			title: "遗产"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_13C620410D54B082.title}"
 			x: -4.0d
 			y: -2.0d
 		}
 		{
-			description: [
-				"你可以用这个罐子方便且安全地搬运液体"
-				""
-				"它是一个存量为16B的流体潜影盒。&a不仅如此，它还可以像桶那样与工作盆交互，并可以盛装不足1B的流体&r"
-				""
-				"&e在此之外，你还可以用它设置流体过滤&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_23FCF6DA7824526A.desc_01}"]
 			id: "23FCF6DA7824526A"
 			size: 1.5d
 			tasks: [{
@@ -117,7 +85,7 @@
 				"6ABE4B8E28063A00"
 			]
 			dependency_requirement: "one_completed"
-			description: ["有了这些原油——你就能制作原油探测器来寻找它们了！"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_6CE80217F2F61E53.desc_01}"]
 			id: "6CE80217F2F61E53"
 			tasks: [{
 				id: "428406B6E755B702"
@@ -129,11 +97,7 @@
 		}
 		{
 			dependencies: ["1C2F0F2DE7D882E5"]
-			description: [
-				"组装钻井的必备元件"
-				""
-				"在组装抽油机时，尾部的轴承也会记入后臂长度。而中部轴承对应的方块则不会被记入长度"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7DD87FB08A7E5601.desc_01}"]
 			id: "7DD87FB08A7E5601"
 			tasks: [{
 				id: "3B5DC57F300C0BC1"
@@ -145,11 +109,7 @@
 		}
 		{
 			dependencies: ["6CE80217F2F61E53"]
-			description: [
-				"组装钻井的必备元件"
-				""
-				"在组装钻井时，驴头会被记入前臂长度"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_1C2F0F2DE7D882E5.desc_01}"]
 			id: "1C2F0F2DE7D882E5"
 			rewards: [
 				{
@@ -168,29 +128,13 @@
 				item: "createdieselgenerators:pumpjack_head"
 				type: "item"
 			}]
-			title: "开采原油！"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_1C2F0F2DE7D882E5.title}"
 			x: -0.5d
 			y: -1.0d
 		}
 		{
 			dependencies: ["1C2F0F2DE7D882E5"]
-			description: [
-				"组装钻井的必备元件"
-				""
-				"对于抽油机而言，其效率与前臂后臂之比、曲轴类型和转速同时相关"
-				""
-				"大型曲轴的效率是小型曲轴的两倍"
-				""
-				"所谓前臂长度指的是自中部轴承（不包括那一格）到抽油机驴头（包括驴头）的长度"
-				""
-				"所谓后臂长度指的是自中部轴承（不包括那一格）到尾部轴承（包括尾部轴承）的长度"
-				""
-				"而抽油机效率将在前臂：后臂为5:1、并且曲轴为大型曲轴时达到最大"
-				""
-				"&e由于后臂长度最小为4&r，所以最小的满效率抽油机为20:4"
-				""
-				"&a除此以外，效率越高的抽油机，其原油利用率也越高——这使得可以抽出的原油远大于油田的显示储量！&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5A0BC2420F12862C.desc_01}"]
 			id: "5A0BC2420F12862C"
 			tasks: [{
 				id: "208258898D34631E"
@@ -203,20 +147,10 @@
 		{
 			dependencies: ["734BBC9808E801E6"]
 			description: [
-				"&e柴油、汽油、甲烷......润滑油、硫磺、氨气......&r"
-				""
-				"&e在过去世代遗产的帮助下，工业将迸发出无穷的活力！&r"
-				""
-				"&a如果对合成表感到困惑，请查看下一个任务，或是查看化工之页以及石化之页！&r"
-				""
-				"温馨提示：使用超级加热的分馏配方大多使用的是&a恒温器&r而非&e分馏塔控制器&r，请注意区分！"
-				""
-				"分馏塔的大小会影响其效率——2*2的分馏塔以4倍速运行，而3*3则以9倍！"
-				""
+				"{ftbquests.chapter_095625A2F7E1128A.quest_3070A92AD6E4B7FD.desc_01}"
 				"{@pagebreak}"
-				"[ \"从现在开始，你应当开始注意控制\", { \"text\": \"世界不稳定度\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\" } }, \"了！（点击跳转）\" ]"
-				""
-				"&e分馏塔，以及未来你将会接触到的恒温塔，都是会对世界造成较高负载的机械。&r当世界不稳定度逐渐升高时，你需要找到更好的方式来代替它们！"
+				"[\"\", {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_3070A92AD6E4B7FD.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\"}, \"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_3070A92AD6E4B7FD.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_3070A92AD6E4B7FD.desc_02.rich_03\"}]"
+				"{ftbquests.chapter_095625A2F7E1128A.quest_3070A92AD6E4B7FD.desc_03}"
 			]
 			id: "3070A92AD6E4B7FD"
 			rewards: [{
@@ -231,17 +165,13 @@
 				item: "createdieselgenerators:distillation_controller"
 				type: "item"
 			}]
-			title: "石！油！加！工！"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_3070A92AD6E4B7FD.title}"
 			x: -3.5d
 			y: 6.0d
 		}
 		{
 			dependencies: ["5495F2B5448CFC5B"]
-			description: [
-				"氯气是常用的工业原料，盐酸可以由它获得"
-				""
-				"除此以外，它还可以用于制作聚氯乙烯"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5D17F3EB50C80731.desc_01}"]
 			id: "5D17F3EB50C80731"
 			tasks: [{
 				id: "5B7787E483AD6F07"
@@ -253,11 +183,7 @@
 		}
 		{
 			dependencies: ["5495F2B5448CFC5B"]
-			description: [
-				"氢氧化钠是常用的工业原料"
-				""
-				"它可以制作复合钻井液、制作电池......"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_401F17194C1C062C.desc_01}"]
 			id: "401F17194C1C062C"
 			tasks: [{
 				id: "460057353B7EC8FE"
@@ -269,7 +195,7 @@
 		}
 		{
 			dependencies: ["1186909E719A2320"]
-			description: ["塑料将是常用的化工产品，能够制作吸管、分馏塔控制器等设备！"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_734BBC9808E801E6.desc_01}"]
 			id: "734BBC9808E801E6"
 			rewards: [{
 				count: 15
@@ -287,13 +213,7 @@
 		}
 		{
 			dependencies: ["4F005EA6EF996CDB"]
-			description: [
-				"柴油机是更好的动力来源！"
-				""
-				"它不需要输入水、拥有比蒸汽机更高的应力上下限、并且体积非常小！"
-				""
-				"除了噪音恼人，其余都非常棒！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_323BFD5BCA3BB9AD.desc_01}"]
 			id: "323BFD5BCA3BB9AD"
 			rewards: [{
 				count: 3
@@ -306,17 +226,13 @@
 				item: "createdieselgenerators:diesel_engine"
 				type: "item"
 			}]
-			title: "动力小型化"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_323BFD5BCA3BB9AD.title}"
 			x: -2.0d
 			y: 8.5d
 		}
 		{
 			dependencies: ["33B5D92383569018"]
-			description: [
-				"硫磺是重要工业原料，可以制作为二氧化硫、三氧化硫与硫酸，还可以用于制作人工橡胶；二氧化硫可以用于无土栽培诡异菌、绯红菌、下界疣，并进一步获得火药、染料等原料"
-				""
-				"硫矿石在主世界和下界有大量分布，除此以外，从甲烷或烂鸡蛋中也可以提取"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_497C1131A3DF9662.desc_01}"]
 			id: "497C1131A3DF9662"
 			rewards: [{
 				id: "2C0F79BB83D1D907"
@@ -333,32 +249,11 @@
 		}
 		{
 			description: [
-				"这是化学加工最常用的机器！"
-				""
-				"最好能够自动化生产它！"
-				""
-				"不要被它的外表所欺骗——&a它可以被从任意方向泵入/泵出液体！&r"
-				""
-				"&e有时，密封压缩机被放下来的时候如果底下已经有工作盆，并且压缩机工作方向反了，那么即使改正工作方向也不会工作，而是需要重新放置工作盆！&r"
-				""
-				"&e密封压缩机在满转速时的单次工作时间为配方时长-1tick！在持续工作时，则完全等于配方时长！&r"
-				""
+				"{ftbquests.chapter_095625A2F7E1128A.quest_33B5D92383569018.desc_01}"
 				"{@pagebreak}"
-				"你也许在疑惑应当如何输入输出大量不同的流体和物品"
-				""
-				"对于物品，你可以使用混带——具体查看黄铜隧道的思索"
-				""
-				"对于流体，你应当充分利用工作盆的自动输出功能以及智能流体管道"
-				""
-				"如果你实在想不明白，你可以查看下一页的&e3流体输入+物品输入+3流体输出+物品输出&r的密封压缩机可堆叠通解！但是你最好尝试自己研究出来——这对你的提升很有帮助！"
-				""
+				"{ftbquests.chapter_095625A2F7E1128A.quest_33B5D92383569018.desc_02}"
 				"{@pagebreak}"
-				"使用工作盆的自动导出来增加输出面，使用溜槽来增加工作盆的物品输入面"
-				""
-				"使用分液池的物品运送功能来分离输出物品与流体！"
-				""
-				"至于多种物品输入请使用混带！"
-				""
+				"{ftbquests.chapter_095625A2F7E1128A.quest_33B5D92383569018.desc_03}"
 				"{image:kubejs:textures/ftb/chamber.png width:100 height:110 align:center}"
 			]
 			id: "33B5D92383569018"
@@ -375,7 +270,7 @@
 				item: "vintageimprovements:vacuum_chamber"
 				type: "item"
 			}]
-			title: "密封加工"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_33B5D92383569018.title}"
 			x: -3.5d
 			y: 2.0d
 		}
@@ -384,13 +279,7 @@
 				"36C3A59891538134"
 				"278EE9B663F563A4"
 			]
-			description: [
-				"&e通过原油分馏获取柴油，再对柴油加工获得润滑油！&r"
-				""
-				"最为基础的配方是柴油加上氢气"
-				""
-				"而更进阶一些的配方则是使用柴油、氢气和二氧化硫与烈焰支原体"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.desc_01}"]
 			id: "7E2194D1F164C71A"
 			rewards: [{
 				count: 16
@@ -405,13 +294,13 @@
 				item: "kubejs:lube_oil_bucket"
 				type: "item"
 			}]
-			title: "活动关节"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.title}"
 			x: -0.5d
 			y: 6.0d
 		}
 		{
 			dependencies: ["7E2194D1F164C71A"]
-			description: ["行星齿轮组是一种能提供许多配方上便捷的材料——你可以使用行星齿轮组来方便地制造许多东西！"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2F6511F37CB28C7B.desc_01}"]
 			id: "2F6511F37CB28C7B"
 			rewards: [{
 				id: "1989F352976F5F10"
@@ -423,13 +312,13 @@
 				item: "kubejs:planetary_gear"
 				type: "item"
 			}]
-			title: "微缩的家"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2F6511F37CB28C7B.title}"
 			x: -0.5d
 			y: 7.5d
 		}
 		{
 			dependencies: ["7E2194D1F164C71A"]
-			description: ["一个灵活活动的机械，也许会成为某种突破口"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_60975844F7A3B133.desc_01}"]
 			id: "60975844F7A3B133"
 			rewards: [{
 				id: "76D027A050D57D58"
@@ -446,11 +335,7 @@
 		}
 		{
 			dependencies: ["7E2194D1F164C71A"]
-			description: [
-				"差速器可以用于制造列车控制台等复杂精密机械"
-				""
-				"除此以外，还可以用于维护太空电梯！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4EEBF6833EE9EC1D.desc_01}"]
 			id: "4EEBF6833EE9EC1D"
 			rewards: [{
 				id: "455E761079BB0BF8"
@@ -471,11 +356,8 @@
 				"5D17F3EB50C80731"
 			]
 			description: [
-				"聚氯乙烯是一种更高级的塑料"
-				""
-				"使用乙烯和氯气来制取它！"
-				""
-				"[ \"你可以使用\", { \"text\": \"列表过滤器\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4AE919CE7C34AD83\" } }, \"为工作盆设置过滤——只需要将聚氯乙烯桶从JEI中拖入列表过滤器即可！\" ]"
+				"{ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4AE919CE7C34AD83\"}, \"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_03\"}]"
 			]
 			id: "5AB3602434AE8947"
 			rewards: [{
@@ -494,17 +376,7 @@
 		}
 		{
 			dependencies: ["5AB3602434AE8947"]
-			description: [
-				"高速装/卸罐机可以用于快速在容器之间进行流体转移！（&a至多32B/tick！&r）"
-				""
-				"&e你可以使用它们来快速地为列车和其它移动结构装卸流体！(请注意，它们不能在移动结构内部生效，仅能在外部与移动结构交互！)&r"
-				""
-				"你可以塞入诸如&e密封储罐&r、桶、宇航服、氧气瓶这样可以存储流体的物品，流体将会在它们与机器之间转移！"
-				""
-				"如果你需要让物品仅在装满/排空后才被输出，那么可以尝试使用&e列表过滤器&r匹配物品属性或者使用&e属性过滤器&r的黑名单过滤装有液体的物品！"
-				""
-				"&e除此以外，当下方不是容器时，高速卸罐机会将部分液体直接排放至下方——你可以利用这一点来快速为高炉供氧！如果你不想要，可以使用红石信号禁用！&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_268BF1B548306F39.desc_01}"]
 			id: "268BF1B548306F39"
 			rewards: [{
 				id: "6DE19F030BBC69E4"
@@ -517,13 +389,13 @@
 				match_nbt: false
 				type: "item"
 			}]
-			title: "运输革命"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_268BF1B548306F39.title}"
 			x: -2.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["2F6511F37CB28C7B"]
-			description: ["你需要使用转速控制器来制造钻井"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4A73F70D9A7EFC87.desc_01}"]
 			id: "4A73F70D9A7EFC87"
 			rewards: [{
 				count: 12
@@ -542,15 +414,8 @@
 		{
 			dependencies: ["4EEBF6833EE9EC1D"]
 			description: [
-				"这将暂时是你最高效的动力源"
-				""
-				"对于某些燃料而言，一台即可比肩一台十八级锅炉——而当使用氨气燃烧时，甚至能比肩六台九级锅炉！"
-				""
-				"相信我，把蒸汽引擎全部换成它是非常值当的！"
-				""
-				"&a在过去，大型柴油引擎会大幅提升世界不稳定度，但经过来自科学家&r&eApertyotis&r&a的技术改进以后，它对世界造成的负载被大幅减弱了！除此以外，你再也不需要为其开口了！现在管道会自动与大型柴油引擎连接！&r"
-				""
-				"[ \"关于\", { \"text\": \"世界不稳定度\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\" } }, \"（点击跳转）\" ]"
+				"{ftbquests.chapter_095625A2F7E1128A.quest_316C37B5A2522059.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_316C37B5A2522059.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\"}, \"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_316C37B5A2522059.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_316C37B5A2522059.desc_02.rich_03\"}]"
 			]
 			id: "316C37B5A2522059"
 			rewards: [{
@@ -565,24 +430,14 @@
 				item: "createdieselgenerators:huge_diesel_engine"
 				type: "item"
 			}]
-			title: "动力革命！"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_316C37B5A2522059.title}"
 			x: 1.0d
 			y: 8.5d
 		}
 		{
 			dependencies: ["60975844F7A3B133"]
 			dependency_requirement: "one_completed"
-			description: [
-				"更高级的短程物流，往往采用最&m简单&r的方式"
-				""
-				"动力臂可以完美满足你的需求！"
-				""
-				"然而，我不建议你过多使用它！"
-				""
-				"&e走太多捷径，会让自己忘记怎样克服困难&r"
-				""
-				"除此以外，它还是一种对世界负载极高的机器！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2158B1016BA073D8.desc_01}"]
 			id: "2158B1016BA073D8"
 			rewards: [{
 				count: 2
@@ -595,16 +450,12 @@
 				item: "create:mechanical_arm"
 				type: "item"
 			}]
-			title: "我的手能换成这个吗？"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2158B1016BA073D8.title}"
 			x: 2.5d
 			y: 6.0d
 		}
 		{
-			description: [
-				"蓝冰可以批量生产冰块！"
-				""
-				"可以将冰块压制为浮冰，再压制为蓝冰"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_63F63C5EB6A116A0.desc_01}"]
 			id: "63F63C5EB6A116A0"
 			shape: "gear"
 			tasks: [{
@@ -617,11 +468,7 @@
 		}
 		{
 			dependencies: ["63F63C5EB6A116A0"]
-			description: [
-				"冷冻剂可以用于生产电路板和液态空气"
-				""
-				"你可以用冰来快速生产它！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_33C1C18E2D0D3825.desc_01}"]
 			id: "33C1C18E2D0D3825"
 			tasks: [{
 				id: "2319242070FEE33A"
@@ -633,10 +480,7 @@
 		}
 		{
 			dependencies: ["4A04F41BC7C33EBF"]
-			description: [
-				"氮气的主要作用是制备氨气、硝酸"
-				"那么氢气是怎么来的呢？"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_368A009A98EDA1EE.desc_01}"]
 			id: "368A009A98EDA1EE"
 			tasks: [{
 				id: "3AFDFD2D842F1F9E"
@@ -651,11 +495,7 @@
 				"5C60160231FA2379"
 				"78E8AD96D10D37D0"
 			]
-			description: [
-				"这是由一些奇异的微生物发酵而成的原油——它和普通原油有着不同的成分"
-				""
-				"&e需要注意的是，它暂时对你而言不是必须的&r——你可以通过普通原油获取它的全部分馏产物！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7A8EB5759D701AD3.desc_01}"]
 			id: "7A8EB5759D701AD3"
 			tasks: [{
 				id: "7721BEB85ADD7F79"
@@ -667,13 +507,7 @@
 		}
 		{
 			dependencies: ["3D6E6E326398C5B6"]
-			description: [
-				"氮肥是升级农业的基础！"
-				""
-				"有了它，你可以开始尝试无土栽培来快速高效地生产农作物！"
-				""
-				"&e(某些合成可能显示错误，请相信所有的相关合成都是正收益的！)&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_559B386DA7731C89.desc_01}"]
 			id: "559B386DA7731C89"
 			shape: "hexagon"
 			tasks: [{
@@ -686,11 +520,7 @@
 		}
 		{
 			dependencies: ["401F17194C1C062C"]
-			description: [
-				"复合钻井液可以清洁石油管道并产出优质的石油"
-				""
-				"在未来，还有更多重要的矿脉需要用它来开发"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_78E8AD96D10D37D0.desc_01}"]
 			id: "78E8AD96D10D37D0"
 			tasks: [{
 				id: "4B9BE0C720BAC68D"
@@ -705,13 +535,7 @@
 				"0EE5C05F14473612"
 				"2158B1016BA073D8"
 			]
-			description: [
-				"矿物钻井可以无限地从矿脉中挖掘矿物！"
-				""
-				"在思索中查看制造方法或使用蓝图！"
-				""
-				"你可以使用&e卫星扫描器&r来寻找矿脉！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5B67D4465E9711BE.desc_01}"]
 			id: "5B67D4465E9711BE"
 			rewards: [{
 				id: "29E08E3CEFECA5A4"
@@ -725,7 +549,7 @@
 				item: "createoreexcavation:drilling_machine"
 				type: "item"
 			}]
-			title: "从地心挖掘"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_5B67D4465E9711BE.title}"
 			x: 4.0d
 			y: 7.0d
 		}
@@ -734,13 +558,7 @@
 				"316C37B5A2522059"
 				"4A73F70D9A7EFC87"
 			]
-			description: [
-				"流体钻井可以无限地从矿脉中抽取流体！"
-				""
-				"在思索中查看制造方法或使用蓝图！"
-				""
-				"你可以使用&e卫星扫描器&r来寻找矿脉！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_3EDA286345992903.desc_01}"]
 			id: "3EDA286345992903"
 			rewards: [{
 				id: "77AAD4856486194C"
@@ -754,17 +572,13 @@
 				item: "createoreexcavation:extractor"
 				type: "item"
 			}]
-			title: "从星球汲取血液"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_3EDA286345992903.title}"
 			x: 1.0d
 			y: 10.0d
 		}
 		{
 			dependencies: ["4EEBF6833EE9EC1D"]
-			description: [
-				"升降机是比绳索滑轮更方便的一种移动机械"
-				""
-				"它还用于制造钻井！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0EE5C05F14473612.desc_01}"]
 			id: "0EE5C05F14473612"
 			rewards: [{
 				count: 8
@@ -777,24 +591,12 @@
 				item: "create:elevator_pulley"
 				type: "item"
 			}]
-			title: "上上下下"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_0EE5C05F14473612.title}"
 			x: 2.5d
 			y: 8.0d
 		}
 		{
-			description: [
-				"矿脉是无限的资源生产方式"
-				""
-				"使用卫星扫描器来令卫星寻找拥有矿脉的区块——从而你就可以读取卫星获得的矿脉信息了！"
-				""
-				"这份信息包含距离最近的&e矿脉种类&r和&e矿脉坐标&r，&a你可以通过在矿脉图鉴中禁用矿脉种类的方式来过滤掉你不希望获取的矿脉信息！&r"
-				""
-				"使用钻井来开采区块中的矿脉！"
-				""
-				"需要注意的是，许多矿脉只会出现在特定的星球、维度或生物群系当中！"
-				""
-				"&a我在地球上空还有最后一颗能运转的卫星——它已经存储着一处矿脉坐标。&r&e如果你需要它就点击确认吧，它会向你发送矿脉的种类与坐标。&r&a当然，你依然可以使用它来为你寻找矿脉——它距离报废还有很长一段时间"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5C60160231FA2379.desc_01}"]
 			id: "5C60160231FA2379"
 			rewards: [{
 				command: "/execute in minecraft:overworld run kubejs custom_command first_vein"
@@ -810,7 +612,7 @@
 				id: "322DF9E4D8BE39CD"
 				ignore_reward_blocking: true
 				silent: true
-				title: "确认"
+				title: "{ftbquests.chapter_095625A2F7E1128A.quest_5C60160231FA2379.reward_322DF9E4D8BE39CD.title}"
 				type: "command"
 			}]
 			shape: "rsquare"
@@ -826,56 +628,40 @@
 		{
 			dependencies: ["5D17F3EB50C80731"]
 			dependency_requirement: "one_completed"
-			description: [
-				"盐酸自然有着它的大用——刻蚀电路板、浸泡透镜、炼钨......"
-				""
-				"你早晚会用上它的！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_22D58AAC0D5BFE19.desc_01}"]
 			id: "22D58AAC0D5BFE19"
 			tasks: [{
 				id: "58E92312DFD30283"
 				item: "kubejs:muriatic_acid_bucket"
 				type: "item"
 			}]
-			title: "盐酸"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_22D58AAC0D5BFE19.title}"
 			x: 1.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["26325D9A9EDB84F4"]
-			description: [
-				"在宇宙中，红石是一种高度稀缺的资源。在宇宙中的绝大多数地方，红石资源都是十分匮乏的。不过幸运的是，由于太阳系非常靠近恒星系233B，所以太阳系内还是有数量可观的红石资源——虽然并不存在红石矿脉"
-				""
-				"当然了，如果真的需要特别大量的红石，那么最好的选择还是开发恒星系233B中的星球——但你离星际采矿还有一段距离"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7FFEC580D2E4C680.desc_01}"]
 			id: "7FFEC580D2E4C680"
 			tasks: [{
 				id: "6F3B3679D8D0B76F"
 				item: "minecraft:redstone"
 				type: "item"
 			}]
-			title: "富含能量"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_7FFEC580D2E4C680.title}"
 			x: -3.5d
 			y: 8.5d
 		}
 		{
 			dependencies: ["7FFEC580D2E4C680"]
-			description: [
-				"洗涤锡矿可以产出萤石"
-				""
-				"生物柴油注入红石也可以获得萤石"
-				""
-				"在下界还会有萤石矿脉"
-				""
-				"使用哪种方式好呢？"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_180B40057E08AE2E.desc_01}"]
 			id: "180B40057E08AE2E"
 			tasks: [{
 				id: "362416C1BBAAE83B"
 				item: "minecraft:glowstone_dust"
 				type: "item"
 			}]
-			title: "挖还是注？"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_180B40057E08AE2E.title}"
 			x: -5.0d
 			y: 10.0d
 		}
@@ -884,11 +670,7 @@
 				"7FFEC580D2E4C680"
 				"180B40057E08AE2E"
 			]
-			description: [
-				"暗影钢是一种高级材料！"
-				""
-				"它可以用来生产批量生产下界合金碎片，也可以用于获取第一个下界合金碎片！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_3F1D29E01951ACCF.desc_01}"]
 			id: "3F1D29E01951ACCF"
 			rewards: [{
 				id: "70FF045001D3256E"
@@ -906,20 +688,7 @@
 		}
 		{
 			dependencies: ["33C1C18E2D0D3825"]
-			description: [
-				"&e大气冷凝机是一种多方块机器！&r你需要在核心附近建造指定的结构（可以是不同朝向的）来使用它！"
-				""
-				"利用大气冷凝机，你可以提取大气中的各种有效成分为你所用！"
-				"不同维度的大气成分各不相同，而有的维度则没有大气"
-				""
-				"在思索中查看使用方式！"
-				""
-				"&a在思索中查看具体结构或使用蓝图打印！请注意：蓝图不包含控制器，并且标注了方向的蓝图不能旋转！&r"
-				""
-				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！当在JEI的机器配方中点击左下角的结构方块，附近的机器就会检查并标注所需的结构！&r"
-				""
-				"&c有时你会遇到不需要加热的分馏配方——它们仍然需要烈焰人燃烧室！只不过你不需要提供燃料罢了&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4A04F41BC7C33EBF.desc_01}"]
 			id: "4A04F41BC7C33EBF"
 			rewards: [{
 				id: "499D05C6AD1B7BE7"
@@ -1006,7 +775,7 @@
 				item: "kubejs:condenser"
 				type: "item"
 			}]
-			title: "获取大气！"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_4A04F41BC7C33EBF.title}"
 			x: 9.0d
 			y: -1.0d
 		}
@@ -1016,9 +785,8 @@
 				"0EAAA32F7A3FC7E7"
 			]
 			description: [
-				"你有许多方式可以获取乙烯！"
-				""
-				"[ \"比如：通过液态经验使甲烷并链变为乙烯、\", { \"text\": \"通过硫酸使乙醇脱水变为乙烯\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2D3DBC1B834A5513\" } }, \"(点击跳转)\" ]"
+				"{ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"2D3DBC1B834A5513\"}, \"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_03\"}]"
 			]
 			id: "1186909E719A2320"
 			rewards: [{
@@ -1036,11 +804,7 @@
 		}
 		{
 			dependencies: ["497C1131A3DF9662"]
-			description: [
-				"你可以使用硫酸来将乙醇转化为乙烯——这个过程中部分硫酸会转化为二氧化硫，你只需要将它们重新变为硫酸即可！"
-				""
-				"除此以外，硫酸还可以用于制造蓄电池、生产暗影钢等等"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0EAAA32F7A3FC7E7.desc_01}"]
 			id: "0EAAA32F7A3FC7E7"
 			tasks: [{
 				id: "3010F5ED1FF7CE93"
@@ -1051,13 +815,7 @@
 			y: 3.0d
 		}
 		{
-			description: [
-				"你需要使用氢气来将柴油转化为润滑油"
-				""
-				"目前阶段而言，我推荐你使用电解器来电解水产生氢气或甲烷经验线生产氢气！"
-				""
-				"当然，你也可以选择使用超级加热水的方式使之分解出氢气"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_278EE9B663F563A4.desc_01}"]
 			id: "278EE9B663F563A4"
 			shape: "gear"
 			size: 1.25d
@@ -1076,21 +834,7 @@
 				"2FBE43A3090D1053"
 				"471973F58EEA5536"
 			]
-			description: [
-				"死去的生物经过千万年的沉积留下了这一份宝贵的遗产——原油"
-				""
-				"你有时能在世界中直接见到它"
-				""
-				"有时你会见到它的固体形式，将之进行搅拌就能获取原油"
-				""
-				"原油不一定需要从地下和海中获取，你还可以使用煤、粉碎煤、种子油、生物质等资源来合成它！"
-				""
-				"石油可以通过分馏塔进行分馏——"
-				""
-				"&e分馏塔的大小会影响其效率——2*2的分馏塔以4倍速运行，而3*3则以9倍！&r"
-				""
-				"这里并没有列出它的全部产物，而是仅列出那些重要的产物！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.desc_01}"]
 			id: "0AD1428EF423B9FF"
 			size: 1.5d
 			tasks: [{
@@ -1098,7 +842,7 @@
 				item: "createdieselgenerators:crude_oil_bucket"
 				type: "item"
 			}]
-			title: "获取原油的方式"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.title}"
 			x: 4.0d
 			y: 0.0d
 		}
@@ -1107,19 +851,7 @@
 				"4F005EA6EF996CDB"
 				"3070A92AD6E4B7FD"
 			]
-			description: [
-				"除了从原油分馏外，甲烷还有许多获取方式"
-				""
-				"比如，你可以从可燃冰中提取——这在月球上会很有用！"
-				""
-				"甲烷可以加水变成硫粉"
-				""
-				"甲烷可以通过液态经验或者烈焰支原体转化为乙烯"
-				""
-				"甲烷还可以将余烬面粉变为红石"
-				""
-				"当然，它还可以用作燃料！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_26325D9A9EDB84F4.desc_01}"]
 			id: "26325D9A9EDB84F4"
 			tasks: [{
 				id: "762282782CDAD0C8"
@@ -1131,11 +863,7 @@
 		}
 		{
 			dependencies: ["3070A92AD6E4B7FD"]
-			description: [
-				"柴油可以通过原油分馏获得"
-				""
-				"它可以被当做燃料，但更重要的用途是制作润滑油"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_36C3A59891538134.desc_01}"]
 			id: "36C3A59891538134"
 			tasks: [{
 				id: "502DDA8CC6246C37"
@@ -1150,11 +878,7 @@
 				"36C3A59891538134"
 				"3070A92AD6E4B7FD"
 			]
-			description: [
-				"汽油可以代替种子油被制作为生物柴油"
-				""
-				"当然，它的主要用途还是作为燃料以及生产甲烷"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4F005EA6EF996CDB.desc_01}"]
 			id: "4F005EA6EF996CDB"
 			tasks: [{
 				id: "7C123558CB8DD1D7"
@@ -1165,73 +889,55 @@
 			y: 7.0d
 		}
 		{
-			description: [
-				"你可以通过原油探测器探测那些有限的原油储备"
-				""
-				"制作一个原油探测器，然后你就可以查看你所在的区块是否含有原油——你可以利用一个古代团体&eMOJANG&r发明的仪式：按下&aF3+G&r，你就能直接目视区块边界"
-				""
-				"这些原油是有限的，并且分为少量油田和大量油田两种。&a少量原油有时仅有数桶，而大量原油则一般拥有数万桶的储量！&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_03B693D028042FC9.desc_01}"]
 			icon: "createdieselgenerators:oil_scanner"
 			id: "03B693D028042FC9"
 			tasks: [{
 				id: "0033D5A9F9536FFF"
 				type: "checkmark"
 			}]
-			title: "从油田获取原油"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_03B693D028042FC9.title}"
 			x: 5.0d
 			y: 1.0d
 		}
 		{
-			description: ["有时，你会在沙漠地表附近找到油焦——它可以被溶解为原油——但这是有限的"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_471973F58EEA5536.desc_01}"]
 			icon: "createloveandwar:oil_sand"
 			id: "471973F58EEA5536"
 			tasks: [{
 				id: "03B318D774E0E48E"
 				type: "checkmark"
 			}]
-			title: "在沙漠中的宝藏"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_471973F58EEA5536.title}"
 			x: 3.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"你可以人工合成原油！"
-				""
-				"原油拥有许多的合成方式："
-				""
-				"煤炭液化、生物质、种子油等等"
-				""
-				"自行选择合适的方式吧！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2FBE43A3090D1053.desc_01}"]
 			icon: "vintageimprovements:vacuum_chamber"
 			id: "2FBE43A3090D1053"
 			tasks: [{
 				id: "2822BE4031B5A6A0"
 				type: "checkmark"
 			}]
-			title: "人工造油"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2FBE43A3090D1053.title}"
 			x: 5.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"有时，你会在地层中、海上以及其他地方发现一些方块形式的原油——从几桶到几十桶不等"
-				""
-				"也许这会成为你的第一桶原油！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2EFB5D929CA3B17A.desc_01}"]
 			icon: "design_decor:american_sign"
 			id: "2EFB5D929CA3B17A"
 			tasks: [{
 				id: "36A0388333072213"
 				type: "checkmark"
 			}]
-			title: "天然原油"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2EFB5D929CA3B17A.title}"
 			x: 3.0d
 			y: 1.0d
 		}
 		{
-			description: ["你可以在沙漠地表附近找到油焦——它可以被溶解为原油"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_6ABE4B8E28063A00.desc_01}"]
 			id: "6ABE4B8E28063A00"
 			tasks: [{
 				id: "0C385F70C52D003A"
@@ -1242,17 +948,7 @@
 			y: 0.0d
 		}
 		{
-			description: [
-				"&a目前阶段而言，奇异石油并非是一种不可替代的原料——你完全可以使用原油获得它的全部分馏产物！"
-				""
-				"奇异石油可以通过分馏塔进行分馏——"
-				""
-				"&e分馏塔的大小会影响其效率——2*2的分馏塔以4倍速运行，而3*3则以9倍！&r"
-				""
-				"这里并没有列出它的全部产物，而是仅列出那些重要的产物！"
-				""
-				"你可以通过矿脉挖掘或是合成的方式来获取它！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0BD2F52F839623A0.desc_01}"]
 			id: "0BD2F52F839623A0"
 			size: 1.5d
 			tasks: [{
@@ -1260,13 +956,13 @@
 				item: "kubejs:refined_oil_bucket"
 				type: "item"
 			}]
-			title: "奇异石油的分馏"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_0BD2F52F839623A0.title}"
 			x: 9.0d
 			y: 9.0d
 		}
 		{
 			dependencies: ["0BD2F52F839623A0"]
-			description: ["奇异石油可以直接分馏出乙烯！"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_56336974EAB74B37.desc_01}"]
 			id: "56336974EAB74B37"
 			tasks: [{
 				id: "68E801E742BBED79"
@@ -1278,7 +974,7 @@
 		}
 		{
 			dependencies: ["0BD2F52F839623A0"]
-			description: ["奇异石油可以直接分馏出汽油！"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2CF2712E6A65A3D6.desc_01}"]
 			id: "2CF2712E6A65A3D6"
 			tasks: [{
 				id: "7D8D4A827D361356"
@@ -1290,7 +986,7 @@
 		}
 		{
 			dependencies: ["0BD2F52F839623A0"]
-			description: ["奇异石油可以直接分馏出柴油！"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_77D1E17160A3FC61.desc_01}"]
 			id: "77D1E17160A3FC61"
 			tasks: [{
 				id: "086167BDA40F4308"
@@ -1302,11 +998,7 @@
 		}
 		{
 			dependencies: ["0BD2F52F839623A0"]
-			description: [
-				"奇异石油可以直接分馏出润滑油！"
-				""
-				"你也可以进行合成！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_246A98DC83209E94.desc_01}"]
 			id: "246A98DC83209E94"
 			size: 1.0d
 			tasks: [{
@@ -1319,11 +1011,7 @@
 		}
 		{
 			dependencies: ["368A009A98EDA1EE"]
-			description: [
-				"氨气是一种十分优秀的超级加热燃料！"
-				""
-				"同时也是一种高效的柴油引擎燃料！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_3D6E6E326398C5B6.desc_01}"]
 			id: "3D6E6E326398C5B6"
 			tasks: [{
 				id: "52F700A817DEC7CD"
@@ -1338,7 +1026,7 @@
 				"3D6E6E326398C5B6"
 				"368A009A98EDA1EE"
 			]
-			description: ["一种较为珍贵的酸性液体，可以用于制造蓝焰衣原体等重要材料！"]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_42B9F81EA56748F0.desc_01}"]
 			id: "42B9F81EA56748F0"
 			tasks: [{
 				id: "52194CD1239DD2C0"
@@ -1360,6 +1048,6 @@
 			y: 2.5d
 		}
 	]
-	subtitle: ["石油的脉动"]
-	title: "千万年后的新生"
+	subtitle: ["{ftbquests.chapter_095625A2F7E1128A.subtitle_1}"]
+	title: "{ftbquests.chapter_095625A2F7E1128A.title}"
 }

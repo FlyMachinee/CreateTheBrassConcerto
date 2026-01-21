@@ -11,264 +11,151 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"这些流体当在世界中聚集超过&e512&r格时可以被软管滑轮无限抽取："
-				""
-				"&a水、岩浆、盐水、冷冻剂&r"
-				""
-				"需要注意的是，抽取前要使用工程师护目镜确认软管滑轮显示了“目标流体被视为无限的”！"
-				""
-				"具体请查看软管滑轮的思索！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_35F0C3FF989DA797.desc_01}"]
 			icon: "create:hose_pulley"
 			id: "35F0C3FF989DA797"
 			tasks: [{
 				id: "46D548B9BC74CA5D"
 				type: "checkmark"
 			}]
-			title: "无限抽取"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_35F0C3FF989DA797.title}"
 			x: -1.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"使用钥匙上锁的抽屉会锁定它能存储的物品种类"
-				""
-				"这可以用来在一定程度上代替过滤器！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_5E1E7282E790EC51.desc_01}"]
 			icon: "storagedrawers:drawer_key"
 			id: "5E1E7282E790EC51"
 			tasks: [{
 				id: "0D8366B9871E2391"
 				type: "checkmark"
 			}]
-			title: "过滤器的替代品"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_5E1E7282E790EC51.title}"
 			x: -1.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"黄铜漏斗有时并非是必要的，在某些情况下你完全可以用安山漏斗替代它！"
-				""
-				"黄铜漏斗和安山漏斗拥有着一样的物品接受速率，所以在不需要过滤的情况下你完全可以使用安山漏斗！"
-				""
-				"黄铜漏斗的输出速度是非常高的，在某些产线上并不需要如此高的输出速度，所以这时你也可以使用安山漏斗！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_17AE9A20CE84CFD5.desc_01}"]
 			icon: "create:andesite_funnel"
 			id: "17AE9A20CE84CFD5"
 			tasks: [{
 				id: "7284D3FE1549F692"
 				type: "checkmark"
 			}]
-			title: "黄铜漏斗与安山漏斗"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_17AE9A20CE84CFD5.title}"
 			x: 1.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"&e你可以拿着物品对工作盆右键来代替分液配方！（比如：拿着菌盖碎右键工作盆也可以产生孢子）&r"
-				""
-				"此外，分液池有时可以代替传送带！"
-				""
-				"被输入分液池的物品会按输入的方向在分液池上滚动"
-				""
-				"这使分液池可以作为一种另类的低速传送带使用"
-				""
-				"&a除此以外，你还可以使用分液池来分离工作盆自动导出的物品与流体！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_1671F088F3F396EB.desc_01}"]
 			icon: "create:item_drain"
 			id: "1671F088F3F396EB"
 			tasks: [{
 				id: "088B36D79F201EAC"
 				type: "checkmark"
 			}]
-			title: "分液池的妙用"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_1671F088F3F396EB.title}"
 			x: 1.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"水龙头能够自动的向前下方的方块输出它附着方块处的流体与物品"
-				""
-				"这有时可以简化你的机器！"
-				""
-				"具体请查看水龙头的思索！"
-				""
-				"&c不过请注意，水龙头单次输出数量锁定为250mB，如果目标容器容量不足250mB，它是不会输出的！&r"
-				""
-				"除此以外，水龙头可以被红石控制，也可以接海绵用于销毁液体"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_5E3A4563D715FD81.desc_01}"]
 			icon: "supplementaries:faucet"
 			id: "5E3A4563D715FD81"
 			tasks: [{
 				id: "4F1DB4A7024A26B6"
 				type: "checkmark"
 			}]
-			title: "水龙头——独特的物流"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_5E3A4563D715FD81.title}"
 			x: -1.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"某些配方在常规状态下很难为动力合成器自动化进料，这时需要一些额外的技巧——额外的合成器与合成器盖板"
-				""
-				"合成器盖板相当于一个占位符，告诉合成器这个位置放置了空气"
-				""
-				"当你用一些额外的合成器把不同位置进同种原料的合成器连在一起时（关于如何连接合成器，请查看思索！），你就可以从额外的合成器的位置进料。此时只需要为额外的合成器全部安装盖板，就能进行正常的合成了"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_439C9A03787141D1.desc_01}"]
 			icon: "create:crafter_slot_cover"
 			id: "439C9A03787141D1"
 			tasks: [{
 				id: "13915FC2513D1BAF"
 				type: "checkmark"
 			}]
-			title: "动力合成器的小技巧"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_439C9A03787141D1.title}"
 			x: 1.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"有时候你可能需要一些另类的方式来完成复杂的进料——混带"
-				""
-				"混带是指在同一条传送带上按特定比例混杂多种物品"
-				""
-				"你可以通过黄铜隧道的&a“同步输入”&r模式来实现这一点——记得给出口设置好过滤"
-				""
-				"黄铜隧道的同步输入模式也可以用来确保物品成功被输送至传送带上，不过需要注意的是，同步输入并不保证物品的输入顺序！"
-				""
-				"&e此外，你还可以加上智能侦测器来达成一些更进阶的效果——比如让物品在传送带上保持顺序！&r"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_67BA86655AF9BA9C.desc_01}"]
 			icon: "create:brass_tunnel"
 			id: "67BA86655AF9BA9C"
 			tasks: [{
 				id: "64F19B6BC3D24C4D"
 				type: "checkmark"
 			}]
-			title: "传送带的艺术——混带"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_67BA86655AF9BA9C.title}"
 			x: 0.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"工作盆可以直接右键取出其中的物品"
-				""
-				"桶、玻璃瓶等物品可以直接右键与工作盆交互"
-				""
-				"&e你可以通过在工作盆上放置溜槽来增加工作盆的物品输入面——绝大部分机器都可以穿过溜槽来与工作盆交互！"
-				""
-				"&e你可以使用扳手右键阻止工作盆开口&r，这有时能为你带来一些方便"
-				""
-				"&a除此以外，工作盆能自动向旁边比它矮一格的容器输出产物——甚至流体也可以！&r"
-				""
-				"工作盆的流体槽位有两种——两个输入槽，两个输出槽——&a需要注意的是，工作盆输出槽中的流体不会自动与输入槽合并！&r&e你可以考虑使用工作盆的自动导出功能将流体导出，从而避免使用智能流体管道！&r"
-				""
-				"工作盆吸取单种物品的上限为16，你可以利用这一点来简化对工作盆输入物品的方案！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_28B42FA89D02248F.desc_01}"]
 			icon: "create:basin"
 			id: "28B42FA89D02248F"
 			tasks: [{
 				id: "4C0D5F7F4B1FCDB0"
 				type: "checkmark"
 			}]
-			title: "工作盆的交互"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_28B42FA89D02248F.title}"
 			x: 0.0d
 			y: 1.0d
 		}
 		{
-			description: [
-				"坐垫可以像船一样把生物封印在上面"
-				""
-				"但是你不需要船那么麻烦——当你用栓绳拴住生物后，只需要右键坐垫就能让它坐上去"
-				""
-				"甚至于，生物走过坐垫时也会被封印住"
-				""
-				"这可以用来制作一些诸如挤奶机之类的玩意，&e或者困住一些强大的怪物——比如主世界的各种巨龙！&r"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_722B94F7E7447B32.desc_01}"]
 			icon: "create:red_seat"
 			id: "722B94F7E7447B32"
 			tasks: [{
 				id: "0D2D05CF01D1BEDA"
 				type: "checkmark"
 			}]
-			title: "坐垫封印术"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_722B94F7E7447B32.title}"
 			x: 1.0d
 			y: 1.0d
 		}
 		{
-			description: [
-				"将物品垂直向上运输是一件比较麻烦的事。一般而言，这需要一列溜槽和一个鼓风机"
-				""
-				"如果你觉得麻烦，不妨试试以下几种选择："
-				""
-				"1.利用移动结构和移动式物品接口来转移物品"
-				"2.抽屉控制器+抽屉桥接方块"
-				"3.一串置物台"
-				"4.激光物流"
-				"5.弹射置物台"
-				"6.使用气泡柱运送物品"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_46BB4870EBDBBCD5.desc_01}"]
 			icon: "minecraft:soul_sand"
 			id: "46BB4870EBDBBCD5"
 			tasks: [{
 				id: "30334EDB033E62B2"
 				type: "checkmark"
 			}]
-			title: "上升的通道"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_46BB4870EBDBBCD5.title}"
 			x: 0.0d
 			y: -2.0d
 		}
 		{
-			description: [
-				"属性过滤器是一个非常强大的物品！"
-				""
-				"它可以根据物品是否能被某种方式加工、是否属于某个物品标签、甚至名字中是否包含某些元素来进行过滤！"
-				""
-				"通过它你可以制作通用的鼓风加工线、简化物品分类机"
-				""
-				"在序列组装产线中，你可以通过将过滤设置为“id中含有incomplete”来过滤所有的半成品！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_1D77AB8F981F4FAD.desc_01}"]
 			icon: "create:attribute_filter"
 			id: "1D77AB8F981F4FAD"
 			tasks: [{
 				id: "0B29846CF45385B9"
 				type: "checkmark"
 			}]
-			title: "属性过滤器的妙用"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_1D77AB8F981F4FAD.title}"
 			x: -1.0d
 			y: -2.0d
 		}
 		{
-			description: [
-				"同一节普通管道中如果存在多种液体会导致管道损坏，这就是为什么你需要为液体输出设置过滤"
-				""
-				"你可以使用任何装着该液体的物品为智能流体管道设置过滤"
-				""
-				"如果不存在装着该液体的物品，你还可以使用过滤器设置黑名单，或者也可以使用&e密封液罐&r！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_4EA9D6E62A689FDB.desc_01}"]
 			icon: "create:smart_fluid_pipe"
 			id: "4EA9D6E62A689FDB"
 			tasks: [{
 				id: "4B688FFC81DEDA70"
-				title: "化工小技巧——液体过滤"
+				title: "{ftbquests.chapter_7D82BD112E02C178.quest_4EA9D6E62A689FDB.task_4B688FFC81DEDA70.title}"
 				type: "checkmark"
 			}]
 			x: -1.0d
 			y: 1.0d
 		}
 		{
-			description: [
-				"废液是令人恼火的东西"
-				""
-				"但是有时候你可以很简单地处理它。"
-				""
-				"一部分流体可以直接排空到空气中而无需其它处理（它们没有方块形式！）"
-				""
-				"而另一部分的处理则麻烦一些——你可以利用一些配方来销毁对应液体，比如水可以利用盐来销毁（当然，你也可以把它们排出来，然后使用活塞或者旋转结构挤压掉排出的液体！）"
-				""
-				"&e而不管是怎样的流体，你都可以通过水龙头输出至海绵或是机械手手持海绵吸取工作盆液体的方式来销毁！&r"
-				""
-				"除此以外，水龙头可以被红石控制！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_3B6DE61EB921440E.desc_01}"]
 			icon: "minecraft:bucket"
 			id: "3B6DE61EB921440E"
 			rewards: [
@@ -285,202 +172,122 @@
 			]
 			tasks: [{
 				id: "580B86A3978A1C78"
-				title: "化工小技巧——废液处理"
+				title: "{ftbquests.chapter_7D82BD112E02C178.quest_3B6DE61EB921440E.task_580B86A3978A1C78.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"有的时候，你也许想要自动化地进行世界合成"
-				""
-				"这时移动结构与机械手可以帮助你建造复杂的特定结构"
-				""
-				"将需要建造的结构保存并打印为蓝图，并将移动结构上的机械手的过滤设置为该蓝图，即可让机械手按照蓝图放置方块"
-				""
-				"那么问题不过是如何控制移动结构的进料罢了"
-				""
-				"解决方案也很简单：不是使用移动式物品接口，而是考虑用矿车装配站自动将结构方块化（或者直接改为使用起重机）。物品分别存储在结构上的不同箱子，然后便只需要向对应箱子输入特定原料即可"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_4D6310E4DBF8EC97.desc_01}"]
 			icon: "create:schematic_and_quill"
 			id: "4D6310E4DBF8EC97"
 			tasks: [{
 				id: "510DFC4B7746F179"
 				type: "checkmark"
 			}]
-			title: "结构建造的自动化"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_4D6310E4DBF8EC97.title}"
 			x: 1.0d
 			y: -2.0d
 		}
 		{
-			description: [
-				"缓存也是搭建产线的必修课"
-				"-将分散的物品集中堆叠"
-				"-将物品的运输速度变得更加平均"
-				"-清除掉中间因为各种原因（可能是一只死在传送带上的僵尸，或者其它什么东西）混入的杂物"
-				"-处理多余的物品"
-				"......"
-				"根据需要，可以用木桶、抽屉等不同容器作为缓存，同时灵活运用黄铜漏斗的输出数量限制与过滤限制。如果你不希望缓存中堆积太多物品，可以考虑为输出设置好过滤并将缓存容器中的大部分空间用杂物填满。"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_01131F6BFFA6F19C.desc_01}"]
 			icon: "minecraft:barrel"
 			id: "01131F6BFFA6F19C"
 			tasks: [{
 				id: "56B46D64FCD98F7B"
 				type: "checkmark"
 			}]
-			title: "缓存的艺术"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_01131F6BFFA6F19C.title}"
 			x: 2.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"&a种植也是一门技术活&r"
-				"-绝大部分作物都需要光照才能生长"
-				""
-				"-间种（相邻两列种植不同的植物，或任意两列中间隔一格）可以将作物生长速度相比单独种植提高133%"
-				""
-				"-湿润的耕地能让作物长的更快"
-				""
-				"-动力收割机可以自动收割绝大部分作物，而有一些则需要机械手、动力钻头等部件"
-				""
-				"-氮肥可以以极高的效率生产作物"
-				""
-				"-水方块可以湿润以它为中心9*9正方形区域内的耕地"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_6C1FD2F17DE2FA7A.desc_01}"]
 			icon: "minecraft:farmland"
 			id: "6C1FD2F17DE2FA7A"
 			tasks: [{
 				id: "6A2550F892F47BC6"
 				type: "checkmark"
 			}]
-			title: "更好的种植技术"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_6C1FD2F17DE2FA7A.title}"
 			x: -2.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"在使用工作盆、动力锯等部件时，可能会遇到同样的输入物品种类对应多个不同配方的情况"
-				""
-				"这时，你需要为其设置过滤，从而让其选择会输出过滤物品的配方"
-				""
-				"如果使用过滤器的黑名单模式，则会选择不输出过滤物品的配方"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_59077C6DDC86D19C.desc_01}"]
 			icon: "create:mechanical_saw"
 			id: "59077C6DDC86D19C"
 			tasks: [{
 				id: "51C424A6695BE26E"
 				type: "checkmark"
 			}]
-			title: "重复的配方"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_59077C6DDC86D19C.title}"
 			x: 2.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"不要只凭外表判断机器的用法："
-				""
-				"比如密封压缩机虽然看上去只能从上方输入输出流体，但实际上六个面都是可以的"
-				""
-				"再比如密封压缩机、辊压机等机器与它们工作的目标方块之间不一定要是空的，可以放上一些不完整方块，比如漏斗、水龙头、溜槽、管道..."
-				""
-				"再比如，辊压机和动力搅拌器的正中央其实没有碰撞体积，位置正确的物品可以直接穿过！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_14A9D37C72153E57.desc_01}"]
 			icon: "create:mechanical_mixer"
 			id: "14A9D37C72153E57"
 			tasks: [{
 				id: "50505E1B10508892"
 				type: "checkmark"
 			}]
-			title: "有时外表是会骗人的"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_14A9D37C72153E57.title}"
 			x: -2.0d
 			y: -1.0d
 		}
 		{
-			description: [
-				"给部件套上机壳有时不仅仅是装饰。"
-				""
-				"为齿轮套上机壳可以阻止齿轮从轴向获得/输出动力"
-				""
-				"为流体管道套上机壳可以锁定其状态，阻止其输出口关闭或是与其他管道建立连接"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_48B10726F3073D46.desc_01}"]
 			icon: "create:andesite_casing"
 			id: "48B10726F3073D46"
 			tasks: [{
 				id: "014F99541842E235"
 				type: "checkmark"
 			}]
-			title: "机壳的妙用"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_48B10726F3073D46.title}"
 			x: 2.0d
 			y: 1.0d
 		}
 		{
-			description: [
-				"除了右键烈焰人，"
-				""
-				"烈焰人燃烧室还可以通过直接右键刷怪笼来获得！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_12837B75C13E79A9.desc_01}"]
 			icon: "create:blaze_burner"
 			id: "12837B75C13E79A9"
 			tasks: [{
 				id: "71513C5B882E679B"
 				type: "checkmark"
 			}]
-			title: "活化燃烧室"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_12837B75C13E79A9.title}"
 			x: -2.0d
 			y: 1.0d
 		}
 		{
-			description: [
-				"没有需要设置过滤的那种物品？"
-				""
-				"你可以直接将JEI侧边栏中的物品拖动至过滤器中！"
-				""
-				"对于没有桶装形态的流体的过滤，可以使用&e密封液罐&r！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_4AE919CE7C34AD83.desc_01}"]
 			id: "4AE919CE7C34AD83"
 			tasks: [{
 				id: "70AA36F8A8E6A38A"
 				item: "create:filter"
 				type: "item"
 			}]
-			title: "更简单的过滤"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_4AE919CE7C34AD83.title}"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			description: [
-				"列车是一种十分精巧的高级物流！下面是一些列车站台的用法！"
-				""
-				"进站方向：将车站与轨道绑定时，轨道上会显示方向箭头——&a只有列车沿箭头方向经过时才能在此停靠！&r"
-				""
-				"同名车站："
-				"当你将两个车站设置为同一名字时，列车会将它们视为同一车站，并自主选择就近的可行车站前往！"
-				""
-				"众所周知，列车停靠在站台中会挡住后方列车的通道——所以你至少有以下两种方案："
-				""
-				"&e1.将列车站独立于主路&r，让列车进站时首先进入辅路，然后才进入站台——这样主路可以正常通行"
-				""
-				"&e2.在列车站外修建辅路&r，当有列车停在站台中时，其它列车可以通过辅路绕行"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_56DCF1A76922FA3B.desc_01}"]
 			icon: "create:track_station"
 			id: "56DCF1A76922FA3B"
 			tasks: [{
 				id: "373129936F93C624"
 				type: "checkmark"
 			}]
-			title: "车站的设置"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_56DCF1A76922FA3B.title}"
 			x: -2.0d
 			y: -2.0d
 		}
 		{
-			description: [
-				"在很多时候，你的产线可能因为一个意外混入的物品而彻底卡死——也许是僵尸掉落的腐肉、也许是无意间丢弃的杂物、也许是烧死的幻翼产生的灰烬、也许是流浪商人的栓绳和羊驼的皮革......"
-				""
-				"为了防止这种情况，建议为工厂增加顶棚！"
-				""
-				"当然，如果想要彻底防止，建议还是在末端添加杂物过滤！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_1CE6BA80CDD99AD4.desc_01}"]
 			icon: "create:belt_connector"
 			id: "1CE6BA80CDD99AD4"
 			rewards: [
@@ -512,58 +319,36 @@
 				id: "0D58AFDF56618D5B"
 				type: "checkmark"
 			}]
-			title: "保护你的传送带！"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_1CE6BA80CDD99AD4.title}"
 			x: 2.0d
 			y: -2.0d
 		}
 		{
-			description: [
-				"你必须使用列车信号机以防止列车在轨道相交处撞车！"
-				""
-				"你需要在交叉路口前后各放置一个信号机！"
-				""
-				"如果你需要的话，可以调整信号机的模式——它们分别适用不同的场景，具体可以查看思索！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_28947E11E220658F.desc_01}"]
 			icon: "create:track_signal"
 			id: "28947E11E220658F"
 			tasks: [{
 				id: "77ADAC786A97579B"
 				type: "checkmark"
 			}]
-			title: "铁路网络"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_28947E11E220658F.title}"
 			x: -2.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"铁路上的列车可以跨越未加载的区块！"
-				""
-				"自动行驶的列车比手动行驶的更快！手动行驶列车的速度仅有自动列车的&e75%&r！"
-				""
-				"正常的列车最高可以以&e144 km/h&r的速度行驶"
-				""
-				"如果你使用&a燃料储罐&r或其它方式为列车提供燃料，可以将上限提高至&e288km/h&r！"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_7957641C027EAE10.desc_01}"]
 			icon: "create:track"
 			id: "7957641C027EAE10"
 			tasks: [{
 				id: "6EAF700CBBFCAF29"
 				type: "checkmark"
 			}]
-			title: "工业的生命线"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_7957641C027EAE10.title}"
 			x: 2.0d
 			y: 2.0d
 		}
 		{
-			description: [
-				"流体管道和流体管道箱的开口调整原本十分地麻烦——但是现在一切都不一样了！"
-				""
-				"在经过我的技术改进之后，&e你现在可以空手右键流体管道和流体管道箱的某一面来切换该面是否开口！如果你在潜行状态下调整，则可以切换对侧！&r"
-				""
-				"机械手也可以切换开口，只不过它无法调整对侧"
-				""
-				"&e需要注意的是，流体管道的开口状态并不稳定，你还是需要为它套壳！&r"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_3FFA2CD7F565D062.desc_01}"]
 			icon: "create:copper_casing"
 			id: "3FFA2CD7F565D062"
 			rewards: [
@@ -583,29 +368,12 @@
 				id: "028EB4309036E0B5"
 				type: "checkmark"
 			}]
-			title: "调整管道！"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_3FFA2CD7F565D062.title}"
 			x: -1.5d
 			y: -4.0d
 		}
 		{
-			description: [
-				"工厂的总体规划可不能毫无章法！"
-				""
-				"&a从大体上来讲，产线的总体规划主要分为两种模式：&e黑盒式工厂&a与&e总线式工厂"
-				""
-				"&e黑盒式工厂&a是指，对于某一个产物的生产线而言，&e几乎或完全没有外部输入&a，所有生产工序都在内部完成，&e仅对外界输出最终产物和副产物&a的工厂。"
-				"这样的工厂设计适合于将一些关联性较强（或者中间产物需求不大而基本只需要最终产物）的产线统合至一起！"
-				""
-				"&e总线式工厂&a是指，对于某一个产物的生产线而言满足以下两条之一："
-				"&a-几乎所有的原料都从&e总线&a上进行提取"
-				"&a-几乎所有的产物都进入&e总线&a供给各处"
-				"这样的工厂设计适用于许多产线都有不小需求的产物或是总体生产工序过为复杂的产物！使用这种方式可以将生产程序分割，使得工厂的设计压力大幅减小！&e它本质上是一种更为高效的实现“水多加面面多加水”的方法&r"
-				""
-				"&a关于&e总线&a，其实指的是这样一种模式：将一些常用的原料的若干生产工厂接入到一条物流总线上——需求该原料的加工厂只考虑从总线上提取原料，而生产工厂只考虑向总线补充原料"
-				"这样，你只需要保持总线拥有足够的原料，而无需进行详细的量化！对于需求量较大或频繁需求的产物，每一个都设置至少一条物流总线！"
-				""
-				"&a你可以考虑使用传送带、抽屉网络、火车网络、火箭/太空电梯物流中心等方式构建物流总线"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_6765C7610B18AC76.desc_01}"]
 			icon: "kubejs:creative_motor_blueprint"
 			id: "6765C7610B18AC76"
 			size: 1.25d
@@ -613,70 +381,42 @@
 				id: "62855871FE10DD1B"
 				type: "checkmark"
 			}]
-			title: "黑盒与总线"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_6765C7610B18AC76.title}"
 			x: 0.0d
 			y: 3.5d
 		}
 		{
-			description: [
-				"&e不单单是机械元件，在经过我的技术改进后，你可以使用扳手收起绝大部分工厂中会用到的东西！包括但不限于水龙头、抽屉、工作台......&r"
-				""
-				"&a除此以外，当你按住[Alt]时，你可以使用扳手连锁拆除传动杆上的机壳！&r"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_415F794C228515F5.desc_01}"]
 			icon: "create:wrench"
 			id: "415F794C228515F5"
 			tasks: [{
 				id: "4797256389E49CD3"
 				type: "checkmark"
 			}]
-			title: "更好的扳手"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_415F794C228515F5.title}"
 			x: 1.5d
 			y: -3.0d
 		}
 		{
 			description: [
-				"在大撕裂之后，世界的基石被动摇，最终变为了现在这个光怪陆离的景象"
-				""
-				"&a为了在这个诡异的世界中保持正常的生活与生产，你需要了解什么是&r&e世界不稳定度&r&a、什么是&r&e感知连续性&r，并且学习如何改变它们"
-				""
-				"如果你将世界看做一台运行中的程序，那么世界上的所有实体、机器、容器与它们之间的交互都将对世界本身造成负载，即它们会影响&e世界不稳定度&r。&a当世界不稳定度升高时，世界上所有的生物会显得迟钝而缓慢，机器的运行将大幅偏离标准时刻表，所有的交互都出现巨大的延迟......&r"
-				""
-				"除此以外，它们还会影响&e感知连续性&r。不过与世界不稳定度不同，感知连续性的影响是局部的，并且仅影响生物对世界的感知。&a当一片区域的感知连续性降低时，你眼中的世界将变得愈发不连续，难以完整的感知世界的运行&r"
+				"{ftbquests.chapter_7D82BD112E02C178.quest_2C6CA28F6FF061B2.desc_01}"
 				"{@pagebreak}"
-				"我为你准备了两种仪式可以帮助你获知并改变它们"
-				""
-				"首先是&eF3&r（当然，它不仅仅能作此用），当你按下F3时，你可以在左上角看到两个重要参数：&amspt&r与&aFPS&r，其中，mspt代表了&e世界不稳定度&r，而FPS代表了&e感知连续性&r"
-				""
-				"&6对于FPS而言，它显然是越高越好的&r，不过只要达到一定水平，它的变化便几乎没有什么影响了。提高它的主要方法便是&e减少你视线中的世界大小与外形复杂度，比如尝试收回那些观察远方区块的视线，或是减少视线中外形复杂的方块与生物的数量"
-				""
-				"&6对于mspt而言，它显然是越低越好的，但它不可能为0。&r你不必对它的数值太过焦虑，世界存在一个“额定负载”——即50mspt。&a只要mspt仍在50以内，它就不会对世界造成实质性的影响。&r&e降低它的主要方法是减少世界上运行中的机器与存在的实体、优化机器的线路并用低负载的机器代替高负载的机器&r"
+				"{ftbquests.chapter_7D82BD112E02C178.quest_2C6CA28F6FF061B2.desc_02}"
 				"{@pagebreak}"
-				"其次是Observable，&e我并没有为你制定激活方式，你需要自行设置它&r。它可以检测在一个30秒周期内世界上所有方块与实体造成的负载并直观地显示出来（这需要一些时间）。你可以据此查看哪些东西对世界造成了严重的负荷，并尝试削减它们。（另注：1mspt=1000μspt）"
-				""
-				"一些已知的高负荷机器包括：&e高度复杂的管道网络（包含大量连通管道）、动力臂、戴斯管道、紫金管道、钢线缆、戴斯线缆&r"
-				""
-				"一些已知的高负荷实体包括：&e堆积的掉落物&r、蜜蜂、悦灵、村民、大型移动结构"
-				""
-				"一些已知的高负荷行为包括：&e使用智能流体管道筛选抽屉网络中的流体&r"
+				"{ftbquests.chapter_7D82BD112E02C178.quest_2C6CA28F6FF061B2.desc_03}"
 			]
 			icon: "minecraft:clock"
 			id: "2C6CA28F6FF061B2"
 			tasks: [{
 				id: "7A706F66B7B30FB1"
-				title: "世界不稳定度与感知连续性"
+				title: "{ftbquests.chapter_7D82BD112E02C178.quest_2C6CA28F6FF061B2.task_7A706F66B7B30FB1.title}"
 				type: "checkmark"
 			}]
 			x: -1.5d
 			y: -3.0d
 		}
 		{
-			description: [
-				"传送带、传动杆的套壳调整原本十分地麻烦——但是现在一切都不一样了！"
-				""
-				"在经过我的技术改进之后，&e你现在可以在按住[Alt]时对传动杆和传送带进行连锁套壳！&r"
-				""
-				"&a除此以外，当你按住[Alt]时，你可以使用扳手连锁拆除传动杆上的机壳！&r"
-			]
+			description: ["{ftbquests.chapter_7D82BD112E02C178.quest_65617A11D1285EF7.desc_01}"]
 			icon: "create:andesite_casing"
 			id: "65617A11D1285EF7"
 			rewards: [
@@ -696,11 +436,11 @@
 				id: "702211148935A21E"
 				type: "checkmark"
 			}]
-			title: "调整包壳！"
+			title: "{ftbquests.chapter_7D82BD112E02C178.quest_65617A11D1285EF7.title}"
 			x: 1.5d
 			y: -4.0d
 		}
 	]
-	subtitle: ["机械动力相关技巧特性"]
-	title: "机械动力之页"
+	subtitle: ["{ftbquests.chapter_7D82BD112E02C178.subtitle_1}"]
+	title: "{ftbquests.chapter_7D82BD112E02C178.title}"
 }

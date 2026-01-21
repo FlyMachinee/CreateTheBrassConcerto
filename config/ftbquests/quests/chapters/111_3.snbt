@@ -9,31 +9,24 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"&a原本我并不打算制作这一部分：按理来说，你应该已经在第一乐章与第二乐章的建设中学会了如何去分析配方优劣、如何去选择总线与黑盒、如何去整体规划、以及如何开发全新的工业区&r"
-				""
-				"&a但是后来我想了想，在地球上开发一个全新的工业区和在异星球或是近地轨道建立一个初步自给自足的工业体系其实还是有一定难度差距的，&r&e并且在低重力甚至无重力环境进行建设也是一个不小的挑战&r&a，所以我还是决定为你准备这一小节，来帮助你在月球或是近地轨道站稳脚跟。&r"
-				""
-				"在这一小节中，我将为你介绍&e如何在月球或轨道起步、如何提高你的工作效率、以及你在月球的主要目标&r（至于在行星轨道上需要干什么，则需要你自己去思索并规划了）"
-			]
+			description: ["{ftbquests.chapter_111_3.quest_11E2A53D23EE6DEC.desc_01}"]
 			id: "11E2A53D23EE6DEC"
 			shape: "gear"
 			size: 1.25d
 			tasks: [{
 				id: "3AC62140DD266B41"
-				title: "明白了"
+				title: "{ftbquests.chapter_111_3.quest_11E2A53D23EE6DEC.task_3AC62140DD266B41.title}"
 				type: "checkmark"
 			}]
-			title: "你也许需要这个！"
+			title: "{ftbquests.chapter_111_3.quest_11E2A53D23EE6DEC.title}"
 			x: 0.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["625D8395506AE31C"]
 			description: [
-				"也许你的第一反应是这玩意没什么用——但是当你因为一次错误的跳跃而飞起数米，或是因为一次没有来得及刹车的冲刺而坠入深空时，你就会希望有什么东西能把你拉回到大地母亲的怀抱的"
-				""
-				"[ \"哪怕你拥有了\", { \"text\": \"飞行戒指\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"1EFCE2A7FB341A0A\" } }, \"，你也会在需要快速下降时爱上它的\" ]"
+				"{ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"1EFCE2A7FB341A0A\"}, \"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_03\"}]"
 			]
 			id: "43B79BFABB092F12"
 			rewards: [{
@@ -42,7 +35,7 @@
 				item: "kubejs:large_fries"
 				type: "item"
 			}]
-			subtitle: "立body機動"
+			subtitle: "{ftbquests.chapter_111_3.quest_43B79BFABB092F12.subtitle}"
 			tasks: [{
 				id: "251C6D7B3572632B"
 				item: {
@@ -52,18 +45,12 @@
 				}
 				type: "item"
 			}]
-			title: "飞檐走壁！"
+			title: "{ftbquests.chapter_111_3.quest_43B79BFABB092F12.title}"
 			x: 0.0d
 			y: -2.0d
 		}
 		{
-			description: [
-				"失重环境总是让人头疼，不单单是行动不便的问题"
-				""
-				"&a完全失重的环境会让液体停止流动——这意味着你无法使用流体接触配方、也无法将流动水转化为水源&r"
-				""
-				"这些东西可以让你更好的在失重环境下工作！"
-			]
+			description: ["{ftbquests.chapter_111_3.quest_625D8395506AE31C.desc_01}"]
 			id: "625D8395506AE31C"
 			rewards: [{
 				id: "7363555F4148561E"
@@ -72,7 +59,7 @@
 			}]
 			tasks: [{
 				id: "76CC1970174C1387"
-				title: "对抗失重"
+				title: "{ftbquests.chapter_111_3.quest_625D8395506AE31C.task_76CC1970174C1387.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -80,11 +67,7 @@
 		}
 		{
 			dependencies: ["625D8395506AE31C"]
-			description: [
-				"哦，飞行戒指当然能帮你对抗失重了"
-				""
-				"大概没有谁不知道这一点"
-			]
+			description: ["{ftbquests.chapter_111_3.quest_7C110590088B7637.desc_01}"]
 			id: "7C110590088B7637"
 			rewards: [{
 				count: 16
@@ -92,25 +75,19 @@
 				item: "kubejs:large_fries"
 				type: "item"
 			}]
-			subtitle: "我即天使"
+			subtitle: "{ftbquests.chapter_111_3.quest_7C110590088B7637.subtitle}"
 			tasks: [{
 				id: "79C730B4D8ECA5C4"
 				item: "balancedflight:ascended_flight_ring"
 				type: "item"
 			}]
-			title: "为什么不起飞呢？"
+			title: "{ftbquests.chapter_111_3.quest_7C110590088B7637.title}"
 			x: 1.5d
 			y: -4.5d
 		}
 		{
 			dependencies: ["625D8395506AE31C"]
-			description: [
-				"你可以使用重力模拟器来调节附近的“重力”"
-				""
-				"&e它同时能让流体恢复流动！&r"
-				""
-				"不过，它的范围有限"
-			]
+			description: ["{ftbquests.chapter_111_3.quest_29AB0046AD153308.desc_01}"]
 			id: "29AB0046AD153308"
 			rewards: [{
 				count: 16
@@ -118,18 +95,18 @@
 				item: "kubejs:large_fries"
 				type: "item"
 			}]
-			subtitle: "辛辣天塞！"
+			subtitle: "{ftbquests.chapter_111_3.quest_29AB0046AD153308.subtitle}"
 			tasks: [{
 				id: "4FC25FD4DD2A9CED"
 				item: "ad_astra:gravity_normalizer"
 				type: "item"
 			}]
-			title: "操控引力"
+			title: "{ftbquests.chapter_111_3.quest_29AB0046AD153308.title}"
 			x: -1.5d
 			y: -4.5d
 		}
 		{
-			description: ["对于如何开发月球，这里会详尽介绍。而未来你在开发其它星球时，便不会有这样总括性的介绍了"]
+			description: ["{ftbquests.chapter_111_3.quest_7ED4995ADF9BF952.desc_01}"]
 			icon: "ad_astra:moon_globe"
 			id: "7ED4995ADF9BF952"
 			rewards: [{
@@ -139,7 +116,7 @@
 			}]
 			tasks: [{
 				id: "485713B882991BF1"
-				title: "开发月球！"
+				title: "{ftbquests.chapter_111_3.quest_7ED4995ADF9BF952.task_485713B882991BF1.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -147,26 +124,12 @@
 		}
 		{
 			dependencies: ["405A08BCA17295C1"]
-			description: [
-				"对于月球而言，你首先需要解决最基础的应力与电力问题，即水源、燃料和电力"
-				""
-				"对于水源问题，你其实有多种解决方案"
-				""
-				"&a第一种方案当然是无限水——不过在低重力环境下水的流动速度会变慢，并且在无重力环境下会彻底停止流动&r"
-				""
-				"&a第二种方案就是直接合成水——你可以考虑使用黄铜培养仓与蓝冰合成浮冰，然后将浮冰转化为水！不过，如果你选择了这种方案，你就需要一直穿着太空服了&r"
-				""
-				"你可以使用无限取液池来产生岩浆，或是直接从月球地下的岩浆海中抽取锅炉所需的岩浆"
-				""
-				"你可以使用太阳能板来在月球白天制造电力，或是使用更稳定的燃煤发电机燃烧木屑或木炭"
-				""
-				"&a如果你没有携带这些，你也不用太担心——月球上有大量前代文明留下的废墟，你可以从中找到大量有用的东西&r"
-			]
+			description: ["{ftbquests.chapter_111_3.quest_135537688E1E9010.desc_01}"]
 			icon: "create:steam_engine"
 			id: "135537688E1E9010"
 			tasks: [{
 				id: "47C63DB406EFF5C2"
-				title: "起步"
+				title: "{ftbquests.chapter_111_3.quest_135537688E1E9010.task_47C63DB406EFF5C2.title}"
 				type: "checkmark"
 			}]
 			x: 1.0d
@@ -174,20 +137,12 @@
 		}
 		{
 			dependencies: ["7ED4995ADF9BF952"]
-			description: [
-				"由于在这个阶段，你在地月之间往返还是一件较为昂贵的事，所以我建议你在每次出行前做好详细的规划与准备"
-				""
-				"&a如果你是第一次前往月球，那么你的准备也许包括：&r"
-				"&e一整套用于修建起始工业区的材料，包括但不限于应急工业平台等，后文详述"
-				"&e用于返回地球的备用火箭修复材料"
-				"&e用于进一步发展工业的材料和工具，包括但不限于卫星探矿器等，后文详述"
-				"&e..."
-			]
+			description: ["{ftbquests.chapter_111_3.quest_405A08BCA17295C1.desc_01}"]
 			icon: "minecraft:chest"
 			id: "405A08BCA17295C1"
 			tasks: [{
 				id: "39216FAEAB6A16B7"
-				title: "起步前的准备"
+				title: "{ftbquests.chapter_111_3.quest_405A08BCA17295C1.task_39216FAEAB6A16B7.title}"
 				type: "checkmark"
 			}]
 			x: -1.0d
@@ -196,21 +151,15 @@
 		{
 			dependencies: ["405A08BCA17295C1"]
 			description: [
-				"如果你希望尽量减少在地月往返的次数，一次性地（并且尽快地）完成月球开发，那么这里的建议会帮到你！"
-				""
-				"你应该携带若干牛的刷怪蛋，或是携带若干装有小牛的笼子——&a拿着空桶的机械手能对笼子里的小牛挤奶！&r"
-				""
-				"[ \"你可以使用\", { \"text\": \"蓝图构筑站\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"56F4799B252FC6AE\" } }, \"制作好大量多方块结构的材料包（至少应该包含合金炉、工业高炉、大型电解器、自动化组装机、大型粉碎机、无限取液池、大气冷凝机、爆破压缩机），并携带好对应的核心\" ]"
-				""
-				"你应该携带大量的黄铜培养仓、各种微生物、以及一定数量的矿物钻井"
-				""
-				"你可以通过信息化存储网络装载大量建设所需资源，用来快速起步"
+				"{ftbquests.chapter_111_3.quest_36C9F2DF6ACEC4EF.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_111_3.quest_36C9F2DF6ACEC4EF.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"56F4799B252FC6AE\"}, \"translate\": \"ftbquests.chapter_111_3.quest_36C9F2DF6ACEC4EF.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_111_3.quest_36C9F2DF6ACEC4EF.desc_02.rich_03\"}]"
+				"{ftbquests.chapter_111_3.quest_36C9F2DF6ACEC4EF.desc_03}"
 			]
 			icon: "minecraft:barrel"
 			id: "36C9F2DF6ACEC4EF"
 			tasks: [{
 				id: "657F7D7269265DB0"
-				title: "进一步的准备"
+				title: "{ftbquests.chapter_111_3.quest_36C9F2DF6ACEC4EF.task_657F7D7269265DB0.title}"
 				type: "checkmark"
 			}]
 			x: -2.0d
@@ -218,31 +167,17 @@
 		}
 		{
 			dependencies: ["135537688E1E9010"]
-			description: [
-				"月球是你星际物流的起点"
-				""
-				"&a作为星际物流的必需品，戴斯仅能在月球进行制作；&r此外，这也是你首个能够全自动生产铝的星球（当然，你也可以选择去行星轨道自动化生产它）"
-				""
-				"除此以外，这里还有前代文明遗留下的工业废料，可以从中挖掘出旧时代的宝藏"
-				""
-				"&a而为了让星际物流更进一步，你还需要在这里收集电流体，从而搭建太空电梯&r"
-				""
-				"于是，你在月球的任务便十分明确了："
-				""
-				"&a建立戴斯生产的自动化与电流体生产的自动化是必需的&r，而铝则至少需要获取一定量"
-				""
-				"&e至于工业废料，你可以根据自己的需求决定是否开发&r"
-			]
+			description: ["{ftbquests.chapter_111_3.quest_64313456B3082232.desc_01}"]
 			icon: "kubejs:navigate_data_moon"
 			id: "64313456B3082232"
 			tasks: [{
 				id: "0FAECBB19FBA73FF"
-				title: "整体目标"
+				title: "{ftbquests.chapter_111_3.quest_64313456B3082232.task_0FAECBB19FBA73FF.title}"
 				type: "checkmark"
 			}]
 			x: 2.0d
 			y: 1.5d
 		}
 	]
-	title: "乐谱-异星工厂"
+	title: "{ftbquests.chapter_111_3.title}"
 }

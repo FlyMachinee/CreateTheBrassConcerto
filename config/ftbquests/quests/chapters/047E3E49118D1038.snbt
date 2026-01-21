@@ -37,15 +37,7 @@
 				"4AEF4CA85499F6B1"
 				"4DD2818383629B87"
 			]
-			description: [
-				"现在你已经成功在这个世界拥有了立足之地"
-				""
-				"不过你离回家还差的很远"
-				""
-				"我能理解你想要回家的急迫心情"
-				""
-				"但是这件事并没有那么简单——"
-			]
+			description: ["{ftbquests.chapter_047E3E49118D1038.quest_7F49C0F7FE5195CF.desc_01}"]
 			id: "7F49C0F7FE5195CF"
 			rewards: [
 				{
@@ -430,7 +422,7 @@
 			]
 			tasks: [{
 				id: "65247DB8FD48E21C"
-				title: "站稳脚跟"
+				title: "{ftbquests.chapter_047E3E49118D1038.quest_7F49C0F7FE5195CF.task_65247DB8FD48E21C.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d
@@ -2518,7 +2510,7 @@
 		}
 		{
 			dependencies: ["35190B69DD7E29C9"]
-			description: [""]
+			description: [ ]
 			id: "588AA0AADCB4C274"
 			rewards: [{
 				id: "009DCE830DCB630C"
@@ -3822,10 +3814,10 @@
 						value: "create:tracks"
 					}
 				}
-				title: "Any #create:tracks"
+				title: "{ftbquests.chapter_047E3E49118D1038.quest_630A98D4E95F3C09.task_54ADD962E311430F.title}"
 				type: "item"
 			}]
-			title: "任意铁轨"
+			title: "{ftbquests.chapter_047E3E49118D1038.quest_630A98D4E95F3C09.title}"
 			x: 2.5d
 			y: 0.0d
 		}
@@ -6690,5 +6682,5 @@
 			y: -1.5d
 		}
 	]
-	title: "章末小结-从这里走向世界"
+	title: "{ftbquests.chapter_047E3E49118D1038.title}"
 }
