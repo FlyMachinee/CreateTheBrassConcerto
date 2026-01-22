@@ -1336,7 +1336,6 @@
 			y: -1.5d
 		}
 		{
-			description: [ ]
 			disable_toast: true
 			icon: "minecraft:netherite_upgrade_smithing_template"
 			id: "64B641B66BC97259"

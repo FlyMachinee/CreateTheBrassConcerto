@@ -75,6 +75,7 @@
     "kubejs.matrix.netexpand": "§aNet Expander Information Element",
     "kubejs.message.drawers": "§cYou Can Only Break Empty Drawers!",
     "kubejs.message.drawers1": "§cBreak Drawers Will Destroy Its Contents, You Can Only Break Drawers While Sneaking!",
+    "kubejs.tooltip.wooden_pickaxe":"§aMining Level: Iron",
     "kubejs.tooltip.blaze_burner":"§aYou could buy it in shop!",
     "kubejs.tooltip.andesite_alloy":"§aUse Block Filling to produce it in bulk!\n§aCheck the methods in Ponder!",
     "kubejs.tooltip.stone": "§aYou can use stonecutting to transform stones and cobblestones!",

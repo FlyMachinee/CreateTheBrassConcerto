@@ -2510,7 +2510,6 @@
 		}
 		{
 			dependencies: ["35190B69DD7E29C9"]
-			description: [ ]
 			id: "588AA0AADCB4C274"
 			rewards: [{
 				id: "009DCE830DCB630C"

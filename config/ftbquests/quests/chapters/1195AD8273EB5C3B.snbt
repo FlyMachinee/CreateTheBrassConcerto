@@ -71,7 +71,6 @@
 			y: -1.0d
 		}
 		{
-			description: [ ]
 			id: "0723F24E9778C76C"
 			tasks: [{
 				id: "6AD09C599225098F"
@@ -102,7 +101,6 @@
 			y: 1.0d
 		}
 		{
-			description: [ ]
 			id: "496D61BD7F5D783E"
 			tasks: [{
 				id: "6DFFDF4E07CB2530"

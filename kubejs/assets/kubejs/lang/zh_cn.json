@@ -75,6 +75,7 @@
     "kubejs.message.drawers1": "§c破坏抽屉将使内容物消失，你必须潜行才能破坏抽屉！",
     "kubejs.matrix.netcreate": "§a数据化信息素",
     "kubejs.matrix.netexpand": "§a网络拓展信息素",
+    "kubejs.tooltip.wooden_pickaxe":"§a挖掘等级：铁",
     "kubejs.tooltip.blaze_burner":"§a你可以在小卖部中购买它！",
     "kubejs.tooltip.andesite_alloy":"§a使用方块注液来量产安山合金！\n§a具体请查看思索！",
     "kubejs.tooltip.stone": "§a你可以使用切石机来将石头与圆石互相转化！",

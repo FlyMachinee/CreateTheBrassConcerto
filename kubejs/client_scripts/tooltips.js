@@ -1,4 +1,5 @@
 ItemEvents.tooltip(event => {
+  event.add(['minecraft:wooden_pickaxe'], Text.translate("kubejs.tooltip.wooden_pickaxe"))
   event.add(['create:blaze_burner'], Text.translate("kubejs.tooltip.blaze_burner"))
   event.add(['create:andesite_alloy'], Text.translate("kubejs.tooltip.andesite_alloy"))
   event.add(['kubejs:unknown_prototype'], Text.translate("kubejs.tooltip.unknown_prototype"))
