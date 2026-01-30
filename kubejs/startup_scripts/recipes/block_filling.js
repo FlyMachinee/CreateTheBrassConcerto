@@ -1,3 +1,7 @@
+global.blockFillingBasicRecipes = []
+global.blockFillingItemRecipes = []
+global.blockFillingExtraItemRecipes = []
+
 CreateEvents.spoutHandler((event) => {
     /**
     * @param {string} id 配方id
@@ -31,6 +35,13 @@ CreateEvents.spoutHandler((event) => {
                 return 0;
             }
         )
+
+        global.blockFillingBasicRecipes.push({
+            input_fluid: fluidInput.id,
+            input_amount: fluidInput.amount,
+            input_blocks: blockID instanceof Array ? blockID : [blockID],
+            output_blocks: outputList,
+        })
     }
     /**
     * @param {string} id 配方id
@@ -61,6 +72,18 @@ CreateEvents.spoutHandler((event) => {
                 return 0;
             }
         )
+
+        // {id:'xxx',Count:4b}
+        // regex
+        let output_id = output.match(/id:'(.*?)'/)[1]
+        let output_count = parseInt(output.match(/Count:(\d+)b/)[1])
+        global.blockFillingItemRecipes.push({
+            input_fluid: fluidInput.id,
+            input_amount: fluidInput.amount,
+            output_item: output_id,
+            output_amount: output_count,
+            medium_block: blockID
+        })
     }
     /**
     * @param {string} id 配方id
@@ -90,6 +113,18 @@ CreateEvents.spoutHandler((event) => {
                 return 0;
             }
         )
+
+        // {id:'xxx',Count:4b}
+        // regex
+        let output_id = output.match(/id:'(.*?)'/)[1]
+        let output_count = parseInt(output.match(/Count:(\d+)b/)[1])
+        global.blockFillingExtraItemRecipes.push({
+            input_fluid: fluidInput.id,
+            input_amount: fluidInput.amount,
+            output_item: output_id,
+            output_amount: output_count,
+            medium_block: blockID
+        })
     }
     blockFillingBasic(
         "dut_create:brown_mushroom",
