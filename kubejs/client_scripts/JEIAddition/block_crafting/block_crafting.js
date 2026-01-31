@@ -144,25 +144,11 @@ JEIAddedEvents.registerCategories((event) => {
       const renderBlock = (block_info, x, y, z) => {
         const coordinates = transform(x, y, z);
 
-        // reverse 额外渲染
-        if (
-          typeof block_info !== 'string' &&
-          'extra' in block_info &&
-          'reverse' in block_info &&
-          block_info.reverse
-        ) {
-          block_info.extra(
-            graphics,
-            lighting,
-            coordinates[0],
-            coordinates[1],
-            coordinates[2],
-            scale
-          );
-        }
-
-        // 检查是否 skip
-        if (typeof block_info === 'string' || !('skip' in block_info) || !block_info.skip) {
+        const mainRender = () => {
+          // 检查是否 skip
+          if (typeof block_info !== 'string' && 'skip' in block_info && block_info.skip) {
+            return;
+          }
           // 正常渲染
           let blockState;
 
@@ -183,9 +169,9 @@ JEIAddedEvents.registerCategories((event) => {
 
           // 创建 builder，提供光照
           let builder =
-            $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
-              blockState
-            ).lighting(lighting);
+            $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](blockState).lighting(
+              lighting
+            );
 
           // 进行方块旋转
           // 方块生成时，若不进行旋转，默认面向数学的 -x 轴
@@ -238,26 +224,23 @@ JEIAddedEvents.registerCategories((event) => {
           }
 
           // 收尾
-          builder
-            .atLocal(coordinates[0], coordinates[1], coordinates[2])
-            .scale(scale)
-            .render(graphics);
-        }
+          builder.atLocal(coordinates[0], coordinates[1], coordinates[2]).scale(scale).render(graphics);
+        };
 
-        // 额外渲染
-        if (
-          typeof block_info !== 'string' &&
-          'extra' in block_info &&
-          (!('reverse' in block_info) || !block_info.reverse)
-        ) {
-          block_info.extra(
-            graphics,
-            lighting,
-            coordinates[0],
-            coordinates[1],
-            coordinates[2],
-            scale
-          );
+        const extraRender = () => {
+          if (typeof block_info !== 'string' && 'extra' in block_info) {
+            block_info.extra(graphics, lighting, coordinates[0], coordinates[1], coordinates[2], scale);
+          }
+        };
+
+        if (typeof block_info === 'string' || !('reverse' in block_info) || !block_info.reverse) {
+          // 先渲染方块本体
+          mainRender();
+          extraRender();
+        } else {
+          // 先渲染额外结构
+          extraRender();
+          mainRender();
         }
       };
 
@@ -276,70 +259,6 @@ JEIAddedEvents.registerCategories((event) => {
           }
         }
       }
-
-      // 坐标轴
-      // renderBlock('minecraft:glass', 0, 0, 0);
-      // for (let i = 1; i <= 2; ++i) renderBlock('minecraft:red_wool', i, 0, 0); // X
-      // for (let j = 1; j <= 2; ++j) renderBlock('minecraft:green_wool', 0, j, 0); // Y
-      // for (let k = 1; k <= 7; ++k) renderBlock('minecraft:blue_wool', 0, 0, k); // Z
-
-      // 旋转测试
-      // for (let i = 0; i <= 2; ++i) {
-      //   for (let z = 0; z <= 3; ++z) {
-      //     let coordinates = transform(i, 1, z);
-      //     let builder = $AnimatedKinetics.defaultBlockElement(
-      //       // $AllBlocks.MECHANICAL_PUMP.getDefaultState()
-      //       Block.getBlock('minecraft:spruce_stairs').defaultBlockState()
-      //     );
-
-      //     rotateXYZ(builder, i === 0 ? z * 90 : 0, i === 1 ? z * 90 : 0, i === 2 ? z * 90 : 0);
-
-      //     builder
-      //       .atLocal(coordinates[0], coordinates[1], coordinates[2])
-      //       .scale(scale)
-      //       .render(graphics);
-      //   }
-
-      //   renderBlock(
-      //     ['minecraft:red_wool', 'minecraft:green_wool', 'minecraft:blue_wool'][i],
-      //     i,
-      //     1,
-      //     -1
-      //   );
-      // }
-
-      // 旋转优先级测试
-      // let all_case = [
-      //   [0, 0, 0],
-      //   [0, 0, 1],
-      //   [0, 1, 0],
-      //   [1, 0, 0],
-      //   [1, 1, 0],
-      //   [1, 0, 1],
-      //   [0, 1, 1],
-      //   [1, 1, 1],
-      // ];
-
-      // for (let i = 0; i < all_case.length; ++i) {
-      //   let coordinates = transform(1, 1, i);
-
-      //   let builder = $AnimatedKinetics.defaultBlockElement(
-      //     // $AllBlocks.MECHANICAL_PUMP.getDefaultState()
-      //     Block.getBlock('minecraft:spruce_stairs').defaultBlockState()
-      //   );
-
-      //   rotateXYZ(builder, 
-      //     all_case[i][0] === 1 ? 90 : 0, 
-      //     all_case[i][1] === 1 ? 90 : 0, 
-      //     all_case[i][2] === 1 ? 90 : 0
-      //   );
-
-      //   builder
-      //     .atLocal(coordinates[0], coordinates[1], coordinates[2])
-      //     .scale(scale)
-      //     .render(graphics);
-      // }
-
       matrixStack.popPose();
     });
   });

@@ -28,8 +28,8 @@
  *    rotate: 可选，数组，格式为 [角度, 角度, 角度]，随后将按数学轴 z, y, x 顺序（不知道为什么，测试出来的结果）绕轴旋转指定角度（度数制）
  *
  *    skip: 可选，布尔值，若为真，则跳过该方块本身的渲染（额外渲染会继续）
- *    reverse: 可选，布尔值，若为真，先执行 render 额外渲染，再渲染方块本身
- *    render: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale) => void，用于额外渲染该方块相关结构
+ *    reverse: 可选，布尔值，若为真，先执行 extra 额外渲染，再渲染方块本身
+ *    extra: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale) => void，用于额外渲染该方块相关结构
  * }
  */
 const getBlockCraftingRecipe = (

@@ -9,31 +9,41 @@
  * @param {number} z
  * @param {number} scale
  * @param {Array<Array>} directions 形如 [[str, bool],...] 表示管道向 str 方向连接，bool 表示是否有管道口
- * 
+ *
  * 管道方向与渲染轴关系：UP = -y, DOWN = +y, NORTH = -z, SOUTH = +z, WEST = -x, EAST = +x
- * 
+ *
  * 管道方向与数学轴关系：UP = +z, DOWN = -z, NORTH = -x, SOUTH = +x, WEST = +y, EAST = -y
  */
 const drawFluidPipe = (guiGraphics, lighting, x, y, z, scale, directions) => {
   let pipe_attachments = $AllPartialModels.PIPE_ATTACHMENTS; // EnumMap
 
   // 管道与管道的连接部分，这时无管道口
+  // Map: Direction -> PartialModel
   let connections = pipe_attachments.get(
     $FluidTransportBehaviour.AttachmentTypes.ComponentPartials.CONNECTION
-  ); // Map: Direction -> PartialModel
+  );
 
   // 管道至管道口连接处，配合管道口使用
+  // Map: Direction -> PartialModel
   let rim_connectors = pipe_attachments.get(
     $FluidTransportBehaviour.AttachmentTypes.ComponentPartials.RIM_CONNECTOR
-  ); // Map: Direction -> PartialModel
+  );
 
   // 管道口
-  let rims = pipe_attachments.get($FluidTransportBehaviour.AttachmentTypes.ComponentPartials.RIM); // Map: Direction -> PartialModel
+  // Map: Direction -> PartialModel
+  let rims = pipe_attachments.get($FluidTransportBehaviour.AttachmentTypes.ComponentPartials.RIM);
 
   // 龙头（当管道连接至容器时），这里我们不考虑龙头
-  let drains = pipe_attachments.get(
-    $FluidTransportBehaviour.AttachmentTypes.ComponentPartials.DRAIN
-  ); // Map: Direction -> PartialModel
+  // Map: Direction -> PartialModel
+  // let drains = pipe_attachments.get($FluidTransportBehaviour.AttachmentTypes.ComponentPartials.DRAIN);
+
+  const renderPartial = (partialModel) => {
+    $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](partialModel)
+      .lighting(lighting)
+      .atLocal(x, y, z)
+      .scale(scale)
+      .render(guiGraphics);
+  };
 
   let dir_list = [];
   directions.forEach((dir) => {
@@ -53,27 +63,12 @@ const drawFluidPipe = (guiGraphics, lighting, x, y, z, scale, directions) => {
         // 有管道口，渲染管道口以及短连接处
         let rim_connector = rim_connectors.get(Direction[dir_str]); // PartialModel
         let rim = rims.get(Direction[dir_str]); // PartialModel
-
-        $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](rim_connector)
-          .lighting(lighting)
-          .atLocal(x, y, z)
-          .scale(scale)
-          .render(guiGraphics);
-
-        $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](rim)
-          .lighting(lighting)
-          .atLocal(x, y, z)
-          .scale(scale)
-          .render(guiGraphics);
+        renderPartial(rim_connector);
+        renderPartial(rim);
       } else {
         // 无管道口，渲染普通长连接处
         let connection = connections.get(Direction[dir_str]); // PartialModel
-
-        $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](connection)
-          .lighting(lighting)
-          .atLocal(x, y, z)
-          .scale(scale)
-          .render(guiGraphics);
+        renderPartial(connection);
       }
     } else {
       pipe_state = pipe_state.setValue(BlockProperties[dir_str], $Boolean.valueOf(String(false)));
