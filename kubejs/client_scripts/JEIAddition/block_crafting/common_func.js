@@ -252,55 +252,6 @@ const blockCraftingRecipes = [
     },
     (i, j, k) => [2 - i, 2 - j, k]
   ),
-
-  // 一级火箭
-  getBlockCraftingRecipe(
-    'ad_astra:tier_1_rocket',
-    1,
-    'create:wrench',
-    'H',
-    [
-      ['#A#', 'A#A', '#A#'],
-      ['#B#', 'BCB', '#B#'],
-      ['#D#', 'DCD', '#D#'],
-      ['#F#', 'FCF', '#F#'],
-      ['#F#', 'FCF', '#F#'],
-      ['#E#', 'EGE', '#E#'],
-      ['###', '#H#', '###'],
-      ['###', '#F#', '###'],
-    ],
-    {
-      A: { id: 'create:encased_fan', face: 'NZ' },
-      B: { id: 'createaddition:electric_motor', face: 'NZ' },
-      C: 'design_decor:industrial_iron_boiler',
-      D: { id: 'createaddition:alternator', face_center: true },
-      E: { id: 'design_decor:diagonal_girder', face_center: true },
-      F: 'create:metal_girder',
-      G: 'create:industrial_iron_block',
-      H: {
-        id: 'vintageimprovements:vacuum_chamber',
-        extra: (guiGraphics, lighting, x, y, z, scale) => {
-          $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](
-            $VintagePartialModels.VACUUM_COG
-          )
-            .lighting(lighting)
-            .rotateBlock(0, $AnimatedKinetics.getCurrentAngle() * 2, 0)
-            .atLocal(x, y, z)
-            .scale(scale)
-            .render(guiGraphics);
-
-          $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](
-            $VintagePartialModels.VACUUM_CHAMBER_ARROWS
-          )
-            .lighting(lighting)
-            .atLocal(x, y, z)
-            .scale(scale)
-            .render(guiGraphics);
-        },
-      },
-      '#': 'minecraft:air',
-    }
-  ),
 ].concat(
   (() => {
     let ret = [];
