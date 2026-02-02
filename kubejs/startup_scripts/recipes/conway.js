@@ -1,3 +1,5 @@
+global.blockFillingConwayRecipes = []
+
 CreateEvents.spoutHandler((event) => {
     /**
     * @param {number} i 坐标1
@@ -130,6 +132,16 @@ CreateEvents.spoutHandler((event) => {
                 return 0;
             }
         )
+
+        global.blockFillingConwayRecipes.push({
+            innerId: global.blockFillingConwayRecipes.length,
+            medium: blockID,
+            fluid: fluidInput.id,
+            fluidAmount: fluidInput.amount,
+            cap: output[0],
+            stem: output[1],
+            ratio: AoverB,
+        })
     }
     blockFillingConway("dut_create:red_mushroom", "minecraft:moss_block", { id: "kubejs:red_mushroom_spore", amount: 250 }, ["minecraft:red_mushroom_block", "minecraft:mushroom_stem"], 6)
     blockFillingConway("dut_create:brown_mushroom", "minecraft:packed_mud", { id: "kubejs:brown_mushroom_spore", amount: 250 }, ["minecraft:brown_mushroom_block", "minecraft:mushroom_stem"], 4)

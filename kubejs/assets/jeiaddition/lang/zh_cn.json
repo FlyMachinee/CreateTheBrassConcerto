@@ -3,13 +3,16 @@
   "kubejs.jeiaddition.category.block_filling_item.title": "方块注液（生产）",
   "kubejs.jeiaddition.category.block_filling_basic.title": "方块注液（转化）",
   "kubejs.jeiaddition.category.block_crafting.title": "世界合成",
+  "kubejs.jeiaddition.category.block_filling_conway.title": "方块注液（康威生命游戏）",
   "kubejs.jeiaddition.block_crafting.desc1": "来进行世界合成",
   "kubejs.jeiaddition.block_crafting.desc2": "在思索中查看具体结构",
+  "kubejs.jeiaddition.block_filling_conway.desc1": "理想比例：%s",
   "kubejs.jeiaddition.consumed_medium": "媒介方块（消耗）",
   "kubejs.jeiaddition.not_consumed_medium": "媒介方块（不消耗）",
   "kubejs.jeiaddition.transform_block": "转化方块",
   "kubejs.jeiaddition.probability": "%s%%概率",
   "kubejs.jeiaddition.empty_depot_below": "下方置物台必须为空",
   "kubejs.jeiaddition.use": "使用——",
-  "kubejs.jeiaddition.right_click": "右键——"
+  "kubejs.jeiaddition.right_click": "右键——",
+  "kubejs.jeiaddition.reset": "重置"
 }
