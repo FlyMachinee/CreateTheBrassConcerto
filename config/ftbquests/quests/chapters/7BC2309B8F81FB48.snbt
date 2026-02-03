@@ -1036,19 +1036,6 @@
 			y: -7.375d
 		}
 		{
-			dependencies: ["583C961608F1EB5E"]
-			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_70806CB53335AB3C.desc_01}"]
-			id: "70806CB53335AB3C"
-			tasks: [{
-				id: "3DADC9710B607D88"
-				item: "balancedflight:ascended_flight_ring"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_7BC2309B8F81FB48.quest_70806CB53335AB3C.title}"
-			x: -5.5d
-			y: 1.625d
-		}
-		{
 			dependencies: ["4BB17B8F476D22EB"]
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_74BAB5407EA93AD4.desc_01}"]
 			id: "74BAB5407EA93AD4"
@@ -2326,6 +2313,7 @@
 			y: -1.375d
 		}
 		{
+			dependencies: ["583C961608F1EB5E"]
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_14D6DF4D1B698552.desc_01}"]
 			icon: "create_sa:creative_filling_tank"
 			id: "14D6DF4D1B698552"
@@ -2591,8 +2579,8 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_7BC2309B8F81FB48.quest_14D6DF4D1B698552.title}"
-			x: 0.0d
-			y: 0.5d
+			x: -5.5d
+			y: 1.5d
 		}
 		{
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_6107D95BEFCAAB6B.desc_01}"]

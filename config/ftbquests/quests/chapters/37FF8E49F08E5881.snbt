@@ -75,27 +75,14 @@
 			y: -0.5d
 		}
 		{
-			description: ["{ftbquests.chapter_37FF8E49F08E5881.quest_4AE6C73814FB22DA.desc_01}"]
-			icon: "create:schematic_and_quill"
-			id: "4AE6C73814FB22DA"
-			shape: "hexagon"
-			tasks: [{
-				id: "691141D76ED7EEEE"
-				title: "{ftbquests.chapter_37FF8E49F08E5881.quest_4AE6C73814FB22DA.task_691141D76ED7EEEE.title}"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: -1.5d
-		}
-		{
 			description: [
 				"{ftbquests.chapter_37FF8E49F08E5881.quest_44BB55331CD79D87.desc_01}"
-				"{image:kubejs:textures/ftb/structure.png width:100 height:120 align:center}"
-				"{image:kubejs:textures/ftb/shadow.png width:100 height:100 align:center}"
-				"{@pagebreak}"
-				"{ftbquests.chapter_37FF8E49F08E5881.quest_44BB55331CD79D87.desc_02}"
 				"{image:kubejs:textures/ftb/offhand.png width:130 height:100 align:center}"
 				"{image:kubejs:textures/ftb/goggles.png width:130 height:88 align:center}"
+				"{@pagebreak}"
+				"{ftbquests.chapter_37FF8E49F08E5881.quest_44BB55331CD79D87.desc_02}"
+				"{image:kubejs:textures/ftb/structure.png width:100 height:120 align:center}"
+				"{image:kubejs:textures/ftb/shadow.png width:100 height:100 align:center}"
 				"{@pagebreak}"
 				"{ftbquests.chapter_37FF8E49F08E5881.quest_44BB55331CD79D87.desc_03}"
 				"{image:kubejs:textures/ftb/empty_recipe.png width:140 height:100 align:center}"
@@ -110,7 +97,7 @@
 				type: "checkmark"
 			}]
 			x: 0.0d
-			y: 1.5d
+			y: -1.25d
 		}
 		{
 			description: ["{ftbquests.chapter_37FF8E49F08E5881.quest_21D2C19AAECEEC59.desc_01}"]
