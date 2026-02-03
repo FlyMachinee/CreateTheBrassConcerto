@@ -80,6 +80,25 @@
 			dependencies: ["6F43CC2B89A00D14"]
 			description: ["{ftbquests.chapter_6509F8EE3B2C05A1.quest_7E616A7217320035.desc_01}"]
 			id: "7E616A7217320035"
+			rewards: [
+				{
+					id: "2764469DBC711346"
+					item: "ad_astra:launch_pad"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "0EDEB92C8F3956CC"
+					item: "kubejs:parts_box"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "24ECA1D195782433"
+					item: "kubejs:fuel_tank"
+					type: "item"
+				}
+			]
 			size: 1.25d
 			tasks: [{
 				dimension: "ad_astra:moon"
@@ -110,6 +129,25 @@
 			dependencies: ["7E616A7217320035"]
 			description: ["{ftbquests.chapter_6509F8EE3B2C05A1.quest_58158D61E7FC06CB.desc_01}"]
 			id: "58158D61E7FC06CB"
+			rewards: [
+				{
+					id: "72332B69E8204505"
+					item: "ad_astra:launch_pad"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "4945221B3F6FC91B"
+					item: "kubejs:parts_box"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "7642698C3D166E16"
+					item: "kubejs:fuel_tank"
+					type: "item"
+				}
+			]
 			size: 1.5d
 			tasks: [{
 				dimension: "dut:slimeria"

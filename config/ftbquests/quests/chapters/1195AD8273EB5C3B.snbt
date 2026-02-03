@@ -20,6 +20,7 @@
 			y: -1.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_341A1A36A1151F77.desc_01}"]
 			id: "341A1A36A1151F77"
 			tasks: [{
 				id: "2C4C9DEE9264B4B4"
@@ -30,6 +31,7 @@
 			y: 0.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_546333FD9C77AE77.desc_01}"]
 			id: "546333FD9C77AE77"
 			tasks: [{
 				id: "126AB66ABF8E6749"
@@ -40,6 +42,7 @@
 			y: 1.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_141C7D05B3E993F3.desc_01}"]
 			id: "141C7D05B3E993F3"
 			tasks: [{
 				id: "518029DB88A3EBF8"
@@ -50,6 +53,7 @@
 			y: 2.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_663EE5A98F902F68.desc_01}"]
 			id: "663EE5A98F902F68"
 			tasks: [{
 				id: "10E427214C4897C7"
@@ -71,6 +75,7 @@
 			y: -1.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_0723F24E9778C76C.desc_01}"]
 			id: "0723F24E9778C76C"
 			tasks: [{
 				id: "6AD09C599225098F"
@@ -81,6 +86,7 @@
 			y: -1.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_25FD1B7EB4DB664A.desc_01}"]
 			id: "25FD1B7EB4DB664A"
 			tasks: [{
 				id: "5B93CE49431E40BC"
@@ -91,6 +97,7 @@
 			y: 0.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_63796B2D40071014.desc_01}"]
 			id: "63796B2D40071014"
 			tasks: [{
 				id: "646E12E80C54921C"
@@ -101,6 +108,7 @@
 			y: 1.0d
 		}
 		{
+			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_496D61BD7F5D783E.desc_01}"]
 			id: "496D61BD7F5D783E"
 			tasks: [{
 				id: "6DFFDF4E07CB2530"

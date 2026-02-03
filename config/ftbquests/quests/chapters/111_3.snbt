@@ -5,7 +5,7 @@
 	group: "05CDF1EA7F8CFC5D"
 	icon: "kubejs:position_data"
 	id: "13F0F3166814872B"
-	order_index: 0
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -23,7 +23,6 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["625D8395506AE31C"]
 			description: [
 				"{ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_01}"
 				"[\"\", {\"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"1EFCE2A7FB341A0A\"}, \"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_03\"}]"
@@ -50,43 +49,6 @@
 			y: -2.0d
 		}
 		{
-			description: ["{ftbquests.chapter_111_3.quest_625D8395506AE31C.desc_01}"]
-			id: "625D8395506AE31C"
-			rewards: [{
-				id: "7363555F4148561E"
-				item: "kubejs:slime_cola_can"
-				type: "item"
-			}]
-			tasks: [{
-				id: "76CC1970174C1387"
-				title: "{ftbquests.chapter_111_3.quest_625D8395506AE31C.task_76CC1970174C1387.title}"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: -3.5d
-		}
-		{
-			dependencies: ["625D8395506AE31C"]
-			description: ["{ftbquests.chapter_111_3.quest_7C110590088B7637.desc_01}"]
-			id: "7C110590088B7637"
-			rewards: [{
-				count: 16
-				id: "71F393C5BB006C02"
-				item: "kubejs:large_fries"
-				type: "item"
-			}]
-			subtitle: "{ftbquests.chapter_111_3.quest_7C110590088B7637.subtitle}"
-			tasks: [{
-				id: "79C730B4D8ECA5C4"
-				item: "balancedflight:ascended_flight_ring"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_111_3.quest_7C110590088B7637.title}"
-			x: 1.5d
-			y: -4.5d
-		}
-		{
-			dependencies: ["625D8395506AE31C"]
 			description: ["{ftbquests.chapter_111_3.quest_29AB0046AD153308.desc_01}"]
 			id: "29AB0046AD153308"
 			rewards: [{
@@ -102,8 +64,8 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_111_3.quest_29AB0046AD153308.title}"
-			x: -1.5d
-			y: -4.5d
+			x: 0.0d
+			y: -3.5d
 		}
 		{
 			description: ["{ftbquests.chapter_111_3.quest_7ED4995ADF9BF952.desc_01}"]

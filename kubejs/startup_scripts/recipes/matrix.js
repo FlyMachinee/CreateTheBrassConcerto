@@ -74,12 +74,16 @@ CreateEvents.spoutHandler((event) => {
         "create:placard",
         (block, fluid, simulate) => {
             if (fluid.id == "kubejs:saline_water" && fluid.amount >= 250) {
-                if (block.entityData?.Item.id == "kubejs:matrix_2") {
+                /**@type {Internal.PlacardBlockEntity} */
+                let placard = block.entity
+                if (placard.getHeldItem().id == "kubejs:matrix_2") {
                     if (block.down.id == "create:depot") {
-                        if (block.down.entityData?.HeldItem == undefined) {
+                        /**@type {Internal.DepotBlockEntity} */
+                        let depot = block.down.entity
+                        if (depot.getHeldItem().isEmpty()) {
                             if (!simulate) {
-                                let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                let item = JSON.parse(placard.getHeldItem().tag.matrix.toString())
+                                placard.setHeldItem('minecraft:air')
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = [matrix2x2Add(A, B)].concat(item.slice(2))
@@ -89,7 +93,9 @@ CreateEvents.spoutHandler((event) => {
                                     C[i][1][0] = $Integer.valueOf(String(C[i][1][0]))
                                     C[i][1][1] = $Integer.valueOf(String(C[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
+                                let depotItemHandler = depot.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                                depotItemHandler.insertItem(Item.of('kubejs:matrix_2', `{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}`), false)
+
                                 block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
@@ -97,7 +103,7 @@ CreateEvents.spoutHandler((event) => {
                     }
                 }
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-反缩链-冷冻剂
@@ -106,12 +112,17 @@ CreateEvents.spoutHandler((event) => {
         "create:placard",
         (block, fluid, simulate) => {
             if (fluid.id == "kubejs:cryogen" && fluid.amount >= 250) {
-                if (block.entityData?.Item.id == "kubejs:matrix_2") {
+                /**@type {Internal.PlacardBlockEntity} */
+                let placard = block.entity
+                if (placard.getHeldItem().id == "kubejs:matrix_2") {
                     if (block.down.id == "create:depot") {
-                        if (block.down.entityData?.HeldItem == undefined) {
+                        /**@type {Internal.DepotBlockEntity} */
+                        let depot = block.down.entity
+                        if (depot.getHeldItem().isEmpty()) {
                             if (!simulate) {
-                                let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                let item = JSON.parse(placard.getHeldItem().tag.matrix.toString())
+                                placard.setHeldItem('minecraft:air')
+                                //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = [matrix2x2Subtract(B, A)].concat(item.slice(2))
@@ -121,7 +132,10 @@ CreateEvents.spoutHandler((event) => {
                                     C[i][1][0] = $Integer.valueOf(String(C[i][1][0]))
                                     C[i][1][1] = $Integer.valueOf(String(C[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
+                                let depotItemHandler = depot.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                                depotItemHandler.insertItem(Item.of('kubejs:matrix_2', `{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}`), false)
+                                //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
+
                                 block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
@@ -129,7 +143,7 @@ CreateEvents.spoutHandler((event) => {
                     }
                 }
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-RG相变-绿色孢子
@@ -138,12 +152,16 @@ CreateEvents.spoutHandler((event) => {
         "create:placard",
         (block, fluid, simulate) => {
             if (fluid.id == "kubejs:green_spore" && fluid.amount >= 250) {
-                if (block.entityData?.Item.id == "kubejs:matrix_2") {
+                /**@type {Internal.PlacardBlockEntity} */
+                let placard = block.entity
+                if (placard.getHeldItem().id == "kubejs:matrix_2") {
                     if (block.down.id == "create:depot") {
-                        if (block.down.entityData?.HeldItem == undefined) {
+                        /**@type {Internal.DepotBlockEntity} */
+                        let depot = block.down.entity
+                        if (depot.getHeldItem().isEmpty()) {
                             if (!simulate) {
-                                let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                let item = JSON.parse(placard.getHeldItem().tag.matrix.toString())
+                                placard.setHeldItem('minecraft:air')
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = [B, A].concat(item.slice(2))
@@ -153,7 +171,9 @@ CreateEvents.spoutHandler((event) => {
                                     C[i][1][0] = $Integer.valueOf(String(C[i][1][0]))
                                     C[i][1][1] = $Integer.valueOf(String(C[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}}`)
+                                let depotItemHandler = depot.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                                depotItemHandler.insertItem(Item.of('kubejs:matrix_2', `{matrix:${JSON.stringify(C)},RGB:${JSON.stringify(C.slice(0, 3))}}`), false)
+
                                 block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
@@ -161,7 +181,7 @@ CreateEvents.spoutHandler((event) => {
                     }
                 }
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-RB相变-蓝色孢子
@@ -170,12 +190,17 @@ CreateEvents.spoutHandler((event) => {
         "create:placard",
         (block, fluid, simulate) => {
             if (fluid.id == "kubejs:blue_spore" && fluid.amount >= 250) {
-                if (block.entityData?.Item.id == "kubejs:matrix_2") {
+                /**@type {Internal.PlacardBlockEntity} */
+                let placard = block.entity
+                if (placard.getHeldItem().id == "kubejs:matrix_2") {
                     if (block.down.id == "create:depot") {
-                        if (block.down.entityData?.HeldItem == undefined) {
+                        /**@type {Internal.DepotBlockEntity} */
+                        let depot = block.down.entity
+                        if (depot.getHeldItem().isEmpty()) {
                             if (!simulate) {
-                                let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                let item = JSON.parse(placard.getHeldItem().tag.matrix.toString())
+                                placard.setHeldItem('minecraft:air')
+
                                 let A = item[0] || [[0, 0], [0, 0]]
                                 let B = item[1] || [[0, 0], [0, 0]]
                                 let C = item[2] || [[0, 0], [0, 0]]
@@ -186,7 +211,9 @@ CreateEvents.spoutHandler((event) => {
                                     D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                                     D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                                let depotItemHandler = depot.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                                depotItemHandler.insertItem(Item.of('kubejs:matrix_2', `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
+
                                 block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
@@ -194,7 +221,7 @@ CreateEvents.spoutHandler((event) => {
                     }
                 }
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-轮换-红色孢子
@@ -203,12 +230,17 @@ CreateEvents.spoutHandler((event) => {
         "create:placard",
         (block, fluid, simulate) => {
             if (fluid.id == "kubejs:red_spore" && fluid.amount >= 250) {
-                if (block.entityData?.Item.id == "kubejs:matrix_2") {
+                /**@type {Internal.PlacardBlockEntity} */
+                let placard = block.entity
+                if (placard.getHeldItem().id == "kubejs:matrix_2") {
                     if (block.down.id == "create:depot") {
-                        if (block.down.entityData?.HeldItem == undefined) {
+                        /**@type {Internal.DepotBlockEntity} */
+                        let depot = block.down.entity
+                        if (depot.getHeldItem().isEmpty()) {
                             if (!simulate) {
-                                let item = JSON.parse(block.entityData.Item.tag.matrix.toString())
-                                block.level.server.runCommandSilent(`/data modify block ${block.pos.x} ${block.pos.y} ${block.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                                let item = JSON.parse(placard.getHeldItem().tag.matrix.toString())
+                                placard.setHeldItem('minecraft:air')
+
                                 let A = item[item.length - 1] || [[0, 0], [0, 0]]
                                 let D = [A].concat(item.slice(0, -1))
                                 for (let i = 0; i < D.length; i++) {
@@ -217,7 +249,9 @@ CreateEvents.spoutHandler((event) => {
                                     D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                                     D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                                 }
-                                block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                                let depotItemHandler = depot.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                                depotItemHandler.insertItem(Item.of('kubejs:matrix_2', `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
+
                                 block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                             }
                             return 250
@@ -225,7 +259,7 @@ CreateEvents.spoutHandler((event) => {
                     }
                 }
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-逐相转置-乙醇
@@ -234,15 +268,17 @@ CreateEvents.spoutHandler((event) => {
         "minecraft:red_mushroom_block",
         (block, fluid, simulate) => {
             if (fluid.id == "createdieselgenerators:ethanol" && fluid.amount >= 250) {
-                if (block.up.id != "create:placard") { return 0 }
-                if (block.up.properties.facing == "down") { return 0 }
-                if (block.up.properties.facing == "up") { return 0 }
                 let placard = block.up
-                let A = placard.entityData?.Item
-                if (A?.id != "kubejs:slime_crystal") { return 0 }
+                if (placard.id != "create:placard") { return 0 }
+                let placardFacing = placard.properties.facing
+                if (placardFacing == "down") { return 0 }
+                if (placardFacing == "up") { return 0 }
+                /**@type {Internal.PlacardBlockEntity} */
+                let placardEntity = placard.entity
+                if (placardEntity.getHeldItem().id != "kubejs:slime_crystal") { return 0 }
                 let depotIn = 0
                 let depotOut = 0
-                switch (placard.properties.facing) {
+                switch (placardFacing) {
                     case "east":
                         depotOut = block.west
                         depotIn = block.east
@@ -260,27 +296,40 @@ CreateEvents.spoutHandler((event) => {
                         depotIn = block.north
                         break
                 }
-                let B = depotIn.entityData?.HeldItem?.Item
+                if (depotIn.id != 'create:depot') { return 0 }
+                if (depotOut.id != 'create:depot') { return 0 }
+
+                /**@type {Internal.DepotBlockEntity} */
+                let depotInEntity = depotIn.entity
+                /**@type {Internal.DepotBlockEntity} */
+                let depotOutEntity = depotOut.entity
+
+                let B = depotInEntity.getHeldItem()
                 if (B?.id != "kubejs:matrix_2") { return 0 }
-                if (depotOut.entityData?.HeldItem != undefined) { return 0 }
+                if (!depotOutEntity.getHeldItem().isEmpty()) { return 0 }
                 if (!simulate) {
                     let D = JSON.parse(B.tag.matrix.toString()) || [[[0, 0], [0, 0]]]
                     for (let i = 0; i < D.length; i++) {
                         D[i] = matrix2x2Transposition(D[i])
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+
+                    let depotInItemHandler = depotInEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                    let depotOutItemHandler = depotOutEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                    depotOutItemHandler.insertItem(Item.of('kubejs:matrix_2', B.count, `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
+                    depotInItemHandler.extractItem(0, B.count, false)
+
                     block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
+                    //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
                 }
                 return 250
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-逐相反转置-乙醇
@@ -289,15 +338,17 @@ CreateEvents.spoutHandler((event) => {
         "minecraft:brown_mushroom_block",
         (block, fluid, simulate) => {
             if (fluid.id == "createdieselgenerators:ethanol" && fluid.amount >= 250) {
-                if (block.up.id != "create:placard") { return 0 }
-                if (block.up.properties.facing == "down") { return 0 }
-                if (block.up.properties.facing == "up") { return 0 }
                 let placard = block.up
-                let A = placard.entityData?.Item
-                if (A?.id != "kubejs:slime_crystal") { return 0 }
+                if (placard.id != "create:placard") { return 0 }
+                let placardFacing = placard.properties.facing
+                if (placardFacing == "down") { return 0 }
+                if (placardFacing == "up") { return 0 }
+                /**@type {Internal.PlacardBlockEntity} */
+                let placardEntity = placard.entity
+                if (placardEntity.getHeldItem().id != "kubejs:slime_crystal") { return 0 }
                 let depotIn = 0
                 let depotOut = 0
-                switch (placard.properties.facing) {
+                switch (placardFacing) {
                     case "east":
                         depotOut = block.west
                         depotIn = block.east
@@ -315,29 +366,42 @@ CreateEvents.spoutHandler((event) => {
                         depotIn = block.north
                         break
                 }
-                let B = depotIn.entityData?.HeldItem?.Item
+                if (depotIn.id != 'create:depot') { return 0 }
+                if (depotOut.id != 'create:depot') { return 0 }
+
+                /**@type {Internal.DepotBlockEntity} */
+                let depotInEntity = depotIn.entity
+                /**@type {Internal.DepotBlockEntity} */
+                let depotOutEntity = depotOut.entity
+
+                let B = depotInEntity.getHeldItem()
                 if (B?.id != "kubejs:matrix_2") { return 0 }
-                if (depotOut.entityData?.HeldItem != undefined) { return 0 }
+                if (!depotOutEntity.getHeldItem().isEmpty()) { return 0 }
                 if (!simulate) {
                     let D = JSON.parse(B.tag.matrix.toString()) || [[[0, 0], [0, 0]]]
                     for (let i = 0; i < D.length; i++) {
                         D[i] = matrix2x2Invertedposition(D[i])
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+
+                    let depotInItemHandler = depotInEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                    let depotOutItemHandler = depotOutEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                    depotOutItemHandler.insertItem(Item.of('kubejs:matrix_2', B.count, `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
+                    depotInItemHandler.extractItem(0, B.count, false)
+
                     block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
-            return 0;
+            return 0
         }
     )
+
     //矩阵加工-正相叠加-红色蘑菇孢子
     event.add(
         "dut_create:matrix_addition",
@@ -347,8 +411,10 @@ CreateEvents.spoutHandler((event) => {
                 if (block.properties.facing == "down") { return 0 }
                 if (block.properties.facing == "up") { return 0 }
                 if (block.down.id != "create:depot") { return 0 }
-                if (block.down.entityData?.HeldItem != undefined) { return 0 }
                 let depot = block.down
+                /**@type {Internal.DepotBlockEntity} */
+                let depotEntity = depot.entity
+                if (!depotEntity.getHeldItem().isEmpty()) { return 0 }
                 let blockA = 0
                 let blockB = 0
                 switch (block.properties.facing) {
@@ -369,26 +435,37 @@ CreateEvents.spoutHandler((event) => {
                         blockB = depot.north
                         break
                 }
-                let A = blockA.entityData?.Item
-                let B = blockB.entityData?.Item
-                if (A?.id != "kubejs:matrix_2") { return 0 }
-                if (B?.id != "kubejs:matrix_2") { return 0 }
+                if (blockA.id != 'create:placard') { return 0 }
+                if (blockB.id != 'create:placard') { return 0 }
+
+                /**@type {Internal.PlacardBlockEntity} */
+                let blockAEntity = blockA.entity
+                /**@type {Internal.PlacardBlockEntity} */
+                let blockBEntity = blockB.entity
+                let A = blockAEntity.getHeldItem()
+                if (A.id != "kubejs:matrix_2") { return 0 }
+                let B = blockBEntity.getHeldItem()
+                if (B.id != "kubejs:matrix_2") { return 0 }
                 if (!simulate) {
                     let D = matrixAdd(JSON.parse(A.tag.matrix.toString()), JSON.parse(B.tag.matrix.toString()))
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    blockAEntity.setHeldItem('minecraft:air')
+                    blockBEntity.setHeldItem('minecraft:air')
+                    //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    let depotItemHandler = depotEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                    depotItemHandler.insertItem(Item.of('kubejs:matrix_2', 1, `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
+                    //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
                     block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-反相叠加-棕色蘑菇孢子
@@ -400,8 +477,10 @@ CreateEvents.spoutHandler((event) => {
                 if (block.properties.facing == "down") { return 0 }
                 if (block.properties.facing == "up") { return 0 }
                 if (block.down.id != "create:depot") { return 0 }
-                if (block.down.entityData?.HeldItem != undefined) { return 0 }
                 let depot = block.down
+                /**@type {Internal.DepotBlockEntity} */
+                let depotEntity = depot.entity
+                if (!depotEntity.getHeldItem().isEmpty()) { return 0 }
                 let blockA = 0
                 let blockB = 0
                 switch (block.properties.facing) {
@@ -422,16 +501,21 @@ CreateEvents.spoutHandler((event) => {
                         blockB = depot.north
                         break
                 }
-                let A = blockA.entityData?.Item
-                let B = blockB.entityData?.Item
-                if (A?.id != "kubejs:matrix_2") { return 0 }
-                if (B?.id != "kubejs:matrix_2") { return 0 }
+                if (blockA.id != 'create:placard') { return 0 }
+                if (blockB.id != 'create:placard') { return 0 }
+
+                /**@type {Internal.PlacardBlockEntity} */
+                let blockAEntity = blockA.entity
+                /**@type {Internal.PlacardBlockEntity} */
+                let blockBEntity = blockB.entity
+                let A = blockAEntity.getHeldItem()
+                if (A.id != "kubejs:matrix_2") { return 0 }
+                let B = blockBEntity.getHeldItem()
+                if (B.id != "kubejs:matrix_2") { return 0 }
                 if (!simulate) {
                     let D = matrixSubtract(JSON.parse(A.tag.matrix.toString()), JSON.parse(B.tag.matrix.toString()))
-
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
-
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    blockAEntity.setHeldItem('minecraft:air')
+                    blockBEntity.setHeldItem('minecraft:air')
 
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
@@ -439,14 +523,14 @@ CreateEvents.spoutHandler((event) => {
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    let depotItemHandler = depotEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                    depotItemHandler.insertItem(Item.of('kubejs:matrix_2', 1, `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
 
                     block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-并链-可乐原浆
@@ -458,8 +542,10 @@ CreateEvents.spoutHandler((event) => {
                 if (block.properties.facing == "down") { return 0 }
                 if (block.properties.facing == "up") { return 0 }
                 if (block.down.id != "create:depot") { return 0 }
-                if (block.down.entityData?.HeldItem != undefined) { return 0 }
                 let depot = block.down
+                /**@type {Internal.DepotBlockEntity} */
+                let depotEntity = depot.entity
+                if (!depotEntity.getHeldItem().isEmpty()) { return 0 }
                 let blockA = 0
                 let blockB = 0
                 switch (block.properties.facing) {
@@ -480,26 +566,36 @@ CreateEvents.spoutHandler((event) => {
                         blockB = depot.north
                         break
                 }
-                let A = blockA.entityData?.Item
-                let B = blockB.entityData?.Item
-                if (A?.id != "kubejs:matrix_2") { return 0 }
-                if (B?.id != "kubejs:matrix_2") { return 0 }
+                if (blockA.id != 'create:placard') { return 0 }
+                if (blockB.id != 'create:placard') { return 0 }
+
+                /**@type {Internal.PlacardBlockEntity} */
+                let blockAEntity = blockA.entity
+                /**@type {Internal.PlacardBlockEntity} */
+                let blockBEntity = blockB.entity
+                let A = blockAEntity.getHeldItem()
+                if (A.id != "kubejs:matrix_2") { return 0 }
+                let B = blockBEntity.getHeldItem()
+                if (B.id != "kubejs:matrix_2") { return 0 }
                 if (!simulate) {
                     let D = JSON.parse(B.tag.matrix.toString()).concat(JSON.parse(A.tag.matrix.toString()))
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockA.pos.x} ${blockA.pos.y} ${blockA.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${blockB.pos.x} ${blockB.pos.y} ${blockB.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    blockAEntity.setHeldItem('minecraft:air')
+                    blockBEntity.setHeldItem('minecraft:air')
+
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depot.pos.x} ${depot.pos.y} ${depot.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:1b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    let depotItemHandler = depotEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                    depotItemHandler.insertItem(Item.of('kubejs:matrix_2', 1, `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
+
                     block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 125
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-断链
@@ -509,15 +605,18 @@ CreateEvents.spoutHandler((event) => {
         "ad_astra:aeronos_cap",
         (block, fluid, simulate) => {
             if (fluid.id == "kubejs:aeronos_spore" && fluid.amount >= 250) {
-                if (block.up.id != "create:placard") { return 0 }
-                if (block.up.properties.facing == "down") { return 0 }
-                if (block.up.properties.facing == "up") { return 0 }
                 let placard = block.up
-                let A = placard.entityData?.Item
-                if (A?.id != "kubejs:matrix_2") { return 0 }
+                if (placard.id != "create:placard") { return 0 }
+                let placardFacing = placard.properties.facing
+                if (placardFacing == "down") { return 0 }
+                if (placardFacing == "up") { return 0 }
+                /**@type {Internal.PlacardBlockEntity} */
+                let placardEntity = placard.entity
+                let A = placardEntity.getHeldItem()
+                if (A.id != "kubejs:matrix_2") { return 0 }
                 let depotIn = 0
                 let depotOut = 0
-                switch (placard.properties.facing) {
+                switch (placardFacing) {
                     case "east":
                         depotOut = block.west
                         depotIn = block.east
@@ -535,10 +634,21 @@ CreateEvents.spoutHandler((event) => {
                         depotIn = block.north
                         break
                 }
-                let B = depotIn.entityData?.HeldItem?.Item
+                if (depotIn.id != 'create:depot') { return 0 }
+                if (depotOut.id != 'create:depot') { return 0 }
+
+                /**@type {Internal.DepotBlockEntity} */
+                let depotOutEntity = depotOut.entity
+                if (!depotOutEntity.getHeldItem().isEmpty()) { return 0 }
+                /**@type {Internal.DepotBlockEntity} */
+                let depotInEntity = depotIn.entity
+                let B = depotInEntity.getHeldItem()
+                let Bcount = B.count
                 if (B?.id != "kubejs:matrix_2") { return 0 }
-                if (depotOut.entityData?.HeldItem != undefined) { return 0 }
                 if (B.tag?.no_copy == 1) { return 0 }
+
+                let depotInItemHandler = depotInEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                let depotOutItemHandler = depotOutEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
                 if (!simulate) {
                     let MatrixA = JSON.parse(A.tag.matrix.toString())[0] || [[0, 0], [0, 0]]
                     let MatrixB = JSON.parse(B.tag.matrix.toString()) || [[[0, 0], [0, 0]]]
@@ -546,20 +656,20 @@ CreateEvents.spoutHandler((event) => {
                     for (let i = 0; i < MatrixB.length; i++) {
                         D[i] = matrix2x2Multiply(MatrixA, MatrixB[i])
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${placard.pos.x} ${placard.pos.y} ${placard.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    depotInItemHandler.extractItem(0, Bcount, false)
+                    placardEntity.setHeldItem('minecraft:air')
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    depotOutItemHandler.insertItem(Item.of('kubejs:matrix_2', Bcount, `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
                     block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-右嬗变-孑孓孢子
@@ -568,15 +678,18 @@ CreateEvents.spoutHandler((event) => {
         "ad_astra:strophar_cap",
         (block, fluid, simulate) => {
             if (fluid.id == "kubejs:strophar_spore" && fluid.amount >= 250) {
-                if (block.up.id != "create:placard") { return 0 }
-                if (block.up.properties.facing == "down") { return 0 }
-                if (block.up.properties.facing == "up") { return 0 }
                 let placard = block.up
-                let A = placard.entityData?.Item
-                if (A?.id != "kubejs:matrix_2") { return 0 }
+                if (placard.id != "create:placard") { return 0 }
+                let placardFacing = placard.properties.facing
+                if (placardFacing == "down") { return 0 }
+                if (placardFacing == "up") { return 0 }
+                /**@type {Internal.PlacardBlockEntity} */
+                let placardEntity = placard.entity
+                let A = placardEntity.getHeldItem()
+                if (A.id != "kubejs:matrix_2") { return 0 }
                 let depotIn = 0
                 let depotOut = 0
-                switch (placard.properties.facing) {
+                switch (placardFacing) {
                     case "east":
                         depotOut = block.west
                         depotIn = block.east
@@ -594,10 +707,21 @@ CreateEvents.spoutHandler((event) => {
                         depotIn = block.north
                         break
                 }
-                let B = depotIn.entityData?.HeldItem?.Item
+                if (depotIn.id != 'create:depot') { return 0 }
+                if (depotOut.id != 'create:depot') { return 0 }
+
+                /**@type {Internal.DepotBlockEntity} */
+                let depotOutEntity = depotOut.entity
+                if (!depotOutEntity.getHeldItem().isEmpty()) { return 0 }
+                /**@type {Internal.DepotBlockEntity} */
+                let depotInEntity = depotIn.entity
+                let B = depotInEntity.getHeldItem()
+                let Bcount = B.count
                 if (B?.id != "kubejs:matrix_2") { return 0 }
-                if (depotOut.entityData?.HeldItem != undefined) { return 0 }
                 if (B.tag?.no_copy == 1) { return 0 }
+
+                let depotInItemHandler = depotInEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
+                let depotOutItemHandler = depotOutEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
                 if (!simulate) {
                     let MatrixA = JSON.parse(A.tag.matrix.toString())[0] || [[0, 0], [0, 0]]
                     let MatrixB = JSON.parse(B.tag.matrix.toString()) || [[[0, 0], [0, 0]]]
@@ -605,20 +729,20 @@ CreateEvents.spoutHandler((event) => {
                     for (let i = 0; i < MatrixB.length; i++) {
                         D[i] = matrix2x2Multiply(MatrixB[i], MatrixA)
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data remove block ${depotIn.pos.x} ${depotIn.pos.y} ${depotIn.pos.z} HeldItem`)
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${placard.pos.x} ${placard.pos.y} ${placard.pos.z} Item set value {id:'minecraft:air',Count:1b}`)
+                    depotInItemHandler.extractItem(0, Bcount, false)
+                    placardEntity.setHeldItem('minecraft:air')
                     for (let i = 0; i < D.length; i++) {
                         D[i][0][0] = $Integer.valueOf(String(D[i][0][0]))
                         D[i][0][1] = $Integer.valueOf(String(D[i][0][1]))
                         D[i][1][0] = $Integer.valueOf(String(D[i][1][0]))
                         D[i][1][1] = $Integer.valueOf(String(D[i][1][1]))
                     }
-                    block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${depotOut.pos.x} ${depotOut.pos.y} ${depotOut.pos.z} HeldItem.Item set value {id:'kubejs:matrix_2',Count:${B.Count}b,tag:{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}}`)
+                    depotOutItemHandler.insertItem(Item.of('kubejs:matrix_2', Bcount, `{matrix:${JSON.stringify(D)},RGB:${JSON.stringify(D.slice(0, 3))}}`), false)
                     block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
                 }
                 return 250
             }
-            return 0;
+            return 0
         }
     )
     //矩阵加工-染色
