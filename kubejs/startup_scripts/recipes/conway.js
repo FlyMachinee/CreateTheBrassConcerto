@@ -123,11 +123,13 @@ CreateEvents.spoutHandler((event) => {
                     if (!simulate) {
                         slimes3dConway(block, -3, output[0], output[1], AoverB)
                         block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
-                        block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run particle minecraft:spore_blossom_air ${block.pos.x} ${block.pos.y - 3} ${block.pos.z} 0.75 0.75 0.75 0.3 8`)
+
+                        block.level.spawnParticles("minecraft:spore_blossom_air", false, block.x+0.5, block.y+0.5, block.z+0.5, 0.75, 0.75, 0.75, 8, 0.3)
+                        //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run particle minecraft:spore_blossom_air ${block.pos.x} ${block.pos.y - 3} ${block.pos.z} 0.75 0.75 0.75 0.3 8`)
                     }
                     return 250
                 }
-                return 0;
+                return 0
             }
         )
     }
