@@ -183,7 +183,7 @@ JEIAddedEvents.registerCategories((event) => {
     });
 
     category.setWidth(178);
-    category.setHeight(200);
+    category.setHeight(160);
     category.background(guiHelper.createBlankDrawable(0, 0));
 
     // 设置输入输出槽
@@ -194,7 +194,7 @@ JEIAddedEvents.registerCategories((event) => {
       // 暂时不考虑多媒介方块的情况
       try {
         layoutBuilder
-          .addSlot($RecipeIngredientRole.CATALYST, 21, 50)
+          .addSlot($RecipeIngredientRole.CATALYST, 21, 45)
           .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
           .addItemStack(Item.of(data.medium))
           .addTooltipCallback((slotView, builder) => {
@@ -207,18 +207,18 @@ JEIAddedEvents.registerCategories((event) => {
 
       // 输入流体槽
       layoutBuilder
-        .addSlot($RecipeIngredientRole.INPUT, 21, 12)
+        .addSlot($RecipeIngredientRole.INPUT, 21, 7)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .setFluidRenderer(data.fluidAmount * 2, false, 16, 16) // Capacity, show capacity, width, height
         .addFluidStack(data.fluid, data.fluidAmount);
 
       // 输出物品槽
       layoutBuilder
-        .addSlot($RecipeIngredientRole.OUTPUT, 130, 140)
+        .addSlot($RecipeIngredientRole.OUTPUT, 130, 130)
         .setBackground($CreateRecipeCategory.getRenderedSlot(0), -1, -1)
         .addItemStack(Item.of(data.cap));
       layoutBuilder
-        .addSlot($RecipeIngredientRole.OUTPUT, 150, 140)
+        .addSlot($RecipeIngredientRole.OUTPUT, 151, 130)
         .setBackground($CreateRecipeCategory.getRenderedSlot(0), -1, -1)
         .addItemStack(Item.of(data.stem));
     });
@@ -226,8 +226,8 @@ JEIAddedEvents.registerCategories((event) => {
     // 配方动画持久数据
     // key: recipe innerId, value: { cycleCount, tensor, nextTensor, identicalCount }
     const animatedData = new Map();
-    const buttonX = 10;
-    const buttonY = 179;
+    const buttonX = 130;
+    const buttonY = 10;
     const buttonWidth = 30;
     const buttonHeight = 14;
     const allowIdenticalCount = 3;
@@ -256,7 +256,7 @@ JEIAddedEvents.registerCategories((event) => {
       // 渲染重置图标
       // 当张量连续多次未变化时显示
       if (recipeState.identicalCount >= allowIdenticalCount && cycleProgress >= 10) {
-        $AllIcons.I_SEQ_REPEAT.render(graphics, buttonX + buttonWidth + 5, buttonY + buttonHeight / 2 - 8);
+        $AllIcons.I_SEQ_REPEAT.render(graphics, buttonX - 20, buttonY + buttonHeight / 2 - 8);
       }
 
       // 渲染重置按钮
@@ -295,13 +295,13 @@ JEIAddedEvents.registerCategories((event) => {
       );
 
       // 下箭头
-      $AllGuiTextures.JEI_DOWN_ARROW.render(graphics, 134, 120);
+      $AllGuiTextures.JEI_DOWN_ARROW.render(graphics, 135, 110);
 
       const matrixStack = graphics.pose();
       matrixStack.pushPose();
 
       // 渲染像素偏移
-      matrixStack.translate(50, 28, 100);
+      matrixStack.translate(50, 23, 100);
 
       // 渲染轴旋转
       matrixStack.mulPose($Axis.XP.rotationDegrees(-15.5));

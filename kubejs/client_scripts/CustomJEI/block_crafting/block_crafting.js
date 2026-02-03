@@ -27,27 +27,27 @@ JEIAddedEvents.registerCategories((event) => {
     });
 
     category.setWidth(178);
-    category.setHeight(200);
+    category.setHeight(150);
     category.background(guiHelper.createBlankDrawable(0, 0));
 
     // 设置输入输出槽
     category.handleLookup((layoutBuilder, recipe, focuses) => {
       // 使用工具槽
       layoutBuilder
-        .addSlot($RecipeIngredientRole.CATALYST, 150, 25)
+        .addSlot($RecipeIngredientRole.CATALYST, 150, 15)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addItemStack(Item.of(recipe.recipeData.crafting_with));
 
       // 使用对象槽
       let obj = recipe.recipeData.mapping[recipe.recipeData.crafting_on];
       layoutBuilder
-        .addSlot($RecipeIngredientRole.INPUT, 150, 50)
+        .addSlot($RecipeIngredientRole.INPUT, 150, 35)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addItemStack(Item.of(typeof obj === 'string' ? obj : obj.id));
 
       // 输出物品槽
       layoutBuilder
-        .addSlot($RecipeIngredientRole.OUTPUT, 135, 130)
+        .addSlot($RecipeIngredientRole.OUTPUT, 132, 100)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addItemStack(Item.of(recipe.recipeData.output_item, recipe.recipeData.output_count));
 
@@ -68,11 +68,11 @@ JEIAddedEvents.registerCategories((event) => {
       $CBCGuiTextures.CANNON_CAST_SHADOW.render(
         graphics,
         54 - $CBCGuiTextures.CANNON_CAST_SHADOW.width / 2,
-        135
+        85
       );
 
       // 下箭头
-      $AllGuiTextures.JEI_DOWN_ARROW.render(graphics, category.getWidth() / 2 + 40, 110);
+      $AllGuiTextures.JEI_DOWN_ARROW.render(graphics, category.getWidth() / 2 + 37, 80);
 
       // 使用文本
       drawRightAlignedString(
@@ -80,7 +80,7 @@ JEIAddedEvents.registerCategories((event) => {
         Client.font,
         Text.translate('kubejs.jeiaddition.use'),
         140,
-        29,
+        15 + 8 - Client.font.lineHeight / 2,
         0xffffff,
         true
       );
@@ -91,7 +91,7 @@ JEIAddedEvents.registerCategories((event) => {
         Client.font,
         Text.translate('kubejs.jeiaddition.right_click'),
         140,
-        54,
+        35 + 8 - Client.font.lineHeight / 2,
         0xffffff,
         true
       );
@@ -102,7 +102,7 @@ JEIAddedEvents.registerCategories((event) => {
         Client.font,
         Text.translate('kubejs.jeiaddition.block_crafting.desc1'),
         167,
-        84,
+        60,
         0xffffff,
         true
       );
@@ -113,7 +113,7 @@ JEIAddedEvents.registerCategories((event) => {
         Client.font,
         Text.translate('kubejs.jeiaddition.block_crafting.desc2'),
         category.getWidth() / 2,
-        185,
+        135,
         0xffffff,
         true
       );
@@ -122,7 +122,7 @@ JEIAddedEvents.registerCategories((event) => {
       matrixStack.pushPose();
 
       // 渲染像素偏移
-      matrixStack.translate(41, 155, 100);
+      matrixStack.translate(41, 105, 100);
 
       // 渲染轴旋转
       // 这两个值来之不易，源码没翻出来，手动测试，与 Ponder 场景中的角度一致（至少肉眼看不出区别）
