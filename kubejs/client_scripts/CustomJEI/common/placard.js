@@ -51,7 +51,8 @@ const getBlockRotationFromFacingAndFace = (facing, face) => {
 /**
  *
  * @param {Internal.GuiGraphics} graphics
- * @param {Internal.CustomLightingSettings} lighting
+ * @param {Internal.CustomLightingSettings} blockLighting
+ * @param {Internal.CustomLightingSettings} itemLighting
  * @param {Internal.ItemStack} item
  * @param {number} x
  * @param {number} y
@@ -60,10 +61,10 @@ const getBlockRotationFromFacingAndFace = (facing, face) => {
  * @param {Internal.Direction} facing
  * @param {Internal.AttachFace} face
  */
-const drawPlacard = (graphics, lighting, item, x, y, z, scale, facing, face) => {
+const drawPlacard = (graphics, blockLighting, itemLighting, item, x, y, z, scale, facing, face) => {
   const blockBuilder = $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
     $AllBlocks.PLACARD.get().defaultBlockState()
-  ).lighting(lighting);
+  ).lighting(blockLighting);
 
   const xyzBlockRot = getBlockRotationFromFacingAndFace(facing, face);
   blockBuilder
@@ -102,9 +103,7 @@ const drawPlacard = (graphics, lighting, item, x, y, z, scale, facing, face) => 
   ms.translate(0, offset, 0);
 
   ms.translate(-8, 8, -100);
-  $GuiGameElement['of(net.minecraft.world.item.ItemStack)'](item)
-    .lighting(lighting)
-    .render(graphics);
+  $GuiGameElement['of(net.minecraft.world.item.ItemStack)'](item).lighting(itemLighting).render(graphics);
 
   ms.popPose();
 };

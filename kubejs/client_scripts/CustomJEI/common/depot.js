@@ -3,18 +3,19 @@
 /**
  *
  * @param {Internal.GuiGraphics} graphics
- * @param {Internal.CustomLightingSettings} lighting
+ * @param {Internal.CustomLightingSettings} blockLighting
+ * @param {Internal.CustomLightingSettings} itemLighting
  * @param {Internal.ItemStack} item
  * @param {number} x
  * @param {number} y
  * @param {number} z
  * @param {number} scale
  */
-const drawDepot = (graphics, lighting, item, x, y, z, scale) => {
+const drawDepot = (graphics, blockLighting, itemLighting, item, x, y, z, scale) => {
   $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
     $AllBlocks.DEPOT.get().defaultBlockState()
   )
-    .lighting(lighting)
+    .lighting(blockLighting)
     .atLocal(x, y, z)
     .scale(scale)
     .render(graphics);
@@ -49,9 +50,7 @@ const drawDepot = (graphics, lighting, item, x, y, z, scale) => {
     ms.translate(0, offset, 0);
 
     ms.translate(-8, 8, -100);
-    $GuiGameElement['of(net.minecraft.world.item.ItemStack)'](item)
-      .lighting(lighting)
-      .render(graphics);
+    $GuiGameElement['of(net.minecraft.world.item.ItemStack)'](item).lighting(itemLighting).render(graphics);
     ms.popPose();
   }
 
