@@ -344,11 +344,11 @@ ServerEvents.recipes(event => {
     "key": {
       "E": { "item": "kubejs:light_composite_plate" },
       "B": { "item": "kubejs:mycetozoan" },
-      "C": { "item": "kubejs:productivity_module" },
+      "C": { "item": "kubejs:rocket_gyro" },
       "D": { "item": "kubejs:lime_circuit_board" },
       "A": { "item": "createloveandwar:tungsten_sheet" },
       "F": { "item": "kubejs:electro_hydro_capacitor" },
-      "G": { "item": "kubejs:rocket_electric_connector" }
+      "G": { "item": "kubejs:productivity_module_2" }
     },
     "pattern": [
       "FEEEF",

@@ -120,7 +120,7 @@ Ponder.registry((event) => {
         scene.rotateCameraY(45);
         scene.idle(20);
         scene.addKeyframe();
-        scene.text(60, "需要注意的是，电极可能会在配方结束时损坏(电解水并不会)");
+        scene.text(60, "需要注意的是，电极可能会在配方开始时损坏(电解水并不会)");
         scene.idle(20);
         scene.overlay.showOutline("red", {}, [1, 7, 4], 30);
         scene.overlay.showOutline("red", {}, [7, 7, 4], 30);

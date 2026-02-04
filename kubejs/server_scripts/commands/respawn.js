@@ -26,6 +26,7 @@ NativeEvents.onEvent("highest", true, $LivingDeath, e => {
     player.setGameMode("spectator")
     player.setHealth(player.maxHealth)
     player.respawn()
+    player.potionEffects.clear()
     player.server.tell(event.getSource().getLocalizedDeathMessage(player))
     player.setStatusMessage(Text.translate("kubejs.message.redeploy_tips"))
     event.setCanceled(true)

@@ -114,7 +114,7 @@ ServerEvents.recipes(event => {
             { "tag": "forge:plates/tin"}
         ],
         "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
-        { "item": "kubejs:carbon_electrode","count":4 }],
+        { "item": "kubejs:carbon_electrode","count":6 }],
         "processingTime": 50
     }).id('dut_create:carbon_electrode')
     event.custom({
@@ -143,7 +143,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:graphene_coil"}
         ],
         "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
-        { "item": "kubejs:carbon_electrode","count":6 }],
+        { "item": "kubejs:carbon_electrode","count":8 }],
         "processingTime": 50
     }).id('dut_create:carbon_electrode2')
     //大型电解池

@@ -1,9 +1,19 @@
-JEIEvents.information(event=>{
-    event.addItem("kubejs:unknown_prototype",[
+JEIEvents.information(event => {
+    event.addItem("kubejs:unknown_prototype", [
         Text.translate('kubejs.jei_info.unknown_prototype.1'),
         Text.translate('kubejs.jei_info.unknown_prototype.2'),
         Text.translate('kubejs.jei_info.unknown_prototype.3'),
         Text.translate('kubejs.jei_info.unknown_prototype.4')
+    ])
+})
+JEIEvents.information(event => {
+    event.addFluid("kubejs:drilling_fluid", [
+        Text.translate('kubejs.jei_info.drilling_fluid.1'),
+        Text.translate('kubejs.jei_info.drilling_fluid.2')
+    ])
+    event.addItem("kubejs:drilling_fluid_bucket", [
+        Text.translate('kubejs.jei_info.drilling_fluid.1'),
+        Text.translate('kubejs.jei_info.drilling_fluid.2')
     ])
 })
 JEIEvents.hideItems(event => {

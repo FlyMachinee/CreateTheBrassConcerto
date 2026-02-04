@@ -454,7 +454,7 @@ ServerEvents.recipes(event => {
         ResonantTowerLightning,
         ResonantTowerSound,
         ResonantTowerBird,
-        ResonantTowerParticle,
+        //ResonantTowerParticle,
       ].concat(RequirementList),
       "jei": [
         ResonantTowerStructure,
@@ -473,7 +473,7 @@ ServerEvents.recipes(event => {
         ResonantTowerLightning,
         ResonantTowerSound,
         ResonantTowerBird,
-        ResonantTowerParticle,
+        //ResonantTowerParticle,
         ResonantTowerLightningcheck,
       ].concat(RequirementList),
       "jei": [

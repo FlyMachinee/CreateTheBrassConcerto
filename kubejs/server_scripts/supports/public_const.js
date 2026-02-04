@@ -1,4 +1,15 @@
 // priority: 8192
+/**@name 存在的维度 */
+const AllPlanet = [
+    "minecraft:overworld",
+    "minecraft:the_nether",
+    "minecraft:the_end",
+    "ad_astra:earth_orbit",
+    "ad_astra:moon",
+    "ad_astra:moon_orbit",
+    "dut:slimeria",
+    "dut:slimeria_orbit"
+]
 /**@name 维度所在星球 */
 const DimensionToPlanet = {
     "minecraft:overworld": "earth",
@@ -9,6 +20,26 @@ const DimensionToPlanet = {
     "ad_astra:moon_orbit": "moon",
     "dut:slimeria": "slimeria",
     "dut:slimeria_orbit": "slimeria",
+}
+/**@name 星球对应维度 */
+const PlanetToDimension = {
+    "earth": "minecraft:overworld",
+    "earth_orbit": "ad_astra:earth_orbit",
+    "moon": "ad_astra:moon",
+    "moon_orbit":"ad_astra:moon_orbit" ,
+    "slimeria": "dut:slimeria",
+    "slimeria_orbit":"dut:slimeria_orbit" ,
+}
+/**@name 维度所在星球的轨道 */
+const DimensionToOrbit = {
+    "minecraft:overworld": "ad_astra:earth_orbit",
+    "minecraft:the_nether": "ad_astra:earth_orbit",
+    "minecraft:the_end": "ad_astra:earth_orbit",
+    "ad_astra:earth_orbit": "ad_astra:earth_orbit",
+    "ad_astra:moon": "ad_astra:moon_orbit",
+    "ad_astra:moon_orbit": "ad_astra:moon_orbit",
+    "dut:slimeria": "dut:slimeria_orbit",
+    "dut:slimeria_orbit": "dut:slimeria_orbit",
 }
 
 /**@name 维度》键名 */
@@ -46,5 +77,23 @@ function orCreateDataTravel(pdata, path) {
             break
         }
         break
+    }
+}
+function orCreateDir(targetDir) {
+    if (!$Files.exists(targetDir)) {
+        try {
+            $Files.createDirectories(targetDir)
+        } catch (e) {
+            console.error(e)
+        }
+    }
+}
+function orCreateFiles(targetFile) {
+    if (!$Files.exists(targetFile)) {
+        try {
+            $Files.createFile(targetFile)
+        } catch (e) {
+            console.error(e)
+        }
     }
 }

@@ -1,9 +1,18 @@
 // priority: 512
+ServerEvents.loaded(event => {
+    event.server.runCommandSilent(`/execute in ad_astra:earth_orbit run forceload add 0 0 0 0`)
+    event.server.runCommandSilent(`/execute in ad_astra:moon_orbit run forceload add 0 0 0 0`)
+    event.server.runCommandSilent(`/execute in dut:slimeria_orbit run forceload add 0 0 0 0`)
+
+    event.server.runCommandSilent(`/execute in ad_astra:earth_orbit run forceload remove 0 0 0 0`)
+    event.server.runCommandSilent(`/execute in ad_astra:moon_orbit run forceload remove 0 0 0 0`)
+    event.server.runCommandSilent(`/execute in dut:slimeria_orbit run forceload remove 0 0 0 0`)
+})
 PlayerEvents.loggedIn(event => {
     let p = event.player
     let pdata = p.persistentData
-    if (Platform.isLoaded('ftbessentials')){
-        p.tell(Text.translatable("kubejs.message.unacceptable"))
+    if (Platform.isLoaded('ftbessentials')) {
+        p.tell(Text.translate("kubejs.message.unacceptable"))
     }
     orCreateData(pdata, "needRespawn", false)
     orCreateData(pdata, "FreeCaming", false)
@@ -34,7 +43,10 @@ ItemEvents.rightClicked("stick", event => {
     if (event.player.username != "Slimeli_") {
         return
     }
-    event.player.tell(event.player.persistentData)
-    event.player.tell(event.server.persistentData)
-    event.player.tell(event.player.stringUuid)
+    let p = event.player
+    /*
+    let l=event.server.getLevel('ad_astra:moon')
+    p.tell(l.getBlock(p.x,p.y,p.z).id.toString())
+    */
+    p.tell(p.persistentData)
 })

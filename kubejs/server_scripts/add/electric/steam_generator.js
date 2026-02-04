@@ -80,8 +80,8 @@ ServerEvents.recipes(event => {
                 "requirements": [
                     GeneratorDimension(GasDimension,false),
                     GeneratorEnergyOutput(Math.floor(2048 * amount1)),
-                    GeneratorParticle,
-                    GeneratorSound,
+                    //GeneratorParticle,
+                    //GeneratorSound,
                     GeneratorBird,
                     GeneratorLube,
                     GeneratorStructure([1, 2, 0, - 1, 2, 0]),

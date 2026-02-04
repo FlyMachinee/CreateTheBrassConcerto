@@ -36,11 +36,11 @@ ServerEvents.recipes(event => {
                     " DDD "
                 ],
                 [
-                    " AEA ",
-                    "AIIIA",
+                    " QEP ",
+                    "QIIIP",
                     "FIMIF",
-                    "AIIIA",
-                    " AFA ",
+                    "AIIIR",
+                    " AFR ",
                 ],
                 [
                     "     ",
@@ -106,7 +106,6 @@ ServerEvents.recipes(event => {
             "N": "railways:smokestack_oilburner",
             "J": "design_decor:andesite_floodlight[facing=up]",
             "M": "design_decor:industrial_iron_boiler_large",
-            "A": "design_decor:iron_railing",
             "E": "design_decor:industrial_iron_boiler",
             "I": "design_decor:industrial_iron_boiler_structure",
             "C": "create:metal_girder",
@@ -114,6 +113,10 @@ ServerEvents.recipes(event => {
             "G": "createaddition:liquid_blaze_burner{fuelLevel:1}",
             "D": "create:industrial_iron_block",
             "F": "design_decor:diagonal_metal_support",
+            "A": "design_decor:iron_railing[south=true,west=true]",
+            "R": "design_decor:iron_railing[east=true,south=true]",
+            "P": "design_decor:iron_railing[east=true,north=true]",
+            "Q": "design_decor:iron_railing[north=true,west=true]",
             "H": "design_decor:ornate_grate"
         },
         "jei": true
@@ -1048,47 +1051,43 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:blaze_chlamydia", 6, "output")
         ]
     }).id("dut_create:alloy_furnace/blaze_chlamydia_aluminum")
-    let scalesTotal = randomOne(20, 32)
-    let heartTotal = randomOne(20, 32)
-    let fleshTotal = randomOne(20, 32)
-    let bloodTotal = randomOne(20, 32)
-    let scales = randomOne(9, 15)
-    let heart = randomOne(9, 15)
-    let flesh = randomOne(9, 15)
-    let blood = randomOne(9, 15)
-    let scalesIn = randomOne(9, 15)
-    let heartIn = randomOne(9, 15)
-    let fleshIn = randomOne(9, 15)
-    let bloodIn = randomOne(9, 15)
+    let scalesTotal = randomOne(20, 24)
+    let heartTotal = randomOne(20, 24)
+    let fleshTotal = randomOne(20, 24)
+    let bloodTotal = randomOne(20, 24)
+    let scales = randomOne(9, 12)
+    let heart = randomOne(9, 12)
+    let flesh = randomOne(9, 12)
+    let blood = randomOne(9, 12)
     AlloyFurnaceRecipe([
         AlloyFurnaceReplace(1, "vintageimprovements:sulfuric_acid"),
-        AlloyFurnaceItem("#dut_create:fire_dragonscales", scalesIn, "input"),
+        AlloyFurnaceItem("#dut_create:fire_dragonscales", 12, "input"),
         AlloyFurnaceItemChance('iceandfire:fire_dragon_heart', scales, 0.75),
-        AlloyFurnaceItemChance('iceandfire:fire_dragon_flesh', scalesTotal - scales, 0.2)],
+        AlloyFurnaceItemChance('iceandfire:fire_dragon_flesh', scalesTotal - scales, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
         "fire_dragon_scales")
     AlloyFurnaceRecipe([
         AlloyFurnaceReplace(1, "vintageimprovements:sulfuric_acid"),
-        AlloyFurnaceItem("iceandfire:fire_dragon_heart", heartIn, "input"),
+        AlloyFurnaceItem("iceandfire:fire_dragon_heart", 12, "input"),
         AlloyFurnaceItemChance('iceandfire:fire_dragon_flesh', heart, 0.75),
-        AlloyFurnaceItemChance('iceandfire:fire_dragon_blood', heartTotal - heart, 0.2)],
+        AlloyFurnaceItemChance('iceandfire:fire_dragon_blood', heartTotal - heart, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
         "fire_dragon_heart")
     AlloyFurnaceRecipe([
         AlloyFurnaceReplace(1, "vintageimprovements:sulfuric_acid"),
-        AlloyFurnaceItem("iceandfire:fire_dragon_flesh", fleshIn, "input"),
+        AlloyFurnaceItem("iceandfire:fire_dragon_flesh", 12, "input"),
         AlloyFurnaceItemChance('iceandfire:fire_dragon_blood', flesh, 0.75),
-        AlloyFurnaceItemChance('iceandfire:dragonscales_red', fleshTotal - flesh, 0.2)],
+        AlloyFurnaceItemChance('iceandfire:dragonscales_red', fleshTotal - flesh, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
         "fire_dragon_flesh")
     AlloyFurnaceRecipe([
         AlloyFurnaceReplace(1, "vintageimprovements:sulfuric_acid"),
-        AlloyFurnaceItem("iceandfire:fire_dragon_blood", bloodIn, "input"),
+        AlloyFurnaceItem("iceandfire:fire_dragon_blood", 12, "input"),
         AlloyFurnaceItemChance('iceandfire:dragonscales_red', blood, 0.75),
-        AlloyFurnaceItemChance('iceandfire:fire_dragon_heart', bloodTotal - blood, 0.2)],
+        AlloyFurnaceItemChance('iceandfire:fire_dragon_heart', bloodTotal - blood, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
         "fire_dragon_blood")

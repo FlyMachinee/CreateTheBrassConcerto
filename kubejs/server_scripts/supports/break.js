@@ -16,6 +16,7 @@ let classFilterField = $ScriptManager.getDeclaredField('classFilter')
 classFilterField.setAccessible(true)
 let ClassFilter = classFilterField.get(ScriptManagers.SERVER)
 ClassFilter.allow("java.io.File")
+ClassFilter.allow("java.lang.String")
 ClassFilter.allow("java.nio.file.Files")
 ClassFilter.allow("java.nio.file.Path")
 ClassFilter.allow("java.nio.file.Paths")
@@ -25,6 +26,8 @@ ClassFilter.allow("java.nio.file.StandardCopyOption")
 ClassFilter.allow("java.nio.file.SimpleFileVisitor")
 ClassFilter.allow("java.nio.file.FileVisitResult")
 ClassFilter.allow("java.util.Arrays")
+ClassFilter.allow("java.nio.file.StandardOpenOption")
+
 
 //
     

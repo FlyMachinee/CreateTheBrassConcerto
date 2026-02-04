@@ -581,6 +581,7 @@ ServerEvents.recipes(event => {
         "kubejs:airdrop_station",
         "kubejs:blueprint_builder",
         "kubejs:blasting_compressor",
+        "kubejs:hydropress",
         "kubejs:covariant_reactor",
         "kubejs:space_elevator_controller",
         "kubejs:electro_hydro_resonant_tower",

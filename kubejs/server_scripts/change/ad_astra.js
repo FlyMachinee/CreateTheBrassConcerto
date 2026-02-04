@@ -65,7 +65,7 @@ ServerEvents.recipes(event => {
     "processingTime": 80
   }).id("dut_create:ad_astra/crushing/moon_cobblestone")
   //管道箱
-  event.remove({ output: 'ad_astra:fluid_pipe_duct' })
+  event.remove({ id:'ad_astra:fluid_pipe_duct' })
   event.custom(
     {
       "type": "create:deploying",
@@ -79,7 +79,7 @@ ServerEvents.recipes(event => {
     }
   ).id("dut_create:ad_astra/delpoying/fluid_pipe_duct")
   //戴斯管道
-  event.remove({ output: 'ad_astra:desh_fluid_pipe' })
+  event.remove({ id:'ad_astra:desh_fluid_pipe' })
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:solar_panel" },
@@ -241,7 +241,7 @@ ServerEvents.recipes(event => {
     "transitionalItem": { "item": "kubejs:incomplete_copper_box" }
   }).id("dut_create:ad_astra/desh_pipe_motor")
   //发射台
-  event.remove({ output: 'ad_astra:launch_pad' })
+  event.remove({ id:'ad_astra:launch_pad'})
   event.custom({
     "type": "minecraft:crafting_shaped",
     "pattern": [
@@ -256,8 +256,8 @@ ServerEvents.recipes(event => {
     "result": { "item": "ad_astra:launch_pad" }
   }).id("dut_create:ad_astra/launch_pad")
   //氧气装载机
-  event.remove({ output: 'ad_astra:oxygen_loader' })
-  event.remove({ output: 'ad_astra:oxygen_distributor' })
+  event.remove({ id:'ad_astra:oxygen_loader' })
+  event.remove({ id:'ad_astra:oxygen_distributor' })
   //event.replaceOutput({}, '','')
   //event.remove({input: ''})
   //event.custom()

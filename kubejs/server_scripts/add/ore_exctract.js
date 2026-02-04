@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createoreexcavation:extracting",
     "drill": { "tag": "dut_create:drills" },
-    "fluid": { "amount": 50, "fluid": "kubejs:drilling_fluid", },
+    "fluid": { "amount": 100, "fluid": "kubejs:drilling_fluid", },
     "output": { "amount": 500, "fluid": "kubejs:refined_oil" },
     "priority": 0,
     "stress": 256,
@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createoreexcavation:drilling",
     "drill": { "item": "createoreexcavation:netherite_drill" },
-    "fluid": { "amount": 50, "fluid": "kubejs:drilling_fluid" },
+    "fluid": { "amount": 100, "fluid": "kubejs:drilling_fluid" },
     "output": [
       { "item": "kubejs:aluminite", "count": 6 }
     ],
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createoreexcavation:drilling",
     "drill": { "item": "createoreexcavation:netherite_drill" },
-    "fluid": { "amount": 250, "fluid": "kubejs:drilling_fluid" },
+    "fluid": { "amount": 500, "fluid": "kubejs:drilling_fluid" },
     "output": [
       { "item": "ad_astra:raw_desh", "count": 12 }
     ],
@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createoreexcavation:drilling",
     "drill": { "item": "createoreexcavation:netherite_drill" },
-    "fluid": { "amount": 50, "fluid": "kubejs:drilling_fluid" },
+    "fluid": { "amount": 100, "fluid": "kubejs:drilling_fluid" },
     "output": [
       { "item": "kubejs:industrial_iron_ingot", "count": 12 },
       { "item": "ad_astra:steel_nugget", "count": 4 }

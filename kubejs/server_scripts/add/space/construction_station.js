@@ -246,10 +246,10 @@ ServerEvents.recipes(event => {
       ConstructionStationItem('iceandfire:fire_dragon_blood', 8, "input"),
       ConstructionStationFluid("kubejs:covariant_heat", 64),
       ConstructionStationFluid("kubejs:gold", 810),
-      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.75),
-      ConstructionStationItemChance('iceandfire:dragonegg_green', 1, 0.75),
-      ConstructionStationItemChance('iceandfire:dragonegg_bronze', 1, 0.75),
-      ConstructionStationItemChance('iceandfire:dragonegg_gray', 1, 0.75)
+      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.375),
+      ConstructionStationItemChance('iceandfire:dragonegg_green', 1, 0.375),
+      ConstructionStationItemChance('iceandfire:dragonegg_bronze', 1, 0.375),
+      ConstructionStationItemChance('iceandfire:dragonegg_gray', 1, 0.375)
     ],
   }).id("dut_create:construction_station/fire_dragonegg")
   event.custom({
@@ -264,7 +264,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("kubejs:graphene_coil", 3, "input"),
       ConstructionStationFluid("kubejs:electro_hydro", 250),
       ConstructionStationFluid("kubejs:tin", 500),
-      ConstructionStationItem("kubejs:carbon_electrode", 36, "output")
+      ConstructionStationItem("kubejs:carbon_electrode", 48, "output")
     ],
   }).id("dut_create:construction_station/carbon_electrode")
   event.custom({
@@ -587,10 +587,10 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationItem("#forge:plates/aluminum", 32, "input"),
+      ConstructionStationItem("#forge:plates/aluminum", 16, "input"),
       ConstructionStationFluid("#forge:oxygen", 16000),
-      ConstructionStationFluid("kubejs:cryogen", 16000),
-      ConstructionStationItem("kubejs:gas_tank", 32, "output")
+      ConstructionStationFluid("kubejs:cryogen", 8000),
+      ConstructionStationItem("kubejs:gas_tank", 16, "output")
     ],
   }).id("dut_create:construction_station/gas_tank")
   event.custom({
@@ -603,31 +603,13 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationItem("createaddition:electric_motor", 4, "input"),
-      ConstructionStationItem("kubejs:differential", 12, "input"),
+      ConstructionStationItem("kubejs:differential", 4, "input"),
+      ConstructionStationItem("kubejs:productivity_module", 12, "input"),
       ConstructionStationItem("kubejs:cardan_joint", 12, "input"),
-      ConstructionStationItem("kubejs:rocket_electric_connector", 12, "input"),
-      ConstructionStationFluid("kubejs:slime_colloid", 500),
-      ConstructionStationItem("kubejs:rocket_gyro", 5, "output")
+      ConstructionStationFluid("kubejs:slime_colloid", 3000),
+      ConstructionStationItem("kubejs:rocket_gyro", 6, "output")
     ],
   }).id("dut_create:construction_station/rocket_gyro")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:construction_station",
-    "time": 180,
-    "error": true,
-    "priority": 1,
-    "requirements": [
-      ConstructionStationStructure,
-      ConstructionStationStress,
-      ConstructionStationEnergy(),
-      ConstructionStationItem("kubejs:rubber", 4, "input"),
-      ConstructionStationItem("#forge:plates/aluminum", 30, "input"),
-      ConstructionStationItem("createaddition:gold_rod", 20, "input"),
-      ConstructionStationFluid("kubejs:slime_colloid", 1000),
-      ConstructionStationItem("kubejs:rocket_electric_connector", 8, "output")
-    ],
-  }).id("dut_create:construction_station/rocket_electric_connector")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -656,7 +638,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("kubejs:empty_parts_box", 16, "input"),
       ConstructionStationItem("#forge:plates/tungsten", 16, "input"),
       ConstructionStationItem("#forge:plates/tin", 16, "input"),
-      ConstructionStationItem("kubejs:light_composite_plate", 16, "input"),
+      ConstructionStationItem("kubejs:fiber_fabric", 16, "input"),
       ConstructionStationItem("kubejs:parts_box", 24, "output")
     ],
   }).id("dut_create:construction_station/parts_box_tungsten")
@@ -670,7 +652,6 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationItem("kubejs:empty_parts_box", 16, "input"),
       ConstructionStationItem("kubejs:desh_parts_box", 16, "input"),
       ConstructionStationItem("kubejs:light_composite_plate", 16, "input"),
       ConstructionStationItem("kubejs:fiber_fabric", 16, "input"),

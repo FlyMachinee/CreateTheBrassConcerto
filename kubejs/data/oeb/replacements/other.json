@@ -1,0 +1,9 @@
+[
+ {
+   "matchBlock": [
+     "ad_astra:oxygen_distributor",
+     "create_connected:inventory_bridge"
+   ],
+   "resultBlock": "minecraft:air"
+ }
+]

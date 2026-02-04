@@ -219,8 +219,8 @@ ServerEvents.recipes(event => {
             "requirements": [
                 CondenserStructure,
                 CondenserDimension(dimension),
-                CondenserParticle1,
-                CondenserParticle2,
+                //CondenserParticle1,
+                //CondenserParticle2,
                 CondenserSound,
                 CondenserCryogen(cryogenAmount),
                 {

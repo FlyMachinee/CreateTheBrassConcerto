@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:red_mushroom_cap_piece" },
             [{ "item": "create:andesite_alloy" },{"item":"kubejs:industrial_iron_nugget"}]
         ],
-        "processingTime": 60,
+        "processingTime": 20,
         "results": [
             { "fluid": "kubejs:red_mushroom_spore", "amount": 50 }
         ]
@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:brown_mushroom_cap_piece" },
             [{ "item": "create:andesite_alloy" },{"item":"kubejs:industrial_iron_nugget"}]
         ],
-        "processingTime": 60,
+        "processingTime": 20,
         "results": [
             { "fluid": "kubejs:brown_mushroom_spore", "amount": 50 }
         ]
@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:red_mushroom_cap_piece" },
             { "item": "kubejs:aluminum_slag" }
         ],
-        "processingTime": 60,
+        "processingTime": 20,
         "results": [
             { "fluid": "kubejs:red_mushroom_spore", "amount": 250 }
         ]
@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
             { "item": "kubejs:brown_mushroom_cap_piece" },
             { "item": "kubejs:aluminum_slag" }
         ],
-        "processingTime": 60,
+        "processingTime": 20,
         "results": [
             { "fluid": "kubejs:brown_mushroom_spore", "amount": 250 }
         ]

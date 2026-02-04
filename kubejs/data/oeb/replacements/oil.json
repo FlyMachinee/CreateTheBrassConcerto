@@ -1,0 +1,9 @@
+[
+ {
+   "matchBlock": [
+     "ad_astra:oil",
+     "createloveandwar:crude_oil_block"
+   ],
+   "resultBlock": "createdieselgenerators:crude_oil"
+ }
+]

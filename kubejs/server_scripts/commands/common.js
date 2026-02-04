@@ -387,4 +387,107 @@ ServerEvents.commandRegistry(event => {
         )
 
     )
+    //setpos
+    event.dispatcher.register(event.commands.literal('setpos')
+        .then(event.commands.argument('pos', event.arguments.COLUMN_POS.create(event))
+            .executes(result => {
+                /**@type {Internal.ServerPlayer} */
+                let p = result.source.player
+                if (p == null) { return 0 }
+                orCreateData(p.persistentData, "rocketTargetPos", { x: 0, z: 0 })
+                let targetPos = event.arguments.COLUMN_POS.getResult(result, "pos")
+                let pdata = p.persistentData.rocketTargetPos
+                pdata.x = Math.floor(targetPos.x())
+                pdata.z = Math.floor(targetPos.z())
+                p.tell(Text.translate("kubejs.message.rocket_target_pos", pdata.x, pdata.z))
+                return 1
+            })
+        )
+
+    )
+    //spacestation
+    event.dispatcher.register(event.commands.literal('spacestation')
+        .requires(source => source.hasPermission(1))
+        .then(event.commands.argument('dimension', event.arguments.DIMENSION.create(event))
+            .then(event.commands.argument('pos', event.arguments.COLUMN_POS.create(event))
+                .executes(result => {
+                    /**@type {Internal.ServerPlayer} */
+                    let p = result.source.player
+                    if (p == null) { return 0 }
+                    let dimensionString = event.arguments.DIMENSION.getResult(result, "dimension").dimension.toString()
+                    if (!AllPlanet.some(i=>i==dimensionString)){
+                        return 0
+                    }
+                    let TargetDimension = DimensionToOrbit[dimensionString]
+                    let targetPos = event.arguments.COLUMN_POS.getResult(result, "pos")
+                    //目标维度的level
+
+                    let l = result.source.server.getLevel(TargetDimension)
+                    //区块坐标
+                    //let chunkPos0 = Math.floor(targetPos.x() / 16) - 1
+                    //let chunkPos1 = Math.floor(targetPos.z() / 16) - 1
+                    //区域对角
+                    let originPos0 = (Math.floor(targetPos.x() / 16) - 1) * 16
+                    let originPos1 = (Math.floor(targetPos.z() / 16) - 1) * 16
+                    let endPos0 = originPos0 + 48
+                    let endPos1 = originPos1 + 48
+                    //加载区块  
+                    //l.chunkSource.updateChunkForced(chunkPos, true)
+                    result.source.server.runCommandSilent(`/execute in ${TargetDimension} run forceload add ${originPos0} ${originPos1} ${endPos0} ${endPos1}`)
+                    //判断区域是否为空
+                    let allowToSet = true
+                    for (let i1 = originPos0; i1 < endPos0; i1++) {
+                        for (let i2 = 100; i2 < 116; i2++) {
+                            for (let i3 = originPos1; i3 < endPos1; i3++) {
+                                if (l.getBlock(i1, i2, i3).id !== "minecraft:air") {
+                                    allowToSet = false
+                                    break
+                                }
+                            }
+                        }
+                    }
+                    //放置结构
+                    if (allowToSet) {
+                        result.source.server.runCommandSilent(`/execute in ${TargetDimension} run place template ad_astra:space_station ${originPos0} 100 ${originPos1}`)
+                        p.setStatusMessage(Text.translate("kubejs.message.set_space_station"))
+                    } else {
+                        p.give("kubejs:emergency_industrial_platform_space")
+                        p.setStatusMessage(Text.translate("kubejs.message.set_space_station_fail"))
+                    }
+                    orCreateData(p.persistentData, "rocketTargetPos", { x: 0, z: 0 })
+                    let pdata = p.persistentData.rocketTargetPos
+                    pdata.x = originPos0 + 22
+                    pdata.z = originPos1 + 22
+
+                    result.source.server.runCommandSilent(`/execute in ${TargetDimension} run forceload remove ${originPos0} ${originPos1} ${endPos0} ${endPos1}`)
+                    return 1
+                })
+            )
+        )
+    )
+    //eval
+    /*
+    event.dispatcher.register(event.commands.literal('eval')
+        .then(event.commands.argument('code', event.arguments.GREEDY_STRING.create(event))
+            .executes(result => {
+                let Source = result.source
+                let e = Source.entity
+                if (e.type === "minecraft:player") {
+                    let p = result.source.player
+                    if (p.username !== "Slimeli_") {
+                        p.tell("只有作者可以使用此指令")
+                        return 0
+                    }
+                }
+                let Code = String(event.arguments.GREEDY_STRING.getResult(result, "code"))
+                try {
+                    eval('{'+Code+'}')
+                    return 1
+                } catch (a) {
+                    console.error(a)
+                }
+                return 0
+            })
+        )
+    )*/
 })

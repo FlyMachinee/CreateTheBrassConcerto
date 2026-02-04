@@ -40,6 +40,8 @@
     "kubejs.vein_id.moon_stone": "月壤",
     "kubejs.vein_id.burnable_ice": "可燃冰",
     "kubejs.vein_id.crude_oil": "原油",
+    "kubejs.jei_info.drilling_fluid.1": "你可以对桶装复合钻井液按下[R]来查询复合钻井液的配方\n",
+    "kubejs.jei_info.drilling_fluid.2": "你也可以对密封储罐按下[U]来查询复合钻井液的高级配方\n",
     "kubejs.jei_info.unknown_prototype.1": "就如同你被扭曲的飞船一般，任何不属于这个世界的东西，都会被世界强行转化（或者说，扭曲）为世界可以解析的形式\n",
     "kubejs.jei_info.unknown_prototype.2": "当一样事物所处的世界规律与本世界差距过大时，它就会被世界强行删除，以避免引发现实崩塌\n",
     "kubejs.jei_info.unknown_prototype.3": "而介于这两者之间的事物，世界就会将它们转化为未知原型——它们原本与本世界兼容尚可，但是本世界中又没有合适它们的转化对象，于是世界只好将它们转化为未知原型\n",

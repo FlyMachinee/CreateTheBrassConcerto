@@ -158,17 +158,46 @@ ServerEvents.recipes(event => {
     "machine": "dut:culture_bin",
     "time": 50,
     "requirements": [
-      CultureBinDimension("ad_astra:moon", "ad_astra:moon_orbit"),
-      CultureBinItemInput("minecraft:packed_mud", 4),
+      CultureBinItemInput("minecraft:charcoal", 4),
       CultureBinItemInput("#dut_create:moon_solid", 1),
       CultureBinFluid("kubejs:carbon_dioxide", "input", 2000),
       CultureBinFluid("kubejs:oxygen", "output", 2000),
       CultureBinItemInput("kubejs:peat_protozoa", 1),
-      CultureBinItemChance("minecraft:coal", 4, 1),
+      CultureBinItemChance("minecraft:coal", 8, 1),
       CultureBinItemChance("minecraft:mud", 4, 1),
       CultureBinItemChance("kubejs:peat_protozoa", 1, 1)
     ]
-  }).id("dut_create:culture_bin/peat/coal_moon")
+  }).id("dut_create:culture_bin/peat/coal_from_co2")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:culture_bin",
+    "time": 50,
+    "requirements": [
+      CultureBinDimension("ad_astra:moon"),
+      CultureBinItemInput("minecraft:charcoal", 4),
+      CultureBinFluid("kubejs:carbon_dioxide", "input", 2000),
+      CultureBinFluid("kubejs:oxygen", "output", 2000),
+      CultureBinItemInput("kubejs:peat_protozoa", 1),
+      CultureBinItemChance("minecraft:coal", 8, 1),
+      CultureBinItemChance("minecraft:mud", 4, 1),
+      CultureBinItemChance("kubejs:peat_protozoa", 1, 1)
+    ]
+  }).id("dut_create:culture_bin/peat/coal_from_co2_moon")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:culture_bin",
+    "time": 50,
+    "requirements": [
+      CultureBinDimension(["dut:slimeria","dut:slimeria_orbit"]),
+      CultureBinItemInput("minecraft:charcoal", 4),
+      CultureBinFluid("kubejs:carbon_dioxide", "input", 2000),
+      CultureBinFluid("kubejs:oxygen", "output", 2000),
+      CultureBinItemInput("kubejs:peat_protozoa", 1),
+      CultureBinItemChance("minecraft:coal", 8, 1),
+      CultureBinItemChance("minecraft:mud", 4, 1),
+      CultureBinItemChance("kubejs:peat_protozoa", 1, 1)
+    ]
+  }).id("dut_create:culture_bin/peat/coal_from_co2_slimeria")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",

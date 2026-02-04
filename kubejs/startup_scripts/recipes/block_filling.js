@@ -1,3 +1,7 @@
+global.blockFillingBasicRecipes = []
+global.blockFillingItemRecipes = []
+global.blockFillingExtraItemRecipes = []
+
 CreateEvents.spoutHandler((event) => {
     /**
     * @param {string} id 配方id
@@ -34,12 +38,19 @@ CreateEvents.spoutHandler((event) => {
                 return 0
             }
         )
+
+        global.blockFillingBasicRecipes.push({
+            input_fluid: fluidInput.id,
+            input_amount: fluidInput.amount,
+            input_blocks: blockID instanceof Array ? blockID : [blockID],
+            output_blocks: outputList,
+        })
     }
     /**
     * @param {string} id 配方id
     * @param {string} blockID 方块id,可以是列表和标签
     * @param {object} fluidInput 输入流体的种类及数量，一个形如{id:"xxx",amount:xxx}的对象
-    * @param {string} output 配方的产出，一个物品数据"{id:'xxx',Count:4b}"
+    * @param {Internal.ItemStack} output 配方的产出
     */
     //方块》物品
     function blockFillingItem(id, blockID, fluidInput, output) {
@@ -71,12 +82,24 @@ CreateEvents.spoutHandler((event) => {
                 return 0
             }
         )
+
+        // {id:'xxx',Count:4b}
+        // regex
+        let output_id = output.id
+        let output_count = output.count
+        global.blockFillingItemRecipes.push({
+            input_fluid: fluidInput.id,
+            input_amount: fluidInput.amount,
+            output_item: output_id,
+            output_amount: output_count,
+            medium_block: blockID
+        })
     }
     /**
     * @param {string} id 配方id
     * @param {string} blockID 方块id,可以是列表和标签
     * @param {object} fluidInput 输入流体的种类及数量，一个形如{id:"xxx",amount:xxx}的对象
-    * @param {string} output 配方的产出，一个物品数据"{id:'xxx',Count:4b}"
+   * @param {Internal.ItemStack} output 配方的产出
     */
     //方块额外产出物品
     function blockFillingExtraItem(id, blockID, fluidInput, output) {
@@ -107,6 +130,18 @@ CreateEvents.spoutHandler((event) => {
                 return 0
             }
         )
+
+        // {id:'xxx',Count:4b}
+        // regex
+        let output_id = output.id
+        let output_count = output.count
+        global.blockFillingExtraItemRecipes.push({
+            input_fluid: fluidInput.id,
+            input_amount: fluidInput.amount,
+            output_item: output_id,
+            output_amount: output_count,
+            medium_block: blockID
+        })
     }
     blockFillingBasic(
         "dut_create:brown_mushroom",

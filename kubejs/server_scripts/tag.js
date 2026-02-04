@@ -81,7 +81,13 @@ ServerEvents.tags('item', event => {
   event.add('dut_create:earth_globe', ["ad_astra:earth_globe", "supplementaries:globe", "supplementaries:globe_sepia"])
   //导航仪
   event.add('dut_create:navigate_data', [
-    'kubejs:navigate_data_earth', 'kubejs:navigate_data_earth_orbit', 'kubejs:navigate_data_moon', 'kubejs:navigate_data_moon_orbit', 'kubejs:navigate_data_mars', 'kubejs:navigate_data_mars_orbit', 'kubejs:navigate_data_venus', 'kubejs:navigate_data_venus_orbit', 'kubejs:navigate_data_mercury', 'kubejs:navigate_data_mercury_orbit', 'kubejs:navigate_data_glacio', 'kubejs:navigate_data_glacio_orbit', 'kubejs:navigate_data_slimeria', 'kubejs:navigate_data_slimeria_orbit'
+    'kubejs:navigate_data_earth','kubejs:navigate_data_earth_orbit',
+      'kubejs:navigate_data_moon', 'kubejs:navigate_data_moon_orbit', 
+      //'kubejs:navigate_data_mars', 'kubejs:navigate_data_mars_orbit', 
+      //'kubejs:navigate_data_venus', 'kubejs:navigate_data_venus_orbit', 
+      //'kubejs:navigate_data_mercury', 'kubejs:navigate_data_mercury_orbit', 
+      //'kubejs:navigate_data_glacio', 'kubejs:navigate_data_glacio_orbit', 
+      'kubejs:navigate_data_slimeria', 'kubejs:navigate_data_slimeria_orbit'
   ])
   event.add('dut_create:data_disk', ["kubejs:brass_hard_disk", "kubejs:aluminum_hard_disk", "kubejs:tin_hard_disk"])
   event.add('dut_create:no_enchantment', ["#dut_create:battery", "kubejs:carrier_rocket", "kubejs:scanner", "kubejs:space_elevator", "#dut_create:data_disk"])
@@ -194,6 +200,9 @@ ServerEvents.tags('block', event => {
   event.add("dut_create:drawers", [
     "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "fluiddrawerslegacy:fluiddrawer", "fluiddrawerslegacy:fluiddrawer_2", "fluiddrawerslegacy:fluiddrawer_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
   ])
+  event.add("dut_create:drawers1", [
+    "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
+  ])
   event.remove('ad_astra:destroyed_in_space', ["minecraft:mushroom_stem", "minecraft:red_mushroom_block", "minecraft:brown_mushroom_block"])
   event.add('create:non_movable', [
     'ad_astra:iron_pillar',
@@ -238,7 +247,7 @@ ServerEvents.tags('block', event => {
     'storagedrawers:framed_compacting_drawers_2', 'storagedrawers:framed_compacting_drawers_3', 'storagedrawers:framed_controller', 'storagedrawers:framed_trim', 'storagedrawers:framed_framed_controller_io', 'storagedrawers:framed_full_drawers_1', 'storagedrawers:framed_full_drawers_2', 'storagedrawers:framed_full_drawers_4',
   ])
   //扳手
-  event.add('create:wrench_pickup', ["#dut_create:drawers", "#dut_create:minecrafts", "#dut_create:supplemantaries", "enchantinginfuser:enchanting_infuser", "enchantinginfuser:advanced_enchanting_infuser", 'storagedrawers:controller', '#storagedrawers:trim', "ad_astra:desh_fluid_pipe", "ad_astra:fluid_pipe_duct", "ad_astra:cable_duct", "ad_astra:ostrum_fluid_pipe", "ad_astra:oxygen_sensor", "ad_astra:oxygen_distributor", "ad_astra:coal_generator", "ad_astra:desh_cable", "ad_astra:steel_cable", "ad_astra:cryo_freezer", "ad_astra:gravity_normalizer", "design_decor:iron_railing", "design_decor:zinc_railing", "design_decor:copper_railing", "design_decor:brass_railing", "design_decor:copper_lamp", "design_decor:brass_lamp", "design_decor:zinc_lamp", "design_decor:metal_support", "design_decor:diagonal_metal_support", "design_decor:stepped_lever", "design_decor:breaker_switch", "design_decor:copper_light", "design_decor:brass_light", "design_decor:zinc_light", "kubejs:condenser", "kubejs:hydropress", "kubejs:alloy_furnace", "kubejs:huge_crusher", "kubejs:shaft_furnace", "kubejs:infinity_fetching_pool", "kubejs:emergency_industrial_platform", "kubejs:culture_bin", "kubejs:carbon_electrode", "kubejs:electrolytic_cell", "kubejs:steam_generator", 'kubejs:battery_slot', "kubejs:assemblying_machine", "farmersdelight:basket", "create:schematicannon", "create:schematic_table", "create_things_and_misc:sprinkler", "create_things_and_misc:sprinkleron", "beyonddimensions:net_interface","storagedrawers:framed_trim","storagedrawers:framed_controller","storagedrawers:framed_controller_io"
+  event.add('create:wrench_pickup', ["#dut_create:drawers1", "#dut_create:minecrafts", "#dut_create:supplemantaries", "enchantinginfuser:enchanting_infuser", "enchantinginfuser:advanced_enchanting_infuser", 'storagedrawers:controller', '#storagedrawers:trim', "ad_astra:desh_fluid_pipe", "ad_astra:fluid_pipe_duct", "ad_astra:cable_duct", "ad_astra:ostrum_fluid_pipe", "ad_astra:oxygen_sensor", "ad_astra:oxygen_distributor", "ad_astra:coal_generator", "ad_astra:desh_cable", "ad_astra:steel_cable", "ad_astra:cryo_freezer", "ad_astra:gravity_normalizer", "design_decor:iron_railing", "design_decor:zinc_railing", "design_decor:copper_railing", "design_decor:brass_railing", "design_decor:copper_lamp", "design_decor:brass_lamp", "design_decor:zinc_lamp", "design_decor:metal_support", "design_decor:diagonal_metal_support", "design_decor:stepped_lever", "design_decor:breaker_switch", "design_decor:copper_light", "design_decor:brass_light", "design_decor:zinc_light", "kubejs:condenser", "kubejs:hydropress", "kubejs:alloy_furnace", "kubejs:huge_crusher", "kubejs:shaft_furnace", "kubejs:infinity_fetching_pool", "kubejs:emergency_industrial_platform", "kubejs:culture_bin", "kubejs:carbon_electrode", "kubejs:electrolytic_cell", "kubejs:steam_generator", 'kubejs:battery_slot', "kubejs:assemblying_machine", "farmersdelight:basket", "create:schematicannon", "create:schematic_table", "create_things_and_misc:sprinkler", "create_things_and_misc:sprinkleron", "beyonddimensions:net_interface","storagedrawers:framed_trim","storagedrawers:framed_controller","storagedrawers:framed_controller_io"
   ])
 
 })
@@ -383,7 +392,7 @@ ServerEvents.tags("item", e => {
 })
 //饰品
 ServerEvents.tags("item", event => {
-  event.add("curios:flight_ring", ['create_sa:creative_filling_tank'])
+  event.add("curios:belt", ['create_sa:creative_filling_tank'])
   event.add("curios:necklace", ["beyonddimensions:net_feeder_item"])
   event.add("curios:belt", ["beyonddimensions:net_feeder_item"])
   event.add("curios:hands", ["beyonddimensions:net_feeder_item"])

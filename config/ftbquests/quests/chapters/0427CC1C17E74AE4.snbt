@@ -779,7 +779,7 @@
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_470962C398A54CC1.title}"
 			x: 4.0d
-			y: 1.5d
+			y: 0.5d
 		}
 		{
 			disable_toast: true
@@ -1135,24 +1135,6 @@
 		}
 		{
 			disable_toast: true
-			icon: "artifacts:bunny_hoppers"
-			id: "3E8AEA60B39E665F"
-			rewards: [{
-				id: "379D3BD78487C87B"
-				item: "artifacts:bunny_hoppers"
-				type: "item"
-			}]
-			tasks: [{
-				id: "1AA9958822EFEBBF"
-				item: "kubejs:coin_emerald"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_3E8AEA60B39E665F.title}"
-			x: 4.0d
-			y: -2.5d
-		}
-		{
-			disable_toast: true
 			icon: "artifacts:kitty_slippers"
 			id: "05C0C8BCCC9AA1D1"
 			rewards: [{
@@ -1168,7 +1150,7 @@
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_05C0C8BCCC9AA1D1.title}"
 			x: 4.0d
-			y: -1.5d
+			y: -2.5d
 		}
 		{
 			disable_toast: true
@@ -1186,7 +1168,7 @@
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_3A233F7892B3DD89.title}"
 			x: 4.0d
-			y: -0.5d
+			y: -1.5d
 		}
 		{
 			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_31FD44B7E9FAB30E.desc_01}"]
@@ -1223,8 +1205,8 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_0AA33701C9B5ED0F.title}"
-			x: 6.0d
-			y: 2.5d
+			x: 4.0d
+			y: 1.5d
 		}
 		{
 			disable_toast: true
@@ -1242,7 +1224,7 @@
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_61B4B0A99554EFC2.title}"
 			x: 4.0d
-			y: 0.5d
+			y: -0.5d
 		}
 		{
 			disable_toast: true
@@ -1352,6 +1334,25 @@
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_64B641B66BC97259.title}"
 			x: 6.0d
 			y: -2.5d
+		}
+		{
+			disable_toast: true
+			icon: "minecraft:moss_block"
+			id: "2565ADC8A615E2CD"
+			rewards: [{
+				id: "1C9C34D934449B49"
+				item: "minecraft:moss_block"
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "78CA766ABCBF152C"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			title: "苔藓块"
+			x: -1.0d
+			y: -5.0d
 		}
 	]
 	title: "{ftbquests.chapter_0427CC1C17E74AE4.title}"

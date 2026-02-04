@@ -1,14 +1,17 @@
 // priority: 16384
 //Java
+let $String=Java.loadClass("java.lang.String")
 let $Object=Java.loadClass("java.lang.Object")
 //File
 let $RootPath = Java.loadClass("net.minecraftforge.fml.loading.FMLPaths")
+let $LevelResource = Java.loadClass("net.minecraft.world.level.storage.LevelResource")
 //
 let $File = Java.loadClass("java.io.File")
 let $FilePath = Java.loadClass("java.nio.file.Path")
 let $FilePaths = Java.loadClass("java.nio.file.Paths")
 let $Files = Java.loadClass("java.nio.file.Files")
 let $StandardCharsets = Java.loadClass("java.nio.charset.StandardCharsets")
+let $StandardOpenOption = Java.loadClass("java.nio.file.StandardOpenOption")
 //跨维度传送
 let $TravelToDimension = Java.loadClass("net.minecraftforge.event.entity.EntityTravelToDimensionEvent")
 //死亡

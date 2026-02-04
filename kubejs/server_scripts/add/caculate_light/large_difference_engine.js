@@ -5,29 +5,29 @@ ServerEvents.recipes(event => {
     "type": "custommachinery:structure",
     "pattern": [
       [
-        " KKK ",
-        "CKEKC",
-        "CKKKC",
-        "MUUUM",
+        " AAA ",
+        "CAEAC",
+        "CAAAC",
+        "TUUUT",
         "GUUUG",
         "GUUUG",
         "GUUUG",
-        "MUUUM",
-        "CKKKC",
-        "CKEKC",
-        " KKK "
+        "[UUU[",
+        "CAAAC",
+        "CAEAC",
+        " AAA "
       ],
       [
         "     ",
         "FCGCF",
         "LONOL",
-        "WUNUW",
-        "WUNUW",
-        "WUNUW",
-        "WUNUW",
-        "WXXXW",
-        "LBBBL",
-        "FCBCF",
+        "VUNUW",
+        "VUNUW",
+        "VUNUW",
+        "VUNUW",
+        "VXXXW",
+        "L]]]L",
+        "FC]CF",
         "  m  "
       ],
       [
@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
         " XXX ",
         " HQH ",
         "  H  ",
-        " BBB ",
+        " ]]] ",
         " CCC ",
         "     "
       ],
@@ -52,9 +52,9 @@ ServerEvents.recipes(event => {
         " Y Y ",
         " IQI ",
         "  I  ",
-        " BBB ",
-        " YAY ",
-        " BBB "
+        " ]]] ",
+        " Y^Y ",
+        " ]]] "
       ],
       [
         "     ",
@@ -65,9 +65,9 @@ ServerEvents.recipes(event => {
         " Y Y ",
         "  Q  ",
         "     ",
-        " BBB ",
-        " AYA ",
-        " BBB "
+        " ]]] ",
+        " ^Y^ ",
+        " ]]] "
       ],
       [
         "     ",
@@ -78,9 +78,9 @@ ServerEvents.recipes(event => {
         " Y Y ",
         " IQI ",
         "  I  ",
-        " BBB ",
-        " YAY ",
-        " BBB "
+        " ]]] ",
+        " Y^Y ",
+        " ]]] "
       ],
       [
         "     ",
@@ -110,27 +110,29 @@ ServerEvents.recipes(event => {
       ]
     ],
     "keys": {
-      "A": "create:shaft",
-      "H": "create:depot",
-      "K": "design_decor:brass_boiler_structure",
-      "U": "create:brass_casing",
-      "O": "design_decor:industrial_iron_boiler",
-      "M": "create_things_and_misc:brass_brick_stairs",
-      "I": "#dut_create:brass_funnel",
-      "L": "design_decor:brass_boiler",
-      "Z": "design_decor:industrial_gear",
-      "X": "create_connected:encased_chain_cogwheel",
-      "Q": "design_decor:ochrum_crushing_wheel",
-      "W": "design_decor:copper_railing",
+      "A": "design_decor:brass_boiler_structure",
       "E": "design_decor:brass_boiler_large",
+      "H": "create:depot",
+      "U": "create:brass_casing",
+      "X": "create_connected:encased_chain_cogwheel",
+      "[": "create_things_and_misc:brass_brick_stairs[facing=south,half=top]",
+      "T": "create_things_and_misc:brass_brick_stairs[facing=north,half=top]",
+      "O": "design_decor:industrial_iron_boiler",
+      "L": "design_decor:brass_boiler",
+      "N": "create:gearbox",
+      "W": "design_decor:copper_railing[east=true]",
+      "V": "design_decor:copper_railing[west=true]",
       "F": "create_things_and_misc:brass_brick_slab[type=bottom]",
       "G": "create_things_and_misc:brass_brick_slab[type=top]",
       "C": "create_things_and_misc:brass_bricks",
-      "N": "create:gearbox",
       "Y": "create:cogwheel",
-      "S": "design_decor:andesite_floodlight",
-      "B": "create:encased_chain_drive",
-      "R": "design_decor:industrial_gear_large"
+      "^": "create:shaft",
+      "S": "design_decor:andesite_floodlight[facing=up]",
+      "Q": "design_decor:ochrum_crushing_wheel",
+      "I": "#dut_create:brass_funnel",
+      "Z": "design_decor:industrial_gear",
+      "R": "design_decor:industrial_gear_large",
+      "]": "create:encased_chain_drive"
     },
     "jei": true
   }
@@ -180,7 +182,7 @@ ServerEvents.recipes(event => {
     "type": "custommachinery:custom_machine",
     "machine": "dut:large_difference_engine",
     "time": 20,
-    "priority": 10,
+    "priority": 12,
     "hidden": true,
     "error": true,
     "requirements": [
@@ -193,7 +195,7 @@ ServerEvents.recipes(event => {
     "type": "custommachinery:custom_machine",
     "machine": "dut:large_difference_engine",
     "time": 20,
-    "priority": 11,
+    "priority": 13,
     "error": true,
     "requirements": [
       LargeDifferenceEngineStructure,
@@ -206,7 +208,7 @@ ServerEvents.recipes(event => {
     "type": "custommachinery:custom_machine",
     "machine": "dut:large_difference_engine",
     "time": 8,
-    "priority": 10,
+    "priority": 11,
     "error": true,
     "requirements": [
       LargeDifferenceEngineStructure,
@@ -218,7 +220,7 @@ ServerEvents.recipes(event => {
     "type": "custommachinery:custom_machine",
     "machine": "dut:large_difference_engine",
     "time": 20,
-    "priority": 12,
+    "priority": 15,
     "error": true,
     "requirements": [
       LargeDifferenceEngineStructure,
@@ -231,14 +233,14 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:large_difference_engine",
-    "time": 8,
+    "time": 20,
     "priority": 16,
     "error": true,
     "requirements": [
       LargeDifferenceEngineStructure,
       LargeDifferenceEngineStress,
       LargeDifferenceEngineFluidPerTick("kubejs:pressurized_steam", "input", 10),
-      LargeDifferenceEngineFluidPerTick("kubejs:gibibyte", "output", 1)
+      LargeDifferenceEngineFluidPerTick("kubejs:gibibyte", "output", 5)
     ],
   }).id("dut_create:large_difference_engine/steam1")
   event.custom({

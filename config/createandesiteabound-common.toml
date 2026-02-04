@@ -1,0 +1,43 @@
+
+#Recipe Time Normalization
+[normalization]
+	#Set the Deployer’s full-speed processing time to 5 ticks.
+	deployer = true
+	#Set the Crushing Wheel’s full-speed processing time equals to recipe time and default value to 30 ticks.
+	crushing_wheel = true
+	#Set the Item Drain's rolling time to 10 ticks and recipe time to 10 ticks.
+	item_drain = true
+	#Set the Millstone's full-speed processing time equals to recipe time.
+	millstone = true
+	#Set the Mechanical Mixer's default full-speed processing time to 15 ticks.
+	mixer = true
+	#Set the Mechanical Press's full-speed processing time to 10 ticks.
+	press = true
+	#Set the Mechanical Saw's full-speed processing time to 10 ticks each bulk.
+	saw = true
+	#Set the Spout's processing time to 20 ticks.
+	spout = true
+	#Set the Chute's default transport time to 5 ticks.
+	chute = true
+	#Multiply the fluid network transfer speed by 8.
+	pump = true
+
+#Behaviour Tweaks
+[tweaks]
+	#Allows funnels to extract items positioned exactly at the center of a belt.
+	#Previously, funnels could only extract items past the center.
+	#When a opposing funnel blocks items at the center, all side-facing belt funnels stop extracting, which is unintuitive.
+	belt_funnel_detection_tweak = true
+	#Set the spout's fluid capacity to 2000 mB.
+	spout_double_capacity = true
+	#Prevent Diagonal Chutes from interacting with containers below.
+	#Because visually, Diagonal Chutes have no opening at the bottom.
+	no_chute_leaking = true
+	#Allow all players flying.
+	always_allow_flying = true
+	#Allow rotation for blocks without a custom rotate implementation.
+	#Many mod authors do not override rotate and mirror when adding directional blocks.
+	#As a result, vanilla structure block placement and Create schematic printing are unable to correctly rotate these blocks.
+	#Enabling this feature automatically detects common facing properties and applies rotation/mirror.
+	heuristic_rotation = true
+

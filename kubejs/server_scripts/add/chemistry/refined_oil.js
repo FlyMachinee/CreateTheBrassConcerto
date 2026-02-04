@@ -16,25 +16,66 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 250, "fluid": "kubejs:caustic_soda"}],
+        { "amount": 125, "fluid": "kubejs:caustic_soda"}],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 50, "fluid": "kubejs:nitric_acid"}],
+        { "amount": 25, "fluid": "kubejs:nitric_acid"}],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 250, "fluid": "kubejs:carbon_dioxide"}],
+        { "amount": 125, "fluid": "kubejs:carbon_dioxide"}],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 100, "fluid": "create_enchantment_industry:experience"}],
+        { "amount": 50, "fluid": "create_enchantment_industry:experience"}],
+        "results": [{ "item": "kubejs:incomplete_fluid" }]
+      },
+      {
+        "type": "vintageimprovements:vacuumizing",
+        "ingredients": [{ "item": "kubejs:incomplete_fluid" }],
+        "results": [{ "item": "kubejs:incomplete_fluid" }], 
+        "processingTime": 10
+      }
+    ],
+    "transitionalItem": { "item": "kubejs:incomplete_fluid" }
+  }).id("dut_create:drilling_fluid")
+  event.custom({
+    "type": "create:sequenced_assembly",
+    "ingredient": { "item": "createdieselgenerators:canister" },
+    "results": [
+      Item.of('createdieselgenerators:canister', '{BlockEntityTag:{Tanks:[{TankContent:{Amount:16000,FluidName:"kubejs:drilling_fluid"}}]}}')
+    ],
+    "loops": 1,
+    "sequence": [
+      {
+        "type": "create:filling",
+        "ingredients": [{ "item": "kubejs:incomplete_fluid" },
+        { "amount": 1000, "fluid": "kubejs:caustic_soda"}],
+        "results": [{ "item": "kubejs:incomplete_fluid" }]
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [{ "item": "kubejs:incomplete_fluid" },
+        { "amount": 1000, "fluid": "kubejs:caustic_soda"}],
+        "results": [{ "item": "kubejs:incomplete_fluid" }]
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [{ "item": "kubejs:incomplete_fluid" },
+        { "amount": 250, "fluid": "kubejs:nitric_acid"}],
+        "results": [{ "item": "kubejs:incomplete_fluid" }]
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [{ "item": "kubejs:incomplete_fluid" },
+        { "amount": 750, "fluid": "kubejs:brown_mushroom_spore"}],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
@@ -45,7 +86,7 @@ ServerEvents.recipes(event => {
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_fluid" }
-  }).id("dut_create:drilling_fluid")
+  }).id("dut_create:advanced_drilling_fluid")
   //精炼石油分馏
   event.custom({
     "type": "createdieselgenerators:distillation",

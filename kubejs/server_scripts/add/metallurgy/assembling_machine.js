@@ -736,13 +736,12 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:light_composite_plate", 6, "input"),
-      AssemblingMachineItem("kubejs:gas_tank", 18, "input"),
-      AssemblingMachineItem("#forge:plates/aluminum", 18, "input"),
-      AssemblingMachineFluid("kubejs:natural_gas", 13500),
-      AssemblingMachineItem("kubejs:fuel_tank", 6, "output")
+      AssemblingMachineItem("kubejs:gas_tank", 4, "input"),
+      AssemblingMachineItem("kubejs:carborundum", 12, "input"),
+      AssemblingMachineFluid("#forge:hydrogen", 12000, "input"),
+      AssemblingMachineItem("kubejs:fuel_tank", 8, "output")
     ],
-  }).id("dut_create:assembling_machine/fuel_tank/gas")
+  }).id("dut_create:assembling_machine/fuel_tank/hydrogen")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -752,29 +751,27 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:light_composite_plate", 8, "input"),
-      AssemblingMachineItem("kubejs:gas_tank", 24, "input"),
-      AssemblingMachineItem("#forge:plates/aluminum", 24, "input"),
-      AssemblingMachineFluid("#dut_create:carrier_rocket_fuel", 12000),
-      AssemblingMachineItem("kubejs:fuel_tank", 8, "output")
+      AssemblingMachineItem("kubejs:gas_tank", 8, "input"),
+      AssemblingMachineItem("#forge:plates/aluminum", 8, "input"),
+      AssemblingMachineFluid("kubejs:natural_gas", 8000),
+      AssemblingMachineItem("kubejs:fuel_tank", 16, "output")
     ],
-  }).id("dut_create:assembling_machine/fuel_tank/fuel")
+  }).id("dut_create:assembling_machine/fuel_tank/gas")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
-    "time": 40,
+    "time": 60,
     "error": true,
     "priority": 3,
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:light_composite_plate", 16, "input"),
-      AssemblingMachineItem("kubejs:gas_tank", 16, "input"),
-      AssemblingMachineItem("kubejs:carborundum", 16, "input"),
-      AssemblingMachineFluid("#forge:hydrogen", 16000, "input"),
-      AssemblingMachineItem("kubejs:fuel_tank", 16, "output")
+      AssemblingMachineItem("ad_astra:steel_plate", 12, "input"),
+      AssemblingMachineItem("kubejs:fiber_fabric", 8, "input"),
+      AssemblingMachineFluid("kubejs:ammonia", 16000),
+      AssemblingMachineItem("kubejs:fuel_tank", 3, "output")
     ],
-  }).id("dut_create:assembling_machine/fuel_tank/hydrogen")
+  }).id("dut_create:assembling_machine/fuel_tank/ammonia")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -935,22 +932,6 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
-    "time": 60,
-    "error": true,
-    "priority": 1,
-    "requirements": [
-      AssemblingMachineStructure,
-      AssemblingMachineEnergy(),
-      AssemblingMachineItem("ad_astra:steel_plate", 12, "input"),
-      AssemblingMachineItem("kubejs:fiber_fabric", 8, "input"),
-      AssemblingMachineItem("createdieselgenerators:oil_barrel", 1, "input"),
-      AssemblingMachineFluid("kubejs:ammonia", 16000),
-      AssemblingMachineItem("ad_astra:steel_tank", 2, "output")
-    ],
-  }).id("dut_create:assembling_machine/steel_tank")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:assembling_machine",
     "time": 20,
     "error": true,
     "priority": 1,
@@ -1051,36 +1032,6 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("create:empty_blaze_burner", 16, "output")
     ],
   }).id("dut_create:assembling_machine/empty_blaze_burner")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:assembling_machine",
-    "time": 20,
-    "error": true,
-    "priority": 1,
-    "requirements": [
-      AssemblingMachineStructure,
-      AssemblingMachineEnergy(),
-      AssemblingMachineItem("#forge:ingots/steel", 1, "input"),
-      AssemblingMachineItem("#forge:plates/steel", 1, "input"),
-      AssemblingMachineFluid("kubejs:cryogen", 500),
-      AssemblingMachineItem("ad_astra:gas_tank", 1, "output")
-    ],
-  }).id("dut_create:assembling_machine/gas_tank")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:assembling_machine",
-    "time": 20,
-    "error": true,
-    "priority": 1,
-    "requirements": [
-      AssemblingMachineStructure,
-      AssemblingMachineEnergy(),
-      AssemblingMachineItem("#forge:storage_blocks/steel", 1, "input"),
-      AssemblingMachineItem("#forge:plates/steel", 1, "input"),
-      AssemblingMachineFluid("kubejs:cryogen", 500),
-      AssemblingMachineItem("ad_astra:large_gas_tank", 1, "output")
-    ],
-  }).id("dut_create:assembling_machine/large_gas_tank")
   //硬币处理！
   function CoinMix(coin1, coin2) {
     event.custom({

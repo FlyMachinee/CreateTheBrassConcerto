@@ -2,6 +2,7 @@ NetworkEvents.dataReceived("key.kubejs.freecam", event => {
     /**@type {Internal.ServerPlayer} */
     let p = event.player
     if (p.persistentData.needRespawn != false) { return }
+    if (p.vehicle!=null){return}
     orCreateData(p.persistentData, "teleport", false)
     orCreateData(p.persistentData.teleport, "freecam", false)
 

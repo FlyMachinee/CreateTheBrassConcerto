@@ -169,7 +169,6 @@ ServerEvents.recipes(event => {
     fluid("create:mechanical_pump", 4)
     fluid("create:smart_fluid_pipe", 4)
     fluid("create_connected:fluid_vessel", 8)
-    fluid("create:fluid_valve", 8)
     fluid("create:hose_pulley", 8)
     fluid("create:item_drain", 8)
     fluid("create:spout", 8)

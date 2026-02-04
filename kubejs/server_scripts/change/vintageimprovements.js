@@ -15,6 +15,7 @@ ServerEvents.recipes(event => {
   event.remove({ type: "vintageimprovements:hammering" })
   event.remove({ type: "vintageimprovements:auto_smithing" })
   event.remove({ type: "vintageimprovements:auto_upgrade" })
+  event.remove({ type: "vintageimprovements:coiling" })
   event.remove({ id: "vintageimprovements:craft/helve_hammer_slot_cover" })
   event.remove({ id: "vintageimprovements:mechanical_crafting/helve_hammer" })
   event.remove({ id: "vintageimprovements:pressing/andesite_alloy" })
@@ -29,19 +30,17 @@ ServerEvents.recipes(event => {
   event.remove({ id: "vintageimprovements:pressing/refined_radiance" })
   event.remove({ id: "vintageimprovements:rolling/refined_radiance" })
   event.remove({ id: "vintageimprovements:rolling/refined_radiance_plate" })
+  event.remove({ id: "vintageimprovements:rolling/electrum_ingot" })
+  event.remove({ id: "vintageimprovements:rolling/electrum_plate" })
   function removeMaterial(material) {
     event.remove({ id: "vintageimprovements:pressing/" + material + "_ingot" })
     event.remove({ id: "vintageimprovements:rolling/" + material + "_ingot" })
     event.remove({ id: "vintageimprovements:rolling/" + material + "_plate" })
-    event.remove({ id: "vintageimprovements:coiling/" + material + "_rod" })
-    event.remove({ id: "vintageimprovements:coiling/" + material + "_wire" })
   }
   function removeMaterial1(material) {
     event.remove({ id: "vintageimprovements:pressing/" + material })
     event.remove({ id: "vintageimprovements:rolling/" + material })
     event.remove({ id: "vintageimprovements:rolling/" + material + "_plate" })
-    event.remove({ id: "vintageimprovements:coiling/" + material + "_rod" })
-    event.remove({ id: "vintageimprovements:coiling/" + material + "_wire" })
   }
   removeMaterial("vanadium")
   removeMaterial("amethyst_bronze")
@@ -74,19 +73,19 @@ ServerEvents.recipes(event => {
   removeMaterial("refined_obsidian")
   removeMaterial("invar")
   removeMaterial("blaze")
-  function Coil(input3,output3,input4,output4,time) {
+  Coil('ad_astra:iron_rod', 'vintageimprovements:iron_spring', 60)
+  Coil('createaddition:iron_wire', 'vintageimprovements:small_iron_spring', 30)
+  Coil('ad_astra:steel_rod', 'vintageimprovements:steel_spring', 60)
+  Coil('vintageimprovements:steel_wire', 'vintageimprovements:small_steel_spring', 30)
+  Coil('createaddition:brass_rod', 'vintageimprovements:brass_spring', 60)
+  Coil('vintageimprovements:brass_wire', 'vintageimprovements:small_brass_spring', 30)
+  function Coil(input, output, time) {
     event.custom({
       "type": "vintageimprovements:coiling",
       "processingTime": time,
-      "input": { "item": input3 },
-      "result": { "item": output3 }
-    }).id("dut_create:coiling/"+input3.split(":")[1])
-    event.custom({
-      "type": "vintageimprovements:coiling",
-      "processingTime": time,
-      "input": { "item": input4 },
-      "result": { "item": output4 }
-    }).id("dut_create:coiling/"+input3.split(":")[1])
+      "ingredients": [{ "item": input }],
+      "results": [{ "item": output }]
+    }).id("dut_create:coiling/" + input.split(":")[1])
   }
   //event.remove({id:"vintageimprovements:pressing"})
   event.remove({ output: "minecraft:netherite_upgrade_smithing_template", not: { mod: "kubejs" } })

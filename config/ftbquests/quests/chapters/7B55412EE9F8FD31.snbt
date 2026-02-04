@@ -192,6 +192,11 @@
 			description: ["{ftbquests.chapter_7B55412EE9F8FD31.quest_1C5B7F59B5EFF434.desc_01}"]
 			icon: "minecraft:brown_mushroom"
 			id: "1C5B7F59B5EFF434"
+			rewards: [{
+				id: "6622D77FE2473280"
+				item: "minecraft:brown_mushroom"
+				type: "item"
+			}]
 			tasks: [{
 				id: "125F6BA69EBD911A"
 				item: "minecraft:packed_mud"
@@ -204,6 +209,11 @@
 			description: ["{ftbquests.chapter_7B55412EE9F8FD31.quest_12C35CCCC8D029D5.desc_01}"]
 			icon: "minecraft:red_mushroom"
 			id: "12C35CCCC8D029D5"
+			rewards: [{
+				id: "5DB56F463A56CBE5"
+				item: "minecraft:red_mushroom"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6013F1F253F15376"
 				item: "minecraft:moss_block"

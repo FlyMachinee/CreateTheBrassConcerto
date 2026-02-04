@@ -1,0 +1,18 @@
+{
+  "kubejs.jeiaddition.category.block_filling_extra_item.title": "Block Filling (Extra Yield)",
+  "kubejs.jeiaddition.category.block_filling_item.title": "Block Filling (Yield)",
+  "kubejs.jeiaddition.category.block_filling_basic.title": "Block Filling (Transform)",
+  "kubejs.jeiaddition.category.block_crafting.title": "Block Crafting",
+  "kubejs.jeiaddition.category.block_filling_conway.title": "Block Filling (Conway's Game of Life)",
+  "kubejs.jeiaddition.block_crafting.desc1": "to perform Block Crafting",
+  "kubejs.jeiaddition.block_crafting.desc2": "Check Ponder for detail",
+  "kubejs.jeiaddition.block_filling_conway.desc1": "Ideal Ratio: %s",
+  "kubejs.jeiaddition.consumed_medium": "Medium Block (Consumed)",
+  "kubejs.jeiaddition.not_consumed_medium": "Medium Block (No consumption)",
+  "kubejs.jeiaddition.transform_block": "Block to transform",
+  "kubejs.jeiaddition.probability": "%s%% Chance",
+  "kubejs.jeiaddition.empty_depot_below": "Depot below must be empty",
+  "kubejs.jeiaddition.use": "Use",
+  "kubejs.jeiaddition.right_click": "Right-Click",
+  "kubejs.jeiaddition.reset": "Reset"
+}

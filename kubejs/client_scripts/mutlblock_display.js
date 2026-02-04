@@ -1,6 +1,6 @@
 const MultiBlockRecipe = {
 	'kubejs:blueprint_builder': ['dut_create:blueprint_builder/alloy_furnace'],
-	'kubejs:trading_station': ['dut_create:trading_station/coin/in/coin_copper'],
+	'kubejs:trading_station': ['dut_create:trading_station/fluid'],
 	"kubejs:large_difference_engine": ['dut_create:large_difference_engine/common'],
 	"kubejs:electron_tube_computer": ['dut_create:electron_tube_computer/common'],
 	"kubejs:space_elevator_controller": ["dut_create:space_elevator_controller/empty"],
@@ -19,8 +19,8 @@ const MultiBlockRecipe = {
 	"kubejs:assembling_machine": ["dut_create:assembling_machine/circuit_board"],
 	"kubejs:construction_station": ["dut_create:construction_station/lime_circuit_board"]
 }
-const $CustomMachineRenderer = Java.loadClass('fr.frinn.custommachinery.client.render.CustomMachineRenderer')
-const $GogglesItem = Java.loadClass('com.simibubi.create.content.equipment.goggles.GogglesItem')
+let $CustomMachineRenderer = Java.loadClass('fr.frinn.custommachinery.client.render.CustomMachineRenderer')
+let $GogglesItem = Java.loadClass('com.simibubi.create.content.equipment.goggles.GogglesItem')
 PlayerEvents.tick(event => {
 	let Item = event.player.offHandItem
 	if (Item == null) { return }
@@ -30,16 +30,30 @@ PlayerEvents.tick(event => {
 		$CustomMachineRenderer.addBlocksRenderById(MultiBlockRecipe[Item.id][0], 1000, false)
 	}
 })
-PlayerEvents.tick(event => {
-	if (!$GogglesItem.isWearingGoggles(event.player)) { return }
-	let viewBlock = event.player.rayTrace(event.player.getAttributeValue("forge:block_reach") + 1, true).block
-	if (viewBlock == null) { return }
-	if (!viewBlock.hasTag('dut_create:multiblock_display')) { return }
-	if (!Client.isAltDown()) {
-		if (event.level.time % 10 != 0) {
-			event.player.setStatusMessage(Text.translate("kubejs.message.multblock_display"))
+{
+	let i = false
+	let i1 = 0
+	PlayerEvents.tick(event => {
+		if (i1 > 0) { i1 -= 1 }
+		if (!$GogglesItem.isWearingGoggles(event.player)) { return }
+		let viewBlock = event.player.rayTrace(event.player.getAttributeValue("forge:block_reach") + 1, true).block
+		if (viewBlock == null) { return }
+		if (!viewBlock.hasTag('dut_create:multiblock_display')) { return }
+		if (!Client.isAltDown()) {
+			i = false
+			if (event.level.time % 10 === 0) {
+				event.player.setStatusMessage(Text.translate("kubejs.message.multiblock_display"))
+			}
+			return
 		}
-		return
-	}
-	$CustomMachineRenderer.addBlocksRenderById(MultiBlockRecipe[viewBlock.id][0], 24000, false)
-})
+		if (i == false) {
+			event.player.sendData("multiblockDisplay", { id: MultiBlockRecipe[viewBlock.id][0], pos: { x: viewBlock.x, y: viewBlock.y, z: viewBlock.z } })
+			i = true
+		}
+		if (i1 > 0) {
+			return
+		}
+		$CustomMachineRenderer.addBlocksRenderById(MultiBlockRecipe[viewBlock.id][0], 24000, false)
+		i1 = 360
+	})
+}

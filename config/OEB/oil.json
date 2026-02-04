@@ -1,9 +1,0 @@
-[
- {
-   "match": [
-     "ad_astra:oil",
-     "createloveandwar:crude_oil_block"
-   ],
-   "result": "createdieselgenerators:crude_oil"
- }
-]

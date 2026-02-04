@@ -108,6 +108,11 @@
 				"{image:kubejs:textures/ftb/manhattan.png width:180 height:120 align:center}"
 			]
 			id: "5EAEBB91ED71BE7B"
+			rewards: [{
+				id: "4C3B9F880FE7E32A"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
 			tasks: [{
 				id: "58FAD2DB01763FE8"
 				title: "{ftbquests.chapter_5DF8A114869675D1.quest_5EAEBB91ED71BE7B.task_58FAD2DB01763FE8.title}"
@@ -172,6 +177,11 @@
 				"{ftbquests.chapter_5DF8A114869675D1.quest_4EA2D93A28690628.desc_03}"
 			]
 			id: "4EA2D93A28690628"
+			rewards: [{
+				id: "43ACB2EE54C1D8B6"
+				item: "kubejs:coin_diamond"
+				type: "item"
+			}]
 			tasks: [{
 				id: "3D9EC6BC6D2D9758"
 				item: "create:schedule"
@@ -186,6 +196,11 @@
 			description: ["{ftbquests.chapter_5DF8A114869675D1.quest_7B5DC9F1259CF3C3.desc_01}"]
 			icon: "minecraft:chest_minecart"
 			id: "7B5DC9F1259CF3C3"
+			rewards: [{
+				id: "0DDD35DA685AB344"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
 			tasks: [{
 				advancement: "create:train"
 				criterion: ""

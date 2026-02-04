@@ -59,7 +59,7 @@ ItemEvents.rightClicked("kubejs:unknown_prototype", event => {
   event.player.swing()
   event.level.playSound(null, event.player.x, event.player.y, event.player.z, "block.fire.extinguish", "players", 0.4, 1)
   if (randomOne(0, 9) != 0) {
-    event.level.runCommandSilent(`/execute as ${event.player.getUsername()} at @s run function dut:unknown_prototype`)
+    event.server.runCommandSilent(`/execute as ${event.player.getUsername()} at @s run function dut:unknown_prototype`)
     event.player.addItemCooldown("kubejs:unknown_prototype", 60)
     event.item.shrink(1)
   }

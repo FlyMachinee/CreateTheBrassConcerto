@@ -1,6 +1,6 @@
 {
   "common": {
-    "Replace_Existed_Block": false,
+    "Replace_Existed_Block": true,
     "Default_Rules": {}
   }
 }

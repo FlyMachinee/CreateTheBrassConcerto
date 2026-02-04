@@ -357,7 +357,7 @@
 	#.
 	#The amount of ticks a funnel waits between item transferrals, when it is not re-activated by redstone.
 	#Range: > 1
-	defaultExtractionTimer = 8
+	defaultExtractionTimer = 4
 	#.
 	#The amount of ticks a portable storage interface waits for transfers until letting contraptions move along.
 	#Range: > 1
@@ -381,7 +381,7 @@
 	#.
 	#The amount of ticks a brass tunnel waits between distributions.
 	#Range: 1 ~ 10
-	brassTunnelTimer = 10
+	brassTunnelTimer = 1
 	#.
 	#Whether hostile mobs walking near a seat will start riding it.
 	seatHostileMobs = true

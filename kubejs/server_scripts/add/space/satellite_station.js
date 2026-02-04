@@ -25,9 +25,9 @@ ServerEvents.recipes(event => {
       ],
       [
         "EDDDE",
-        "G   G",
-        "G   G",
-        "G   G",
+        "G   H",
+        "G   H",
+        "G   H",
         "EDDDE",
         "     ",
         " BPB ",
@@ -37,7 +37,8 @@ ServerEvents.recipes(event => {
     "keys": {
       "C": "ad_astra:steel_pillar",
       "N": "design_decor:cast_iron_boiler_structure",
-      "G": "design_decor:iron_railing",
+      "G": "design_decor:iron_railing[east=true]",
+      "H": "design_decor:iron_railing[west=true]",
       "M": "design_decor:cast_iron_boiler",
       "B": "create:industrial_iron_block",
       "L": "design_decor:industrial_iron_boiler",

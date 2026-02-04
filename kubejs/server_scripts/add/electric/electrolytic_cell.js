@@ -38,6 +38,109 @@ ServerEvents.recipes(event => {
         "type": "custommachinery:structure",
         "pattern": [
             [
+                "AACCCAA",
+                " AEEEA ",
+                " AEEEA ",
+                " AEEEA ",
+                "AAAAAAA",
+                " A   A "
+            ],
+            [
+                "BD   DB",
+                " FHHHR ",
+                " FHQHR ",
+                " FHHHR ",
+                "lACCCAl",
+                " A   A "
+            ],
+            [
+                "       ",
+                "   K   ",
+                "S KUK S",
+                "   J   ",
+                " D   D ",
+                "       "
+            ],
+            [
+                "       ",
+                "   k   ",
+                "WJAYAJW",
+                "   K   ",
+                "       ",
+                "       "
+            ],
+            [
+                "       ",
+                "       ",
+                "WJAYAJW",
+                "       ",
+                "       ",
+                "       "
+            ],
+            [
+                "       ",
+                "   K   ",
+                "W AYA W",
+                "  L L  ",
+                "       ",
+                "       "
+            ],
+            [
+                "       ",
+                "       ",
+                "  amb  ",
+                "  N N  ",
+                "       ",
+                "       "
+            ],
+            [
+                "       ",
+                "       ",
+                "G  U  G",
+                "       ",
+                "       ",
+                "       "
+            ],
+            [
+                "       ",
+                "       ",
+                "G  D  G",
+                "       ",
+                "       ",
+                "       "
+            ]
+        ],
+        "keys":
+        {
+            "G": "createaddition:modular_accumulator",
+            "H": "design_decor:brass_boiler_structure",
+            "Q": "design_decor:brass_boiler_large",
+            "U": "design_decor:brass_boiler",
+            "Y": "design_decor:copper_boiler",
+            "C": "create:item_drain",
+            "K": "design_decor:diagonal_metal_support",
+            "F": "create:mechanical_pump[facing=west]",
+            "R": "create:mechanical_pump[facing=east]",
+            "L": "create:mechanical_pump[facing=up]",
+            "A": "create:copper_casing",
+            "k": "design_decor:stepped_lever",
+            "W": "create:fluid_tank",
+            "B": "design_decor:copper_railing[south=true]",
+            "l": "design_decor:copper_railing[north=true]",
+            "J": "create:smart_fluid_pipe",
+            "E": "create:railway_casing",
+            "S": "create_things_and_misc:brass_brick_slab[type=top]",
+            "b": "create:fluid_pipe[south=true,west=true]",
+            "N": "create:fluid_pipe[north=true,down=true]",
+            "a": "create:fluid_pipe[south=true,east=true]",
+            "D": "design_decor:andesite_floodlight[facing=up]"
+        }
+    }
+    const ElectrolyzeStructure1 =
+    {
+        "type": "custommachinery:structure",
+        "pattern": [
+            [
                 "AABBBAA",
                 " AEEEA ",
                 " AEEEA ",
@@ -88,7 +191,7 @@ ServerEvents.recipes(event => {
             [
                 "       ",
                 "       ",
-                "L HmH L",
+                "  HmH  ",
                 "  H H  ",
                 "       ",
                 "       "
@@ -115,7 +218,6 @@ ServerEvents.recipes(event => {
             "U": "create:smart_fluid_pipe",
             "W": "create:fluid_tank",
             "A": "create:copper_casing",
-            "L": "kubejs:carbon_electrode",
             "C": "design_decor:copper_railing",
             "G": "design_decor:brass_boiler_structure",
             "H": "create:fluid_pipe",
@@ -150,6 +252,21 @@ ServerEvents.recipes(event => {
         "minecraft:air",
         "minecraft:void_air",
         "minecraft:cave_air",
+        "minecraft:lava[level=1]",
+        "minecraft:lava[level=2]",
+        "minecraft:lava[level=3]",
+        "minecraft:lava[level=4]",
+        "minecraft:lava[level=5]",
+        "minecraft:lava[level=6]",
+        "minecraft:lava[level=7]",
+        "minecraft:lava[level=8]",
+        "minecraft:lava[level=9]",
+        "minecraft:lava[level=10]",
+        "minecraft:lava[level=11]",
+        "minecraft:lava[level=12]",
+        "minecraft:lava[level=13]",
+        "minecraft:lava[level=14]",
+        "minecraft:lava[level=15]",
         "kubejs:oxygen[level=1]",
         "kubejs:oxygen[level=2]",
         "kubejs:oxygen[level=3]",
@@ -277,29 +394,51 @@ ServerEvents.recipes(event => {
         "whitelist": true
     }
     function ElectrolyzeElectrodePositive(chance) {
+        if (chance === 0) {
+            return ({
+                "type": "custommachinery:block",
+                "mode": "input",
+                "action": "check",
+                "amount": 1,
+                "pos": [-3, 0, 0, -3, 0, 0],
+                "filter": ["kubejs:carbon_electrode"],
+                "whitelist": true
+            })
+        }
         return ({
             "type": "custommachinery:block",
-            "mode": "output",
+            "mode": "input",
             "action": "replace_destroy",
             "amount": 1,
             "pos": [-3, 0, 0, -3, 0, 0],
             "filter": ["kubejs:carbon_electrode"],
             "whitelist": true,
             "block": "minecraft:air",
-            "chance": 0.01 * chance
+            "chance": 0.05 * chance
         })
     }
     function ElectrolyzeElectrodeNegative(chance) {
+        if (chance === 0) {
+            return ({
+                "type": "custommachinery:block",
+                "mode": "input",
+                "action": "check",
+                "amount": 1,
+                "pos": [3, 0, 0, 3, 0, 0],
+                "filter": ["kubejs:carbon_electrode"],
+                "whitelist": true
+            })
+        }
         return ({
             "type": "custommachinery:block",
-            "mode": "output",
+            "mode": "input",
             "action": "replace_destroy",
             "amount": 1,
             "pos": [3, 0, 0, 3, 0, 0],
             "filter": ["kubejs:carbon_electrode"],
             "whitelist": true,
             "block": "minecraft:air",
-            "chance": 0.01 * chance
+            "chance": 0.05 * chance
         })
     }
 
@@ -368,24 +507,28 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:electrolytic_cell",
-        "time": 40,
+        "time": 10,
         "priority": 1,
         "error": true,
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(720),
-            ElectrolyzeFluidInput1("minecraft:water", 6000),
-            ElectrolyzeFluidOutNegative("kubejs:hydrogen", 6),
-            ElectrolyzeFluidOutPositive("kubejs:oxygen", 3)
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
+            ElectrolyzeFluidInput1("minecraft:water", 2000),
+            ElectrolyzeFluidOutNegative("kubejs:hydrogen", 2),
+            ElectrolyzeFluidOutPositive("kubejs:oxygen", 1)
         ],
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(720),
-            ElectrolyzeFluidInput1("minecraft:water", 6000),
-            ElectrolyzeFluidOutput1("kubejs:hydrogen", 6000),
-            ElectrolyzeFluidOutput2("kubejs:oxygen", 3000)
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
+            ElectrolyzeFluidInput1("minecraft:water", 2000),
+            ElectrolyzeFluidOutput1("kubejs:hydrogen", 2000),
+            ElectrolyzeFluidOutput2("kubejs:oxygen", 1000)
         ]
     }).id("dut_create:electrolytic_cell/water")
     event.custom({
@@ -397,96 +540,130 @@ ServerEvents.recipes(event => {
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(1440),
-            ElectrolyzeElectrodePositive(1),
-            ElectrolyzeElectrodeNegative(1),
-            ElectrolyzeFluidInput1("kubejs:saline_water", 6000),
-            ElectrolyzeFluidOutNegative("kubejs:hydrogen", 3),
-            ElectrolyzeFluidOutPositive("kubejs:chlorine", 3),
-            ElectrolyzeFluidOutSub("kubejs:caustic_soda", 6)
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
+            ElectrolyzeFluidInput1("kubejs:saline_water", 3000),
+            ElectrolyzeFluidOutSub("kubejs:caustic_soda", 3)
         ],
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(1440),
-            ElectrolyzeFluidInput1("kubejs:saline_water", 6000),
-            ElectrolyzeFluidOutput1("kubejs:hydrogen", 3000),
-            ElectrolyzeFluidOutput2("kubejs:chlorine", 3000),
-            ElectrolyzeFluidOutput3("kubejs:caustic_soda", 6000)
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
+            ElectrolyzeFluidInput1("kubejs:saline_water", 3000),
+            ElectrolyzeFluidOutput3("kubejs:caustic_soda", 3000)
         ]
     }).id("dut_create:electrolytic_cell/saline_water")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:electrolytic_cell",
-        "time": 30,
+        "time": 10,
         "priority": 1,
         "error": true,
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
+            ElectrolyzeEnergyInput(2880),
+            ElectrolyzeElectrodePositive(1),
+            ElectrolyzeElectrodeNegative(1),
+            ElectrolyzeItem("input", "kubejs:salt", 24),
+            ElectrolyzeFluidOutNegative("minecraft:lava", 3),
+            ElectrolyzeFluidOutPositive("kubejs:chlorine", 3)
+        ],
+        "jei": [
+            ElectrolyzeStructure,
+            ElectrolyzeEnergyInput(2880),
+            ElectrolyzeElectrodePositive(1),
+            ElectrolyzeElectrodeNegative(1),
+            ElectrolyzeItem("input", "kubejs:salt", 24),
+            ElectrolyzeFluidOutput1("minecraft:lava", 3000),
+            ElectrolyzeFluidOutput2("kubejs:chlorine", 3000)
+        ]
+    }).id("dut_create:electrolytic_cell/salt")
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:electrolytic_cell",
+        "time": 10,
+        "priority": 1,
+        "error": true,
+        "requirements": [
+            ElectrolyzeStructure,
+            ElectrolyzeSound,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(1080),
-            ElectrolyzeFluidInput1("kubejs:nitrogen", 3000),
-            ElectrolyzeFluidInput2("#forge:oxygen", 6000),
-            ElectrolyzeFluidOutSub("kubejs:nitrogen_dioxide", 6)
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
+            ElectrolyzeFluidInput1("kubejs:nitrogen", 1000),
+            ElectrolyzeFluidInput2("kubejs:oxygen", 2000),
+            ElectrolyzeFluidOutSub("kubejs:nitrogen_dioxide", 2)
         ],
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(1080),
-            ElectrolyzeFluidInput1("kubejs:nitrogen", 3000),
-            ElectrolyzeFluidInput2("#forge:oxygen", 6000),
-            ElectrolyzeFluidOutput3("kubejs:nitrogen_dioxide", 6000)
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
+            ElectrolyzeFluidInput1("kubejs:nitrogen", 1000),
+            ElectrolyzeFluidInput2("kubejs:oxygen", 2000),
+            ElectrolyzeFluidOutput3("kubejs:nitrogen_dioxide", 2000)
         ]
     }).id("dut_create:electrolytic_cell/nitrogen_dioxide")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:electrolytic_cell",
-        "time": 40,
+        "time": 20,
         "priority": 1,
         "error": true,
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(720),
+            ElectrolyzeElectrodePositive(0),
             ElectrolyzeElectrodeNegative(1),
-            ElectrolyzeFluidInput1("kubejs:ammonia", 4000),
-            ElectrolyzeFluidInput2("#forge:oxygen", 16000),
-            ElectrolyzeFluidOutNegative("kubejs:nitrogen_dioxide", 2),
-            ElectrolyzeFluidOutSub("kubejs:nitric_acid", 2)
+            ElectrolyzeFluidInput1("kubejs:ammonia", 2000),
+            ElectrolyzeFluidInput2("kubejs:oxygen", 8000),
+            ElectrolyzeFluidOutNegative("kubejs:nitrogen_dioxide", 1),
+            ElectrolyzeFluidOutSub("kubejs:nitric_acid", 1)
         ],
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(720),
-            ElectrolyzeFluidInput1("kubejs:ammonia", 4000),
-            ElectrolyzeFluidInput2("#forge:oxygen", 16000),
-            ElectrolyzeFluidOutput1("kubejs:nitrogen_dioxide", 2000),
-            ElectrolyzeFluidOutput3("kubejs:nitric_acid", 2000)
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(1),
+            ElectrolyzeFluidInput1("kubejs:ammonia", 2000),
+            ElectrolyzeFluidInput2("kubejs:oxygen", 8000),
+            ElectrolyzeFluidOutput1("kubejs:nitrogen_dioxide", 1000),
+            ElectrolyzeFluidOutput3("kubejs:nitric_acid", 1000)
         ]
     }).id("dut_create:electrolytic_cell/nitric_acid")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:electrolytic_cell",
-        "time": 60,
+        "time": 20,
         "priority": 1,
         "error": true,
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(1440),
             ElectrolyzeElectrodePositive(1),
             ElectrolyzeElectrodeNegative(1),
-            ElectrolyzeFluidInput1("kubejs:muriatic_acid", 6000),
-            ElectrolyzeFluidOutNegative("kubejs:hydrogen", 3),
-            ElectrolyzeFluidOutPositive("kubejs:chlorine", 3),
+            ElectrolyzeFluidInput1("kubejs:muriatic_acid", 2000),
+            ElectrolyzeFluidOutNegative("kubejs:hydrogen", 1),
+            ElectrolyzeFluidOutPositive("kubejs:chlorine", 1),
         ],
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(1440),
-            ElectrolyzeFluidInput1("kubejs:muriatic_acid", 6000),
-            ElectrolyzeFluidOutput1("kubejs:hydrogen", 3000),
-            ElectrolyzeFluidOutput3("kubejs:chlorine", 3000)
+            ElectrolyzeElectrodePositive(1),
+            ElectrolyzeElectrodeNegative(1),
+            ElectrolyzeFluidInput1("kubejs:muriatic_acid", 2000),
+            ElectrolyzeFluidOutput1("kubejs:hydrogen", 1000),
+            ElectrolyzeFluidOutput3("kubejs:chlorine", 1000)
         ]
     }).id("dut_create:electrolytic_cell/muriatic_acid")
     event.custom({
@@ -498,15 +675,18 @@ ServerEvents.recipes(event => {
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(1800),
-            ElectrolyzeElectrodeNegative(1),
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeFluidInput2("kubejs:fused_alumina", 2880),
             ElectrolyzeItem("output", "kubejs:aluminum_slag", 32)
         ],
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(1800),
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeFluidInput2("kubejs:fused_alumina", 2880),
             ElectrolyzeItem("output", "kubejs:aluminum_slag", 32)
         ]
@@ -520,9 +700,10 @@ ServerEvents.recipes(event => {
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(24576),
             ElectrolyzeElectrodePositive(1),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeFluidInput2("createbigcannons:molten_steel", 360),
             ElectrolyzeItem("input", "iceandfire:lightning_dragon_blood", 4),
             ElectrolyzeItem("output", "iceandfire:dragonsteel_lightning_ingot", 4)
@@ -530,6 +711,8 @@ ServerEvents.recipes(event => {
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(24576),
+            ElectrolyzeElectrodePositive(1),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeFluidInput2("createbigcannons:molten_steel", 360),
             ElectrolyzeItem("input", "iceandfire:lightning_dragon_blood", 4),
             ElectrolyzeItem("output", "iceandfire:dragonsteel_lightning_ingot", 4)
@@ -544,7 +727,7 @@ ServerEvents.recipes(event => {
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(2880),
             ElectrolyzeElectrodePositive(1),
             ElectrolyzeElectrodeNegative(1),
@@ -556,6 +739,8 @@ ServerEvents.recipes(event => {
         "jei": [
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(2880),
+            ElectrolyzeElectrodePositive(1),
+            ElectrolyzeElectrodeNegative(1),
             ElectrolyzeFluidInput1("kubejs:desh", 10800),
             ElectrolyzeFluidInput2("kubejs:tin", 7200),
             ElectrolyzeItem("input", "kubejs:granite_alloy", 24),
@@ -571,9 +756,11 @@ ServerEvents.recipes(event => {
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(360),
             ElectrolyzeBiome("ad_astra:orbit"),
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeItem("input", "kubejs:granite_alloy", 24),
             ElectrolyzeItem("output", "kubejs:diorite_alloy", 24),
             ElectrolyzeFluidOutSub("kubejs:nitrogen", 1)
@@ -582,6 +769,8 @@ ServerEvents.recipes(event => {
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(360),
             ElectrolyzeBiome("ad_astra:orbit"),
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeItem("input", "kubejs:granite_alloy", 24),
             ElectrolyzeItem("output", "kubejs:diorite_alloy", 24),
             ElectrolyzeFluidOutput3("kubejs:nitrogen", 1000)
@@ -596,9 +785,11 @@ ServerEvents.recipes(event => {
         "requirements": [
             ElectrolyzeStructure,
             ElectrolyzeSound,
-            ElectrolyzeParticle,
+            //ElectrolyzeParticle,
             ElectrolyzeEnergyInput(360),
             ElectrolyzeDimension("ad_astra:moon"),
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeFluidInput1("#forge:hydrogen", 500),
             ElectrolyzeFluidInput2("kubejs:chlorine", 500),
             ElectrolyzeItem("input", "minecraft:packed_mud", 8),
@@ -609,6 +800,8 @@ ServerEvents.recipes(event => {
             ElectrolyzeStructure,
             ElectrolyzeEnergyInput(360),
             ElectrolyzeDimension("ad_astra:moon"),
+            ElectrolyzeElectrodePositive(0),
+            ElectrolyzeElectrodeNegative(0),
             ElectrolyzeFluidInput1("#forge:hydrogen", 500),
             ElectrolyzeFluidInput2("kubejs:chlorine", 500),
             ElectrolyzeItem("input", "minecraft:packed_mud", 8),

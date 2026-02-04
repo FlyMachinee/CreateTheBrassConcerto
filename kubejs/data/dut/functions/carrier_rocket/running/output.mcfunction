@@ -58,5 +58,5 @@ data remove entity @s ArmorItems[0].tag.Items[0]
 
 #execute as @s[tag=!dut_carrier_rocket_from_orbit] run summon item ~ ~ ~ {Item:{Count:1b,id:"kubejs:carrier_rocket",tag:{Damage:12}},Motion:[0d,-0.2d,0d]}
 #execute as @s[tag=dut_carrier_rocket_from_orbit] run summon item ~ ~ ~ {Item:{Count:1b,id:"kubejs:carrier_rocket",tag:{Damage:1}},Motion:[0d,-0.2d,0d]}
-
+execute as @s on passengers run ride @s dismount
 kill @s
