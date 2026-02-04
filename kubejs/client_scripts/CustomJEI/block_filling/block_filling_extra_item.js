@@ -11,6 +11,11 @@ JEIAddedEvents.registerRecipeCatalysts((event) => {
     Item.of('create:spout'),
     recipeType
   );
+
+  data['addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])'](
+    Item.of('create:depot'),
+    recipeType
+  );
 });
 
 JEIAddedEvents.registerRecipes((event) => {
