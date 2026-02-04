@@ -42,7 +42,7 @@ const drawDepot = (graphics, blockLighting, itemLighting, item, x, y, z, scale) 
 
   for (let i = 0; i <= renderCount; ++i) {
     ms.pushPose();
-    ms.translate(0, -sizeFactor / 2, (14 + i) / 16 - 0.5);
+    ms.translate(0, -sizeFactor / 2, (13 + i) / 16 - 0.5);
 
     const newScale = (1 / 16) * sizeFactor;
     ms.scale(newScale, newScale, newScale);
