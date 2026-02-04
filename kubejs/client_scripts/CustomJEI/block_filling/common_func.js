@@ -112,11 +112,19 @@ const blockFillingItemCategoryRegisterHook = (guiHelper, category) => {
     }
 
     // 渲染置物台
-    $AnimatedKinetics
-      .defaultBlockElement($AllBlocks.DEPOT.getDefaultState())
-      .atLocal(0, 3, 0)
-      .scale(scale)
-      .render(graphics);
+    drawDepot(
+      graphics,
+      $AnimatedKinetics.DEFAULT_LIGHTING,
+      $CustomLightingSettings.builder().firstLightRotation(0, -90).secondLightRotation(0, -90).build(),
+      cycle < 10 || cycle >= 25
+        ? null
+        : Item.of(recipe.recipeData.output_item, recipe.recipeData.output_amount),
+      0,
+      3,
+      0,
+      scale,
+      tick
+    );
 
     matrixStack.popPose();
   });
