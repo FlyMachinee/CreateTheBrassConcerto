@@ -2,15 +2,16 @@
 
 /**
  *
- * @param {GuiGraphics} graphics
- * @param {FluidStackJS} fluid
+ * @param {Internal.GuiGraphics} graphics
+ * @param {Internal.CustomLightingSettings} lighting
+ * @param {Internal.FluidStackJS} fluid
  * @param {number} x
  * @param {number} y
  * @param {number} z
  * @param {number} scale
  * @param {number} tick
  */
-const drawAnimatedSpout = (graphics, fluid, x, y, z, scale, tick) => {
+const drawAnimatedSpout = (graphics, lighting, fluid, x, y, z, scale, tick) => {
   // 该动画函数形如
   /*
            --             --
@@ -26,13 +27,14 @@ const drawAnimatedSpout = (graphics, fluid, x, y, z, scale, tick) => {
     return squeeze;
   };
 
-  drawControlledAnimatedSpout(graphics, fluid, x, y, z, scale, tick, squeeze_func);
+  drawControlledAnimatedSpout(graphics, lighting, fluid, x, y, z, scale, tick, squeeze_func);
 };
 
 /**
  *
- * @param {GuiGraphics} graphics
- * @param {FluidStackJS} fluid
+ * @param {Internal.GuiGraphics} graphics
+ * @param {Internal.CustomLightingSettings} lighting
+ * @param {Internal.FluidStackJS} fluid
  * @param {number} x
  * @param {number} y
  * @param {number} z
@@ -40,12 +42,12 @@ const drawAnimatedSpout = (graphics, fluid, x, y, z, scale, tick) => {
  * @param {number} tick
  * @param {function} squeeze_func 回调函数，输入渲染的tick值，返回喷嘴挤压值0~1
  */
-const drawControlledAnimatedSpout = (graphics, fluid, x, y, z, scale, tick, squeeze_func) => {
+const drawControlledAnimatedSpout = (graphics, lighting, fluid, x, y, z, scale, tick, squeeze_func) => {
   const matrixStack = graphics.pose();
   matrixStack.pushPose();
 
-  $AnimatedKinetics
-    .defaultBlockElement($AllBlocks.SPOUT.getDefaultState())
+  $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)']($AllBlocks.SPOUT.getDefaultState())
+    .lighting(lighting)
     .atLocal(x, y, z)
     .scale(scale)
     .render(graphics);
@@ -54,23 +56,20 @@ const drawControlledAnimatedSpout = (graphics, fluid, x, y, z, scale, tick, sque
 
   matrixStack.pushPose();
 
-  $AnimatedKinetics['defaultBlockElement(com.jozufozu.flywheel.core.PartialModel)'](
-    $AllPartialModels.SPOUT_TOP
-  )
+  $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($AllPartialModels.SPOUT_TOP)
+    .lighting(lighting)
     .atLocal(x, y, z)
     .scale(scale)
     .render(graphics);
   matrixStack.translate(0, (-3 * squeeze) / 32, 0);
-  $AnimatedKinetics['defaultBlockElement(com.jozufozu.flywheel.core.PartialModel)'](
-    $AllPartialModels.SPOUT_MIDDLE
-  )
+  $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($AllPartialModels.SPOUT_MIDDLE)
+    .lighting(lighting)
     .atLocal(x, y, z)
     .scale(scale)
     .render(graphics);
   matrixStack.translate(0, (-3 * squeeze) / 32, 0);
-  $AnimatedKinetics['defaultBlockElement(com.jozufozu.flywheel.core.PartialModel)'](
-    $AllPartialModels.SPOUT_BOTTOM
-  )
+  $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($AllPartialModels.SPOUT_BOTTOM)
+    .lighting(lighting)
     .atLocal(x, y, z)
     .scale(scale)
     .render(graphics);
@@ -78,7 +77,7 @@ const drawControlledAnimatedSpout = (graphics, fluid, x, y, z, scale, tick, sque
 
   matrixStack.popPose();
 
-  $AnimatedKinetics.DEFAULT_LIGHTING.applyLighting();
+  lighting.applyLighting();
 
   const buffer = $MultiBufferSource.immediate($Tesselator.getInstance().getBuilder());
   matrixStack.pushPose();

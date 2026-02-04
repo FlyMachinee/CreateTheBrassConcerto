@@ -89,7 +89,16 @@ const blockFillingItemCategoryRegisterHook = (guiHelper, category) => {
     const tick = $AnimationTickHolder.getRenderTime();
 
     // 渲染注液器
-    drawAnimatedSpout(graphics, recipe.recipeData.input_fluid, 0, 0, 0, scale, tick);
+    drawAnimatedSpout(
+      graphics,
+      $AnimatedKinetics.DEFAULT_LIGHTING,
+      recipe.recipeData.input_fluid,
+      0,
+      0,
+      0,
+      scale,
+      tick
+    );
 
     // 渲染媒介方块
     const cycle = tick % 30;

@@ -308,11 +308,21 @@ JEIAddedEvents.registerCategories((event) => {
       matrixStack.mulPose($Axis.YP.rotationDegrees(22.5));
 
       // 渲染注液器
-      drawControlledAnimatedSpout(graphics, recipeData.fluid, 0, 0, 0, scale, tick, (tick) => {
-        const cycleProgress = (tick % 20) / 20;
-        const squeeze = JavaMath.sin(cycleProgress * JavaMath.PI);
-        return squeeze;
-      });
+      drawControlledAnimatedSpout(
+        graphics,
+        $AnimatedKinetics.DEFAULT_LIGHTING,
+        recipeData.fluid,
+        0,
+        0,
+        0,
+        scale,
+        tick,
+        (tick) => {
+          const cycleProgress = (tick % 20) / 20;
+          const squeeze = JavaMath.sin(cycleProgress * JavaMath.PI);
+          return squeeze;
+        }
+      );
 
       // 渲染媒介方块
       $AnimatedKinetics

@@ -132,6 +132,7 @@ JEIAddedEvents.registerCategories((event) => {
       // 渲染注液器
       drawControlledAnimatedSpout(
         graphics,
+        $AnimatedKinetics.DEFAULT_LIGHTING,
         recipe.recipeData.input_fluid,
         0,
         0,
