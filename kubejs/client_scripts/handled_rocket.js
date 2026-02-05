@@ -32,8 +32,7 @@ const delayTime = 5
     let Galaxy = 0
     let Planet = 0
 
-    let Painted = false
-    let ScrollDelta = 0
+    let Painted = true
 
     NetworkEvents.dataReceived("handleRocket", event => {
         let p = event.player
@@ -54,7 +53,7 @@ const delayTime = 5
                 type: "text",
                 text: Text.translate("kubejs.message.hand_control_rocket").getString(),
                 x: 0,
-                y: -12,
+                y: -10,
                 alignX: 'center',
                 alignY: 'center',
                 draw: 'ingame',
@@ -64,7 +63,7 @@ const delayTime = 5
                 type: "text",
                 text: "§e" + Text.translate(GalaxyNameKey[0]).getString(),
                 x: 0,
-                y: 12,
+                y: 10,
                 alignX: 'center',
                 alignY: 'center',
                 draw: 'ingame',
@@ -73,7 +72,7 @@ const delayTime = 5
                 type: "text",
                 text: "§e" + Text.translate(PlanetNameKey[PlanetList[Galaxy][Planet]]).getString(),
                 x: 0,
-                y: 24,
+                y: 22,
                 alignX: 'center',
                 alignY: 'center',
                 draw: 'ingame',
@@ -82,7 +81,7 @@ const delayTime = 5
                 type: "text",
                 text: '',
                 x: 0,
-                y: 36,
+                y: 34,
                 alignX: 'center',
                 alignY: 'center',
                 draw: 'ingame',
@@ -92,7 +91,7 @@ const delayTime = 5
                 type: "text",
                 text: Text.translate("kubejs.message.hand_control_rocket_launch").getString(),
                 x: 0,
-                y: 48,
+                y: 46,
                 alignX: 'center',
                 alignY: 'center',
                 draw: 'ingame',
@@ -100,11 +99,6 @@ const delayTime = 5
 
         })
         Painted = true
-    })
-    NativeEvents.onEvent($MouseRoll, event => {
-        /**@type {Internal.InputEvent$MouseScrollingEvent} */
-        let e = event
-        ScrollDelta = Number(e.getScrollDelta())
     })
     NetworkEvents.dataReceived("disHandleRocket", event => {
         event.player.paint({
@@ -142,6 +136,16 @@ const delayTime = 5
         let p = event.player
         //若不在火箭上，将handlingRocket转为false
         if (p.vehicle == null) {
+            if (Painted) {
+                p.paint({
+                    "rocket_hud0": { text: '' },
+                    "rocket_hud1": { text: '' },
+                    "rocket_hud2": { text: '' },
+                    "rocket_hud3": { text: '' },
+                    "rocket_hud4": { text: '' }
+                })
+                Painted = false
+            }
             handlingRocket = false
             return
         }
@@ -172,29 +176,9 @@ const delayTime = 5
                     break
             }
         }
-        /*
-        if (ScrollDelta !== 0) {
-            let i = Planet + ScrollDelta
-            if (i >= PlanetList[Galaxy].length) {
-                if (Galaxy + 1 <= PlanetList.length - 1) {
-                    Galaxy++
-                    Planet = 0
-                }
-            } else if (i < 0) {
-                if (Galaxy >= 1) {
-                    Galaxy--
-                    Planet = PlanetList[Galaxy].length - 1
-                }
-            } else {
-                Planet = i
-            }
-            p.playSound("minecraft:ui.button.click")
-        }
-        */
         //目标是否可发射
         let choosedPlanet = PlanetList[Galaxy][Planet]
-        if (delay === delayTime //||ScrollDelta !== 0
-            ) {
+        if (delay === delayTime) {
             if (allowedDimensions.some(i => i === choosedPlanet)) {
                 allowToLaunch = true
                 p.paint({
@@ -212,8 +196,7 @@ const delayTime = 5
             }
         }
         //更新行星面板
-        if (delay === delayTime//||ScrollDelta !== 0
-            ) {
+        if (delay === delayTime) {
             p.playSound("minecraft:ui.button.click")
             p.paint({
                 "rocket_hud1": {
@@ -246,7 +229,6 @@ const delayTime = 5
                     }
                 })
             }
-            ScrollDelta = 0
         }
         //发射
         if (allowToLaunch && Client.isAltDown()) {

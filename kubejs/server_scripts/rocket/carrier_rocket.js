@@ -128,13 +128,13 @@ NativeEvents.onEvent($EntityMountEvent, event => {
     if (e.level.isClientSide()) { return }
     if (!e.entity.isPlayer()) { return }
     /**@type {Internal.ServerPlayer} */
-    let p=e.entity
+    let p = e.entity
     if (e.entityBeingMounted.type !== "minecraft:armor_stand") { return }
-    let vehicle=e.entityBeingMounted
-    if (!vehicle.tags.contains('dut_carrier_rocket')){return}
-    if (e.isMounting()){
-        p.sendData("setVision",{type:'thridb'})
-    }else{
-        p.sendData("setVision",{type:'first'})
+    let vehicle = e.entityBeingMounted
+    if (!vehicle.tags.contains('dut_carrier_rocket')) { return }
+    if (e.isMounting()) {
+        p.sendData("setVision", { type: 'thridb' })
+    } else {
+        p.sendData("setVision", { type: 'first' })
     }
 })

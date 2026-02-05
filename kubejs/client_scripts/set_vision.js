@@ -1,3 +1,4 @@
+let $CameraType=Java.loadClass("net.minecraft.client.CameraType")
 NetworkEvents.dataReceived("setVision", event => {
     switch (event.data.type) {
         case "thridb":

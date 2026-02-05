@@ -1,4 +1,5 @@
 BlockEvents.leftClicked("#dut_create:breakable", event => {
+  if (event.block.hasTag("#dut_create:drawers")){return}
   if (event.item.id == "kubejs:steel_impact_drill" && event.block.hasTag("dut_create:breakable")) {
     event.server.runCommandSilent(`/execute as ${event.player.getUsername()} in ${event.level.dimension} run loot give @s mine ${event.block.pos.x} ${event.block.pos.y} ${event.block.pos.z} minecraft:netherite_pickaxe{Enchantments:[{id:"silk_touch",lvl:1s}]}`)
     event.level.destroyBlock(event.block.pos, false, event.player)
