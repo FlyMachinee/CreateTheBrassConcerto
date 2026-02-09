@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
         ],
         "processingTime": 600,
         "results": [
-            { "fluid": "createdieselgenerators:ethanol", "amount": 200 }
+            { "fluid": "createdieselgenerators:ethanol", "amount": 100 }
         ]
     }).id('dut_create:ferment/berries')
     //面粉发酵

@@ -186,9 +186,21 @@ const blockCraftingRecipes = [
           builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
         },
       },
-      F: { id: 'create:mechanical_pump', face: 'PZ' },
+      F: {
+        id: 'create:mechanical_pump',
+        face: 'PZ',
+        extra: (guiGraphics, lighting, x, y, z, scale) => {
+          let builder = $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](
+            $AllPartialModels.MECHANICAL_PUMP_COG
+          ).lighting(lighting);
+
+          // rotateXYZ(builder, 0, 90, 0);
+          rotateXYZ(builder, 90, $AnimatedKinetics.getCurrentAngle() * 2, -90);
+          builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
+        },
+      },
       G: { id: 'create:mechanical_drill', face: 'NZ' },
-      H: 'createdieselgenerators:huge_diesel_engine',
+      H: { id: 'createdieselgenerators:huge_diesel_engine', face: 'NY' },
       I: { id: 'create:brass_funnel', face_center: false },
       J: 'create:item_vault',
       '#': 'minecraft:air',
@@ -225,7 +237,7 @@ const blockCraftingRecipes = [
         },
       },
       G: 'create:hose_pulley',
-      H: 'createdieselgenerators:huge_diesel_engine',
+      H: { id: 'createdieselgenerators:huge_diesel_engine', face: 'NY' },
       I: 'create:item_drain',
       a: createFluidPipeInfo([
         ['UP', true],

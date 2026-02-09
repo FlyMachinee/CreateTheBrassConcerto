@@ -62,6 +62,12 @@ JEIAddedEvents.registerCategories((event) => {
       }
     });
 
+    const buttonX = 10;
+    const buttonY = 10;
+    const buttonWidth = 30;
+    const buttonHeight = 14;
+    let toggle = false;
+
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       // 圆形大阴影
       // 来自 Create Big Cannons
@@ -118,18 +124,51 @@ JEIAddedEvents.registerCategories((event) => {
         true
       );
 
+      // 渲染重置按钮
+      $Internal
+        .getTextures()
+        .getButtonForState(
+          toggle,
+          true,
+          mouseX >= buttonX &&
+            mouseX < buttonX + buttonWidth &&
+            mouseY >= buttonY &&
+            mouseY < buttonY + buttonHeight
+        ) // pressed, enabled, hovered
+        .draw(graphics, buttonX, buttonY, buttonWidth, buttonHeight); // x, y, width, height
+
+      // 按钮文本
+      drawCenteredString(
+        graphics,
+        Client.font,
+        Text.translate('kubejs.jeiaddition.spin'),
+        buttonX + buttonWidth / 2,
+        buttonY + buttonHeight / 2 - Client.font.lineHeight / 2,
+        0xffffff,
+        true
+      );
+
+      const scale = 20;
+
       const matrixStack = graphics.pose();
       matrixStack.pushPose();
 
       // 渲染像素偏移
-      matrixStack.translate(41, 105, 100);
+      matrixStack.translate(44, 102, 100);
 
       // 渲染轴旋转
       // 这两个值来之不易，源码没翻出来，手动测试，与 Ponder 场景中的角度一致（至少肉眼看不出区别）
       const x_axis_angle = -35.5;
       const y_axis_angle = 54.5;
+
       matrixStack.mulPose($Axis.XP.rotationDegrees(x_axis_angle));
-      matrixStack.mulPose($Axis.YP.rotationDegrees(y_axis_angle));
+      matrixStack.translate(scale / 2, 0, scale / 2);
+      matrixStack.mulPose(
+        $Axis.YP.rotationDegrees(
+          y_axis_angle + (toggle ? ($AnimationTickHolder.getRenderTime() * 2) % 360 : 0)
+        )
+      );
+      matrixStack.translate(-scale / 2, 0, -scale / 2);
 
       // 由于渲染轴不是默认值，需自定义光照
       const lighting = $CustomLightingSettings
@@ -137,8 +176,6 @@ JEIAddedEvents.registerCategories((event) => {
         .firstLightRotation(0, 135)
         .secondLightRotation(0, 0)
         .build();
-
-      const scale = 20;
 
       // 渲染单个方块函数
       const renderBlock = (block_info, x, y, z) => {
@@ -260,6 +297,34 @@ JEIAddedEvents.registerCategories((event) => {
         }
       }
       matrixStack.popPose();
+    });
+
+    // 处理输入事件
+    category.setInputHandler((recipe, mouseX, mouseY, input) => {
+      if (
+        !(
+          mouseX >= buttonX &&
+          mouseX < buttonX + buttonWidth &&
+          mouseY >= buttonY &&
+          mouseY < buttonY + buttonHeight
+        )
+      ) {
+        return false;
+      }
+
+      if (input !== $InputConstants.Type.MOUSE.getOrCreate(0)) {
+        return false;
+      }
+
+      // 音效
+      $Minecraft
+        .getInstance()
+        .getSoundManager()
+        .play($SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25));
+
+      toggle = !toggle;
+
+      return true;
     });
   });
 });

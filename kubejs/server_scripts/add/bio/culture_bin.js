@@ -283,7 +283,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       CultureBinFluid("minecraft:water", "input", 250),
       CultureBinFluid("kubejs:carbon_dioxide", "output", 250),
-      CultureBinItemInput('minecraft:sweet_berries', 12),
+      CultureBinItemInput('minecraft:sweet_berries', 24),
       CultureBinItemInput("kubejs:yeast", 1),
       CultureBinItemChance("kubejs:yeast", 1, 1),
       CultureBinItemChance("minecraft:sugar", 6, 1)

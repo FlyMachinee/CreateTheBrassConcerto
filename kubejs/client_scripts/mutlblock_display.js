@@ -1,4 +1,5 @@
 const MultiBlockRecipe = {
+	"kubejs:blasting_compressor": ['dut_create:blasting_compressor/coal_block'],
 	'kubejs:blueprint_builder': ['dut_create:blueprint_builder/alloy_furnace'],
 	'kubejs:trading_station': ['dut_create:trading_station/fluid'],
 	"kubejs:large_difference_engine": ['dut_create:large_difference_engine/common'],
@@ -9,7 +10,6 @@ const MultiBlockRecipe = {
 	'kubejs:airdrop_station': ["dut_create:airdrop_station/empty"],
 	"kubejs:condenser": ['dut_create:condenser/overworld/air_fluid_liquefaction'],
 	"kubejs:hydropress": ["dut_create:hydropress/get_fluid"],
-	"kubejs:blasting_compressor": ['dut_create:blasting_compressor/coal_block'],
 	"kubejs:alloy_furnace": ["dut_create:alloy_furnace/industrial_iron"],
 	"kubejs:huge_crusher": ["dut_create:huge_crusher/fluid"],
 	"kubejs:shaft_furnace": ["dut_create:shaft_furnace/desh"],

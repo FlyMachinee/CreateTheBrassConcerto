@@ -78,6 +78,16 @@ ServerEvents.recipes(event => {
         "type": "custommachinery:custom_machine",
         "machine": "dut:stem_reaping_machine",
         "time": 10,
+        "priority": 0,
+        "hidden": true,
+        "error": false,
+        "requirements": [
+        ]
+    }).id("dut_create:stem_reaping_machine/empty")
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:stem_reaping_machine",
+        "time": 10,
         "priority": 1,
         "hidden": true,
         "error": false,
@@ -94,12 +104,12 @@ ServerEvents.recipes(event => {
     StemReapingRecipe("ad_astra:aeronos_stem", [
         StemReapingItem("kubejs:aeronos_stem_piece", 16, "output"),
         StemReapingItemChance("kubejs:aeronos_stem_piece", 8, 0.5),
-        StemReapingItemChance("kubejs:aeronos_cap_piece", 12, 0.25)
+        StemReapingItemChance("kubejs:aeronos_cap_piece", 8, 0.5)
     ], "aeronos_stem", 10)
     StemReapingRecipe("ad_astra:strophar_stem", [
         StemReapingItem("kubejs:strophar_stem_piece", 16, "output"),
         StemReapingItemChance("kubejs:strophar_stem_piece", 8, 0.5),
-        StemReapingItemChance("kubejs:strophar_cap_piece", 12, 0.25)
+        StemReapingItemChance("kubejs:strophar_cap_piece", 8, 0.5)
     ], "strophar_stem", 10)
     StemReapingRecipe("minecraft:mushroom_stem", [
         StemReapingItem("kubejs:stem_silk", 16, "output"),
