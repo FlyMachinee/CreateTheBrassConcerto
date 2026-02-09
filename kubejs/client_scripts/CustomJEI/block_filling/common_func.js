@@ -129,8 +129,3 @@ const blockFillingItemCategoryRegisterHook = (guiHelper, category) => {
     matrixStack.popPose();
   });
 };
-
-const prettyMatrix_1 = Item.of("kubejs:matrix_2", "{ RGB: [ [ [ 1, 0 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 1 ] ], [ [ 1, 0 ], [ 1, 0 ] ] ], matrix: [ [ [ 1, 0 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 1 ] ], [ [ 1, 0 ], [ 1, 0 ] ] ] }");
-const prettyMatrix_2 = Item.of("kubejs:matrix_2", "{ matrix: [ [ [ 1, -1 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 0 ] ], [ [ 0, 0 ], [ 0, -1 ] ] ] }");
-const prettyMatrix_3 = Item.of("kubejs:matrix_2", "{ matrix: [ [ [ 1, 1 ], [ 1, 0 ] ], [ [ 1, 0 ], [ -1, 1 ] ], [ [ 1, 1 ], [ -1, 1 ] ] ] }");
-const prettyMatrix_4 = Item.of("kubejs:matrix_2", "{ matrix: [ [ [ 1, -1 ], [ -1, 1 ] ], [ [ -1, 0 ], [ 1, -1 ] ], [ [ 0, 0 ], [ 0, 0 ] ] ] }");

@@ -154,7 +154,7 @@ JEIAddedEvents.registerCategories((event) => {
       matrixStack.pushPose();
 
       // 渲染像素偏移
-      matrixStack.translate(41, 105, 100);
+      matrixStack.translate(44, 102, 100);
 
       // 渲染轴旋转
       // 这两个值来之不易，源码没翻出来，手动测试，与 Ponder 场景中的角度一致（至少肉眼看不出区别）

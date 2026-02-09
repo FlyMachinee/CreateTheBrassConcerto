@@ -74,6 +74,19 @@ JEIAddedEvents.registerCategories((event) => {
   const { jeiHelpers } = data;
   const { guiHelper } = jeiHelpers;
 
+  const prettyMatrix_1 = Item.of(
+    'kubejs:matrix_2',
+    '{ RGB: [ [ [ 1, 0 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 1 ] ], [ [ 1, 0 ], [ 1, 0 ] ] ], matrix: [ [ [ 1, 0 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 1 ] ], [ [ 1, 0 ], [ 1, 0 ] ] ] }'
+  );
+  const prettyMatrix_2 = Item.of(
+    'kubejs:matrix_2',
+    '{ matrix: [ [ [ 1, -1 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 0 ] ], [ [ 0, 0 ], [ 0, -1 ] ] ] }'
+  );
+  const prettyMatrix_3 = Item.of(
+    'kubejs:matrix_2',
+    '{ matrix: [ [ [ 1, 1 ], [ 1, 0 ] ], [ [ 1, 0 ], [ -1, 1 ] ], [ [ 1, 1 ], [ -1, 1 ] ] ] }'
+  );
+
   event.custom('dut_create:block_filling_matrix_multi_phase', (category) => {
     // 添加上方标题
     category.title(Text.translate('kubejs.jeiaddition.category.block_filling_matrix_multi_phase.title'));
@@ -218,7 +231,7 @@ JEIAddedEvents.registerCategories((event) => {
         graphics,
         $AnimatedKinetics.DEFAULT_LIGHTING,
         itemLighting,
-        recipeData.type === 1 ? Item.of('kubejs:slime_crystal') : cycle < 15 ? prettyMatrix_1 : null,
+        recipeData.type === 1 ? Item.of('kubejs:slime_crystal') : cycle < 15 ? Item.of(prettyMatrix_1) : null,
         0,
         1,
         0,
@@ -266,14 +279,6 @@ JEIAddedEvents.registerCategories((event) => {
         scale
       );
       ms.popPose();
-
-            // 绘制参考线
-      // for (let col = 0; col * 10 <= category.getWidth(); ++col) {
-      //   graphics.vLine(col * 10, 0, category.getHeight(), col % 5 === 0 ? 0x7fffffff : 0x3fffffff);
-      // }
-      // for (let row = 0; row * 10 <= category.getHeight(); ++row) {
-      //   graphics.hLine(0, category.getWidth(), row * 10, row % 5 === 0 ? 0x7fffffff : 0x3fffffff);
-      // }
     });
   });
 });

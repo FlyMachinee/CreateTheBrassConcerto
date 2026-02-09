@@ -221,12 +221,20 @@ JEIAddedEvents.registerCategories((event) => {
         .addSlot($RecipeIngredientRole.OUTPUT, 151, 130)
         .setBackground($CreateRecipeCategory.getRenderedSlot(0), -1, -1)
         .addItemStack(Item.of(data.stem));
+
+      // 隐形原料槽
+      layoutBuilder
+        .addInvisibleIngredients($RecipeIngredientRole.INPUT)
+        .addItemStack(Item.of(data.cap));
+      layoutBuilder
+        .addInvisibleIngredients($RecipeIngredientRole.INPUT)
+        .addItemStack(Item.of(data.stem));
     });
 
     // 配方动画持久数据
     // key: recipe innerId, value: { cycleCount, tensor, nextTensor, identicalCount }
     const animatedData = new Map();
-    const buttonX = 130;
+    const buttonX = 133.5;
     const buttonY = 10;
     const buttonWidth = 30;
     const buttonHeight = 14;

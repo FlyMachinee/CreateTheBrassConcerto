@@ -71,6 +71,15 @@ JEIAddedEvents.registerCategories((event) => {
   const { jeiHelpers } = data;
   const { guiHelper } = jeiHelpers;
 
+  const prettyMatrix_1 = Item.of(
+    'kubejs:matrix_2',
+    '{ RGB: [ [ [ 1, 0 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 1 ] ], [ [ 1, 0 ], [ 1, 0 ] ] ], matrix: [ [ [ 1, 0 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 1 ] ], [ [ 1, 0 ], [ 1, 0 ] ] ] }'
+  );
+  const prettyMatrix_2 = Item.of(
+    'kubejs:matrix_2',
+    '{ matrix: [ [ [ 1, -1 ], [ 0, 1 ] ], [ [ 0, 1 ], [ 0, 0 ] ], [ [ 0, 0 ], [ 0, -1 ] ] ] }'
+  );
+
   event.custom('dut_create:block_filling_matrix_single', (category) => {
     // 添加上方标题
     category.title(Text.translate('kubejs.jeiaddition.category.block_filling_matrix_single.title'));
@@ -168,7 +177,7 @@ JEIAddedEvents.registerCategories((event) => {
         graphics,
         $AnimatedKinetics.DEFAULT_LIGHTING,
         itemLighting,
-        cycle < 15 ? prettyMatrix_1 : null,
+        cycle < 15 ? Item.of(prettyMatrix_1) : null,
         0,
         2,
         0,
@@ -182,7 +191,7 @@ JEIAddedEvents.registerCategories((event) => {
         graphics,
         $AnimatedKinetics.DEFAULT_LIGHTING,
         itemLighting,
-        cycle >= 15 ? prettyMatrix_2 : null,
+        cycle >= 15 ? Item.of(prettyMatrix_2) : null,
         0,
         3,
         0,
