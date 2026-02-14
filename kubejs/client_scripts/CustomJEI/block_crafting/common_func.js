@@ -212,7 +212,7 @@ const blockCraftingRecipes = [
           }
         },
       },
-      J: 'create:item_vault',
+      J: { id: 'create:item_vault', face: 'NX' },
       '#': 'minecraft:air',
     },
     (i, j, k) => [2 - i, 2 - j, k]
