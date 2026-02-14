@@ -29,7 +29,7 @@
  *
  *    skip: 可选，布尔值，若为真，则跳过该方块本身的渲染（额外渲染会继续）
  *    reverse: 可选，布尔值，若为真，先执行 extra 额外渲染，再渲染方块本身
- *    extra: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale) => void，用于额外渲染该方块相关结构
+ *    extra: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale, spin) => void，用于额外渲染该方块相关结构
  * }
  */
 const getBlockCraftingRecipe = (
@@ -82,6 +82,34 @@ const createFluidPipeInfo = (directions) => ({
     drawFluidPipe(guiGraphics, lighting, x, y, z, scale, directions);
   },
 });
+
+const mechanicalArmInfo = {
+  id: 'create:mechanical_arm',
+  skip: true,
+  extra: (guiGraphics, lighting, x, y, z, scale, spin) => {
+    if (spin) {
+      let tick = $AnimationTickHolder.getRenderTime();
+      let baseAngle = (tick * 10) % 360;
+      let lowerArmAngle = -15 + 30 * JavaMath.sin(tick / 4);
+      let upperArmAngle = -10 + 35 * JavaMath.sin(tick / 8);
+      let headAngle = -lowerArmAngle;
+      drawMechanicalArm(
+        guiGraphics,
+        lighting,
+        x,
+        y,
+        z,
+        scale,
+        baseAngle,
+        135 + lowerArmAngle,
+        90 + upperArmAngle,
+        headAngle
+      );
+    } else {
+      drawMechanicalArm(guiGraphics, lighting, x, y, z, scale, 90, 135, 45, 0);
+    }
+  },
+};
 
 const blockCraftingRecipes = [
   // 粉碎轮
@@ -168,7 +196,7 @@ const blockCraftingRecipes = [
       ['IJI', '#A#', 'IHI'],
     ],
     {
-      A: 'create:mechanical_arm',
+      A: mechanicalArmInfo,
       B: 'create:railway_casing',
       C: { id: 'create:rotation_speed_controller', face: 'NX' },
       D: { id: 'create:sequenced_gearshift', rotate: [90, 0, 0] },
@@ -229,7 +257,7 @@ const blockCraftingRecipes = [
       ['bIc', 'XAY', 'dHe'],
     ],
     {
-      A: 'create:mechanical_arm',
+      A: mechanicalArmInfo,
       B: 'create:railway_casing',
       C: { id: 'create:rotation_speed_controller', face: 'NX' },
       D: { id: 'create:sequenced_gearshift', rotate: [90, 0, 0] },
