@@ -106,7 +106,20 @@ const blockCraftingRecipes = [
         id: 'create:brass_scaffolding',
         values: [[BlockProperties.BOTTOM, $Boolean.valueOf(String(true))]],
       },
-      B: { id: 'create:brass_funnel', face_center: false },
+      B: {
+        id: 'create:brass_funnel',
+        face_center: false,
+        extra: (guiGraphics, lighting, x, y, z, scale) => {
+          for (let i = 0; i < 4; i++) {
+            $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($AllPartialModels.FUNNEL_FLAP)
+              .lighting(lighting)
+              .rotateBlock(0, z > 0 ? 180 : 0, 0)
+              .atLocal(x + 0.075 / 16 + (z > 0 ? i : -i) * (3.05 / 16), y, z + (z > 0 ? -1 / 16 : 1 / 16))
+              .scale(scale)
+              .render(guiGraphics);
+          }
+        },
+      },
       C: { id: 'create:stockpile_switch', face_center: true },
       D: {
         id: 'railways:smokestack_diesel',
@@ -185,7 +198,20 @@ const blockCraftingRecipes = [
       },
       G: { id: 'create:mechanical_drill', face: 'NZ' },
       H: { id: 'createdieselgenerators:huge_diesel_engine', face: 'NY' },
-      I: { id: 'create:brass_funnel', face_center: false },
+      I: {
+        id: 'create:brass_funnel',
+        face_center: false,
+        extra: (guiGraphics, lighting, x, y, z, scale) => {
+          for (let i = 0; i < 4; i++) {
+            $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($AllPartialModels.FUNNEL_FLAP)
+              .lighting(lighting)
+              .rotateBlock(0, z > 0 ? 180 : 0, 0)
+              .atLocal(x + 0.075 / 16 + (z > 0 ? i : -i) * (3.05 / 16), y, z + (z > 0 ? -1 / 16 : 1 / 16))
+              .scale(scale)
+              .render(guiGraphics);
+          }
+        },
+      },
       J: 'create:item_vault',
       '#': 'minecraft:air',
     },
