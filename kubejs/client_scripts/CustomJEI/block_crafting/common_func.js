@@ -52,16 +52,16 @@ const getBlockCraftingRecipe = (
 
 /**
  * 将数学上的坐标轴转换为渲染坐标轴
- * 
+ *
  * 左手系，正上方为 z 轴，左后方为 y 轴，右后方为 x 轴
  */
 let transform = (x, y, z) => [1 - y, -z, x - 1];
 
 /**
  * 将在数学上的坐标系中的旋转应用到渲染坐标系中
- * 
+ *
  * 顺序：z轴 -> y轴 -> x轴
- * 
+ *
  * 数学坐标系中，规定沿轴向逆时针为正向（左手法则）
  */
 let rotateXYZ = (builder, x_angle, y_angle, z_angle) => {
@@ -85,18 +85,11 @@ const createFluidPipeInfo = (directions) => ({
 
 const blockCraftingRecipes = [
   // 粉碎轮
-  getBlockCraftingRecipe(
-    'create:crushing_wheel',
-    4,
-    'create:wrench',
-    'C',
-    [['ABA', 'BCB', 'ABA']],
-    {
-      A: 'create:andesite_alloy_block',
-      B: 'create:linear_chassis',
-      C: 'minecraft:stone',
-    }
-  ),
+  getBlockCraftingRecipe('create:crushing_wheel', 4, 'create:wrench', 'C', [['ABA', 'BCB', 'ABA']], {
+    A: 'create:andesite_alloy_block',
+    B: 'create:linear_chassis',
+    C: 'minecraft:stone',
+  }),
 
   // 无人机
   getBlockCraftingRecipe(
@@ -118,9 +111,7 @@ const blockCraftingRecipes = [
       D: {
         id: 'railways:smokestack_diesel',
         extra: (guiGraphics, lighting, x, y, z, scale) => {
-          $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](
-            $CRBlockPartials.DIESEL_STACK_FAN
-          )
+          $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($CRBlockPartials.DIESEL_STACK_FAN)
             .lighting(lighting)
             .rotateBlock(0, $AnimatedKinetics.getCurrentAngle(), 0)
             .atLocal(x, y - 0.75, z)
@@ -135,30 +126,23 @@ const blockCraftingRecipes = [
   ),
 
   // 机械手
-  getBlockCraftingRecipe(
-    'create:deployer',
-    1,
-    'create_sa:brass_pickaxe',
-    'C',
-    [['#A#', '#B#', '#C#']],
-    {
-      A: { id: 'create:piston_extension_pole', rotate: [90, 0, 0] },
-      B: {
-        id: 'create:mechanical_piston',
-        extra: (guiGraphics, lighting, x, y, z, scale) => {
-          let builder = $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
-            $AllBlocks.SHAFT.getDefaultState()
-          ).lighting(lighting);
+  getBlockCraftingRecipe('create:deployer', 1, 'create_sa:brass_pickaxe', 'C', [['#A#', '#B#', '#C#']], {
+    A: { id: 'create:piston_extension_pole', rotate: [90, 0, 0] },
+    B: {
+      id: 'create:mechanical_piston',
+      extra: (guiGraphics, lighting, x, y, z, scale) => {
+        let builder = $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
+          $AllBlocks.SHAFT.getDefaultState()
+        ).lighting(lighting);
 
-          rotateXYZ(builder, 0, 90, $AnimatedKinetics.getCurrentAngle() * 2);
+        rotateXYZ(builder, 0, 90, $AnimatedKinetics.getCurrentAngle() * 2);
 
-          builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
-        },
+        builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
       },
-      C: 'minecraft:iron_block',
-      '#': 'minecraft:air',
-    }
-  ),
+    },
+    C: 'minecraft:iron_block',
+    '#': 'minecraft:air',
+  }),
 
   // 矿物钻井
   getBlockCraftingRecipe(
