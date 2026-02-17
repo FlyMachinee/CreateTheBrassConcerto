@@ -45,7 +45,7 @@ ServerEvents.tags('item', event => {
   ])
   //
   event.add("dut_create:drawers", [
-    "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "fluiddrawerslegacy:fluiddrawer", "fluiddrawerslegacy:fluiddrawer_2", "fluiddrawerslegacy:fluiddrawer_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
+    "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "fluiddrawerslegacy:fluiddrawer", "fluiddrawerslegacy:fluiddrawer_2", "fluiddrawerslegacy:fluiddrawer_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_controller","storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
   ])
   //网络操作符
   event.add('dut_create:net_operator', ["beyonddimensions:net_manager_inviter", "beyonddimensions:net_member_inviter", "beyonddimensions:net_destroyer", "beyonddimensions:net_gifter"])
@@ -198,7 +198,7 @@ ServerEvents.tags('block', event => {
   event.add('dut_create:encasable', ['create:shaft', 'create:belt'])
   //抽屉
   event.add("dut_create:drawers", [
-    "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "fluiddrawerslegacy:fluiddrawer", "fluiddrawerslegacy:fluiddrawer_2", "fluiddrawerslegacy:fluiddrawer_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
+    "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "fluiddrawerslegacy:fluiddrawer", "fluiddrawerslegacy:fluiddrawer_2", "fluiddrawerslegacy:fluiddrawer_4", "storagedrawers:framed_controller", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
   ])
   event.add("dut_create:drawers1", [
     "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"

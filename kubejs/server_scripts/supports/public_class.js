@@ -2,6 +2,12 @@
 //Java
 let $String=Java.loadClass("java.lang.String")
 let $Object=Java.loadClass("java.lang.Object")
+//
+let $OutlineEntry = Java.loadClass("com.simibubi.create.foundation.outliner.Outliner$OutlineEntry")
+let $Outliner = Java.loadClass("com.simibubi.create.foundation.outliner.Outliner")
+let $Outline = Java.loadClass("com.simibubi.create.foundation.outliner.Outline")
+let $AABBOutline = Java.loadClass("com.simibubi.create.foundation.outliner.AABBOutline")
+let $AllSpecialTextures = Java.loadClass('com.simibubi.create.AllSpecialTextures')
 //File
 let $RootPath = Java.loadClass("net.minecraftforge.fml.loading.FMLPaths")
 let $LevelResource = Java.loadClass("net.minecraft.world.level.storage.LevelResource")

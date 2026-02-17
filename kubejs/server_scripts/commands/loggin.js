@@ -39,14 +39,16 @@ PlayerEvents.loggedIn(event => {
         p.teleportTo(LastPoint.dimension, LastPoint.pos.x, LastPoint.pos.y, LastPoint.pos.z, p.YRot, p.XRot)
     }
 })
+/*
 ItemEvents.rightClicked("stick", event => {
     if (event.player.username != "Slimeli_") {
         return
     }
     let p = event.player
-    /*
+    
     let l=event.server.getLevel('ad_astra:moon')
     p.tell(l.getBlock(p.x,p.y,p.z).id.toString())
-    */
+    
     p.tell(p.persistentData)
 })
+    */

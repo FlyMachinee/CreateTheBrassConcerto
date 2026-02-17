@@ -29,7 +29,7 @@
  *
  *    skip: 可选，布尔值，若为真，则跳过该方块本身的渲染（额外渲染会继续）
  *    reverse: 可选，布尔值，若为真，先执行 extra 额外渲染，再渲染方块本身
- *    extra: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale) => void，用于额外渲染该方块相关结构
+ *    extra: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale, spin) => void，用于额外渲染该方块相关结构
  * }
  */
 const getBlockCraftingRecipe = (
@@ -52,16 +52,16 @@ const getBlockCraftingRecipe = (
 
 /**
  * 将数学上的坐标轴转换为渲染坐标轴
- * 
+ *
  * 左手系，正上方为 z 轴，左后方为 y 轴，右后方为 x 轴
  */
 let transform = (x, y, z) => [1 - y, -z, x - 1];
 
 /**
  * 将在数学上的坐标系中的旋转应用到渲染坐标系中
- * 
+ *
  * 顺序：z轴 -> y轴 -> x轴
- * 
+ *
  * 数学坐标系中，规定沿轴向逆时针为正向（左手法则）
  */
 let rotateXYZ = (builder, x_angle, y_angle, z_angle) => {
@@ -83,20 +83,41 @@ const createFluidPipeInfo = (directions) => ({
   },
 });
 
+const mechanicalArmInfo = {
+  id: 'create:mechanical_arm',
+  skip: true,
+  extra: (guiGraphics, lighting, x, y, z, scale, spin) => {
+    if (spin) {
+      let tick = $AnimationTickHolder.getRenderTime();
+      let baseAngle = (tick * 10) % 360;
+      let lowerArmAngle = -15 + 30 * JavaMath.sin(tick / 4);
+      let upperArmAngle = -10 + 35 * JavaMath.sin(tick / 8);
+      let headAngle = -lowerArmAngle;
+      drawMechanicalArm(
+        guiGraphics,
+        lighting,
+        x,
+        y,
+        z,
+        scale,
+        baseAngle,
+        135 + lowerArmAngle,
+        90 + upperArmAngle,
+        headAngle
+      );
+    } else {
+      drawMechanicalArm(guiGraphics, lighting, x, y, z, scale, 90, 135, 45, 0);
+    }
+  },
+};
+
 const blockCraftingRecipes = [
   // 粉碎轮
-  getBlockCraftingRecipe(
-    'create:crushing_wheel',
-    4,
-    'create:wrench',
-    'C',
-    [['ABA', 'BCB', 'ABA']],
-    {
-      A: 'create:andesite_alloy_block',
-      B: 'create:linear_chassis',
-      C: 'minecraft:stone',
-    }
-  ),
+  getBlockCraftingRecipe('create:crushing_wheel', 4, 'create:wrench', 'C', [['ABA', 'BCB', 'ABA']], {
+    A: 'create:andesite_alloy_block',
+    B: 'create:linear_chassis',
+    C: 'minecraft:stone',
+  }),
 
   // 无人机
   getBlockCraftingRecipe(
@@ -113,14 +134,25 @@ const blockCraftingRecipes = [
         id: 'create:brass_scaffolding',
         values: [[BlockProperties.BOTTOM, $Boolean.valueOf(String(true))]],
       },
-      B: { id: 'create:brass_funnel', face_center: false },
+      B: {
+        id: 'create:brass_funnel',
+        face_center: false,
+        extra: (guiGraphics, lighting, x, y, z, scale) => {
+          for (let i = 0; i < 4; i++) {
+            $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($AllPartialModels.FUNNEL_FLAP)
+              .lighting(lighting)
+              .rotateBlock(0, z > 0 ? 180 : 0, 0)
+              .atLocal(x + 0.075 / 16 + (z > 0 ? i : -i) * (3.05 / 16), y, z + (z > 0 ? -1 / 16 : 1 / 16))
+              .scale(scale)
+              .render(guiGraphics);
+          }
+        },
+      },
       C: { id: 'create:stockpile_switch', face_center: true },
       D: {
         id: 'railways:smokestack_diesel',
         extra: (guiGraphics, lighting, x, y, z, scale) => {
-          $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)'](
-            $CRBlockPartials.DIESEL_STACK_FAN
-          )
+          $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($CRBlockPartials.DIESEL_STACK_FAN)
             .lighting(lighting)
             .rotateBlock(0, $AnimatedKinetics.getCurrentAngle(), 0)
             .atLocal(x, y - 0.75, z)
@@ -135,30 +167,23 @@ const blockCraftingRecipes = [
   ),
 
   // 机械手
-  getBlockCraftingRecipe(
-    'create:deployer',
-    1,
-    'create_sa:brass_pickaxe',
-    'C',
-    [['#A#', '#B#', '#C#']],
-    {
-      A: { id: 'create:piston_extension_pole', rotate: [90, 0, 0] },
-      B: {
-        id: 'create:mechanical_piston',
-        extra: (guiGraphics, lighting, x, y, z, scale) => {
-          let builder = $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
-            $AllBlocks.SHAFT.getDefaultState()
-          ).lighting(lighting);
+  getBlockCraftingRecipe('create:deployer', 1, 'create_sa:brass_pickaxe', 'C', [['#A#', '#B#', '#C#']], {
+    A: { id: 'create:piston_extension_pole', rotate: [90, 0, 0] },
+    B: {
+      id: 'create:mechanical_piston',
+      extra: (guiGraphics, lighting, x, y, z, scale) => {
+        let builder = $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
+          $AllBlocks.SHAFT.getDefaultState()
+        ).lighting(lighting);
 
-          rotateXYZ(builder, 0, 90, $AnimatedKinetics.getCurrentAngle() * 2);
+        rotateXYZ(builder, 0, 90, $AnimatedKinetics.getCurrentAngle() * 2);
 
-          builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
-        },
+        builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
       },
-      C: 'minecraft:iron_block',
-      '#': 'minecraft:air',
-    }
-  ),
+    },
+    C: 'minecraft:iron_block',
+    '#': 'minecraft:air',
+  }),
 
   // 矿物钻井
   getBlockCraftingRecipe(
@@ -171,7 +196,7 @@ const blockCraftingRecipes = [
       ['IJI', '#A#', 'IHI'],
     ],
     {
-      A: 'create:mechanical_arm',
+      A: mechanicalArmInfo,
       B: 'create:railway_casing',
       C: { id: 'create:rotation_speed_controller', face: 'NX' },
       D: { id: 'create:sequenced_gearshift', rotate: [90, 0, 0] },
@@ -201,8 +226,21 @@ const blockCraftingRecipes = [
       },
       G: { id: 'create:mechanical_drill', face: 'NZ' },
       H: { id: 'createdieselgenerators:huge_diesel_engine', face: 'NY' },
-      I: { id: 'create:brass_funnel', face_center: false },
-      J: 'create:item_vault',
+      I: {
+        id: 'create:brass_funnel',
+        face_center: false,
+        extra: (guiGraphics, lighting, x, y, z, scale) => {
+          for (let i = 0; i < 4; i++) {
+            $GuiGameElement['of(com.jozufozu.flywheel.core.PartialModel)']($AllPartialModels.FUNNEL_FLAP)
+              .lighting(lighting)
+              .rotateBlock(0, z > 0 ? 180 : 0, 0)
+              .atLocal(x + 0.075 / 16 + (z > 0 ? i : -i) * (3.05 / 16), y, z + (z > 0 ? -1 / 16 : 1 / 16))
+              .scale(scale)
+              .render(guiGraphics);
+          }
+        },
+      },
+      J: { id: 'create:item_vault', face: 'NX' },
       '#': 'minecraft:air',
     },
     (i, j, k) => [2 - i, 2 - j, k]
@@ -219,7 +257,7 @@ const blockCraftingRecipes = [
       ['bIc', 'XAY', 'dHe'],
     ],
     {
-      A: 'create:mechanical_arm',
+      A: mechanicalArmInfo,
       B: 'create:railway_casing',
       C: { id: 'create:rotation_speed_controller', face: 'NX' },
       D: { id: 'create:sequenced_gearshift', rotate: [90, 0, 0] },

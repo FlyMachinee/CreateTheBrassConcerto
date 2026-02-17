@@ -266,7 +266,7 @@ JEIAddedEvents.registerCategories((event) => {
 
         const extraRender = () => {
           if (typeof block_info !== 'string' && 'extra' in block_info) {
-            block_info.extra(graphics, lighting, coordinates[0], coordinates[1], coordinates[2], scale);
+            block_info.extra(graphics, lighting, coordinates[0], coordinates[1], coordinates[2], scale, toggle);
           }
         };
 

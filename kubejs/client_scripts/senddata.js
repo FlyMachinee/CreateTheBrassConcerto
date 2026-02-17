@@ -8,7 +8,6 @@ PlayerEvents.tick(event => {
         event.player.sendData("isPlayerAltDown", { "Alt": PlayerAlt })
         PlayerAlt1 = PlayerAlt
     }
-
     PlayerFreeCam = global.FreeCam.isDown()
     if (PlayerFreeCam==false&&PlayerFreeCam1==true) {
         event.player.sendData("key.kubejs.freecam")
