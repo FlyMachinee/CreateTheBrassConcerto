@@ -28,7 +28,7 @@ CreateEvents.spoutHandler((event) => {
                         }
                         block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
 
-                        
+
                         //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run particle minecraft:block ${} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
                         //粒子效果
                         block.set(outputList[i])
@@ -64,15 +64,16 @@ CreateEvents.spoutHandler((event) => {
                     if (blowB.id == "create:depot") {
                         /**@type {Internal.DepotBlockEntity} */
                         let depot = blowB.entity
+
                         let depotItemHandler = depot.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null)
                         if (depot.getHeldItem().isEmpty()) {
                             if (!simulate) {
                                 //if (!$ItemHandlerHelper.insertItemStacked(depotItemHandler, output, true).isEmpty()) { return 0 }
                                 block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
 
-                                depotItemHandler.insertItem(output, false)
+
+                                depotItemHandler.insertItem(output.copy(), false)
                                 //$ItemHandlerHelper.insertItemStacked(depotItemHandler, output, false)
-                                //depot.sendData()
                                 block.set("minecraft:air")
                             }
                             return fluidInput.amount//消耗量
@@ -118,8 +119,7 @@ CreateEvents.spoutHandler((event) => {
                             if (!simulate) {
                                 //if (!$ItemHandlerHelper.insertItemStacked(depotItemHandler,output,true).isEmpty()){return 0}
                                 block.level.playSound(null, block.pos.x, block.pos.y, block.pos.z, "create:spout", "blocks", 1, 1)
-                                depotItemHandler.insertItem(output, false)
-                                //depot.sendData()
+                                depotItemHandler.insertItem(output.copy(), false)
                                 //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run particle minecraft:block ${block.id} ${block.pos.x} ${block.pos.y} ${block.pos.z} 0.25 0.25 0.25 0.3 8`)
                                 //block.level.server.runCommandSilent(`/execute in ${block.dimension.toString()} run data modify block ${block.down.pos.x} ${block.down.pos.y} ${block.down.pos.z} HeldItem.Item set value ` + output)
                             }

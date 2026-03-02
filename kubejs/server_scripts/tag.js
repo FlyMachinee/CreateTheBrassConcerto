@@ -392,8 +392,7 @@ ServerEvents.tags("item", e => {
 })
 //饰品
 ServerEvents.tags("item", event => {
-  event.add("curios:belt", ['create_sa:creative_filling_tank'])
-  event.add("curios:necklace", ["beyonddimensions:net_feeder_item"])
-  event.add("curios:belt", ["beyonddimensions:net_feeder_item"])
-  event.add("curios:hands", ["beyonddimensions:net_feeder_item"])
+  event.add("curios:necklace", ["beyonddimensions:net_feeder_item",'beyonddimensions:net_restocker_item'])
+  event.add("curios:belt", ['create_sa:creative_filling_tank',"beyonddimensions:net_feeder_item",'beyonddimensions:net_restocker_item'])
+  event.add("curios:hands", ["beyonddimensions:net_feeder_item",'beyonddimensions:net_restocker_item'])
 })

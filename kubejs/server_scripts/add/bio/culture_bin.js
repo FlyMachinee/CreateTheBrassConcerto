@@ -96,10 +96,7 @@ ServerEvents.recipes(event => {
       CultureBinItemInput("#dut_create:ice_dragonegg", 1),
       CultureBinItemInput("iceandfire:dragon_meal", 8),
       CultureBinItemInput("#forge:plates/iron", 1),
-      CultureBinItemChance('iceandfire:dragonbone', 6, 1),
-      CultureBinItemChance('iceandfire:dragonbone', 6, 0.5),
-      CultureBinItemChance('iceandfire:dragonbone', 12, 0.5),
-      CultureBinItemChance('iceandfire:dragonbone', 12, 0.25),
+      CultureBinItemChance('iceandfire:dragonbone', 18, 1)
     ]
   }).id("dut_create:culture_bin/ice_dragon/bones")
   event.custom({
@@ -113,9 +110,7 @@ ServerEvents.recipes(event => {
       CultureBinItemInput("iceandfire:dragon_meal", 8),
       CultureBinItemInput("#forge:plates/copper", 1),
       CultureBinItemChance('iceandfire:ice_dragon_heart', 2, 1),
-      CultureBinItemChance('iceandfire:ice_dragon_flesh', 3, 1),
-      CultureBinItemChance('iceandfire:ice_dragon_flesh', 6, 0.5),
-      CultureBinItemChance('iceandfire:ice_dragon_flesh', 8, 0.25)
+      CultureBinItemChance('iceandfire:ice_dragon_flesh', 8, 1)
     ]
   }).id("dut_create:culture_bin/ice_dragon/flesh")
   event.custom({
@@ -128,11 +123,7 @@ ServerEvents.recipes(event => {
       CultureBinItemInput("#dut_create:ice_dragonegg", 1),
       CultureBinItemInput("iceandfire:dragon_meal", 8),
       CultureBinItemInput("#forge:plates/tin", 1),
-      CultureBinItemChance('iceandfire:ice_dragon_blood', 3, 1),
-      CultureBinItemChance('iceandfire:ice_dragon_blood', 2, 0.5),
-      CultureBinItemChance('iceandfire:ice_dragon_blood', 2, 0.5),
-      CultureBinItemChance('iceandfire:ice_dragon_blood', 4, 0.5),
-      CultureBinItemChance('iceandfire:ice_dragon_blood', 4, 0.5)
+      CultureBinItemChance('iceandfire:ice_dragon_blood', 9, 1)
     ]
   }).id("dut_create:culture_bin/ice_dragon/blood")
   event.custom({
@@ -321,7 +312,7 @@ ServerEvents.recipes(event => {
     "machine": "dut:culture_bin",
     "time": 120,
     "requirements": [
-      CultureBinFluid("minecraft:milk", "input", 500),
+      CultureBinFluid("minecraft:milk", "input", 250),
       CultureBinItemInput("kubejs:salt", 4),
       CultureBinItemInput("kubejs:cheese_moonalgae", 1),
       CultureBinItemInput("#dut_create:moon_solid", 1),
@@ -335,7 +326,7 @@ ServerEvents.recipes(event => {
     "time": 80,
     "requirements": [
       CultureBinDimension("ad_astra:moon"),
-      CultureBinFluid("minecraft:milk", "input", 500),
+      CultureBinFluid("minecraft:milk", "input", 250),
       CultureBinItemInput("kubejs:salt", 2),
       CultureBinItemInput("kubejs:cheese_moonalgae", 1),
       CultureBinItemChance("ad_astra:cheese", 8, 1),

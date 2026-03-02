@@ -24,15 +24,15 @@ const alwaysAllowedDimensions = ["minecraft:overworld", "ad_astra:earth_orbit", 
 const _233BDimensions = ["dut:slimeria", "dut:slimeria_orbit"]
 
 const delayTime = 5
-{
+
     let has233BMap = false
     let handlingRocket = true
     let allowedDimensions = 0
 
-    let Galaxy = 0
-    let Planet = 0
+    let GalaxySelector = 0
+    let PlanetSelector = 0
 
-    let Painted = true
+    let handlePadPainted = true
 
     NetworkEvents.dataReceived("handleRocket", event => {
         let p = event.player
@@ -43,10 +43,10 @@ const delayTime = 5
         } else {
             allowedDimensions = alwaysAllowedDimensions.slice()
         }
-        Galaxy = 0
-        Planet = 0
+        GalaxySelector = 0
+        PlanetSelector = 0
         handlingRocket = true
-        allowToLaunch = true
+        allowToLaunchRocket = true
         //初始化面板
         p.paint({
             "rocket_hud0": {
@@ -70,7 +70,7 @@ const delayTime = 5
             },
             "rocket_hud2": {
                 type: "text",
-                text: "§e" + Text.translate(PlanetNameKey[PlanetList[Galaxy][Planet]]).getString(),
+                text: "§e" + Text.translate(PlanetNameKey[PlanetList[GalaxySelector][PlanetSelector]]).getString(),
                 x: 0,
                 y: 22,
                 alignX: 'center',
@@ -98,7 +98,7 @@ const delayTime = 5
             }
 
         })
-        Painted = true
+        handlePadPainted = true
     })
     NetworkEvents.dataReceived("disHandleRocket", event => {
         event.player.paint({
@@ -109,19 +109,22 @@ const delayTime = 5
             "rocket_hud4": { text: '' }
         })
         handlingRocket = false
-        Painted = false
+        handlePadPainted = false
     })
-    function clampPlanetSelector(G, P) {
-        Galaxy = JavaMath.clamp(G, 0, PlanetList.length)
-        Planet = JavaMath.clamp(P, 0, PlanetList[Galaxy].length)
+    function Clamp(a, b, c) {
+        return Math.max(b, Math.min(a, c))
     }
-    let delay = 0
-    let allowToLaunch = false
+    function clampPlanetSelector(G, P) {
+        GalaxySelector = Clamp(G, 0, PlanetList.length)
+        PlanetSelector = Clamp(P, 0, PlanetList[GalaxySelector].length)
+    }
+    let handlePadToggleDelay = 0
+    let allowToLaunchRocket = false
     PlayerEvents.tick(event => {
-        if (delay > 0) { delay-- }
+        if (handlePadToggleDelay > 0) { handlePadToggleDelay-- }
         //必须正在操纵火箭
         if (!handlingRocket) {
-            if (Painted) {
+            if (handlePadPainted) {
                 event.player.paint({
                     "rocket_hud0": { text: '' },
                     "rocket_hud1": { text: '' },
@@ -129,14 +132,14 @@ const delayTime = 5
                     "rocket_hud3": { text: '' },
                     "rocket_hud4": { text: '' }
                 })
-                Painted = false
+                handlePadPainted = false
             }
             return
         }
         let p = event.player
         //若不在火箭上，将handlingRocket转为false
         if (p.vehicle == null) {
-            if (Painted) {
+            if (handlePadPainted) {
                 p.paint({
                     "rocket_hud0": { text: '' },
                     "rocket_hud1": { text: '' },
@@ -144,50 +147,45 @@ const delayTime = 5
                     "rocket_hud3": { text: '' },
                     "rocket_hud4": { text: '' }
                 })
-                Painted = false
+                handlePadPainted = false
             }
             handlingRocket = false
             return
         }
         //切换目标
-        if (delay === 0) {
-            switch (true) {
-                case global.SwitchUp.isDown():
-                    Galaxy--
-                    Galaxy = JavaMath.clamp(Galaxy, 0, PlanetList.length - 1)
-                    Planet = 0
-                    delay = delayTime
-                    break
-                case global.SwitchDown.isDown():
-                    Galaxy++
-                    Galaxy = JavaMath.clamp(Galaxy, 0, PlanetList.length - 1)
-                    Planet = 0
-                    delay = delayTime
-                    break
-                case global.SwitchLeft.isDown():
-                    Planet--
-                    Planet = JavaMath.clamp(Planet, 0, PlanetList[Galaxy].length - 1)
-                    delay = delayTime
-                    break
-                case global.SwitchRight.isDown():
-                    Planet++
-                    Planet = JavaMath.clamp(Planet, 0, PlanetList[Galaxy].length - 1)
-                    delay = delayTime
-                    break
+        if (handlePadToggleDelay === 0) {
+            if (global.SwitchUp.isDown()) {
+                GalaxySelector--
+                GalaxySelector = Clamp(GalaxySelector, 0, PlanetList.length - 1)
+                PlanetSelector = 0
+                handlePadToggleDelay = delayTime
+            } else if (global.SwitchDown.isDown()) {
+                GalaxySelector++
+                GalaxySelector = Clamp(GalaxySelector, 0, PlanetList.length - 1)
+                PlanetSelector = 0
+                handlePadToggleDelay = delayTime
+            } else if (global.SwitchLeft.isDown()) {
+                PlanetSelector--
+                PlanetSelector = Clamp(PlanetSelector, 0, PlanetList[GalaxySelector].length - 1)
+                handlePadToggleDelay = delayTime
+            } else if (global.SwitchRight.isDown()) {
+                PlanetSelector++
+                PlanetSelector = Clamp(PlanetSelector, 0, PlanetList[GalaxySelector].length - 1)
+                handlePadToggleDelay = delayTime
             }
         }
         //目标是否可发射
-        let choosedPlanet = PlanetList[Galaxy][Planet]
-        if (delay === delayTime) {
+        let choosedPlanet = PlanetList[GalaxySelector][PlanetSelector]
+        if (handlePadToggleDelay === delayTime) {
             if (allowedDimensions.some(i => i === choosedPlanet)) {
-                allowToLaunch = true
+                allowToLaunchRocket = true
                 p.paint({
                     "rocket_hud4": {
                         text: Text.translate("kubejs.message.hand_control_rocket_launch").getString()
                     }
                 })
             } else {
-                allowToLaunch = false
+                allowToLaunchRocket = false
                 p.paint({
                     "rocket_hud4": {
                         text: ''
@@ -196,17 +194,17 @@ const delayTime = 5
             }
         }
         //更新行星面板
-        if (delay === delayTime) {
+        if (handlePadToggleDelay === delayTime) {
             p.playSound("minecraft:ui.button.click")
             p.paint({
                 "rocket_hud1": {
-                    text: "§e" + Text.translate(GalaxyNameKey[Galaxy]).getString()
+                    text: "§e" + Text.translate(GalaxyNameKey[GalaxySelector]).getString()
                 }
             })
-            if (allowToLaunch) {
+            if (allowToLaunchRocket) {
                 p.paint({
                     "rocket_hud2": {
-                        text: "§e" + Text.translate(PlanetNameKey[PlanetList[Galaxy][Planet]]).getString()
+                        text: "§e" + Text.translate(PlanetNameKey[PlanetList[GalaxySelector][PlanetSelector]]).getString()
                     }
                 })
             } else {
@@ -231,7 +229,7 @@ const delayTime = 5
             }
         }
         //发射
-        if (allowToLaunch && Client.isAltDown()) {
+        if (allowToLaunchRocket && Client.isAltDown()) {
             if (Orbit.some(i => i === choosedPlanet) && p.offHandItem.id === 'kubejs:emergency_industrial_platform_space') {
                 p.sendData("handleRocketLaunch", { spacestation: true, target: DimensionToPlanetWithOrbit[choosedPlanet] })
             } else {
@@ -245,8 +243,7 @@ const delayTime = 5
                 "rocket_hud4": { text: '' }
             })
             handlingRocket = false
-            Painted = false
+            handlePadPainted = false
             Client.options.cameraType = $CameraType.THIRD_PERSON_BACK
         }
     })
-}

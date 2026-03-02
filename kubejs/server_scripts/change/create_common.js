@@ -3,7 +3,6 @@ ServerEvents.recipes(event => {
   //event.remove({id: ''})
   //event.remove({input: ''})
   //event.custom()
-  event.remove({ id: "create:crafting/kinetics/fluid_valve" })
   event.remove({ id: "create:mechanical_crafting/crushing_wheel" })
   event.remove({ id: "create_connected:crafting/kinetics/inventory_bridge" })
   event.remove({ id: "create:filling/blaze_cake" })

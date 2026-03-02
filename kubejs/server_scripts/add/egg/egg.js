@@ -8,6 +8,37 @@ ServerEvents.recipes(event => {
         ],
         "results": [{ "item": "minecraft:player_head", "nbt": '{SkullOwner:{Name:"Slimeli_",Properties:{textures:[{Value:"ewogICJ0aW1lc3RhbXAiIDogMTc0Nzk4NzQzMzcyNCwKICAicHJvZmlsZUlkIiA6ICI1MTgyMDY2N2I3MzQ0M2M0YTlkNDM0YjcxMzIyYmJiOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTbGltZWxpXyIsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYTNiYjQ5NjUyZDkzMDgzZDY3NzI4ODc2YWRiZTVmOWU1OTI3ZTAxNzUzNmU4YTFkYzA2MGQ5NDI3ZjBlODc0IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZDgyYWIxN2ZkOTIwMjJkYmQ0YTg2Y2RlNGMzODJhNzU0MGUxMTdmYWU3YjlhMjg1MzY1ODUwNWE4MDYyNSIKICAgIH0KICB9Cn0="}]}}}' }]
     }).id("dut_create:eggs/slimeli_")
+    event.custom({
+        "type": "create:deploying",
+        "ingredients": [
+            { "item": "minecraft:compass" },
+            { "item": "create:andesite_alloy" }
+        ],
+        "results": [{ "item": "minecraft:player_head", "nbt": '{SkullOwner:{Name:"AndesiteAbound",Properties:{textures:[{Value:"ewogICJ0aW1lc3RhbXAiIDogMTc3MjQyMDExNDQ3NywKICAicHJvZmlsZUlkIiA6ICJhYmRiYmIxZjYzMTg0ZTA3OGRlMmQ3NGM0OWUzYmUwZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJBbmRlc2l0ZUFib3VuZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iZDhhY2Q5ZjI0ODI3NTI2MmJjNmFjM2I0ZDkxMTIwZGFkNWQwNzY2Y2QzNjRhYWM0OWI1ODg2NGFmOTI2NzFkIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTZjMzU2MjhmZTFjNGQ1OWRkNTI1NjFhM2QwM2JmYTRlMWE3NmQzOTdjOGI5YzQ3NmMyZjc3Y2I2YWViYjFkZiIKICAgIH0KICB9Cn0="}]}}}' }]
+    }).id("dut_create:eggs/andesiteabound")
+    event.custom({
+        "type": "create:mechanical_crafting",
+        "acceptMirrored": true,
+        "key": {
+            "A": { "item": "minecraft:slime_block" },
+            "P": { "item": "minecraft:observer" },
+            "S": { "item": "minecraft:sticky_piston" }
+        },
+        "pattern": [
+            "AASP",
+            "PSAA",
+        ],
+        "result": { "item": "minecraft:player_head", "nbt": '{SkullOwner:{Name:"Fly_Machine",Properties:{textures:[{Value:"ewogICJ0aW1lc3RhbXAiIDogMTc3MjQyMDExMDkxMywKICAicHJvZmlsZUlkIiA6ICI3MzgwOTUwYjkzNzQ0MWMzOTVjNjI0MmMzNGQxMTllMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJGbHlfTWFjaGluZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81NTFmYjU5MzY1OGU2Mjc4NWMyMDA5NDA0YzhlYmI1YTdhZWU4ZTYwY2ZkZTZkY2E4NzQxZWM2OWEzNWFiOTJhIgogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yMzQwYzBlMDNkZDI0YTExYjE1YThiMzNjMmE3ZTllMzJhYmIyMDUxYjI0ODFkMGJhN2RlZmQ2MzVjYTdhOTMzIgogICAgfQogIH0KfQ=="}]}}}' }
+    }
+    ).id("dut_create:eggs/fly_machine")
+    event.custom({
+        "type": "create:deploying",
+        "ingredients": [
+            { "item": "minecraft:potato" },
+            { "item": "minecraft:tnt" }
+        ],
+        "results": [{ "item": "minecraft:player_head", "nbt": '{SkullOwner:{Name:"xkmxz2503",Properties:{textures:[{Value:"ewogICJ0aW1lc3RhbXAiIDogMTc3MjQyMDExODMwMywKICAicHJvZmlsZUlkIiA6ICJmY2QxOGZmZTNkMGE0ODcwYjAwMWFjZWRhYjZhNDQ4NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJ4a214ejI1MDMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTE5YmVmYTM5NzkyZDcwNjdhOTY1ZTQxODNmMGRiMDJmZDVjNmZhYzAxNmU3ZDY3N2UwMzFlM2ZlOTY4NmIwMyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9LAogICAgIkNBUEUiIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EzZjZlNGYxNDgwMWYzZWE1NWUzZDk1YjliNGVmM2I1ZTg4MDJkOTQ3ZjY2OWRlOTNkNmVjNGI5MzU0YTQzNmIiCiAgICB9CiAgfQp9"}]}}}' }]
+    }).id("dut_create:eggs/xkmxz2503")
     //我们必须想象西西弗斯是幸福的
     event.custom({
         "type": "create:sequenced_assembly",
@@ -263,7 +294,7 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:slime_ball" },
             { "item": "minecraft:stick" }
         ],
-        "result": { "item": "minecraft:torch","count":3 }
+        "result": { "item": "minecraft:torch", "count": 3 }
     }).id("dut_create:eggs/terraria")
     //钢也是合金
     event.custom({
@@ -282,12 +313,12 @@ ServerEvents.recipes(event => {
         "speedLimits": 3,
         "ingredients": [{ "tag": "forge:ingots/netherite" }],
         "results": [
-            { "item": "ad_astra:steel_ingot" }
+            { "item": "ad_astra:steel_ingot", "chance": 0.25 }
         ],
-        "processingTime": 240
+        "processingTime": 120
     }).id("dut_create:eggs/nether_steel_also_steel")
     //铁杵磨成针
-    function Polishing(item1,item2,item3,material) {
+    function Polishing(item1, item2, item3, material) {
         event.custom({
             "type": "vintageimprovements:polishing",
             "speedLimits": 3,
@@ -296,7 +327,7 @@ ServerEvents.recipes(event => {
                 { "item": item2 }
             ],
             "processingTime": 9999
-        }).id("dut_create:eggs/grind_ingots_to_rods_"+material)
+        }).id("dut_create:eggs/grind_ingots_to_rods_" + material)
         event.custom({
             "type": "vintageimprovements:polishing",
             "speedLimits": 3,
@@ -305,22 +336,36 @@ ServerEvents.recipes(event => {
                 { "item": item3 }
             ],
             "processingTime": 131400
-        }).id("dut_create:eggs/grind_rods_to_needle_"+material)
+        }).id("dut_create:eggs/grind_rods_to_needle_" + material)
     }
-    Polishing("minecraft:iron_ingot","ad_astra:iron_rod","createaddition:iron_wire","iron")
+    Polishing("minecraft:iron_ingot", "ad_astra:iron_rod", "createaddition:iron_wire", "iron")
     //全麦面粉
     event.custom({
         "type": "vintageimprovements:polishing",
         "speedLimits": 3,
         "ingredients": [{ "item": "minecraft:wheat" }],
         "results": [
-            { "item": "create:wheat_flour","count":2 }
+            { "item": "create:wheat_flour", "count": 2 }
         ],
         "processingTime": 20
     }).id("dut_create:eggs/whole_wheat_flour")
 })
 
 BlockEvents.rightClicked("minecraft:player_head", event => {
-    if (event.block.entityData?.SkullOwner?.Name != "Slimeli_" || event.hand != "MAIN_HAND") { return }
-    event.server.runCommandSilent(`/execute as ${event.player.getUsername()} at @s in ${event.level.dimension} run tellraw @a [{"text":"[Slimeli_] "},{"translate":"kubejs.slimeli.${randomOne(0, 21).toString()}"}]`)
+    let SkullName = event.block.entityData?.SkullOwner?.Name
+    if (SkullName == null || event.hand != "MAIN_HAND") { return }
+    switch (SkullName) {
+        case "Slimeli_":
+            event.server.runCommandSilent(`/tellraw @a [{"text":"[Slimeli_] "},{"translate":"kubejs.slimeli.${randomOne(0, 21).toString()}"}]`)
+            break
+        case "AndesiteAbound":
+            event.server.runCommandSilent(`/tellraw @a [{"text":"[AndesiteAbound] "},{"translate":"kubejs.andesiteabound.${randomOne(0, 2).toString()}"}]`)
+            break
+        case "Fly_Machine":
+            event.server.runCommandSilent(`/tellraw @a [{"text":"[Fly_Machine] "},{"translate":"kubejs.fly_machine.${randomOne(0, 8).toString()}"}]`)
+            break
+        case "xkmxz2503":
+            event.server.runCommandSilent(`/tellraw @a [{"text":"[xkmxz2503] "},{"translate":"kubejs.xkmxz2503.0"}]`)
+            break
+    }
 })

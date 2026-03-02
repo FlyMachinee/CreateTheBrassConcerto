@@ -275,11 +275,58 @@ ServerEvents.recipes(event => {
             ]
         }).id("dut_create:hydropress/" + count + "/" + output.split(':')[1])
     }
+    function FluidIn1(input, output, count, count1, jei, priority) {
+        event.custom({
+            "type": "custommachinery:custom_machine",
+            "machine": "dut:hydropress",
+            "time": 1,
+            "priority": priority,
+            "error": true,
+            "hidden": jei,
+            "requirements": [
+                HydropressCommon0,
+                HydropressCommon3,
+                checkPiston1(3),
+                checkPiston2(3),
+                hydropressInput([input], "input", count),
+                {
+                    "type": "custommachinery:item",
+                    "mode": "output",
+                    "item": output,
+                    "amount": count * count1
+                }
+            ],
+            "jei": [
+                HydropressCommon2,
+                HydropressStructure,
+                hydropressInput([input], "input", count),
+                {
+                    "type": "custommachinery:fluid",
+                    "mode": "input",
+                    "tank": "fluid_input",
+                    "fluid": input,
+                    "amount": count * 1000
+                },
+                {
+                    "type": "custommachinery:item",
+                    "mode": "output",
+                    "item": output,
+                    "amount": count * count1
+                }
+            ]
+        }).id("dut_create:hydropress/" + count + "/" + output.split(':')[1])
+    }
     function FluidPress(input, output, count) {
         FluidIn(input, output, 9, count, false, 4)
         FluidIn(input, output, 6, count, true, 3)
         FluidIn(input, output, 3, count, true, 2)
         FluidIn(input, output, 1, count, true, 1)
+    }
+    function FluidPress1(input, output, count) {
+        FluidIn1(input, output, 9, count, false, 4)
+        FluidIn1(input, output, 6, count, true, 3)
+        FluidIn1(input, output, 3, count, true, 2)
+        FluidIn1(input, output, 1, count, true, 1)
     }
     event.custom({
         "type": "custommachinery:custom_machine",
@@ -358,7 +405,7 @@ ServerEvents.recipes(event => {
     PlatePress("minecraft:gold_block", "create:golden_sheet", 9)
     FluidPress("kubejs:gold", "minecraft:gold_ingot", 10)
 
-    PlatePress("minecraft:copper_block", "create:copper_sheet", 9)
+    PlatePress("#dut_create:copper_block", "create:copper_sheet", 9)
     FluidPress("kubejs:copper", "minecraft:copper_ingot", 10)
 
     FluidPress("createbigcannons:molten_steel", "ad_astra:steel_ingot", 10)
@@ -375,7 +422,7 @@ ServerEvents.recipes(event => {
 
     PlatePress("minecraft:obsidian", "create:sturdy_sheet", 4)
 
-    FluidPress("kubejs:saline_water", "kubejs:salt", 8)
+    FluidPress1("kubejs:saline_water", "kubejs:salt", 8)
 })
 /*
   

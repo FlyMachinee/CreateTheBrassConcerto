@@ -927,11 +927,8 @@ ServerEvents.recipes(event => {
       ShaftFurnaceStructure,
       ShaftFurnaceItem("#dut_create:fire_dragonegg", 1, "input"),
       ShaftFurnaceItem("#forge:plates/gold", 24, "input"),
-      ShaftFurnaceFluid("kubejs:covariant_heat", 96, "fluid", "input"),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_red', 28, 0.75),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_green', 28, 0.75),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_bronze', 28, 0.75),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_gray', 28, 0.75)
+      ShaftFurnaceFluid("kubejs:covariant_heat", 250, "fluid", "input"),
+      ShaftFurnaceItemChance('iceandfire:dragonscales_red', 72, 1)
     ],
   }).id("dut_create:shaft_furnace/fire_dragonegg")
   event.custom({
@@ -945,10 +942,7 @@ ServerEvents.recipes(event => {
       ShaftFurnaceDimension("minecraft:the_nether"),
       ShaftFurnaceItem("#dut_create:fire_dragonegg", 1, "input"),
       ShaftFurnaceItem("#forge:plates/gold", 24, "input"),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_red', 28, 0.75),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_green', 28, 0.75),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_bronze', 28, 0.75),
-      ShaftFurnaceItemChance('iceandfire:dragonscales_gray', 28, 0.75)
+      ShaftFurnaceItemChance('iceandfire:dragonscales_red', 72, 1)
     ],
   }).id("dut_create:shaft_furnace/fire_dragonegg_nether")
 })
