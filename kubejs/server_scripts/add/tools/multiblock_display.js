@@ -28,7 +28,6 @@ NetworkEvents.dataReceived("multiblockDisplay", event => {
         let keys = map.keySet()
         let value = ""
         let ivalue = ""
-        let istate = ""
         let count = 0
         for (let i of keys) {
             value = String(map.get(i))

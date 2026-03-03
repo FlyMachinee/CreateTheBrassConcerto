@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:stem_reaping_machine",
-        "time": 10,
+        "time": 5,
         "priority": 0,
         "hidden": true,
         "error": false,
@@ -87,7 +87,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:stem_reaping_machine",
-        "time": 10,
+        "time": 5,
         "priority": 1,
         "hidden": true,
         "error": false,
@@ -105,18 +105,18 @@ ServerEvents.recipes(event => {
         StemReapingItem("kubejs:aeronos_stem_piece", 16, "output"),
         StemReapingItemChance("kubejs:aeronos_stem_piece", 8, 0.5),
         StemReapingItemChance("kubejs:aeronos_cap_piece", 8, 0.5)
-    ], "aeronos_stem", 10)
+    ], "aeronos_stem", 5)
     StemReapingRecipe("ad_astra:strophar_stem", [
         StemReapingItem("kubejs:strophar_stem_piece", 16, "output"),
         StemReapingItemChance("kubejs:strophar_stem_piece", 8, 0.5),
         StemReapingItemChance("kubejs:strophar_cap_piece", 8, 0.5)
-    ], "strophar_stem", 10)
+    ], "strophar_stem", 5)
     StemReapingRecipe("minecraft:mushroom_stem", [
         StemReapingItem("kubejs:stem_silk", 16, "output"),
         StemReapingItemChance("kubejs:stem_silk", 8, 0.5),
         StemReapingItemChance("kubejs:red_mushroom_cap_piece", 8, 0.25),
         StemReapingItemChance("kubejs:brown_mushroom_cap_piece", 8, 0.25)
-    ], "mushroom_stem", 10)
+    ], "mushroom_stem", 5)
 
 
 })

@@ -6,6 +6,7 @@ ServerEvents.recipes(event => {
   //event.custom().id("dut_create:")
   //event.remove({ mod: '' })
   event.remove({ id: "beyonddimensions:schematicannon_pathway" })
+  event.remove({ id: 'beyonddimensions:net_restocker_item' })
   event.remove({ id: "beyonddimensions:ars_source_pathway" })
   event.remove({ id: "beyonddimensions:dimensional_connect_block" })
   event.remove({ id: "beyonddimensions:mana_pool_pathway" })
@@ -54,6 +55,20 @@ ServerEvents.recipes(event => {
     "result": { "item": "beyonddimensions:net_feeder_item" },
     "show_notification": true
   }).id("dut_create:beyonddimensions/net_feeder_item")
+  event.custom({
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "A": { "item": 'create:brass_funnel' },
+      "B": { "item": "beyonddimensions:net_interface" }
+    },
+    "pattern": [
+      "A",
+      "B"
+    ],
+    "result": { "item": 'beyonddimensions:net_restocker_item' },
+    "show_notification": true
+  }).id("dut_create:beyonddimensions/net_restocker_item")
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",

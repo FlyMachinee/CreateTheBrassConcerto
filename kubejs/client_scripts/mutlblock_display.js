@@ -57,3 +57,21 @@ PlayerEvents.tick(event => {
 		i1 = 360
 	})
 }
+/*
+let $Outliner = Java.loadClass("com.simibubi.create.foundation.outliner.Outliner")
+let $AllSpecialTextures = Java.loadClass('com.simibubi.create.AllSpecialTextures')
+BlockEvents.rightClicked('kubejs:emergency_industrial_platform', event => {
+	if (!event.level.isClientSide()) { return }
+	let liner = new $Outliner()
+	let b = event.block
+	let e = b.getEntity()
+	let area = AABB.ofBlock(b.pos).expandTowards(6, 6, 6).expandTowards(-1, -1, -1)
+	Client.scheduleRepeatingInTicks(120, ev => {
+		liner.showAABB(e, area)
+			.withFaceTextures($AllSpecialTextures.CHECKERED, $AllSpecialTextures.HIGHLIGHT_CHECKERED)
+			.colored(0x708090)
+			.disableLineNormals()
+			.lineWidth(0.7)
+	})
+})
+*/

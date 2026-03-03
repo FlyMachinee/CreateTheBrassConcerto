@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:cap_reaping_machine",
-        "time": 10,
+        "time": 5,
         "priority": 0,
         "hidden": true,
         "error": false,
@@ -87,7 +87,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:cap_reaping_machine",
-        "time": 10,
+        "time": 5,
         "priority": 1,
         "hidden": true,
         "error": false,
@@ -106,25 +106,25 @@ ServerEvents.recipes(event => {
         CapReapingItemChance("kubejs:aeronos_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:aeronos_stem_piece", 8, 0.5),
         CapReapingItemChance("ad_astra:aeronos_mushroom", 1, 0.25),
-    ], "aeronos_cap", 10)
+    ], "aeronos_cap", 5)
     CapReapingRecipe("ad_astra:strophar_cap", [
         CapReapingItem("kubejs:strophar_cap_piece", 16, "output"),
         CapReapingItemChance("kubejs:strophar_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:strophar_stem_piece", 8, 0.5),
         CapReapingItemChance("ad_astra:strophar_mushroom", 1, 0.25),
-    ], "strophar_cap", 10)
+    ], "strophar_cap", 5)
 
     CapReapingRecipe("minecraft:red_mushroom_block", [
         CapReapingItem("kubejs:red_mushroom_cap_piece", 16, "output"),
         CapReapingItemChance("kubejs:red_mushroom_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:stem_silk", 8, 0.5),
         CapReapingItemChance("minecraft:red_mushroom", 1, 0.25),
-    ], "red_mushroom_block", 10)
+    ], "red_mushroom_block", 5)
     CapReapingRecipe("minecraft:brown_mushroom_block", [
         CapReapingItem("kubejs:brown_mushroom_cap_piece", 16, "output"),
         CapReapingItemChance("kubejs:brown_mushroom_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:stem_silk", 8, 0.5),
         CapReapingItemChance("minecraft:brown_mushroom", 1, 0.25),
-    ], "brown_mushroom_block", 10)
+    ], "brown_mushroom_block", 5)
 
 })

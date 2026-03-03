@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:carborundum" },
       { "item": "kubejs:carborundum" },
       { "item": "kubejs:carborundum" },
-      { "item": "kubejs:blaze_chlamydia" }
+      { "tag": "dut_create:shaft_furnace" }
     ],
     "results": [
       { "item": "kubejs:graphene_coil", "count": 4 }
@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:graphite" },
       { "item": "kubejs:silicon_plate" },
       { "item": "kubejs:silicon_plate" },
-      { "item": "kubejs:blaze_chlamydia" }
+      { "tag": "dut_create:shaft_furnace" }
     ],
     "results": [
       { "item": "kubejs:carborundum", "count": 4 },
@@ -74,7 +74,7 @@ ServerEvents.recipes(event => {
     "secondaryFluidOutput": 0,
     "ingredients": [
       { "fluid": "minecraft:water", "amount": 1000 },
-      { "item": "kubejs:blaze_chlamydia" },
+      { "tag": "dut_create:shaft_furnace" },
       { "item": "kubejs:carborundum" }
     ],
     "results": [
@@ -92,7 +92,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:graphene_coil" },
       { "item": "kubejs:graphene_coil" },
       { "amount": 250, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:thick" } },
-      { "item": "kubejs:blaze_chlamydia" }
+      { "tag": "dut_create:shaft_furnace" }
     ],
     "results": [
       { "item": "kubejs:fiber_fabric", "count": 3 }

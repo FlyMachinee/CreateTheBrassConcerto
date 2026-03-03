@@ -1,0 +1,3 @@
+#是否在替换方块的时候保留方块状态
+extendedBlockProperty = true
+

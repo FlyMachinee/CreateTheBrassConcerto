@@ -468,7 +468,7 @@ ServerEvents.recipes(event => {
         "type": "create:deploying",
         "ingredients": [
           { "item": "kubejs:rocket_gyro" },
-          { "item": "kubejs:tin_hard_disk", "nbt": { Damage: 0 } }
+          { "item": "kubejs:parts_box" }
         ],
         "results": [{ "item": "kubejs:rocket_gyro" }]
       }

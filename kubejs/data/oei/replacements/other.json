@@ -216,8 +216,7 @@
             "create_sa:small_fueling_tank",
             "create_sa:medium_fueling_tank",
             "create_sa:small_filling_tank",
-            "create_sa:medium_filling_tank",
-            "create:fluid_valve"
+            "create_sa:medium_filling_tank"
         ],
         "resultItems": "kubejs:unknown_prototype"
     }

@@ -12,6 +12,8 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'createaddition:crafting/electrum_nugget' })
   event.remove({ id: 'createaddition:crafting/electrum_spool' })
   event.remove({ id: 'createaddition:crafting/large_connector_electrum' })
+  event.remove({ id: "createaddition:rolling/electrum_ingot" })
+  event.remove({ id: "createaddition:rolling/electrum_plate" })
   event.custom({
     "type": "minecraft:crafting_shapeless",
     "ingredients": [{ "item": "createaddition:biomass_pellet_block" }],

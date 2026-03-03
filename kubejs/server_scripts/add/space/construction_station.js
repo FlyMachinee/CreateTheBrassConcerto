@@ -225,10 +225,8 @@ ServerEvents.recipes(event => {
       ConstructionStationItem('iceandfire:fire_dragon_flesh', 6, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_blood', 8, "input"),
       ConstructionStationFluid("kubejs:gold", 810),
-      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.75),
-      ConstructionStationItemChance('iceandfire:dragonegg_green', 1, 0.75),
-      ConstructionStationItemChance('iceandfire:dragonegg_bronze', 1, 0.75),
-      ConstructionStationItemChance('iceandfire:dragonegg_gray', 1, 0.75)
+      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 1),
+      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.5)
     ],
   }).id("dut_create:construction_station/fire_dragonegg_nether")
   event.custom({
@@ -244,12 +242,10 @@ ServerEvents.recipes(event => {
       ConstructionStationItem('iceandfire:fire_dragon_heart', 4, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_flesh', 6, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_blood', 8, "input"),
-      ConstructionStationFluid("kubejs:covariant_heat", 64),
+      ConstructionStationFluid("kubejs:covariant_heat", 250),
       ConstructionStationFluid("kubejs:gold", 810),
-      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.375),
-      ConstructionStationItemChance('iceandfire:dragonegg_green', 1, 0.375),
-      ConstructionStationItemChance('iceandfire:dragonegg_bronze', 1, 0.375),
-      ConstructionStationItemChance('iceandfire:dragonegg_gray', 1, 0.375)
+      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 1),
+      ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.5)
     ],
   }).id("dut_create:construction_station/fire_dragonegg")
   event.custom({

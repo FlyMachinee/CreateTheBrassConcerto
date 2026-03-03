@@ -165,7 +165,7 @@
 							}
 							RepairCost: 0
 							display: {
-								Name: "{\"text\":\"永恒超级加热燃烧室\"}"
+								Name: "{\"translate\":\"item.kubejs.infinity_superheated_blaze_burner\"}"
 							}
 						}
 					}

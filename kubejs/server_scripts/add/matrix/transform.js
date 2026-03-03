@@ -64,7 +64,7 @@ PlayerEvents.chat(event => {
 //ascii[str[i]]||"Invaild"
 ItemEvents.firstRightClicked('kubejs:matrix_2', event => {
     if (event.item.nbt?.ascii != 1) { return }
-    let matrix = JSON.parse(String(event.player.mainHandItem.nbt?.matrix) || "[[[0.0, 0.0], [0.0, 0.0]]]")
+    let matrix = JSON.parse(String(event.item.nbt?.matrix) || "[[[0.0, 0.0], [0.0, 0.0]]]")
     let char = ""
     for (let i = 0; i < matrix.length; i++) {
         char += String.fromCharCode(validCharCode(matrix2x2del(matrix[i])))
@@ -73,7 +73,7 @@ ItemEvents.firstRightClicked('kubejs:matrix_2', event => {
     eval(char)
     event.level.playSound(null, event.player.x, event.player.y, event.player.z, "minecraft:block.enchantment_table.use", "players", 0.6, 1)
     event.player.swing()
-    event.player.mainHandItem.shrink(1)
+    event.item.shrink(1)
 })
 function newNet(player) {
     if (DimensionsNet.getNetFromPlayer(player) == null) {

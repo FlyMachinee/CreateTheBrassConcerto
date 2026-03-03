@@ -293,7 +293,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: -0.5d
+			y: -2.5d
 		}
 		{
 			disable_toast: true
@@ -311,7 +311,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 0.5d
+			y: -1.5d
 		}
 		{
 			disable_toast: true
@@ -345,7 +345,7 @@
 				item: { Count: 64, id: "minecraft:hay_block" }
 				type: "item"
 			}]
-			x: -6.0d
+			x: -5.0d
 			y: -2.5d
 		}
 		{
@@ -362,7 +362,7 @@
 				item: "minecraft:carrot"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -5.0d
 			y: -0.5d
 		}
 		{
@@ -379,7 +379,7 @@
 				item: "minecraft:potato"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -5.0d
 			y: 0.5d
 		}
 		{
@@ -396,7 +396,7 @@
 				item: "minecraft:beetroot"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -5.0d
 			y: -1.5d
 		}
 		{
@@ -414,7 +414,7 @@
 				item: "minecraft:beef"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -6.0d
 			y: 1.5d
 		}
 		{
@@ -432,7 +432,7 @@
 				item: "minecraft:mutton"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -6.0d
 			y: -2.5d
 		}
 		{
@@ -450,7 +450,7 @@
 				item: "minecraft:chicken"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -6.0d
 			y: -1.5d
 		}
 		{
@@ -468,7 +468,7 @@
 				item: "minecraft:porkchop"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -6.0d
 			y: -0.5d
 		}
 		{
@@ -486,7 +486,7 @@
 				item: "minecraft:rabbit"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -6.0d
 			y: 0.5d
 		}
 		{
@@ -499,12 +499,12 @@
 				type: "item"
 			}]
 			tasks: [{
-				count: 256L
+				count: 64L
 				id: "25EBB933FC02DB1C"
 				item: "minecraft:cod"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -7.0d
 			y: -2.5d
 		}
 		{
@@ -517,12 +517,12 @@
 				type: "item"
 			}]
 			tasks: [{
-				count: 256L
+				count: 64L
 				id: "51DD0E4A9ED74C10"
 				item: "minecraft:salmon"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -6.0d
 			y: 2.5d
 		}
 		{
@@ -535,12 +535,12 @@
 				type: "item"
 			}]
 			tasks: [{
-				count: 256L
+				count: 64L
 				id: "5D3F5BF5DAA969B3"
 				item: "minecraft:tropical_fish"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -7.0d
 			y: -1.5d
 		}
 		{
@@ -553,12 +553,12 @@
 				type: "item"
 			}]
 			tasks: [{
-				count: 256L
+				count: 64L
 				id: "42E55DB2001131F7"
 				item: "minecraft:pufferfish"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -7.0d
 			y: -0.5d
 		}
 		{
@@ -576,7 +576,7 @@
 				item: "minecraft:melon"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -5.0d
 			y: 2.5d
 		}
 		{
@@ -594,62 +594,8 @@
 				item: "minecraft:pumpkin"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 1.5d
-		}
-		{
-			disable_toast: true
-			id: "3D077870F0EDC501"
-			rewards: [{
-				count: 8
-				id: "192926075BF8C764"
-				item: "kubejs:coin_iron"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "3F9BF6760D8EA2B7"
-				item: "minecraft:slime_block"
-				type: "item"
-			}]
 			x: -5.0d
-			y: -2.5d
-		}
-		{
-			disable_toast: true
-			id: "6608D92664F017B9"
-			rewards: [{
-				count: 8
-				id: "60AC2C24AEED88F8"
-				item: "kubejs:coin_iron"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "1C83646922C52B6E"
-				item: "minecraft:honeycomb_block"
-				type: "item"
-			}]
-			x: -8.0d
 			y: 1.5d
-		}
-		{
-			disable_toast: true
-			id: "09D463BE99766CFE"
-			rewards: [{
-				count: 8
-				id: "5FD8583398E4604B"
-				item: "kubejs:coin_iron"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "2D1D8193F7F8F1C2"
-				item: "minecraft:honey_block"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 0.5d
 		}
 		{
 			disable_toast: true
@@ -683,8 +629,8 @@
 				item: "create:experience_block"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 2.5d
+			x: -4.0d
+			y: 0.5d
 		}
 		{
 			disable_toast: true
@@ -822,40 +768,6 @@
 			y: 2.5d
 		}
 		{
-			disable_toast: true
-			id: "6923A99EF5F2E464"
-			rewards: [{
-				id: "7EE3F71878352BD5"
-				item: "kubejs:coin_gold"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "71C6446B189838B4"
-				item: "minecraft:redstone_block"
-				type: "item"
-			}]
-			x: -4.0d
-			y: -1.5d
-		}
-		{
-			disable_toast: true
-			id: "03671020CDB75BB5"
-			rewards: [{
-				id: "65433FBD6C0CBC62"
-				item: "kubejs:coin_gold"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "30251F77C888C973"
-				item: "minecraft:glowstone"
-				type: "item"
-			}]
-			x: -4.0d
-			y: -2.5d
-		}
-		{
 			description: ["{ftbquests.chapter_0427CC1C17E74AE4.quest_6F9B29ABDF98A682.desc_01}"]
 			disable_toast: true
 			icon: "create:blaze_burner"
@@ -958,50 +870,8 @@
 				item: "kubejs:tin_block"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 1.5d
-		}
-		{
-			disable_toast: true
-			id: "3DB5E168452AE929"
-			rewards: [
-				{
-					count: 8
-					id: "24A441F41B7421DB"
-					item: "kubejs:coin_diamond"
-					type: "item"
-				}
-				{
-					id: "40EFF8D43773A32B"
-					item: "kubejs:coin_emerald"
-					type: "item"
-				}
-			]
-			tasks: [{
-				count: 64L
-				id: "7B6DFCA77A3E0FED"
-				item: "ad_astra:steel_block"
-				type: "item"
-			}]
-			x: -5.0d
+			x: -4.0d
 			y: -0.5d
-		}
-		{
-			disable_toast: true
-			id: "2FFA678E5BB063F8"
-			rewards: [{
-				id: "532999D66EE610C9"
-				item: "kubejs:coin_emerald"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "409DCBA56A872949"
-				item: "minecraft:netherite_block"
-				type: "item"
-			}]
-			x: -5.0d
-			y: -1.5d
 		}
 		{
 			disable_toast: true
@@ -1078,60 +948,6 @@
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_7B7B718155FDC618.title}"
 			x: 0.0d
 			y: -5.0d
-		}
-		{
-			disable_toast: true
-			id: "69CA18BE9C841868"
-			rewards: [{
-				count: 4
-				id: "3D944E917876430F"
-				item: "kubejs:coin_gold"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "000D11C609C431D7"
-				item: "createloveandwar:slime_resin_block"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 2.5d
-		}
-		{
-			disable_toast: true
-			id: "44BCBAC51D75A648"
-			rewards: [{
-				count: 4
-				id: "4EBD496A82D20AF0"
-				item: "kubejs:coin_gold"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "532B78FC01309CFB"
-				item: "createloveandwar:block_of_polymer"
-				type: "item"
-			}]
-			x: -9.0d
-			y: -2.5d
-		}
-		{
-			disable_toast: true
-			id: "2B67CA3529097949"
-			rewards: [{
-				count: 6
-				id: "5C03F36685371706"
-				item: "kubejs:coin_gold"
-				type: "item"
-			}]
-			tasks: [{
-				count: 64L
-				id: "6954A01D78673A1E"
-				item: "createloveandwar:block_of_duraplas"
-				type: "item"
-			}]
-			x: -9.0d
-			y: -1.5d
 		}
 		{
 			disable_toast: true
@@ -1231,7 +1047,7 @@
 			icon: "createloveandwar:caseless_bullet"
 			id: "614AF8CA31BE90F4"
 			rewards: [{
-				count: 16
+				count: 64
 				id: "6FA299BFBF5D0344"
 				item: "createloveandwar:caseless_bullet"
 				type: "item"
