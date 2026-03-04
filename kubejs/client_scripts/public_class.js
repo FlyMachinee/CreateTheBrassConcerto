@@ -33,3 +33,7 @@ const $TransformStack = Java.loadClass('com.jozufozu.flywheel.util.transform.Tra
 const $AttachFace = Java.loadClass('net.minecraft.world.level.block.state.properties.AttachFace');
 const $AngleHelper = Java.loadClass('com.simibubi.create.foundation.utility.AngleHelper');
 const $OverlayTexture = Java.loadClass('net.minecraft.client.renderer.texture.OverlayTexture');
+const $RenderSystem = Java.loadClass('com.mojang.blaze3d.systems.RenderSystem');
+const $PoseStack = Java.loadClass('com.mojang.blaze3d.vertex.PoseStack');
+const $EnderDragon = Java.loadClass('net.minecraft.world.entity.boss.enderdragon.EnderDragon');
+const $EntityType = Java.loadClass('net.minecraft.world.entity.EntityType');
