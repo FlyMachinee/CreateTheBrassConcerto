@@ -62,11 +62,7 @@ JEIAddedEvents.registerCategories((event) => {
       }
     });
 
-    const buttonX = 10;
-    const buttonY = 10;
-    const buttonWidth = 30;
-    const buttonHeight = 14;
-    let toggle = false;
+    const toggleButton = new ToggleButton(10, 10, 30, 14, Text.translate('kubejs.jeiaddition.spin'));
 
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       // 圆形大阴影
@@ -124,29 +120,8 @@ JEIAddedEvents.registerCategories((event) => {
         true
       );
 
-      // 渲染重置按钮
-      $Internal
-        .getTextures()
-        .getButtonForState(
-          toggle,
-          true,
-          mouseX >= buttonX &&
-            mouseX < buttonX + buttonWidth &&
-            mouseY >= buttonY &&
-            mouseY < buttonY + buttonHeight
-        ) // pressed, enabled, hovered
-        .draw(graphics, buttonX, buttonY, buttonWidth, buttonHeight); // x, y, width, height
-
-      // 按钮文本
-      drawCenteredString(
-        graphics,
-        Client.font,
-        Text.translate('kubejs.jeiaddition.spin'),
-        buttonX + buttonWidth / 2,
-        buttonY + buttonHeight / 2 - Client.font.lineHeight / 2,
-        0xffffff,
-        true
-      );
+      // 渲染旋转按钮
+      toggleButton.draw(recipe, graphics, mouseX, mouseY);
 
       const scale = 20;
 
@@ -165,7 +140,7 @@ JEIAddedEvents.registerCategories((event) => {
       matrixStack.translate(scale / 2, 0, scale / 2);
       matrixStack.mulPose(
         $Axis.YP.rotationDegrees(
-          y_axis_angle + (toggle ? ($AnimationTickHolder.getRenderTime() * 2) % 360 : 0)
+          y_axis_angle + (toggleButton.getState() ? ($AnimationTickHolder.getRenderTime() * 2) % 360 : 0)
         )
       );
       matrixStack.translate(-scale / 2, 0, -scale / 2);
@@ -266,7 +241,15 @@ JEIAddedEvents.registerCategories((event) => {
 
         const extraRender = () => {
           if (typeof block_info !== 'string' && 'extra' in block_info) {
-            block_info.extra(graphics, lighting, coordinates[0], coordinates[1], coordinates[2], scale, toggle);
+            block_info.extra(
+              graphics,
+              lighting,
+              coordinates[0],
+              coordinates[1],
+              coordinates[2],
+              scale,
+              toggleButton.getState()
+            );
           }
         };
 
@@ -301,30 +284,7 @@ JEIAddedEvents.registerCategories((event) => {
 
     // 处理输入事件
     category.setInputHandler((recipe, mouseX, mouseY, input) => {
-      if (
-        !(
-          mouseX >= buttonX &&
-          mouseX < buttonX + buttonWidth &&
-          mouseY >= buttonY &&
-          mouseY < buttonY + buttonHeight
-        )
-      ) {
-        return false;
-      }
-
-      if (input !== $InputConstants.Type.MOUSE.getOrCreate(0)) {
-        return false;
-      }
-
-      // 音效
-      $Minecraft
-        .getInstance()
-        .getSoundManager()
-        .play($SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25));
-
-      toggle = !toggle;
-
-      return true;
+      return toggleButton.handleInput(recipe, mouseX, mouseY, input);
     });
   });
 });
