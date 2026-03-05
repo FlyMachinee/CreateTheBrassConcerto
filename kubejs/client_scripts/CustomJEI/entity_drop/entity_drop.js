@@ -12,6 +12,29 @@ JEIAddedEvents.registerRecipes((event) => {
   const typeId = new ResourceLocation('dut_create', 'entity_drop');
   const recipeBuilder = event.custom(typeId);
 
+  const renderSalineWater = (graphics) => {
+    const matrixStack = graphics.pose();
+    matrixStack.pushPose();
+
+    // 渲染像素偏移
+    matrixStack.translate(30.5, 53, 50);
+
+    // 渲染轴旋转
+    matrixStack.mulPose($Axis.XP.rotationDegrees(-15.5));
+    matrixStack.mulPose($Axis.YP.rotationDegrees(22.5));
+
+    $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
+      Block.getBlock('kubejs:saline_water')
+        .defaultBlockState()
+    )
+      .scale(30)
+      .atLocal(0, 1, 0)
+      .lighting($AnimatedKinetics.DEFAULT_LIGHTING)
+      .render(graphics);
+
+    matrixStack.popPose();
+  };
+
   // 添加配方
   const dropData = [
     {
@@ -33,6 +56,7 @@ JEIAddedEvents.registerRecipes((event) => {
         'kubejs.jeiaddition.entity_drop.slime.extra_info1',
         'kubejs.jeiaddition.entity_drop.slime.extra_info2',
       ],
+      extraRender: renderSalineWater,
     },
     {
       entityId: 'minecraft:magma_cube',
@@ -47,6 +71,7 @@ JEIAddedEvents.registerRecipes((event) => {
         'kubejs.jeiaddition.entity_drop.slime.extra_info1',
         'kubejs.jeiaddition.entity_drop.slime.extra_info2',
       ],
+      extraRender: renderSalineWater,
     },
   ];
 
