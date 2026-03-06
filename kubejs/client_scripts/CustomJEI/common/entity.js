@@ -76,7 +76,7 @@ const drawEntity = (guiGraphics, x, y, scale, yaw, pitch, livingEntity) => {
   entityRenderDispatcher.setRenderShadow(false);
   const bufferSource = $Minecraft.getInstance().renderBuffers().bufferSource();
   $RenderSystem.runAsFancy(() => {
-    entityRenderDispatcher.render(livingEntity, 0, 0, 0, 0, 1, mobPoseStack, bufferSource, 15728880);
+    entityRenderDispatcher.render(livingEntity, 0, 0, 0, 0, 1, mobPoseStack, bufferSource, $LightTexture.FULL_BRIGHT);
   });
   bufferSource.endBatch();
   entityRenderDispatcher.setRenderShadow(true);
