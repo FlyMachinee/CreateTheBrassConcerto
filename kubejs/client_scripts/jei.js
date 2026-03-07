@@ -24,7 +24,6 @@ JEIEvents.hideItems(event => {
         'createloveandwar:ethylene_bucket',
         'createloveandwar:polymer_bucket',
         'createloveandwar:duraplas_bucket',
-        "createloveandwar:propellant_sheet",
     ])
     event.hide([
         "createloveandwar:pistol_bullet_ap",
@@ -86,6 +85,7 @@ JEIEvents.addFluids(event => {
 })
 JEIEvents.addItems(event => {
     event.add([
+        "kubejs:unknown_prototype",
         "create:copper_nugget",
         "create:iron_sheet"
     ])

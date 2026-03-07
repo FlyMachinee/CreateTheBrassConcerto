@@ -1,2 +1,0 @@
-#1D5 ad_astra:orbit
-#3DC minecraft:plains

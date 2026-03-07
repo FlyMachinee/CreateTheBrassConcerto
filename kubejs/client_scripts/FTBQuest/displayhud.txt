@@ -1,0 +1,6 @@
+let $ClientQuestFile = Java.loadClass('dev.ftb.mods.ftbquests.client.ClientQuestFile')
+let $Long=Java.loadClass("java.lang.Long")
+FTBQuestsEvents.completed("0D782C4C1D0AE24D", event => {
+    $ClientQuestFile.openGui($ClientQuestFile.INSTANCE.getQuest($Long.parseLong("0D782C4C1D0AE24D", 16)),true)
+})
+//$ClientQuestFile.openGui($ClientQuestFile.INSTANCE.getQuest($Long.parseLong(ftb_id, 16)),true)

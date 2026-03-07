@@ -4,6 +4,7 @@ ServerEvents.recipes(event => {
   //event.remove({id: ''})
   //event.remove({input: ''})
   //event.custom({})
+  event.remove({ id: "createdieselgenerators:basin_fermenting/fermented_spider_eye" })
   //木屑
   event.remove({ id: "createdieselgenerators:crushing/wood_chip_planks" })
 

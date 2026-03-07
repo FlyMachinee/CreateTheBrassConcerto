@@ -1,3 +1,0 @@
-#1A6 dut:chromatic_agros
-#008 minecraft:desert
-#5E9 dut:thalassgel

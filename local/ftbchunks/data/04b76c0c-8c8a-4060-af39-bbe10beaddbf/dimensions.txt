@@ -1,3 +1,0 @@
-minecraft:overworld
-dut:ocean_song
-dut:slimeria

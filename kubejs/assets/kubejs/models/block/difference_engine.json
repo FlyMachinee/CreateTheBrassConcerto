@@ -1,12 +1,12 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "kubejs:block/spruce",
+		"0": "kubejs:block/other/spruce",
 		"1": "kubejs:block/steel",
-		"2": "kubejs:block/stone",
-		"5": "kubejs:block/brass_block",
+		"2": "kubejs:block/other/stone",
+		"5": "kubejs:block/other/brass_block",
 		"6": "kubejs:block/slime_steel",
-		"particle": "kubejs:block/brass_block"
+		"particle": "kubejs:block/other/brass_block"
 	},
 	"elements": [
 		{

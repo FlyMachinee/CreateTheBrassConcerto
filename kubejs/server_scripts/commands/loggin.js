@@ -35,6 +35,9 @@ PlayerEvents.loggedIn(event => {
     if (pdata.needRespawn) {
         p.persistentData.needRespawn = false
         p.setGameMode("survival")
+        p.setHealth(p.maxHealth)
+        p.setFoodLevel(20)
+        p.setSaturation(3)
         let LastPoint = p.persistentData.teleport.lastpoint
         p.teleportTo(LastPoint.dimension, LastPoint.pos.x, LastPoint.pos.y, LastPoint.pos.z, p.YRot, p.XRot)
     }
@@ -45,10 +48,8 @@ ItemEvents.rightClicked("stick", event => {
         return
     }
     let p = event.player
-    
-    let l=event.server.getLevel('ad_astra:moon')
-    p.tell(l.getBlock(p.x,p.y,p.z).id.toString())
-    
     p.tell(p.persistentData)
+    p.tell(p.getRespawnPosition()||{ x: 0, y: 0, z: 0 })
+    p.tell(p.getRespawnDimension().location() || "minecraft:overworld")
 })
     */

@@ -262,7 +262,7 @@ ServerEvents.recipes(event => {
   const FluidSold = [
     { "id": "kubejs:nitrogen_fertilizer", "amount": 32000, "value": 4096 },
     { "id": "kubejs:lube_oil", "amount": 32000, "value": 640 },
-    { "id": "kubejs:drilling_fluid", "amount": 32000, "value": 1024 },
+    { "id": "kubejs:drilling_fluid", "amount": 32000, "value": 512 },
     { "id": "kubejs:chromatic_waste", "amount": 32000, "value": 32768 },
     { "id": "kubejs:ammonia", "amount": 32000, "value": 2000 },
     { "id": "kubejs:cola_puree", "amount": 32000, "value": 32768 },

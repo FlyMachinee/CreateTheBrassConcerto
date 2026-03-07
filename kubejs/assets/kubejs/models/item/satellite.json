@@ -1,7 +1,7 @@
 {
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "kubejs:block/slate",
+		"2": "kubejs:block/other/slate",
 		"5": "kubejs:item/satellite_main_up",
 		"6": "kubejs:item/satellite_board"
 	},

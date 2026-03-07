@@ -1,11 +1,11 @@
 {
 	"textures": {
-		"1": "kubejs:block/slate",
-		"2": "kubejs:block/spruce",
+		"1": "kubejs:block/other/slate",
+		"2": "kubejs:block/other/spruce",
 		"3": "kubejs:block/steel",
 		"5": "kubejs:block/white_steel",
-		"8": "kubejs:block/netherite",
-		"particle": "kubejs:block/spruce"
+		"8": "kubejs:block/other/netherite",
+		"particle": "kubejs:block/other/spruce"
 	},
 	"display": {
         "gui": {

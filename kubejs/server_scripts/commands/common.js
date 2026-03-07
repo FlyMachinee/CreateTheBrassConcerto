@@ -6,8 +6,8 @@ ServerEvents.commandRegistry(event => {
             /**@type {Internal.ServerPlayer} */
             let p = result.source.player
             if (p == null) { return 0 }
-            let Location = p.getRespawnPosition()
-            let TargetDimension = p.getRespawnDimension().location()
+            let Location = p.getRespawnPosition() || { x: p.serverLevel().levelData.getXSpawn(), y: p.serverLevel().levelData.getYSpawn(), z: p.serverLevel().levelData.getZSpawn() }
+            let TargetDimension = p.getRespawnDimension().location() || p.serverLevel().dimension.toString()
             let OriginDimension = p.level.dimension.toString()
             if (DimensionToPlanet[TargetDimension.toString()] != DimensionToPlanet[OriginDimension]) {
                 if (!isCuriosEmpty(p.nbt.ForgeCaps["curios:inventory"].Curios) || !p.inventory.isEmpty()) {
@@ -415,7 +415,7 @@ ServerEvents.commandRegistry(event => {
                     let p = result.source.player
                     if (p == null) { return 0 }
                     let dimensionString = event.arguments.DIMENSION.getResult(result, "dimension").dimension.toString()
-                    if (!AllPlanet.some(i=>i==dimensionString)){
+                    if (!AllPlanet.some(i => i == dimensionString)) {
                         return 0
                     }
                     let TargetDimension = DimensionToOrbit[dimensionString]
@@ -466,7 +466,6 @@ ServerEvents.commandRegistry(event => {
         )
     )
     //OutLiner
-    
     //eval
     /*
     event.dispatcher.register(event.commands.literal('eval')

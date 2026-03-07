@@ -275,6 +275,18 @@ ServerEvents.recipes(event => {
     "ticks": 20,
     "vein_id": "createoreexcavation:ore_vein_type/lapis"
   }).id("dut_create:drilling/lapis")
+  //绿宝石
+  event.custom({
+    "type": "createoreexcavation:drilling",
+    "drill": { "tag": "dut_create:drills" },
+    "output": [
+      { "item": "minecraft:emerald", "count": 4 }
+    ],
+    "priority": 0,
+    "stress": 384,
+    "ticks": 20,
+    "vein_id": "createoreexcavation:ore_vein_type/emerald"
+  }).id("dut_create:drilling/emerald")
   //
   //event.custom({"type": "createoreexcavation:drilling","drill": {"tag": "dut_create:drills"},"output": [{"item": "minecraft:","count":4},{"item": "minecraft:","count":4,"chance":0.25}],"priority": 0,"stress": 96,"ticks": 300,"vein_id": "dut_create:ore_vein_type/"}).id("dut_create:drilling/")
   //

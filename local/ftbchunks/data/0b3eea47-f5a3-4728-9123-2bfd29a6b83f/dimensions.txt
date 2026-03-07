@@ -1,3 +1,0 @@
-minecraft:overworld
-dut:slimeria
-minecraft:the_nether
