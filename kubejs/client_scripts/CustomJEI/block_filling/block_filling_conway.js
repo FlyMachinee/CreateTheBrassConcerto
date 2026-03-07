@@ -36,22 +36,6 @@ JEIAddedEvents.registerRecipes((event) => {
 });
 
 /**
- * @param {number} p 概率生成1的概率
- */
-const bernoulli = (p) => {
-  return Math.random() < p ? 1 : 0;
-};
-
-/**
- * @param {number} min
- * @param {number} max
- * @returns {number} 生成[min, max]之间的随机整数
- */
-const randBetween = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-/**
  * 生成一个随机的3x3x3张量，元素为0、1、2
  *
  * 0: air, 1: cap, 2: stem
