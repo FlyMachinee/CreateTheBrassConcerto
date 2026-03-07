@@ -36,22 +36,6 @@ JEIAddedEvents.registerRecipes((event) => {
 });
 
 /**
- * @param {number} p 概率生成1的概率
- */
-const bernoulli = (p) => {
-  return Math.random() < p ? 1 : 0;
-};
-
-/**
- * @param {number} min
- * @param {number} max
- * @returns {number} 生成[min, max]之间的随机整数
- */
-const randBetween = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-/**
  * 生成一个随机的3x3x3张量，元素为0、1、2
  *
  * 0: air, 1: cap, 2: stem
@@ -239,6 +223,20 @@ JEIAddedEvents.registerCategories((event) => {
     const buttonWidth = 30;
     const buttonHeight = 14;
     const allowIdenticalCount = 3;
+    const clickButton = new ClickButton(
+      buttonX,
+      buttonY,
+      buttonWidth,
+      buttonHeight,
+      Text.translate('kubejs.jeiaddition.reset')
+    );
+
+    clickButton.setEnableCallback((recipe) => animatedData.has(recipe.recipeData.innerId));
+    clickButton.onClick((recipe) => {
+      // 强制设置张量为重复状态，在下一个周期开始时将重置
+      animatedData.get(recipe.recipeData.innerId).identicalCount = allowIdenticalCount;
+      return true;
+    });
 
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       const recipeData = recipe.recipeData;
@@ -268,28 +266,7 @@ JEIAddedEvents.registerCategories((event) => {
       }
 
       // 渲染重置按钮
-      $Internal
-        .getTextures()
-        .getButtonForState(
-          false,
-          true,
-          mouseX >= buttonX &&
-            mouseX < buttonX + buttonWidth &&
-            mouseY >= buttonY &&
-            mouseY < buttonY + buttonHeight
-        ) // pressed, enabled, hovered
-        .draw(graphics, buttonX, buttonY, buttonWidth, buttonHeight); // x, y, width, height
-
-      // 按钮文本
-      drawCenteredString(
-        graphics,
-        Client.font,
-        Text.translate('kubejs.jeiaddition.reset'),
-        buttonX + buttonWidth / 2,
-        buttonY + buttonHeight / 2 - Client.font.lineHeight / 2,
-        0xffffff,
-        true
-      );
+      clickButton.draw(recipe, graphics, mouseX, mouseY);
 
       // 比例文本
       drawRightAlignedString(
@@ -392,35 +369,7 @@ JEIAddedEvents.registerCategories((event) => {
 
     // 处理输入事件
     category.setInputHandler((recipe, mouseX, mouseY, input) => {
-      if (
-        !(
-          mouseX >= buttonX &&
-          mouseX < buttonX + buttonWidth &&
-          mouseY >= buttonY &&
-          mouseY < buttonY + buttonHeight
-        )
-      ) {
-        return false;
-      }
-
-      if (input !== $InputConstants.Type.MOUSE.getOrCreate(0)) {
-        return false;
-      }
-
-      if (!animatedData.has(recipe.recipeData.innerId)) {
-        return false;
-      }
-
-      // 音效
-      $Minecraft
-        .getInstance()
-        .getSoundManager()
-        .play($SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25));
-
-      // 强制设置张量为重复状态，在下一个周期开始时将重置
-      animatedData.get(recipe.recipeData.innerId).identicalCount = allowIdenticalCount;
-
-      return true;
+      return clickButton.handleInput(recipe, mouseX, mouseY, input);
     });
   });
 });
