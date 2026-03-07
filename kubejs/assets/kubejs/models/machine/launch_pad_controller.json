@@ -3,8 +3,8 @@
 	"textures": {
 		"0": "kubejs:block/rocket_controller/controllerbase",
 		"1": "kubejs:block/rocket_controller/texture",
-		"2": "kubejs:block/spruce",
-		"3": "kubejs:block/axis",
+		"2": "kubejs:block/other/spruce",
+		"3": "kubejs:block/other/axis",
 		"4": "kubejs:block/rocket_controller/screen",
 		"particle": "kubejs:block/rocket_controller/controllerbase"
 	},

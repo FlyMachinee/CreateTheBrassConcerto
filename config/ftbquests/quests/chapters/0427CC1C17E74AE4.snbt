@@ -1166,7 +1166,7 @@
 				item: "kubejs:coin_gold"
 				type: "item"
 			}]
-			title: "苔藓块"
+			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_2565ADC8A615E2CD.title}"
 			x: -1.0d
 			y: -5.0d
 		}

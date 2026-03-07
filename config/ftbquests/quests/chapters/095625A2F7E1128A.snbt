@@ -65,7 +65,7 @@
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_13C620410D54B082.title}"
 			x: -4.0d
-			y: -2.0d
+			y: -1.5d
 		}
 		{
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_23FCF6DA7824526A.desc_01}"]
@@ -93,7 +93,7 @@
 				type: "item"
 			}]
 			x: -2.5d
-			y: -1.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["1C2F0F2DE7D882E5"]
@@ -104,8 +104,8 @@
 				item: "createdieselgenerators:pumpjack_bearing"
 				type: "item"
 			}]
-			x: 1.0d
-			y: -2.0d
+			x: 0.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["6CE80217F2F61E53"]
@@ -130,7 +130,7 @@
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_1C2F0F2DE7D882E5.title}"
 			x: -0.5d
-			y: -1.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["1C2F0F2DE7D882E5"]
@@ -141,8 +141,8 @@
 				item: "createdieselgenerators:pumpjack_crank"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 0.0d
+			x: 0.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["734BBC9808E801E6"]
@@ -464,7 +464,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: -2.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["63F63C5EB6A116A0"]
@@ -476,7 +476,7 @@
 				type: "item"
 			}]
 			x: 10.5d
-			y: -2.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["4A04F41BC7C33EBF"]
@@ -488,7 +488,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 0.0d
+			y: 0.5d
 		}
 		{
 			dependencies: [
@@ -516,7 +516,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 2.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["401F17194C1C062C"]
@@ -777,7 +777,7 @@
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_4A04F41BC7C33EBF.title}"
 			x: 9.0d
-			y: -1.0d
+			y: -0.5d
 		}
 		{
 			dependencies: [
@@ -945,7 +945,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 0.0d
+			y: 0.5d
 		}
 		{
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0BD2F52F839623A0.desc_01}"]
@@ -1019,7 +1019,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 1.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1034,7 +1034,7 @@
 				type: "item"
 			}]
 			x: 10.5d
-			y: 1.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["42B9F81EA56748F0"]
@@ -1045,7 +1045,7 @@
 				type: "item"
 			}]
 			x: 10.5d
-			y: 2.5d
+			y: 3.0d
 		}
 	]
 	subtitle: ["{ftbquests.chapter_095625A2F7E1128A.subtitle_1}"]

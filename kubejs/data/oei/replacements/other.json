@@ -118,7 +118,8 @@
     },
     {
         "matchItems": [
-            "vintageimprovements:redstone_module"
+            "vintageimprovements:redstone_module",
+            "ad_astra:wrench"
         ],
         "resultItems": "create:wrench"
     },
@@ -216,7 +217,16 @@
             "create_sa:small_fueling_tank",
             "create_sa:medium_fueling_tank",
             "create_sa:small_filling_tank",
-            "create_sa:medium_filling_tank"
+            "create_sa:medium_filling_tank",
+            "ad_astra:oxygen_sensor",
+            "ad_astra:cryo_freezer",
+            "ad_astra:water_pump",
+            "ad_astra:solar_panel",
+            "ad_astra:etrionic_blast_furnace",
+            "ad_astra:compressor",
+            "ad_astra:nasa_workbench",
+            "ad_astra:fuel_refinery",
+            "ad_astra:oxygen_loader"
         ],
         "resultItems": "kubejs:unknown_prototype"
     }

@@ -21,8 +21,8 @@
 				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_3317421791085996.title}"
-			x: 0.0d
-			y: 0.0d
+			x: 1.5d
+			y: -1.5d
 		}
 		{
 			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_4FA915FD2CAACEEA.desc_01}"]
@@ -73,7 +73,7 @@
 			}]
 			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_0D9EC291C4C46B00.title}"
 			x: 0.0d
-			y: 1.5d
+			y: 0.0d
 		}
 		{
 			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_3C72E5FF717E8B10.desc_01}"]
@@ -85,26 +85,6 @@
 			}]
 			x: 0.0d
 			y: -3.0d
-		}
-		{
-			dependencies: ["28247D1DB799E33A"]
-			description: ["{ftbquests.chapter_286B2CB90B028FB6.quest_171ABF59A33679E1.desc_01}"]
-			hide_dependency_lines: true
-			hide_dependent_lines: true
-			icon: "design_decor:glitch_warning_sign"
-			id: "171ABF59A33679E1"
-			rewards: [{
-				id: "43EEB45D37EA6435"
-				item: "create_things_and_misc:slime_cake"
-				type: "item"
-			}]
-			tasks: [{
-				id: "1A016C6F5E9842CB"
-				type: "checkmark"
-			}]
-			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_171ABF59A33679E1.title}"
-			x: 2.0d
-			y: 0.0d
 		}
 		{
 			dependencies: ["28247D1DB799E33A"]
@@ -122,8 +102,8 @@
 				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_286B2CB90B028FB6.quest_5883F20C7B6430AF.title}"
-			x: 0.0d
-			y: 3.0d
+			x: -1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["28247D1DB799E33A"]
@@ -142,8 +122,8 @@
 				title: "{ftbquests.chapter_286B2CB90B028FB6.quest_31CD0E0DEA55F4EF.task_702622EC112F698D.title}"
 				type: "checkmark"
 			}]
-			x: -2.0d
-			y: 0.0d
+			x: -1.5d
+			y: -1.5d
 		}
 	]
 	title: "{ftbquests.chapter_286B2CB90B028FB6.title}"

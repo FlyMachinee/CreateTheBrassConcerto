@@ -2,6 +2,9 @@
 //Java
 let $String=Java.loadClass("java.lang.String")
 let $Object=Java.loadClass("java.lang.Object")
+let $Long=Java.loadClass("java.lang.Long")
+//
+let $LivingTick = Java.loadClass('net.minecraftforge.event.entity.living.LivingEvent$LivingTickEvent')
 //
 let $OutlineEntry = Java.loadClass("com.simibubi.create.foundation.outliner.Outliner$OutlineEntry")
 let $Outliner = Java.loadClass("com.simibubi.create.foundation.outliner.Outliner")

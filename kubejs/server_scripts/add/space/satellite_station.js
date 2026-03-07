@@ -138,7 +138,7 @@ ServerEvents.recipes(event => {
     event.custom({
       "type": "custommachinery:custom_machine",
       "machine": "dut:satellite_station",
-      "time": 480,
+      "time": 320,
       "priority": 2,
       "error": true,
       "requirements": [
@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
     event.custom({
       "type": "custommachinery:custom_machine",
       "machine": "dut:satellite_station",
-      "time": 480,
+      "time": 320,
       "priority": 1,
       "error": true,
       "requirements": [
@@ -211,7 +211,7 @@ ServerEvents.recipes(event => {
     event.custom({
       "type": "custommachinery:custom_machine",
       "machine": "dut:satellite_station",
-      "time": 480,
+      "time": 320,
       "priority": 2,
       "error": true,
       "requirements": [
@@ -322,7 +322,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:satellite_station",
-    "time": 480,
+    "time": 320,
     "priority": 2,
     "hidden": false,
     "error": true,
@@ -353,7 +353,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:satellite_station",
-    "time": 480,
+    "time": 320,
     "priority": 2,
     "error": true,
     "requirements": [

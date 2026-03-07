@@ -172,7 +172,7 @@ ServerEvents.recipes(event => {
         "heatRequirement": "superheated",
         "ingredients": [
             { "fluid": "minecraft:water", "amount": 500 },
-            { "tag": "forge:nuggets/tin" }
+            { "tag": "forge:plates/tin" }
         ],
         "results": [
             { "fluid": "kubejs:pressurized_steam", "amount": 500 }

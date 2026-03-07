@@ -1,3 +1,33 @@
+NativeEvents.onEvent("highest", true, $LivingDeath, e => {
+    /**@type {Internal.LivingDeathEvent} */
+    let event = e
+    if (!event.entity.isPlayer()) { return }
+    /**@type {Internal.ServerPlayer} */
+    let player = event.entity
+    player.persistentData.needRespawn = true
+    player.persistentData.FreeCaming = false
+    player.addItemCooldown("kubejs:unknown_prototype", 20)
+
+    if (player.y <= player.level.dimensionType().minY() - 64) {
+        player.y = 0
+    }
+    let LastPoint = player.persistentData.teleport.lastpoint
+    LastPoint.pos = {}
+    LastPoint.pos.x = player.x
+    LastPoint.pos.y = player.y
+    LastPoint.pos.z = player.z
+    LastPoint.dimension = player.level.dimension.toString()
+
+    player.setGameMode("spectator")
+    player.setHealth(player.maxHealth)
+    player.setFoodLevel(20)
+    player.setSaturation(3)
+    player.respawn()
+    player.potionEffects.clear()
+    player.server.tell(event.getSource().getLocalizedDeathMessage(player))
+    player.setStatusMessage(Text.translate("kubejs.message.redeploy_tips"))
+    event.setCanceled(true)
+})
 //使用物品冷却作为计时器
 NetworkEvents.dataReceived("isPlayerAltDown", event => {
     if (!event.data.Alt) { return }

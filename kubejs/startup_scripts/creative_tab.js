@@ -176,7 +176,6 @@ StartupEvents.registry("creative_mode_tab", tab => {
 			'kubejs:carrier_rocket',
 			'create:goggles',
 			'create:wrench',
-			'ad_astra:wrench',
 			'kubejs:scanner',
 			'kubejs:position_data',
 			"kubejs:steel_impact_drill",

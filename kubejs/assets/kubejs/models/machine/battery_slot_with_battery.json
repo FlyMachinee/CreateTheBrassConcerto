@@ -4,7 +4,7 @@
 	"textures": {
 		"1": "kubejs:block/battery_slot2",
 		"2": "kubejs:block/battery_slot1",
-		"3": "kubejs:block/slate",
+		"3": "kubejs:block/other/slate",
 		"4": "kubejs:block/slimealloy_block",
 		"5": "kubejs:block/battery",
 		"particle": "kubejs:block/battery_slot1"

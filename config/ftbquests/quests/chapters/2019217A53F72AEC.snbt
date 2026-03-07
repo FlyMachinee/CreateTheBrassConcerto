@@ -31,6 +31,7 @@
 			y: -0.5d
 		}
 		{
+			description: ["{ftbquests.chapter_2019217A53F72AEC.quest_5CF0F9241AC898D1.desc_01}"]
 			id: "5CF0F9241AC898D1"
 			tasks: [{
 				id: "0D8FCECF30482713"

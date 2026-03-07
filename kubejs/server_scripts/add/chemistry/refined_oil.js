@@ -69,7 +69,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 250, "fluid": "kubejs:nitric_acid"}],
+        { "amount": 750, "fluid": "kubejs:nitric_acid"}],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {

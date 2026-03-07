@@ -1,36 +1,3 @@
-NativeEvents.onEvent("highest", true, $LivingDeath, e => {
-    /**@type {Internal.LivingDeathEvent} */
-    let event = e
-    /**@type {Internal.Entity} */
-    let entity = event.entity
-    if (entity.type == "minecraft:ender_dragon") {
-        entity.server.runCommandSilent(`/execute in ${entity.level.dimension.toString()} run summon item ${entity.x} ${entity.y} ${entity.z} {Glowing:1b,NoGravity:1b,Invulnerable:1b,Item:{id:"kubejs:phantom_fungus",Count:${randomOne(3, 9).toString()}b}}`)
-    }
-    if (!entity.isPlayer()) { return }
-    /**@type {Internal.ServerPlayer} */
-    let player = entity
-    player.persistentData.needRespawn = true
-    player.persistentData.FreeCaming = false
-    player.addItemCooldown("kubejs:unknown_prototype", 20)
-
-    if (player.y <= player.level.dimensionType().minY() - 64) {
-        player.y = 0
-    }
-    let LastPoint = player.persistentData.teleport.lastpoint
-    LastPoint.pos = {}
-    LastPoint.pos.x = player.x
-    LastPoint.pos.y = player.y
-    LastPoint.pos.z = player.z
-    LastPoint.dimension = player.level.dimension.toString()
-
-    player.setGameMode("spectator")
-    player.setHealth(player.maxHealth)
-    player.respawn()
-    player.potionEffects.clear()
-    player.server.tell(event.getSource().getLocalizedDeathMessage(player))
-    player.setStatusMessage(Text.translate("kubejs.message.redeploy_tips"))
-    event.setCanceled(true)
-})
 ServerEvents.recipes(event => {
   //末影龙龙蛋
   event.custom({
@@ -133,4 +100,13 @@ ServerEvents.recipes(event => {
     ],
     "transitionalItem": { "item": "minecraft:dragon_egg" }
   }).id("dut_create:ender_dragon/dragon_egg2")
+})
+NativeEvents.onEvent("highest", true, $LivingDeath, e => {
+    /**@type {Internal.LivingDeathEvent} */
+    let event = e
+    /**@type {Internal.Entity} */
+    let entity = event.entity
+    if (entity.type == "minecraft:ender_dragon") {
+        entity.server.runCommandSilent(`/execute in ${entity.level.dimension.toString()} run summon item ${entity.x} ${entity.y} ${entity.z} {Glowing:1b,NoGravity:1b,Invulnerable:1b,Item:{id:"kubejs:phantom_fungus",Count:${randomOne(3, 9).toString()}b}}`)
+    }
 })
