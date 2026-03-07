@@ -68,21 +68,6 @@ ServerEvents.recipes(event => {
     ],
     "processingTime": 30
   }).id('dut_create:blaze_chlamydia/carborundum')
-  //过热蒸汽
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidOutput": 0,
-    "ingredients": [
-      { "fluid": "minecraft:water", "amount": 1000 },
-      { "tag": "dut_create:shaft_furnace" },
-      { "item": "kubejs:carborundum" }
-    ],
-    "results": [
-      { "fluid": "kubejs:superheated_steam", "amount": 500 },
-      { "item": "kubejs:carborundum" }
-    ],
-    "processingTime": 60
-  }).id('dut_create:blaze_chlamydia/superheated_steam_with_carborundum')
   //纤维布
   event.custom({
     "type": "vintageimprovements:vacuumizing",

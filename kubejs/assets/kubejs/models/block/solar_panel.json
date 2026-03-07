@@ -3,8 +3,8 @@
 	"textures": {
 		"0": "kubejs:block/panel",
 		"1": "kubejs:block/panel_frame",
-		"2": "kubejs:block/slate",
-		"3": "kubejs:block/stone",
+		"2": "kubejs:block/other/slate",
+		"3": "kubejs:block/other/stone",
 		"4": "kubejs:block/base",
 		"particle": "kubejs:block/panel"
 	},

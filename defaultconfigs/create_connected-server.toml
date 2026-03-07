@@ -1,7 +1,7 @@
 #.
 #Number of sub-folders allowed for schematics
 #Range: 0 ~ 20
-schematicsNestingDepth = 0
+schematicsNestingDepth = 20
 #.
 #Enable the fix that gives remaining items after manual application
 applicationRemainingItemFix = true

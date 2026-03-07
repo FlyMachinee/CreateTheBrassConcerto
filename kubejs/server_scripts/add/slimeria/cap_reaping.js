@@ -118,13 +118,13 @@ ServerEvents.recipes(event => {
         CapReapingItem("kubejs:red_mushroom_cap_piece", 16, "output"),
         CapReapingItemChance("kubejs:red_mushroom_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:stem_silk", 8, 0.5),
-        CapReapingItemChance("minecraft:red_mushroom", 1, 0.25),
+        CapReapingItemChance("minecraft:red_mushroom", 1, 0.025),
     ], "red_mushroom_block", 5)
     CapReapingRecipe("minecraft:brown_mushroom_block", [
         CapReapingItem("kubejs:brown_mushroom_cap_piece", 16, "output"),
         CapReapingItemChance("kubejs:brown_mushroom_cap_piece", 8, 0.5),
         CapReapingItemChance("kubejs:stem_silk", 8, 0.5),
-        CapReapingItemChance("minecraft:brown_mushroom", 1, 0.25),
+        CapReapingItemChance("minecraft:brown_mushroom", 1, 0.025),
     ], "brown_mushroom_block", 5)
 
 })

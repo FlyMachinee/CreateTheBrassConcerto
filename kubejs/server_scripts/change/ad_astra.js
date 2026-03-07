@@ -8,6 +8,8 @@ ServerEvents.recipes(event => {
   event.remove({id:"ad_astra:steel_cable"})
   event.remove({id:"ad_astra:desh_cable"})
   event.remove({id:"ad_astra:cable_duct"})
+  event.remove({id:"ad_astra:oxygen_sensor"})
+  event.remove({id:"ad_astra:wrench"})
   event.custom({
     "type": "minecraft:crafting_shapeless",
     "ingredients": [

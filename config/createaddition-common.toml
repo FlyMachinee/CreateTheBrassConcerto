@@ -18,12 +18,12 @@
 	small_connector_wire_length = 24
 	#Large Connector max input in FE/t (Energy transfer).
 	#Range: > 0
-	large_connector_max_input = 147456
+	large_connector_max_input = 294912
 	#Allows blocks attached to a connector to freely pass energy to and from the connector network.
 	connector_allow_passive_io = true
 	#Large Connector max output in FE/t (Energy transfer).
 	#Range: > 0
-	large_connector_max_output = 147456
+	large_connector_max_output = 294912
 	#Ignore checking if block face can support connector.
 	connector_ignore_face_check = true
 
