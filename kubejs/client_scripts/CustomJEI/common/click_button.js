@@ -25,10 +25,16 @@ function ClickButton(x, y, width, height, text) {
   /**
    * @param {Internal.CustomJSRecipe} recipe 当前配方对象
    * @return {boolean} 返回值为 true 则表示按钮可用
-   * 默认情况下按钮始终可用
-   * 若按钮不可用，则点击事件不会被触发
+   * @note 默认情况下按钮始终可用，若按钮不可用，则点击事件不会被触发
    */
   this.enableCallback = (recipe) => true;
+
+  /**
+   * @param {Internal.ITooltipBuilder} tooltip 当前 tooltip 创建对象
+   * @param {Internal.CustomJSRecipe} recipe 当前配方对象
+   * @param {boolean} enable 当前按钮是否可用
+   */
+  this.tooltipCallback = (tooltip, recipe, enable) => {};
 }
 
 /**
@@ -54,12 +60,22 @@ ClickButton.prototype.onClick = function (callback) {
 };
 
 /**
- * 设置按钮是否可用的回调函数，返回值为 true 则表示按钮可用 
+ * 设置按钮是否可用的回调函数，返回值为 true 则表示按钮可用
  * @param {function(Internal.CustomJSRecipe): boolean} callback
  * @return {ClickButton}
  */
 ClickButton.prototype.setEnableCallback = function (callback) {
   this.enableCallback = callback;
+  return this;
+};
+
+/**
+ * 设置 tooltip 回调函数
+ * @param {function(Internal.ITooltipBuilder, Internal.CustomJSRecipe, boolean): void} callback
+ * @return {ClickButton}
+ */
+ClickButton.prototype.setTooltipCallback = function (callback) {
+  this.tooltipCallback = callback;
   return this;
 };
 
@@ -134,4 +150,17 @@ ClickButton.prototype.handleInput = function (recipe, mouseX, mouseY, input) {
     return true;
   }
   return false;
+};
+
+/**
+ * 处理 tooltip 显示
+ * @param {Internal.ITooltipBuilder} tooltip
+ * @param {Internal.CustomJSRecipe} recipe
+ * @param {number} mouseX
+ * @param {number} mouseY
+ */
+ClickButton.prototype.handleTooltip = function (tooltip, recipe, mouseX, mouseY) {
+  if (this.mouseIsOver(mouseX, mouseY)) {
+    this.tooltipCallback(tooltip, recipe, this.enableCallback(recipe));
+  }
 };
