@@ -132,6 +132,15 @@ ServerEvents.recipes(event => {
       "amount": amount
     })
   }
+  function ConstructionStationItemNbt(item, amount,nbt, mode) {
+    return ({
+      "type": "custommachinery:item",
+      "mode": mode,
+      "nbt": nbt,
+      "item": item,
+      "amount": amount
+    })
+  }
   function ConstructionStationDimension(dim) {
     return ({
       "type": "custommachinery:dimension",
@@ -701,7 +710,9 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationDisk("kubejs:aluminum_hard_disk", 1024),
+      ConstructionStationItemNbt("kubejs:aluminum_hard_disk", 1,"{Damage:0}", "input"),
+      ConstructionStationItemNbt("kubejs:aluminum_hard_disk", 1,"{Damage:1024}", "output"),
+      //ConstructionStationDisk("kubejs:aluminum_hard_disk", 1024),
       ConstructionStationItem("kubejs:magenta_circuit_board", 45, "input"),
       ConstructionStationItem("ad_astra:desh_plate", 45, "input"),
       ConstructionStationItem("kubejs:speed_module", 24, "input"),
@@ -718,7 +729,8 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationDisk("kubejs:aluminum_hard_disk", 1024),
+      ConstructionStationItemNbt("kubejs:aluminum_hard_disk", 1,"{Damage:0}", "input"),
+      ConstructionStationItemNbt("kubejs:aluminum_hard_disk", 1,"{Damage:1024}", "output"),
       ConstructionStationItem("kubejs:efficiency_module_2", 3, "input"),
       ConstructionStationItem("kubejs:speed_module_2", 3, "input"),
       ConstructionStationItem("kubejs:productivity_module", 24, "input"),
@@ -735,7 +747,8 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationDisk("kubejs:aluminum_hard_disk", 1024),
+      ConstructionStationItemNbt("kubejs:aluminum_hard_disk", 1,"{Damage:0}", "input"),
+      ConstructionStationItemNbt("kubejs:aluminum_hard_disk", 1,"{Damage:1024}", "output"),
       ConstructionStationItem("kubejs:magenta_circuit_board", 45, "input"),
       ConstructionStationItem("ad_astra:desh_plate", 45, "input"),
       ConstructionStationItem("kubejs:efficiency_module", 24, "input"),
@@ -805,7 +818,8 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationDisk("kubejs:brass_hard_disk", 1024),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:0}", "input"),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:1024}", "output"),
       ConstructionStationItem("kubejs:productivity_module_2", 3, "input"),
       ConstructionStationItem("createdieselgenerators:distillation_controller", 3, "input"),
       ConstructionStationItem("createloveandwar:thermostat", 3, "output")
@@ -821,7 +835,8 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationCustomEnergy(16384),
-      ConstructionStationDisk("kubejs:brass_hard_disk", 1024),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:0}", "input"),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:1024}", "output"),
       ConstructionStationItem("kubejs:mycetozoan", 1, "input"),
       ConstructionStationItem("create:empty_schematic", 1, "input"),
       ConstructionStationItem("kubejs:creative_motor_blueprint", 1, "input"),

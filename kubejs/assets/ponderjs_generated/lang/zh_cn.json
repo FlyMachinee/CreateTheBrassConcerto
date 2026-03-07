@@ -775,7 +775,7 @@
   "kubejs.ponder.use_steam_generator.text_10": "下面是一种可行的结构：",
   "kubejs.ponder.use_steam_generator.text_2": "首先，蒸汽发电机周围的方框处不能是空气",
   "kubejs.ponder.use_steam_generator.text_3": "接着，你需要在发电机周围3*3内输入加压蒸汽，并为发电机提供润滑油",
-  "kubejs.ponder.use_steam_generator.text_4": "在配方开始时会消耗20mB润滑油，同时每一格加压蒸汽都会被转化为水，并提供2048FE/t的电力，持续60tick",
+  "kubejs.ponder.use_steam_generator.text_4": "在配方开始时会消耗50mB润滑油，同时每一格加压蒸汽都会被转化为水，并提供2048FE/t的电力，持续60tick",
   "kubejs.ponder.use_steam_generator.text_5": "但同时需要注意的是，配方开始时在范围每存在一格水，都会使提供的电力大幅衰减！",
   "kubejs.ponder.use_steam_generator.text_6": "发电效率减半",
   "kubejs.ponder.use_steam_generator.text_7": "输入的润滑油和产出的电力可以被蒸汽发电机自动传递到前方一格处",

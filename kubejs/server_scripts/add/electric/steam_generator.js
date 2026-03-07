@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
         "mode": "input",
         "tank": "lube",
         "fluid": "kubejs:lube_oil",
-        "amount": 20
+        "amount": 25
     }
     const GeneratorFilter = ["minecraft:air", "minecraft:void_air", "minecraft:cave_air"]
     const GeneratorSound = {

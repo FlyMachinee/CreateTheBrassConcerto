@@ -789,7 +789,7 @@
   "kubejs.ponder.use_steam_generator.text_10": "Here is one possible layout:",
   "kubejs.ponder.use_steam_generator.text_2": "First, the blocks in the frame around the generator cannot be air",
   "kubejs.ponder.use_steam_generator.text_3": "Next, input Pressurized Steam within a 3*3 area around the generator, and supply Lube Oil to the generator",
-  "kubejs.ponder.use_steam_generator.text_4": "When recipe begins, 20 mB of Lube Oil will be consumed, and each block of Pressurized Steam will be converted into Water, providing 2048 FE/t of power for 60 ticks",
+  "kubejs.ponder.use_steam_generator.text_4": "When recipe begins, 25 mB of Lube Oil will be consumed, and each block of Pressurized Steam will be converted into Water, providing 2048 FE/t of power for 60 ticks",
   "kubejs.ponder.use_steam_generator.text_5": "However, each Water source presents in the area when the recipe begins will reduce provided power significantly!",
   "kubejs.ponder.use_steam_generator.text_6": "Power output halved",
   "kubejs.ponder.use_steam_generator.text_7": "The input Lube Oil and output power can be automatically transferred to the block in front of the generator",

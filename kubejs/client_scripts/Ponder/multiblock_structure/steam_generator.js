@@ -63,7 +63,7 @@ Ponder.registry((event) => {
         setBlock("kubejs:pressurized_steam", [4, 4, 4])
         scene.idle(40);
         scene.addKeyframe();
-        scene.text(60, "在配方开始时会消耗20mB润滑油，同时每一格加压蒸汽都会被转化为水，并提供2048FE/t的电力，持续60tick");
+        scene.text(60, "在配方开始时会消耗50mB润滑油，同时每一格加压蒸汽都会被转化为水，并提供2048FE/t的电力，持续60tick");
         scene.idle(20);
         setBlock("minecraft:water", [4, 4, 4])
         scene.idle(60);

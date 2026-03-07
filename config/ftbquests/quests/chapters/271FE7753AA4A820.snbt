@@ -939,9 +939,10 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "217025CE7064DE2D"
-				item: "ad_astra:moon_globe"
-				type: "item"
+				advancement: "ad_astra:moon"
+				criterion: ""
+				id: "2501BD97E954BAD5"
+				type: "advancement"
 			}]
 			title: "{ftbquests.chapter_271FE7753AA4A820.quest_2B6C2966D70E6A32.title}"
 			x: 7.5d

@@ -326,12 +326,6 @@
 					type: "item"
 				}
 				{
-					count: 8
-					id: "5082E5F2ABE1AF2D"
-					item: "create_things_and_misc:oak_sail"
-					type: "item"
-				}
-				{
 					count: 3
 					id: "4522B3FB8CEC144E"
 					item: "kubejs:coin_iron"
