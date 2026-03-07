@@ -1,3 +1,0 @@
-minecraft:overworld
-dut:slimeria
-ad_astra:moon

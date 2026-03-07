@@ -1,5 +1,0 @@
-#1A6 dut:chromatic_agros
-#782 ad_astra:lunar_wastelands
-#02C dut:nitrolithic_shore
-#3DC minecraft:plains
-#5E9 dut:thalassgel

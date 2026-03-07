@@ -1,4 +1,0 @@
-#47F minecraft:birch_forest
-#4D3 minecraft:swamp
-#152 minecraft:windswept_forest
-#4C3 minecraft:windswept_hills
