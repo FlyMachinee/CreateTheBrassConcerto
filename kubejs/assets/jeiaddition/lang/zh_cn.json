@@ -35,6 +35,15 @@
   "kubejs.jeiaddition.upgrades.input": "消耗",
   "kubejs.jeiaddition.upgrades.output": "产出",
   "kubejs.jeiaddition.upgrades.min": "最小值",
+  "kubejs.jeiaddition.steam_generator.steam_count": "蒸汽发电机周围加压蒸汽源的数量",
+  "kubejs.jeiaddition.steam_generator.water_count": "蒸汽发电机周围水的数量",
+  "kubejs.jeiaddition.steam_generator.formula1": "P = floor(2048 * S / (W + 1))",
+  "kubejs.jeiaddition.steam_generator.formula2": "其中 floor 为向下取整函数",
+  "kubejs.jeiaddition.steam_generator.machine1": "配方开始时，销毁周围的水方块、加压蒸汽源方块，",
+  "kubejs.jeiaddition.steam_generator.machine2": "并将蒸汽源替换为水源方块（处于下列维度时）；",
+  "kubejs.jeiaddition.steam_generator.machine3": "可自动从除正面之外的面吸取润滑油；",
+  "kubejs.jeiaddition.steam_generator.machine4": "可自动从正面输出能量；",
+  "kubejs.jeiaddition.steam_generator.machine5": "除了下列维度，配方开始时将不产生水源方块：",
   "kubejs.jeiaddition.consumed_medium": "媒介方块（消耗）",
   "kubejs.jeiaddition.not_consumed_medium": "媒介方块（不消耗）",
   "kubejs.jeiaddition.transform_block": "转化方块",
@@ -44,5 +53,8 @@
   "kubejs.jeiaddition.right_click": "右键——",
   "kubejs.jeiaddition.reset": "重置",
   "kubejs.jeiaddition.spin": "旋转",
-  "kubejs.jeiaddition.no_consumption": "不消耗"
+  "kubejs.jeiaddition.no_consumption": "不消耗",
+  "kubejs.jeiaddition.machine_total_energy": "总计：%s FE",
+  "kubejs.jeiaddition.machine_power": "产生：%s FE/t",
+  "kubejs.jeiaddition.machine_recipe_time": "时间：%s 刻"
 }
