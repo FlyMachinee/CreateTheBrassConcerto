@@ -14,7 +14,6 @@ const $UIRenderHelper = Java.loadClass('com.simibubi.create.foundation.gui.UIRen
 const $Lighting = Java.loadClass('com.mojang.blaze3d.platform.Lighting');
 const $FluidRenderer = Java.loadClass('com.simibubi.create.foundation.fluid.FluidRenderer');
 const $LightTexture = Java.loadClass('net.minecraft.client.renderer.LightTexture');
-const $Minecraft = Java.loadClass('net.minecraft.client.Minecraft');
 const $CBCGuiTextures = Java.loadClass('rbasamoyai.createbigcannons.index.CBCGuiTextures');
 const $CustomLightingSettings = Java.loadClass('com.simibubi.create.foundation.gui.CustomLightingSettings');
 const $GuiGameElement = Java.loadClass('com.simibubi.create.foundation.gui.element.GuiGameElement');

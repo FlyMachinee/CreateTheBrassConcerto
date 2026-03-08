@@ -142,10 +142,9 @@ ClickButton.prototype.handleInput = function (recipe, mouseX, mouseY, input) {
   // 执行点击回调
   if (this.onClickCallback(recipe)) {
     if (this.playSound) {
-      $Minecraft
-        .getInstance()
-        .getSoundManager()
-        .play($SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25));
+      Client.getSoundManager().play(
+        $SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25)
+      );
     }
     return true;
   }

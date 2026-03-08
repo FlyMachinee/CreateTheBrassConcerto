@@ -18,9 +18,8 @@ const drawCustomMachineryMachine = (guiGraphics, machineId, blockId, x, y, z, sc
   const machine = $CustomMachinery.MACHINES.get(new ResourceLocation(machineId));
   const appearance = machine.getAppearance($MachineStatus.IDLE);
   const blockModelLocation = appearance.getBlockModel();
-  const mc = $Minecraft.getInstance();
-  const bakedModel = mc.getModelManager().getModel(blockModelLocation.getLoc());
-  const bufferSource = mc.renderBuffers().bufferSource();
+  const bakedModel = Client.getModelManager().getModel(blockModelLocation.getLoc());
+  const bufferSource = Client.renderBuffers().bufferSource();
   const vertexConsumer = bufferSource.getBuffer($RenderType.solid());
   const blockState = Block.getBlock(blockId).defaultBlockState();
   $Arrays

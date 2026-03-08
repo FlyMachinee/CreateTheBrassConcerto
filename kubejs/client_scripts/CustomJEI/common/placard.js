@@ -77,8 +77,7 @@ const drawPlacard = (graphics, blockLighting, itemLighting, item, x, y, z, scale
     return;
   }
 
-  const mc = $Minecraft.getInstance();
-  const itemRenderer = mc.getItemRenderer();
+  const itemRenderer = Client.getItemRenderer();
   const bakedModel = itemRenderer.getModel(item, null, null, 0);
   const blockItem = bakedModel.isGui3d();
 

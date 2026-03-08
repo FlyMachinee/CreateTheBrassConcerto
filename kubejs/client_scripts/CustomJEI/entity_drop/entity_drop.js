@@ -39,13 +39,13 @@ JEIAddedEvents.registerRecipes((event) => {
   const dropData = [
     {
       entityId: 'minecraft:ender_dragon',
-      entity: $EntityType.ENDER_DRAGON.create($Minecraft.getInstance().level),
+      entity: $EntityType.ENDER_DRAGON.create(Client.level),
       lootTable: [{ item: 'kubejs:phantom_fungus', quantity: [3, 9] }],
       extraTooltip: 'kubejs.jeiaddition.entity_drop.ender_dragon.tooltip',
     },
     {
       entityId: 'minecraft:slime',
-      entity: $EntityType.SLIME.create($Minecraft.getInstance().level),
+      entity: $EntityType.SLIME.create(Client.level),
       lootTable: [
         { item: 'kubejs:mycetozoan', quantity: 1, probability: 0.025 },
         { item: 'kubejs:myxomycetes_halophila', quantity: 1, probability: 0.025 },
@@ -60,7 +60,7 @@ JEIAddedEvents.registerRecipes((event) => {
     },
     {
       entityId: 'minecraft:magma_cube',
-      entity: $EntityType.MAGMA_CUBE.create($Minecraft.getInstance().level),
+      entity: $EntityType.MAGMA_CUBE.create(Client.level),
       lootTable: [
         { item: 'kubejs:mycetozoan', quantity: 1, probability: 0.025 },
         { item: 'kubejs:myxomycetes_halophila', quantity: 1, probability: 0.025 },

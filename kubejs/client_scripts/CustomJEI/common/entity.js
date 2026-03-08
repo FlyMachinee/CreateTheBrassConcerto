@@ -72,9 +72,9 @@ const drawEntity = (guiGraphics, x, y, scale, yaw, pitch, livingEntity) => {
   livingEntity.yHeadRotO = yRot;
   mobPoseStack.translate(0, livingEntity.getY(), 0);
   $RenderSystem.applyModelViewMatrix();
-  const entityRenderDispatcher = $Minecraft.getInstance().getEntityRenderDispatcher();
+  const entityRenderDispatcher = Client.getEntityRenderDispatcher();
   entityRenderDispatcher.setRenderShadow(false);
-  const bufferSource = $Minecraft.getInstance().renderBuffers().bufferSource();
+  const bufferSource = Client.renderBuffers().bufferSource();
   $RenderSystem.runAsFancy(() => {
     entityRenderDispatcher.render(livingEntity, 0, 0, 0, 0, 1, mobPoseStack, bufferSource, $LightTexture.FULL_BRIGHT);
   });
