@@ -129,6 +129,7 @@ JEIAddedEvents.registerCategories((event) => {
       // 水
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY + 18)
+        .setSlotName('water_input')
         .setFluidRenderer(1000, false, 16, 16)
         .addFluidStack('minecraft:water', 1000)
         .addTooltipCallback((recipeSlotView, tooltip) => {
@@ -214,8 +215,21 @@ JEIAddedEvents.registerCategories((event) => {
       })
       .setEnableCallback(() => steamCount + waterCount < 8 || steamCount > 1);
 
+    // Internal.RecipeExtrasBuilder
+    let recipeExtrasBuilder = null;
+
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       const matrixStack = graphics.pose();
+
+      // 水输入槽显示覆盖
+      // 这是邪道方法，不要学
+      if (recipeExtrasBuilder != null) {
+        if (waterCount == 0) {
+          recipeExtrasBuilder.getRecipeSlots().findSlotByName('water_input').get().createDisplayOverrides();
+        } else {
+          recipeExtrasBuilder.getRecipeSlots().findSlotByName('water_input').get().clearDisplayOverrides();
+        }
+      }
 
       // 按钮渲染
       steamMinusButton.draw(recipe, graphics, mouseX, mouseY);
@@ -411,6 +425,10 @@ JEIAddedEvents.registerCategories((event) => {
       recipeInfoTooltip.handleTooltip(tooltip, mouseX, mouseY);
       machineTooltip1.handleTooltip(tooltip, recipe, mouseX, mouseY);
       machineTooltip2.handleTooltip(tooltip, recipe, mouseX, mouseY);
+    });
+
+    category.setCreateRecipeExtrasHandler((builder, recipe, focuses) => {
+      recipeExtrasBuilder = builder;
     });
   });
 });
