@@ -795,8 +795,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItemNbt("kubejs:tin_hard_disk", 1, "input", {Damage:0}),
-      AssemblingMachineItemNbt("kubejs:tin_hard_disk", 1, "output", {Damage:1024}),
+      AssemblingMachineDisk("kubejs:tin_hard_disk", 1024),
       AssemblingMachineItem("kubejs:circuit_board", 45, "input"),
       AssemblingMachineItem("#forge:plates/copper", 30, "input"),
       AssemblingMachineFluid("kubejs:tin", 1350, "input"),
@@ -812,8 +811,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItemNbt("kubejs:tin_hard_disk", 1, "input", {Damage:0}),
-      AssemblingMachineItemNbt("kubejs:tin_hard_disk", 1, "output", {Damage:1024}),
+      AssemblingMachineDisk("kubejs:tin_hard_disk", 1024),
       AssemblingMachineItem("kubejs:speed_module", 3, "input"),
       AssemblingMachineItem("kubejs:efficiency_module", 3, "input"),
       AssemblingMachineFluid("kubejs:tin", 1350, "input"),
@@ -829,8 +827,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItemNbt("kubejs:tin_hard_disk", 1, "input", {Damage:0}),
-      AssemblingMachineItemNbt("kubejs:tin_hard_disk", 1, "output", {Damage:1024}),
+      AssemblingMachineDisk("kubejs:tin_hard_disk", 1024),
       AssemblingMachineItem("kubejs:circuit_board", 45, "input"),
       AssemblingMachineItem("#forge:plates/gold", 30, "input"),
       AssemblingMachineFluid("kubejs:tin", 1350, "input"),

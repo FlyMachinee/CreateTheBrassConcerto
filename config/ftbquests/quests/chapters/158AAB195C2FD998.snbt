@@ -1023,7 +1023,7 @@
 			id: "551FECA13651F605"
 			tasks: [{
 				id: "37ADD7BF098A557E"
-				item: "kubejs:redstone_radar"
+				item: "createandesiteabound:redstone_radar"
 				type: "item"
 			}]
 			x: 3.0d

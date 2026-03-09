@@ -92,7 +92,7 @@ ServerEvents.recipes(event => {
             "B",
             "C"
         ],
-        "result": { "item": "kubejs:redstone_radar" },
+        "result": { "item": "createandesiteabound:redstone_radar" },
         "show_notification": true
     }).id("dut_create:redstone_radar")
     //高速装罐机
@@ -598,7 +598,6 @@ ServerEvents.recipes(event => {
         "kubejs:filling_machine",
         "kubejs:emptying_machine",
         "kubejs:anti_warden_bomb",
-        "kubejs:redstone_radar",
         "kubejs:cap_reaping_machine",
         "kubejs:stem_reaping_machine"]
     List.forEach(i => clearNbt(i))

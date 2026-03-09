@@ -307,7 +307,7 @@ ServerEvents.commandRegistry(event => {
 
                 let tpapdata = tpap.persistentData
                 orCreateData(tpapdata, "tpa_requirement", {})
-                orCreateData(tpapdata.tpa_requirement, tpap.username, {})
+                orCreateData(tpapdata.tpa_requirement, p.username, {})
                 tpapdata.tpa_requirement[tpap.username].type = "tpa"
 
                 p.tell(Text.translate("kubejs.message.sendtpa", tpap.username))
@@ -337,7 +337,7 @@ ServerEvents.commandRegistry(event => {
 
                 let tpapdata = tpap.persistentData
                 orCreateData(tpapdata, "tpa_requirement", {})
-                orCreateData(tpapdata.tpa_requirement, tpap.username, {})
+                orCreateData(tpapdata.tpa_requirement, p.username, {})
                 tpapdata.tpa_requirement[tpap.username].type = "tpahere"
 
                 p.tell(Text.translate("kubejs.message.sendtpa", tpap.username))
@@ -370,11 +370,11 @@ ServerEvents.commandRegistry(event => {
                     orCreateData(pdata.tpa_requirement[tpap.username], "type", "tpa")
                     switch (pdata.tpa_requirement[tpap.username].type) {
                         case "tpa":
-                            s.runCommandSilent(`/tp ${p.username} ${tpap.username}`)
+                            s.runCommandSilent(`/tp ${tpap.username} ${p.username}`)
                             pdata.tpa_requirement.remove(tpap.username)
                             break
                         default:
-                            s.runCommandSilent(`/tp ${tpap.username} ${p.username}`)
+                            s.runCommandSilent(`/tp ${p.username} ${tpap.username}`)
                             pdata.tpa_requirement.remove(tpap.username)
                             break
                     }

@@ -498,6 +498,7 @@
 				{
 					id: "4D7AD775ECF11EBC"
 					item: "sophisticatedbackpacks:stack_upgrade_starter_tier"
+					team_reward: false
 					type: "item"
 				}
 			]
