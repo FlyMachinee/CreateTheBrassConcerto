@@ -58,7 +58,7 @@ JEIAddedEvents.registerCategories((event) => {
     const recipeInputSlotY = 10;
     const recipeOutputSlotX = recipeInputSlotX + recipeIOGapWidth;
     const recipeOutputSlotY = recipeInputSlotY + 17 - 8;
-    const energySlotX = recipeOutputSlotX + 17;
+    const energySlotX = recipeOutputSlotX + 18;
     const energySlotY = recipeOutputSlotY + 8 - energySlotHeight / 2;
 
     // 配方箭头
