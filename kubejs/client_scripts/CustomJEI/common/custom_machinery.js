@@ -55,3 +55,30 @@ const drawCustomMachineryMachine = (guiGraphics, machineId, blockId, x, y, z, sc
     );
   matrixStack.popPose();
 };
+
+/**
+ * @param {Internal.GuiGraphics} guiGraphics
+ * @param {number} x
+ * @param {number} y
+ */
+const drawFluidSlotBackground = (guiGraphics, x, y) => {
+  const fluidSlotTexture = $FluidGuiElement.BASE_TEXTURE;
+  const fluidSlotTextureWidth = $TextureSizeHelper.getTextureWidth(fluidSlotTexture);
+  const fluidSlotTextureHeight = $TextureSizeHelper.getTextureHeight(fluidSlotTexture);
+  const matrixStack = guiGraphics.pose();
+  matrixStack.pushPose();
+  matrixStack.translate(x - 1, y - 1, 0);
+  matrixStack.scale(1, 18 / fluidSlotTextureHeight, 1);
+  guiGraphics.blit(
+    fluidSlotTexture,
+    0,
+    0,
+    0,
+    0,
+    fluidSlotTextureWidth,
+    fluidSlotTextureHeight,
+    fluidSlotTextureWidth,
+    fluidSlotTextureHeight
+  );
+  matrixStack.popPose();
+};

@@ -238,30 +238,10 @@ JEIAddedEvents.registerCategories((event) => {
       waterPlusButton.draw(recipe, graphics, mouseX, mouseY);
 
       // 流体槽背景渲染
-      const fluidSlotTexture = $FluidGuiElement.BASE_TEXTURE;
-      const fluidSlotTextureWidth = $TextureSizeHelper.getTextureWidth(fluidSlotTexture);
-      const fluidSlotTextureHeight = $TextureSizeHelper.getTextureHeight(fluidSlotTexture);
-      const renderFluidSlot = (x, y) => {
-        matrixStack.pushPose();
-        matrixStack.translate(x - 1, y - 1, 0);
-        matrixStack.scale(1, 18 / fluidSlotTextureHeight, 1);
-        graphics.blit(
-          fluidSlotTexture,
-          0,
-          0,
-          0,
-          0,
-          fluidSlotTextureWidth,
-          fluidSlotTextureHeight,
-          fluidSlotTextureWidth,
-          fluidSlotTextureHeight
-        );
-        matrixStack.popPose();
-      };
-      renderFluidSlot(recipeInputSlotX, recipeInputSlotY);
-      renderFluidSlot(recipeInputSlotX, recipeInputSlotY + 18);
-      renderFluidSlot(recipeInputSlotX + 18, recipeInputSlotY + 17 - 8);
-      renderFluidSlot(recipeOutputSlotX, recipeOutputSlotY);
+      drawFluidSlotBackground(graphics, recipeInputSlotX, recipeInputSlotY);
+      drawFluidSlotBackground(graphics, recipeInputSlotX, recipeInputSlotY + 18);
+      drawFluidSlotBackground(graphics, recipeInputSlotX + 18, recipeInputSlotY + 17 - 8);
+      drawFluidSlotBackground(graphics, recipeOutputSlotX, recipeOutputSlotY);
 
       // 配方箭头渲染
       recipeArrow.draw(graphics, recipeArrowX, recipeArrowY);
