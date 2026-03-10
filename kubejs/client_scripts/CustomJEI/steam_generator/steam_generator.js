@@ -299,12 +299,12 @@ JEIAddedEvents.registerCategories((event) => {
       };
       const recipeInfoLineHeight = Client.font.lineHeight + 2;
       putWord(
-        Text.translate('kubejs.jeiaddition.machine_total_energy', totalEnergy.toString()),
+        Text.translate('kubejs.jeiaddition.machine_total_energy', addThousandSeparator(totalEnergy)),
         recipeInfoX,
         recipeInfoY
       );
       putWord(
-        Text.translate('kubejs.jeiaddition.machine_power', power.toString()),
+        Text.translate('kubejs.jeiaddition.machine_power', addThousandSeparator(power)),
         recipeInfoX,
         recipeInfoY + recipeInfoLineHeight
       );
