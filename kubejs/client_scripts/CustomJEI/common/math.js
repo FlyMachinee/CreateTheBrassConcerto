@@ -60,3 +60,12 @@ const lerp = (a, b, t) => {
 const clamp = (value, min, max) => {
   return Math.max(min, Math.min(max, value));
 };
+
+/**
+ * @param {number} a 实数
+ * @param {number} b 正数
+ * @returns {number} a mod b 的正数结果，即结果在[0, b)范围内
+ */
+const positiveMod = (a, b) => {
+  return ((a % b) + b) % b;
+}
