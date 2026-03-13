@@ -37,8 +37,6 @@
   "kubejs.jeiaddition.upgrades.min": "Minimum ",
   "kubejs.jeiaddition.steam_generator.steam_count": "Pressurized steam source block count around the steam generator",
   "kubejs.jeiaddition.steam_generator.water_count": "Water block count around the steam generator",
-  "kubejs.jeiaddition.steam_generator.formula1": "P = floor(2048 * S / (W + 1))",
-  "kubejs.jeiaddition.steam_generator.formula2": "where 'floor' is the floor function",
   "kubejs.jeiaddition.steam_generator.machine1": "When recipe starts, destroy water blocks and pressurized steam source blocks around the machine,",
   "kubejs.jeiaddition.steam_generator.machine2": "and replace steam source blocks with water source blocks (when in following dimensions).",
   "kubejs.jeiaddition.steam_generator.machine3": "Can automatically input lube oil from sides other than the front.",
@@ -56,5 +54,6 @@
   "kubejs.jeiaddition.no_consumption": "No Consumption",
   "kubejs.jeiaddition.machine_total_energy": "Total: %s FE",
   "kubejs.jeiaddition.machine_power": "Voltage: %s FE/t",
-  "kubejs.jeiaddition.machine_recipe_time": "Time: %s ticks"
+  "kubejs.jeiaddition.machine_recipe_time": "Time: %s ticks",
+  "kubejs.jeiaddition.floor_explain": "where 'floor' is the floor function"
 }

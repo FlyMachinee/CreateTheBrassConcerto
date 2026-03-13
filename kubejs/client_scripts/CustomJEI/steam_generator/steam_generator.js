@@ -103,9 +103,9 @@ JEIAddedEvents.registerCategories((event) => {
             0,
             Text.translate(
               'custommachinery.jei.ingredient.energy.pertick.output',
-              totalEnergy.toString(),
+              addThousandSeparator(totalEnergy),
               'FE',
-              power.toString(),
+              addThousandSeparator(power),
               'FE'
             )
           );
@@ -381,8 +381,8 @@ JEIAddedEvents.registerCategories((event) => {
       70,
       3 * (Client.font.lineHeight + 2)
     )
-      .addTranslate('kubejs.jeiaddition.steam_generator.formula1')
-      .addTranslate('kubejs.jeiaddition.steam_generator.formula2');
+      .addLiteral('P = floor(2048 * S / (W + 1)) FE/t')
+      .addTranslate('kubejs.jeiaddition.floor_explain');
 
     const gasDimension = ['minecraft:overworld', 'dut:slimeria', 'dut:slimeria_orbit', 'minecraft:the_end'];
     const tooltipCallback = (tooltip, recipe) => {
