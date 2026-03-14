@@ -50,3 +50,6 @@ const $EnergyJEIIngredientRenderer = Java.loadClass('fr.frinn.custommachinery.cl
 const $Energy = Java.loadClass('fr.frinn.custommachinery.impl.integration.jei.Energy');
 const $AbstractGuiElementProperties = Java.loadClass('fr.frinn.custommachinery.impl.guielement.AbstractGuiElement$Properties');
 const $FluidGuiElement = Java.loadClass('fr.frinn.custommachinery.common.guielement.FluidGuiElement');
+const $List = Java.loadClass('java.util.List');
+const $IntSet = Java.loadClass('it.unimi.dsi.fastutil.ints.IntSet');
+const $ArrayList = Java.loadClass('java.util.ArrayList');
