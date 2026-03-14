@@ -13,21 +13,7 @@ JEIAddedEvents.registerRecipes((event) => {
   const recipeBuilder = event.custom(typeId);
 
   // 添加配方
-
-  /*
-    const upgradesData: {
-      item: string;
-      machines: string[];
-      modifiers: {
-        requirement: string;
-        mode: string;
-        min: number;
-        operation: string;
-        modifier: number;
-      }[];
-    }[]
-  */
-  upgradesData.forEach((entry) => {
+  MachineUpgrade.getAll().forEach((entry) => {
     recipeBuilder.add(entry);
   });
 });
@@ -58,19 +44,20 @@ JEIAddedEvents.registerCategories((event) => {
 
     // 设置输入输出槽
     category.handleLookup((layoutBuilder, recipe, focuses) => {
-      const data = recipe.recipeData;
+      /** @type {MachineUpgrade} */
+      const upgrade = recipe.recipeData;
 
       // 插件输入槽
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, upgradesX, upgradesY)
         .setBackground(guiHelper.getOutputSlot(), -5, -5)
-        .addItemStack(Item.of(data.item));
+        .addItemStack(Item.of(upgrade.item));
 
       // 隐形插件输出槽
-      layoutBuilder.addInvisibleIngredients($RecipeIngredientRole.OUTPUT).addItemStack(Item.of(data.item));
+      layoutBuilder.addInvisibleIngredients($RecipeIngredientRole.OUTPUT).addItemStack(Item.of(upgrade.item));
 
       // 机器输入槽、隐形机器输出槽
-      data.machines.forEach((machine, index) => {
+      upgrade.machines.forEach((machine, index) => {
         const row = Math.floor(index / 9);
         const col = index % 9;
         const machineId = 'kubejs:' + machine.split(':')[1];
@@ -85,24 +72,25 @@ JEIAddedEvents.registerCategories((event) => {
     });
 
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
-      const data = recipe.recipeData;
+      /** @type {MachineUpgrade} */
+      const upgrade = recipe.recipeData;
 
       // 文本
       let line = 0;
       const textX = machinesX;
       const textY = machinesY + 40;
 
-      for (let i = 0; i < data.modifiers.length; i++) {
-        let modifier = data.modifiers[i];
+      for (let i = 0; i < upgrade.modifiers.length; i++) {
+        let modifier = upgrade.modifiers[i];
 
         // 数值文本
         let modifierText;
         let good;
-        if (modifier.operation === 'multiplication') {
-          if (modifier.requirement === 'custommachinery:speed') {
+        if (modifier.operation === UpgradeModifier.OPERATION.MULTIPLICATION) {
+          if (modifier.requirement === UpgradeModifier.REQUIREMENT.SPEED) {
             good = modifier.modifier < 1;
-          } else if (modifier.requirement === 'custommachinery:energy_per_tick') {
-            good = (modifier.mode === 'input') === modifier.modifier < 1;
+          } else if (modifier.requirement === UpgradeModifier.REQUIREMENT.ENERGY_PER_TICK) {
+            good = (modifier.mode === UpgradeModifier.MODE.INPUT) === modifier.modifier < 1;
           }
           modifierText = Text.literal(
             ` ${good ? '§a' : '§c'}${modifier.modifier >= 1 ? '+' : ''}${parseFloat(
@@ -116,12 +104,12 @@ JEIAddedEvents.registerCategories((event) => {
         // 根据 requirement 和 mode 选择文本
         let text;
         let draw = false;
-        if (modifier.requirement === 'custommachinery:speed') {
+        if (modifier.requirement === UpgradeModifier.REQUIREMENT.SPEED) {
           text = Text['join(net.minecraft.network.chat.Component[])'](
             Text.translate('kubejs.jeiaddition.upgrades.speed'),
             modifierText
           );
-          if (modifier.min) {
+          if (Number.isFinite(modifier.min)) {
             text = Text['join(net.minecraft.network.chat.Component[])'](
               text,
               Text.literal(' '),
@@ -130,9 +118,9 @@ JEIAddedEvents.registerCategories((event) => {
             );
           }
           draw = true;
-        } else if (modifier.requirement === 'custommachinery:energy_per_tick') {
+        } else if (modifier.requirement === UpgradeModifier.REQUIREMENT.ENERGY_PER_TICK) {
           text = Text['join(net.minecraft.network.chat.Component[])'](
-            Text.translate(`kubejs.jeiaddition.upgrades.${modifier.mode}`),
+            Text.translate(`kubejs.jeiaddition.upgrades.${UpgradeModifier.MODE.toString(modifier.mode)}`),
             Text.translate('kubejs.jeiaddition.upgrades.energy_per_tick'),
             modifierText
           );
