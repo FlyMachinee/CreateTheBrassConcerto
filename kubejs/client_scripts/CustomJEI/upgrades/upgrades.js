@@ -86,11 +86,11 @@ JEIAddedEvents.registerCategories((event) => {
         // 数值文本
         let modifierText;
         let good;
-        if (modifier.operation === UpgradeModifier.OPERATION.MULTIPLICATION) {
-          if (modifier.requirement === UpgradeModifier.REQUIREMENT.SPEED) {
+        if (modifier.operation === ModifierOperation.MULTIPLICATION) {
+          if (modifier.requirementType === RequirementType.SPEED) {
             good = modifier.modifier < 1;
-          } else if (modifier.requirement === UpgradeModifier.REQUIREMENT.ENERGY_PER_TICK) {
-            good = (modifier.mode === UpgradeModifier.MODE.INPUT) === modifier.modifier < 1;
+          } else if (modifier.requirementType === RequirementType.ENERGY_PER_TICK) {
+            good = (modifier.mode === RequirementIOMode.INPUT) === modifier.modifier < 1;
           }
           modifierText = Text.literal(
             ` ${good ? '§a' : '§c'}${modifier.modifier >= 1 ? '+' : ''}${parseFloat(
@@ -104,7 +104,7 @@ JEIAddedEvents.registerCategories((event) => {
         // 根据 requirement 和 mode 选择文本
         let text;
         let draw = false;
-        if (modifier.requirement === UpgradeModifier.REQUIREMENT.SPEED) {
+        if (modifier.requirementType === RequirementType.SPEED) {
           text = Text['join(net.minecraft.network.chat.Component[])'](
             Text.translate('kubejs.jeiaddition.upgrades.speed'),
             modifierText
@@ -118,9 +118,9 @@ JEIAddedEvents.registerCategories((event) => {
             );
           }
           draw = true;
-        } else if (modifier.requirement === UpgradeModifier.REQUIREMENT.ENERGY_PER_TICK) {
+        } else if (modifier.requirementType === RequirementType.ENERGY_PER_TICK) {
           text = Text['join(net.minecraft.network.chat.Component[])'](
-            Text.translate(`kubejs.jeiaddition.upgrades.${UpgradeModifier.MODE.toString(modifier.mode)}`),
+            Text.translate(`kubejs.jeiaddition.upgrades.${modifier.mode.toString()}`),
             Text.translate('kubejs.jeiaddition.upgrades.energy_per_tick'),
             modifierText
           );
