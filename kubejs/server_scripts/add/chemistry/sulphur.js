@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "kubejs:sulphur", "count": 2 }
     ],
-    "processingTime": 200
+    "processingTime": 20
   }).id('dut_create:sulphur_from_gas')
   //二氧化硫
   event.remove({ id: "vintageimprovements:pressurizing/sulfur_dioxide" })
@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
       { "fluid": "vintageimprovements:sulfur_trioxide", "amount": 250 },
       { "fluid": "minecraft:water", "amount": 250 }
     ],
-    "processingTime": 30,
+    "processingTime": 60,
     "results": [
       { "fluid": "vintageimprovements:sulfuric_acid", "amount": 250 }
     ]
@@ -85,18 +85,6 @@ ServerEvents.recipes(event => {
       { "fluid": "kubejs:muriatic_acid", "amount": 1000 }
     ]
   }).id('dut_create:sulfuric_muriatic_acid')
-  //硫酸热解
-  event.custom({
-    "type": "createdieselgenerators:distillation",
-    "ingredients": [{ "fluid": "vintageimprovements:sulfuric_acid", "amount": 250 }],
-    "heatRequirement": "superheated",
-    "processingTime": 360,
-    "results": [
-      { "fluid": "vintageimprovements:sulfur_dioxide", "amount": 250 },
-      { "fluid": "kubejs:oxygen", "amount": 250 },
-      { "fluid": "kubejs:hydrogen", "amount": 500 }
-    ]
-  }).id('dut_create:sulfuric_acid_cracking_distillation')
   //二氧化硫漂白-羊毛
   event.custom({
     "type": "create:mixing",

@@ -26,8 +26,6 @@
             "capacity": 4000,
             "id": "fluid_input1",
             "mode": "input",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "unique": true
         },
         {
@@ -35,8 +33,6 @@
             "capacity": 4000,
             "id": "fluid_input2",
             "mode": "input",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "unique": true
         },
         {
@@ -44,8 +40,6 @@
             "capacity": 4000,
             "id": "fluid_input3",
             "mode": "input",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "unique": true
         },
         {

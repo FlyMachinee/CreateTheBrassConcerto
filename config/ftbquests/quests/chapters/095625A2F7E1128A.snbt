@@ -5,7 +5,7 @@
 	group: "6B818C6F92D84205"
 	icon: "createdieselgenerators:crude_oil_bucket"
 	id: "095625A2F7E1128A"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -19,8 +19,8 @@
 				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2CD7DA25D6F102FC.title}"
-			x: 6.0d
-			y: 5.0d
+			x: 1.0d
+			y: 2.0d
 		}
 		{
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_52744CC68AA87354.desc_01}"]
@@ -49,25 +49,6 @@
 			y: 5.5d
 		}
 		{
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_13C620410D54B082.desc_01}"]
-			id: "13C620410D54B082"
-			tasks: [{
-				id: "5D30EDADE7631EDC"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "dut_create:buckets/crude_oil"
-					}
-				}
-				title: "{ftbquests.chapter_095625A2F7E1128A.quest_13C620410D54B082.task_5D30EDADE7631EDC.title}"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_13C620410D54B082.title}"
-			x: -4.0d
-			y: -1.5d
-		}
-		{
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_23FCF6DA7824526A.desc_01}"]
 			id: "23FCF6DA7824526A"
 			size: 1.5d
@@ -76,73 +57,8 @@
 				item: "createdieselgenerators:canister"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 4.75d
-		}
-		{
-			dependencies: [
-				"13C620410D54B082"
-				"6ABE4B8E28063A00"
-			]
-			dependency_requirement: "one_completed"
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_6CE80217F2F61E53.desc_01}"]
-			id: "6CE80217F2F61E53"
-			tasks: [{
-				id: "428406B6E755B702"
-				item: "createdieselgenerators:oil_scanner"
-				type: "item"
-			}]
-			x: -2.5d
-			y: -0.5d
-		}
-		{
-			dependencies: ["1C2F0F2DE7D882E5"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7DD87FB08A7E5601.desc_01}"]
-			id: "7DD87FB08A7E5601"
-			tasks: [{
-				id: "3B5DC57F300C0BC1"
-				item: "createdieselgenerators:pumpjack_bearing"
-				type: "item"
-			}]
-			x: 0.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["6CE80217F2F61E53"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_1C2F0F2DE7D882E5.desc_01}"]
-			id: "1C2F0F2DE7D882E5"
-			rewards: [
-				{
-					id: "7767DE3A9A08EC08"
-					item: "createdieselgenerators:diesel_engine"
-					type: "item"
-				}
-				{
-					id: "506E501E7FFFA549"
-					item: "createdieselgenerators:pumpjack_hole"
-					type: "item"
-				}
-			]
-			tasks: [{
-				id: "3DC04786AD2CE423"
-				item: "createdieselgenerators:pumpjack_head"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_1C2F0F2DE7D882E5.title}"
-			x: -0.5d
-			y: -0.5d
-		}
-		{
-			dependencies: ["1C2F0F2DE7D882E5"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5A0BC2420F12862C.desc_01}"]
-			id: "5A0BC2420F12862C"
-			tasks: [{
-				id: "208258898D34631E"
-				item: "createdieselgenerators:pumpjack_crank"
-				type: "item"
-			}]
-			x: 0.5d
-			y: 0.5d
+			x: 8.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["734BBC9808E801E6"]
@@ -154,7 +70,7 @@
 			]
 			id: "3070A92AD6E4B7FD"
 			rewards: [{
-				count: 8
+				count: 32
 				id: "233B365291B50681"
 				item: "createdieselgenerators:distillation_controller"
 				type: "item"
@@ -168,18 +84,6 @@
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_3070A92AD6E4B7FD.title}"
 			x: -3.5d
 			y: 6.0d
-		}
-		{
-			dependencies: ["5495F2B5448CFC5B"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5D17F3EB50C80731.desc_01}"]
-			id: "5D17F3EB50C80731"
-			tasks: [{
-				id: "5B7787E483AD6F07"
-				item: "kubejs:chlorine_bucket"
-				type: "item"
-			}]
-			x: 1.0d
-			y: 3.0d
 		}
 		{
 			dependencies: ["5495F2B5448CFC5B"]
@@ -244,8 +148,8 @@
 				item: "kubejs:sulphur"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 1.0d
+			x: -2.0d
+			y: 0.5d
 		}
 		{
 			description: [
@@ -258,7 +162,7 @@
 			]
 			id: "33B5D92383569018"
 			rewards: [{
-				count: 15
+				count: 31
 				id: "2329D3ED6C312BD1"
 				item: "vintageimprovements:vacuum_chamber"
 				type: "item"
@@ -277,16 +181,30 @@
 		{
 			dependencies: [
 				"36C3A59891538134"
-				"278EE9B663F563A4"
+				"76CE21A8B2955AD3"
 			]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.desc_01}"]
+			description: [
+				"{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.desc_01}"
+				""
+				"润滑油可以用于制作行星齿轮组、差速器等重要零件，并且可以在许多方面取代种子油的作用"
+				""
+				"&a由于它有更为优良的性能，支撑更为大型的机械设备运转已经成为可能——比如大型柴油引擎与蒸汽发电机！"
+			]
 			id: "7E2194D1F164C71A"
-			rewards: [{
-				count: 16
-				id: "72BA839103ADCC71"
-				item: "ad_astra:desh_fluid_pipe"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 16
+					id: "72BA839103ADCC71"
+					item: "ad_astra:desh_fluid_pipe"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "0C01C4779D8889F2"
+					item: "kubejs:circuit_board"
+					type: "item"
+				}
+			]
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
@@ -303,6 +221,7 @@
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2F6511F37CB28C7B.desc_01}"]
 			id: "2F6511F37CB28C7B"
 			rewards: [{
+				count: 7
 				id: "1989F352976F5F10"
 				item: "kubejs:planetary_gear"
 				type: "item"
@@ -321,6 +240,7 @@
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_60975844F7A3B133.desc_01}"]
 			id: "60975844F7A3B133"
 			rewards: [{
+				count: 3
 				id: "76D027A050D57D58"
 				item: "create:brass_hand"
 				type: "item"
@@ -335,9 +255,14 @@
 		}
 		{
 			dependencies: ["7E2194D1F164C71A"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4EEBF6833EE9EC1D.desc_01}"]
+			description: [
+				"{ftbquests.chapter_095625A2F7E1128A.quest_4EEBF6833EE9EC1D.desc_01}"
+				""
+				"&e对于当前阶段的你而言，它的最大用途是制造柴油引擎、蒸汽发电机与钻井！&r"
+			]
 			id: "4EEBF6833EE9EC1D"
 			rewards: [{
+				count: 4
 				id: "455E761079BB0BF8"
 				item: "kubejs:differential"
 				type: "item"
@@ -351,54 +276,11 @@
 			y: 7.0d
 		}
 		{
-			dependencies: [
-				"1186909E719A2320"
-				"5D17F3EB50C80731"
-			]
-			description: [
-				"{ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_01}"
-				"[\"\", {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4AE919CE7C34AD83\"}, \"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_03\"}]"
-			]
-			id: "5AB3602434AE8947"
-			rewards: [{
-				count: 8
-				id: "4F0F7066037481F1"
-				item: "kubejs:magenta_circuit_board"
-				type: "item"
-			}]
-			tasks: [{
-				id: "29EC1C0849478096"
-				item: "kubejs:duraplas_ingot"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["5AB3602434AE8947"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_268BF1B548306F39.desc_01}"]
-			id: "268BF1B548306F39"
-			rewards: [{
-				id: "6DE19F030BBC69E4"
-				item: "kubejs:emptying_machine"
-				type: "item"
-			}]
-			tasks: [{
-				id: "05CD26B09D172B1E"
-				item: "kubejs:filling_machine"
-				match_nbt: false
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_268BF1B548306F39.title}"
-			x: -2.0d
-			y: 1.5d
-		}
-		{
 			dependencies: ["2F6511F37CB28C7B"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4A73F70D9A7EFC87.desc_01}"]
 			id: "4A73F70D9A7EFC87"
 			rewards: [{
-				count: 12
+				count: 24
 				id: "2255F7513B5702CC"
 				item: "kubejs:planetary_gear"
 				type: "item"
@@ -463,8 +345,8 @@
 				item: "minecraft:blue_ice"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -1.5d
+			x: 5.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["63F63C5EB6A116A0"]
@@ -475,8 +357,8 @@
 				item: "kubejs:cryogen_bucket"
 				type: "item"
 			}]
-			x: 10.5d
-			y: -1.5d
+			x: 6.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["4A04F41BC7C33EBF"]
@@ -487,8 +369,8 @@
 				item: "kubejs:nitrogen_bucket"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 0.5d
+			x: 7.0d
+			y: 2.5d
 		}
 		{
 			dependencies: [
@@ -515,8 +397,8 @@
 				item: "kubejs:nitrogen_fertilizer_bucket"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 3.0d
+			x: 9.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["401F17194C1C062C"]
@@ -581,7 +463,7 @@
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0EE5C05F14473612.desc_01}"]
 			id: "0EE5C05F14473612"
 			rewards: [{
-				count: 8
+				count: 12
 				id: "1C34411BCDC8C0D5"
 				item: "kubejs:cardan_joint"
 				type: "item"
@@ -624,20 +506,6 @@
 			}]
 			x: 2.5d
 			y: 10.0d
-		}
-		{
-			dependencies: ["5D17F3EB50C80731"]
-			dependency_requirement: "one_completed"
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_22D58AAC0D5BFE19.desc_01}"]
-			id: "22D58AAC0D5BFE19"
-			tasks: [{
-				id: "58E92312DFD30283"
-				item: "kubejs:muriatic_acid_bucket"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_22D58AAC0D5BFE19.title}"
-			x: 1.0d
-			y: 1.5d
 		}
 		{
 			dependencies: ["26325D9A9EDB84F4"]
@@ -776,8 +644,8 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_4A04F41BC7C33EBF.title}"
-			x: 9.0d
-			y: -0.5d
+			x: 6.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -799,12 +667,19 @@
 				item: "kubejs:ethylene_bucket"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 4.0d
+			x: -5.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["497C1131A3DF9662"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0EAAA32F7A3FC7E7.desc_01}"]
+			description: [
+				"{ftbquests.chapter_095625A2F7E1128A.quest_0EAAA32F7A3FC7E7.desc_01}"
+				""
+				""
+				"在硫酸转化聚乙烯的过程中，250mB的硫酸将被转化为250mB的二氧化硫，剩余的750mB硫酸也会进入输出槽。&a需要注意的是，工作盆输出槽中的流体不会自动与输入槽合并！&r&e你可以考虑使用工作盆的自动导出功能将流体导出，从而避免使用智能流体管道！&r"
+				""
+				"你可以在将二氧化硫转化回硫酸后将它们重进放回输入槽——这样你便无需输入更多的硫！"
+			]
 			id: "0EAAA32F7A3FC7E7"
 			tasks: [{
 				id: "3010F5ED1FF7CE93"
@@ -812,39 +687,28 @@
 				type: "item"
 			}]
 			x: -5.0d
-			y: 3.0d
+			y: 0.5d
 		}
 		{
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_278EE9B663F563A4.desc_01}"]
-			id: "278EE9B663F563A4"
-			shape: "gear"
-			size: 1.25d
-			tasks: [{
-				id: "0E54A0F486A3F414"
-				item: "kubejs:hydrogen_bucket"
-				type: "item"
-			}]
-			x: -0.5d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"2EFB5D929CA3B17A"
-				"03B693D028042FC9"
-				"2FBE43A3090D1053"
-				"471973F58EEA5536"
+			dependencies: ["33B5D92383569018"]
+			description: [
+				"&e你可以通过种子油或生物质来批量合成原油，从而供应你的原油工业！"
+				""
+				"如果你想的话，也可以通过抽油机来获取——但这是有限且低效的，因而我并不建议你这样做"
+				""
+				"&a在未来，你可以使用流体提取井来更高效地生产原油！"
 			]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.desc_01}"]
 			id: "0AD1428EF423B9FF"
-			size: 1.5d
+			shape: "hexagon"
+			size: 1.25d
 			tasks: [{
 				id: "4B324806EECF9C51"
 				item: "createdieselgenerators:crude_oil_bucket"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.title}"
-			x: 4.0d
-			y: 0.0d
+			title: "合成原油！"
+			x: -2.0d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -853,6 +717,7 @@
 			]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_26325D9A9EDB84F4.desc_01}"]
 			id: "26325D9A9EDB84F4"
+			shape: "hexagon"
 			tasks: [{
 				id: "762282782CDAD0C8"
 				item: "kubejs:natural_gas_bucket"
@@ -862,7 +727,10 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["3070A92AD6E4B7FD"]
+			dependencies: [
+				"3070A92AD6E4B7FD"
+				"0AD1428EF423B9FF"
+			]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_36C3A59891538134.desc_01}"]
 			id: "36C3A59891538134"
 			tasks: [{
@@ -889,65 +757,6 @@
 			y: 7.0d
 		}
 		{
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_03B693D028042FC9.desc_01}"]
-			icon: "createdieselgenerators:oil_scanner"
-			id: "03B693D028042FC9"
-			tasks: [{
-				id: "0033D5A9F9536FFF"
-				type: "checkmark"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_03B693D028042FC9.title}"
-			x: 5.0d
-			y: 1.0d
-		}
-		{
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_471973F58EEA5536.desc_01}"]
-			icon: "createloveandwar:oil_sand"
-			id: "471973F58EEA5536"
-			tasks: [{
-				id: "03B318D774E0E48E"
-				type: "checkmark"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_471973F58EEA5536.title}"
-			x: 3.0d
-			y: -1.0d
-		}
-		{
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2FBE43A3090D1053.desc_01}"]
-			icon: "vintageimprovements:vacuum_chamber"
-			id: "2FBE43A3090D1053"
-			tasks: [{
-				id: "2822BE4031B5A6A0"
-				type: "checkmark"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2FBE43A3090D1053.title}"
-			x: 5.0d
-			y: -1.0d
-		}
-		{
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2EFB5D929CA3B17A.desc_01}"]
-			icon: "design_decor:american_sign"
-			id: "2EFB5D929CA3B17A"
-			tasks: [{
-				id: "36A0388333072213"
-				type: "checkmark"
-			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_2EFB5D929CA3B17A.title}"
-			x: 3.0d
-			y: 1.0d
-		}
-		{
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_6ABE4B8E28063A00.desc_01}"]
-			id: "6ABE4B8E28063A00"
-			tasks: [{
-				id: "0C385F70C52D003A"
-				item: "createloveandwar:tar_clump"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 0.5d
-		}
-		{
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0BD2F52F839623A0.desc_01}"]
 			id: "0BD2F52F839623A0"
 			size: 1.5d
@@ -957,7 +766,7 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_0BD2F52F839623A0.title}"
-			x: 9.0d
+			x: 8.5d
 			y: 9.0d
 		}
 		{
@@ -969,7 +778,7 @@
 				item: "kubejs:ethylene_bucket"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 7.5d
 			y: 10.0d
 		}
 		{
@@ -981,7 +790,7 @@
 				item: "createdieselgenerators:gasoline_bucket"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 7.5d
 			y: 8.0d
 		}
 		{
@@ -993,7 +802,7 @@
 				item: "createdieselgenerators:diesel_bucket"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 9.5d
 			y: 10.0d
 		}
 		{
@@ -1006,46 +815,92 @@
 				item: "kubejs:lube_oil_bucket"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 9.5d
 			y: 8.0d
 		}
 		{
 			dependencies: ["368A009A98EDA1EE"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_3D6E6E326398C5B6.desc_01}"]
+			description: [
+				"{ftbquests.chapter_095625A2F7E1128A.quest_3D6E6E326398C5B6.desc_01}"
+				""
+				"在很久以前，一位伟大而富有争议的工程师——&e哈勃&r——发明了通过氮气和氢气直接合成氨气的方法"
+				""
+				"哈勃法的发明让农业生产变得十分高效——&e通过氮肥，你无需种田即可通过无土栽培快速获取各种作物！&r"
+			]
 			id: "3D6E6E326398C5B6"
 			tasks: [{
 				id: "52F700A817DEC7CD"
 				item: "kubejs:ammonia_bucket"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 1.5d
+			x: 8.0d
+			y: 3.5d
 		}
 		{
 			dependencies: [
 				"3D6E6E326398C5B6"
 				"368A009A98EDA1EE"
 			]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_42B9F81EA56748F0.desc_01}"]
+			description: [
+				"{ftbquests.chapter_095625A2F7E1128A.quest_42B9F81EA56748F0.desc_01}"
+				""
+				"通过直接将二氧化氮通入水中，你可以简单地获取硝酸"
+			]
 			id: "42B9F81EA56748F0"
 			tasks: [{
 				id: "52194CD1239DD2C0"
 				item: "kubejs:nitric_acid_bucket"
 				type: "item"
 			}]
-			x: 10.5d
+			x: 8.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["42B9F81EA56748F0"]
+			description: [
+				"烈焰蛋糕可以用于批量生产蓝焰衣原体！"
+				""
+				"我认为你是非常应当批量生产它的！"
+			]
 			id: "13154D868F44FC8D"
 			tasks: [{
 				id: "027C02D145863FF2"
 				item: "create:blaze_cake"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 3.0d
+			x: 9.5d
+			y: 1.5d
+		}
+		{
+			description: [
+				"你可以使用氢气代替二氧化硫来加工润滑油"
+				""
+				"如果你需要大量氢气，不妨查看\"电\"亮世界一节！"
+			]
+			id: "76CE21A8B2955AD3"
+			tasks: [{
+				id: "69B76D0DFB501BE5"
+				item: "kubejs:hydrogen_bucket"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1186909E719A2320"]
+			description: [
+				"人造橡胶可以完全代替海带的作用，并且拥有比干海带更优异的性能！"
+				""
+				"我推荐你至少建造一条生产人工橡胶的产线！"
+			]
+			id: "6A414819BF60BC22"
+			tasks: [{
+				id: "2860C553DE4DF8BE"
+				item: "kubejs:rubber"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 4.5d
 		}
 	]
 	subtitle: ["{ftbquests.chapter_095625A2F7E1128A.subtitle_1}"]

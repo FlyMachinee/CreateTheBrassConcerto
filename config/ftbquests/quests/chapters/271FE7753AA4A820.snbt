@@ -57,7 +57,11 @@
 		}
 		{
 			dependencies: ["2B6C2966D70E6A32"]
-			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_39E57EA5F66BA411.desc_01}"]
+			description: [
+				"{ftbquests.chapter_271FE7753AA4A820.quest_39E57EA5F66BA411.desc_01}"
+				""
+				"[ \"对当前的你而言，它还有一个重要的作用：你可以利用粘胶来对你的发电系统进行全新升级！参见\", { \"text\": \"协变热反应堆\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4858E334D26B9431\" } }, \"！\" ]"
+			]
 			id: "39E57EA5F66BA411"
 			tasks: [{
 				id: "3DDE8D38AF7CDEB5"
@@ -647,7 +651,11 @@
 				"14F98D3E10900E28"
 				"6C682679F1590F9C"
 			]
-			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_6125666187BA0AA6.desc_01}"]
+			description: [
+				"{ftbquests.chapter_271FE7753AA4A820.quest_6125666187BA0AA6.desc_01}"
+				""
+				"你首先在行星轨道发展铝工业，然后再前往月球开发戴斯也是完全可行的——不过这需要你对生产流程有更为熟悉的认识，所以我建议你先前往月球！"
+			]
 			id: "6125666187BA0AA6"
 			rewards: [
 				{

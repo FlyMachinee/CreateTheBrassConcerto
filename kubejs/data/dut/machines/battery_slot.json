@@ -19,9 +19,7 @@
     "components": [
         {
             "type": "custommachinery:energy",
-            "capacity": 4800000,
-            "maxInput": 288000,
-            "maxOutput": 288000,
+            "capacity": 21600,
             "mode": "both",
             "id": "slot1",
             "config": {

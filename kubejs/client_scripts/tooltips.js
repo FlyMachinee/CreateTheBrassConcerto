@@ -1,4 +1,8 @@
 ItemEvents.tooltip(event => {
+  event.add(['kubejs:disposable_battery'], Text.of("3600 FE").color(Color.YELLOW))
+  event.add(['kubejs:disposable_battery'], Text.of("180 FE/t").color(Color.GREEN))
+  event.add(['kubejs:chargeable_battery'], Text.of("360000 FE").color(Color.YELLOW))
+  event.add(['kubejs:chargeable_battery'], Text.of("720 FE/t").color(Color.GREEN))
   event.add(['minecraft:wooden_pickaxe'], Text.translate("kubejs.tooltip.wooden_pickaxe"))
   event.add(['create:blaze_burner'], Text.translate("kubejs.tooltip.blaze_burner"))
   event.add(['create:andesite_alloy'], Text.translate("kubejs.tooltip.andesite_alloy"))

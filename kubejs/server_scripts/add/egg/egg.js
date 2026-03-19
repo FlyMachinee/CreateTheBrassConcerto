@@ -181,23 +181,23 @@ ServerEvents.recipes(event => {
         "loops": 1,
         "sequence": [
             {
-                "type": "create:cutting",
-                "ingredients": [
-                    { "item": "minecraft:baked_potato" }
-                ],
-                "results": [{ "item": "minecraft:baked_potato" }]
-            },
-            {
-                "type": "create:cutting",
-                "ingredients": [
-                    { "item": "minecraft:baked_potato" }
-                ],
-                "results": [{ "item": "minecraft:baked_potato" }]
-            },
-            {
                 "type": "create:filling",
                 "ingredients": [{ "item": "minecraft:baked_potato" },
                 { "fluidTag": "dut_create:fries_oil", "amount": 50 }],
+                "results": [{ "item": "minecraft:baked_potato" }]
+            },
+            {
+                "type": "create:cutting",
+                "ingredients": [
+                    { "item": "minecraft:baked_potato" }
+                ],
+                "results": [{ "item": "minecraft:baked_potato" }]
+            },
+            {
+                "type": "create:cutting",
+                "ingredients": [
+                    { "item": "minecraft:baked_potato" }
+                ],
                 "results": [{ "item": "minecraft:baked_potato" }]
             }
         ],
@@ -349,9 +349,32 @@ ServerEvents.recipes(event => {
         ],
         "processingTime": 20
     }).id("dut_create:eggs/whole_wheat_flour")
+    //石墨烯-胶带粘黏法
+    event.custom({
+        "type": "create:sequenced_assembly",
+        "ingredient": { "item": "kubejs:graphite" },
+        "results": [
+            { "item": "kubejs:graphene_coil", "chance": 0.01 },
+            { "item": "kubejs:crushed_coal", "chance": 0.99 },
+        ],
+        "loops": 1,
+        "sequence": [
+            {
+                "type": "create:deploying",
+                "ingredients": [
+                    { "item": "kubejs:graphite" },
+                    { "item": "minecraft:slime_ball" }
+                ],
+                "results": [
+                    { "item": "kubejs:graphite" }
+                ]
+            }
+        ],
+        "transitionalItem": { "item": "kubejs:graphite" }
+    }).id("dut_create:egg/graphene_coil_from_graphite")
 })
 
-BlockEvents.rightClicked("minecraft:player_head", event => {
+BlockEvents.rightClicked(["minecraft:player_head","player_wall_head"], event => {
     let SkullName = event.block.entityData?.SkullOwner?.Name
     if (SkullName == null || event.hand != "MAIN_HAND") { return }
     switch (SkullName) {

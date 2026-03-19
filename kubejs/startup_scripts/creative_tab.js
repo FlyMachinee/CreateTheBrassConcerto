@@ -8,7 +8,6 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		.icon(() => Item.of("kubejs:aluminum_slag"))
 		.content(() => [
 			"kubejs:unknown_prototype",
-			"kubejs:carbon_electrode",
 			'kubejs:salt',
 			//'kubejs:kelp_dust',
 			'kubejs:sulphur',
@@ -114,6 +113,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 	tab.create("cbc:aaa_parts")
 		.icon(() => Item.of("kubejs:mechanical_core"))
 		.content(() => [
+			"kubejs:carbon_electrode",
 			'create:shadow_steel_casing',
 			'create:refined_radiance_casing',
 			'kubejs:io_mechanism',
@@ -122,7 +122,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 			'kubejs:circuit_board',
 			'kubejs:magenta_circuit_board',
 			'kubejs:lime_circuit_board',
-			'kubejs:bridge_rectifier',
+			//'kubejs:bridge_rectifier',
 			'kubejs:bearing',
 			'kubejs:planetary_gear',
 			'kubejs:cardan_joint',
@@ -166,7 +166,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		.displayName = Text.translatable("kubejs.creative_tab.parts")
 	//食物与工具
 	tab.create("cbc:aaa_tool_food")
-		.icon(() => Item.of("kubejs:slime_cola_can"))
+		.icon(() => Item.of("kubejs:large_fries"))
 		.content(() => [
 			'kubejs:anti_warden_bomb',
 			'beyonddimensions:net_interface',
@@ -290,7 +290,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		.displayName = Text.translatable("kubejs.creative_tab.bucket")
 	//机器
 	tab.create("cbc:aaa_machine")
-		.icon(() => Item.of("kubejs:solar_panel"))
+		.icon(() => Item.of('kubejs:productivity_module_3'))
 		.content(() => [
 			'kubejs:creative_motor_blueprint',
 			'kubejs:anti_warden_bomb',
@@ -357,7 +357,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		.displayName = Text.translatable("kubejs.creative_tab.machine")
 	//生物工程
 	tab.create("cbc:aaa_bio")
-		.icon(() => Item.of("kubejs:mycetozoan"))
+		.icon(() => Item.of("kubejs:peat_protozoa"))
 		.content(() => [
 			"kubejs:covariant_reactor",
 			"kubejs:bronze_fuel_rod",
@@ -426,8 +426,6 @@ StartupEvents.registry("creative_mode_tab", tab => {
 			"kubejs:electron_tube_computer",
 			"kubejs:large_difference_engine",
 			'kubejs:blueprint_builder',
-			'createandesiteabound:redstone_radar',
-			//'kubejs:redstone_radar',
 			'kubejs:brass_hard_disk',
 			'kubejs:aluminum_hard_disk',
 			'kubejs:tin_hard_disk',

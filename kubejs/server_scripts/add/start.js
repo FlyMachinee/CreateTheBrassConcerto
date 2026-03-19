@@ -27,4 +27,12 @@ ServerEvents.recipes(event => {
         "result": { "item": "createbigcannons:basin_foundry_lid" },
         "show_notification": true
     }).id("dut_create:first_basin_foundry_lid")
+  event.custom({
+    "type": "create:item_application",
+    "ingredients": [
+      { "item": "createdieselgenerators:chip_wood_block"  },
+      { "tag": "forge:ingots/iron" },
+    ],
+    "results": [{ "item": "create:depot" }]
+  }).id("dut_create:deploying/first_depot")
 })

@@ -31,8 +31,6 @@
             "type": "custommachinery:fluid",
             "capacity": 4000,
             "id": "fluid_input",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "filter": [  "minecraft:water" ],
             "whitelist": true
         },
@@ -49,7 +47,11 @@
             "type": "custommachinery:item",
             "id": "1",
             "mode": "input",
-            "locked": true
+            "config":{
+                "default": "none",
+                "input":false,
+                "output":false
+            }
         },
         {
             "type": "custommachinery:item",

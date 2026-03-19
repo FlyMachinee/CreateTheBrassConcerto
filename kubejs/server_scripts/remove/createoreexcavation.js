@@ -7,6 +7,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'createoreexcavation:netherite_drill' })
   event.remove({ id: 'createoreexcavation:drill' })
   event.remove({ id: 'createoreexcavation:cutting/diamond_cutting' })
+  event.remove({ id: 'minecraft:netherite_drill_smithing' })
   event.remove({ id: 'waystones:warp_stone' })
   event.remove({ id: 'waystones:warp_dust' })
   event.custom({

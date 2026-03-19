@@ -43,8 +43,6 @@
             "type": "custommachinery:fluid",
             "capacity": 32000,
             "id": "radiator",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "filter": [
                 "kubejs:cryogen"
             ],

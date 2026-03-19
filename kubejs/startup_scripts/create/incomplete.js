@@ -2,7 +2,7 @@ StartupEvents.registry('item', event => {
     event.create('substrate')
     event.create('magenta_substrate')
     event.create('lime_substrate')
-    event.create('incomplete_rectifier').maxStackSize(16)
+    //event.create('incomplete_rectifier').maxStackSize(16)
     event.create('incomplete_bearing')
     event.create('incomplete_planetary_gear').maxStackSize(16)
     event.create('incomplete_differential').maxStackSize(16)

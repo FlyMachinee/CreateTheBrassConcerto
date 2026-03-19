@@ -37,7 +37,7 @@
   "kubejs.jeiaddition.upgrades.min": "最小值",
   "kubejs.jeiaddition.steam_generator.steam_count": "蒸汽发电机周围加压蒸汽源的数量",
   "kubejs.jeiaddition.steam_generator.water_count": "蒸汽发电机周围水的数量",
-  "kubejs.jeiaddition.steam_generator.formula1": "P = floor(2048 * S / (W + 1))",
+  "kubejs.jeiaddition.steam_generator.formula1": "P = floor(540 * S / (W + 1))",
   "kubejs.jeiaddition.steam_generator.formula2": "其中 floor 为向下取整函数",
   "kubejs.jeiaddition.steam_generator.machine1": "配方开始时，销毁周围的水方块、加压蒸汽源方块，",
   "kubejs.jeiaddition.steam_generator.machine2": "并将蒸汽源替换为水源方块（处于下列维度时）；",

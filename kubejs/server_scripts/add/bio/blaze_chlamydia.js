@@ -23,6 +23,12 @@ ServerEvents.recipes(event => {
     ],
     "transitionalItem": { "item": "kubejs:blaze_chlamydia" }
   }).id("dut_create:blaze_chlamydia")
+  event.custom({
+    "type": "create:filling",
+    "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
+    { "amount": 500, "fluid": "kubejs:superheated_steam" }],
+    "results": [{ "item": "kubejs:blaze_chlamydia", "count": 4 }]
+  }).id("dut_create:blaze_chlamydia_from_steam")
   //黄铜区块加载器
   event.custom({
     "type": "create:item_application",

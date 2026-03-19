@@ -18,13 +18,13 @@ ServerEvents.commandRegistry(event => {
             orCreateData(p.persistentData, "teleport", {})
             orCreateData(p.persistentData.teleport, "lastpoint", {})
             let pdata = p.persistentData.teleport.lastpoint
-            pdata.pos = {}
+            orCreateData(pdata, "pos", {})
             pdata.pos.x = p.x
             pdata.pos.y = p.y
             pdata.pos.z = p.z
             pdata.dimension = OriginDimension
 
-            p.teleportTo(TargetDimension, Location.x, Location.y, Location.z, p.YRot, p.XRot)
+            p.teleportTo(TargetDimension, Location.x, Location.y, Location.z, p.yRot || 0, p.xRot || 0)
             return 1
         })
     )
@@ -58,7 +58,7 @@ ServerEvents.commandRegistry(event => {
             pdata.lastpoint1.pos.z = p.z
             pdata.lastpoint1.dimension = OriginDimension
 
-            p.teleportTo(TargetDimension, Location.x, Location.y, Location.z, p.YRot, p.XRot)
+            p.teleportTo(TargetDimension, Location.x, Location.y, Location.z, p.yRot || 0, p.xRot || 0)
             //修改最后传送坐标点
             pdata.lastpoint = pdata.lastpoint1
             return 1
@@ -92,6 +92,10 @@ ServerEvents.commandRegistry(event => {
             orCreateData(p.persistentData, "teleport", {})
             let pdata = p.persistentData.teleport
             orCreateData(pdata, "home", {})
+            if (!pdata.contains("home")) {
+                p.tell(Text.translate("kubejs.message.need_home"))
+                return 0
+            }
             let TargetDimension = pdata.home.dimension
             if (DimensionToPlanet[TargetDimension] != DimensionToPlanet[OriginDimension]) {
                 if (!isCuriosEmpty(p.nbt.ForgeCaps["curios:inventory"].Curios) || !p.inventory.isEmpty()) {
@@ -99,16 +103,16 @@ ServerEvents.commandRegistry(event => {
                     return 0
                 }
             }
-            let Location = pdata.home.pos || p.position()
+            let Location = pdata.home.pos
             //存储当前坐标点
             orCreateData(pdata, "lastpoint", {})
-            pdata.lastpoint.pos = {}
+            orCreateData(pdata.lastpoint, "pos", {})
             pdata.lastpoint.pos.x = p.x
             pdata.lastpoint.pos.y = p.y
             pdata.lastpoint.pos.z = p.z
             pdata.lastpoint.dimension = OriginDimension
 
-            p.teleportTo(TargetDimension, Location.x, Location.y, Location.z, p.YRot, p.XRot)
+            p.teleportTo(TargetDimension, Location.x, Location.y, Location.z, p.yRot || 0, p.xRot || 0)
             return 1
         })
     )
@@ -119,18 +123,21 @@ ServerEvents.commandRegistry(event => {
             let p = result.source.player
             if (p == null) { return 0 }
             //存储当前坐标点
-            p.persistentData.teleport.lastpoint.pos = {}
-            p.persistentData.teleport.lastpoint.pos.x = p.x
-            p.persistentData.teleport.lastpoint.pos.y = p.y
-            p.persistentData.teleport.lastpoint.pos.z = p.z
-            p.persistentData.teleport.lastpoint.dimension = p.level.dimension.toString()
+            orCreateData(p.persistentData, "teleport", {})
+            let pdata = p.persistentData.teleport
+            orCreateData(pdata, "lastpoint", {})
+            orCreateData(pdata.lastpoint, "pos", {})
+            pdata.lastpoint.pos.x = p.x
+            pdata.lastpoint.pos.y = p.y
+            pdata.lastpoint.pos.z = p.z
+            pdata.lastpoint.dimension = p.level.dimension.toString()
             p.persistentData.needRespawn = true
             p.persistentData.FreeCaming = false
             p.runCommandSilent(`/curios clear @s`)
             p.setGameMode("spectator")
             p.inventory.clear()
             p.setStatusMessage(Text.translate("kubejs.message.remake"))
-            p.teleportTo("minecraft:overworld", 0, 0, 0, p.YRot, p.XRot)
+            p.teleportTo("minecraft:overworld", 0, 0, 0, p.yRot || 0, p.xRot || 0)
             return 1
         })
     )
@@ -141,22 +148,21 @@ ServerEvents.commandRegistry(event => {
             let p = result.source.player
             if (p == null) { return 0 }
             if (p.persistentData.needRespawn) { return 0 }
+            orCreateData(p.persistentData, "teleport", {})
+            let pdata = p.persistentData.teleport
             //存储当前坐标点
-            try {
-                p.persistentData.teleport.lastpoint.pos = {}
-                p.persistentData.teleport.lastpoint.pos.x = p.x
-                p.persistentData.teleport.lastpoint.pos.y = p.y
-                p.persistentData.teleport.lastpoint.pos.z = p.z
-                p.persistentData.teleport.lastpoint.dimension = p.level.dimension.toString()
+            orCreateData(pdata, "lastpoint", {})
+            orCreateData(pdata.lastpoint, "pos", {})
+            pdata.lastpoint.pos.x = p.x
+            pdata.lastpoint.pos.y = p.y
+            pdata.lastpoint.pos.z = p.z
+            pdata.lastpoint.dimension = p.level.dimension.toString()
 
-                p.persistentData.needRespawn = true
-                p.persistentData.FreeCaming = false
-                p.setGameMode("spectator")
-                p.setStatusMessage(Text.translate("kubejs.message.redeploy_tips"))
-                p.addItemCooldown("kubejs:unknown_prototype", 20)
-            } catch (e) {
-                console.log(e)
-            }
+            p.persistentData.needRespawn = true
+            p.persistentData.FreeCaming = false
+            p.setGameMode("spectator")
+            p.setStatusMessage(Text.translate("kubejs.message.redeploy_tips"))
+            p.addItemCooldown("kubejs:unknown_prototype", 20)
             return 1
         })
     )
@@ -251,7 +257,7 @@ ServerEvents.commandRegistry(event => {
                     pdata.pos.z = p.z
                     pdata.dimension = p.level.dimension.toString()
 
-                    p.teleportTo(TargetWarp.dimension, TargetWarp.pos.x, TargetWarp.pos.y, TargetWarp.pos.z, p.YRot, p.XRot)
+                    p.teleportTo(TargetWarp.dimension, TargetWarp.pos.x, TargetWarp.pos.y, TargetWarp.pos.z, p.yRot || 0, p.xRot || 0)
                     return 1
                 }
                 return 0
@@ -308,7 +314,7 @@ ServerEvents.commandRegistry(event => {
                 let tpapdata = tpap.persistentData
                 orCreateData(tpapdata, "tpa_requirement", {})
                 orCreateData(tpapdata.tpa_requirement, p.username, {})
-                tpapdata.tpa_requirement[tpap.username].type = "tpa"
+                orCreateData(tpapdata.tpa_requirement[p.username], "type", "tpa")
 
                 p.tell(Text.translate("kubejs.message.sendtpa", tpap.username))
                 tpap.tell(Text.translate("kubejs.message.tpa", p.username).append(Text.translate("kubejs.message.accept").clickRunCommand(`/tpaccept ${p.username}`)))
@@ -338,7 +344,7 @@ ServerEvents.commandRegistry(event => {
                 let tpapdata = tpap.persistentData
                 orCreateData(tpapdata, "tpa_requirement", {})
                 orCreateData(tpapdata.tpa_requirement, p.username, {})
-                tpapdata.tpa_requirement[tpap.username].type = "tpahere"
+                orCreateData(tpapdata.tpa_requirement[p.username], "type", "tpahere")
 
                 p.tell(Text.translate("kubejs.message.sendtpa", tpap.username))
                 tpap.tell(Text.translate("kubejs.message.tpahere", p.username).append(Text.translate("kubejs.message.accept").clickRunCommand(`/tpaccept ${p.username}`)))

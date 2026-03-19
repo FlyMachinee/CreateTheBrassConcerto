@@ -1,7 +1,7 @@
 {
     "item": "kubejs:productivity_module_2",
     "machines": [
-        "dut:electron_tube_computer","dut:large_difference_engine","dut:alloy_furnace","dut:assembling_machine","dut:condenser","dut:construction_station","dut:culture_bin","dut:electrolytic_cell","dut:infinity_fetching_pool","dut:launch_pad_controller","dut:shaft_furnace","dut:steam_generator","dut:electro_hydro_resonant_tower"
+        "dut:electron_tube_computer","dut:large_difference_engine","dut:alloy_furnace","dut:assembling_machine","dut:condenser","dut:construction_station","dut:culture_bin","dut:electrolytic_cell","dut:launch_pad_controller","dut:shaft_furnace","dut:steam_generator","dut:electro_hydro_resonant_tower"
     ],
     "modifiers": [
         {

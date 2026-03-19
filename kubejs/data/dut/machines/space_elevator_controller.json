@@ -75,9 +75,7 @@
         },
         {
             "type": "custommachinery:energy",
-            "capacity": 640000,
-            "maxInput": 294912,
-            "maxOutput": 294912,
+            "capacity": 360000,
             "mode": "input",
             "id": "fe",
             "config": {

@@ -23,32 +23,6 @@
 			y: -0.5d
 		}
 		{
-			description: [
-				"{ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_01}"
-				"[\"\", {\"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"1EFCE2A7FB341A0A\"}, \"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_111_3.quest_43B79BFABB092F12.desc_02.rich_03\"}]"
-			]
-			id: "43B79BFABB092F12"
-			rewards: [{
-				count: 16
-				id: "659D90F2BDE4BA22"
-				item: "kubejs:large_fries"
-				type: "item"
-			}]
-			subtitle: "{ftbquests.chapter_111_3.quest_43B79BFABB092F12.subtitle}"
-			tasks: [{
-				id: "251C6D7B3572632B"
-				item: {
-					Count: 1
-					id: "create_sa:grapplin_whisk"
-					tag: { }
-				}
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_111_3.quest_43B79BFABB092F12.title}"
-			x: 0.0d
-			y: -2.0d
-		}
-		{
 			description: ["{ftbquests.chapter_111_3.quest_29AB0046AD153308.desc_01}"]
 			id: "29AB0046AD153308"
 			rewards: [{
@@ -65,7 +39,7 @@
 			}]
 			title: "{ftbquests.chapter_111_3.quest_29AB0046AD153308.title}"
 			x: 0.0d
-			y: -3.5d
+			y: -2.0d
 		}
 		{
 			description: ["{ftbquests.chapter_111_3.quest_7ED4995ADF9BF952.desc_01}"]

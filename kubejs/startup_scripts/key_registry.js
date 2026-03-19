@@ -1,6 +1,7 @@
-const $KeyMapping = Java.loadClass("net.minecraft.client.KeyMapping");
-const $GLFWkey = Java.loadClass("org.lwjgl.glfw.GLFW");
-const $KeyMappingRegistry = Java.loadClass("dev.architectury.registry.client.keymappings.KeyMappingRegistry")
+if (Platform.isClientEnvironment()){
+let $KeyMapping = Java.loadClass("net.minecraft.client.KeyMapping");
+let $GLFWkey = Java.loadClass("org.lwjgl.glfw.GLFW");
+let $KeyMappingRegistry = Java.loadClass("dev.architectury.registry.client.keymappings.KeyMappingRegistry")
 /**@type {Internal.KeyMapping} */
 global.FreeCam = new $KeyMapping(
     "key.kubejs.freecam",//按键名
@@ -35,3 +36,4 @@ ClientEvents.init(() => {
     $KeyMappingRegistry.register(global.SwitchLeft)
     $KeyMappingRegistry.register(global.SwitchRight)
 })
+}

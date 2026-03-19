@@ -82,7 +82,11 @@ ServerEvents.recipes(event => {
         'storagedrawers:gold_storage_upgrade',
         'storagedrawers:diamond_storage_upgrade',
         'storagedrawers:netherite_storage_upgrade',
-        'storagedrawers:void_upgrade'
+        'storagedrawers:void_upgrade',
+        "storagedrawers:conversion_upgrade",
+        "storagedrawers:magnet_upgrade",
+        "storagedrawers:magnet_upgrade_2",
+        "storagedrawers:magnet_upgrade_3"
     ]
     for (let i of noRecipe) {
         event.remove({ id: i })
@@ -95,6 +99,19 @@ ServerEvents.recipes(event => {
             "count": 1
         }).id("dut_create:trim/" + i.split(":")[1])
     )
+    event.custom({
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+            "###",
+            "#X#",
+            "###"
+        ],
+        "key": {
+            "X": { "item": "storagedrawers:upgrade_template" },
+            "#": { "tag": "forge:ingots/copper" }
+        },
+        "result": { "item": "storagedrawers:magnet_upgrade_3" }
+    }).id("dut_create:magnet_upgrade_3")
     event.remove({id:"storagedrawers:remote_group_upgrade"})
     event.remove({id:"storagedrawers:remote_group_upgrade_bound"})
     event.remove({id:"storagedrawers:remote_upgrade"})

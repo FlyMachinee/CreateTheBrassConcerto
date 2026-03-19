@@ -474,7 +474,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:bridge_rectifier", 4, "input"),
+      AssemblingMachineItem("kubejs:electric_gear", 8, "input"),
       AssemblingMachineItem("createaddition:capacitor", 6, "input"),
       AssemblingMachineItem("createaddition:gold_spool", 6, "input"),
       AssemblingMachineFluid("kubejs:slime_colloid", 250),

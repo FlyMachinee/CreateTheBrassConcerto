@@ -21,8 +21,6 @@
             "type": "custommachinery:fluid",
             "capacity": 4000,
             "id": "fluid",
-            "maxInput": 1000,
-            "maxOutput": 1000,
             "filter": [
                 "minecraft:water"
             ],

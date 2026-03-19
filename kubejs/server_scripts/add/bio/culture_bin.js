@@ -147,7 +147,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
-    "time": 50,
+    "time": 60,
     "requirements": [
       CultureBinItemInput("minecraft:charcoal", 4),
       CultureBinItemInput("#dut_create:moon_solid", 1),
@@ -162,7 +162,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
-    "time": 50,
+    "time": 60,
     "requirements": [
       CultureBinDimension("ad_astra:moon"),
       CultureBinItemInput("minecraft:charcoal", 4),
@@ -177,7 +177,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
-    "time": 50,
+    "time": 60,
     "requirements": [
       CultureBinDimension(["dut:slimeria","dut:slimeria_orbit"]),
       CultureBinItemInput("minecraft:charcoal", 4),
@@ -192,20 +192,20 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
-    "time": 120,
+    "time": 60,
     "requirements": [
       CultureBinItemInput("minecraft:packed_mud", 8),
       CultureBinItemInput("minecraft:charcoal", 8),
       CultureBinItemInput("kubejs:peat_protozoa", 1),
       CultureBinItemChance("minecraft:coal", 8, 1),
-      CultureBinItemChance("minecraft:mud", 3, 1),
+      CultureBinItemChance("minecraft:mud", 8, 1),
       CultureBinItemChance("kubejs:peat_protozoa", 1, 1)
     ]
   }).id("dut_create:culture_bin/peat/coal")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
-    "time": 120,
+    "time": 60,
     "requirements": [
       CultureBinFluid("minecraft:water", "input", 500),
       CultureBinItemInput("minecraft:mud", 8),
@@ -484,19 +484,28 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
+    "time": 20,
+    "requirements": [
+      CultureBinItemInput("kubejs:blaze_chlamydia", 4),
+      CultureBinItemInput("iceandfire:fire_dragon_blood", 4),
+      CultureBinItemChance("kubejs:blaze_chlamydia", 8, 1)
+    ]
+  }).id("dut_create:culture_bin/blaze_chlamydia_from_dragon_blood")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:culture_bin",
     "time": 60,
     "requirements": [
       CultureBinItemInput("kubejs:blaze_mycoplasma", 12),
       CultureBinItemNBT("input", "kubejs:matrix_2", 1, '{ matrix: [ [ [ 0, 1 ], [ 1, 0 ] ], [ [ -1, 3 ], [ 3, -1 ] ], [ [ 3, -1 ], [ -1, 3 ] ] ] }'),
       CultureBinItemChance("kubejs:blaze_chlamydia", 12, 1)
     ]
-  }).id("dut_create:culture_bin/blaze_chlamydia/get")
+  }).id("dut_create:culture_bin/blaze_chlamydia_from_matrix")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:culture_bin",
     "time": 120,
     "requirements": [
-      CultureBinDimension(["minecraft:overworld", "ad_astra:orbit"]),
       CultureBinFluid("kubejs:slime_colloid", "input", 500),
       CultureBinFluid("kubejs:electro_hydro", "input", 500),
       CultureBinItemInput("iceandfire:stymphalian_bird_feather", 16),
@@ -573,7 +582,7 @@ ServerEvents.recipes(event => {
       "machine": "dut:culture_bin",
       "time": 120,
       "requirements": [
-        CultureBinDimension(["minecraft:overworld", "ad_astra:orbit"]),
+        CultureBinDimension(["minecraft:overworld", "ad_astra:earth_orbit"]),
         CultureBinFluid("vintageimprovements:sulfuric_acid", "input", 50),
         CultureBinFluid("vintageimprovements:sulfur_dioxide", "output", 50),
         CultureBinItemInput("kubejs:chromatic_protozoa", 1),

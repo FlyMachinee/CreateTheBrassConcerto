@@ -1,7 +1,7 @@
 {
     "item": "kubejs:efficiency_module_2",
     "machines": [
-        "dut:electron_tube_computer","dut:assembling_machine","dut:construction_station","dut:electrolytic_cell","dut:infinity_fetching_pool","dut:steam_generator"
+        "dut:electron_tube_computer","dut:assembling_machine","dut:construction_station","dut:electrolytic_cell","dut:steam_generator"
     ],
     "modifiers": [
         {

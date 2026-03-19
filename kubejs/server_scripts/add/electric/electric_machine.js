@@ -125,13 +125,10 @@ ServerEvents.recipes(event => {
             { "amount": 500, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" }},
             { "item": "kubejs:graphite"},
             { "item": "kubejs:graphite"},
-            { "item": "kubejs:graphite"},
-            { "item": "kubejs:graphite"},
-            { "tag": "forge:plates/tin"},
             { "tag": "forge:plates/tin"}
         ],
         "results": [{ "fluid": "kubejs:carbon_dioxide", "amount": 250 },
-        { "item": "kubejs:carbon_electrode","count":1 }],
+        { "item": "kubejs:carbon_electrode"}],
         "processingTime": 50
     }).id('dut_create:carbon_electrode1')
     event.custom({
@@ -174,9 +171,9 @@ ServerEvents.recipes(event => {
         ],
         "key": {
             "A": { "tag": "forge:plates/brass"  },
-            "B": { "item": "create:flywheel" },
+            "B": { "item": "kubejs:bearing" },
             "C": { "item": "kubejs:magenta_circuit_board" },
-            "D": { "item": "createaddition:alternator" },
+            "D": { "item": "kubejs:differential" },
             "E": {"tag": "forge:storage_blocks/tin"  }
         },
         "result": { "item": "kubejs:steam_generator" }

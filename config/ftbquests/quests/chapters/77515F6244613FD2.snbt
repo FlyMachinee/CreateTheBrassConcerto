@@ -5,7 +5,7 @@
 	group: "6B818C6F92D84205"
 	icon: "createloveandwar:walker"
 	id: "77515F6244613FD2"
-	order_index: 5
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -443,6 +443,7 @@
 		}
 		{
 			description: ["{ftbquests.chapter_77515F6244613FD2.quest_0948D79B50550974.desc_01}"]
+			hide_dependency_lines: false
 			id: "0948D79B50550974"
 			rewards: [
 				{
@@ -473,7 +474,7 @@
 				type: "advancement"
 			}]
 			x: 0.5d
-			y: 6.5d
+			y: 5.25d
 		}
 		{
 			description: ["{ftbquests.chapter_77515F6244613FD2.quest_5A777BD18837678F.desc_01}"]

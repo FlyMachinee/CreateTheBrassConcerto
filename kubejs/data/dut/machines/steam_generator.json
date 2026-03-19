@@ -11,11 +11,11 @@
     },
     "tooltips": [
         {
-            "text": "MAX: 16384 FE/t",
+            "text": "MAX: 96000 FE/t",
             "color": "green"
         },
         {
-            "text": "MIN: 256 FE/t",
+            "text": "MIN: 67.5 FE/t",
             "color": "yellow"
         }
     ],
@@ -32,10 +32,8 @@
         },
         {
             "type": "custommachinery:fluid",
-            "capacity": 50,
+            "capacity": 250,
             "id": "lube",
-            "maxInput": 5,
-            "maxOutput": 5,
             "mode": "input",
             "config": {
                 "input": true,
@@ -48,9 +46,7 @@
         },
         {
             "type": "custommachinery:energy",
-            "capacity": 320000,
-            "maxInput": 160000,
-            "maxOutput": 160000,
+            "capacity": 360000,
             "mode": "input",
             "id": "fe",
             "config": {

@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "vintageimprovements:pressurizing",
     "secondaryFluidInput": 1,
-    "heatRequirement": "superheated",
+    "heatRequirement": "heated",
     "ingredients": [
       { "fluid": "kubejs:incomplete_steel", "amount": 500 },
       { "amount": 500, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" } },
@@ -17,19 +17,6 @@ ServerEvents.recipes(event => {
       { "fluid": "createbigcannons:molten_steel", "amount": 250 }
     ],
     "processingTime": 45
-  }).id('dut_create:steel/molten_steel1')
-  event.custom({
-    "type": "vintageimprovements:pressurizing",
-    "secondaryFluidInput": 1,
-    "heatRequirement": "heated",
-    "ingredients": [
-      { "fluid": "kubejs:incomplete_steel", "amount": 500 },
-      { "amount": 500, "fluid": "kubejs:ammonia" },
-    ],
-    "results": [
-      { "fluid": "createbigcannons:molten_steel", "amount": 250 }
-    ],
-    "processingTime": 30
   }).id('dut_create:steel/molten_steel')
   event.custom({
     "type": "vintageimprovements:pressurizing",

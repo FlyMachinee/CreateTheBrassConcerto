@@ -138,6 +138,16 @@
 			x: -1.0d
 			y: -2.0d
 		}
+		{
+			id: "262E7EAC18A82705"
+			tasks: [{
+				id: "4AE8F4F69292332E"
+				item: "iceandfire:stymphalian_skull"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -0.5d
+		}
 	]
 	title: "{ftbquests.chapter_111_2.title}"
 }

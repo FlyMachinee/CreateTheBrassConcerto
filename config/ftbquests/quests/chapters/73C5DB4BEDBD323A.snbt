@@ -332,12 +332,19 @@
 			dependencies: ["241467A9149EFB99"]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_2462E9E2A019A8A6.desc_01}"]
 			id: "2462E9E2A019A8A6"
-			rewards: [{
-				count: 4
-				id: "6D01056D60A66956"
-				item: "create_connected:sequenced_pulse_generator"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "6D01056D60A66956"
+					item: "create_connected:sequenced_pulse_generator"
+					type: "item"
+				}
+				{
+					id: "5AE6A54708974EEB"
+					item: "minecraft:beetroot_seeds"
+					type: "item"
+				}
+			]
 			shape: "hexagon"
 			tasks: [{
 				consume_items: true
@@ -374,7 +381,6 @@
 			description: [
 				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_01}"
 				"[\"\", {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4B74E620CC367150\"}, \"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_02.rich_03\"}]"
-				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_261F377F113598D4.desc_03}"
 			]
 			id: "261F377F113598D4"
 			rewards: [
@@ -584,7 +590,7 @@
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_4C0F977C66E23537.desc_01}"]
 			id: "4C0F977C66E23537"
 			rewards: [{
-				count: 8
+				count: 16
 				id: "6A4F3D59DFFC15CB"
 				item: "create:precision_mechanism"
 				type: "item"
@@ -606,9 +612,15 @@
 			]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7BA9CFF9B5FC09E0.desc_01}"]
 			id: "7BA9CFF9B5FC09E0"
+			rewards: [{
+				count: 24
+				id: "0CC583CCCFAD12BE"
+				item: "kubejs:fluid_mechanism"
+				type: "item"
+			}]
 			tasks: [{
 				consume_items: true
-				count: 256L
+				count: 128L
 				id: "6A62DB8FDCAF9C35"
 				item: "create:electron_tube"
 				type: "item"
@@ -768,11 +780,18 @@
 			dependencies: ["6DCA5199790871D9"]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_11B3D102810496A2.desc_01}"]
 			id: "11B3D102810496A2"
-			rewards: [{
-				id: "79DDF8459C71F6B9"
-				item: "kubejs:coin_gold"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "79DDF8459C71F6B9"
+					item: "kubejs:coin_gold"
+					type: "item"
+				}
+				{
+					id: "65B75326F2C93025"
+					item: "minecraft:potato"
+					type: "item"
+				}
+			]
 			tasks: [{
 				consume_items: true
 				count: 64L
@@ -806,18 +825,11 @@
 			]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7E7AE206A66030D8.desc_01}"]
 			id: "7E7AE206A66030D8"
-			rewards: [
-				{
-					id: "4B55C320915A902C"
-					item: "minecraft:sugar_cane"
-					type: "item"
-				}
-				{
-					id: "7230A66B93349E2B"
-					item: "minecraft:beetroot_seeds"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "4B55C320915A902C"
+				item: "minecraft:sugar_cane"
+				type: "item"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "0CA0A30FD2795877"
