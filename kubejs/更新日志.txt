@@ -1,9 +1,11 @@
 更新日志：
 Beta0.7.3-2025.3.31-史莱利亚更新：预备工作-性能与逻辑优化：第二部分
-将整合包附属mod Andesite Abound更新至0.8.6;将mod CustomMachinery更新至0.10.9.4
+将整合包附属mod Andesite Abound更新至0.8.7;将mod CustomMachinery更新至0.10.9.4
 重做了电力系统的数值设计；重做了大型电解池、协变反应堆、无限取液池、高炉；优化了若干多方块机器的使用体验
 
 Alpha2:
+-将整合包附属mod Andesite Abound更新至0.8.7√
+-修复了大型电解池不能自动输出副产物的bug√
 
 Alpha1:
 -将整合包附属mod Andesite Abound更新至0.8.6

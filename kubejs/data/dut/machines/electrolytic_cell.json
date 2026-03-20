@@ -166,7 +166,7 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [0, -6, -3],
+            "pos": [0, -6, 3],
             "mode": "output",
             "slotID":["fluidOutput3"]
         },
