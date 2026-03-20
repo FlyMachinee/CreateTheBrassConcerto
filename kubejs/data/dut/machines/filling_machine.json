@@ -16,10 +16,6 @@
             "block": "kubejs:machine/filling_machine"
         }
     },
-    "processor": {
-        "type": "custommachinery:machine",
-        "cooldown": 1
-    },
     "components": [
         {
             "type": "custommachinery:redstone",
@@ -30,8 +26,6 @@
             "capacity": 32000,
             "id": "fluid_input",
             "mode": "both",
-            "maxInput": 32000,
-            "maxOutput": 32000,
             "config": {
                 "default": "output",
                 "top":"input",

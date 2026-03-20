@@ -13,7 +13,7 @@ const MultiBlockRecipe = {
 	"kubejs:alloy_furnace": ["dut_create:alloy_furnace/industrial_iron"],
 	"kubejs:huge_crusher": ["dut_create:huge_crusher/fluid"],
 	"kubejs:shaft_furnace": ["dut_create:shaft_furnace/desh"],
-	"kubejs:infinity_fetching_pool": ["dut_create:infinity_fetching_pool/fluid"],
+	"kubejs:infinity_fetching_pool": ["dut_create:infinity_fetching_pool/empty"],
 	"kubejs:electrolytic_cell": ['dut_create:electrolytic_cell/water'],
 	'kubejs:electro_hydro_resonant_tower': ['dut_create:electro_hydro_resonant_tower/electro_hydro'],
 	"kubejs:assembling_machine": ["dut_create:assembling_machine/circuit_board"],

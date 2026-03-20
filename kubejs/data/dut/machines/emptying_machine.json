@@ -16,10 +16,6 @@
             "block": "kubejs:machine/emptying_machine"
         }
     },
-    "processor": {
-        "type": "custommachinery:machine",
-        "cooldown": 1
-    },
     "components": [
         {
             "type": "custommachinery:redstone",
@@ -30,8 +26,6 @@
             "capacity": 32000,
             "id": "fluid_output",
             "mode": "both",
-            "maxInput": 32000,
-            "maxOutput": 32000,
             "config": {
                 "default": "input",
                 "bottom":"output",
@@ -45,8 +39,6 @@
             "capacity": 32000,
             "id": "fluid_output1",
             "mode": "both",
-            "maxInput": 32000,
-            "maxOutput": 32000,
             "config": {
                 "default": "input",
                 "bottom":"output",
@@ -60,8 +52,6 @@
             "capacity": 32000,
             "id": "fluid_output2",
             "mode": "both",
-            "maxInput": 32000,
-            "maxOutput": 32000,
             "config": {
                 "default": "input",
                 "bottom":"output",
@@ -75,8 +65,6 @@
             "capacity": 32000,
             "id": "fluid_output3",
             "mode": "both",
-            "maxInput": 32000,
-            "maxOutput": 32000,
             "config": {
                 "default": "input",
                 "bottom":"output",

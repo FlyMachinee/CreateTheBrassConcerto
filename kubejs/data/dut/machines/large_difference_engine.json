@@ -64,7 +64,6 @@
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "steam",
-            "maxInput": 2000,
             "maxOutput": 0,
             "filter": [
                 "kubejs:pressurized_steam"

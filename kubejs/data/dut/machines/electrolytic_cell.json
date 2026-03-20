@@ -16,10 +16,6 @@
             "block": "kubejs:machine/electrolytic_cell"
         }
     },
-    "processor": {
-        "type": "custommachinery:machine",
-        "cooldown": 5
-    },
     "tooltips": [
         {
             "text": "kubejs.tooltip.multiblock_mech",
@@ -36,81 +32,39 @@
             "id": "item_input1",
             "mode": "input",
             "config": {
-                "default": "input",
-                "input": true,
-                "output": false
-            },
-            "filter": [
-                "kubejs:aluminum_slag",
-                "iceandfire:dragonsteel_lightning_ingot",
-                "kubejs:bronze_triangle",
-                "kubejs:diorite_alloy",
-                "ad_astra:moon_sand"
-            ],
-            "whitelist": false
+                "default": "input"
+            }
         },
         {
             "type": "custommachinery:item",
             "id": "item_input2",
             "mode": "input",
             "config": {
-                "default": "input",
-                "input": true,
-                "output": false
-            },
-            "filter": [
-                "kubejs:aluminum_slag",
-                "iceandfire:dragonsteel_lightning_ingot",
-                "kubejs:bronze_triangle",
-                "kubejs:diorite_alloy",
-                "ad_astra:moon_sand"
-            ],
-            "whitelist": false
+                "default": "input"
+            }
         },
         {
             "type": "custommachinery:item",
             "id": "item_input3",
             "mode": "input",
             "config": {
-                "default": "input",
-                "input": true,
-                "output": false
-            },
-            "filter": [
-                "kubejs:aluminum_slag",
-                "iceandfire:dragonsteel_lightning_ingot",
-                "kubejs:bronze_triangle",
-                "kubejs:diorite_alloy",
-                "ad_astra:moon_sand"
-            ],
-            "whitelist": false
+                "default": "input"
+            }
         },
         {
             "type": "custommachinery:item",
             "id": "item_input4",
             "mode": "input",
             "config": {
-                "default": "input",
-                "input": true,
-                "output": false
-            },
-            "filter": [
-                "kubejs:aluminum_slag",
-                "iceandfire:dragonsteel_lightning_ingot",
-                "kubejs:bronze_triangle",
-                "kubejs:diorite_alloy",
-                "ad_astra:moon_sand"
-            ],
-            "whitelist": false
+                "default": "input"
+            }
         },
         {
             "type": "custommachinery:item",
             "id": "item_output1",
             "mode": "output",
             "config": {
-                "default": "output",
-                "input": false,
-                "output": true
+                "default": "output"
             }
         },
         {
@@ -118,17 +72,13 @@
             "id": "item_output2",
             "mode": "output",
             "config": {
-                "default": "output",
-                "input": false,
-                "output": true
+                "default": "output"
             }
         },
         {
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluidInput1",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "mode": "input",
             "filter": [
                 "#forge:hydrogen",
@@ -142,11 +92,15 @@
             "whitelist": true
         },
         {
+            "type": "custommachinery:remote_fluid",
+            "pos": [3, -1, 0],
+            "mode": "input",
+            "slotID":["fluidInput1"]
+        },
+        {
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluidInput2",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "mode": "input",
             "filter": [
                 "kubejs:chlorine",
@@ -159,16 +113,62 @@
             "whitelist": true
         },
         {
-            "type": "custommachinery:energy",
-            "capacity": 294912,
-            "maxInput": 294912,
-            "maxOutput": 294912,
+            "type": "custommachinery:remote_fluid",
+            "pos": [-3, -1, 0],
             "mode": "input",
-            "id": "fe",
-            "config": {
-                "input": true,
-                "output": false
-            }
+            "slotID":["fluidInput2"]
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 96000,
+            "mode": "input",
+            "id": "fe"
+        },
+        {
+            "type": "custommachinery:remote_energy",
+            "pos": [3, 1, 0],
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:remote_energy",
+            "pos": [-3, 1, 0],
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluidOutput1",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [3, -5, 0],
+            "mode": "output",
+            "slotID":["fluidOutput1"]
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluidOutput2",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [-3, -5, 0],
+            "mode": "output",
+            "slotID":["fluidOutput2"]
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 16000,
+            "id": "fluidOutput3",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [0, -6, 3],
+            "mode": "output",
+            "slotID":["fluidOutput3"]
         },
         {
             "type": "custommachinery:item",
@@ -177,9 +177,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
-                "input": false,
-                "output": false
+                "default":"none"
             }
         },
         {
@@ -189,9 +187,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
-                "input": false,
-                "output": false
+                "default":"none"
             }
         },
         {
@@ -201,9 +197,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
-                "input": false,
-                "output": false
+                "default":"none"
             }
         }
     ],

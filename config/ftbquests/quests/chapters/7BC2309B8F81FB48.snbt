@@ -226,7 +226,7 @@
 					type: "item"
 				}
 				{
-					count: 16
+					count: 32
 					id: "4415F4A926554D9B"
 					item: "kubejs:io_mechanism"
 					type: "item"
@@ -323,12 +323,6 @@
 				{
 					id: "007AC2FC23F9B06F"
 					item: "create:hand_crank"
-					type: "item"
-				}
-				{
-					count: 8
-					id: "5082E5F2ABE1AF2D"
-					item: "create_things_and_misc:oak_sail"
 					type: "item"
 				}
 				{
@@ -758,7 +752,7 @@
 			id: "67F7753F65D198FD"
 			rewards: [
 				{
-					count: 24
+					count: 36
 					id: "60E1A7E767753EBD"
 					item: "kubejs:bearing"
 					type: "item"
@@ -1014,7 +1008,7 @@
 			id: "62275C451D524EE0"
 			rewards: [
 				{
-					count: 24
+					count: 48
 					id: "4150DA9BA57381A2"
 					item: "kubejs:electric_gear"
 					type: "item"
@@ -1537,7 +1531,7 @@
 			id: "00B48F1BEA0C0EFF"
 			rewards: [
 				{
-					count: 12
+					count: 24
 					id: "3798B261E5A1EBBF"
 					item: "minecraft:dried_kelp_block"
 					type: "item"
@@ -3685,6 +3679,12 @@
 			dependencies: ["66E89DB9217359ED"]
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_4C7F4AB89C420568.desc_01}"]
 			id: "4C7F4AB89C420568"
+			rewards: [{
+				count: 32
+				id: "19A1ACEE55B8EC0D"
+				item: "create:mechanical_pump"
+				type: "item"
+			}]
 			tasks: [{
 				id: "063E5373D2A1FE91"
 				item: "create:spout"

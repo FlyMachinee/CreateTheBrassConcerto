@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
         "mode": "input",
         "tank": "lube",
         "fluid": "kubejs:lube_oil",
-        "amount": 20
+        "amount": 25
     }
     const GeneratorFilter = ["minecraft:air", "minecraft:void_air", "minecraft:cave_air"]
     const GeneratorSound = {
@@ -79,10 +79,10 @@ ServerEvents.recipes(event => {
                 "priority": 100 * amount1,
                 "requirements": [
                     GeneratorDimension(GasDimension,false),
-                    GeneratorEnergyOutput(Math.floor(2048 * amount1)),
+                    GeneratorEnergyOutput(Math.floor(540 * amount1)),
                     //GeneratorParticle,
                     //GeneratorSound,
-                    GeneratorBird,
+                    //GeneratorBird,
                     GeneratorLube,
                     GeneratorStructure([1, 2, 0, - 1, 2, 0]),
                     GeneratorStructure([1, -2, 0, -1, -2, 0]),
@@ -100,10 +100,10 @@ ServerEvents.recipes(event => {
                 "priority": 100 * amount1,
                 "requirements": [
                     GeneratorDimension(GasDimension,true),
-                    GeneratorEnergyOutput(Math.floor(2048 * amount1)),
+                    GeneratorEnergyOutput(Math.floor(540 * amount1)),
                     GeneratorParticle,
                     GeneratorSound,
-                    GeneratorBird,
+                    //GeneratorBird,
                     GeneratorLube,
                     GeneratorStructure([1, 2, 0, - 1, 2, 0]),
                     GeneratorStructure([1, -2, 0, -1, -2, 0]),
@@ -112,6 +112,26 @@ ServerEvents.recipes(event => {
                     GeneratorInput("kubejs:pressurized_steam[level=0]", "minecraft:air", amount1)
                 ]
             }).id("dut_create:steam_generator/nowater/output_" + amount1)
+            event.custom({
+                "type": "custommachinery:custom_machine",
+                "machine": "dut:steam_generator",
+                "time": 60,
+                "hidden": true,
+                "error": true,
+                "priority": 1000 * amount1,
+                "requirements": [
+                    GeneratorEnergyOutput(Math.floor(12000 * amount1)),
+                    GeneratorParticle,
+                    GeneratorSound,
+                    //GeneratorBird,
+                    GeneratorLube,
+                    GeneratorStructure([1, 2, 0, - 1, 2, 0]),
+                    GeneratorStructure([1, -2, 0, -1, -2, 0]),
+                    GeneratorStructure([2, 1, 0, 2, -1, 0]),
+                    GeneratorStructure([-2, 1, 0, -2, -1, 0]),
+                    GeneratorInput("kubejs:superheated_steam[level=0]", "minecraft:air", amount1)
+                ]
+            }).id("dut_create:steam_generator/superheated/output_" + amount1)
         }
         if (amount2 > 0) {
             event.custom({
@@ -123,11 +143,11 @@ ServerEvents.recipes(event => {
                 "priority": 100 * amount1 + 10 * amount2,
                 "requirements": [
                     GeneratorDimension(GasDimension,false),
-                    GeneratorEnergyOutput(Math.floor((2048 * amount1) / (amount2 + 1))),
+                    GeneratorEnergyOutput(Math.floor((540 * amount1) / (amount2 + 1))),
                     GeneratorParticle,
                     GeneratorSound,
                     GeneratorLube,
-                    GeneratorBird,
+                    //GeneratorBird,
                     GeneratorStructure([1, 2, 0, - 1, 2, 0]),
                     GeneratorStructure([1, -2, 0, -1, -2, 0]),
                     GeneratorStructure([2, 1, 0, 2, -1, 0]),
@@ -145,11 +165,11 @@ ServerEvents.recipes(event => {
                 "priority": 100 * amount1 + 10 * amount2,
                 "requirements": [
                     GeneratorDimension(GasDimension,true),
-                    GeneratorEnergyOutput(Math.floor((2048 * amount1) / (amount2 + 1))),
+                    GeneratorEnergyOutput(Math.floor((540 * amount1) / (amount2 + 1))),
                     GeneratorParticle,
                     GeneratorSound,
                     GeneratorLube,
-                    GeneratorBird,
+                    //GeneratorBird,
                     GeneratorStructure([1, 2, 0, - 1, 2, 0]),
                     GeneratorStructure([1, -2, 0, -1, -2, 0]),
                     GeneratorStructure([2, 1, 0, 2, -1, 0]),

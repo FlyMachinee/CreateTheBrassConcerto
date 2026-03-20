@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
                 "     ",
                 "AAAAA",
                 " CDC ",
-                " HIH ",
+                " RIQ ",
                 "     "
             ],
             [
@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
                 "     ",
                 "     ",
                 "     ",
-                " JmJ ",
+                " JmK ",
                 "  P  "
             ],
             [
@@ -51,7 +51,7 @@ ServerEvents.recipes(event => {
                 "     ",
                 "     ",
                 "  F  ",
-                " MIM ",
+                " TIU ",
                 "  M  "
             ],
             [
@@ -80,8 +80,8 @@ ServerEvents.recipes(event => {
                 "     ",
                 "     ",
                 "     ",
-                "  H  ",
-                " HIH ",
+                "  S  ",
+                " RIQ ",
                 "  H  "
             ],
             [
@@ -107,20 +107,180 @@ ServerEvents.recipes(event => {
         ],
         "keys":
         {
-            "G": "design_decor:brass_boiler_large",
-            "C": "design_decor:industrial_gear_large",
-            "M": "design_decor:diagonal_metal_support",
-            "N": "create:metal_girder",
-            "J": "create:mechanical_pump",
-            "I": "design_decor:industrial_iron_boiler",
-            "P": "#dut_create:brass_funnel",
-            "O": "design_decor:andesite_floodlight",
-            "D": "create:gearbox",
-            "F": "create:gantry_shaft",
-            "H": "design_decor:diagonal_girder",
             "A": "create:copper_casing",
             "B": "design_decor:brass_boiler_structure",
-            "L": "design_decor:brass_boiler"
+            "G": "design_decor:brass_boiler_large",
+            "C": "design_decor:industrial_gear_large[axis=x]",
+            "D": "create:gearbox[axis=z]",
+            "F": "create:gantry_shaft",
+            "I": "design_decor:industrial_iron_boiler",
+            "J": "create:mechanical_pump[facing=east]",
+            "K": "create:mechanical_pump[facing=west]",
+            "L": "design_decor:brass_boiler",
+            "N": "create:metal_girder",
+            "O": "design_decor:andesite_floodlight[facing=up]",
+            "P": "#dut_create:brass_funnel",
+            "H": "design_decor:diagonal_girder[facing=north]",
+            "Q": "design_decor:diagonal_girder[facing=west]",
+            "R": "design_decor:diagonal_girder[facing=east]",
+            "S": "design_decor:diagonal_girder[facing=south]",
+            "M": "design_decor:diagonal_metal_support[facing=south]",
+            "T": "design_decor:diagonal_metal_support[facing=west]",
+            "U": "design_decor:diagonal_metal_support[facing=east]",
+        },
+        "jei": true
+    }
+    const HydropressStructure1 =
+    {
+        "type": "custommachinery:structure",
+        "pattern": [
+            [
+                " AAA ",
+                " AAA ",
+                " AAA ",
+                "     ",
+                "     ",
+                "  m  "
+            ],
+            [
+                "  A  ",
+                " ABA ",
+                "  A  ",
+                "  C  ",
+                "     ",
+                "     "
+            ],
+            [
+                "  S  ",
+                " RBQ ",
+                "  H  ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "     ",
+                "  B  ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "     ",
+                "  B  ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "     ",
+                "  B  ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ]
+        ],
+        "keys":
+        {
+            "A": "#dut_create:hydropress_piston",
+            "B": "design_decor:industrial_iron_boiler",
+            "H": "design_decor:diagonal_girder[facing=north]",
+            "Q": "design_decor:diagonal_girder[facing=west]",
+            "R": "design_decor:diagonal_girder[facing=east]",
+            "S": "design_decor:diagonal_girder[facing=south]",
+            "C": "create:gantry_carriage"
+        },
+        "jei": true
+    }
+    const HydropressStructure2 =
+    {
+        "type": "custommachinery:structure",
+        "pattern": [
+            [
+                "     ",
+                "     ",
+                "     ",
+                "     ",
+                "     ",
+                "  m  "
+            ],
+            [
+                "     ",
+                "     ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "     ",
+                "     ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                " AAA ",
+                " AAA ",
+                " AAA ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "  A  ",
+                " ABA ",
+                "  A  ",
+                "  C  ",
+                "     ",
+                "     "
+            ],
+            [
+                "  S  ",
+                " RBQ ",
+                "  H  ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "     ",
+                "  B  ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "     ",
+                "  B  ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ],
+            [
+                "     ",
+                "  B  ",
+                "     ",
+                "     ",
+                "     ",
+                "     "
+            ]
+        ],
+        "keys":
+        {
+            "A": "#dut_create:hydropress_piston",
+            "B": "design_decor:industrial_iron_boiler",
+            "C": "create:gantry_carriage",
+            "H": "design_decor:diagonal_girder[facing=north]",
+            "Q": "design_decor:diagonal_girder[facing=west]",
+            "R": "design_decor:diagonal_girder[facing=east]",
+            "S": "design_decor:diagonal_girder[facing=south]",
         },
         "jei": true
     }
@@ -203,10 +363,9 @@ ServerEvents.recipes(event => {
             "error": true,
             "priority": 3,
             "requirements": [
-                HydropressCommon0,
+                HydropressStructure1,
                 HydropressCommon3,
-                checkPiston1(3),
-                checkPiston2(3),
+                HydropressCommon0,
                 hydropressInput([input], "input", 9),
                 {
                     "type": "custommachinery:item",
@@ -216,8 +375,9 @@ ServerEvents.recipes(event => {
                 }
             ],
             "jei": [
-                HydropressCommon2,
                 HydropressStructure,
+                HydropressStructure1,
+                HydropressCommon2,
                 hydropressInput([input], "input", 9),
                 {
                     "type": "custommachinery:item",
@@ -243,10 +403,9 @@ ServerEvents.recipes(event => {
             "error": true,
             "hidden": jei,
             "requirements": [
-                HydropressCommon0,
+                HydropressStructure1,
                 HydropressCommon3,
-                checkPiston1(3),
-                checkPiston2(3),
+                HydropressCommon0,
                 hydropressInput([input + "[level=0]"], "input", count),
                 {
                     "type": "custommachinery:item",
@@ -256,8 +415,9 @@ ServerEvents.recipes(event => {
                 }
             ],
             "jei": [
-                HydropressCommon2,
                 HydropressStructure,
+                HydropressStructure1,
+                HydropressCommon2,
                 hydropressInput([input], "input", count),
                 {
                     "type": "custommachinery:fluid",
@@ -284,10 +444,9 @@ ServerEvents.recipes(event => {
             "error": true,
             "hidden": jei,
             "requirements": [
-                HydropressCommon0,
+                HydropressStructure1,
                 HydropressCommon3,
-                checkPiston1(3),
-                checkPiston2(3),
+                HydropressCommon0,
                 hydropressInput([input], "input", count),
                 {
                     "type": "custommachinery:item",
@@ -297,8 +456,9 @@ ServerEvents.recipes(event => {
                 }
             ],
             "jei": [
-                HydropressCommon2,
                 HydropressStructure,
+                HydropressStructure1,
+                HydropressCommon2,
                 hydropressInput([input], "input", count),
                 {
                     "type": "custommachinery:fluid",
@@ -335,9 +495,8 @@ ServerEvents.recipes(event => {
         "error": true,
         "priority": 10,
         "requirements": [
-            checkPiston1(0),
-            checkPiston2(0),
             HydropressStructure,
+            HydropressStructure2,
             {
                 "type": "custommachinery:fluid",
                 "mode": "input",
@@ -349,17 +508,11 @@ ServerEvents.recipes(event => {
                 "mode": "output",
                 "fluid": "kubejs:hydrofluid",
                 "amount": 1000
-            },
-            {
-                "type": "custommachinery:command",
-                "phase": "ending",
-                "command": "/playsound create:steam block @a ~ ~ ~ 0.5",
-                "log": false,
-                "permissionlevel": 5
             }
         ],
         "jei": [
             HydropressStructure,
+            HydropressStructure2,
             {
                 "type": "custommachinery:fluid",
                 "mode": "input",

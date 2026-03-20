@@ -10,22 +10,12 @@ ServerEvents.recipes(event => {
         "ingredients": [{ "fluid": "minecraft:water", "amount": 500 },
         { "item": "kubejs:electrolyzer" }],
         "results": [
-            { "fluid": "kubejs:oxygen", "amount": 125 },
-            { "fluid": "kubejs:hydrogen", "amount": 250 },
+            { "fluid": "kubejs:oxygen", "amount": 250 },
+            { "fluid": "kubejs:hydrogen", "amount": 500 },
             { "item": "kubejs:uncharged_electrolyzer" }
         ]
     }).id('dut_create:water_electrolysis')
     //水热解
-    event.custom({
-        "type": "createdieselgenerators:distillation",
-        "ingredients": [{ "fluid": "minecraft:water", "amount": 500 }],
-        "heatRequirement": "superheated",
-        "processingTime": 1800,
-        "results": [
-            { "fluid": "kubejs:oxygen", "amount": 250 },
-            { "fluid": "kubejs:hydrogen", "amount": 500 }
-        ]
-    }).id('dut_create:water_cracking_distillation')
     event.custom({
         "type": "createdieselgenerators:basin_fermenting",
         "ingredients": [{ "fluid": "minecraft:water", "amount": 1000 }

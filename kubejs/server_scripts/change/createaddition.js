@@ -98,23 +98,6 @@ ServerEvents.recipes(event => {
   }).id("dut_create:modular_accumulator")
   //发电机
   event.remove({ id: 'createaddition:mechanical_crafting/alternator' })
-  event.custom({
-    "type": "minecraft:crafting_shaped",
-    "category": "misc",
-    "key": {
-      "A": { "item": "createaddition:capacitor" },
-      "B": { "item": "createaddition:copper_spool" },
-      "C": { "item": "kubejs:magenta_circuit_board" },
-      "D": { "item": "kubejs:bridge_rectifier" }
-    },
-    "pattern": [
-      "BBB",
-      "CDC",
-      "ACA"
-    ],
-    "result": { "item": "createaddition:alternator" },
-    "show_notification": true
-  }).id("dut_create:alternator")
   //电动马达
   event.remove({ id: 'createaddition:mechanical_crafting/electric_motor' })
   event.custom({

@@ -50,101 +50,6 @@ ServerEvents.recipes(event => {
     //一次性电池
     event.custom({
         "type": "create:sequenced_assembly",
-        "ingredient": { "item": "create:golden_sheet" },
-        "results": [
-            { "item": "kubejs:disposable_battery" }
-        ],
-        "loops": 1,
-        "sequence": [
-            {
-                "type": "create:filling",
-                "ingredients": [{ "item": "create:golden_sheet" },
-                { "amount": 250, "fluid": "create_enchantment_industry:experience" }],
-                "results": [{ "item": "create:golden_sheet" }]
-            },
-            {
-                "type": "create:deploying",
-                "ingredients": [
-                    { "item": "create:golden_sheet" },
-                    { "tag": "forge:plates/copper" }
-                ],
-                "results": [{ "item": "create:golden_sheet"}]
-            },
-            {
-                "type": "create:deploying",
-                "ingredients": [
-                    { "item": "create:golden_sheet" },
-                    { "item": "kubejs:graphite" }
-                ],
-                "results": [{ "item": "create:golden_sheet" }]
-            }
-        ],
-        "transitionalItem": { "item": "create:golden_sheet" }
-    }).id("dut_create:disposable_battery_from_experience")
-    event.custom({
-        "type": "create:sequenced_assembly",
-        "ingredient": { "item": "kubejs:incomplete_disposable_battery", "count": 1 },
-        "results": [
-            { "item": "kubejs:disposable_battery" }
-        ],
-        "loops": 1,
-        "sequence": [
-            {
-                "type": "create:filling",
-                "ingredients": [{ "item": "kubejs:incomplete_disposable_battery" },
-                { "amount": 175, "fluid": "kubejs:caustic_soda" }],
-                "results": [{ "item": "kubejs:incomplete_disposable_battery" }]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [{ "item": "kubejs:incomplete_disposable_battery" },
-                { "amount": 1000, "fluidTag": "forge:hydrogen"}],
-                "results": [{ "item": "kubejs:incomplete_disposable_battery" }]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [{ "item": "kubejs:incomplete_disposable_battery" },
-                { "amount": 500, "fluidTag": "forge:oxygen" }],
-                "results": [{ "item": "kubejs:incomplete_disposable_battery" }]
-            }
-        ],
-        "transitionalItem": { "item": "kubejs:incomplete_disposable_battery" }
-    }).id("dut_create:disposable_battery_from_o2_h2_naoh")
-    event.custom({
-        "type": "create:sequenced_assembly",
-        "ingredient": { "item": "create:copper_sheet", "count": 1 },
-        "results": [
-            { "item": "kubejs:disposable_battery" }
-        ],
-        "loops": 1,
-        "sequence": [
-            {
-                "type": "create:deploying",
-                "ingredients": [
-                    { "item": "create:copper_sheet" },
-                    { "tag": "forge:plates/tin" }
-                ],
-                "results": [{ "item": "create:copper_sheet" }]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [{ "item": "create:copper_sheet" },
-                { "amount": 250, "fluid": "kubejs:caustic_soda" }],
-                "results": [{ "item": "create:copper_sheet" }]
-            },
-            {
-                "type": "create:deploying",
-                "ingredients": [
-                    { "item": "create:copper_sheet" },
-                    { "tag": "forge:plates/gold" }
-                ],
-                "results": [{ "item": "create:copper_sheet" }]
-            }
-        ],
-        "transitionalItem": { "item": "create:copper_sheet" }
-    }).id("dut_create:disposable_battery_from_gold_tin_naoh")
-    event.custom({
-        "type": "create:sequenced_assembly",
         "ingredient": { "item": "kubejs:incomplete_disposable_battery", "count": 1 },
         "results": [
             { "item": "kubejs:disposable_battery" }
@@ -187,18 +92,14 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
-          {"item":"kubejs:uncharged_electrolyzer"},
-          {"item":"kubejs:uncharged_electrolyzer"},
-          {"item":"kubejs:uncharged_electrolyzer"},
-          {"item":"kubejs:uncharged_electrolyzer"},
-          {"item":"kubejs:uncharged_electrolyzer"},
-          {"item":"kubejs:uncharged_electrolyzer"},
-          {"item":"kubejs:uncharged_electrolyzer"},
-          {"item":"kubejs:uncharged_electrolyzer"},
-          { "item":"kubejs:disposable_battery"}
+            { "item": "kubejs:uncharged_electrolyzer" },
+            { "item": "kubejs:uncharged_electrolyzer" },
+            { "item": "kubejs:uncharged_electrolyzer" },
+            { "item": "kubejs:uncharged_electrolyzer" },
+            { "item": "kubejs:disposable_battery" }
         ],
-        "result": {"item": "kubejs:electrolyzer","count": 8}
-      }).id("dut_create:electrolyzer_battery")
+        "result": { "item": "kubejs:electrolyzer", "count": 8 }
+    }).id("dut_create:electrolyzer_battery")
     //电解器
     event.custom({
         "type": "minecraft:crafting_shaped",
@@ -228,8 +129,8 @@ ServerEvents.recipes(event => {
             "T&T"
         ],
         "key": {
-            "#": {"tag": "forge:plates/brass"},
-            "&": {"tag": "dut_create:plates/polymer"},
+            "#": { "tag": "forge:plates/brass" },
+            "&": { "tag": "dut_create:plates/polymer" },
             "T": { "item": "kubejs:graphite" }
         },
         "result": {
@@ -247,7 +148,7 @@ ServerEvents.recipes(event => {
             "item": "kubejs:electrolyzer",
             "count": 1
         },
-        "energy": 21600,
-        "maxChargeRate":720
+        "energy": 7200,
+        "maxChargeRate": 360
     }).id("dut_create:charging/electrolyzer")
 })

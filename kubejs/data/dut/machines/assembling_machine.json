@@ -49,7 +49,6 @@
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "4",
-            "maxInput": 4000,
             "maxOutput": 0,
             "mode": "both"
         },
@@ -67,9 +66,7 @@
         },
         {
             "type": "custommachinery:energy",
-            "capacity": 294912,
-            "maxInput": 294912,
-            "maxOutput": 294912,
+            "capacity": 96000,
             "mode": "input",
             "id": "fe",
             "config": {

@@ -6,10 +6,8 @@ ServerEvents.recipes(event => {
         "loops": 1,
         "results": [
             { "item": "kubejs:slime_crystal", "chance": 0.25, "count": 4 },
-            { "item": 'kubejs:blaze_chlamydia', "chance": 0.125 },
-            { "item": 'kubejs:blaze_mycoplasma', "chance": 0.125 },
-            { "item": 'kubejs:blaze_wart', "chance": 0.125 },
-            { "item": 'kubejs:chromatic_protozoa', "chance": 0.125 },
+            { "item": 'kubejs:blaze_mycoplasma', "chance": 0.25 },
+            { "item": 'kubejs:chromatic_protozoa', "chance": 0.25 },
             { "item": 'minecraft:soul_sand', "chance": 0.25 }
         ],
         "sequence": [{

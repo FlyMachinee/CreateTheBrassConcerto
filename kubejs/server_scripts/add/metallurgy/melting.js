@@ -58,12 +58,12 @@ ServerEvents.recipes(event => {
       "secondaryFluidInput": 0,
       "ingredients": [
         { "fluid": "kubejs:cryogen", "amount": 100 },
-        { "fluid": input, "amount": 360 }
+        { "fluid": input, "amount": 450 }
       ],
       "results": [
-        { "item": output, "count": 4 },
+        { "item": output, "count": 5 },
       ],
-      "processingTime": 15
+      "processingTime": 10
     }).id("dut_create:fluid_cooldown/" + input.split(':')[1])
   }
   cryogenCooldownMetal("kubejs:aluminum", "kubejs:aluminum_ingot")

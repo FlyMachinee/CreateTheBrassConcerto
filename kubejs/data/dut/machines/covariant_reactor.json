@@ -19,7 +19,7 @@
     },
     "processor": {
         "type": "custommachinery:machine",
-        "coolbottom": 5
+        "cooldown": 5
     },
     "tooltips": [
         {
@@ -34,10 +34,8 @@
     "components": [
         {
             "type": "custommachinery:fluid",
-            "capacity": 128000,
+            "capacity": 48000,
             "id": "steam",
-            "maxInput": 128000,
-            "maxOutput": 128000,
             "mode": "both",
             "filter": [
                 "kubejs:superheated_steam"
@@ -54,20 +52,22 @@
             "type": "custommachinery:fluid",
             "capacity": 1966080,
             "id": "heat",
-            "maxInput": 1152,
-            "maxOutput": 256,
+            "maxInput": 0,
+            "maxOutput": 0,
             "mode": "both",
             "filter": [
                 "kubejs:covariant_heat"
             ],
-            "whitelist": true
+            "whitelist": true,
+            "config": {
+                "input": false,
+                "output": false,
+                "default": "none"
+            }
         },
         {
             "type": "custommachinery:energy",
-            "capacity": 1440000,
-            "maxInput": 1440000,
-            "maxOutput": 1440000,
-            "mode": "input",
+            "capacity": 921600,
             "id": "fe",
             "config": {
                 "input": false,
@@ -90,42 +90,6 @@
                 "input": true,
                 "output": false,
                 "bottom": "output"
-            }
-        },
-        {
-            "type": "custommachinery:item",
-            "id": "upgrade1",
-            "mode": "input",
-            "capacity": 1,
-            "variant": "custommachinery:upgrade",
-            "config": {
-                "default": "none",
-                "input": false,
-                "output": false
-            }
-        },
-        {
-            "type": "custommachinery:item",
-            "id": "upgrade2",
-            "mode": "input",
-            "capacity": 1,
-            "variant": "custommachinery:upgrade",
-            "config": {
-                "default": "none",
-                "input": false,
-                "output": false
-            }
-        },
-        {
-            "type": "custommachinery:item",
-            "id": "upgrade3",
-            "mode": "input",
-            "capacity": 1,
-            "variant": "custommachinery:upgrade",
-            "config": {
-                "default": "none",
-                "input": false,
-                "output": false
             }
         }
     ],
@@ -155,30 +119,9 @@
         {
             "type": "custommachinery:slot",
             "x": 119,
-            "y": 21,
+            "y": 39,
             "id": "radiator",
             "texture": "kubejs:textures/gui/radiator_slot.png"
-        },
-        {
-            "type": "custommachinery:slot",
-            "x": 101,
-            "y": 75,
-            "id": "upgrade1",
-            "texture": "kubejs:textures/gui/upgrade_slot.png"
-        },
-        {
-            "type": "custommachinery:slot",
-            "x": 119,
-            "y": 75,
-            "id": "upgrade2",
-            "texture": "kubejs:textures/gui/upgrade_slot.png"
-        },
-        {
-            "type": "custommachinery:slot",
-            "x": 137,
-            "y": 75,
-            "id": "upgrade3",
-            "texture": "kubejs:textures/gui/upgrade_slot.png"
         },
         {
             "x": 47,

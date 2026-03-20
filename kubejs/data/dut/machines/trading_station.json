@@ -34,7 +34,6 @@
             "capacity": 2147483647,
             "id": "coin",
             "mode": "both",
-            "maxInput": 16000000,
             "maxOutput": 0,
             "filter": [
                 "kubejs:slime_coin"
@@ -46,7 +45,6 @@
             "capacity": 2147483647,
             "id": "coin1",
             "mode": "both",
-            "maxInput": 16000000,
             "maxOutput": 0,
             "filter": [
                 "kubejs:slime_coin"
@@ -58,7 +56,6 @@
             "capacity": 32000,
             "id": "fluid_input",
             "mode": "input",
-            "maxInput": 32000,
             "maxOutput": 0,
             "unique": true,
             "filter": [
@@ -71,7 +68,6 @@
             "capacity": 32000,
             "id": "fluid_input1",
             "mode": "input",
-            "maxInput": 32000,
             "maxOutput": 0,
             "unique": true,
             "filter": [
@@ -85,7 +81,6 @@
             "id": "fluid_output",
             "mode": "output",
             "maxInput": 0,
-            "maxOutput": 96000,
             "filter": [
                 "kubejs:slime_coin","kubejs:hydrofluid"
             ],

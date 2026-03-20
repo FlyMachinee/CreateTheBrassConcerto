@@ -38,8 +38,6 @@
             "capacity": 4000,
             "id": "fluid_input",
             "mode": "input",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "unique": true
         },
         {
@@ -47,8 +45,6 @@
             "capacity": 4000,
             "id": "fluid_input1",
             "mode": "input",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "unique": true
         },
         {
@@ -56,8 +52,6 @@
             "capacity": 4000,
             "id": "fluid_input2",
             "mode": "input",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "unique": true
         },
         {
@@ -65,8 +59,6 @@
             "capacity": 4000,
             "id": "fluid_output",
             "mode": "output",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "config": {
                 "default": "output",
                 "input": false,
@@ -78,8 +70,6 @@
             "capacity": 4000,
             "id": "fluid_output1",
             "mode": "output",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "config": {
                 "default": "output",
                 "input": false,
@@ -91,8 +81,6 @@
             "capacity": 4000,
             "id": "fluid_output2",
             "mode": "output",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "config": {
                 "default": "output",
                 "input": false,

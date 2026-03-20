@@ -43,8 +43,6 @@
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluid",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "filter": [
                 "ad_astra:hydrogen",
                 "kubejs:hydrogen"

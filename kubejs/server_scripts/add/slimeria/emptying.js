@@ -19,8 +19,7 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:red_mushroom" }
         ],
         "results": [
-            { "item": "minecraft:red_mushroom", "chance": 0.25 },
-            { "fluid": "kubejs:red_mushroom_spore", "amount": 10 }
+            { "fluid": "kubejs:red_mushroom_spore", "amount": 50 }
         ]
     }).id("dut_create:emptying/red_mushroom_spore")
     event.custom({
@@ -29,8 +28,7 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:brown_mushroom" }
         ],
         "results": [
-            { "item": "minecraft:brown_mushroom", "chance": 0.25 },
-            { "fluid": "kubejs:brown_mushroom_spore", "amount": 10 }
+            { "fluid": "kubejs:brown_mushroom_spore", "amount": 50 }
         ]
     }).id("dut_create:emptying/brown_mushroom_spore")
     event.custom({

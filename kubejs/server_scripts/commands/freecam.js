@@ -2,9 +2,9 @@ NetworkEvents.dataReceived("key.kubejs.freecam", event => {
     /**@type {Internal.ServerPlayer} */
     let p = event.player
     if (p.persistentData.needRespawn != false) { return }
-    if (p.vehicle!=null){return}
-    orCreateData(p.persistentData, "teleport", false)
-    orCreateData(p.persistentData.teleport, "freecam", false)
+    if (p.vehicle != null) { return }
+    orCreateData(p.persistentData, "teleport", {})
+    orCreateData(p.persistentData.teleport, "freecam", {})
 
     let pdata = p.persistentData.teleport.freecam
     orCreateData(p.persistentData, "FreeCaming", false)
@@ -13,15 +13,15 @@ NetworkEvents.dataReceived("key.kubejs.freecam", event => {
         p.persistentData.FreeCaming = false
         p.setGameMode(pdata.gamemode)
         p.setStatusMessage(Text.translate("kubejs.message.freecam_off"))
-        p.teleportTo(pdata.dimension, pdata.pos.x, pdata.pos.y, pdata.pos.z, pdata.YRot, pdata.XRot)
+        p.teleportTo(pdata.dimension, pdata.pos.x, pdata.pos.y, pdata.pos.z, pdata.YRot || 0, pdata.XRot || 0)
     } else {
         if (p.isSpectator()) { return }
-        pdata.pos = {}
+        orCreateData(pdata, "pos", {})
         pdata.pos.x = p.x
         pdata.pos.y = p.y
         pdata.pos.z = p.z
-        pdata.YRot = p.YRot
-        pdata.XRot = p.XRot
+        pdata.YRot = p.YRot || 0
+        pdata.XRot = p.XRot || 0
         pdata.dimension = p.level.dimension.toString()
         pdata.gamemode = getGamemodeString(p)
         p.persistentData.needRespawn = false

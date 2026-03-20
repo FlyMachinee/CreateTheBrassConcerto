@@ -21,6 +21,7 @@ let multiblock_display_list=[
     "kubejs:construction_station"
   ]
 ServerEvents.tags('item', event => {
+  event.add('dut_create:switchable_platform', ["kubejs:emergency_industrial_platform_lime", "kubejs:emergency_industrial_platform_lime_block", "kubejs:emergency_industrial_platform", "kubejs:emergency_industrial_platform_block", "kubejs:emergency_industrial_platform_dark", "kubejs:emergency_industrial_platform_dark_block"])
   event.remove("forge:plates/silver",["vintageimprovements:silver_sheet"])
   event.remove("forge:storage_blocks/silver",'iceandfire:silver_block')
   event.remove("forge:nuggets/silver",'iceandfire:silver_nugget')
@@ -58,7 +59,7 @@ ServerEvents.tags('item', event => {
   //铜块
   event.add('dut_create:copper_block', ["minecraft:copper_block", "minecraft:exposed_copper", "minecraft:weathered_copper", "minecraft:oxidized_copper", "minecraft:waxed_copper_block", "minecraft:waxed_exposed_copper", "minecraft:waxed_weathered_copper", "minecraft:waxed_oxidized_copper"])
   //高炉
-  event.add('dut_create:shaft_furnace', ['kubejs:blaze_chlamydia', 'iceandfire:fire_dragon_blood'])
+  event.add('dut_create:shaft_furnace', ['kubejs:blaze_chlamydia'])
   //钻井可用钻头
   event.remove('createoreexcavation:drills', ['createoreexcavation:diamond_drill'])
   event.add('createoreexcavation:drills', ['create:mechanical_arm'])
@@ -193,6 +194,7 @@ ServerEvents.tags('block', event => {
   //需要显示结构的多方块机器
   event.add('dut_create:multiblock_display', multiblock_display_list)
 
+  event.add('dut_create:hydropress_piston', ["create:railway_casing", "design_decor:industrial_plating_block"])
   
   event.add('dut_create:uncasingable', ["create:brass_encased_shaft", "create:andesite_encased_shaft"])
   event.add('dut_create:encasable', ['create:shaft', 'create:belt'])
@@ -266,9 +268,15 @@ ServerEvents.tags('block', event => {
   //
 })
 //多方块机器
-ServerEvents.tags('block', event => {
+ServerEvents.tags('block', event => { 
+  event.add('dut_create:container_fluid', [
+    "create:fluid_tank",
+    "create_connected:fluid_vessel",
+    "storagedrawers:controller",
+    "#dut_create:fluiddrawers"
+  ])
   event.add('dut_create:platform', ["kubejs:emergency_industrial_platform_lime", "kubejs:emergency_industrial_platform_lime_block", "kubejs:emergency_industrial_platform", "kubejs:emergency_industrial_platform_block", "kubejs:emergency_industrial_platform_dark", "kubejs:emergency_industrial_platform_dark_block", "kubejs:emergency_industrial_platform_space"])
-  //菌柄
+  //菌柄 
   event.add('dut_create:stem', ['minecraft:crimson_stem', 'minecraft:warped_stem', 'minecraft:mushroom_stem', 'ad_astra:strophar_stem', 'ad_astra:aeronos_stem'])
   //菌盖
   event.add('dut_create:cap', ['minecraft:nether_wart_block', 'minecraft:warped_wart_block', 'minecraft:red_mushroom_block', 'minecraft:brown_mushroom_block', 'ad_astra:strophar_cap', 'ad_astra:aeronos_cap'])
@@ -316,6 +324,7 @@ ServerEvents.tags('worldgen/biome', event => {
 })
 ServerEvents.tags('fluid', event => {
   event.remove('minecraft:water', ["createaddition:bioethanol"])
+  event.add('dut_create:make_lube', ["vintageimprovements:sulfur_dioxide", "kubejs:hydrogen"])
   event.add('dut_create:fries_oil', ['kubejs:refined_oil', '#forge:crude_oil', '#forge:lube_oil', '#forge:gasoline', '#forge:biodiesel', '#forge:kerosene', '#forge:diesel'])
   event.add('dut_create:carrier_rocket_fuel', ['#forge:biodiesel', '#forge:diesel'])
   event.add('dut_create:superheated_fuel', ["kubejs:lube_oil", "kubejs:ammonia", "createdieselgenerators:biodiesel"])

@@ -1,70 +1,133 @@
 Ponder.registry((event) => {
   event
-    .create(["kubejs:redstone_radar"])
+    .create(["createandesiteabound:redstone_radar"])
     .tag("kubejs:machine_and_multiblock")
     .scene(
       "kubejs:build_redstone_radar",
       "跨维度红石传输",
       "kubejs:redstone_radar",
       (scene, utils) => {
-        scene.configureBasePlate(0, 0, 9);
-        scene.showStructure(12);
-        scene.setSceneOffsetY(1)
-        scene.idle(20);
-        scene.text(60, "为了更好的控制星际物流系统，你需要幽匿发信器来进行跨维度红石传输").attachKeyFrame();
-        scene.overlay.showOutline("green", {}, [1, 1, 2], 30);
-        scene.idle(10);
-        scene.overlay.showOutline("green", {}, [1, 1, 6], 30);
-        scene.idle(70);
-        scene.text(80, "首先，你需要使用坐标数据芯片绑定对应维度的指定坐标，并用其为幽匿发信器设置过滤").attachKeyFrame();
-        scene.idle(20);
-        scene.overlay.showOutline("blue", {}, [7, 1, 2], 30);
-        scene.showControls(15, [7, 1, 2], "up").withItem("kubejs:position_data")
-        scene.idle(10);
-        scene.overlay.showOutline("green", {}, [1, 1, 2], 30);
-        scene.showControls(15, [1.5, 1.5, 2.5], "down").withItem("kubejs:position_data")
-        scene.idle(5);
-        scene.overlay.showOutline("blue", {}, [7, 1, 6], 30);
-        scene.showControls(15, [7, 1, 6], "up").withItem("kubejs:position_data")
-        scene.idle(10);
-        scene.overlay.showOutline("green", {}, [1, 1, 6], 30);
-        scene.showControls(15, [1.5, 1.5, 6.5], "down").withItem("kubejs:position_data")
-        scene.idle(55);
-        scene.text(60, "接着，只需要通入红石信号（必须是强充能！）...").attachKeyFrame();
-        scene.idle(10);
-        scene.world.setBlock([1,1,0],"redstone_torch",false)
-        scene.idle(5);
-        scene.world.modifyBlock([1, 1, 1], state => state.with("powered", "true"), false)
-        scene.overlay.showOutline("red", {}, [1, 1, 2], 30);
-        scene.idle(20);
-        scene.world.setBlock([1,1,4],"redstone_torch",false)
-        scene.idle(5);
-        scene.world.modifyBlock([1, 1, 5], state => state.with("powered", "true"), false)
-        scene.overlay.showOutline("red", {}, [1, 1, 6], 30);
-        scene.idle(30);
-        scene.text(60, "...绑定位置的红石灯（如果有的话）的状态就将被强制切换！").attachKeyFrame();
-        scene.idle(20);
-        scene.overlay.showOutline("red", {}, [7, 1, 2], 30);
-        scene.world.modifyBlock([7, 1, 2], state => state.with("lit", "true"), false)
-        scene.idle(20);
-        scene.overlay.showOutline("red", {}, [7, 1, 6], 30);
-        scene.world.modifyBlock([7, 1, 6], state => state.with("lit", "false"), false)
-        scene.idle(40);
-        scene.text(60, "你可以使用侦测器来检测这种状态切换，从而传递红石信号！").attachKeyFrame();
-        scene.idle(80);
-        scene.text(60, "需要注意的是，这种强制切换并不稳定，红石灯可能因干扰而回归正常状态！").attachKeyFrame();
-        scene.idle(20);
-        scene.world.setBlock([7,1,1],"stone",true)
-        scene.idle(5);
-        scene.world.modifyBlock([7, 1, 2], state => state.with("lit", "false"), false)
-        scene.overlay.showOutline("red", {}, [7, 1, 2], 30);
-        scene.idle(20);
-        scene.world.setBlock([7,1,5],"stone",true)
-        scene.idle(5);
-        scene.world.modifyBlock([7, 1, 6], state => state.with("lit", "true"), false)
-        scene.overlay.showOutline("red", {}, [7, 1, 6], 30);
-        scene.idle(50);
-
+        scene.configureBasePlate(0, 0, 9)
+        scene.showStructure(12)
+        scene.rotateCameraY(-30)
+        scene.setSceneOffsetY(-0.5)
+        scene.idle(20)
+        scene.text(60, "为了更好的控制星际物流系统，你需要幽匿发信器来进行跨维度红石传输！").attachKeyFrame()
+        scene.overlay.showOutline("green", {}, [2, 1, 1], 30)
+        scene.idle(10)
+        scene.overlay.showOutline("green", {}, [2, 1, 7], 30)
+        scene.idle(70)
+        scene.text(40, "当幽匿发信器的收信口接收到红石信号时...").attachKeyFrame()
+        scene.idle(60)
+        scene.text(60, "...它会将红石信号传递给它所绑定的另一个幽匿发信器的发信口").attachKeyFrame()
+        scene.idle(20)
+        scene.world.modifyBlock([0, 1, 1], state => state.with("powered", "true"), false)
+        scene.world.modifyBlock([0, 1, 1], state => state.with("face", "floor"), false)
+        scene.world.modifyBlock([1, 1, 1], state => state.with("power", "15"), false)
+        scene.overlay.showOutline("green", {}, [2, 1, 1], 30)
+        scene.idle(2)
+        scene.world.modifyBlock([7, 1, 0], state => state.with("power", "15"), false)
+        scene.world.modifyBlock([7, 1, 2], state => state.with("power", "15"), false)
+        scene.world.modifyBlock([7, 1, 3], state => state.with("lit", "true"), false)
+        scene.overlay.showOutline("blue", {}, [7, 1, 1], 30)
+        scene.idle(48)
+        scene.text(60, "而从发信口接入的红石信号则不会被传递").attachKeyFrame()
+        scene.idle(30)
+        scene.world.modifyBlock([0, 1, 7], state => state.with("powered", "true"), false)
+        scene.world.modifyBlock([0, 1, 7], state => state.with("face", "floor"), false)
+        scene.world.modifyBlock([1, 1, 7], state => state.with("power", "15"), false)
+        scene.overlay.showOutline("red", {}, [2, 1, 7], 30)
+        scene.idle(10)
+        scene.overlay.showOutline("blue", {}, [7, 1, 7], 30)
+        //scene.showControls(15, [1.5, 1.5, 7.5], "down").withItem("kubejs:position_data")
+        scene.idle(40)
       }
     )
-});
+    .scene(
+      "kubejs:set_redstone_radar",
+      "配置幽匿发信器",
+      "kubejs:set_redstone_radar",
+      (scene, utils) => {
+        scene.configureBasePlate(0, 0, 9)
+        scene.showStructure(3)
+        scene.idle(20)
+        scene.text(60, "为了建立一个幽匿发信器通讯网络，你首先需要手持幽匿发信器右键一处位置来绑定目标").attachKeyFrame()
+        scene.idle(20)
+        scene.showControls(15, [7.5, 1.5, 4.5], "down").withItem("createandesiteabound:redstone_radar")
+        scene.overlay.showOutline("blue", {}, [7, 1, 4], 240)
+        scene.idle(60)
+        scene.text(60, "右键另一处位置来放置绑定了目标的幽匿发信器A").attachKeyFrame()
+        scene.idle(20)
+        scene.world.setBlock([1, 1, 4], "createandesiteabound:redstone_radar", false)
+        scene.showControls(15, [1.5, 2.5, 4.5], "down").withItem("createandesiteabound:redstone_radar")
+        scene.overlay.showOutline("green", {}, [1, 1, 4], 30)
+        scene.idle(60)
+        scene.text(40, "接下来在绑定的目标位置也放置一个幽匿发信器B").attachKeyFrame()
+        scene.idle(10)
+        scene.showControls(15, [7.5, 1.5, 4.5], "up").withItem("createandesiteabound:redstone_radar")
+        scene.world.setBlock([7, 1, 4], "createandesiteabound:redstone_radar", false)
+        scene.idle(50)
+        scene.text(40, "如果你不需要为B绑定目标，那么可以在潜行状态下放置仅接收信号的发信器B").attachKeyFrame()
+        scene.idle(60)
+        scene.text(40, "使用扳手右键幽匿发信器的顶部可以切换其是否加载所在区块").attachKeyFrame()
+        scene.idle(10)
+        scene.overlay.showLine("red", [7, 1.8, 4], [7, 1.8, 5], 15)
+        scene.overlay.showLine("red", [7, 1.8, 5], [8, 1.8, 5], 15)
+        scene.overlay.showLine("red", [8, 1.8, 5], [8, 1.8, 4], 15)
+        scene.overlay.showLine("red", [8, 1.8, 4], [7, 1.8, 4], 15)
+        scene.showControls(15, [7.5, 2.5, 4.5], "down").withItem("create:wrench")
+        scene.world.modifyBlock([7, 1, 4], state => state.with("forceload", "true"), false)
+        scene.idle(10)
+        scene.overlay.showLine("red", [1, 1.8, 4], [1, 1.8, 5], 15)
+        scene.overlay.showLine("red", [1, 1.8, 5], [2, 1.8, 5], 15)
+        scene.overlay.showLine("red", [2, 1.8, 5], [2, 1.8, 4], 15)
+        scene.overlay.showLine("red", [2, 1.8, 4], [1, 1.8, 4], 15)
+        scene.showControls(15, [1.5, 2.5, 4.5], "down").withItem("create:wrench")
+        scene.world.modifyBlock([1, 1, 4], state => state.with("forceload", "true"), false)
+        scene.idle(40)
+        scene.text(60, "使用扳手右键幽匿发信器对应的面可以切换其发信/收信状态").attachKeyFrame()
+        scene.idle(10)
+        scene.overlay.showLine("red", [7, 1, 4], [7, 2, 4], 15)
+        scene.overlay.showLine("red", [7, 2, 4], [8, 2, 4], 15)
+        scene.overlay.showLine("red", [8, 2, 4], [8, 1, 4], 15)
+        scene.overlay.showLine("red", [8, 1, 4], [7, 1, 4], 15)
+        scene.showControls(15, [7.5, 1.5, 4], "down").withItem("create:wrench")
+        scene.world.modifyBlock([7, 1, 4], state => state.with("north", "true"), false)
+        scene.idle(30)
+        scene.overlay.showLine("red", [7, 1, 4], [7, 2, 4], 15)
+        scene.overlay.showLine("red", [7, 2, 4], [7, 2, 5], 15)
+        scene.overlay.showLine("red", [7, 2, 5], [7, 1, 5], 15)
+        scene.overlay.showLine("red", [7, 1, 5], [7, 1, 4], 15)
+        scene.showControls(15, [7, 1.5, 4.5], "down").withItem("create:wrench")
+        scene.world.modifyBlock([7, 1, 4], state => state.with("west", "true"), false)
+        scene.idle(30)
+        scene.overlay.showLine("red", [7, 1, 5], [7, 2, 5], 15)
+        scene.overlay.showLine("red", [7, 2, 5], [8, 2, 5], 15)
+        scene.overlay.showLine("red", [8, 2, 5], [8, 1, 5], 15)
+        scene.overlay.showLine("red", [8, 1, 5], [7, 1, 5], 15)
+        scene.showControls(15, [7.5, 1.5, 5], "down").withItem("create:wrench")
+        scene.world.modifyBlock([7, 1, 4], state => state.with("south", "true"), false)
+        scene.idle(30)
+        scene.text(60, "此时你便成功建立了一个由发信器A至发信器B的单向信号连接！").attachKeyFrame()
+        scene.idle(20)
+        scene.world.modifyBlock([1, 1, 2], state => state.with("powered", "true"), false)
+        scene.world.modifyBlock([1, 1, 2], state => state.with("face", "floor"), false)
+        scene.world.modifyBlock([1, 1, 3], state => state.with("power", "15"), false)
+        scene.overlay.showOutline("green", {}, [1, 1, 4], 30)
+        scene.idle(2)
+        scene.world.modifyBlock([7, 1, 3], state => state.with("power", "15"), false)
+        scene.world.modifyBlock([6, 1, 4], state => state.with("power", "15"), false)
+        scene.world.modifyBlock([7, 1, 5], state => state.with("power", "15"), false)
+        scene.world.modifyBlock([7, 1, 2], state => state.with("lit", "true"), false)
+        scene.world.modifyBlock([5, 1, 4], state => state.with("lit", "true"), false)
+        scene.world.modifyBlock([7, 1, 6], state => state.with("lit", "true"), false)
+        scene.overlay.showOutline("blue", {}, [7, 1, 4], 30)
+        scene.idle(58)
+        scene.text(60, "如果你需要修改发信器的绑定目标，你可以使用坐标数据芯片右键它！").attachKeyFrame()
+        scene.idle(20)
+        scene.showControls(15, [7.5, 1.5, 4.5], "down").withItem('kubejs:position_data')
+        scene.overlay.showOutline("green", {}, [7, 1, 4], 30)
+        scene.idle(80)
+      }
+    )
+})

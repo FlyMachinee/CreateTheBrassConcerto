@@ -117,7 +117,7 @@
 			size: 1.25d
 			tasks: [{
 				biome: "ad_astra:orbit"
-				icon: "kubejs:unknown_prototype"
+				icon: "kubejs:solar_panel"
 				id: "45855E4A9F170DB6"
 				type: "biome"
 			}]

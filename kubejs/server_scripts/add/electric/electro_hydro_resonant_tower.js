@@ -453,7 +453,7 @@ ServerEvents.recipes(event => {
         ResonantTowerStructure,
         ResonantTowerLightning,
         ResonantTowerSound,
-        ResonantTowerBird,
+        //ResonantTowerBird,
         //ResonantTowerParticle,
       ].concat(RequirementList),
       "jei": [
@@ -472,7 +472,7 @@ ServerEvents.recipes(event => {
         ResonantTowerStructure,
         ResonantTowerLightning,
         ResonantTowerSound,
-        ResonantTowerBird,
+        //ResonantTowerBird,
         //ResonantTowerParticle,
         ResonantTowerLightningcheck,
       ].concat(RequirementList),
@@ -485,62 +485,62 @@ ServerEvents.recipes(event => {
 
   ResonantTowerRecipe([
     ResonantTowerDimension('ad_astra:moon'),
-    ResonantTowerEnergyInput(12288),
+    ResonantTowerEnergyInput(17280),
     ResonantTowerItem("kubejs:carbon_electrode", 4, "input"),
-    ResonantTowerFluid("kubejs:tin", 500, "input"),
-    ResonantTowerFluid("kubejs:electro_hydro", 250, "output"),
+    ResonantTowerFluid("kubejs:covariant_heat", 500, "input"),
+    ResonantTowerFluid("kubejs:electro_hydro", 500, "output"),
   ], "electro_hydro", 60)
   ResonantTowerRecipeLightning([
     ResonantTowerDimension('ad_astra:moon'),
-    ResonantTowerEnergyInput(8192),
+    ResonantTowerEnergyInput(8640),
     ResonantTowerItem("kubejs:carbon_electrode", 4, "input"),
     ResonantTowerFluid("kubejs:tin", 500, "input"),
-    ResonantTowerFluid("kubejs:electro_hydro", 250, "output"),
+    ResonantTowerFluid("kubejs:electro_hydro", 500, "output"),
   ], "electro_hydro", 60)
   ResonantTowerRecipe([
     ResonantTowerDimension('ad_astra:moon'),
-    ResonantTowerEnergyInput(6144),
-    ResonantTowerItem("iceandfire:ectoplasm", 12, "input"),
+    ResonantTowerEnergyInput(12960),
+    ResonantTowerFluid("kubejs:covariant_heat", 240, "input"),
     ResonantTowerItem("iceandfire:ghost_ingot", 4, "input"),
-    ResonantTowerFluid("kubejs:electro_hydro", 1000, "output"),
+    ResonantTowerFluid("kubejs:electro_hydro", 2000, "output"),
   ], "electro_hydro_ghost", 60)
   ResonantTowerRecipeLightning([
     ResonantTowerDimension('ad_astra:moon'),
-    ResonantTowerEnergyInput(4096),
-    ResonantTowerItem("iceandfire:ectoplasm", 12, "input"),
+    ResonantTowerEnergyInput(6480),
+    ResonantTowerFluid("kubejs:covariant_heat", 240, "input"),
     ResonantTowerItem("iceandfire:ghost_ingot", 4, "input"),
-    ResonantTowerFluid("kubejs:electro_hydro", 1000, "output"),
+    ResonantTowerFluid("kubejs:electro_hydro", 2000, "output"),
   ], "electro_hydro_ghost", 60)
   ResonantTowerRecipe([
-    ResonantTowerEnergyInput(4096),
+    ResonantTowerEnergyInput(4320),
     ResonantTowerItem("createloveandwar:tungsten_sheet", 16, "input"),
     ResonantTowerItem("kubejs:brass_parts_box", 4, "input"),
     ResonantTowerItem("kubejs:light_composite_plate", 4, "input"),
-    ResonantTowerFluid("kubejs:electro_hydro", 1000, "input"),
+    ResonantTowerFluid("kubejs:electro_hydro", 2000, "input"),
     ResonantTowerFluid("kubejs:slime_colloid", 1000, "input"),
     ResonantTowerItem("kubejs:electro_hydro_capacitor", 4, "output"),
   ], "electro_hydro_capacitor", 60)
   ResonantTowerRecipeLightning([
-    ResonantTowerEnergyInput(2048),
+    ResonantTowerEnergyInput(2160),
     ResonantTowerItem("createloveandwar:tungsten_sheet", 16, "input"),
     ResonantTowerItem("kubejs:brass_parts_box", 4, "input"),
     ResonantTowerItem("kubejs:light_composite_plate", 4, "input"),
-    ResonantTowerFluid("kubejs:electro_hydro", 1000, "input"),
+    ResonantTowerFluid("kubejs:electro_hydro", 2000, "input"),
     ResonantTowerFluid("kubejs:slime_colloid", 1000, "input"),
     ResonantTowerItem("kubejs:electro_hydro_capacitor", 4, "output"),
   ], "electro_hydro_capacitor", 60)
   ResonantTowerRecipe([
-    ResonantTowerEnergyInput(4096),
+    ResonantTowerEnergyInput(4320),
     ResonantTowerItem("kubejs:crushed_coal", 32, "input"),
     ResonantTowerItem("kubejs:graphite", 24, "output"),
   ], "graphite", 30)
   ResonantTowerRecipeLightning([
-    ResonantTowerEnergyInput(2048),
+    ResonantTowerEnergyInput(2160),
     ResonantTowerItem("kubejs:crushed_coal", 32, "input"),
     ResonantTowerItem("kubejs:graphite", 24, "output"),
   ], "graphite", 30)
   ResonantTowerRecipe([
-    ResonantTowerEnergyInput(4096),
+    ResonantTowerEnergyInput(4320),
     ResonantTowerItem("kubejs:carbon_electrode", 4, "input"),
     ResonantTowerFluid("kubejs:electro_hydro", 250, "input"),
     ResonantTowerItem("kubejs:silicon_plate", 32, "input"),
@@ -548,7 +548,7 @@ ServerEvents.recipes(event => {
     ResonantTowerItem("kubejs:graphene_coil", 32, "output"),
   ], "graphene_coil", 60)
   ResonantTowerRecipeLightning([
-    ResonantTowerEnergyInput(2048),
+    ResonantTowerEnergyInput(2160),
     ResonantTowerItem("kubejs:carbon_electrode", 4, "input"),
     ResonantTowerFluid("kubejs:electro_hydro", 250, "input"),
     ResonantTowerItem("kubejs:silicon_plate", 32, "input"),
@@ -561,17 +561,17 @@ ServerEvents.recipes(event => {
     ResonantTowerDimension('ad_astra:moon'),
     ResonantTowerFluid("kubejs:carbon_dioxide", 4000, "input"),
     ResonantTowerFluid("#forge:hydrogen", 8000, "input"),
-    ResonantTowerItem("minecraft:sugar", 16, "output"),
+    ResonantTowerItem("minecraft:sugar", 36, "output"),
   ], "sugar", 30)
   ResonantTowerRecipeLightning([
     ResonantTowerDimension('ad_astra:moon'),
     ResonantTowerFluid("kubejs:carbon_dioxide", 4000, "input"),
     ResonantTowerFluid("#forge:hydrogen", 8000, "input"),
-    ResonantTowerItem("minecraft:sugar", 16, "output"),
+    ResonantTowerItem("minecraft:sugar", 36, "output"),
   ], "sugar", 30)
 
   ResonantTowerRecipe([
-    ResonantTowerEnergyInput(36384),
+    ResonantTowerEnergyInput(72000),
     ResonantTowerDimension(["minecraft:overworld", 'ad_astra:earth_orbit']),
     ResonantTowerItem("kubejs:creative_motor_blueprint", 1, "input"),
     ResonantTowerItem("kubejs:productivity_module_2", 64, "input"),
@@ -580,5 +580,5 @@ ServerEvents.recipes(event => {
     ResonantTowerFluid("kubejs:slime_colloid", 16000, "input"),
     ResonantTowerFluid("kubejs:cola_puree", 16000, "input"),
     ResonantTowerItem("create:creative_motor", 1, "output"),
-  ], "creative_motor", 240)
+  ], "creative_motor", 1200)
 })

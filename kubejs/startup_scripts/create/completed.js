@@ -11,7 +11,7 @@ StartupEvents.registry('item', event => {
     event.create('circuit_board')
     event.create('magenta_circuit_board')
     event.create('lime_circuit_board')
-    event.create('bridge_rectifier')
+    //event.create('bridge_rectifier')
     event.create('bearing')
     event.create('planetary_gear')
     event.create('cardan_joint')
@@ -26,38 +26,38 @@ StartupEvents.registry('item', event => {
     event.create('radiator')
     //一次性电池
     event.create("disposable_battery")
-        .maxDamage(240000)
+        .maxDamage(3600)
         .attachCapability(
             CapabilityBuilder.ENERGY.customItemStack()
                 .canExtract(() => true)
-                .getEnergyStored(be => { return (240000 - be.damageValue) })
+                .getEnergyStored(be => { return (3600 - be.damageValue) })
                 .extractEnergy((item, amount, sim) => {
-                    const extract = Math.min(360, amount, 240000 - item.damageValue)
-                    if (item.damageValue < 240000 && !sim) {
+                    let extract = Math.min(180, amount, 3600 - item.damageValue)
+                    if (item.damageValue < 3600 && !sim) {
                         item.damageValue += extract
-                        if (item.damageValue >= 240000) { item.shrink(1) }
+                        if (item.damageValue >= 3600) { item.shrink(1) }
                     }
                     return extract
                 })
         )
     //充电电池
     event.create("chargeable_battery")
-        .maxDamage(320000)
+        .maxDamage(360000)
         .attachCapability(
             CapabilityBuilder.ENERGY.customItemStack()
                 .canExtract(() => true)
                 .canReceive(() => true)
                 .receiveEnergy((item, amount, sim) => {
-                    const receive = Math.min(640, amount, item.damageValue)
+                    let receive = Math.min(720, amount, item.damageValue)
                     if (item.damageValue > 0 && !sim) {
                         item.damageValue -= receive
                     }
                     return receive
                 })
-                .getEnergyStored(be => { return (320000 - be.damageValue) })
+                .getEnergyStored(be => { return (360000 - be.damageValue) })
                 .extractEnergy((item, amount, sim) => {
-                    const extract = Math.min(720, amount, 320000 - item.damageValue)
-                    if (item.damageValue < 320000 && !sim) {
+                    let extract = Math.min(720, amount, 360000 - item.damageValue)
+                    if (item.damageValue < 360000 && !sim) {
                         item.damageValue += extract
                     }
                     return extract

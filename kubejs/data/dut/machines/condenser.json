@@ -31,8 +31,6 @@
             "type": "custommachinery:fluid",
             "capacity": 4000,
             "id": "cryogen_tank",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "filter": [
                 "kubejs:cryogen"
             ],

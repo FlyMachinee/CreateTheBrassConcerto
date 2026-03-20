@@ -116,7 +116,7 @@ JEIAddedEvents.registerCategories((event) => {
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX + 18, recipeInputSlotY + 17 - 8)
         .setFluidRenderer(20, false, 16, 16)
-        .addFluidStack('kubejs:lube_oil', 20);
+        .addFluidStack('kubejs:lube_oil', 25);
       // 加压蒸汽
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY)

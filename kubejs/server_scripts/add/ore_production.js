@@ -84,33 +84,19 @@ ServerEvents.recipes(event => {
     }],
     "transitionalItem": { "item": "create:shadow_steel" }
   }).id("dut_create:netherite_from_shadow_steel_first")
-  //酸洗增产
-  function createRecipe(a, b, c) {
-    let d = "dut_create:" + a.split(":")[1] + 'washing/' + b.split(":")[1]
-    let e = 'create:crushed_raw_' + c
-    event.custom({
-      "type": "create:mixing",
-      "ingredients": [{ "item": b },
-      { "amount": 25, "fluid": a }],
-      "results": [{ "item": e, "count": 2 }, { "item": e, "chance": 0.75 }]
-    }).id(d);
-    return 0
-  }
-  //createRecipe('kubejs:muriatic_acid', "create:asurine", "zinc")
-  //createRecipe('kubejs:muriatic_acid', "create:veridium", "copper")
-  //createRecipe('kubejs:muriatic_acid', "create:crimsite", "iron")
-  //createRecipe('kubejs:muriatic_acid', "create:ochrum", "gold")
-  //createRecipe('kubejs:muriatic_acid', "kubejs:raw_tin", "tin")
-  //createRecipe('kubejs:nitric_acid', "create:asurine", "zinc")
-  //createRecipe('kubejs:nitric_acid', "create:veridium", "copper")
-  //createRecipe('kubejs:nitric_acid', "create:crimsite", "iron")
-  //createRecipe('kubejs:nitric_acid', "create:ochrum", "gold")
-  //createRecipe('kubejs:nitric_acid', "kubejs:raw_tin", "tin")
-  //createRecipe("vintageimprovements:sulfuric_acid", "create:asurine", "zinc")
-  //createRecipe('vintageimprovements:sulfuric_acid', "create:veridium", "copper")
-  //createRecipe('vintageimprovements:sulfuric_acid', "create:crimsite", "iron")
-  //createRecipe('vintageimprovements:sulfuric_acid', "create:ochrum", "gold")
-  //createRecipe('vintageimprovements:sulfuric_acid', "kubejs:raw_tin", "tin")
+
+  //下界岩粉碎
+  event.remove({ id: "create:crushing/netherrack" })
+  event.custom({
+    "type": "create:crushing",
+    "ingredients": [
+      { "item": "minecraft:netherrack" }
+    ],
+    "processingTime": 80,
+    "results": [
+      { "item": "create:cinder_flour", "count": 2 }
+    ]
+  }).id("dut_create:ore_production/netherrack")
   //皓蓝石粉碎
   event.remove({ id: 'create:crushing/asurine' })
   event.remove({ id: 'create:crushing/asurine_recycling' })
@@ -354,7 +340,7 @@ ServerEvents.recipes(event => {
       "heatRequirement": "heated",
       "ingredients": [{ "tag": input }],
       "processingTime": 20,
-      "results": [{ "item": output }]
+      "results": [{ "item": output, "count": 2 }]
     }).id("dut_create:melting_ore_rack/" + output.split(":")[1])
   }
   PressPlate(event, "create:stone_types/crimsite", "minecraft:iron_ingot")
@@ -365,6 +351,6 @@ ServerEvents.recipes(event => {
     "heatRequirement": "heated",
     "ingredients": [{ "item": "kubejs:raw_tin" }],
     "processingTime": 20,
-    "results": [{ "item": "kubejs:tin_ingot" }]
+    "results": [{ "item": "kubejs:tin_ingot", "count": 2 }]
   }).id("dut_create:melting_ore_rack/tin_ingot")
 })

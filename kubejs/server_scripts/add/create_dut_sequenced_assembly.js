@@ -204,6 +204,7 @@ ServerEvents.recipes(event => {
     "transitionalItem": { "item": "kubejs:incomplete_iron_hand" }
   }).id("dut_create:sequnced_assembly/iron_hand")
   //桥式整流器
+  /*
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": { "tag": "forge:plates/iron" },
@@ -239,6 +240,7 @@ ServerEvents.recipes(event => {
     ],
     "transitionalItem": { "item": "kubejs:incomplete_rectifier" }
   }).id("dut_create:sequnced_assembly/bridge_rectifier")
+  */
   //差速器
   event.custom({
     "type": "create:sequenced_assembly",

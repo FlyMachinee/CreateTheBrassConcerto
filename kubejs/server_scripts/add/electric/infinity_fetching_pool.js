@@ -11,49 +11,57 @@ ServerEvents.recipes(event => {
                 "AABAA"
             ],
             [
-                "E D E",
-                "  I  ",
-                "DImID",
+                "E J E",
+                "  M  ",
+                "KNmOL",
                 "  I  ",
                 "E D E"
             ],
             [
-                "     ",
+                "  H  ",
                 " FFF ",
-                " FGF ",
+                "HFGFH",
                 " FFF ",
-                "     "
-            ],
-            [
-                " HHH ",
-                "H   H",
-                "H   H",
-                "H   H",
-                " HHH "
+                "  H  "
             ]
         ],
         "keys": {
             "A": "create:industrial_iron_block",
             "B": "design_decor:industrial_iron_boiler",
             "C": "createaddition:modular_accumulator",
-            "D": "design_decor:diagonal_girder",
+            "D": "design_decor:diagonal_girder[facing=north,facing_up=false]",
+            "J": "design_decor:diagonal_girder[facing=south,facing_up=false]",
+            "K": "design_decor:diagonal_girder[facing=east,facing_up=false]",
+            "L": "design_decor:diagonal_girder[facing=west,facing_up=false]",
             "E": "design_decor:andesite_floodlight[facing=up]",
             "F": "design_decor:brass_boiler_structure",
             "G": "design_decor:brass_boiler_large",
-            "H": "design_decor:brass_railing",
-            "I": "design_decor:diagonal_metal_support"
+            "H": "#dut_create:container_fluid",
+            "I": "design_decor:diagonal_metal_support[facing=north]",
+            "M": "design_decor:diagonal_metal_support[facing=south]",
+            "N": "design_decor:diagonal_metal_support[facing=east]",
+            "O": "design_decor:diagonal_metal_support[facing=west]"
         },
         "jei": true
+    }
+    function PoolFluid(block) {
+        return ({
+            "type": "custommachinery:structure",
+            "pattern": [
+                ["m"],
+                [" "],
+                ["A"]
+            ],
+            "keys": {
+                "A": block
+            },
+            "jei": true
+        })
     }
     const PoolEnergyInput = {
         "type": "custommachinery:energy_per_tick",
         "mode": "input",
-        "amount": 60
-    }
-    const PoolEnergyInput1 = {
-        "type": "custommachinery:energy_per_tick",
-        "mode": "input",
-        "amount": 180
+        "amount": 360
     }
     function PoolFliter(item) {
         return ({
@@ -62,14 +70,12 @@ ServerEvents.recipes(event => {
             "slot": "filter"
         })
     }
-    function PoolReplace(amount, block) {
+    function PoolGenerate(fluid, amount) {
         return ({
-            "type": "custommachinery:block",
+            "type": "custommachinery:fluid_per_tick",
             "mode": "output",
-            "action": "replace_destroy",
-            "amount": amount,
-            "pos": [-1, 2, -1, 1, 2, 1],
-            "block": block
+            "fluid": fluid,
+            "amount": amount
         })
     }
     function PoolBiome(biome) {
@@ -79,61 +85,49 @@ ServerEvents.recipes(event => {
             "blacklist": false
         })
     }
-    //PoolExactCommon("kubejs:saline_water_bucket", "kubejs:saline_water")
-    //PoolExactCommon("kubejs:cryogen_bucket", "kubejs:cryogen")
-    //PoolExactCommon("minecraft:lava_bucket", "minecraft:lava")
-    //PoolExactCommon("minecraft:water_bucket", "minecraft:water")
-
     //
-    function PoolExactCommon1(fliter, block, time, extra) {
+    function PoolExactCommon(block, fluid, speed, extra) {
         event.custom({
             "type": "custommachinery:custom_machine",
             "machine": "dut:infinity_fetching_pool",
-            "time": time,
+            "time": 60,
             "priority": 2,
             "hidden": false,
             "error": true,
             "requirements": [
-                {
-                    "type": "custommachinery:fluid",
-                    "mode": "input",
-                    "fluid": "kubejs:hydrofluid",
-                    "amount": 1
-                },
-                PoolEnergyInput1,
-                PoolFliter(fliter),
-                PoolReplace(9, block)
+                PoolStructure,
+                PoolFluid(block),
+                PoolGenerate(fluid, speed),
+                PoolEnergyInput
             ].concat(extra),
             "jei": [
                 PoolStructure,
-                PoolEnergyInput1,
-                PoolFliter(fliter),
-                PoolReplace(9, block)
+                PoolFluid(block),
+                PoolEnergyInput,
+                PoolGenerate(fluid, speed)
             ].concat(extra)
-        }).id("dut_create:infinity_fetching_pool/" + block.split(":")[1])
+        }).id("dut_create:infinity_fetching_pool/" + fluid.split(":")[1])
     }
+    PoolExactCommon("kubejs:saline_water", "kubejs:saline_water", 16000, [])
+    PoolExactCommon("kubejs:cryogen", "kubejs:cryogen", 16000, [])
+    PoolExactCommon("minecraft:lava", "minecraft:lava", 16000, [])
+    PoolExactCommon("minecraft:water", "minecraft:water", 16000, [])
+    PoolExactCommon("create:honey", "create:honey", 1000, [PoolBiome("dut:chromatic_agros")])
+    PoolExactCommon("kubejs:nitric_acid", "kubejs:nitric_acid", 1000, [PoolBiome("dut:nitrolithic_shore")])
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:infinity_fetching_pool",
-        "time": 1,
-        "error": true,
+        "time": 10,
+        "priority": 0,
         "hidden": true,
-        "priority": 1,
+        "error": true,
         "requirements": [
             PoolStructure,
-            PoolEnergyInput1,
             {
-                "type": "custommachinery:fluid",
-                "mode": "output",
-                "fluid": "kubejs:hydrofluid",
-                "amount": 1000
+                "type": "custommachinery:energy_per_tick",
+                "mode": "input",
+                "amount": 180
             }
         ]
-    }).id("dut_create:infinity_fetching_pool/fluid")
-    PoolExactCommon1("kubejs:saline_water_bucket", "kubejs:saline_water", 1, [])
-    PoolExactCommon1("kubejs:cryogen_bucket", "kubejs:cryogen", 1, [])
-    PoolExactCommon1("minecraft:lava_bucket", "minecraft:lava", 1, [])
-    PoolExactCommon1("minecraft:water_bucket", "minecraft:water", 1, [])
-    PoolExactCommon1("create:honey_bucket", "create:honey", 9, [PoolBiome("dut:chromatic_agros")])
-    PoolExactCommon1("kubejs:nitric_acid_bucket", "kubejs:nitric_acid", 9, [PoolBiome("dut:nitrolithic_shore")])
+    }).id("dut_create:infinity_fetching_pool/empty")
 })

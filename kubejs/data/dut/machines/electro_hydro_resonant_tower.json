@@ -111,8 +111,6 @@
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluidInput1",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "mode": "input",
             "unique": true
         },
@@ -120,8 +118,6 @@
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluidInput2",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "mode": "input",
             "unique": true
         },
@@ -129,8 +125,6 @@
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluidOutput1",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "mode": "output",
             "unique": true
         },
@@ -138,16 +132,12 @@
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluidOutput2",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "mode": "output",
             "unique": true
         },
         {
             "type": "custommachinery:energy",
-            "capacity": 294912,
-            "maxInput": 294912,
-            "maxOutput": 294912,
+            "capacity": 720000,
             "mode": "input",
             "id": "fe",
             "config": {

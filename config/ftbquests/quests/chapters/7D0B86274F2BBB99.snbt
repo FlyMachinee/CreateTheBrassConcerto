@@ -5,7 +5,7 @@
 	group: "6B818C6F92D84205"
 	icon: "kubejs:empty_culture_plate"
 	id: "7D0B86274F2BBB99"
-	order_index: 4
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
@@ -531,7 +531,7 @@
 			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_2D9647851BA4A80A.desc_01}"]
 			id: "2D9647851BA4A80A"
 			rewards: [{
-				id: "04E2CBC475CD3DF4"
+				id: "078760741676D35F"
 				item: {
 					Count: 1
 					id: "minecraft:barrel"
@@ -539,89 +539,94 @@
 						BlockEntityTag: {
 							Items: [
 								{
-									Count: 29b
+									Count: 2b
 									Slot: 0b
-									id: "create:copper_casing"
+									id: "create_things_and_misc:brass_brick_slab"
 								}
 								{
 									Count: 9b
 									Slot: 1b
-									id: "create:railway_casing"
-								}
-								{
-									Count: 4b
-									Slot: 2b
-									id: "create:fluid_pipe"
-								}
-								{
-									Count: 6b
-									Slot: 3b
-									id: "create:fluid_tank"
-								}
-								{
-									Count: 6b
-									Slot: 4b
-									id: "create:item_drain"
-								}
-								{
-									Count: 8b
-									Slot: 5b
-									id: "create:mechanical_pump"
-								}
-								{
-									Count: 5b
-									Slot: 6b
-									id: "create:smart_fluid_pipe"
+									id: "create_connected:fluid_vessel"
 								}
 								{
 									Count: 2b
-									Slot: 7b
-									id: "create_things_and_misc:brass_brick_slab"
-								}
-								{
-									Count: 4b
-									Slot: 8b
-									id: "createaddition:modular_accumulator"
+									Slot: 2b
+									id: "kubejs:carbon_electrode"
 								}
 								{
 									Count: 5b
-									Slot: 9b
+									Slot: 3b
 									id: "design_decor:andesite_floodlight"
 								}
 								{
 									Count: 2b
-									Slot: 10b
+									Slot: 4b
 									id: "design_decor:brass_boiler"
 								}
 								{
 									Count: 1b
-									Slot: 11b
+									Slot: 5b
 									id: "design_decor:brass_boiler_large"
 								}
 								{
 									Count: 3b
-									Slot: 12b
+									Slot: 6b
 									id: "design_decor:copper_boiler"
 								}
 								{
 									Count: 4b
-									Slot: 13b
-									id: "design_decor:copper_railing"
-								}
-								{
-									Count: 5b
-									Slot: 14b
+									Slot: 7b
 									id: "design_decor:diagonal_metal_support"
 								}
 								{
+									Count: 4b
+									Slot: 8b
+									id: "design_decor:copper_railing"
+								}
+								{
 									Count: 1b
-									Slot: 15b
+									Slot: 9b
 									id: "design_decor:stepped_lever"
+								}
+								{
+									Count: 6b
+									Slot: 10b
+									id: "create:mechanical_pump"
+								}
+								{
+									Count: 5b
+									Slot: 11b
+									id: "create:smart_fluid_pipe"
+								}
+								{
+									Count: 6b
+									Slot: 12b
+									id: "create:fluid_tank"
+								}
+								{
+									Count: 6b
+									Slot: 13b
+									id: "create:item_drain"
+								}
+								{
+									Count: 27b
+									Slot: 14b
+									id: "create:copper_casing"
+								}
+								{
+									Count: 9b
+									Slot: 15b
+									id: "create:railway_casing"
 								}
 								{
 									Count: 2b
 									Slot: 16b
-									id: "kubejs:carbon_electrode"
+									id: "create:brass_funnel"
+								}
+								{
+									Count: 4b
+									Slot: 17b
+									id: "createaddition:modular_accumulator"
 								}
 							]
 							id: "minecraft:barrel"

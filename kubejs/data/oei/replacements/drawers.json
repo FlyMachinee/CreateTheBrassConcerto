@@ -74,5 +74,13 @@
         ],
         "resultItems": 
         "storagedrawers:controller"
+    },
+    {
+        "matchItems": [
+        "storagedrawers:magnet_upgrade",
+        "storagedrawers:magnet_upgrade_2"
+        ],
+        "resultItems": 
+        "storagedrawers:magnet_upgrade_3"
     }
 ]

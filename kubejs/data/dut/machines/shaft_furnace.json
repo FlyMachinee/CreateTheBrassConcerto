@@ -30,86 +30,109 @@
         {
             "type": "custommachinery:item",
             "id": "1",
-            "mode": "input",
-            "locked": false
+            "mode": "input"
         },
         {
             "type": "custommachinery:item",
             "id": "2",
-            "mode": "input",
-            "locked": false
+            "mode": "input"
         },
         {
             "type": "custommachinery:item",
             "id": "3",
-            "mode": "input",
-            "locked": false
+            "mode": "input"
         },
         {
             "type": "custommachinery:item",
             "id": "4",
-            "mode": "input",
-            "locked": false
+            "mode": "input"
         },
         {
             "type": "custommachinery:item",
             "id": "5",
-            "mode": "input",
-            "locked": false
+            "mode": "input"
         },
         {
             "type": "custommachinery:item",
             "id": "6",
-            "mode": "input",
-            "locked": false
+            "mode": "input"
         },
         {
             "type": "custommachinery:item",
             "id": "7",
-            "mode": "output",
-            "locked": false
+            "mode": "output"
         },
         {
             "type": "custommachinery:item",
             "id": "8",
-            "mode": "output",
-            "locked": false
+            "mode": "output"
         },
         {
             "type": "custommachinery:item",
             "id": "9",
-            "mode": "output",
-            "locked": false
+            "mode": "output"
         },
         {
             "type": "custommachinery:item",
             "id": "10",
-            "mode": "output",
-            "locked": false
+            "mode": "output"
         },
         {
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "oxygen",
-            "maxInput": 0,
-            "maxOutput": 1000,
-            "mode": "both"
+            "mode": "input",
+            "filter": [
+                "kubejs:oxygen"
+            ],
+            "whitelist": true
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [4, -15, 0],
+            "mode": "input",
+            "slotID":["oxygen"]
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [-4, -15, 0],
+            "mode": "input",
+            "slotID":["oxygen"]
         },
         {
             "type": "custommachinery:fluid",
             "capacity": 16000,
             "id": "fluid",
-            "maxInput": 0,
-            "maxOutput": 1000,
-            "mode": "both"
+            "mode": "input",
+            "filter": [
+                "kubejs:oxygen"
+            ],
+            "whitelist": false
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [1, -8, 0],
+            "mode": "input",
+            "slotID":["fluid"]
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [-1, -8, 0],
+            "mode": "input",
+            "slotID":["fluid"]
         },
         {
             "type": "custommachinery:fluid",
-            "capacity": 8000,
+            "capacity": 16000,
             "id": "fluid_output",
             "maxInput": 0,
-            "maxOutput": 1000,
-            "mode": "both"
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:remote_fluid",
+            "pos": [0, -17, 4],
+            "mode": "output",
+            "slotID":["fluid_output"]
         },
         {
             "type": "custommachinery:item",

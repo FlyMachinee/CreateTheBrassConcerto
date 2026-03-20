@@ -92,7 +92,7 @@ ServerEvents.recipes(event => {
             "B",
             "C"
         ],
-        "result": { "item": "kubejs:redstone_radar" },
+        "result": { "item": "createandesiteabound:redstone_radar" },
         "show_notification": true
     }).id("dut_create:redstone_radar")
     //高速装罐机
@@ -332,78 +332,15 @@ ServerEvents.recipes(event => {
         "show_notification": true
     }).id("dut_create:emergency_industrial_platform_lime")
     //应急工业平台转换
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:emergency_industrial_platform" }
-        },
-        "pattern": [
-            "A"
-        ],
-        "result": { "item": "kubejs:emergency_industrial_platform_block" },
-        "show_notification": true
-    }).id("dut_create:emergency_industrial_platform_block")
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:emergency_industrial_platform_block" }
-        },
-        "pattern": [
-            "A"
-        ],
-        "result": { "item": "kubejs:emergency_industrial_platform" },
-        "show_notification": true
-    }).id("dut_create:emergency_industrial_platform_block1")
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:emergency_industrial_platform_dark" }
-        },
-        "pattern": [
-            "A"
-        ],
-        "result": { "item": "kubejs:emergency_industrial_platform_dark_block" },
-        "show_notification": true
-    }).id("dut_create:emergency_industrial_platform_dark_block")
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:emergency_industrial_platform_dark_block" }
-        },
-        "pattern": [
-            "A"
-        ],
-        "result": { "item": "kubejs:emergency_industrial_platform_dark" },
-        "show_notification": true
-    }).id("dut_create:emergency_industrial_platform_dark_block1")
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:emergency_industrial_platform_lime" }
-        },
-        "pattern": [
-            "A"
-        ],
-        "result": { "item": "kubejs:emergency_industrial_platform_lime_block" },
-        "show_notification": true
-    }).id("dut_create:emergency_industrial_platform_lime_block")
-    event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "kubejs:emergency_industrial_platform_lime_block" }
-        },
-        "pattern": [
-            "A"
-        ],
-        "result": { "item": "kubejs:emergency_industrial_platform_lime" },
-        "show_notification": true
-    }).id("dut_create:emergency_industrial_platform_lime_block1")
+    function switchPlatform(item) {
+        event.custom({
+            "type": "minecraft:stonecutting",
+            "ingredient": { "tag": "dut_create:switchable_platform" },
+            "result": item,
+            "count": 1
+        }).id("dut_create:machine/switch_platform/" + item.split(":")[1])
+    }
+    Ingredient.of("#dut_create:switchable_platform").itemIds.forEach(i => switchPlatform(i))
     //电子管计算机
     event.shaped("kubejs:electron_tube_computer", [
             "AAA",
@@ -440,8 +377,8 @@ ServerEvents.recipes(event => {
             "FFF"
     ], {
         A: "kubejs:light_composite_plate",
-        E: Item.of("kubejs:aluminum_hard_disk", { Damage: 0 }).weakNBT(),
-        D: "kubejs:differential",
+        E: "kubejs:differential",
+        D: "kubejs:mycetozoan",
         F: "#forge:storage_blocks/steel"
     }).id("dut_create:large_difference_engine")
     //组装机控制器
@@ -489,7 +426,7 @@ ServerEvents.recipes(event => {
         A: "kubejs:electron_tube_computer",
         B: "kubejs:satellite",
         E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
-        D: "#forge:ingots/aluminum",
+        D: "kubejs:lime_circuit_board",
         F: "#forge:storage_blocks/steel"
     }).id("dut_create:satellite_station")
     //火箭发射台
@@ -587,18 +524,12 @@ ServerEvents.recipes(event => {
         "kubejs:electro_hydro_resonant_tower",
         "kubejs:planting_tower",
         "kubejs:trading_station",
-        "kubejs:emergency_industrial_platform",
-        "kubejs:emergency_industrial_platform_block",
-        "kubejs:emergency_industrial_platform_lime",
-        "kubejs:emergency_industrial_platform_lime_block",
-        "kubejs:emergency_industrial_platform_dark",
-        "kubejs:emergency_industrial_platform_dark_block",
+        "kubejs:emergency_industrial_platform_space",
         "kubejs:battery_slot",
         "kubejs:culture_bin",
         "kubejs:filling_machine",
         "kubejs:emptying_machine",
         "kubejs:anti_warden_bomb",
-        "kubejs:redstone_radar",
         "kubejs:cap_reaping_machine",
         "kubejs:stem_reaping_machine"]
     List.forEach(i => clearNbt(i))

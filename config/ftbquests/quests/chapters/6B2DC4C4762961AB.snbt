@@ -84,6 +84,12 @@
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_27192F82A7999E53.desc_01}"]
 			id: "27192F82A7999E53"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4CCD85B8EB85F64D"
+				table_id: 859008673492234316L
+				type: "choice"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "4C2F009022546B9D"
@@ -96,6 +102,12 @@
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_3E4E8BDD6C8F7CB8.desc_01}"]
 			id: "3E4E8BDD6C8F7CB8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0EB78855FB50353A"
+				table_id: 859008673492234316L
+				type: "choice"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "08E6D8BE3EAE589D"
@@ -114,8 +126,8 @@
 				item: "createaddition:electric_motor"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -3.0d
+			x: 2.0d
+			y: 0.0d
 		}
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_722AF2857E2BDFD5.desc_01}"]
@@ -132,6 +144,12 @@
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_480A2CA55C15BB6B.desc_01}"]
 			id: "480A2CA55C15BB6B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "560A0137FF2655B2"
+				table_id: 859008673492234316L
+				type: "choice"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "7C4595F63964B5DD"
@@ -142,20 +160,14 @@
 			y: -1.0d
 		}
 		{
-			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_3F9F99C2DBF1A006.desc_01}"]
-			id: "3F9F99C2DBF1A006"
-			shape: "rsquare"
-			tasks: [{
-				id: "5367C4E4FCC70E15"
-				item: "ad_astra:coal_generator"
-				type: "item"
-			}]
-			x: 2.0d
-			y: -3.0d
-		}
-		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_36F5045037F7639F.desc_01}"]
 			id: "36F5045037F7639F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "093CDD773BB5E6DF"
+				table_id: 859008673492234316L
+				type: "choice"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "38696BE7E2FD5755"
@@ -163,11 +175,17 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -2.0d
+			y: -3.0d
 		}
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_15489446B57B5B4F.desc_01}"]
 			id: "15489446B57B5B4F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "258E14ED3F2F8A69"
+				table_id: 859008673492234316L
+				type: "choice"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "6F8575E27038DD1B"
@@ -175,7 +193,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_2BBC6BAF01C2D697.desc_01}"]
@@ -187,7 +205,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 0.0d
+			y: -1.0d
 		}
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_5BC8E5BFC969173B.desc_01}"]
@@ -199,10 +217,24 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: -2.0d
+			y: -3.0d
 		}
 		{
-			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_6F4997B4AEFD3D06.desc_01}"]
+			description: [
+				"协变反应堆可以通过青铜的嬗变直接提供至多&e15360 FE/t&r的电能，&a此外散热时还会产生大量的过热蒸汽——这才是它的主要能源生产来源！&r"
+				""
+				"反应堆的具体操作方式和特性可以查看思索，以下仅给出用于计算效率的公式！"
+				""
+				"&e-协变反应堆的每次反应持续60 tick；&r"
+				""
+				"&e-反应开始时，工作范围内的燃料棒可以提供&r&a60*(2^燃料棒数) FE/t&r&e的电能和&r&a2^(floor(1.5*燃料棒数+1)) mB/t&r&e的协变热——&r&c如果电力满溢，那么协变热生产速率将翻倍&r&e；&r"
+				""
+				"&e-特别的，如果工作范围内仅有1根燃料棒，那么协变热产出量变为&r&a1/4&r&e；&r"
+				""
+				"&e-散热状态下，反应堆每&r&a5 tick&r&e进行一次&r&b冷冻剂&r&e散热，&r&a1 B&r&b冷冻剂&r&e可以将&r&a480 mB&r&d协变热&r&e转化为&r&a1 B&r&d过热蒸汽&r&e，单次至多消耗&r&a4 B&r&b冷冻剂&r&e；&r"
+				""
+				"&e-散热状态下，反应堆每&r&a40 tick&r&e进行一次&r&b散热元件&r&e散热，单次消耗&r&a6 &r&b散热元件&r&e将&r&a46080 mB&r&d协变热&r&e转化为&r&a6 B&r&d过热蒸汽&r&e；&r"
+			]
 			id: "6F4997B4AEFD3D06"
 			shape: "rsquare"
 			tasks: [{
@@ -211,7 +243,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			description: ["{ftbquests.chapter_6B2DC4C4762961AB.quest_572E056E4ADE7174.desc_01}"]
@@ -222,7 +254,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 0.0d
+			y: -1.0d
 		}
 	]
 	title: "{ftbquests.chapter_6B2DC4C4762961AB.title}"

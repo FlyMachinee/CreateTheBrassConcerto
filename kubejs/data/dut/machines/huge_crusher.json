@@ -31,8 +31,6 @@
             "type": "custommachinery:fluid",
             "capacity": 4000,
             "id": "tank",
-            "maxInput": 4000,
-            "maxOutput": 4000,
             "filter": ["minecraft:water"],
             "whitelist": true
         },

@@ -284,7 +284,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: -1.5d
+			y: -2.5d
 		}
 		{
 			description: ["{ftbquests.chapter_2019217A53F72AEC.quest_48D1CAF5D9B7491E.desc_01}"]
@@ -295,7 +295,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: -0.5d
+			y: -1.5d
 		}
 		{
 			description: ["{ftbquests.chapter_2019217A53F72AEC.quest_42F64901210F8E3F.desc_01}"]
@@ -306,7 +306,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: -2.5d
+			y: 1.5d
 		}
 		{
 			description: ["{ftbquests.chapter_2019217A53F72AEC.quest_5F46A63B2F668FEA.desc_01}"]
@@ -317,7 +317,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: 0.5d
+			y: -0.5d
 		}
 		{
 			description: ["{ftbquests.chapter_2019217A53F72AEC.quest_0EC96A3CAED88B20.desc_01}"]
@@ -328,7 +328,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: 1.5d
+			y: 0.5d
 		}
 		{
 			description: ["{ftbquests.chapter_2019217A53F72AEC.quest_48510BDA8132DB5A.desc_01}"]

@@ -46,18 +46,6 @@ Ponder.registry((event) => {
           nbt.TankContent = { Amount: 8000, FluidName: "kubejs:muriatic_acid"} 
         }, true)
         scene.idle(30);
-        
-        scene.addKeyframe();
-        scene.text(60, "如果下方没有容器，液体将被排出至世界中！");
-        scene.world.hideSection([2, 1, 4], Direction.down)
-        scene.idle(30);
-        scene.overlay.showOutline("green", { "glue": true }, [2, 1, 4], 30);
-        scene.showControls(20, [2, 2.5, 4], "down").withItem('kubejs:muriatic_acid_bucket')
-        scene.world.setBlock([2, 1, 4],"kubejs:muriatic_acid",false)
-        scene.world.showSection([2, 1, 4], Direction.down)
-        scene.idle(30);
-        scene.world.setBlock([2, 1, 4],"minecraft:air",false)
-        scene.idle(30);
 
         scene.addKeyframe();
         scene.text(60, "你可以使用高速装卸罐机与移动式接口交互，从而快速对列车进行装卸操作！");
