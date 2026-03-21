@@ -59,6 +59,15 @@ function CovariantReactorMeltdown(pCategory) {
 
   const slotGap = 22;
 
+  // 爆炸
+  const toggleButton = new ToggleButton(
+    recipeOutputSlotX + 18 * 6 - 25,
+    recipeOutputSlotY + 22 + 8 - 7,
+    25,
+    14,
+    Text.translate('kubejs.jeiaddition.covariant_reactor.meltdown.bang')
+  );
+
   /**
    * @param {Internal.IRecipeLayoutBuilder} layoutBuilder
    * @param {Internal.CustomJSRecipe} recipe
@@ -285,6 +294,8 @@ function CovariantReactorMeltdown(pCategory) {
     const heatRenderX = category.getWidth() / 2 - animatedHeatBar.getWidth() / 2;
     const heatRenderY = 166;
 
+    toggleButton.draw(recipe, graphics, mouseX, mouseY);
+
     switch (state) {
       case STATE.HEAT: {
         let nowTick = Timer.getGlobalTick();
@@ -322,10 +333,11 @@ function CovariantReactorMeltdown(pCategory) {
         if (t >= recipeTime) {
           state = STATE.EXPLODE;
           timer.restart();
+          if (!toggleButton.getState()) {
+            break;
+          }
           for (let i = 0; i < 8; ++i) {
-            Client.getSoundManager().play(
-              $SimpleSoundInstance.forUI($SoundEvents.GENERIC_EXPLODE, 1.0, 0.1)
-            );
+            Client.getSoundManager().play($SimpleSoundInstance.forUI($SoundEvents.GENERIC_EXPLODE, 1.0, 0.1));
           }
         }
         break;
@@ -373,6 +385,10 @@ function CovariantReactorMeltdown(pCategory) {
   const machineInfoTooltip = new StaticRectengularTooltip(10, 55, 190, 105)
     .addTranslate('kubejs.jeiaddition.covariant_reactor.machine11')
     .addTranslate('kubejs.jeiaddition.covariant_reactor.machine12');
+
+  this.handleInput = (recipe, mouseX, mouseY, input) => {
+    return toggleButton.handleInput(recipe, mouseX, mouseY, input);
+  };
 
   // 处理 tooltip 显示
   this.handleTooltip = (tooltip, recipe, recipeSlotsView, mouseX, mouseY) => {

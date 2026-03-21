@@ -76,6 +76,7 @@
   "kubejs.jeiaddition.covariant_reactor.machine11": "若反应开始时，其内部的协变热达到了 1,474,560 mB，则反应堆将在 60 刻后熔毁爆炸",
   "kubejs.jeiaddition.covariant_reactor.machine12": "爆炸时，周围 25*25*25 范围内的幽匿块将转变为基岩",
   "kubejs.jeiaddition.covariant_reactor.n_explain": "其中 N 为反应堆提取的冷却剂桶数",
+  "kubejs.jeiaddition.covariant_reactor.meltdown.bang": "砰",
   "kubejs.jeiaddition.upgrade_calculator.header1": "指标",
   "kubejs.jeiaddition.upgrade_calculator.header2": "原始值",
   "kubejs.jeiaddition.upgrade_calculator.header3": "修正值",

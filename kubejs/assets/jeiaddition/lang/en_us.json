@@ -76,6 +76,7 @@
   "kubejs.jeiaddition.covariant_reactor.machine11": "If the internal heat reaches 1,474,560 mB when recipe starts, the reactor will meltdown and explode after 60 ticks",
   "kubejs.jeiaddition.covariant_reactor.machine12": "When exploding, all sculk blocks in the range of 25*25*25 around will be transformed into bedrock",
   "kubejs.jeiaddition.covariant_reactor.n_explain": "where N is the bucket count of cryogen extracted by the reactor",
+  "kubejs.jeiaddition.covariant_reactor.meltdown.bang": "Bang",
   "kubejs.jeiaddition.upgrade_calculator.header1": "Target",
   "kubejs.jeiaddition.upgrade_calculator.header2": "Original",
   "kubejs.jeiaddition.upgrade_calculator.header3": "Modified",

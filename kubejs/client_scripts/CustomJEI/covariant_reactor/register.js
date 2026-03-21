@@ -120,6 +120,8 @@ JEIAddedEvents.registerCategories((event) => {
       switch (recipe.recipeData.type) {
         case 1:
           return workInstance.handleInput(recipe, mouseX, mouseY, input);
+        case 3:
+          return meltdownInstance.handleInput(recipe, mouseX, mouseY, input);
         default:
           return false;
       }
