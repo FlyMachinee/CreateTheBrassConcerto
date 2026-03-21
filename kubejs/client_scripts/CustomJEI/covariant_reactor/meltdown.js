@@ -46,7 +46,7 @@ function CovariantReactorMeltdown(pCategory) {
   // 输入槽参数
   const recipeInputSlotX =
     category.getWidth() / 2 - (7 * 18 + 2 * 10 + animatedRecipeArrow.getWidth() - 2) / 2;
-  const recipeInputSlotY = 10;
+  const recipeInputSlotY = 4;
 
   // 配方箭头参数
   const recipeArrowX = recipeInputSlotX + 17 + 10;
@@ -57,7 +57,7 @@ function CovariantReactorMeltdown(pCategory) {
   const recipeOutputSlotX = recipeArrowX + animatedRecipeArrow.getWidth() + 10 + 1;
   const recipeOutputSlotY = recipeInputSlotY;
 
-  const slotGap = 22;
+  const slotGap = 20;
 
   // 爆炸
   const toggleButton = new ToggleButton(
@@ -292,7 +292,7 @@ function CovariantReactorMeltdown(pCategory) {
 
     // 热量槽进度渲染
     const heatRenderX = category.getWidth() / 2 - animatedHeatBar.getWidth() / 2;
-    const heatRenderY = 166;
+    const heatRenderY = 145;
 
     toggleButton.draw(recipe, graphics, mouseX, mouseY);
 
@@ -358,7 +358,7 @@ function CovariantReactorMeltdown(pCategory) {
     }
 
     matrixStack.pushPose();
-    matrixStack.translate(95, 85, 100);
+    matrixStack.translate(95, 70, 100);
 
     // 渲染轴旋转
     matrixStack.mulPose($Axis.XP.rotationDegrees(-15.5));
@@ -382,7 +382,7 @@ function CovariantReactorMeltdown(pCategory) {
   };
 
   // tooltip 显示
-  const machineInfoTooltip = new StaticRectengularTooltip(10, 55, 190, 105)
+  const machineInfoTooltip = new StaticRectengularTooltip(10, 45, 190, 105)
     .addTranslate('kubejs.jeiaddition.covariant_reactor.machine11')
     .addTranslate('kubejs.jeiaddition.covariant_reactor.machine12');
 

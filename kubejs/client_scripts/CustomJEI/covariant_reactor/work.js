@@ -60,7 +60,7 @@ function CovariantReactorWork(pCategory) {
 
   // 按钮组参数
   const widgetX = 155;
-  const widgetY = 124;
+  const widgetY = 100;
   const widgetWidth = 40;
   const widgetHeight = 22;
   const buttonWidth = 9;
@@ -70,7 +70,7 @@ function CovariantReactorWork(pCategory) {
 
   // 输出槽参数
   const recipeOutputSlotX = 158;
-  const recipeOutputSlotY = 80;
+  const recipeOutputSlotY = 55;
   const energySlotWidth = $TextureSizeHelper.getTextureWidth(
     $EnergyGuiElement.BASE_ENERGY_STORAGE_EMPTY_TEXTURE
   );
@@ -79,6 +79,9 @@ function CovariantReactorWork(pCategory) {
   );
   const energySlotX = recipeOutputSlotX + 18;
   const energySlotY = recipeOutputSlotY + 8 - energySlotHeight / 2;
+
+  const textX = 10;
+  const textY = 7;
 
   // 场景中 燃料棒、控制棒、空气的位置索引列表
   let fuelBlocks = [0, 3, 4, 7];
@@ -263,19 +266,13 @@ function CovariantReactorWork(pCategory) {
 
     // 配方信息计算
     const power = data.powerCallback(fuelCount, controllerCount);
-    const totalEnergy = recipeTime * power;
-    const cyclesEnergyFull = parseFloat((reactorEnergyCapacity / totalEnergy).toFixed(2));
-    const ticksEnergyFull = Math.ceil(reactorEnergyCapacity / power);
 
     // 额外信息计算
     const heatPerTick = data.heatCallback(fuelCount, controllerCount);
     const totalHeat = recipeTime * heatPerTick;
-    const heatPercentage = parseFloat(((totalHeat / reactorHeatLimit) * 100).toFixed(2));
     const cyclesHeatFull = parseFloat((reactorHeatLimit / totalHeat).toFixed(2));
     const ticksHeatFull = Math.ceil(reactorHeatLimit / heatPerTick);
-    const decayProbability =
-      fuelCount === 1 ? 0 : parseFloat((0.025 * (1 - 0.125 * controllerCount)).toFixed(4));
-    const ticksToDecay = fuelCount === 1 ? Infinity : Math.ceil(recipeTime / decayProbability);
+    const decayProbability = fuelCount === 1 ? 0 : parseFloat(1 - 0.125 * controllerCount).toFixed(4);
 
     const nowTick = Timer.getGlobalTick();
 
@@ -292,7 +289,7 @@ function CovariantReactorWork(pCategory) {
 
     // 热量槽进度渲染
     const heatRenderX = category.getWidth() / 2 - animatedHeatBar.getWidth() / 2;
-    const heatRenderY = 166;
+    const heatRenderY = 140;
     heatAcc = (heatAcc + heatPerTick * (nowTick - lastTick)) % reactorHeatLimit;
     animatedHeatBar.draw(graphics, heatRenderX, heatRenderY, heatAcc / reactorHeatLimit);
 
@@ -321,40 +318,20 @@ function CovariantReactorWork(pCategory) {
     );
 
     // 配方信息文本
-    let wordX = 10;
-    let wordY = 5;
+    let wordX = textX;
+    let wordY = textY;
     const wordLineHeight = Client.font.lineHeight + 2;
     const putWord = (component) => {
       drawWordWrap(graphics, Client.font, component, wordX, wordY, 200, 0x000000, false);
       wordY += wordLineHeight;
     };
-    putWord(Text.translate('kubejs.jeiaddition.machine_total_energy', addThousandSeparator(totalEnergy)));
     putWord(Text.translate('kubejs.jeiaddition.machine_power', addThousandSeparator(power)));
     putWord(Text.translate('kubejs.jeiaddition.machine_recipe_time', addThousandSeparator(recipeTime)));
-    if (data.subtype === 1) {
-      putWord(
-        Text.translate(
-          'kubejs.jeiaddition.machine_energy_capacity',
-          addThousandSeparator(reactorEnergyCapacity)
-        )
-      );
-      putWord(
-        Text.translate(
-          'kubejs.jeiaddition.covariant_reactor.energy_full',
-          addThousandSeparator(ticksEnergyFull),
-          addThousandSeparator(cyclesEnergyFull)
-        )
-      );
-    }
     putWord(
       Text.translate('kubejs.jeiaddition.covariant_reactor.heat_rate', addThousandSeparator(heatPerTick))
     );
     putWord(
-      Text.translate(
-        'kubejs.jeiaddition.covariant_reactor.heat_total',
-        addThousandSeparator(totalHeat),
-        heatPercentage.toString()
-      )
+      Text.translate('kubejs.jeiaddition.covariant_reactor.heat_total', addThousandSeparator(totalHeat))
     );
     putWord(
       Text.translate(
@@ -372,13 +349,12 @@ function CovariantReactorWork(pCategory) {
     putWord(
       Text.translate(
         'kubejs.jeiaddition.covariant_reactor.decay_probability',
-        parseFloat((decayProbability * 100).toFixed(2)).toString(),
-        isFinite(ticksToDecay) ? addThousandSeparator(ticksToDecay) : 'Inf'
+        parseFloat((decayProbability * 100).toFixed(2)).toString()
       )
     );
 
     matrixStack.pushPose();
-    matrixStack.translate(62, 147, 50);
+    matrixStack.translate(62, 120, 50);
 
     // 渲染轴旋转
     matrixStack.mulPose($Axis.XP.rotationDegrees(-15.5));
@@ -493,37 +469,44 @@ function CovariantReactorWork(pCategory) {
   ).addTranslate('kubejs.jeiaddition.covariant_reactor.controller_count');
 
   const powerInfoTooltip = new MutableRectengularTooltip(
-    10,
-    5,
+    textX,
+    textY,
     70,
-    3 * (Client.font.lineHeight + 2)
+    2 * (Client.font.lineHeight + 2)
   ).setTooltipCallback((tooltip, recipe) => {
     const data = recipe.recipeData;
     tooltip.add(Text.literal(data.powerFormula));
     if (data.subtype === 1) {
-      tooltip.add(Text.translate('kubejs.jeiaddition.floor_explain'));
       tooltip.add(Text.translate('kubejs.jeiaddition.exponential_explain'));
     }
   });
 
   const heatInfoTooltip = new MutableRectengularTooltip(
-    10,
-    60,
+    textX,
+    textY + 2 * (Client.font.lineHeight + 2),
     130,
-    3 * (Client.font.lineHeight + 2)
+    2 * (Client.font.lineHeight + 2)
   ).setTooltipCallback((tooltip, recipe) => {
     const data = recipe.recipeData;
     tooltip.add(Text.literal(data.heatFormula));
     tooltip.add(Text.translate('kubejs.jeiaddition.floor_explain'));
     tooltip.add(Text.translate('kubejs.jeiaddition.exponential_explain'));
+    tooltip.add(
+      Text.translate('kubejs.jeiaddition.covariant_reactor.heat_rate.single', data.subtype.toString())
+    );
   });
 
-  const decayInfoTooltip = new StaticRectengularTooltip(10, 100, 130, Client.font.lineHeight + 4)
+  const decayInfoTooltip = new StaticRectengularTooltip(
+    textX,
+    textY + 6 * (Client.font.lineHeight + 2),
+    130,
+    Client.font.lineHeight + 4
+  )
     .addTranslate('kubejs.jeiaddition.covariant_reactor.decay_explain1')
-    .addLiteral('P(A) = 0.025 * (1 - 0.125 * C)')
+    .addLiteral('P(A) = 1 - 0.125 * C')
     .addTranslate('kubejs.jeiaddition.covariant_reactor.decay_explain2');
 
-  const machineInfoTooltip = new StaticRectengularTooltip(30, 120, 90, 40)
+  const machineInfoTooltip = new StaticRectengularTooltip(30, 90, 90, 40)
     .addTranslate('kubejs.jeiaddition.covariant_reactor.machine1')
     .addTranslate('kubejs.jeiaddition.covariant_reactor.machine2')
     .addTranslate('kubejs.jeiaddition.covariant_reactor.machine3')
@@ -536,16 +519,8 @@ function CovariantReactorWork(pCategory) {
     fuelCountTooltip.handleTooltip(tooltip, mouseX, mouseY);
     controllerCountTooltip.handleTooltip(tooltip, mouseX, mouseY);
     powerInfoTooltip.handleTooltip(tooltip, recipe, mouseX, mouseY);
-
-    if (data.subtype === 1) {
-      heatInfoTooltip.handleTooltip(tooltip, recipe, mouseX, mouseY);
-      decayInfoTooltip.handleTooltip(tooltip, mouseX, mouseY);
-    } else {
-      heatInfoTooltip.handleTooltip(tooltip, recipe, mouseX, mouseY + 20);
-      decayInfoTooltip.handleTooltip(tooltip, mouseX, mouseY + 20);
-    }
+    heatInfoTooltip.handleTooltip(tooltip, recipe, mouseX, mouseY);
+    decayInfoTooltip.handleTooltip(tooltip, mouseX, mouseY);
     machineInfoTooltip.handleTooltip(tooltip, mouseX, mouseY);
   };
 }
-
-JsonIO

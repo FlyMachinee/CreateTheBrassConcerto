@@ -30,12 +30,11 @@ JEIAddedEvents.registerRecipes((event) => {
   recipeBuilder.add({
     type: 1, // 工作模式
     subtype: 1, // 正常工作模式
-    powerCallback: (fuelCount, controllerCount) =>
-      Math.floor(256 * Math.pow(2, fuelCount) * (1 - 0.125 * controllerCount)),
-    powerFormula: 'P = floor(256 * 2^F * (1 - 0.125 * C)) FE/t',
+    powerCallback: (fuelCount, controllerCount) => 60 * Math.pow(2, fuelCount),
+    powerFormula: 'P = 60 * 2^F FE/t',
     heatCallback: (fuelCount, controllerCount) =>
-      Math.floor(32 * Math.pow(2, fuelCount) * (1 - 0.125 * controllerCount)),
-    heatFormula: 'dH/dt = floor(32 * 2^F * (1 - 0.125 * C)) mB/t',
+      fuelCount === 1 ? 1 : Math.pow(2, Math.floor(fuelCount * 1.5) + 1),
+    heatFormula: 'dH/dt = 2^(1 + floor(1.5 * F)) mB/t',
   });
   recipeBuilder.add({
     type: 1, // 工作模式
@@ -43,20 +42,20 @@ JEIAddedEvents.registerRecipes((event) => {
     powerCallback: () => 0,
     powerFormula: 'P = 0 FE/t',
     heatCallback: (fuelCount, controllerCount) =>
-      Math.floor(64 * Math.pow(2, fuelCount) * (1 - 0.125 * controllerCount)),
-    heatFormula: 'dH/dt = floor(64 * 2^F * (1 - 0.125 * C)) mB/t',
+      fuelCount === 1 ? 2 : Math.pow(2, Math.floor(fuelCount * 1.5) + 2),
+    heatFormula: 'dH/dt = 2^(2 + floor(1.5 * F)) mB/t',
   });
   recipeBuilder.add({
     type: 2, // 冷却模式
     subtype: 1, // 冷却液冷却
-    heatCallback: (cryogen) => 4000 * cryogen,
-    heatFormula: 'dH/dt = -4000 * N mB/t',
+    heatCallback: (cryogen) => 480 * cryogen,
+    heatFormula: 'ΔH = -480 * N mB',
   });
   recipeBuilder.add({
     type: 2, // 冷却模式
     subtype: 2, // 元件冷却
-    heatCallback: () => 64000,
-    heatFormula: 'dH/dt = -64000 mB/t',
+    heatCallback: () => 46080,
+    heatFormula: 'ΔH = -46080 mB',
   });
   recipeBuilder.add({
     type: 3, // 反应堆熔毁
@@ -78,7 +77,7 @@ JEIAddedEvents.registerCategories((event) => {
     });
 
     category.setWidth(210);
-    category.setHeight(180);
+    category.setHeight(152);
     category.background(guiHelper.createBlankDrawable(0, 0));
 
     const workInstance = new CovariantReactorWork(category);

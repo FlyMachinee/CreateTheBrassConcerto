@@ -25,13 +25,13 @@ function CovariantReactorCooldown(pCategory) {
   let lastTick = Timer.getGlobalTick();
 
   const recipeTime1 = 5;
-  const recipeTime2 = 20;
+  const recipeTime2 = 40;
   const recipeArrow1 = guiHelper.createAnimatedRecipeArrow(recipeTime1);
   const recipeArrow2 = guiHelper.createAnimatedRecipeArrow(recipeTime2);
 
   // 输入槽参数
   const recipeInputSlotX = category.getWidth() / 2 - (3 * 18 + 2 * 10 + recipeArrow1.getWidth() - 2) / 2;
-  const recipeInputSlotY = 70;
+  const recipeInputSlotY = 49;
 
   // 配方箭头参数
   const recipeArrowX = recipeInputSlotX + 17 + 18 + 10;
@@ -41,6 +41,9 @@ function CovariantReactorCooldown(pCategory) {
   const recipeOutputSlotX = recipeArrowX + recipeArrow1.getWidth() + 10 + 1;
   const recipeOutputSlotY = recipeInputSlotY;
 
+  const textX = 10;
+  const textY = 7;
+
   /**
    * @param {Internal.IRecipeLayoutBuilder} layoutBuilder
    * @param {Internal.CustomJSRecipe} recipe
@@ -48,7 +51,6 @@ function CovariantReactorCooldown(pCategory) {
    */
   this.handleLookup = (layoutBuilder, recipe, focuses) => {
     const data = recipe.recipeData;
-    const recipeTime = data.subtype === 1 ? recipeTime1 : recipeTime2;
 
     // 输入
     if (data.subtype === 1) {
@@ -67,7 +69,7 @@ function CovariantReactorCooldown(pCategory) {
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY)
         .setBackground(guiHelper.getSlotDrawable(), -1, -1)
-        .addItemStack(Item.of('kubejs:radiator'));
+        .addItemStack(Item.of('kubejs:radiator', 6));
     }
 
     // 协变热
@@ -78,14 +80,8 @@ function CovariantReactorCooldown(pCategory) {
       .addTooltipCallback((recipeSlotView, tooltip) => {
         const index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
         const cryogenCount = Math.floor((Timer.getGlobalTick() % 80) / 20) + 1;
-        const perTick = data.heatCallback(cryogenCount);
-        const totalHeat = recipeTime * perTick;
-        tooltip.set(
-          index,
-          Text.literal(`${addThousandSeparator(totalHeat)} mB @ ${addThousandSeparator(perTick)} mB/t`).color(
-            0xa8a8a8
-          )
-        );
+        const totalHeat = data.heatCallback(cryogenCount);
+        tooltip.set(index, Text.literal(`${addThousandSeparator(totalHeat)} mB`).color(0xa8a8a8));
       });
 
     // 流体输出
@@ -100,14 +96,7 @@ function CovariantReactorCooldown(pCategory) {
           const cryogenCount = Math.floor((Timer.getGlobalTick() % 80) / 20) + 1;
           tooltip.set(index, Text.literal(`${cryogenCount},000 mB`).color(0xa8a8a8));
         } else {
-          const perTick = 2400;
-          const total = recipeTime * perTick;
-          tooltip.set(
-            index,
-            Text.literal(`${addThousandSeparator(total)} mB @ ${addThousandSeparator(perTick)} mB/t`).color(
-              0xa8a8a8
-            )
-          );
+          tooltip.set(index, Text.literal('6,000 mB').color(0xa8a8a8));
         }
       });
   };
@@ -151,23 +140,24 @@ function CovariantReactorCooldown(pCategory) {
     const cryogenCount = Math.floor((nowTick % 80) / 20) + 1;
 
     // 额外信息计算
-    const heatPerTick = data.heatCallback(cryogenCount);
-    const totalHeat = recipeTime * heatPerTick;
-    const heatPercentage = parseFloat(((totalHeat / reactorHeatLimit) * 100).toFixed(2));
-    const cyclesHeatEmpty = parseFloat((reactorHeatLimit / totalHeat).toFixed(2));
-    const ticksHeatEmpty = Math.ceil(reactorHeatLimit / heatPerTick);
+    const totalHeat = data.heatCallback(cryogenCount);
 
     // 热量槽进度渲染
     const heatRenderX = category.getWidth() / 2 - animatedHeatBar.getWidth() / 2;
-    const heatRenderY = 166;
-    heatAcc = positiveMod(heatAcc - heatPerTick * (nowTick - lastTick), reactorHeatLimit);
+    const heatRenderY = 142;
+    if (nowTick - lastTick > recipeTime) {
+      if (heatAcc <= 0) {
+        heatAcc = reactorHeatLimit;
+      } else {
+        heatAcc = clamp(heatAcc - totalHeat, 0, reactorHeatLimit);
+      }
+      lastTick = nowTick;
+    }
     animatedHeatBar.draw(graphics, heatRenderX, heatRenderY, heatAcc / reactorHeatLimit);
 
-    lastTick = nowTick;
-
     // 配方信息文本
-    let wordX = 10;
-    let wordY = 5;
+    let wordX = textX;
+    let wordY = textY;
     const wordLineHeight = Client.font.lineHeight + 2;
     const putWord = (component) => {
       drawWordWrap(graphics, Client.font, component, wordX, wordY, 200, 0x000000, false);
@@ -177,30 +167,20 @@ function CovariantReactorCooldown(pCategory) {
     putWord(
       Text.translate(
         'kubejs.jeiaddition.covariant_reactor.heat_total',
-        addThousandSeparator(totalHeat),
-        heatPercentage.toString()
+        addThousandSeparator(data.heatCallback(1))
       )
-    );
-    putWord(
-      Text.translate('kubejs.jeiaddition.covariant_reactor.heat_cool', addThousandSeparator(heatPerTick))
     );
     putWord(Text.translate('kubejs.jeiaddition.machine_recipe_time', recipeTime.toString()));
     putWord(
       Text.translate(
-        'kubejs.jeiaddition.covariant_reactor.heat_limit',
-        addThousandSeparator(reactorHeatLimit)
-      )
-    );
-    putWord(
-      Text.translate(
-        'kubejs.jeiaddition.covariant_reactor.cooldown_time',
-        addThousandSeparator(ticksHeatEmpty),
-        addThousandSeparator(cyclesHeatEmpty)
+        'kubejs.jeiaddition.covariant_reactor.convert_ratio',
+        addThousandSeparator(data.heatCallback(1)),
+        data.subtype === 1 ? '1,000' : '6,000'
       )
     );
 
     matrixStack.pushPose();
-    matrixStack.translate(90, 137, 100);
+    matrixStack.translate(90, 115, 100);
 
     // 渲染轴旋转
     matrixStack.mulPose($Axis.XP.rotationDegrees(-15.5));
@@ -241,10 +221,10 @@ function CovariantReactorCooldown(pCategory) {
 
   // tooltip 显示
   const heatInfoTooltip = new MutableRectengularTooltip(
-    10,
-    5,
+    textX,
+    textY,
     120,
-    5 * (Client.font.lineHeight + 2)
+    2 * (Client.font.lineHeight + 2)
   ).setTooltipCallback((tooltip, recipe) => {
     const data = recipe.recipeData;
     tooltip.add(Text.literal(data.heatFormula));
@@ -253,7 +233,7 @@ function CovariantReactorCooldown(pCategory) {
     }
   });
 
-  const machineInfoTooltip = new MutableRectengularTooltip(30, 100, 150, 60).setTooltipCallback(
+  const machineInfoTooltip = new MutableRectengularTooltip(30, 70, 150, 60).setTooltipCallback(
     (tooltip, recipe) => {
       const data = recipe.recipeData;
       tooltip.add(Text.translate('kubejs.jeiaddition.covariant_reactor.machine1'));

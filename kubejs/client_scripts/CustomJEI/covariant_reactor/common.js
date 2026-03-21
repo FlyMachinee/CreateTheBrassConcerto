@@ -6,7 +6,7 @@ const __BLOCK_TYPE = {
   CONTROLLER: 2,
 };
 
-const reactorEnergyCapacity = 1440000;
+const reactorEnergyCapacity = 921600;
 const reactorHeatLimit = 1474560;
 
 /**
