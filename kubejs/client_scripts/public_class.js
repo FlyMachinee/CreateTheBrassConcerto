@@ -53,3 +53,4 @@ const $FluidGuiElement = Java.loadClass('fr.frinn.custommachinery.common.guielem
 const $List = Java.loadClass('java.util.List');
 const $IntSet = Java.loadClass('it.unimi.dsi.fastutil.ints.IntSet');
 const $ArrayList = Java.loadClass('java.util.ArrayList');
+const $Zombie = Java.loadClass('net.minecraft.world.entity.monster.Zombie');

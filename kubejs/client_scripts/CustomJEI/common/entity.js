@@ -18,6 +18,8 @@ function EntityRenderInfo(x, y, scale, yaw, pitch) {
 /**
  * @param {Internal.LivingEntity} livingEntity
  * @param {EntityRenderInfo} renderInfo
+ *
+ * @note 参考 https://github.com/way2muchnoise/JustEnoughResources/blob/master/Common/src/main/java/jeresources/compatibility/minecraft/RenderHooks.java
  */
 const applyEntityRenderHooks = (livingEntity, renderInfo) => {
   const modelViewStack = $RenderSystem.getModelViewStack();
@@ -26,11 +28,13 @@ const applyEntityRenderHooks = (livingEntity, renderInfo) => {
     modelViewStack.mulPose($Axis.YP.rotationDegrees(180));
     renderInfo.pitch = -renderInfo.pitch - 80;
   }
-  modelViewStack.mulPose(
-    $Axis.YN.rotationDegrees(
-      (renderInfo.yaw < 90 ? (renderInfo.yaw < -90 ? 90 : -renderInfo.yaw) : -90) / 2
-    )
-  );
+  if (!(livingEntity instanceof $Zombie)) {
+    modelViewStack.mulPose(
+      $Axis.YN.rotationDegrees(
+        (renderInfo.yaw < 90 ? (renderInfo.yaw < -90 ? 90 : -renderInfo.yaw) : -90) / 2
+      )
+    );
+  }
   return renderInfo;
 };
 
@@ -49,7 +53,7 @@ const drawEntity = (guiGraphics, x, y, scale, yaw, pitch, livingEntity) => {
   const modelViewStack = $RenderSystem.getModelViewStack();
   modelViewStack.pushPose();
   modelViewStack.mulPoseMatrix(guiGraphics.pose().last().pose());
-  modelViewStack.translate(x, y, 50);
+  modelViewStack.translate(x, y, 100);
   modelViewStack.scale(-scale, scale, scale);
   const mobPoseStack = new $PoseStack();
   mobPoseStack.mulPose($Axis.ZP.rotationDegrees(180));

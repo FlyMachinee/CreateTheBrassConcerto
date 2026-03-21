@@ -17,15 +17,14 @@ JEIAddedEvents.registerRecipes((event) => {
     matrixStack.pushPose();
 
     // 渲染像素偏移
-    matrixStack.translate(30.5, 53, 50);
+    matrixStack.translate(30.5, 53, 100);
 
     // 渲染轴旋转
     matrixStack.mulPose($Axis.XP.rotationDegrees(-15.5));
     matrixStack.mulPose($Axis.YP.rotationDegrees(22.5));
 
     $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
-      Block.getBlock('kubejs:saline_water')
-        .defaultBlockState()
+      Block.getBlock('kubejs:saline_water').defaultBlockState()
     )
       .scale(30)
       .atLocal(0, 1, 0)
@@ -38,12 +37,14 @@ JEIAddedEvents.registerRecipes((event) => {
   // 添加配方
   const dropData = [
     {
+      typeId: 0,
       entityId: 'minecraft:ender_dragon',
       entity: $EntityType.ENDER_DRAGON.create(Client.level),
       lootTable: [{ item: 'kubejs:phantom_fungus', quantity: [3, 9] }],
       extraTooltip: 'kubejs.jeiaddition.entity_drop.ender_dragon.tooltip',
     },
     {
+      typeId: 0,
       entityId: 'minecraft:slime',
       entity: $EntityType.SLIME.create(Client.level),
       lootTable: [
@@ -59,6 +60,7 @@ JEIAddedEvents.registerRecipes((event) => {
       extraRender: renderSalineWater,
     },
     {
+      typeId: 0,
       entityId: 'minecraft:magma_cube',
       entity: $EntityType.MAGMA_CUBE.create(Client.level),
       lootTable: [
@@ -74,6 +76,46 @@ JEIAddedEvents.registerRecipes((event) => {
       extraRender: renderSalineWater,
     },
   ];
+
+  // 从战利品表中提取配方
+
+  let root = $FMLPaths.GAMEDIR.get();
+  let dir = $FilePaths.get(root.toString(), 'kubejs/data/minecraft/loot_tables/entities');
+  try {
+    /** @type {Internal.Path[]} */
+    let paths = $Files.list(dir).toArray();
+
+    paths.forEach((path) => {
+      try {
+        if (!$Files.isRegularFile(path) || !path.toString().endsWith('.json')) {
+          return;
+        }
+        let jsonObj = JsonIO.readJson(path).getAsJsonObject();
+        let entityName = path.getFileName().toString().replace('.json', '');
+
+        if (!jsonObj.has('type') || jsonObj.get('type').getAsString() !== 'minecraft:entity') {
+          return;
+        }
+        if (!jsonObj.has('pools')) {
+          return;
+        }
+
+        let pools = jsonObj.getAsJsonArray('pools');
+        let entityId = 'minecraft:' + entityName;
+
+        dropData.push({
+          typeId: 1,
+          entityId: entityId,
+          entity: $EntityType[entityName.toUpperCase()].create(Client.level),
+          pools: pools,
+        });
+      } catch (e) {
+        console.error('读取战利品表文件出错: ' + e + '，位置：' + path.toString());
+      }
+    });
+  } catch (e) {
+    console.error('遍历战利品表目录出错: ' + e + '，位置：' + dir.toString());
+  }
 
   dropData.forEach((entry) => {
     recipeBuilder.add(entry);
@@ -101,61 +143,273 @@ JEIAddedEvents.registerCategories((event) => {
     category.setHeight(100);
     category.background(guiHelper.createBlankDrawable(0, 0));
 
+    /**
+     * @type { Map<number, { rolls: number|null, bonusRolls: number|null, conditions: Internal.JsonArray|null, functionsMap: Map<string, Internal.JsonArray|null> }>}
+     */
+    const entryMap = new Map();
+
     // 设置输入输出槽
     category.handleLookup((layoutBuilder, recipe, focuses) => {
       const data = recipe.recipeData;
-
-      // 额外流体隐形输入槽
-      if (data.extraFluid) {
-        layoutBuilder
-          .addInvisibleIngredients($RecipeIngredientRole.INPUT)
-          .addFluidStack(data.extraFluid, 1000);
-      }
+      const outputSlotX = 116;
+      const outputSlotY = 70;
 
       // 刷怪蛋隐形输入槽
       layoutBuilder
         .addInvisibleIngredients($RecipeIngredientRole.INPUT)
         .addItemStack(Item.of(data.entityId + '_spawn_egg'));
 
-      // 输出物品槽
-      for (let i = 0; i < data.lootTable.length; i++) {
-        let entry = data.lootTable[i];
-        layoutBuilder
-          .addSlot($RecipeIngredientRole.OUTPUT, 116 + i * 20, 70)
-          .setBackground(
-            entry.probability
-              ? $CreateRecipeCategory.getRenderedSlot(entry.probability)
-              : $CreateRecipeCategory.getRenderedSlot(),
-            -1,
-            -1
-          )
-          .addItemStack(
-            Item.of(entry.item, typeof entry.quantity === 'number' ? entry.quantity : entry.quantity[0])
-          )
-          .addTooltipCallback((slotView, builder) => {
-            let str = '';
-            if (typeof entry.quantity === 'number') {
-              str += entry.quantity;
-            } else {
-              str += `${entry.quantity[0]}-${entry.quantity[1]}`;
-            }
+      switch (data.typeId) {
+        case 0:
+          // 额外流体隐形输入槽
+          if (data.extraFluid) {
+            layoutBuilder
+              .addInvisibleIngredients($RecipeIngredientRole.INPUT)
+              .addFluidStack(data.extraFluid, 1000);
+          }
 
-            if (entry.probability < 1) {
-              str += ` (${entry.probability * 100}%)`;
-            }
+          // 输出物品槽
+          for (let i = 0; i < data.lootTable.length; i++) {
+            let entry = data.lootTable[i];
+            layoutBuilder
+              .addSlot($RecipeIngredientRole.OUTPUT, outputSlotX + i * 20, outputSlotY)
+              .setBackground(
+                entry.probability
+                  ? $CreateRecipeCategory.getRenderedSlot(entry.probability)
+                  : $CreateRecipeCategory.getRenderedSlot(),
+                -1,
+                -1
+              )
+              .addTooltipCallback((slotView, builder) => {
+                let str = '';
+                if (typeof entry.quantity === 'number') {
+                  str += entry.quantity;
+                } else {
+                  str += `${entry.quantity[0]}-${entry.quantity[1]}`;
+                }
 
-            builder.add(1, Text.literal(str));
+                if (entry.probability < 1) {
+                  str += ` (${entry.probability * 100}%)`;
+                }
 
-            if (data.extraTooltip) {
-              builder.add(2, Text.translate(data.extraTooltip));
-            }
-          });
+                builder.add(1, Text.literal(str));
+
+                if (data.extraTooltip) {
+                  builder.add(2, Text.translate(data.extraTooltip));
+                }
+              })
+              .addItemStack(
+                Item.of(entry.item, typeof entry.quantity === 'number' ? entry.quantity : entry.quantity[0])
+              );
+          }
+          break;
+        case 1:
+          {
+            /** @type {Internal.JsonArray} */
+            let pools = data.pools;
+            let index = 0;
+            // 遍历抽取池
+            pools.forEach((pool) => {
+              const obj = pool.getAsJsonObject();
+
+              if (obj.has('entries')) {
+                let ingredient = Ingredient.none;
+                let entries = obj.getAsJsonArray('entries');
+                if (entries.size() !== 0) {
+                  let functionsMap = new Map();
+
+                  entries.forEach((entry) => {
+                    let entryObj = entry.getAsJsonObject();
+                    if (entryObj.has('type') && entryObj.get('type').getAsString() === 'minecraft:item') {
+                      let itemId = (entryObj.get('name').getAsString() + '').toString();
+                      ingredient = ingredient.or(itemId);
+
+                      functionsMap.set(
+                        itemId.toString(),
+                        entryObj.has('functions') ? entryObj.getAsJsonArray('functions') : null
+                      );
+                    }
+                  });
+
+                  entryMap.set(index, {
+                    rolls: obj.has('rolls') ? obj.get('rolls').getAsDouble() : null,
+                    bonusRolls: obj.has('bonus_rolls') ? obj.get('bonus_rolls').getAsDouble() : null,
+                    conditions: obj.has('conditions') ? obj.getAsJsonArray('conditions') : null,
+                    functionsMap: functionsMap,
+                  });
+
+                  layoutBuilder
+                    .addOutputSlot(outputSlotX + index * 20, outputSlotY)
+                    .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
+                    .addTooltipCallback(generalTooltipCallback(index))
+                    .addIngredients(ingredient);
+
+                  ++index;
+                }
+              }
+            });
+          }
+          break;
       }
     });
 
     /**
+     * @param {number} index
+     */
+    const generalTooltipCallback = (index) => {
+      /**
+       * @param {Internal.IRecipeSlotView} slotView
+       * @param {Internal.List<net.minecraft.network.chat.Component>} builder
+       */
+      return (slotView, builder) => {
+        const optionalItemStack = slotView.getDisplayedItemStack();
+        if (optionalItemStack.isEmpty()) {
+          return;
+        }
+
+        let tooltipIndex = 1;
+        let printCount = false;
+        let affectedByLooting = false;
+
+        const itemStack = optionalItemStack.get();
+        const functionsMap = entryMap.get(index).functionsMap;
+        const itemId = (itemStack.getItem().getId() + '').toString();
+
+        if (functionsMap.has(itemId) && functionsMap.get(itemId) !== null) {
+          let functions = functionsMap.get(itemId);
+          functions.forEach((func) => {
+            let funcObj = func.getAsJsonObject();
+            if (funcObj.has('function')) {
+              let funcType = funcObj.get('function').getAsString();
+              switch (funcType) {
+                case 'minecraft:set_count':
+                  if (funcObj.has('count')) {
+                    let count = funcObj.get('count');
+                    printCount = true;
+                    if (count.isJsonPrimitive() && count.getAsJsonPrimitive().isNumber()) {
+                      builder.add(
+                        tooltipIndex++,
+                        Text.translate('kubejs.jeiaddition.entity_drop.set_count.tooltip', count.getAsInt())
+                      );
+                    } else if (
+                      count.isJsonObject() &&
+                      count.getAsJsonObject().has('min') &&
+                      count.getAsJsonObject().has('max')
+                    ) {
+                      let min = count.getAsJsonObject().get('min').getAsInt();
+                      let max = count.getAsJsonObject().get('max').getAsInt();
+                      builder.add(
+                        tooltipIndex++,
+                        Text.translate('kubejs.jeiaddition.entity_drop.set_count.tooltip', `${min}-${max}`)
+                      );
+                    }
+                  }
+                  break;
+                case 'minecraft:looting_enchant':
+                  affectedByLooting = true;
+                  if (funcObj.has('count')) {
+                    let count = funcObj.get('count');
+                    if (count.isJsonPrimitive() && count.getAsJsonPrimitive().isNumber()) {
+                      builder.add(
+                        tooltipIndex++,
+                        Text.translate(
+                          'kubejs.jeiaddition.entity_drop.looting_enchant.tooltip',
+                          count.getAsInt()
+                        )
+                      );
+                    } else if (
+                      count.isJsonObject() &&
+                      count.getAsJsonObject().has('min') &&
+                      count.getAsJsonObject().has('max')
+                    ) {
+                      let min = count.getAsJsonObject().get('min').getAsInt();
+                      let max = count.getAsJsonObject().get('max').getAsInt();
+                      builder.add(
+                        tooltipIndex++,
+                        Text.translate(
+                          'kubejs.jeiaddition.entity_drop.looting_enchant.tooltip',
+                          `${min}-${max}`
+                        )
+                      );
+                    }
+                  }
+                  break;
+                // 其他函数类型可以继续添加
+              }
+            }
+          });
+        }
+
+        if (!printCount) {
+          let countString = Text.literal('1');
+          let conditions = entryMap.get(index).conditions;
+          if (conditions !== null) {
+            conditions.forEach((condition) => {
+              let conditionObj = condition.getAsJsonObject();
+              if (conditionObj.has('condition')) {
+                switch (conditionObj.get('condition').getAsString()) {
+                  case 'minecraft:killed_by_player':
+                    builder.add(
+                      tooltipIndex++,
+                      Text.translate('kubejs.jeiaddition.entity_drop.killed_by_player.tooltip')
+                    );
+                    break;
+                  case 'minecraft:random_chance_with_looting':
+                    affectedByLooting = true;
+                    if (conditionObj.has('chance')) {
+                      let chance = conditionObj.get('chance').getAsDouble();
+                      if (
+                        conditionObj.has('condition') &&
+                        conditionObj.get('condition').getAsString() === 'minecraft:random_chance_with_looting'
+                      ) {
+                        let multiplier = conditionObj.get('looting_multiplier').getAsDouble();
+                        countString.append(
+                          Text.translate(
+                            'kubejs.jeiaddition.entity_drop.random_chance_with_looting.tooltip',
+                            (chance * 100).toString(),
+                            (multiplier * 100).toString()
+                          )
+                        );
+                      } else {
+                        countString.append(Text.literal(` (${chance * 100}%)`));
+                      }
+                    }
+                    break;
+                  // 其他条件类型可以继续添加
+                }
+              }
+            });
+          }
+          builder.add(tooltipIndex++, countString);
+        }
+
+        if (!affectedByLooting) {
+          builder.add(
+            tooltipIndex++,
+            Text.translate('kubejs.jeiaddition.entity_drop.not_affected_by_looting.tooltip')
+          );
+        }
+
+        const rolls = entryMap.get(index).rolls;
+        if (rolls !== null && rolls !== 1) {
+          builder.add(tooltipIndex++, Text.translate('kubejs.jeiaddition.entity_drop.rolls.tooltip', rolls));
+        }
+
+        const bonusRolls = entryMap.get(index).bonusRolls;
+        if (bonusRolls !== null && bonusRolls !== 0) {
+          builder.add(
+            tooltipIndex++,
+            Text.translate('kubejs.jeiaddition.entity_drop.bonus_rolls.tooltip', bonusRolls)
+          );
+        }
+      };
+    };
+
+    /**
      * @param {Internal.LivingEntity} livingEntity
      * @returns {number}
+     *
+     * @note 参考 https://github.com/way2muchnoise/JustEnoughResources/blob/master/Common/src/main/java/jeresources/jei/mob/MobWrapper.java#L94
      */
     const getScale = (livingEntity) => {
       const width = livingEntity.getBbWidth();
@@ -179,10 +433,12 @@ JEIAddedEvents.registerCategories((event) => {
     /**
      * @param {Internal.LivingEntity} livingEntity
      * @returns {number}
+     *
+     * @note 参考 https://github.com/way2muchnoise/JustEnoughResources/blob/master/Common/src/main/java/jeresources/jei/mob/MobWrapper.java#L113
      */
     const getOffsetY = (livingEntity) => {
-      const offsetY = 0;
-      if (livingEntity instanceof $EnderDragon) offsetY = 15;
+      let offsetY = 0;
+      if (livingEntity instanceof $Zombie) offsetY = -25;
       return offsetY;
     };
 
@@ -191,9 +447,6 @@ JEIAddedEvents.registerCategories((event) => {
 
       // 下箭头
       $AllGuiTextures.JEI_DOWN_ARROW.render(graphics, 110, 50);
-
-      const matrixStack = graphics.pose();
-      matrixStack.pushPose();
 
       const livingEntity = data.entity;
 
@@ -215,20 +468,22 @@ JEIAddedEvents.registerCategories((event) => {
         true
       );
 
-      // 额外信息
-      if (data.extraInfos) {
-        let extraY = 11 + Client.font.lineHeight;
-        data.extraInfos.forEach((info) => {
-          drawWordWrap(graphics, Client.font, Text.translate(info), 105, extraY, 999, 0xffffff, true);
-          extraY += Client.font.lineHeight + 1;
-        });
-      }
+      switch (data.typeId) {
+        case 0:
+          // 额外信息
+          if (data.extraInfos) {
+            let extraY = 11 + Client.font.lineHeight;
+            data.extraInfos.forEach((info) => {
+              drawWordWrap(graphics, Client.font, Text.translate(info), 105, extraY, 999, 0xffffff, true);
+              extraY += Client.font.lineHeight + 1;
+            });
+          }
 
-      matrixStack.popPose();
-
-      // 额外渲染
-      if (data.extraRender) {
-        data.extraRender(graphics);
+          // 额外渲染
+          if (data.extraRender) {
+            data.extraRender(graphics);
+          }
+          break;
       }
     });
   });
