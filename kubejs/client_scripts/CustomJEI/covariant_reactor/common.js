@@ -93,7 +93,18 @@ const drawAnimatedScene = (
 
   const renderPhantomBlock = (blockId, x, y, z) => {
     const alpha = 1 - Math.abs(y);
-    drawPhantomBlock(guiGraphics, Block.getBlock(blockId).defaultBlockState(), x, y, z, scale, alpha);
+    drawPhantomBlock(
+      guiGraphics,
+      Block.getBlock(blockId).defaultBlockState(),
+      x,
+      y,
+      z,
+      scale,
+      0,
+      0,
+      0,
+      alpha
+    );
   };
 
   const renderBlock = (blockId, x, y, z) => {
