@@ -42,7 +42,6 @@ const $MachineStatus = Java.loadClass('fr.frinn.custommachinery.api.machine.Mach
 const $Arrays = Java.loadClass('java.util.Arrays');
 const $Direction = Java.loadClass('net.minecraft.core.Direction');
 const $RandomSource = Java.loadClass('net.minecraft.util.RandomSource');
-const $Matrix4f = Java.loadClass('org.joml.Matrix4f');
 const $CustomIngredientTypes = Java.loadClass('fr.frinn.custommachinery.impl.integration.jei.CustomIngredientTypes');
 const $TextureSizeHelper = Java.loadClass('fr.frinn.custommachinery.impl.util.TextureSizeHelper');
 const $EnergyGuiElement = Java.loadClass('fr.frinn.custommachinery.common.guielement.EnergyGuiElement');

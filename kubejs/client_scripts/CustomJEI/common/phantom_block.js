@@ -14,7 +14,7 @@ const drawPhantomBlock = (guiGraphics, blockState, x, y, z, scale, alpha) => {
   matrixStack.pushPose();
   matrixStack.scale(scale, scale, scale);
   matrixStack.translate(x, y, z);
-  matrixStack.mulPoseMatrix(new $Matrix4f().scaling(1, -1, 1));
+  matrixStack.mulPoseMatrix(new Matrix4f().scaling(1, -1, 1));
   const bakedModel = Client.getBlockRenderer().getBlockModel(blockState);
   const bufferSource = Client.renderBuffers().bufferSource();
   const vertexConsumer = bufferSource.getBuffer($RenderType.translucent());

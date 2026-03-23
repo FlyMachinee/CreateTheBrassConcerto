@@ -14,7 +14,7 @@ const drawCustomMachineryMachine = (guiGraphics, machineId, blockId, x, y, z, sc
   matrixStack.pushPose();
   matrixStack.scale(scale, scale, scale);
   matrixStack.translate(x, y, z);
-  matrixStack.mulPoseMatrix(new $Matrix4f().scaling(1, -1, 1));
+  matrixStack.mulPoseMatrix(new Matrix4f().scaling(1, -1, 1));
   const machine = $CustomMachinery.MACHINES.get(new ResourceLocation(machineId));
   const appearance = machine.getAppearance($MachineStatus.IDLE);
   const blockModelLocation = appearance.getBlockModel();
