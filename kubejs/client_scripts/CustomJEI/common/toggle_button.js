@@ -102,6 +102,16 @@ ToggleButton.prototype.getState = function () {
 };
 
 /**
+ * 设置当前按钮状态
+ * @param {boolean} pressed true 则表示按钮将设为按下状态
+ * @return {ToggleButton}
+ */
+ToggleButton.prototype.setState = function (pressed) {
+  this.pressed = pressed;
+  return this;
+};
+
+/**
  * 渲染按钮
  * @param {Internal.CustomJSRecipe} recipe
  * @param {Internal.GuiGraphics} guiGraphics
