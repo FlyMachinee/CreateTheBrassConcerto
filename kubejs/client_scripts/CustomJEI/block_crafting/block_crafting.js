@@ -26,7 +26,7 @@ JEIAddedEvents.registerCategories((event) => {
       );
     });
 
-    category.setWidth(178);
+    category.setWidth(200);
     category.setHeight(150);
     category.background(guiHelper.createBlankDrawable(0, 0));
 
@@ -34,20 +34,20 @@ JEIAddedEvents.registerCategories((event) => {
     category.handleLookup((layoutBuilder, recipe, focuses) => {
       // 使用工具槽
       layoutBuilder
-        .addSlot($RecipeIngredientRole.CATALYST, 150, 15)
+        .addSlot($RecipeIngredientRole.CATALYST, 170, 15)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addItemStack(Item.of(recipe.recipeData.crafting_with));
 
       // 使用对象槽
       let obj = recipe.recipeData.mapping[recipe.recipeData.crafting_on];
       layoutBuilder
-        .addSlot($RecipeIngredientRole.INPUT, 150, 35)
+        .addSlot($RecipeIngredientRole.INPUT, 170, 35)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addItemStack(Item.of(typeof obj === 'string' ? obj : obj.id));
 
       // 输出物品槽
       layoutBuilder
-        .addSlot($RecipeIngredientRole.OUTPUT, 132, 100)
+        .addSlot($RecipeIngredientRole.OUTPUT, 152, 100)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addItemStack(Item.of(recipe.recipeData.output_item, recipe.recipeData.output_count));
 
@@ -62,7 +62,133 @@ JEIAddedEvents.registerCategories((event) => {
       }
     });
 
-    const toggleButton = new ToggleButton(10, 10, 30, 14, Text.translate('kubejs.jeiaddition.spin'));
+    // 额外绕渲染 y 轴旋转的角度
+    let extraSpin = 0;
+
+    // 旋转控制按钮
+    // 逆时针旋转
+    const leftSpinButton = new ToggleButton(30, 135, 14, 10, Text.literal('⟲'));
+    // 重置旋转
+    const resetSpinButton = new ClickButton(48, 135, 14, 10, Text.literal('R'));
+    // 顺时针旋转
+    const rightSpinButton = new ToggleButton(66, 135, 14, 10, Text.literal('⟳'));
+
+    resetSpinButton.onClick(() => {
+      extraSpin = 0;
+      leftSpinButton.setState(false);
+      rightSpinButton.setState(false);
+      return true;
+    });
+
+    leftSpinButton.onClick((recipe, currentPressed) => {
+      if (!currentPressed) {
+        // false -> true
+        rightSpinButton.setState(false);
+      }
+      return true;
+    });
+
+    rightSpinButton.onClick((recipe, currentPressed) => {
+      if (!currentPressed) {
+        // false -> true
+        leftSpinButton.setState(false);
+      }
+      return true;
+    });
+
+    // 当前高亮的层（数学 z 轴），null 则为无高亮层，即全部显示
+    let currentLayer = null;
+
+    // 高亮层控制按钮
+    // 高亮层上移
+    const layerUpButton = new ClickButton(110, 65, 10, 14, Text.literal('↑'));
+    // 重置高亮层
+    const resetLayerButton = new ClickButton(110, 83, 10, 14, Text.literal('A'));
+    // 高亮层下移
+    const layerDownButton = new ClickButton(110, 101, 10, 14, Text.literal('↓'));
+
+    resetLayerButton.onClick(() => {
+      currentLayer = null;
+      return true;
+    });
+
+    layerUpButton
+      .onClick(() => {
+        if (currentLayer === null) {
+          currentLayer = 0;
+        } else {
+          ++currentLayer;
+        }
+        return true;
+      })
+      .setEnableCallback((recipe) => {
+        return currentLayer === null || currentLayer < recipe.recipeData.pattern.length - 1;
+      });
+
+    layerDownButton
+      .onClick((recipe) => {
+        if (currentLayer === null) {
+          currentLayer = recipe.recipeData.pattern.length - 1;
+        } else {
+          --currentLayer;
+        }
+        return true;
+      })
+      .setEnableCallback(() => {
+        return currentLayer === null || currentLayer > 0;
+      });
+
+    /**
+     * 鼠标指向的方块坐标（渲染轴）
+     * @type {Vec3f}
+     */
+    let lookAt = null;
+
+    /**
+     * 上一个边界框（渲染轴），用于过渡动画
+     * @type {Internal.AABB}
+     */
+    let prevBounds = null;
+
+    /**
+     * 当前边界框（渲染轴），用于渲染和过渡动画
+     * @type {Internal.AABB}
+     */
+    let currentBounds = null;
+
+    let lastTick = $AnimationTickHolder.getTicks();
+
+    const getBlockInfo = (recipe, x, y, z) => {
+      let new_xyz = recipe.recipeData.re_index(x, y, z);
+      let char = recipe.recipeData.pattern[new_xyz[2]][new_xyz[1]][new_xyz[0]];
+      return recipe.recipeData.mapping[char];
+    };
+
+    /**
+     * 检查坐标位置（渲染轴）是否有方块
+     */
+    const hasBlockAt = (recipe, x, y, z) => {
+      // 渲染时进行了变换（数学轴至渲染轴），这里反推时就需要对应的逆变换（渲染轴至数学轴）
+      const reversedXYZ = reverseTransform(x, y, z);
+      reversedXYZ[2] -= 1;
+
+      // 长度检测
+      let newXYZ = recipe.recipeData.re_index(reversedXYZ[0], reversedXYZ[1], reversedXYZ[2]);
+      if (newXYZ[2] < 0 || newXYZ[2] >= recipe.recipeData.pattern.length) return false;
+      if (newXYZ[1] < 0 || newXYZ[1] >= recipe.recipeData.pattern[newXYZ[2]].length) return false;
+      if (newXYZ[0] < 0 || newXYZ[0] >= recipe.recipeData.pattern[newXYZ[2]][newXYZ[1]].length) return false;
+
+      // 虚影检测
+      if (currentLayer !== null && reversedXYZ[2] !== currentLayer) {
+        // 无法选中虚影方块
+        return false;
+      }
+
+      let block_info = getBlockInfo(recipe, reversedXYZ[0], reversedXYZ[1], reversedXYZ[2]);
+      return block_info !== undefined && block_info !== 'minecraft:air';
+    };
+
+    let lastRenderTime = $AnimationTickHolder.getRenderTime();
 
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       // 圆形大阴影
@@ -74,14 +200,14 @@ JEIAddedEvents.registerCategories((event) => {
       );
 
       // 下箭头
-      $AllGuiTextures.JEI_DOWN_ARROW.render(graphics, category.getWidth() / 2 + 37, 80);
+      $AllGuiTextures.JEI_DOWN_ARROW.render(graphics, 147, 80);
 
       // 使用文本
       drawRightAlignedString(
         graphics,
         Client.font,
         Text.translate('kubejs.jeiaddition.use'),
-        140,
+        160,
         15 + 8 - Client.font.lineHeight / 2,
         0xffffff,
         true
@@ -92,7 +218,7 @@ JEIAddedEvents.registerCategories((event) => {
         graphics,
         Client.font,
         Text.translate('kubejs.jeiaddition.right_click'),
-        140,
+        160,
         35 + 8 - Client.font.lineHeight / 2,
         0xffffff,
         true
@@ -103,25 +229,41 @@ JEIAddedEvents.registerCategories((event) => {
         graphics,
         Client.font,
         Text.translate('kubejs.jeiaddition.block_crafting.desc1'),
-        167,
+        187,
         60,
         0xffffff,
         true
       );
 
-      // 思索提示文本
-      drawCenteredString(
-        graphics,
-        Client.font,
-        Text.translate('kubejs.jeiaddition.block_crafting.desc2'),
-        category.getWidth() / 2,
-        135,
-        0xffffff,
-        true
-      );
-
       // 渲染旋转按钮
-      toggleButton.draw(recipe, graphics, mouseX, mouseY);
+      leftSpinButton.draw(recipe, graphics, mouseX, mouseY);
+      rightSpinButton.draw(recipe, graphics, mouseX, mouseY);
+      resetSpinButton.draw(recipe, graphics, mouseX, mouseY);
+
+      if (recipe.recipeData.pattern.length > 1) {
+        // 高度大于 1，渲染层数控制按钮
+        layerUpButton.draw(recipe, graphics, mouseX, mouseY);
+        layerDownButton.draw(recipe, graphics, mouseX, mouseY);
+        resetLayerButton.draw(recipe, graphics, mouseX, mouseY);
+      } else {
+        currentLayer = null;
+      }
+
+      if (currentLayer != null && currentLayer >= recipe.recipeData.pattern.length) {
+        // 选中层数超过最大层数，重置为无选中层，防溢出
+        currentLayer = null;
+      }
+
+      // 旋转控制
+      const renderTime = $AnimationTickHolder.getRenderTime();
+      if (leftSpinButton.getState()) {
+        // 逆时针旋转
+        extraSpin = positiveMod(extraSpin + (renderTime - lastRenderTime) * 2, 360);
+      } else if (rightSpinButton.getState()) {
+        // 顺时针旋转
+        extraSpin = positiveMod(extraSpin - (renderTime - lastRenderTime) * 2, 360);
+      }
+      lastRenderTime = renderTime;
 
       const scale = 20;
 
@@ -137,13 +279,10 @@ JEIAddedEvents.registerCategories((event) => {
       const y_axis_angle = 54.5;
 
       matrixStack.mulPose($Axis.XP.rotationDegrees(x_axis_angle));
-      matrixStack.translate(scale / 2, 0, scale / 2);
-      matrixStack.mulPose(
-        $Axis.YP.rotationDegrees(
-          y_axis_angle + (toggleButton.getState() ? ($AnimationTickHolder.getRenderTime() * 2) % 360 : 0)
-        )
-      );
-      matrixStack.translate(-scale / 2, 0, -scale / 2);
+      matrixStack.scale(scale, scale, scale);
+      matrixStack.translate(0.5, 0, 0.5);
+      matrixStack.mulPose($Axis.YP.rotationDegrees(y_axis_angle + extraSpin));
+      matrixStack.translate(-0.5, 0, -0.5);
 
       // 由于渲染轴不是默认值，需自定义光照
       const lighting = $CustomLightingSettings
@@ -153,7 +292,7 @@ JEIAddedEvents.registerCategories((event) => {
         .build();
 
       // 渲染单个方块函数
-      const renderBlock = (block_info, x, y, z) => {
+      const renderBlock = (block_info, x, y, z, isPhantom) => {
         const coordinates = transform(x, y, z);
 
         const mainRender = () => {
@@ -161,6 +300,10 @@ JEIAddedEvents.registerCategories((event) => {
           if (typeof block_info !== 'string' && 'skip' in block_info && block_info.skip) {
             return;
           }
+
+          matrixStack.pushPose();
+          matrixStack.translate(coordinates[0], coordinates[1], coordinates[2]);
+
           // 正常渲染
           let blockState;
 
@@ -179,14 +322,11 @@ JEIAddedEvents.registerCategories((event) => {
             }
           }
 
-          // 创建 builder，提供光照
-          let builder =
-            $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](blockState).lighting(
-              lighting
-            );
-
           // 进行方块旋转
           // 方块生成时，若不进行旋转，默认面向数学的 -x 轴
+          let xRot = 0;
+          let yRot = 0;
+          let zRot = 0;
           if (typeof block_info !== 'string') {
             if ('face_center' in block_info) {
               // 朝向中心旋转
@@ -196,47 +336,59 @@ JEIAddedEvents.registerCategories((event) => {
               if (dx !== 0) {
                 if (dx > 0 !== block_info.face_center) {
                   // 面向中心
-                  rotateXYZ(builder, 0, 0, 180);
+                  zRot = 180;
                 }
               } else if (dy !== 0) {
-                rotateXYZ(builder, 0, 0, dy > 0 === block_info.face_center ? 90 : -90);
+                zRot = dy > 0 === block_info.face_center ? 90 : -90;
               }
             } else if ('face' in block_info) {
               // 朝向旋转
               switch (block_info.face) {
                 case 'PX':
-                  rotateXYZ(builder, 0, 0, 180);
+                  zRot = 180;
                   break;
                 case 'NX':
                   // 默认朝向，无需旋转
                   break;
                 case 'PY':
-                  rotateXYZ(builder, 0, 0, -90);
+                  zRot = -90;
                   break;
                 case 'NY':
-                  rotateXYZ(builder, 0, 0, 90);
+                  zRot = 90;
                   break;
                 case 'PZ':
-                  rotateXYZ(builder, 0, 90, 0);
+                  yRot = 90;
                   break;
                 case 'NZ':
-                  rotateXYZ(builder, 0, -90, 0);
+                  yRot = -90;
                   break;
               }
             } else if ('rotate' in block_info) {
               // 自定义旋转
-              rotateXYZ(builder, block_info.rotate[0], block_info.rotate[1], block_info.rotate[2]);
+              xRot = block_info.rotate[0];
+              yRot = block_info.rotate[1];
+              zRot = block_info.rotate[2];
             } else {
               // 默认面向数学正 y 轴
-              rotateXYZ(builder, 0, 0, -90);
+              zRot = -90;
             }
           } else {
             // 默认面向数学正 y 轴
-            rotateXYZ(builder, 0, 0, -90);
+            zRot = -90;
           }
 
-          // 收尾
-          builder.atLocal(coordinates[0], coordinates[1], coordinates[2]).scale(scale).render(graphics);
+          if (isPhantom) {
+            drawPhantomBlock(graphics, blockState, 0, 0, 0, 1, yRot, -zRot, -xRot, 0.2);
+          } else {
+            // 创建 builder，提供光照
+            let builder =
+              $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](blockState).lighting(
+                lighting
+              );
+            rotateXYZ(builder, xRot, yRot, zRot);
+            builder.render(graphics);
+          }
+          matrixStack.popPose();
         };
 
         const extraRender = () => {
@@ -247,13 +399,15 @@ JEIAddedEvents.registerCategories((event) => {
               coordinates[0],
               coordinates[1],
               coordinates[2],
-              scale,
-              toggleButton.getState()
+              1,
+              leftSpinButton.getState() || rightSpinButton.getState()
             );
           }
         };
 
-        if (typeof block_info === 'string' || !('reverse' in block_info) || !block_info.reverse) {
+        if (isPhantom) {
+          mainRender();
+        } else if (typeof block_info === 'string' || !('reverse' in block_info) || !block_info.reverse) {
           // 先渲染方块本体
           mainRender();
           extraRender();
@@ -268,23 +422,156 @@ JEIAddedEvents.registerCategories((event) => {
       for (let z = 0; z < recipe.recipeData.pattern.length; ++z) {
         for (let y = 0; y < recipe.recipeData.pattern[z].length; ++y) {
           for (let x = 0; x < recipe.recipeData.pattern[z][y].length; ++x) {
-            let new_xyz = recipe.recipeData.re_index(x, y, z);
-
-            let char = recipe.recipeData.pattern[new_xyz[2]][new_xyz[1]][new_xyz[0]];
-            let block_info = recipe.recipeData.mapping[char];
-
+            let block_info = getBlockInfo(recipe, x, y, z);
             if (block_info !== undefined && block_info !== 'minecraft:air') {
-              renderBlock(block_info, x, y, z);
+              let isPhantom = currentLayer !== null && currentLayer !== z;
+              renderBlock(block_info, x, y, z, isPhantom);
             }
           }
         }
+      }
+
+      // 当前 tick 值（整数）
+      const tick = $AnimationTickHolder.getTicks();
+
+      // 获得当前鼠标指向的非空方块坐标位置
+      let lookAtResult = checkMouseFocus(
+        graphics,
+        mouseX,
+        mouseY,
+        category.getWidth(),
+        category.getHeight(),
+        (x, y, z) => hasBlockAt(recipe, x, y, z)
+      );
+
+      if (!lookAtResult) {
+        // 什么都没有，清空数据
+        lookAt = null;
+        prevBounds = null;
+        currentBounds = null;
+      } else {
+        // 指向了方块，需要渲染
+        let buffer = $SuperRenderTypeBuffer.getInstance();
+        lookAt = lookAtResult;
+
+        if (!currentBounds) {
+          // 之前什么都没有指向，现在有了，直接设置当前边界框，无需过渡动画
+          currentBounds = AABB.of(
+            lookAt.x(),
+            lookAt.y(),
+            lookAt.z(),
+            lookAt.x() + 1,
+            lookAt.y() + 1,
+            lookAt.z() + 1
+          );
+        } else {
+          // 之前指向了某个方块，进行过渡动画
+          // js 无法实现可让 JEI 调用的 tick 函数，只能在渲染函数中模拟
+          while (lastTick < tick) {
+            lastTick += 1;
+            prevBounds = currentBounds;
+            // 每 tick 前进当前剩余距离的一半，表现为距离指数衰减（1 - e^-t)
+            currentBounds = AABB.of(
+              lerp(currentBounds.minX, lookAt.x(), 0.5),
+              lerp(currentBounds.minY, lookAt.y(), 0.5),
+              lerp(currentBounds.minZ, lookAt.z(), 0.5),
+              lerp(currentBounds.maxX, lookAt.x() + 1, 0.5),
+              lerp(currentBounds.maxY, lookAt.y() + 1, 0.5),
+              lerp(currentBounds.maxZ, lookAt.z() + 1, 0.5)
+            );
+          }
+        }
+
+        if (prevBounds) {
+          // 如果有上一个边界框，说明正在进行过渡动画，渲染插值后的边界框
+          // PartialTicks 是当前 tick 内的进度，范围 [0, 1)
+          let pt = $AnimationTickHolder.getPartialTicks();
+          let interpolatedBounds = AABB.of(
+            lerp(prevBounds.minX, currentBounds.minX, pt),
+            lerp(prevBounds.minY, currentBounds.minY, pt),
+            lerp(prevBounds.minZ, currentBounds.minZ, pt),
+            lerp(prevBounds.maxX, currentBounds.maxX, pt),
+            lerp(prevBounds.maxY, currentBounds.maxY, pt),
+            lerp(prevBounds.maxZ, currentBounds.maxZ, pt)
+          );
+          let outline = new $AABBOutline(interpolatedBounds);
+          outline
+            .getParams()
+            .colored(0x6886c5)
+            .withFaceTexture($AllSpecialTextures.HIGHLIGHT_CHECKERED)
+            .lineWidth(1 / 16);
+          outline.render(matrixStack, buffer, Vec3d.ZERO, 0);
+          outline.getParams().clearTextures();
+        } else {
+          // 没有上一个边界框，说明之前没有指向任何方块，直接渲染当前边界框
+          let outline = new $AABBOutline(currentBounds);
+          outline
+            .getParams()
+            .colored(0x6886c5)
+            .withFaceTexture($AllSpecialTextures.HIGHLIGHT_CHECKERED)
+            .lineWidth(1 / 16);
+          outline.render(matrixStack, buffer, Vec3d.ZERO, 0);
+          outline.getParams().clearTextures();
+        }
+        buffer.draw();
       }
       matrixStack.popPose();
     });
 
     // 处理输入事件
     category.setInputHandler((recipe, mouseX, mouseY, input) => {
-      return toggleButton.handleInput(recipe, mouseX, mouseY, input);
+      if (recipe.recipeData.pattern.length <= 1) {
+        // 高度为 1 的结构无需层数控制，隐藏层数控制按钮，并且不处理它们的输入事件
+        return (
+          leftSpinButton.handleInput(recipe, mouseX, mouseY, input) ||
+          rightSpinButton.handleInput(recipe, mouseX, mouseY, input) ||
+          resetSpinButton.handleInput(recipe, mouseX, mouseY, input)
+        );
+      } else {
+        return (
+          leftSpinButton.handleInput(recipe, mouseX, mouseY, input) ||
+          rightSpinButton.handleInput(recipe, mouseX, mouseY, input) ||
+          resetSpinButton.handleInput(recipe, mouseX, mouseY, input) ||
+          layerUpButton.handleInput(recipe, mouseX, mouseY, input) ||
+          layerDownButton.handleInput(recipe, mouseX, mouseY, input) ||
+          resetLayerButton.handleInput(recipe, mouseX, mouseY, input)
+        );
+      }
+    });
+
+    let lastBlockId = null;
+    let lastTooltip = null;
+
+    category.setTooltipHandlerOverride((tooltipBuilder, recipe, recipeSlotsView, mouseX, mouseY) => {
+      if (lookAt) {
+        // 渲染时进行了变换，这里反推时就需要对应的逆变换
+        let reversedXYZ = reverseTransform(lookAt.x(), lookAt.y(), lookAt.z());
+        reversedXYZ[2] -= 1;
+
+        let blockInfo = getBlockInfo(recipe, reversedXYZ[0], reversedXYZ[1], reversedXYZ[2]);
+        let blockId;
+        if (typeof blockInfo === 'string') {
+          blockId = blockInfo;
+        } else {
+          blockId = blockInfo.id;
+        }
+
+        if (!blockId || blockId === 'minecraft:air') {
+          return;
+        }
+
+        if (blockId === lastBlockId) {
+          // 方块相同，复用上次的 tooltip 数据
+          if (lastTooltip) {
+            tooltipBuilder.addAll(lastTooltip);
+            return;
+          }
+        }
+
+        lastTooltip = $Screen.getTooltipFromItem(Client, Item.of(blockId));
+        lastBlockId = blockId;
+        tooltipBuilder.addAll(lastTooltip);
+      }
     });
   });
 });

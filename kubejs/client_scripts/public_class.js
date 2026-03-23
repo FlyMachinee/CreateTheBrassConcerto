@@ -53,3 +53,7 @@ const $List = Java.loadClass('java.util.List');
 const $IntSet = Java.loadClass('it.unimi.dsi.fastutil.ints.IntSet');
 const $ArrayList = Java.loadClass('java.util.ArrayList');
 const $Zombie = Java.loadClass('net.minecraft.world.entity.monster.Zombie');
+const $SuperRenderTypeBuffer = Java.loadClass('com.simibubi.create.foundation.render.SuperRenderTypeBuffer');
+const $Screen = Java.loadClass('net.minecraft.client.gui.screens.Screen');
+const $AABBOutline = Java.loadClass('com.simibubi.create.foundation.outliner.AABBOutline');
+const $AllSpecialTextures = Java.loadClass('com.simibubi.create.AllSpecialTextures');
