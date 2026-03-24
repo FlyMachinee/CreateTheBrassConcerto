@@ -102,6 +102,16 @@ ToggleButton.prototype.getState = function () {
 };
 
 /**
+ * 设置当前按钮状态
+ * @param {boolean} pressed true 则表示按钮将设为按下状态
+ * @return {ToggleButton}
+ */
+ToggleButton.prototype.setState = function (pressed) {
+  this.pressed = pressed;
+  return this;
+};
+
+/**
  * 渲染按钮
  * @param {Internal.CustomJSRecipe} recipe
  * @param {Internal.GuiGraphics} guiGraphics
@@ -158,10 +168,9 @@ ToggleButton.prototype.handleInput = function (recipe, mouseX, mouseY, input) {
   // 执行点击回调
   if (this.onClickCallback(recipe, this.pressed)) {
     if (this.playSound) {
-      $Minecraft
-        .getInstance()
-        .getSoundManager()
-        .play($SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25));
+      Client.getSoundManager().play(
+        $SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25)
+      );
     }
     this.pressed = !this.pressed;
     return true;

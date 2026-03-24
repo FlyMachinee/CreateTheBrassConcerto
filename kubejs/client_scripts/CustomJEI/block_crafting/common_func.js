@@ -58,6 +58,11 @@ const getBlockCraftingRecipe = (
 let transform = (x, y, z) => [1 - y, -z, x - 1];
 
 /**
+ * 将数学上的坐标轴转换为渲染坐标轴的逆变换
+ */
+let reverseTransform = (x, y, z) => [z + 1, 1 - x, -y];
+
+/**
  * 将在数学上的坐标系中的旋转应用到渲染坐标系中
  *
  * 顺序：z轴 -> y轴 -> x轴
@@ -219,7 +224,6 @@ const blockCraftingRecipes = [
             $AllPartialModels.MECHANICAL_PUMP_COG
           ).lighting(lighting);
 
-          // rotateXYZ(builder, 0, 90, 0);
           rotateXYZ(builder, 90, $AnimatedKinetics.getCurrentAngle() * 2, -90);
           builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
         },
@@ -269,7 +273,6 @@ const blockCraftingRecipes = [
             $AllPartialModels.MECHANICAL_PUMP_COG
           ).lighting(lighting);
 
-          // rotateXYZ(builder, 0, 90, 0);
           rotateXYZ(builder, 90, $AnimatedKinetics.getCurrentAngle() * 2, -90);
           builder.atLocal(x, y, z).scale(scale).render(guiGraphics);
         },

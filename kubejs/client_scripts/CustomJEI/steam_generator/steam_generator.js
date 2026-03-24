@@ -19,7 +19,16 @@ JEIAddedEvents.registerRecipes((event) => {
   const recipeBuilder = event.custom(typeId);
 
   // 添加配方
-  recipeBuilder.add({});
+  recipeBuilder.add({
+    typeId: 0,
+    power: (steam, water) => Math.floor((540 * steam) / (water + 1)),
+    formula: 'P = floor(540 * S / (W + 1)) FE/t',
+  });
+  recipeBuilder.add({
+    typeId: 1,
+    power: (steam, water) => 12000 * steam,
+    formula: 'P = 12000 * S FE/t',
+  });
 });
 
 JEIAddedEvents.registerCategories((event) => {
@@ -58,7 +67,7 @@ JEIAddedEvents.registerCategories((event) => {
     const recipeInputSlotY = 10;
     const recipeOutputSlotX = recipeInputSlotX + recipeIOGapWidth;
     const recipeOutputSlotY = recipeInputSlotY + 17 - 8;
-    const energySlotX = recipeOutputSlotX + 17;
+    const energySlotX = recipeOutputSlotX + 18;
     const energySlotY = recipeOutputSlotY + 8 - energySlotHeight / 2;
 
     // 配方箭头
@@ -83,6 +92,8 @@ JEIAddedEvents.registerCategories((event) => {
 
     // 设置输入输出槽
     category.handleLookup((layoutBuilder, recipe, focuses) => {
+      const data = recipe.recipeData;
+
       // 能量输出
       const energyElement = new $EnergyGuiElement(
         new $AbstractGuiElementProperties(0, 0, energySlotWidth, energySlotHeight, 0, null, null, null, null),
@@ -96,16 +107,16 @@ JEIAddedEvents.registerCategories((event) => {
         .addIngredient($CustomIngredientTypes.ENERGY, new $Energy(42, 1, true))
         .addTooltipCallback((recipeSlotView, tooltip) => {
           // 配方信息计算
-          const power = Math.floor((2048 * steamCount) / (waterCount + 1));
+          const power = data.power(steamCount, waterCount);
           const totalEnergy = recipeTime * power;
 
           tooltip.set(
             0,
             Text.translate(
               'custommachinery.jei.ingredient.energy.pertick.output',
-              totalEnergy.toString(),
+              addThousandSeparator(totalEnergy),
               'FE',
-              power.toString(),
+              addThousandSeparator(power),
               'FE'
             )
           );
@@ -115,36 +126,41 @@ JEIAddedEvents.registerCategories((event) => {
       // 润滑油
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX + 18, recipeInputSlotY + 17 - 8)
-        .setFluidRenderer(20, false, 16, 16)
+        .setFluidRenderer(25, false, 16, 16)
         .addFluidStack('kubejs:lube_oil', 25);
-      // 加压蒸汽
+      // 蒸汽
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY)
         .setFluidRenderer(1000, false, 16, 16)
-        .addFluidStack('kubejs:pressurized_steam', 1000)
+        .addFluidStack(data.typeId === 0 ? 'kubejs:pressurized_steam' : 'kubejs:superheated_steam', 1000)
         .addTooltipCallback((recipeSlotView, tooltip) => {
           let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
           tooltip.set(index, Text.literal(`${steamCount},000 mB`).color(0xa8a8a8));
         });
       // 水
-      layoutBuilder
-        .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY + 18)
-        .setFluidRenderer(1000, false, 16, 16)
-        .addFluidStack('minecraft:water', 1000)
-        .addTooltipCallback((recipeSlotView, tooltip) => {
-          let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
-          tooltip.set(index, Text.literal(waterCount > 0 ? `${waterCount},000 mB` : '0 mB').color(0xa8a8a8));
-        });
+      if (data.typeId === 0) {
+        layoutBuilder
+          .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY + 18)
+          .setSlotName('water_input')
+          .setFluidRenderer(1000, false, 16, 16)
+          .addFluidStack('minecraft:water', 1000)
+          .addTooltipCallback((recipeSlotView, tooltip) => {
+            let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
+            tooltip.set(index, Text.literal(`${waterCount},000 mB`).color(0xa8a8a8));
+          });
+      }
 
       // 流体输出
-      layoutBuilder
-        .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX, recipeOutputSlotY)
-        .setFluidRenderer(1000, false, 16, 16)
-        .addFluidStack('minecraft:water', 1000)
-        .addTooltipCallback((recipeSlotView, tooltip) => {
-          let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
-          tooltip.set(index, Text.literal(`${steamCount},000 mB`).color(0xa8a8a8));
-        });
+      if (data.typeId === 0) {
+        layoutBuilder
+          .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX, recipeOutputSlotY)
+          .setFluidRenderer(1000, false, 16, 16)
+          .addFluidStack('minecraft:water', 1000)
+          .addTooltipCallback((recipeSlotView, tooltip) => {
+            let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
+            tooltip.set(index, Text.literal(`${steamCount},000 mB`).color(0xa8a8a8));
+          });
+      }
     });
 
     const chooseBlock = () => {
@@ -214,40 +230,39 @@ JEIAddedEvents.registerCategories((event) => {
       })
       .setEnableCallback(() => steamCount + waterCount < 8 || steamCount > 1);
 
+    // Internal.RecipeExtrasBuilder[]
+    let recipeExtrasBuilders = [];
+
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       const matrixStack = graphics.pose();
+      const data = recipe.recipeData;
+
+      // 水输入槽显示覆盖
+      // 这是邪道方法，不要学
+      const extraBuilder = recipeExtrasBuilders[data.typeId];
+      if (!!extraBuilder) {
+        if (data.typeId === 0) {
+          if (waterCount === 0) {
+            extraBuilder.getRecipeSlots().findSlotByName('water_input').get().createDisplayOverrides();
+          } else {
+            extraBuilder.getRecipeSlots().findSlotByName('water_input').get().clearDisplayOverrides();
+          }
+        }
+      }
 
       // 按钮渲染
       steamMinusButton.draw(recipe, graphics, mouseX, mouseY);
       steamPlusButton.draw(recipe, graphics, mouseX, mouseY);
-      waterMinusButton.draw(recipe, graphics, mouseX, mouseY);
-      waterPlusButton.draw(recipe, graphics, mouseX, mouseY);
+      if (data.typeId === 0) {
+        waterMinusButton.draw(recipe, graphics, mouseX, mouseY);
+        waterPlusButton.draw(recipe, graphics, mouseX, mouseY);
+      }
 
       // 流体槽背景渲染
-      const fluidSlotTexture = $FluidGuiElement.BASE_TEXTURE;
-      const fluidSlotTextureWidth = $TextureSizeHelper.getTextureWidth(fluidSlotTexture);
-      const fluidSlotTextureHeight = $TextureSizeHelper.getTextureHeight(fluidSlotTexture);
-      const renderFluidSlot = (x, y) => {
-        matrixStack.pushPose();
-        matrixStack.translate(x - 1, y - 1, 0);
-        matrixStack.scale(1, 18 / fluidSlotTextureHeight, 1);
-        graphics.blit(
-          fluidSlotTexture,
-          0,
-          0,
-          0,
-          0,
-          fluidSlotTextureWidth,
-          fluidSlotTextureHeight,
-          fluidSlotTextureWidth,
-          fluidSlotTextureHeight
-        );
-        matrixStack.popPose();
-      };
-      renderFluidSlot(recipeInputSlotX, recipeInputSlotY);
-      renderFluidSlot(recipeInputSlotX, recipeInputSlotY + 18);
-      renderFluidSlot(recipeInputSlotX + 18, recipeInputSlotY + 17 - 8);
-      renderFluidSlot(recipeOutputSlotX, recipeOutputSlotY);
+      drawFluidSlotBackground(graphics, recipeInputSlotX, recipeInputSlotY);
+      drawFluidSlotBackground(graphics, recipeInputSlotX, recipeInputSlotY + 18);
+      drawFluidSlotBackground(graphics, recipeInputSlotX + 18, recipeInputSlotY + 17 - 8);
+      drawFluidSlotBackground(graphics, recipeOutputSlotX, recipeOutputSlotY);
 
       // 配方箭头渲染
       recipeArrow.draw(graphics, recipeArrowX, recipeArrowY);
@@ -265,18 +280,20 @@ JEIAddedEvents.registerCategories((event) => {
       );
 
       // 水方块数量文本渲染
-      drawCenteredString(
-        graphics,
-        Client.font,
-        Text.literal(`W=${waterCount}`),
-        widgetX + widgetWidth / 2,
-        widgetY + widgetHeight - buttonHeight / 2 - Client.font.lineHeight / 2,
-        0xffffff,
-        true
-      );
+      if (data.typeId === 0) {
+        drawCenteredString(
+          graphics,
+          Client.font,
+          Text.literal(`W=${waterCount}`),
+          widgetX + widgetWidth / 2,
+          widgetY + widgetHeight - buttonHeight / 2 - Client.font.lineHeight / 2,
+          0xffffff,
+          true
+        );
+      }
 
       // 配方信息计算
-      const power = Math.floor((2048 * steamCount) / (waterCount + 1));
+      const power = data.power(steamCount, waterCount);
       const totalEnergy = recipeTime * power;
 
       // 配方信息文本
@@ -285,12 +302,12 @@ JEIAddedEvents.registerCategories((event) => {
       };
       const recipeInfoLineHeight = Client.font.lineHeight + 2;
       putWord(
-        Text.translate('kubejs.jeiaddition.machine_total_energy', totalEnergy.toString()),
+        Text.translate('kubejs.jeiaddition.machine_total_energy', addThousandSeparator(totalEnergy)),
         recipeInfoX,
         recipeInfoY
       );
       putWord(
-        Text.translate('kubejs.jeiaddition.machine_power', power.toString()),
+        Text.translate('kubejs.jeiaddition.machine_power', addThousandSeparator(power)),
         recipeInfoX,
         recipeInfoY + recipeInfoLineHeight
       );
@@ -306,7 +323,6 @@ JEIAddedEvents.registerCategories((event) => {
         matrixStack.pushPose();
 
         // 渲染像素偏移
-        // matrixStack.translate(50, 130, 50);
         matrixStack.translate(x, y, 50);
 
         // 渲染轴旋转
@@ -352,27 +368,46 @@ JEIAddedEvents.registerCategories((event) => {
       };
 
       // 渲染左右两个场景
-      renderScene(category.getWidth() / 2 - 55 - 9, 125, 'kubejs:pressurized_steam', 'minecraft:water');
-      renderScene(category.getWidth() / 2 + 55 - 9, 125, 'minecraft:water', 'minecraft:air');
+      if (data.typeId === 0) {
+        renderScene(category.getWidth() / 2 - 55 - 9, 125, 'kubejs:pressurized_steam', 'minecraft:water');
+        renderScene(category.getWidth() / 2 + 55 - 9, 125, 'minecraft:water', 'minecraft:air');
+      } else {
+        renderScene(category.getWidth() / 2 - 55 - 9, 125, 'kubejs:superheated_steam', 'minecraft:air');
+        renderScene(category.getWidth() / 2 + 55 - 9, 125, 'minecraft:air', 'minecraft:air');
+      }
     });
 
     // 处理输入事件
     category.setInputHandler((recipe, mouseX, mouseY, input) => {
-      return (
-        steamMinusButton.handleInput(recipe, mouseX, mouseY, input) ||
-        steamPlusButton.handleInput(recipe, mouseX, mouseY, input) ||
-        waterMinusButton.handleInput(recipe, mouseX, mouseY, input) ||
-        waterPlusButton.handleInput(recipe, mouseX, mouseY, input)
-      );
+      if (recipe.recipeData.typeId === 0) {
+        return (
+          steamMinusButton.handleInput(recipe, mouseX, mouseY, input) ||
+          steamPlusButton.handleInput(recipe, mouseX, mouseY, input) ||
+          waterMinusButton.handleInput(recipe, mouseX, mouseY, input) ||
+          waterPlusButton.handleInput(recipe, mouseX, mouseY, input)
+        );
+      } else {
+        return (
+          steamMinusButton.handleInput(recipe, mouseX, mouseY, input) ||
+          steamPlusButton.handleInput(recipe, mouseX, mouseY, input)
+        );
+      }
     });
 
     // tooltip 显示
-    const steamCountTooltip = new StaticRectengularTooltip(
+    const steamCountTooltip = new MutableRectengularTooltip(
       widgetX + buttonWidth,
       widgetY,
       widgetWidth - 2 * buttonWidth,
       buttonHeight
-    ).addTranslate('kubejs.jeiaddition.steam_generator.steam_count');
+    ).setTooltipCallback((tooltip, recipe) => {
+      const data = recipe.recipeData;
+      if (data.typeId === 0) {
+        tooltip.add(Text.translate('kubejs.jeiaddition.steam_generator.steam_count', steamCount));
+      } else {
+        tooltip.add(Text.translate('kubejs.jeiaddition.steam_generator.steam_count1', steamCount));
+      }
+    });
 
     const waterCountTooltip = new StaticRectengularTooltip(
       widgetX + buttonWidth,
@@ -381,23 +416,33 @@ JEIAddedEvents.registerCategories((event) => {
       buttonHeight
     ).addTranslate('kubejs.jeiaddition.steam_generator.water_count');
 
-    const recipeInfoTooltip = new StaticRectengularTooltip(
+    const recipeInfoTooltip = new MutableRectengularTooltip(
       recipeInfoX,
       recipeInfoY,
       70,
       3 * (Client.font.lineHeight + 2)
-    )
-      .addTranslate('kubejs.jeiaddition.steam_generator.formula1')
-      .addTranslate('kubejs.jeiaddition.steam_generator.formula2');
+    ).setTooltipCallback((tooltip, recipe) => {
+      const data = recipe.recipeData;
+      tooltip.add(Text.literal(data.formula));
+      if (data.typeId === 0) {
+        tooltip.add(Text.translate('kubejs.jeiaddition.floor_explain'));
+      }
+    });
 
     const gasDimension = ['minecraft:overworld', 'dut:slimeria', 'dut:slimeria_orbit', 'minecraft:the_end'];
     const tooltipCallback = (tooltip, recipe) => {
-      for (let i = 1; i <= 5; ++i) {
-        tooltip.add(Text.translate(`kubejs.jeiaddition.steam_generator.machine${i}`));
+      if (recipe.recipeData.typeId === 0) {
+        for (let i = 1; i <= 5; ++i) {
+          tooltip.add(Text.translate(`kubejs.jeiaddition.steam_generator.machine${i}`));
+        }
+        gasDimension.forEach((dimension) => {
+          tooltip.add(Text.literal(`* ${dimension}`));
+        });
+      } else {
+        tooltip.add(Text.translate('kubejs.jeiaddition.steam_generator.machine1_1'));
+        tooltip.add(Text.translate('kubejs.jeiaddition.steam_generator.machine3'));
+        tooltip.add(Text.translate('kubejs.jeiaddition.steam_generator.machine4'));
       }
-      gasDimension.forEach((dimension) => {
-        tooltip.add(Text.literal(`* ${dimension}`));
-      });
     };
     const machineTooltip1 = new MutableRectengularTooltip(10, 90, 60, 60);
     const machineTooltip2 = new MutableRectengularTooltip(120, 90, 60, 60);
@@ -406,11 +451,17 @@ JEIAddedEvents.registerCategories((event) => {
 
     // 处理 tooltip 显示
     category.setTooltipHandlerOverride((tooltip, recipe, recipeSlotsView, mouseX, mouseY) => {
-      steamCountTooltip.handleTooltip(tooltip, mouseX, mouseY);
-      waterCountTooltip.handleTooltip(tooltip, mouseX, mouseY);
-      recipeInfoTooltip.handleTooltip(tooltip, mouseX, mouseY);
+      steamCountTooltip.handleTooltip(tooltip, recipe, mouseX, mouseY);
+      if (recipe.recipeData.typeId === 0) {
+        waterCountTooltip.handleTooltip(tooltip, mouseX, mouseY);
+      }
+      recipeInfoTooltip.handleTooltip(tooltip, recipe, mouseX, mouseY);
       machineTooltip1.handleTooltip(tooltip, recipe, mouseX, mouseY);
       machineTooltip2.handleTooltip(tooltip, recipe, mouseX, mouseY);
+    });
+
+    category.setCreateRecipeExtrasHandler((builder, recipe, focuses) => {
+      recipeExtrasBuilders[recipe.recipeData.typeId] = builder;
     });
   });
 });

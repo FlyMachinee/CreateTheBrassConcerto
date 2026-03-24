@@ -38,3 +38,34 @@ const chooseN = (list, n) => {
   }
   return { chosen: list.slice(0, n), remaining: list.slice(n) };
 };
+
+/**
+ * 线性插值
+ * @param {number} a 起始值
+ * @param {number} b 结束值
+ * @param {number} t 插值参数，范围[0, 1]，0对应a，1对应b
+ * @return {number} 插值结果
+ */
+const lerp = (a, b, t) => {
+  return a + (b - a) * t;
+};
+
+/**
+ * 将value限制在[min, max]范围内
+ * @param {number} value 待限制的值
+ * @param {number} min 最小值
+ * @param {number} max 最大值
+ * @return {number} 限制后的值，若value小于min则返回min，若value大于max则返回max，否则返回value
+ */
+const clamp = (value, min, max) => {
+  return Math.max(min, Math.min(max, value));
+};
+
+/**
+ * @param {number} a 实数
+ * @param {number} b 正数
+ * @returns {number} a mod b 的正数结果，即结果在[0, b)范围内
+ */
+const positiveMod = (a, b) => {
+  return ((a % b) + b) % b;
+}

@@ -14,13 +14,12 @@ const drawCustomMachineryMachine = (guiGraphics, machineId, blockId, x, y, z, sc
   matrixStack.pushPose();
   matrixStack.scale(scale, scale, scale);
   matrixStack.translate(x, y, z);
-  matrixStack.mulPoseMatrix(new $Matrix4f().scaling(1, -1, 1));
+  matrixStack.mulPoseMatrix(new Matrix4f().scaling(1, -1, 1));
   const machine = $CustomMachinery.MACHINES.get(new ResourceLocation(machineId));
   const appearance = machine.getAppearance($MachineStatus.IDLE);
   const blockModelLocation = appearance.getBlockModel();
-  const mc = $Minecraft.getInstance();
-  const bakedModel = mc.getModelManager().getModel(blockModelLocation.getLoc());
-  const bufferSource = mc.renderBuffers().bufferSource();
+  const bakedModel = Client.getModelManager().getModel(blockModelLocation.getLoc());
+  const bufferSource = Client.renderBuffers().bufferSource();
   const vertexConsumer = bufferSource.getBuffer($RenderType.solid());
   const blockState = Block.getBlock(blockId).defaultBlockState();
   $Arrays
@@ -54,5 +53,32 @@ const drawCustomMachineryMachine = (guiGraphics, machineId, blockId, x, y, z, sc
         false
       )
     );
+  matrixStack.popPose();
+};
+
+/**
+ * @param {Internal.GuiGraphics} guiGraphics
+ * @param {number} x
+ * @param {number} y
+ */
+const drawFluidSlotBackground = (guiGraphics, x, y) => {
+  const fluidSlotTexture = $FluidGuiElement.BASE_TEXTURE;
+  const fluidSlotTextureWidth = $TextureSizeHelper.getTextureWidth(fluidSlotTexture);
+  const fluidSlotTextureHeight = $TextureSizeHelper.getTextureHeight(fluidSlotTexture);
+  const matrixStack = guiGraphics.pose();
+  matrixStack.pushPose();
+  matrixStack.translate(x - 1, y - 1, 0);
+  matrixStack.scale(1, 18 / fluidSlotTextureHeight, 1);
+  guiGraphics.blit(
+    fluidSlotTexture,
+    0,
+    0,
+    0,
+    0,
+    fluidSlotTextureWidth,
+    fluidSlotTextureHeight,
+    fluidSlotTextureWidth,
+    fluidSlotTextureHeight
+  );
   matrixStack.popPose();
 };

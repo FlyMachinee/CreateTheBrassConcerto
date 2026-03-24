@@ -14,7 +14,6 @@ const $UIRenderHelper = Java.loadClass('com.simibubi.create.foundation.gui.UIRen
 const $Lighting = Java.loadClass('com.mojang.blaze3d.platform.Lighting');
 const $FluidRenderer = Java.loadClass('com.simibubi.create.foundation.fluid.FluidRenderer');
 const $LightTexture = Java.loadClass('net.minecraft.client.renderer.LightTexture');
-const $Minecraft = Java.loadClass('net.minecraft.client.Minecraft');
 const $CBCGuiTextures = Java.loadClass('rbasamoyai.createbigcannons.index.CBCGuiTextures');
 const $CustomLightingSettings = Java.loadClass('com.simibubi.create.foundation.gui.CustomLightingSettings');
 const $GuiGameElement = Java.loadClass('com.simibubi.create.foundation.gui.element.GuiGameElement');
@@ -43,7 +42,6 @@ const $MachineStatus = Java.loadClass('fr.frinn.custommachinery.api.machine.Mach
 const $Arrays = Java.loadClass('java.util.Arrays');
 const $Direction = Java.loadClass('net.minecraft.core.Direction');
 const $RandomSource = Java.loadClass('net.minecraft.util.RandomSource');
-const $Matrix4f = Java.loadClass('org.joml.Matrix4f');
 const $CustomIngredientTypes = Java.loadClass('fr.frinn.custommachinery.impl.integration.jei.CustomIngredientTypes');
 const $TextureSizeHelper = Java.loadClass('fr.frinn.custommachinery.impl.util.TextureSizeHelper');
 const $EnergyGuiElement = Java.loadClass('fr.frinn.custommachinery.common.guielement.EnergyGuiElement');
@@ -51,3 +49,21 @@ const $EnergyJEIIngredientRenderer = Java.loadClass('fr.frinn.custommachinery.cl
 const $Energy = Java.loadClass('fr.frinn.custommachinery.impl.integration.jei.Energy');
 const $AbstractGuiElementProperties = Java.loadClass('fr.frinn.custommachinery.impl.guielement.AbstractGuiElement$Properties');
 const $FluidGuiElement = Java.loadClass('fr.frinn.custommachinery.common.guielement.FluidGuiElement');
+const $List = Java.loadClass('java.util.List');
+const $IntSet = Java.loadClass('it.unimi.dsi.fastutil.ints.IntSet');
+const $ArrayList = Java.loadClass('java.util.ArrayList');
+const $Zombie = Java.loadClass('net.minecraft.world.entity.monster.Zombie');
+const getSuperRenderTypeBuffer = (() => {
+  let __$SuperRenderTypeBuffer = null;
+  /** @return {Internal.SuperRenderTypeBuffer} */
+  return () => {
+    if (__$SuperRenderTypeBuffer === null)
+      __$SuperRenderTypeBuffer = Java.loadClass(
+        'com.simibubi.create.foundation.render.SuperRenderTypeBuffer'
+      );
+    return __$SuperRenderTypeBuffer;
+  };
+})();
+const $Screen = Java.loadClass('net.minecraft.client.gui.screens.Screen');
+const $AABBOutline = Java.loadClass('com.simibubi.create.foundation.outliner.AABBOutline');
+const $AllSpecialTextures = Java.loadClass('com.simibubi.create.AllSpecialTextures');
