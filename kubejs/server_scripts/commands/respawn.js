@@ -11,8 +11,8 @@ NativeEvents.onEvent("highest", true, $LivingDeath, e => {
     if (player.y <= player.level.dimensionType().minY() - 64) {
         player.y = 0
     }
-    orCreateData(pdata, "teleport", {})
-    orCreateData(pdata.teleport, "lastpoint", {})
+    orCreateData(player.persistentData, "teleport", {})
+    orCreateData(player.persistentData.teleport, "lastpoint", {})
     let LastPoint = player.persistentData.teleport.lastpoint
     orCreateData(LastPoint, "pos", {})
     LastPoint.pos.x = player.x

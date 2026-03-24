@@ -20,6 +20,27 @@ let multiblock_display_list=[
     "kubejs:assembling_machine",
     "kubejs:construction_station"
   ]
+let multiblock_list=[
+			"kubejs:condenser",
+			"kubejs:hydropress",
+			"kubejs:blasting_compressor",
+			"kubejs:alloy_furnace",
+			"kubejs:huge_crusher",
+			"kubejs:electron_tube_computer",
+			"kubejs:assembling_machine",
+			"kubejs:infinity_fetching_pool",
+			"kubejs:carbon_electrode",
+			"kubejs:electrolytic_cell",
+			"kubejs:shaft_furnace",
+			"kubejs:construction_station",
+			"kubejs:satellite_station",
+			"kubejs:large_difference_engine",
+			'kubejs:airdrop_station',
+			"kubejs:launch_pad_controller",
+			'kubejs:trading_station',
+			'kubejs:electro_hydro_resonant_tower',
+			"kubejs:space_elevator_controller",
+  ]
 ServerEvents.tags('item', event => {
   event.add('dut_create:switchable_platform', ["kubejs:emergency_industrial_platform_lime", "kubejs:emergency_industrial_platform_lime_block", "kubejs:emergency_industrial_platform", "kubejs:emergency_industrial_platform_block", "kubejs:emergency_industrial_platform_dark", "kubejs:emergency_industrial_platform_dark_block"])
   event.remove("forge:plates/silver",["vintageimprovements:silver_sheet"])
@@ -35,6 +56,7 @@ ServerEvents.tags('item', event => {
   event.remove("railways:internal/nuggets/zinc_nuggets",["create:zinc_nugget"])
   event.add("railways:internal/nuggets/zinc_nuggets",["kubejs:tin_nugget"])
   //需要显示结构的多方块机器
+  event.add('dut_create:multiblock', multiblock_list)
   event.add('dut_create:multiblock_display', multiblock_display_list)
   //steel
   event.add("dut_create:make_steel", [

@@ -59,8 +59,7 @@
 			dependencies: ["2B6C2966D70E6A32"]
 			description: [
 				"{ftbquests.chapter_271FE7753AA4A820.quest_39E57EA5F66BA411.desc_01}"
-				""
-				"[ \"对当前的你而言，它还有一个重要的作用：你可以利用粘胶来对你的发电系统进行全新升级！参见\", { \"text\": \"协变热反应堆\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4858E334D26B9431\" } }, \"！\" ]"
+				"[\"\", {\"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_39E57EA5F66BA411.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4858E334D26B9431\"}, \"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_39E57EA5F66BA411.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_271FE7753AA4A820.quest_39E57EA5F66BA411.desc_02.rich_03\"}]"
 			]
 			id: "39E57EA5F66BA411"
 			tasks: [{
@@ -335,186 +334,18 @@
 			]
 			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_62A2FDFE9317F04D.desc_01}"]
 			id: "62A2FDFE9317F04D"
-			rewards: [
-				{
-					id: "2684EA15F3BCF893"
-					item: {
-						Count: 1
-						id: "minecraft:barrel"
-						tag: {
-							BlockEntityTag: {
-								Items: [
-									{
-										Count: 63b
-										Slot: 0b
-										id: "design_decor:ornate_grate"
-									}
-									{
-										Count: 4b
-										Slot: 1b
-										id: "create:andesite_funnel"
-									}
-									{
-										Count: 4b
-										Slot: 2b
-										id: "create:andesite_bars"
-									}
-									{
-										Count: 8b
-										Slot: 3b
-										id: "design_decor:brass_lamp"
-									}
-									{
-										Count: 12b
-										Slot: 4b
-										id: "design_decor:industrial_iron_boiler"
-									}
-									{
-										Count: 3b
-										Slot: 5b
-										id: "create:mechanical_pump"
-									}
-									{
-										Count: 3b
-										Slot: 6b
-										id: "design_decor:industrial_iron_boiler_large"
-									}
-									{
-										Count: 11b
-										Slot: 7b
-										id: "ad_astra:iron_plating_slab"
-									}
-									{
-										Count: 2b
-										Slot: 8b
-										id: "design_decor:brass_boiler_large"
-									}
-									{
-										Count: 6b
-										Slot: 9b
-										id: "create:cogwheel"
-									}
-									{
-										Count: 3b
-										Slot: 10b
-										id: "design_decor:brass_boiler"
-									}
-									{
-										Count: 4b
-										Slot: 11b
-										id: "create_things_and_misc:brass_brick_slab"
-									}
-									{
-										Count: 9b
-										Slot: 12b
-										id: "design_decor:diagonal_metal_support"
-									}
-									{
-										Count: 24b
-										Slot: 13b
-										id: "create:metal_girder"
-									}
-								]
-								id: "minecraft:barrel"
-							}
-							display: {
-								Lore: ["{\"text\":\"I\"}"]
-								Name: "{\"translate\":\"block.kubejs.shaft_furnace\",\"italic\":false}"
-							}
-						}
+			rewards: [{
+				id: "1AC3C30EA42FAC13"
+				item: {
+					Count: 1
+					id: "createandesiteabound:simple_schematic"
+					tag: {
+						File: "CBC/schematic.shaft_furnace.nbt"
+						Item: "kubejs:shaft_furnace"
 					}
-					type: "item"
 				}
-				{
-					id: "13CDAC3D6DA18BCD"
-					item: {
-						Count: 1
-						id: "minecraft:barrel"
-						tag: {
-							BlockEntityTag: {
-								Items: [
-									{
-										Count: 1b
-										Slot: 0b
-										id: "design_decor:stepped_lever"
-									}
-									{
-										Count: 1b
-										Slot: 1b
-										id: "railways:smokestack_oilburner"
-									}
-									{
-										Count: 4b
-										Slot: 2b
-										id: "create:brass_funnel"
-									}
-									{
-										Count: 54b
-										Slot: 3b
-										id: "create:fluid_tank"
-									}
-									{
-										Count: 12b
-										Slot: 4b
-										id: "create:copper_casing"
-									}
-									{
-										Count: 15b
-										Slot: 5b
-										id: "design_decor:iron_railing"
-									}
-									{
-										Count: 3b
-										Slot: 6b
-										id: "design_decor:copper_boiler"
-									}
-									{
-										Count: 15b
-										Slot: 7b
-										id: "ad_astra:iron_pillar"
-									}
-									{
-										Count: 22b
-										Slot: 8b
-										id: "create:industrial_iron_block"
-									}
-									{
-										Count: 9b
-										Slot: 9b
-										id: "create:fluid_pipe"
-									}
-									{
-										Count: 48b
-										Slot: 10b
-										id: "create:railway_casing"
-									}
-									{
-										Count: 9b
-										Slot: 11b
-										id: "createaddition:straw"
-									}
-									{
-										Count: 9b
-										Slot: 12b
-										id: "create:blaze_burner"
-									}
-									{
-										Count: 12b
-										Slot: 13b
-										id: "design_decor:diagonal_girder"
-									}
-								]
-								id: "minecraft:barrel"
-							}
-							display: {
-								Lore: ["{\"text\":\"II\"}"]
-								Name: "{\"translate\":\"block.kubejs.shaft_furnace\",\"italic\":false}"
-							}
-						}
-					}
-					type: "item"
-				}
-			]
+				type: "item"
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -651,11 +482,7 @@
 				"14F98D3E10900E28"
 				"6C682679F1590F9C"
 			]
-			description: [
-				"{ftbquests.chapter_271FE7753AA4A820.quest_6125666187BA0AA6.desc_01}"
-				""
-				"你首先在行星轨道发展铝工业，然后再前往月球开发戴斯也是完全可行的——不过这需要你对生产流程有更为熟悉的认识，所以我建议你先前往月球！"
-			]
+			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_6125666187BA0AA6.desc_01}"]
 			id: "6125666187BA0AA6"
 			rewards: [
 				{

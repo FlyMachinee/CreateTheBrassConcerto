@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { biomass: true, display: { Name: '{"translate":"kubejs.item.culture.biomass","italic":false}' }  } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { type:'biomass', display: { Name: '{"translate":"kubejs.item.culture.biomass","italic":false}' }  } }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -72,7 +72,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { milk: true, display: { Name: '{"translate":"kubejs.item.culture.milk","italic":false}' }  } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { type:'milk', display: { Name: '{"translate":"kubejs.item.culture.milk","italic":false}' }  } }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -106,7 +106,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": {dye: true, display: { Name: '{"translate":"kubejs.item.culture.dye","italic":false}' }  } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": {type:'dye', display: { Name: '{"translate":"kubejs.item.culture.dye","italic":false}' }  } }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -166,7 +166,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": {exp: true, display: { Name: '{"translate":"kubejs.item.culture.exp","italic":false}' }  } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": {type:'exp', display: { Name: '{"translate":"kubejs.item.culture.exp","italic":false}' }  } }],
     "sequence": [
       {
         "type": "create:filling",
@@ -200,7 +200,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { wood_chip: true, display: { Name: '{"translate":"kubejs.item.culture.wood_chip","italic":false}' } } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { type:'wood_chip', display: { Name: '{"translate":"kubejs.item.culture.wood_chip","italic":false}' } } }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -246,7 +246,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { mud: true, display: { Name: '{"translate":"kubejs.item.culture.mud","italic":false}' } } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { type:'mud', display: { Name: '{"translate":"kubejs.item.culture.mud","italic":false}' } } }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -292,7 +292,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { fuel: true, display: { Name: '{"translate":"kubejs.item.culture.fuel","italic":false}' } } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { type:'fuel', display: { Name: '{"translate":"kubejs.item.culture.fuel","italic":false}' } } }],
     "sequence": [
       {
         "type": "create:deploying",
@@ -328,7 +328,7 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:empty_culture_plate" },
     "loops": 1,
-    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { super_fuel: true, display: { Name: '{"translate":"kubejs.item.culture.super_fuel","italic":false}' } } }],
+    "results": [{ "item": "kubejs:pasteurized_culture_plate", "nbt": { type:'super_fuel', display: { Name: '{"translate":"kubejs.item.culture.super_fuel","italic":false}' } } }],
     "sequence": [
       {
         "type": "create:deploying",

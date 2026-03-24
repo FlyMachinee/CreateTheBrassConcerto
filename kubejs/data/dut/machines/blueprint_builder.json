@@ -30,9 +30,11 @@
         {
             "type": "custommachinery:item",
             "id": "filter",
-            "mode": "both",
-            "variant": "custommachinery:filter",
-            "locked": false
+            "mode": "item",
+            "filter": [
+                "#dut_create:multiblock"
+            ],
+            "whitelist": true
         },
         {
             "type": "custommachinery:item",
@@ -40,7 +42,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -50,7 +52,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -60,7 +62,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -70,7 +72,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -80,7 +82,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -90,7 +92,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -100,7 +102,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -110,7 +112,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -120,7 +122,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -130,7 +132,7 @@
             "mode": "input",
             "locked": false,
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk"
+                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
             "whitelist": false
         },
