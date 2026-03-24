@@ -323,11 +323,7 @@
 		}
 		{
 			dependencies: ["28247D1DB799E33A"]
-			description: [
-				"{ftbquests.chapter_4CE866617236E6D1.quest_020A1194BE6E5A9B.desc_01}"
-				""
-				"&a而且，我注意到你的身上似乎原来有一套看上去像是用于宇航的设备——世界无法理解它们，从而将它们当做了你的种族特性——这意味着你现在拥有了自由飞行、免疫坠落以及在外太空无需氧气的能力！当然，你还是会溺水的。&r"
-			]
+			description: ["{ftbquests.chapter_4CE866617236E6D1.quest_020A1194BE6E5A9B.desc_01}"]
 			hide_dependency_lines: true
 			icon: "minecraft:apple"
 			id: "020A1194BE6E5A9B"

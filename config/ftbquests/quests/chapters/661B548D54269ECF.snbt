@@ -32,10 +32,7 @@
 			dependencies: ["352EAAE5E2400827"]
 			description: [
 				"{ftbquests.chapter_661B548D54269ECF.quest_7593C5153F529F36.desc_01}"
-				""
-				"&e我推荐你在不需要大量应力的场景下使用电动马达来分割应力网络——这能够大幅降低大型应力网络更新所带来的世界负载&r"
-				""
-				"[ \"具体可查看\", { \"text\": \"世界不稳定度\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\" } } ]"
+				"[\"\", {\"translate\": \"ftbquests.chapter_661B548D54269ECF.quest_7593C5153F529F36.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"2C6CA28F6FF061B2\"}, \"translate\": \"ftbquests.chapter_661B548D54269ECF.quest_7593C5153F529F36.desc_02.rich_02\"}]"
 			]
 			id: "7593C5153F529F36"
 			tasks: [{
@@ -48,11 +45,7 @@
 		}
 		{
 			dependencies: ["15296D819BEF5B05"]
-			description: [
-				"&e这种发电机的制作工艺已经失传了，我这里也只剩下了一些存货。如果你在电解器之外仍有一些电力需求，你可以考虑使用它们&r"
-				""
-				"{ftbquests.chapter_661B548D54269ECF.quest_5B6636DB1CC71A84.desc_01}"
-			]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_5B6636DB1CC71A84.desc_01}"]
 			id: "5B6636DB1CC71A84"
 			tasks: [{
 				id: "57457038D3A04CC1"
@@ -106,7 +99,7 @@
 					type: "item"
 				}
 			]
-			title: "连接器"
+			title: "{ftbquests.chapter_661B548D54269ECF.quest_300DE2D659186A4B.title}"
 			x: 0.0d
 			y: 1.5d
 		}
@@ -139,11 +132,7 @@
 				"7A97A798409EF5C5"
 				"352EAAE5E2400827"
 			]
-			description: [
-				"电池插槽是这一时期你的主要产电方式——在之后，你可以使用&a蒸汽发电机&r"
-				""
-				"不过，你也许并不需要用它来生产电力"
-			]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_1A876B9FF13A849A.desc_01}"]
 			id: "1A876B9FF13A849A"
 			tasks: [{
 				id: "4EE104014C84BEC3"
@@ -155,30 +144,11 @@
 		}
 		{
 			description: [
-				"一次性电池可以用于发电，也可以用于为电解器充能——而电解器将是你电化学工业的开始！"
-				""
-				"&e一枚一次性电池可以提供180 FE/t 合计3600 FE的电力，或者为4个电解器充能&r"
-				""
-				"&a如果你对它的效率有疑问，可以考虑翻到下一页！&r"
-				""
+				"{ftbquests.chapter_661B548D54269ECF.quest_7A97A798409EF5C5.desc_01}"
 				"{@pagebreak}"
-				"我们考虑使用&a铜板、金板、饱和盐水以及锡板&r来制作一次性电池的配方"
-				""
-				"通过“工作元件”一节中机械手与注液器的工作速度可以知道：&e如果以注液器满效率为标准，一条一次性电池产线的产能是1 / 20 tick；而如果以机械手满效率为标准，一条一次性产线的产能是4 / 20 tick&r"
-				""
-				"&e一枚一次性电池可以以&r&a180 FE/t&r&e的速度提供总计&r&a3600 FE&r&e的电力，这意味者一枚一次性电池可以提供&r&a20 tick&r&e的电力&r"
-				""
-				"结合前面的数据，通过简单的计算可以得到产线对应的发电量分别是&a180 FE/t&r和&a720 FE/t&r"
-				""
-				"&a这个数据看上去是很有迷惑性的，会让你错以为它没有什么用。那么，现在请翻到下一页&r"
+				"{ftbquests.chapter_661B548D54269ECF.quest_7A97A798409EF5C5.desc_02}"
 				"{@pagebreak}"
-				"容易注意到，在化工生产的初期阶段，&a我们的电力需求几乎完全来自为电解器充能&r"
-				""
-				"如果使用特斯拉线圈为电解器充能，你需要提供360 FE/t，合计7200 FE的电力来为一个电解器充能——这在当前阶段是十分昂贵的！"
-				""
-				"&a但是，如果我们使用一次性电池来为电解器充能，情况就完全不一样了！&r"
-				""
-				"&e一枚一次性电池可以为4个电解器充能，结合前面的数据，我们的一次性电池产线相当于替代了1440 FE/t或是5760 FE/t的电力需求！&r"
+				"{ftbquests.chapter_661B548D54269ECF.quest_7A97A798409EF5C5.desc_03}"
 			]
 			id: "7A97A798409EF5C5"
 			rewards: [{
@@ -204,11 +174,7 @@
 		}
 		{
 			dependencies: ["27C11E3488319964"]
-			description: [
-				"{ftbquests.chapter_661B548D54269ECF.quest_75DBFD1BCAA75563.desc_01}"
-				""
-				"它的存量比蓄电池要更大！"
-			]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_75DBFD1BCAA75563.desc_01}"]
 			id: "75DBFD1BCAA75563"
 			rewards: [{
 				count: 6
@@ -245,13 +211,7 @@
 		}
 		{
 			dependencies: ["7A97A798409EF5C5"]
-			description: [
-				"&e现在你可以进行电化学配方了！生产氢气、氧气、氯气、氢氧化钠......这意味着你即将进入一个新的生产阶段！&r"
-				""
-				"使用特斯拉线圈为电解器充电需要消耗720 FE/t的电力，&a所以我非常建议你使用一次性电池来为电解器充能！&r"
-				""
-				"&e电解器在许多配方上有着50%的电解效率，所以我非常建议你在未来能够批量生产碳素电极之后，使用大型电解池来取代它！&r"
-			]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_322ACA6256D0AD6A.desc_01}"]
 			id: "322ACA6256D0AD6A"
 			rewards: [{
 				count: 11
@@ -310,11 +270,7 @@
 				"15296D819BEF5B05"
 				"5AB3602434AE8947"
 			]
-			description: [
-				"{ftbquests.chapter_661B548D54269ECF.quest_6E7FC2ED970229C2.desc_01}"
-				""
-				"&e除此以外，在你批量生产出黄绿色电路板后，你可以考虑开启炼钢工业，并朝着航天进发了！&r"
-			]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_6E7FC2ED970229C2.desc_01}"]
 			id: "6E7FC2ED970229C2"
 			rewards: [
 				{
@@ -602,11 +558,7 @@
 		}
 		{
 			dependencies: ["6E7FC2ED970229C2"]
-			description: [
-				"{ftbquests.chapter_661B548D54269ECF.quest_75E9C57B2B0D8949.desc_01}"
-				""
-				"&o&7(如果希望获得最原汁原味的自动化游戏体验，建议不要或尽量减少使用激光物流！)&r"
-			]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_75E9C57B2B0D8949.desc_01}"]
 			id: "75E9C57B2B0D8949"
 			rewards: [
 				{
@@ -641,64 +593,13 @@
 			description: ["{ftbquests.chapter_661B548D54269ECF.quest_486F536060C96F52.desc_01}"]
 			id: "486F536060C96F52"
 			rewards: [{
-				id: "62B29946BFABDE11"
+				id: "7759556BFF531A79"
 				item: {
 					Count: 1
-					id: "minecraft:barrel"
+					id: "createandesiteabound:simple_schematic"
 					tag: {
-						BlockEntityTag: {
-							Items: [
-								{
-									Count: 4b
-									Slot: 0b
-									id: "design_decor:industrial_iron_boiler"
-								}
-								{
-									Count: 4b
-									Slot: 1b
-									id: "design_decor:andesite_floodlight"
-								}
-								{
-									Count: 4b
-									Slot: 2b
-									id: "design_decor:diagonal_girder"
-								}
-								{
-									Count: 4b
-									Slot: 3b
-									id: "design_decor:diagonal_metal_support"
-								}
-								{
-									Count: 12b
-									Slot: 4b
-									id: "create:industrial_iron_block"
-								}
-								{
-									Count: 12b
-									Slot: 5b
-									id: "design_decor:brass_railing"
-								}
-								{
-									Count: 1b
-									Slot: 6b
-									id: "design_decor:brass_boiler_large"
-								}
-								{
-									Count: 9b
-									Slot: 7b
-									id: "createaddition:modular_accumulator"
-								}
-								{
-									Count: 4b
-									Slot: 8b
-									id: "create_connected:fluid_vessel"
-								}
-							]
-							id: "minecraft:barrel"
-						}
-						display: {
-							Name: "{\"translate\":\"block.kubejs.infinity_fetching_pool\",\"italic\":false}"
-						}
+						File: "CBC/schematic.infinity_fetching_pool.nbt"
+						Item: "kubejs:infinity_fetching_pool"
 					}
 				}
 				type: "item"
@@ -717,17 +618,7 @@
 				"246A98DC83209E94"
 				"6A89CAAFA8528425"
 			]
-			description: [
-				"&e蒸汽发电机是一种独特的机器！&r你需要在核心附近按照要求设计并建造对应的结构！"
-				""
-				"利用它，你可以将&d加压蒸汽&r转化为大量电能。&a在很长一段时间内，它将承担起99%的电力供应工作！&r&e无论是供应大型电解池、电动马达还是自动化组装机、自动化构筑站......蒸汽发电机都能完美地承担你的需求！&r"
-				""
-				""
-				"蒸汽发电机的效率将取决于你如何设计它附近的结构！你能否实现让它以最高效率运行呢？&e(在没有大气或者极度高温的地方，你不必担心水的问题——蒸汽会直接被消耗而不会产生水！)&r"
-				""
-				"&a在思索中查看具体设计要求！&r"
-				"&o温馨提示：如果莫名其妙停止工作，可以检查是否是区块掉加载导致的问题！&r"
-			]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_7CD2F5D780C10A8F.desc_01}"]
 			id: "7CD2F5D780C10A8F"
 			shape: "hexagon"
 			size: 1.25d
@@ -765,7 +656,7 @@
 				item: "creategbd:basic_laser_turret"
 				type: "item"
 			}]
-			title: "保卫工厂！"
+			title: "{ftbquests.chapter_661B548D54269ECF.quest_51AFDDAC977AC355.title}"
 			x: 3.0d
 			y: 4.5d
 		}
@@ -783,7 +674,7 @@
 		}
 		{
 			dependencies: ["322ACA6256D0AD6A"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_5D17F3EB50C80731.desc_01}"]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_5D17F3EB50C80731.desc_01}"]
 			id: "5D17F3EB50C80731"
 			tasks: [{
 				id: "5B7787E483AD6F07"
@@ -796,8 +687,8 @@
 		{
 			dependencies: ["5D17F3EB50C80731"]
 			description: [
-				"{ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_01}"
-				"[\"\", {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4AE919CE7C34AD83\"}, \"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_5AB3602434AE8947.desc_02.rich_03\"}]"
+				"{ftbquests.chapter_661B548D54269ECF.quest_5AB3602434AE8947.desc_01}"
+				"[\"\", {\"translate\": \"ftbquests.chapter_661B548D54269ECF.quest_5AB3602434AE8947.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"4AE919CE7C34AD83\"}, \"translate\": \"ftbquests.chapter_661B548D54269ECF.quest_5AB3602434AE8947.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_661B548D54269ECF.quest_5AB3602434AE8947.desc_02.rich_03\"}]"
 			]
 			id: "5AB3602434AE8947"
 			rewards: [{
@@ -816,7 +707,7 @@
 		}
 		{
 			dependencies: ["6E7FC2ED970229C2"]
-			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_268BF1B548306F39.desc_01}"]
+			description: ["{ftbquests.chapter_661B548D54269ECF.quest_268BF1B548306F39.desc_01}"]
 			id: "268BF1B548306F39"
 			rewards: [{
 				id: "6DE19F030BBC69E4"
@@ -829,7 +720,7 @@
 				match_nbt: false
 				type: "item"
 			}]
-			title: "{ftbquests.chapter_095625A2F7E1128A.quest_268BF1B548306F39.title}"
+			title: "{ftbquests.chapter_661B548D54269ECF.quest_268BF1B548306F39.title}"
 			x: -1.5d
 			y: 9.0d
 		}

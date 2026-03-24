@@ -78,6 +78,12 @@ ItemEvents.tooltip(event => {
       text.add(c, Text.of(`[${String(checkMatrix(item.nbt.matrix, Math.floor(i / 2), i % 2, 0)).padStart(4, ' ')},${String(checkMatrix(item.nbt.matrix, Math.floor(i / 2), i % 2, 1)).padStart(4, ' ')}]`).color(Color.GOLD))
     }
   })
+  event.addAdvanced('kubejs:pasteurized_culture_plate', (item, advanced, text) => {
+    if (item.nbt?.type == null) {
+      text.add(1, Text.translate("kubejs.tooltip.culture_plate_warning").color(Color.RED))
+      return
+    }
+  })
 })
 //插件
 ItemEvents.tooltip(event => {

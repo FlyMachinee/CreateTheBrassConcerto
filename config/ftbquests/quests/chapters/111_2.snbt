@@ -139,6 +139,7 @@
 			y: -2.0d
 		}
 		{
+			description: [""]
 			id: "262E7EAC18A82705"
 			tasks: [{
 				id: "4AE8F4F69292332E"

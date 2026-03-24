@@ -206,7 +206,9 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "vintageimprovements:centrifugation",
         "ingredients": [
-            { "item": "minecraft:gunpowder", "count": 9 }
+            { "item": "minecraft:gunpowder" },
+            { "item": "minecraft:gunpowder" },
+            { "item": "minecraft:gunpowder" }
         ],
         "results": [
             { "item": "minecraft:charcoal" },

@@ -26,5 +26,8 @@ StartupEvents.registry('item', event => {
     event.create('carrier_rocket').maxStackSize(1)
     event.create('space_elevator').maxDamage(12)
     event.create('airdrop').maxDamage(12)
+    event.create('alloy_meteorite').maxStackSize(16)
+    event.create('metal_meteorite').maxStackSize(16)
+    event.create('carbon_meteorite').maxStackSize(16)
     //event.create('')
 })

@@ -103,79 +103,13 @@
 					type: "item"
 				}
 				{
-					id: "3A2FAEB8BD832B92"
+					id: "4BF71F5091E93B96"
 					item: {
 						Count: 1
-						id: "minecraft:barrel"
+						id: "createandesiteabound:simple_schematic"
 						tag: {
-							BlockEntityTag: {
-								Items: [
-									{
-										Count: 4b
-										Slot: 0b
-										id: "create:railway_casing"
-									}
-									{
-										Count: 24b
-										Slot: 1b
-										id: "design_decor:ornate_grate"
-									}
-									{
-										Count: 8b
-										Slot: 2b
-										id: "create:controls"
-									}
-									{
-										Count: 8b
-										Slot: 3b
-										id: "create:item_drain"
-									}
-									{
-										Count: 4b
-										Slot: 4b
-										id: "create:nixie_tube"
-									}
-									{
-										Count: 2b
-										Slot: 5b
-										id: "create:stressometer"
-									}
-									{
-										Count: 4b
-										Slot: 6b
-										id: "createaddition:modular_accumulator"
-									}
-									{
-										Count: 1b
-										Slot: 7b
-										id: "design_decor:stepped_lever"
-									}
-									{
-										Count: 12b
-										Slot: 8b
-										id: "create:framed_glass_trapdoor"
-									}
-									{
-										Count: 2b
-										Slot: 9b
-										id: "create:smart_fluid_pipe"
-									}
-									{
-										Count: 12b
-										Slot: 10b
-										id: "create:display_board"
-									}
-									{
-										Count: 8b
-										Slot: 11b
-										id: "create:display_link"
-									}
-								]
-								id: "minecraft:barrel"
-							}
-							display: {
-								Name: "{\"translate\":\"block.kubejs.electron_tube_computer\",\"italic\":false}"
-							}
+							File: "CBC/schematic.electron_tube_computer.nbt"
+							Item: "kubejs:electron_tube_computer"
 						}
 					}
 					type: "item"
@@ -249,124 +183,13 @@
 			description: ["{ftbquests.chapter_01F53C3A7B25BB39.quest_39718D64C1C26DF9.desc_01}"]
 			id: "39718D64C1C26DF9"
 			rewards: [{
-				id: "7B232E377C6EF3E8"
+				id: "41F73A54071A06C3"
 				item: {
 					Count: 1
-					id: "minecraft:barrel"
+					id: "createandesiteabound:simple_schematic"
 					tag: {
-						BlockEntityTag: {
-							Items: [
-								{
-									Count: 1b
-									Slot: 0b
-									id: "vintageimprovements:laser"
-								}
-								{
-									Count: 1b
-									Slot: 1b
-									id: "createaddition:tesla_coil"
-								}
-								{
-									Count: 1b
-									Slot: 2b
-									id: "create:spout"
-								}
-								{
-									Count: 5b
-									Slot: 3b
-									id: "create:depot"
-								}
-								{
-									Count: 18b
-									Slot: 4b
-									id: "minecraft:smooth_stone_slab"
-								}
-								{
-									Count: 4b
-									Slot: 5b
-									id: "create:nixie_tube"
-								}
-								{
-									Count: 1b
-									Slot: 6b
-									id: "create:millstone"
-								}
-								{
-									Count: 1b
-									Slot: 7b
-									id: "create:deployer"
-								}
-								{
-									Count: 6b
-									Slot: 8b
-									id: "create:secondary_linear_chassis"
-								}
-								{
-									Count: 2b
-									Slot: 10b
-									id: "create:mechanical_pump"
-								}
-								{
-									Count: 2b
-									Slot: 11b
-									id: "create:fluid_pipe"
-								}
-								{
-									Count: 2b
-									Slot: 12b
-									id: "design_decor:industrial_gear_large"
-								}
-								{
-									Count: 1b
-									Slot: 13b
-									id: "create:mechanical_mixer"
-								}
-								{
-									Count: 1b
-									Slot: 14b
-									id: "create:mechanical_saw"
-								}
-								{
-									Count: 1b
-									Slot: 15b
-									id: "create:mechanical_press"
-								}
-								{
-									Count: 1b
-									Slot: 16b
-									id: "createaddition:rolling_mill"
-								}
-								{
-									Count: 1b
-									Slot: 17b
-									id: "create:basin"
-								}
-								{
-									Count: 1b
-									Slot: 18b
-									id: "vintageimprovements:spring_coiling_machine"
-								}
-								{
-									Count: 26b
-									Slot: 19b
-									id: "create:framed_glass_trapdoor"
-								}
-								{
-									Count: 12b
-									Slot: 20b
-									id: "create:copper_casing"
-								}
-								{
-									Count: 2b
-									Slot: 21b
-									id: "create:mechanical_arm"
-								}
-							]
-							id: "minecraft:barrel"
-						}
-						display: {
-							Name: "{\"translate\":\"block.kubejs.assembling_machine\",\"italic\":false}"
-						}
+						File: "CBC/schematic.assembling_machine.nbt"
+						Item: "kubejs:assembling_machine"
 					}
 				}
 				type: "item"

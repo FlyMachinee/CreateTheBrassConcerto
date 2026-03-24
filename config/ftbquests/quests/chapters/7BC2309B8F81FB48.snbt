@@ -3271,94 +3271,13 @@
 					type: "item"
 				}
 				{
-					id: "3477FC8E55FDFFE4"
+					id: "049F9FDD984825C9"
 					item: {
 						Count: 1
-						id: "minecraft:barrel"
+						id: "createandesiteabound:simple_schematic"
 						tag: {
-							BlockEntityTag: {
-								Items: [
-									{
-										Count: 16b
-										Slot: 0b
-										id: "create:industrial_iron_block"
-									}
-									{
-										Count: 9b
-										Slot: 1b
-										id: "design_decor:ornate_grate"
-									}
-									{
-										Count: 4b
-										Slot: 2b
-										id: "design_decor:industrial_iron_boiler_large"
-									}
-									{
-										Count: 4b
-										Slot: 3b
-										id: "design_decor:industrial_iron_boiler"
-									}
-									{
-										Count: 1b
-										Slot: 4b
-										id: "railways:smokestack_oilburner"
-									}
-									{
-										Count: 15b
-										Slot: 5b
-										id: "create:metal_girder"
-									}
-									{
-										Count: 6b
-										Slot: 6b
-										id: "design_decor:diagonal_metal_support"
-									}
-									{
-										Count: 4b
-										Slot: 7b
-										id: "design_decor:metal_support"
-									}
-									{
-										Count: 9b
-										Slot: 8b
-										id: "create:blaze_burner"
-									}
-									{
-										Count: 4b
-										Slot: 9b
-										id: "create:andesite_funnel"
-									}
-									{
-										Count: 8b
-										Slot: 10b
-										id: "design_decor:iron_railing"
-									}
-									{
-										Count: 8b
-										Slot: 11b
-										id: "design_decor:diagonal_girder"
-									}
-									{
-										Count: 4b
-										Slot: 12b
-										id: "design_decor:andesite_floodlight"
-									}
-									{
-										Count: 1b
-										Slot: 13b
-										id: "design_decor:stepped_lever"
-									}
-									{
-										Count: 9b
-										Slot: 14b
-										id: "createaddition:straw"
-									}
-								]
-								id: "minecraft:barrel"
-							}
-							display: {
-								Name: "{\"translate\":\"block.kubejs.alloy_furnace\",\"italic\":false}"
-							}
+							File: "CBC/schematic.alloy_furnace.nbt"
+							Item: "kubejs:alloy_furnace"
 						}
 					}
 					type: "item"
@@ -3384,59 +3303,13 @@
 			]
 			id: "038403EDBDA076AB"
 			rewards: [{
-				id: "4F09D6832CBFEC8A"
+				id: "301A246746E386CC"
 				item: {
 					Count: 1
-					id: "minecraft:barrel"
+					id: "createandesiteabound:simple_schematic"
 					tag: {
-						BlockEntityTag: {
-							Items: [
-								{
-									Count: 18b
-									Slot: 0b
-									id: "create:industrial_iron_block"
-								}
-								{
-									Count: 2b
-									Slot: 1b
-									id: "design_decor:brass_boiler_large"
-								}
-								{
-									Count: 1b
-									Slot: 2b
-									id: "design_decor:cast_iron_boiler_large"
-								}
-								{
-									Count: 26b
-									Slot: 3b
-									id: "create:metal_girder"
-								}
-								{
-									Count: 5b
-									Slot: 4b
-									id: "design_decor:industrial_iron_boiler"
-								}
-								{
-									Count: 2b
-									Slot: 5b
-									id: "design_decor:green_container"
-								}
-								{
-									Count: 8b
-									Slot: 6b
-									id: "design_decor:diagonal_metal_support"
-								}
-								{
-									Count: 4b
-									Slot: 7b
-									id: "create:shaft"
-								}
-							]
-							id: "minecraft:barrel"
-						}
-						display: {
-							Name: "{\"translate\":\"block.kubejs.blasting_compressor\",\"italic\":false}"
-						}
+						File: "CBC/schematic.blasting_compressor.nbt"
+						Item: "kubejs:blasting_compressor"
 					}
 				}
 				type: "item"
@@ -3464,114 +3337,13 @@
 			]
 			id: "108DAB6E6BFEB87F"
 			rewards: [{
-				id: "54AB9AF73F4F07BF"
+				id: "21DEBF19BF9C92D8"
 				item: {
 					Count: 1
-					id: "minecraft:barrel"
+					id: "createandesiteabound:simple_schematic"
 					tag: {
-						BlockEntityTag: {
-							Items: [
-								{
-									Count: 24b
-									Slot: 0b
-									id: "design_decor:industrial_plating_block"
-								}
-								{
-									Count: 4b
-									Slot: 1b
-									id: "design_decor:andesite_floodlight"
-								}
-								{
-									Count: 1b
-									Slot: 2b
-									id: "design_decor:green_container"
-								}
-								{
-									Count: 14b
-									Slot: 3b
-									id: "minecraft:smooth_stone_slab"
-								}
-								{
-									Count: 2b
-									Slot: 4b
-									id: "design_decor:industrial_gear"
-								}
-								{
-									Count: 2b
-									Slot: 5b
-									id: "create:gearbox"
-								}
-								{
-									Count: 3b
-									Slot: 6b
-									id: "create:encased_chain_drive"
-								}
-								{
-									Count: 4b
-									Slot: 7b
-									id: "create:fluid_pipe"
-								}
-								{
-									Count: 6b
-									Slot: 8b
-									id: "design_decor:diagonal_metal_support"
-								}
-								{
-									Count: 5b
-									Slot: 9b
-									id: "design_decor:industrial_gear_large"
-								}
-								{
-									Count: 5b
-									Slot: 10b
-									id: "create:crushing_wheel"
-								}
-								{
-									Count: 2b
-									Slot: 11b
-									id: "create:andesite_casing"
-								}
-								{
-									Count: 2b
-									Slot: 12b
-									id: "design_decor:industrial_iron_boiler"
-								}
-								{
-									Count: 1b
-									Slot: 13b
-									id: "design_decor:red_container"
-								}
-								{
-									Count: 2b
-									Slot: 14b
-									id: "create:display_board"
-								}
-								{
-									Count: 6b
-									Slot: 15b
-									id: "design_decor:industrial_iron_boiler_large"
-								}
-								{
-									Count: 14b
-									Slot: 16b
-									id: "create_things_and_misc:brass_bricks"
-								}
-								{
-									Count: 4b
-									Slot: 17b
-									id: "create_things_and_misc:brass_brick_stairs"
-								}
-								{
-									Count: 40b
-									Slot: 18b
-									id: "ad_astra:iron_pillar"
-								}
-							]
-							id: "minecraft:barrel"
-						}
-						display: {
-							Name: "{\"translate\":\"block.kubejs.huge_crusher\",\"italic\":false}"
-						}
+						File: "CBC/schematic.huge_crusher.nbt"
+						Item: "kubejs:huge_crusher"
 					}
 				}
 				type: "item"
@@ -3819,104 +3591,13 @@
 			]
 			id: "20E4FDEECA16AAB1"
 			rewards: [{
-				id: "17F0F85E34E9E27B"
+				id: "5BB683ED6B04FBB6"
 				item: {
 					Count: 1
-					id: "minecraft:barrel"
+					id: "createandesiteabound:simple_schematic"
 					tag: {
-						BlockEntityTag: {
-							Items: [
-								{
-									Count: 14b
-									Slot: 0b
-									id: "create:copper_casing"
-								}
-								{
-									Count: 9b
-									Slot: 1b
-									id: "create:railway_casing"
-								}
-								{
-									Count: 4b
-									Slot: 2b
-									id: "design_decor:industrial_plating_block"
-								}
-								{
-									Count: 1b
-									Slot: 3b
-									id: "create:gearshift"
-								}
-								{
-									Count: 1b
-									Slot: 4b
-									id: "create:gearbox"
-								}
-								{
-									Count: 10b
-									Slot: 5b
-									id: "design_decor:industrial_iron_boiler"
-								}
-								{
-									Count: 2b
-									Slot: 6b
-									id: "design_decor:brass_boiler"
-								}
-								{
-									Count: 2b
-									Slot: 7b
-									id: "design_decor:industrial_gear_large"
-								}
-								{
-									Count: 2b
-									Slot: 8b
-									id: "create:mechanical_pump"
-								}
-								{
-									Count: 1b
-									Slot: 9b
-									id: "create:gantry_carriage"
-								}
-								{
-									Count: 3b
-									Slot: 10b
-									id: "design_decor:diagonal_metal_support"
-								}
-								{
-									Count: 6b
-									Slot: 11b
-									id: "create:metal_girder"
-								}
-								{
-									Count: 1b
-									Slot: 12b
-									id: "create:brass_funnel"
-								}
-								{
-									Count: 10b
-									Slot: 13b
-									id: "design_decor:diagonal_girder"
-								}
-								{
-									Count: 4b
-									Slot: 14b
-									id: "create:gantry_shaft"
-								}
-								{
-									Count: 1b
-									Slot: 15b
-									id: "design_decor:andesite_floodlight"
-								}
-								{
-									Count: 1b
-									Slot: 16b
-									id: "design_decor:brass_boiler_large"
-								}
-							]
-							id: "minecraft:barrel"
-						}
-						display: {
-							Name: "{\"translate\":\"block.kubejs.hydropress\",\"italic\":false}"
-						}
+						File: "CBC/schematic.hydropress.nbt"
+						Item: "kubejs:hydropress"
 					}
 				}
 				type: "item"

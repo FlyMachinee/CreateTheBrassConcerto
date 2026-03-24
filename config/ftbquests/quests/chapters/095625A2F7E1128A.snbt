@@ -183,13 +183,7 @@
 				"36C3A59891538134"
 				"76CE21A8B2955AD3"
 			]
-			description: [
-				"{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.desc_01}"
-				""
-				"润滑油可以用于制作行星齿轮组、差速器等重要零件，并且可以在许多方面取代种子油的作用"
-				""
-				"&a由于它有更为优良的性能，支撑更为大型的机械设备运转已经成为可能——比如大型柴油引擎与蒸汽发电机！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.desc_01}"]
 			id: "7E2194D1F164C71A"
 			rewards: [
 				{
@@ -255,11 +249,7 @@
 		}
 		{
 			dependencies: ["7E2194D1F164C71A"]
-			description: [
-				"{ftbquests.chapter_095625A2F7E1128A.quest_4EEBF6833EE9EC1D.desc_01}"
-				""
-				"&e对于当前阶段的你而言，它的最大用途是制造柴油引擎、蒸汽发电机与钻井！&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4EEBF6833EE9EC1D.desc_01}"]
 			id: "4EEBF6833EE9EC1D"
 			rewards: [{
 				count: 4
@@ -559,79 +549,13 @@
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4A04F41BC7C33EBF.desc_01}"]
 			id: "4A04F41BC7C33EBF"
 			rewards: [{
-				id: "499D05C6AD1B7BE7"
+				id: "56574042B4863D93"
 				item: {
 					Count: 1
-					id: "minecraft:barrel"
+					id: "createandesiteabound:simple_schematic"
 					tag: {
-						BlockEntityTag: {
-							Items: [
-								{
-									Count: 4b
-									Slot: 0b
-									id: "design_decor:andesite_floodlight"
-								}
-								{
-									Count: 22b
-									Slot: 1b
-									id: "create:copper_casing"
-								}
-								{
-									Count: 15b
-									Slot: 2b
-									id: "create:item_drain"
-								}
-								{
-									Count: 3b
-									Slot: 3b
-									id: "create:smart_fluid_pipe"
-								}
-								{
-									Count: 1b
-									Slot: 4b
-									id: "vintageimprovements:vacuum_chamber"
-								}
-								{
-									Count: 2b
-									Slot: 5b
-									id: "design_decor:stepped_lever"
-								}
-								{
-									Count: 1b
-									Slot: 6b
-									id: "design_decor:brass_boiler_large"
-								}
-								{
-									Count: 2b
-									Slot: 7b
-									id: "design_decor:brass_boiler"
-								}
-								{
-									Count: 1b
-									Slot: 8b
-									id: "create:mechanical_pump"
-								}
-								{
-									Count: 4b
-									Slot: 9b
-									id: "design_decor:metal_support"
-								}
-								{
-									Count: 2b
-									Slot: 10b
-									id: "design_decor:copper_boiler"
-								}
-								{
-									Count: 4b
-									Slot: 11b
-									id: "design_decor:diagonal_metal_support"
-								}
-							]
-							id: "minecraft:barrel"
-						}
-						display: {
-							Name: "{\"translate\":\"block.kubejs.condenser\",\"italic\":false}"
-						}
+						File: "CBC/schematic.infinity_fetching_pool.nbt"
+						Item: "kubejs:infinity_fetching_pool"
 					}
 				}
 				type: "item"
@@ -672,14 +596,7 @@
 		}
 		{
 			dependencies: ["497C1131A3DF9662"]
-			description: [
-				"{ftbquests.chapter_095625A2F7E1128A.quest_0EAAA32F7A3FC7E7.desc_01}"
-				""
-				""
-				"在硫酸转化聚乙烯的过程中，250mB的硫酸将被转化为250mB的二氧化硫，剩余的750mB硫酸也会进入输出槽。&a需要注意的是，工作盆输出槽中的流体不会自动与输入槽合并！&r&e你可以考虑使用工作盆的自动导出功能将流体导出，从而避免使用智能流体管道！&r"
-				""
-				"你可以在将二氧化硫转化回硫酸后将它们重进放回输入槽——这样你便无需输入更多的硫！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0EAAA32F7A3FC7E7.desc_01}"]
 			id: "0EAAA32F7A3FC7E7"
 			tasks: [{
 				id: "3010F5ED1FF7CE93"
@@ -691,13 +608,7 @@
 		}
 		{
 			dependencies: ["33B5D92383569018"]
-			description: [
-				"&e你可以通过种子油或生物质来批量合成原油，从而供应你的原油工业！"
-				""
-				"如果你想的话，也可以通过抽油机来获取——但这是有限且低效的，因而我并不建议你这样做"
-				""
-				"&a在未来，你可以使用流体提取井来更高效地生产原油！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.desc_01}"]
 			id: "0AD1428EF423B9FF"
 			shape: "hexagon"
 			size: 1.25d
@@ -706,7 +617,7 @@
 				item: "createdieselgenerators:crude_oil_bucket"
 				type: "item"
 			}]
-			title: "合成原油！"
+			title: "{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.title}"
 			x: -2.0d
 			y: 3.5d
 		}
@@ -820,13 +731,7 @@
 		}
 		{
 			dependencies: ["368A009A98EDA1EE"]
-			description: [
-				"{ftbquests.chapter_095625A2F7E1128A.quest_3D6E6E326398C5B6.desc_01}"
-				""
-				"在很久以前，一位伟大而富有争议的工程师——&e哈勃&r——发明了通过氮气和氢气直接合成氨气的方法"
-				""
-				"哈勃法的发明让农业生产变得十分高效——&e通过氮肥，你无需种田即可通过无土栽培快速获取各种作物！&r"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_3D6E6E326398C5B6.desc_01}"]
 			id: "3D6E6E326398C5B6"
 			tasks: [{
 				id: "52F700A817DEC7CD"
@@ -841,11 +746,7 @@
 				"3D6E6E326398C5B6"
 				"368A009A98EDA1EE"
 			]
-			description: [
-				"{ftbquests.chapter_095625A2F7E1128A.quest_42B9F81EA56748F0.desc_01}"
-				""
-				"通过直接将二氧化氮通入水中，你可以简单地获取硝酸"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_42B9F81EA56748F0.desc_01}"]
 			id: "42B9F81EA56748F0"
 			tasks: [{
 				id: "52194CD1239DD2C0"
@@ -857,11 +758,7 @@
 		}
 		{
 			dependencies: ["42B9F81EA56748F0"]
-			description: [
-				"烈焰蛋糕可以用于批量生产蓝焰衣原体！"
-				""
-				"我认为你是非常应当批量生产它的！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_13154D868F44FC8D.desc_01}"]
 			id: "13154D868F44FC8D"
 			tasks: [{
 				id: "027C02D145863FF2"
@@ -872,11 +769,7 @@
 			y: 1.5d
 		}
 		{
-			description: [
-				"你可以使用氢气代替二氧化硫来加工润滑油"
-				""
-				"如果你需要大量氢气，不妨查看\"电\"亮世界一节！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_76CE21A8B2955AD3.desc_01}"]
 			id: "76CE21A8B2955AD3"
 			tasks: [{
 				id: "69B76D0DFB501BE5"
@@ -888,11 +781,7 @@
 		}
 		{
 			dependencies: ["1186909E719A2320"]
-			description: [
-				"人造橡胶可以完全代替海带的作用，并且拥有比干海带更优异的性能！"
-				""
-				"我推荐你至少建造一条生产人工橡胶的产线！"
-			]
+			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_6A414819BF60BC22.desc_01}"]
 			id: "6A414819BF60BC22"
 			tasks: [{
 				id: "2860C553DE4DF8BE"
