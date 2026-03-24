@@ -451,7 +451,7 @@ JEIAddedEvents.registerCategories((event) => {
         currentBounds = null;
       } else {
         // 指向了方块，需要渲染
-        let buffer = $SuperRenderTypeBuffer.getInstance();
+        let buffer = getSuperRenderTypeBuffer().getInstance();
         lookAt = lookAtResult;
 
         if (!currentBounds) {
