@@ -24,7 +24,7 @@ const drawDepot = (graphics, blockLighting, itemLighting, item, x, y, z, scale) 
     return;
   }
 
-  const renderCount = Math.floor(Math.log2(item.count) / 2);
+  const renderCount = JavaMath['floorDiv(int,int)']($Mth.log2(item.count), 2);
 
   const ms = graphics.pose();
   ms.pushPose();
