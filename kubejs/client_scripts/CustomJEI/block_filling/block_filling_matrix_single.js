@@ -85,12 +85,12 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('kubejs.jeiaddition.category.block_filling_matrix_single.title'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return new $DoubleItemIcon(
+    category.icon(
+      new $DoubleItemIcon(
         () => Item.of(prettyMatrix_1),
         () => Item.of('design_decor:1_sign')
-      );
-    });
+      )
+    );
 
     category.setWidth(178);
     category.setHeight(90);
@@ -110,20 +110,26 @@ JEIAddedEvents.registerCategories((event) => {
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, 21, 45)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-        .addItemStack(Item.of('kubejs:matrix_2'))
         .addTooltipCallback((slotView, builder) => {
           builder.add(1, Text.ofString(recipeData.input_structure).color(0xfca800));
-        });
+        })
+        .addItemStack(Item.of('kubejs:matrix_2'));
 
       // 输出矩阵
       layoutBuilder
         .addSlot($RecipeIngredientRole.OUTPUT, 141, 66)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-        .addItemStack(Item.of('kubejs:matrix_2'))
         .addTooltipCallback((slotView, builder) => {
           builder.add(1, Text.ofString(recipeData.output_structure).color(0xfca800));
-        });
+        })
+        .addItemStack(Item.of('kubejs:matrix_2'));
     });
+
+    const itemLighting = $CustomLightingSettings
+      .builder()
+      .firstLightRotation(0, -90)
+      .secondLightRotation(0, -90)
+      .build();
 
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       const recipeData = recipe.recipeData;
@@ -149,12 +155,6 @@ JEIAddedEvents.registerCategories((event) => {
       // 渲染轴旋转
       ms.mulPose($Axis.XP.rotationDegrees(-15.5));
       ms.mulPose($Axis.YP.rotationDegrees(22.5));
-
-      const itemLighting = $CustomLightingSettings
-        .builder()
-        .firstLightRotation(0, -90)
-        .secondLightRotation(0, -90)
-        .build();
 
       // 注液器
       drawControlledAnimatedSpout(

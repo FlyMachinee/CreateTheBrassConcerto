@@ -44,9 +44,7 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('kubejs.jeiaddition.category.machine_to_upgrade.title'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return guiHelper.createDrawableItemStack(Item.of('kubejs:productivity_module_2'));
-    });
+    category.icon(guiHelper.createDrawableItemStack(Item.of('kubejs:productivity_module_2')));
 
     category.setWidth(200);
     category.setHeight(60);

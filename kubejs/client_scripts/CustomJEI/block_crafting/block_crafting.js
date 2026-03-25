@@ -19,12 +19,12 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('kubejs.jeiaddition.category.block_crafting.title'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return new $DoubleItemIcon(
+    category.icon(
+      new $DoubleItemIcon(
         () => Item.of('minecraft:grass_block'),
         () => Item.of('create:wrench')
-      );
-    });
+      )
+    );
 
     category.setWidth(200);
     category.setHeight(150);

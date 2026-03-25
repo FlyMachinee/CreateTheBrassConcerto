@@ -58,12 +58,12 @@ function CovariantReactorCooldown(pCategory) {
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY)
         .setFluidRenderer(1000, false, 16, 16)
-        .addFluidStack('kubejs:cryogen', 1000)
         .addTooltipCallback((recipeSlotView, tooltip) => {
           const index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
           const cryogenCount = Math.floor((Timer.getGlobalTick() % 80) / 20) + 1;
           tooltip.set(index, Text.literal(`${cryogenCount},000 mB`).color(0xa8a8a8));
-        });
+        })
+        .addFluidStack('kubejs:cryogen', 1000);
     } else {
       // 散热元件
       layoutBuilder
@@ -76,20 +76,19 @@ function CovariantReactorCooldown(pCategory) {
     layoutBuilder
       .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX + 18, recipeInputSlotY)
       .setFluidRenderer(1000, false, 16, 16)
-      .addFluidStack('kubejs:covariant_heat', 1000)
       .addTooltipCallback((recipeSlotView, tooltip) => {
         const index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
         const cryogenCount = Math.floor((Timer.getGlobalTick() % 80) / 20) + 1;
         const totalHeat = data.heatCallback(cryogenCount);
         tooltip.set(index, Text.literal(`${addThousandSeparator(totalHeat)} mB`).color(0xa8a8a8));
-      });
+      })
+      .addFluidStack('kubejs:covariant_heat', 1000);
 
     // 流体输出
     // 过热蒸汽
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX, recipeOutputSlotY)
       .setFluidRenderer(1000, false, 16, 16)
-      .addFluidStack('kubejs:superheated_steam', 1000)
       .addTooltipCallback((recipeSlotView, tooltip) => {
         const index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
         if (data.subtype === 1) {
@@ -98,7 +97,8 @@ function CovariantReactorCooldown(pCategory) {
         } else {
           tooltip.set(index, Text.literal('6,000 mB').color(0xa8a8a8));
         }
-      });
+      })
+      .addFluidStack('kubejs:superheated_steam', 1000);
   };
 
   const animatedHeatBar = new DrawableAnimated(

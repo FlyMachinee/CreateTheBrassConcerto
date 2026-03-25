@@ -72,9 +72,7 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('block.kubejs.covariant_reactor'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return guiHelper.createDrawableItemStack(Item.of('kubejs:covariant_reactor'));
-    });
+    category.icon(guiHelper.createDrawableItemStack(Item.of('kubejs:covariant_reactor')));
 
     category.setWidth(210);
     category.setHeight(152);

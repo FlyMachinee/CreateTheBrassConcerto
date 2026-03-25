@@ -85,54 +85,54 @@ function CovariantReactorMeltdown(pCategory) {
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX, recipeOutputSlotY)
       .setFluidRenderer(114514, false, 16, 16)
-      .addFluidStack('kubejs:covariant_heat', 114514)
       .addTooltipCallback((recipeSlotView, tooltip) => {
         const index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
         tooltip.remove(index);
         tooltip.add(1, Text.translate('kubejs.jeiaddition.weight', '1').white());
-      });
+      })
+      .addFluidStack('kubejs:covariant_heat', 114514);
     // 熔岩
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX + 18, recipeOutputSlotY)
       .setFluidRenderer(114514, false, 16, 16)
-      .addFluidStack('minecraft:lava', 114514)
       .addTooltipCallback((recipeSlotView, tooltip) => {
         const index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
         tooltip.remove(index);
         tooltip.add(1, Text.translate('kubejs.jeiaddition.weight', '3').white());
-      });
+      })
+      .addFluidStack('minecraft:lava', 114514);
     // 基岩
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX + 18 * 2, recipeOutputSlotY)
       .setBackground(guiHelper.getSlotDrawable(), -1, -1)
-      .addItemStack(Item.of('minecraft:bedrock'))
       .addTooltipCallback((recipeSlotView, tooltip) => {
         tooltip.add(1, Text.translate('kubejs.jeiaddition.weight', '19').white());
-      });
+      })
+      .addItemStack(Item.of('minecraft:bedrock'));
     // 幽匿块
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX + 18 * 3, recipeOutputSlotY)
       .setBackground(guiHelper.getSlotDrawable(), -1, -1)
-      .addItemStack(Item.of('minecraft:sculk'))
       .addTooltipCallback((recipeSlotView, tooltip) => {
         tooltip.add(1, Text.translate('kubejs.jeiaddition.weight', '7').white());
-      });
+      })
+      .addItemStack(Item.of('minecraft:sculk'));
     // 幽匿催发体
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX + 18 * 4, recipeOutputSlotY)
       .setBackground(guiHelper.getSlotDrawable(), -1, -1)
-      .addItemStack(Item.of('minecraft:sculk_catalyst'))
       .addTooltipCallback((recipeSlotView, tooltip) => {
         tooltip.add(1, Text.translate('kubejs.jeiaddition.weight', '3').white());
-      });
+      })
+      .addItemStack(Item.of('minecraft:sculk_catalyst'));
     // 苔藓块
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX + 18 * 5, recipeOutputSlotY)
       .setBackground(guiHelper.getSlotDrawable(), -1, -1)
-      .addItemStack(Item.of('minecraft:moss_block'))
       .addTooltipCallback((recipeSlotView, tooltip) => {
         tooltip.add(1, Text.translate('kubejs.jeiaddition.weight', '1').white());
-      });
+      })
+      .addItemStack(Item.of('minecraft:moss_block'));
 
     // 输入第二行
     // 幽匿块

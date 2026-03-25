@@ -41,9 +41,7 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('block.kubejs.steam_generator'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return guiHelper.createDrawableItemStack(Item.of('kubejs:steam_generator'));
-    });
+    category.icon(guiHelper.createDrawableItemStack(Item.of('kubejs:steam_generator')));
 
     category.setWidth(190);
     category.setHeight(160);
@@ -104,7 +102,6 @@ JEIAddedEvents.registerCategories((event) => {
       layoutBuilder
         .addSlot($RecipeIngredientRole.OUTPUT, energySlotX, energySlotY)
         .setCustomRenderer($CustomIngredientTypes.ENERGY, new $EnergyJEIIngredientRenderer(energyElement))
-        .addIngredient($CustomIngredientTypes.ENERGY, new $Energy(42, 1, true))
         .addTooltipCallback((recipeSlotView, tooltip) => {
           // 配方信息计算
           const power = data.power(steamCount, waterCount);
@@ -120,7 +117,8 @@ JEIAddedEvents.registerCategories((event) => {
               'FE'
             )
           );
-        });
+        })
+        .addIngredient($CustomIngredientTypes.ENERGY, new $Energy(42, 1, true));
 
       // 流体输入
       // 润滑油
@@ -132,22 +130,22 @@ JEIAddedEvents.registerCategories((event) => {
       layoutBuilder
         .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY)
         .setFluidRenderer(1000, false, 16, 16)
-        .addFluidStack(data.typeId === 0 ? 'kubejs:pressurized_steam' : 'kubejs:superheated_steam', 1000)
         .addTooltipCallback((recipeSlotView, tooltip) => {
           let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
           tooltip.set(index, Text.literal(`${steamCount},000 mB`).color(0xa8a8a8));
-        });
+        })
+        .addFluidStack(data.typeId === 0 ? 'kubejs:pressurized_steam' : 'kubejs:superheated_steam', 1000);
       // 水
       if (data.typeId === 0) {
         layoutBuilder
           .addSlot($RecipeIngredientRole.INPUT, recipeInputSlotX, recipeInputSlotY + 18)
           .setSlotName('water_input')
           .setFluidRenderer(1000, false, 16, 16)
-          .addFluidStack('minecraft:water', 1000)
           .addTooltipCallback((recipeSlotView, tooltip) => {
             let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
             tooltip.set(index, Text.literal(`${waterCount},000 mB`).color(0xa8a8a8));
-          });
+          })
+          .addFluidStack('minecraft:water', 1000);
       }
 
       // 流体输出
@@ -155,11 +153,11 @@ JEIAddedEvents.registerCategories((event) => {
         layoutBuilder
           .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX, recipeOutputSlotY)
           .setFluidRenderer(1000, false, 16, 16)
-          .addFluidStack('minecraft:water', 1000)
           .addTooltipCallback((recipeSlotView, tooltip) => {
             let index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
             tooltip.set(index, Text.literal(`${steamCount},000 mB`).color(0xa8a8a8));
-          });
+          })
+          .addFluidStack('minecraft:water', 1000);
       }
     });
 

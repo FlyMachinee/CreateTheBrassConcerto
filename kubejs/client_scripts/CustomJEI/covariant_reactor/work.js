@@ -188,7 +188,6 @@ function CovariantReactorWork(pCategory) {
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, energySlotX, energySlotY)
       .setFluidRenderer(114514, false, energySlotWidth - 2, energySlotHeight - 2)
-      .addIngredient($CustomIngredientTypes.ENERGY, new $Energy(42, 1, true))
       .addTooltipCallback((recipeSlotView, tooltip) => {
         // 配方信息计算
         const power = data.powerCallback(fuelCount, controllerCount);
@@ -204,14 +203,14 @@ function CovariantReactorWork(pCategory) {
             'FE'
           )
         );
-      });
+      })
+      .addIngredient($CustomIngredientTypes.ENERGY, new $Energy(42, 1, true));
 
     // 流体输出
     // 协变热
     layoutBuilder
       .addSlot($RecipeIngredientRole.OUTPUT, recipeOutputSlotX, recipeOutputSlotY)
       .setFluidRenderer(1000, false, 16, 16)
-      .addFluidStack('kubejs:covariant_heat', 1000)
       .addTooltipCallback((recipeSlotView, tooltip) => {
         const index = isNaN(parseInt(tooltip.get(1).getString(1))) ? 2 : 1;
         const perTick = data.heatCallback(fuelCount, controllerCount);
@@ -222,7 +221,8 @@ function CovariantReactorWork(pCategory) {
             0xa8a8a8
           )
         );
-      });
+      })
+      .addFluidStack('kubejs:covariant_heat', 1000);
 
     // 隐形物品输出
     // 黄铜块

@@ -1,12 +1,3 @@
-JEIAddedEvents.registerRecipeCatalysts((event) => {
-  const { data } = event;
-  const { jeiHelpers } = data;
-
-  // 与 registerCategories 中相同
-  const typeId = new ResourceLocation('dut_create', 'upgrades');
-  const recipeType = jeiHelpers.getRecipeType(typeId).get();
-});
-
 JEIAddedEvents.registerRecipes((event) => {
   // 与 registerCategories 中相同
   const typeId = new ResourceLocation('dut_create', 'upgrades');
@@ -28,9 +19,7 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('kubejs.jeiaddition.category.upgrades.title'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return guiHelper.createDrawableItemStack(Item.of('kubejs:productivity_module'));
-    });
+    category.icon(guiHelper.createDrawableItemStack(Item.of('kubejs:productivity_module')));
 
     category.setWidth(178);
     category.setHeight(120);

@@ -1,12 +1,3 @@
-JEIAddedEvents.registerRecipeCatalysts((event) => {
-  const { data } = event;
-  const { jeiHelpers } = data;
-
-  // 与 registerCategories 中相同
-  const typeId = new ResourceLocation('dut_create', 'entity_drop');
-  const recipeType = jeiHelpers.getRecipeType(typeId).get();
-});
-
 JEIAddedEvents.registerRecipes((event) => {
   // 与 registerCategories 中相同
   const typeId = new ResourceLocation('dut_create', 'entity_drop');
@@ -132,12 +123,12 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('kubejs.jeiaddition.category.entity_drop.title'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return new $DoubleItemIcon(
+    category.icon(
+      new $DoubleItemIcon(
         () => Item.of('minecraft:iron_sword'),
         () => Item.of('kubejs:phantom_fungus')
-      );
-    });
+      )
+    );
 
     category.setWidth(200);
     category.setHeight(100);

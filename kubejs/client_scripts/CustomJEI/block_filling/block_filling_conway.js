@@ -159,12 +159,12 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('kubejs.jeiaddition.category.block_filling_conway.title'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return new $DoubleItemIcon(
+    category.icon(
+      new $DoubleItemIcon(
         () => Item.of('create:spout'),
         () => Item.of('minecraft:red_mushroom_block')
-      );
-    });
+      )
+    );
 
     category.setWidth(178);
     category.setHeight(160);
@@ -180,10 +180,10 @@ JEIAddedEvents.registerCategories((event) => {
         layoutBuilder
           .addSlot($RecipeIngredientRole.CATALYST, 21, 45)
           .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-          .addItemStack(Item.of(data.medium))
           .addTooltipCallback((slotView, builder) => {
             builder.add(1, Text.translate('kubejs.jeiaddition.not_consumed_medium').color(0xfca800));
-          });
+          })
+          .addItemStack(Item.of(data.medium));
       } catch (e) {
         console.error(`[Block Filling Conway] Invalid medium: ${data.medium}`);
         return;
@@ -207,12 +207,8 @@ JEIAddedEvents.registerCategories((event) => {
         .addItemStack(Item.of(data.stem));
 
       // 隐形原料槽
-      layoutBuilder
-        .addInvisibleIngredients($RecipeIngredientRole.INPUT)
-        .addItemStack(Item.of(data.cap));
-      layoutBuilder
-        .addInvisibleIngredients($RecipeIngredientRole.INPUT)
-        .addItemStack(Item.of(data.stem));
+      layoutBuilder.addInvisibleIngredients($RecipeIngredientRole.INPUT).addItemStack(Item.of(data.cap));
+      layoutBuilder.addInvisibleIngredients($RecipeIngredientRole.INPUT).addItemStack(Item.of(data.stem));
     });
 
     // 配方动画持久数据
@@ -348,9 +344,11 @@ JEIAddedEvents.registerCategories((event) => {
           ? animatedData.get(recipeData.innerId).tensor
           : animatedData.get(recipeData.innerId).nextTensor;
       for (let i = 0; i < 3; i++) {
+        let matrix = tensorToRender[i];
         for (let j = 0; j < 3; j++) {
+          let row = matrix[j];
           for (let k = 0; k < 3; k++) {
-            let cellValue = tensorToRender[i][j][k];
+            let cellValue = row[k];
             if (cellValue === 0) continue; // 空气不渲染
 
             let blockId = cellValue === 1 ? recipeData.cap : recipeData.stem;

@@ -40,9 +40,7 @@
       category.title(Text.translate('kubejs.jeiaddition.category.upgrade_calculator.title'));
 
       // 添加上方小图标
-      category.iconSupplier(() => {
-        return guiHelper.createDrawableItemStack(Item.of('kubejs:productivity_module_3'));
-      });
+      category.icon(guiHelper.createDrawableItemStack(Item.of('kubejs:productivity_module_3')));
 
       category.setWidth(200);
       category.setHeight(200);

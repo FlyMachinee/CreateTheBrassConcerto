@@ -92,12 +92,12 @@ JEIAddedEvents.registerCategories((event) => {
     category.title(Text.translate('kubejs.jeiaddition.category.block_filling_matrix_multi_phase.title'));
 
     // 添加上方小图标
-    category.iconSupplier(() => {
-      return new $DoubleItemIcon(
+    category.icon(
+      new $DoubleItemIcon(
         () => Item.of(prettyMatrix_3),
         () => Item.of('design_decor:m_sign')
-      );
-    });
+      )
+    );
 
     category.setWidth(178);
     category.setHeight(80);
@@ -118,57 +118,63 @@ JEIAddedEvents.registerCategories((event) => {
         layoutBuilder
           .addSlot($RecipeIngredientRole.CATALYST, 31, 28)
           .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-          .addItemStack(Item.of('kubejs:slime_crystal'))
           .addTooltipCallback((slotView, builder) => {
             builder.add(1, Text.translate('kubejs.jeiaddition.no_consumption').color(0xfca800));
-          });
+          })
+          .addItemStack(Item.of('kubejs:slime_crystal'));
 
         // 输入矩阵
         layoutBuilder
           .addSlot($RecipeIngredientRole.INPUT, 7, 53)
           .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-          .addItemStack(Item.of('kubejs:matrix_2'))
           .addTooltipCallback((slotView, builder) => {
             builder.add(1, Text.ofString(recipeData.input_structure).color(0xfca800));
-          });
+          })
+          .addItemStack(Item.of('kubejs:matrix_2'));
       } else {
         // 输入矩阵 1
         layoutBuilder
           .addSlot($RecipeIngredientRole.INPUT, 31, 28)
           .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-          .addItemStack(Item.of('kubejs:matrix_2'))
           .addTooltipCallback((slotView, builder) => {
             builder.add(1, Text.ofString(recipeData.input_structure_1).color(0xfca800));
-          });
+          })
+          .addItemStack(Item.of('kubejs:matrix_2'));
 
         // 输入矩阵 2
         layoutBuilder
           .addSlot($RecipeIngredientRole.INPUT, 7, 53)
           .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-          .addItemStack(Item.of('kubejs:matrix_2'))
           .addTooltipCallback((slotView, builder) => {
             builder.add(1, Text.ofString(recipeData.input_structure_2).color(0xfca800));
-          });
+          })
+          .addItemStack(Item.of('kubejs:matrix_2'));
       }
 
       // 媒介方块
       layoutBuilder
         .addSlot($RecipeIngredientRole.CATALYST, 7, 11)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-        .addItemStack(Item.of(recipeData.medium))
         .addTooltipCallback((slotView, builder) => {
           builder.add(1, Text.translate('kubejs.jeiaddition.not_consumed_medium').color(0xfca800));
-        });
+        })
+        .addItemStack(Item.of(recipeData.medium));
 
       // 输出矩阵
       layoutBuilder
         .addSlot($RecipeIngredientRole.OUTPUT, 141, 56)
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-        .addItemStack(Item.of('kubejs:matrix_2'))
         .addTooltipCallback((slotView, builder) => {
           builder.add(1, Text.ofString(recipeData.output_structure).color(0xfca800));
-        });
+        })
+        .addItemStack(Item.of('kubejs:matrix_2'));
     });
+
+    const itemLighting = $CustomLightingSettings
+      .builder()
+      .firstLightRotation(0, -90)
+      .secondLightRotation(0, -90)
+      .build();
 
     category.setDrawHandler((recipe, recipeSlotsView, graphics, mouseX, mouseY) => {
       const recipeData = recipe.recipeData;
@@ -203,12 +209,6 @@ JEIAddedEvents.registerCategories((event) => {
       // 渲染轴旋转
       ms.mulPose($Axis.XP.rotationDegrees(-15.5));
       ms.mulPose($Axis.YP.rotationDegrees(22.5));
-
-      const itemLighting = $CustomLightingSettings
-        .builder()
-        .firstLightRotation(0, -90)
-        .secondLightRotation(0, -90)
-        .build();
 
       // 注液器
       drawControlledAnimatedSpout(

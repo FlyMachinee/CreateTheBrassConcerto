@@ -1,54 +1,6 @@
 // priority: 2048
 
-/**
- *
- * @param {string} output_item 合成物品
- * @param {number} output_count 合成数量
- * @param {string} crafting_with 合成工具
- * @param {string} crafting_on 在什么方块上进行合成
- * @param {Array<Array<string>>} pattern 多方块结构
- * @param {Object} mapping 每个字符对应的方块
- * @param {Function} re_index 对结构进行重新索引的函数（可选），形如 (number, number, number) => [number, number, number]，默认为恒等变换
- *
- * mapping 可选键值如下
- *
- * 键：必须为单个 ASCII 字符
- *
- * 值：可为字符串或对象
- * 若为字符串，则表示方块 ID
- * 若为对象，则格式如下：
- * {
- *    id: 方块 ID（字符串）
- *    values: 可选，方块属性数组，格式为 [[属性名, 属性值], ...]，随后将提供 setValue 方块属性
- *
- *    （注：以下旋转相关选项互斥。未旋转时，方块将默认旋转至面向数学正 y 轴，即渲染负 x 轴）
- *    face_center: 可选，布尔值。出现时，若为真，绕数学 z 轴旋转该方块使其面向中心，否则使其背向中心
- *    face: 可选，字符串。出现时，将旋转方块至指定方向，可选值为 'PX', 'NX', 'PY', 'NY', 'PZ', 'NZ'，
- *          分别表示数学正 x 轴、负 x 轴、正 y 轴、负 y 轴、正 z 轴、负 z 轴
- *    rotate: 可选，数组，格式为 [角度, 角度, 角度]，随后将按数学轴 z, y, x 顺序（不知道为什么，测试出来的结果）绕轴旋转指定角度（度数制）
- *
- *    skip: 可选，布尔值，若为真，则跳过该方块本身的渲染（额外渲染会继续）
- *    reverse: 可选，布尔值，若为真，先执行 extra 额外渲染，再渲染方块本身
- *    extra: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale, spin) => void，用于额外渲染该方块相关结构
- * }
- */
-const getBlockCraftingRecipe = (
-  output_item,
-  output_count,
-  crafting_with,
-  crafting_on,
-  pattern,
-  mapping,
-  re_index
-) => ({
-  output_item: output_item,
-  output_count: output_count,
-  crafting_with: crafting_with,
-  crafting_on: crafting_on,
-  pattern: pattern,
-  mapping: mapping,
-  re_index: re_index === undefined ? (i, j, k) => [i, j, k] : re_index,
-});
+const blockCraftingRecipes = [];
 
 /**
  * 将数学上的坐标轴转换为渲染坐标轴
@@ -73,59 +25,111 @@ let rotateXYZ = (builder, x_angle, y_angle, z_angle) => {
   builder.rotateBlock(y_angle, -z_angle, -x_angle);
 };
 
-/**
- * @param {Array<Array>} directions 形如 [[str, bool],...] 表示管道向 str 方向连接，bool 表示是否有管道口
- *
- * 管道方向与渲染轴关系：UP = -y, DOWN = +y, NORTH = -z, SOUTH = +z, WEST = -x, EAST = +x
- *
- * 管道方向与数学轴关系：UP = +z, DOWN = -z, NORTH = -x, SOUTH = +x, WEST = +y, EAST = -y
- */
-const createFluidPipeInfo = (directions) => ({
-  id: 'create:fluid_pipe',
-  skip: true,
-  extra: (guiGraphics, lighting, x, y, z, scale) => {
-    drawFluidPipe(guiGraphics, lighting, x, y, z, scale, directions);
-  },
-});
+{
+  /**
+   *
+   * @param {string} output_item 合成物品
+   * @param {number} output_count 合成数量
+   * @param {string} crafting_with 合成工具
+   * @param {string} crafting_on 在什么方块上进行合成
+   * @param {Array<Array<string>>} pattern 多方块结构
+   * @param {Object} mapping 每个字符对应的方块
+   * @param {Function} re_index 对结构进行重新索引的函数（可选），形如 (number, number, number) => [number, number, number]，默认为恒等变换
+   *
+   * mapping 可选键值如下
+   *
+   * 键：必须为单个 ASCII 字符
+   *
+   * 值：可为字符串或对象
+   * 若为字符串，则表示方块 ID
+   * 若为对象，则格式如下：
+   * {
+   *    id: 方块 ID（字符串）
+   *    values: 可选，方块属性数组，格式为 [[属性名, 属性值], ...]，随后将提供 setValue 方块属性
+   *
+   *    （注：以下旋转相关选项互斥。未旋转时，方块将默认旋转至面向数学正 y 轴，即渲染负 x 轴）
+   *    face_center: 可选，布尔值。出现时，若为真，绕数学 z 轴旋转该方块使其面向中心，否则使其背向中心
+   *    face: 可选，字符串。出现时，将旋转方块至指定方向，可选值为 'PX', 'NX', 'PY', 'NY', 'PZ', 'NZ'，
+   *          分别表示数学正 x 轴、负 x 轴、正 y 轴、负 y 轴、正 z 轴、负 z 轴
+   *    rotate: 可选，数组，格式为 [角度, 角度, 角度]，随后将按数学轴 z, y, x 顺序（不知道为什么，测试出来的结果）绕轴旋转指定角度（度数制）
+   *
+   *    skip: 可选，布尔值，若为真，则跳过该方块本身的渲染（额外渲染会继续）
+   *    reverse: 可选，布尔值，若为真，先执行 extra 额外渲染，再渲染方块本身
+   *    extra: 可选，回调函数，格式为 (guiGraphics, lighting, x, y, z, scale, spin) => void，用于额外渲染该方块相关结构
+   * }
+   */
+  let addBlockCraftingRecipe = (
+    output_item,
+    output_count,
+    crafting_with,
+    crafting_on,
+    pattern,
+    mapping,
+    re_index
+  ) => {
+    blockCraftingRecipes.push({
+      output_item: output_item,
+      output_count: output_count,
+      crafting_with: crafting_with,
+      crafting_on: crafting_on,
+      pattern: pattern,
+      mapping: mapping,
+      re_index: re_index === undefined ? (i, j, k) => [i, j, k] : re_index,
+    });
+  };
 
-const mechanicalArmInfo = {
-  id: 'create:mechanical_arm',
-  skip: true,
-  extra: (guiGraphics, lighting, x, y, z, scale, spin) => {
-    if (spin) {
-      let tick = $AnimationTickHolder.getRenderTime();
-      let baseAngle = (tick * 10) % 360;
-      let lowerArmAngle = -15 + 30 * JavaMath.sin(tick / 4);
-      let upperArmAngle = -10 + 35 * JavaMath.sin(tick / 8);
-      let headAngle = -lowerArmAngle;
-      drawMechanicalArm(
-        guiGraphics,
-        lighting,
-        x,
-        y,
-        z,
-        scale,
-        baseAngle,
-        135 + lowerArmAngle,
-        90 + upperArmAngle,
-        headAngle
-      );
-    } else {
-      drawMechanicalArm(guiGraphics, lighting, x, y, z, scale, 90, 135, 45, 0);
-    }
-  },
-};
+  /**
+   * @param {Array<Array>} directions 形如 [[str, bool],...] 表示管道向 str 方向连接，bool 表示是否有管道口
+   *
+   * 管道方向与渲染轴关系：UP = -y, DOWN = +y, NORTH = -z, SOUTH = +z, WEST = -x, EAST = +x
+   *
+   * 管道方向与数学轴关系：UP = +z, DOWN = -z, NORTH = -x, SOUTH = +x, WEST = +y, EAST = -y
+   */
+  let createFluidPipeInfo = (directions) => ({
+    id: 'create:fluid_pipe',
+    skip: true,
+    extra: (guiGraphics, lighting, x, y, z, scale) => {
+      drawFluidPipe(guiGraphics, lighting, x, y, z, scale, directions);
+    },
+  });
 
-const blockCraftingRecipes = [
+  let mechanicalArmInfo = {
+    id: 'create:mechanical_arm',
+    skip: true,
+    extra: (guiGraphics, lighting, x, y, z, scale, spin) => {
+      if (spin) {
+        let tick = $AnimationTickHolder.getRenderTime();
+        let baseAngle = (tick * 10) % 360;
+        let lowerArmAngle = -15 + 30 * JavaMath.sin(tick / 4);
+        let upperArmAngle = -10 + 35 * JavaMath.sin(tick / 8);
+        let headAngle = -lowerArmAngle;
+        drawMechanicalArm(
+          guiGraphics,
+          lighting,
+          x,
+          y,
+          z,
+          scale,
+          baseAngle,
+          135 + lowerArmAngle,
+          90 + upperArmAngle,
+          headAngle
+        );
+      } else {
+        drawMechanicalArm(guiGraphics, lighting, x, y, z, scale, 90, 135, 45, 0);
+      }
+    },
+  };
+
   // 粉碎轮
-  getBlockCraftingRecipe('create:crushing_wheel', 4, 'create:wrench', 'C', [['ABA', 'BCB', 'ABA']], {
+  addBlockCraftingRecipe('create:crushing_wheel', 4, 'create:wrench', 'C', [['ABA', 'BCB', 'ABA']], {
     A: 'create:andesite_alloy_block',
     B: 'create:linear_chassis',
     C: 'minecraft:stone',
-  }),
+  });
 
   // 无人机
-  getBlockCraftingRecipe(
+  addBlockCraftingRecipe(
     'create_sa:brass_drone_item',
     1,
     'create:wrench',
@@ -169,10 +173,10 @@ const blockCraftingRecipes = [
       F: 'create:content_observer',
       '#': 'minecraft:air',
     }
-  ),
+  );
 
   // 机械手
-  getBlockCraftingRecipe('create:deployer', 1, 'create_sa:brass_pickaxe', 'C', [['#A#', '#B#', '#C#']], {
+  addBlockCraftingRecipe('create:deployer', 1, 'create_sa:brass_pickaxe', 'C', [['#A#', '#B#', '#C#']], {
     A: { id: 'create:piston_extension_pole', rotate: [90, 0, 0] },
     B: {
       id: 'create:mechanical_piston',
@@ -188,10 +192,10 @@ const blockCraftingRecipes = [
     },
     C: 'minecraft:iron_block',
     '#': 'minecraft:air',
-  }),
+  });
 
   // 矿物钻井
-  getBlockCraftingRecipe(
+  addBlockCraftingRecipe(
     'createoreexcavation:drilling_machine',
     1,
     'create:wrench',
@@ -248,10 +252,10 @@ const blockCraftingRecipes = [
       '#': 'minecraft:air',
     },
     (i, j, k) => [2 - i, 2 - j, k]
-  ),
+  );
 
   // 流体钻井
-  getBlockCraftingRecipe(
+  addBlockCraftingRecipe(
     'createoreexcavation:extractor',
     1,
     'create:wrench',
@@ -304,39 +308,31 @@ const blockCraftingRecipes = [
       Y: 'create:smart_fluid_pipe',
     },
     (i, j, k) => [2 - i, 2 - j, k]
-  ),
-].concat(
-  (() => {
-    let ret = [];
+  );
 
-    // 大型锅炉
-    let mapping = {
-      industrial_iron: 'create:industrial_iron_block',
-      zinc: 'kubejs:new_zinc_block',
-      brass: 'create:brass_block',
-      gold: 'minecraft:gold_block',
-      copper: 'minecraft:copper_block',
-      cast_iron: 'createbigcannons:cast_iron_block',
-      andesite: 'create:andesite_alloy_block',
-    };
+  // 大型锅炉
+  let mapping = {
+    industrial_iron: 'create:industrial_iron_block',
+    zinc: 'kubejs:new_zinc_block',
+    brass: 'create:brass_block',
+    gold: 'minecraft:gold_block',
+    copper: 'minecraft:copper_block',
+    cast_iron: 'createbigcannons:cast_iron_block',
+    andesite: 'create:andesite_alloy_block',
+  };
 
-    for (let key in mapping) {
-      let blockId = mapping[key];
-      ret.push(
-        getBlockCraftingRecipe(
-          `design_decor:${key}_boiler_large`,
-          1,
-          'create:wrench',
-          'C',
-          [['AAA', 'ACA', 'AAA']],
-          {
-            A: blockId,
-            C: 'create:fluid_tank',
-          }
-        )
-      );
-    }
-
-    return ret;
-  })()
-);
+  for (let key in mapping) {
+    let blockId = mapping[key];
+    addBlockCraftingRecipe(
+      `design_decor:${key}_boiler_large`,
+      1,
+      'create:wrench',
+      'C',
+      [['AAA', 'ACA', 'AAA']],
+      {
+        A: blockId,
+        C: 'create:fluid_tank',
+      }
+    );
+  }
+}
