@@ -31,7 +31,7 @@ const checkMouseFocus = (guiGraphics, mouseX, mouseY, width, height, blockCheckF
     windowHeight,
     projectionMatrix,
     modelViewMatrix,
-    100,
+    20,
     blockCheckFunc
   );
 };
@@ -72,7 +72,7 @@ const getTargetBlock = (
   let worldEnd = invVP.transform(clipEnd);
   worldEnd.div(worldEnd.w());
 
-  let pushBackDistance = 100;
+  let pushBackDistance = worldStart.length() + maxDistance / 2;
   let direction = new Vec3f(
     worldEnd.x() - worldStart.x(),
     worldEnd.y() - worldStart.y(),
