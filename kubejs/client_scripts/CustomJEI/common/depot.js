@@ -49,7 +49,7 @@ const drawDepot = (graphics, blockLighting, itemLighting, item, x, y, z, scale) 
     const offset = -8;
     ms.translate(0, offset, 0);
 
-    ms.translate(-8, 8, -100);
+    ms.translate(-8, 8, -100 + 1);
     $GuiGameElement['of(net.minecraft.world.item.ItemStack)'](item).lighting(itemLighting).render(graphics);
     ms.popPose();
   }
