@@ -112,6 +112,7 @@ JEIAddedEvents.registerCategories((event) => {
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addTooltipCallback((slotView, builder) => {
           builder.add(1, Text.ofString(recipeData.input_structure).color(0xfca800));
+          builder.remove(3);
         })
         .addItemStack(Item.of('kubejs:matrix_2'));
 
@@ -121,6 +122,7 @@ JEIAddedEvents.registerCategories((event) => {
         .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
         .addTooltipCallback((slotView, builder) => {
           builder.add(1, Text.ofString(recipeData.output_structure).color(0xfca800));
+          builder.remove(3);
         })
         .addItemStack(Item.of('kubejs:matrix_2'));
     });
