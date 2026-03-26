@@ -223,10 +223,11 @@ JEIAddedEvents.registerCategories((event) => {
                     functionsMap: functionsMap,
                   });
 
+                  let ret = generalTooltipCallback(index);
                   layoutBuilder
                     .addOutputSlot(outputSlotX + index * 20, outputSlotY)
-                    .setBackground($CreateRecipeCategory.getRenderedSlot(), -1, -1)
-                    .addTooltipCallback(generalTooltipCallback(index))
+                    .setBackground($CreateRecipeCategory.getRenderedSlot(ret.chance), -1, -1)
+                    .addTooltipCallback(ret.callback)
                     .addIngredients(ingredient);
 
                   ++index;
@@ -242,11 +243,28 @@ JEIAddedEvents.registerCategories((event) => {
      * @param {number} index
      */
     const generalTooltipCallback = (index) => {
+      let chance = 1;
+
+      let conditions = entryMap.get(index).conditions;
+      if (conditions !== null) {
+        conditions.forEach((condition) => {
+          let conditionObj = condition.getAsJsonObject();
+          if (conditionObj.has('condition')) {
+            switch (conditionObj.get('condition').getAsString()) {
+              case 'minecraft:random_chance_with_looting':
+                if (conditionObj.has('chance')) {
+                  chance = conditionObj.get('chance').getAsDouble();
+                }
+            }
+          }
+        });
+      }
+
       /**
        * @param {Internal.IRecipeSlotView} slotView
        * @param {Internal.List<net.minecraft.network.chat.Component>} builder
        */
-      return (slotView, builder) => {
+      const callback = (slotView, builder) => {
         const optionalItemStack = slotView.getDisplayedItemStack();
         if (optionalItemStack.isEmpty()) {
           return;
@@ -388,6 +406,8 @@ JEIAddedEvents.registerCategories((event) => {
           );
         }
       };
+
+      return { chance: chance, callback: callback };
     };
 
     /**
