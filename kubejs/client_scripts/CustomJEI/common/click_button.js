@@ -18,9 +18,10 @@ function ClickButton(x, y, width, height, text) {
 
   /**
    * @param {Internal.CustomJSRecipe} recipe 当前配方对象
+   * @param {number} key 鼠标按键 0=左 1=右 2=中
    * @returns {boolean} 返回值为 true 则表示点击事件被处理
    */
-  this.onClickCallback = (recipe) => true;
+  this.onClickCallback = (recipe, key) => true;
 
   /**
    * @param {Internal.CustomJSRecipe} recipe 当前配方对象
@@ -51,7 +52,9 @@ ClickButton.prototype.mouseIsOver = function (mouseX, mouseY) {
 
 /**
  * 设置点击回调函数，返回值为 true 则表示点击事件被处理
- * @param {function(Internal.CustomJSRecipe): boolean} callback
+ *
+ * 0=左 1=右 2=中
+ * @param {function(Internal.CustomJSRecipe, number): boolean} callback
  * @return {ClickButton}
  */
 ClickButton.prototype.onClick = function (callback) {
@@ -129,9 +132,20 @@ ClickButton.prototype.handleInput = function (recipe, mouseX, mouseY, input) {
     return false;
   }
 
-  // 仅处理鼠标左键点击
-  if (input !== $InputConstants.Type.MOUSE.getOrCreate(0)) {
-    return false;
+  // 处理鼠标左右中键点击
+  let key;
+  switch (input.getValue()) {
+    case $InputConstants.MOUSE_BUTTON_LEFT:
+      key = 0;
+      break;
+    case $InputConstants.MOUSE_BUTTON_RIGHT:
+      key = 1;
+      break;
+    case $InputConstants.MOUSE_BUTTON_MIDDLE:
+      key = 2;
+      break;
+    default:
+      return false;
   }
 
   // 按钮是否可用
@@ -140,7 +154,7 @@ ClickButton.prototype.handleInput = function (recipe, mouseX, mouseY, input) {
   }
 
   // 执行点击回调
-  if (this.onClickCallback(recipe)) {
+  if (this.onClickCallback(recipe, key)) {
     if (this.playSound) {
       Client.getSoundManager().play(
         $SimpleSoundInstance.forUI($SoundEvents.UI_BUTTON_CLICK.value(), 1.0, 0.25)
