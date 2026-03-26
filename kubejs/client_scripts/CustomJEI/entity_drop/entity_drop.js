@@ -8,19 +8,13 @@ JEIAddedEvents.registerRecipes((event) => {
     matrixStack.pushPose();
 
     // 渲染像素偏移
-    matrixStack.translate(30.5, 53, 100);
+    matrixStack.translate(30.5, 45, 100);
 
     // 渲染轴旋转
     matrixStack.mulPose($Axis.XP.rotationDegrees(-15.5));
     matrixStack.mulPose($Axis.YP.rotationDegrees(22.5));
 
-    $GuiGameElement['of(net.minecraft.world.level.block.state.BlockState)'](
-      Block.getBlock('kubejs:saline_water').defaultBlockState()
-    )
-      .scale(30)
-      .atLocal(0, 1, 0)
-      .lighting($AnimatedKinetics.DEFAULT_LIGHTING)
-      .render(graphics);
+    drawFluidBox(graphics, 'kubejs:saline_water', 12, 0, 1, 0, 30);
 
     matrixStack.popPose();
   };
