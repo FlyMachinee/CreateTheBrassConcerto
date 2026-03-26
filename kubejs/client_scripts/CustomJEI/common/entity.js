@@ -66,6 +66,12 @@ const drawEntity = (guiGraphics, x, y, scale, yaw, pitch, livingEntity) => {
   pitch = renderInfo.pitch;
 
   mobPoseStack.mulPose($Axis.XN.rotationDegrees(JavaMath.atan(pitch / 40) * 20));
+  $CustomLightingSettings
+    .builder()
+    .firstLightRotation(0, 135)
+    .secondLightRotation(0, 0)
+    .build()
+    .applyLighting();
   livingEntity.yo = JavaMath.atan(yaw / 40) * 20;
   let yRot = JavaMath.atan(yaw / 40) * 40;
   let xRot = -JavaMath.atan(pitch / 40) * 20;
