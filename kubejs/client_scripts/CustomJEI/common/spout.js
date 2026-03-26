@@ -81,11 +81,12 @@ const drawControlledAnimatedSpout = (graphics, lighting, fluid, x, y, z, scale, 
 
   const buffer = $MultiBufferSource.immediate($Tesselator.getInstance().getBuilder());
   matrixStack.pushPose();
+  matrixStack.scale(scale, scale, scale);
+  matrixStack.translate(x, y, z);
 
   $UIRenderHelper.flipForGuiRender(matrixStack);
-  matrixStack.scale(16, 16, 16);
-  let from = 3 / 16;
-  let to = 17 / 16;
+  let from = 3 / 20;
+  let to = 17 / 20;
 
   $FluidRenderer.renderFluidBox(
     fluid,
@@ -104,9 +105,10 @@ const drawControlledAnimatedSpout = (graphics, lighting, fluid, x, y, z, scale, 
   matrixStack.popPose();
 
   const width = (1 / 128) * squeeze;
+  matrixStack.translate(x * scale, y * scale, z * scale);
   matrixStack.translate(scale / 2, scale * 1.5, scale / 2);
   $UIRenderHelper.flipForGuiRender(matrixStack);
-  matrixStack.scale(16, 16, 16);
+  matrixStack.scale((16 / 20) * scale, (16 / 20) * scale, (16 / 20) * scale);
   matrixStack.translate(-0.5, 0, -0.5);
   from = -width / 2 + 0.5;
   to = width / 2 + 0.5;
