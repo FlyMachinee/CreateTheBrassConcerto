@@ -144,17 +144,8 @@ JEIAddedEvents.registerCategories((event) => {
      */
     let lookAt = null;
 
-    /**
-     * 上一个边界框（渲染轴），用于过渡动画
-     * @type {Internal.AABB}
-     */
-    let prevBounds = null;
-
-    /**
-     * 当前边界框（渲染轴），用于渲染和过渡动画
-     * @type {Internal.AABB}
-     */
-    let currentBounds = null;
+    /** @type {ChasingAABBOutlineWrapper} */
+    let chasingAABBOutline = null;
 
     let lastTick = $AnimationTickHolder.getTicks();
 
@@ -447,72 +438,40 @@ JEIAddedEvents.registerCategories((event) => {
       if (!lookAtResult) {
         // 什么都没有，清空数据
         lookAt = null;
-        prevBounds = null;
-        currentBounds = null;
       } else {
         // 指向了方块，需要渲染
         let buffer = getSuperRenderTypeBuffer().getInstance();
-        lookAt = lookAtResult;
-
-        if (!currentBounds) {
-          // 之前什么都没有指向，现在有了，直接设置当前边界框，无需过渡动画
-          currentBounds = AABB.of(
-            lookAt.x(),
-            lookAt.y(),
-            lookAt.z(),
-            lookAt.x() + 1,
-            lookAt.y() + 1,
-            lookAt.z() + 1
+        if (!chasingAABBOutline) {
+          chasingAABBOutline = new ChasingAABBOutlineWrapper(
+            AABB.of(
+              lookAtResult.x(),
+              lookAtResult.y(),
+              lookAtResult.z(),
+              lookAtResult.x() + 1,
+              lookAtResult.y() + 1,
+              lookAtResult.z() + 1
+            )
           );
         } else {
-          // 之前指向了某个方块，进行过渡动画
-          // js 无法实现可让 JEI 调用的 tick 函数，只能在渲染函数中模拟
-          while (lastTick < tick) {
-            lastTick += 1;
-            prevBounds = currentBounds;
-            // 每 tick 前进当前剩余距离的一半，表现为距离指数衰减（1 - e^-t)
-            currentBounds = AABB.of(
-              lerp(currentBounds.minX, lookAt.x(), 0.5),
-              lerp(currentBounds.minY, lookAt.y(), 0.5),
-              lerp(currentBounds.minZ, lookAt.z(), 0.5),
-              lerp(currentBounds.maxX, lookAt.x() + 1, 0.5),
-              lerp(currentBounds.maxY, lookAt.y() + 1, 0.5),
-              lerp(currentBounds.maxZ, lookAt.z() + 1, 0.5)
+          if (!lookAtResult.equals(lookAt)) {
+            chasingAABBOutline.setTarget(
+              AABB.of(
+                lookAtResult.x(),
+                lookAtResult.y(),
+                lookAtResult.z(),
+                lookAtResult.x() + 1,
+                lookAtResult.y() + 1,
+                lookAtResult.z() + 1
+              )
             );
           }
+          while (lastTick < tick) {
+            lastTick += 1;
+            chasingAABBOutline.tick();
+          }
+          chasingAABBOutline.render(matrixStack, buffer, Vec3d.ZERO, $AnimationTickHolder.getPartialTicks());
         }
-
-        if (prevBounds) {
-          // 如果有上一个边界框，说明正在进行过渡动画，渲染插值后的边界框
-          // PartialTicks 是当前 tick 内的进度，范围 [0, 1)
-          let pt = $AnimationTickHolder.getPartialTicks();
-          let interpolatedBounds = AABB.of(
-            lerp(prevBounds.minX, currentBounds.minX, pt),
-            lerp(prevBounds.minY, currentBounds.minY, pt),
-            lerp(prevBounds.minZ, currentBounds.minZ, pt),
-            lerp(prevBounds.maxX, currentBounds.maxX, pt),
-            lerp(prevBounds.maxY, currentBounds.maxY, pt),
-            lerp(prevBounds.maxZ, currentBounds.maxZ, pt)
-          );
-          let outline = new $AABBOutline(interpolatedBounds);
-          outline
-            .getParams()
-            .colored(0x6886c5)
-            .withFaceTexture($AllSpecialTextures.HIGHLIGHT_CHECKERED)
-            .lineWidth(1 / 16);
-          outline.render(matrixStack, buffer, Vec3d.ZERO, 0);
-          outline.getParams().clearTextures();
-        } else {
-          // 没有上一个边界框，说明之前没有指向任何方块，直接渲染当前边界框
-          let outline = new $AABBOutline(currentBounds);
-          outline
-            .getParams()
-            .colored(0x6886c5)
-            .withFaceTexture($AllSpecialTextures.HIGHLIGHT_CHECKERED)
-            .lineWidth(1 / 16);
-          outline.render(matrixStack, buffer, Vec3d.ZERO, 0);
-          outline.getParams().clearTextures();
-        }
+        lookAt = lookAtResult;
         buffer.draw();
       }
       matrixStack.popPose();
