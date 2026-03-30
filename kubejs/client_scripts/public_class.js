@@ -69,3 +69,7 @@ const $AABBOutline = Java.loadClass('com.simibubi.create.foundation.outliner.AAB
 const $ChasingAABBOutline = Java.loadClass('com.simibubi.create.foundation.outliner.ChasingAABBOutline');
 const $AllSpecialTextures = Java.loadClass('com.simibubi.create.AllSpecialTextures');
 const $Mth = Java.loadClass('net.minecraft.util.Mth');
+const $NbtIo = Java.loadClass('net.minecraft.nbt.NbtIo');
+const $NbtAccounter = Java.loadClass('net.minecraft.nbt.NbtAccounter');
+const $NbtUtils = Java.loadClass('net.minecraft.nbt.NbtUtils');
+const $Registries = Java.loadClass('net.minecraft.core.registries.Registries');

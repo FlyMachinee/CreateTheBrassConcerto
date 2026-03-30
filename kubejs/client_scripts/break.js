@@ -18,7 +18,15 @@ const ClassFilter = classFilterField.get(ScriptManagers.CLIENT);
 ClassFilter.allow('java.nio.file.Files');
 ClassFilter.allow('java.nio.file.Paths');
 ClassFilter.allow('net.minecraftforge.fml.loading.FMLPaths');
+ClassFilter.allow('java.io.DataInputStream')
+ClassFilter.allow('java.io.BufferedInputStream')
+ClassFilter.allow('java.util.zip.GZIPInputStream')
+ClassFilter.allow('java.nio.file.StandardOpenOption')
 
 const $FMLPaths = Java.loadClass('net.minecraftforge.fml.loading.FMLPaths');
 const $FilePaths = Java.loadClass('java.nio.file.Paths');
 const $Files = Java.loadClass('java.nio.file.Files');
+const $DataInputStream = Java.loadClass('java.io.DataInputStream')
+const $BufferedInputStream = Java.loadClass('java.io.BufferedInputStream')
+const $GZIPInputStream = Java.loadClass('java.util.zip.GZIPInputStream')
+const $StandardOpenOption = Java.loadClass('java.nio.file.StandardOpenOption')
