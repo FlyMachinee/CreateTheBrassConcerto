@@ -73,3 +73,4 @@ const $NbtIo = Java.loadClass('net.minecraft.nbt.NbtIo');
 const $NbtAccounter = Java.loadClass('net.minecraft.nbt.NbtAccounter');
 const $NbtUtils = Java.loadClass('net.minecraft.nbt.NbtUtils');
 const $Registries = Java.loadClass('net.minecraft.core.registries.Registries');
+const $AllKeys = Java.loadClass('com.simibubi.create.AllKeys');
