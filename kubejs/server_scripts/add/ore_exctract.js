@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "createoreexcavation:drilling",
     "drill": { "item": "createoreexcavation:netherite_drill" },
-    "fluid": { "amount": 100, "fluid": "kubejs:drilling_fluid" },
+    "fluid": { "amount": 150, "fluid": "kubejs:drilling_fluid" },
     "output": [
       { "item": "kubejs:aluminite", "count": 6 }
     ],

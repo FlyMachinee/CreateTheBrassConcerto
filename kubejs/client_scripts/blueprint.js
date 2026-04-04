@@ -76,7 +76,7 @@ NativeEvents.onEvent($RegisterItemDecorationsEvent, event => {
         let renderY = yOffset + 6
         let nbtItem = stack.getNbt()?.Item || "minecraft:air"
         guiGraphics.pose().pushPose()
-        guiGraphics.pose().translate(renderX, renderY, 200)
+        guiGraphics.pose().translate(renderX, renderY, 100)
         guiGraphics.pose().scale(0.65, 0.65, 0.65)
         guiGraphics.renderItem(Item.of(nbtItem), 0, 0)
         guiGraphics.pose().popPose()

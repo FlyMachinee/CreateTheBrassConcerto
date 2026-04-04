@@ -48,8 +48,8 @@ Ponder.registry((event) => {
         }
         scene.idle(30);
         scene.addKeyframe();
-        scene.text(60, "有些配方需要氧气，你可以向这两个3*1*1的区域泵出氧气流体从而输入氧气（图中结构仅做演示！）");
-        scene.overlay.showOutline("red", {}, [3, 4, 5, 3, 4, 7], 30);
+        scene.text(60, "有些配方需要氧气，高炉可以从此处的容器中提取氧气（图中结构仅做演示！）");
+        scene.overlay.showOutline("red", {}, [3, 4, 6], 30);
         scene.showControls(30, [3, 4, 6], "up").withItem("kubejs:oxygen_bucket")
         scene.idle(20);
         for (let i of [[0, 2, 6], [1, 2, 6], [2, 2, 6], [1, 3, 6], [2, 3, 6], [1, 4, 6], [2, 4, 6], [3, 4, 6], [1, 5, 6], [2, 5, 6], [3, 5, 6], [1, 6, 6], [2, 6, 6], [3, 6, 6], [3, 4, 5], [3, 4, 6]]) {
@@ -58,7 +58,7 @@ Ponder.registry((event) => {
         scene.idle(20);
         scene.rotateCameraY(90);
         scene.idle(15);
-        scene.overlay.showOutline("red", {}, [11, 4, 5, 11, 4, 7], 30);
+        scene.overlay.showOutline("red", {}, [11, 4, 6], 30);
         scene.showControls(30, [11, 4, 6], "up").withItem("kubejs:oxygen_bucket")
         scene.idle(20);
         for (let i of [[14, 2, 6], [13, 2, 6], [12, 2, 6], [13, 3, 6], [12, 3, 6], [13, 4, 6], [12, 4, 6], [11, 4, 6], [13, 5, 6], [12, 5, 6], [11, 5, 6], [13, 6, 6], [12, 6, 6], [11, 6, 6], [11, 4, 5], [11, 4, 6]]) {
@@ -68,7 +68,7 @@ Ponder.registry((event) => {
         scene.rotateCameraY(-90);
         scene.idle(35);
         scene.addKeyframe();
-        scene.text(60, "有些配方需要其它流体，你可以向这两个位置泵出对应流体从而输入");
+        scene.text(60, "有些配方需要其它流体，高炉可以从此处的容器中提取对应流体！");
         scene.overlay.showOutline("red", {}, [6, 11, 6], 30);
         scene.showControls(30, [6, 11, 6], "up").withItem("kubejs:industrial_iron_bucket")
         scene.idle(40);
@@ -83,24 +83,6 @@ Ponder.registry((event) => {
         scene.text(60, "上方核心控制器周围的漏斗则可以自由调整，用于物品的输入输出");
         scene.overlay.showOutline("green", {}, [6, 19, 5, 8, 19, 7], 60);
         scene.idle(80);
-        scene.addKeyframe();
-        scene.rotateCameraY(-60);
-        scene.text(60, "此外，为了输出流体产物，你必须为此处提供足够的转速", [6, 3, 9]);
-        scene.overlay.showOutline("green", {}, [6, 2, 9, 6, 4, 9], 30);
-        scene.world.modifyTileNBT([6, 2, 9], (nbt) => { nbt.Speed = 128.0 });
-        scene.world.modifyTileNBT([6, 3, 9], (nbt) => { nbt.Speed = -128.0 });
-        scene.world.modifyTileNBT([6, 4, 9], (nbt) => { nbt.Speed = 128.0 });
-        scene.world.modifyTileNBT([8, 2, 9], (nbt) => { nbt.Speed = 128.0 });
-        scene.world.modifyTileNBT([8, 3, 9], (nbt) => { nbt.Speed = -128.0 });
-        scene.world.modifyTileNBT([8, 4, 9], (nbt) => { nbt.Speed = 128.0 });
-        scene.idle(40);
-        scene.rotateCameraY(-135);
-        scene.idle(15);
-        scene.overlay.showOutline("green", {}, [8, 2, 9, 8, 4, 9], 30);
-        scene.idle(40);
-        scene.rotateCameraY(-165);
-        scene.idle(35);
-        scene.addKeyframe();
         scene.addKeyframe();
         const link = scene.world.showIndependentSection([0, 22, 0, 14, 39, 14], Direction.down, 30)
         scene.world.moveSection(link, [0, -21, 0], 20)

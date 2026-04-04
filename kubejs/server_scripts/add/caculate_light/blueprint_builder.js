@@ -216,9 +216,8 @@ ServerEvents.recipes(event => {
     return ({
       "type": "custommachinery:item",
       "mode": "input",
-      "item":  item,
-      "amount": 1,
-      "slot": "filter"
+      "item": item,
+      "amount": 1
     })
   }
   function BlueprintBuilderRecipe(RequirementList, id, time) {

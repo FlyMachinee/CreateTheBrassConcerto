@@ -987,8 +987,8 @@ ServerEvents.recipes(event => {
             AlloyFurnaceReplace(4, "kubejs:aluminum"),
             AlloyFurnaceItem("kubejs:aluminum_slag", 48, "input"),
             AlloyFurnaceItem("kubejs:salt", 8, "input"),
-            AlloyFurnaceItem("kubejs:granite_alloy", 4, "input"),
-            AlloyFurnaceItem("kubejs:diorite", 4, "output"),
+            AlloyFurnaceItem("kubejs:granite_alloy", 8, "input"),
+            AlloyFurnaceItem("kubejs:diorite", 8, "output"),
         ],
         "jei": [
             AlloyFurnaceStructure,
@@ -996,8 +996,8 @@ ServerEvents.recipes(event => {
             AlloyFurnaceFluid("kubejs:aluminum", 4),
             AlloyFurnaceItem("kubejs:aluminum_slag", 48, "input"),
             AlloyFurnaceItem("kubejs:salt", 8, "input"),
-            AlloyFurnaceItem("kubejs:granite_alloy", 4, "input"),
-            AlloyFurnaceItem("kubejs:diorite", 4, "output"),
+            AlloyFurnaceItem("kubejs:granite_alloy", 8, "input"),
+            AlloyFurnaceItem("kubejs:diorite", 8, "output"),
         ]
     }).id("dut_create:alloy_furnace/aluminum_from_slag")
     event.custom({

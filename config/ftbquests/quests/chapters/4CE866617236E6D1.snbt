@@ -32,12 +32,6 @@
 			description: ["{ftbquests.chapter_4CE866617236E6D1.quest_28247D1DB799E33A.desc_01}"]
 			icon: "minecraft:red_bed"
 			id: "28247D1DB799E33A"
-			rewards: [{
-				auto: "enabled"
-				id: "657DB309AC5F28A7"
-				item: "ftbquests:book"
-				type: "item"
-			}]
 			tasks: [{
 				dimension: "minecraft:overworld"
 				id: "7E2B9E5F007B9D5E"

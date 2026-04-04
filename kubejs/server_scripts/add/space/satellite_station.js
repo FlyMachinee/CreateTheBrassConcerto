@@ -248,76 +248,7 @@ ServerEvents.recipes(event => {
       SatelliteStationStructure
     ]
   }).id("dut_create:satellite_station/empty")
-  
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:satellite_station",
-    "time": 1,
-    "error": true,
-    "priority": 10,
-    "requirements": [
-      SatelliteStationStructure,
-      {
-        "type": "custommachinery:item",
-        "mode": "input",
-        "item": "kubejs:tin_hard_disk",
-        "amount": 1,
-        "nbt": '{Damage:1024}'
-      }, {
-        "type": "custommachinery:item",
-        "mode": "output",
-        "item": "kubejs:tin_hard_disk",
-        "amount": 1,
-        "nbt": '{Damage:1024}'
-      }
-    ],
-  }).id("dut_create:satellite_station/disk_translate/tin")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:satellite_station",
-    "time": 1,
-    "error": true,
-    "priority": 10,
-    "requirements": [
-      SatelliteStationStructure,
-      {
-        "type": "custommachinery:item",
-        "mode": "input",
-        "item": "kubejs:aluminum_hard_disk",
-        "amount": 1,
-        "nbt": '{Damage:1024}'
-      }, {
-        "type": "custommachinery:item",
-        "mode": "output",
-        "item": "kubejs:aluminum_hard_disk",
-        "amount": 1,
-        "nbt": '{Damage:1024}'
-      }
-    ],
-  }).id("dut_create:satellite_station/disk_translate/aluminum")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:satellite_station",
-    "time": 1,
-    "error": true,
-    "priority": 10,
-    "requirements": [
-      SatelliteStationStructure,
-      {
-        "type": "custommachinery:item",
-        "mode": "input",
-        "item": "kubejs:brass_hard_disk",
-        "amount": 1,
-        "nbt": '{Damage:1024}'
-      }, {
-        "type": "custommachinery:item",
-        "mode": "output",
-        "item": "kubejs:brass_hard_disk",
-        "amount": 1,
-        "nbt": '{Damage:1024}'
-      }
-    ],
-  }).id("dut_create:satellite_station/disk_translate/brass")
+
   //谐振原虫
   event.custom({
     "type": "custommachinery:custom_machine",
@@ -390,71 +321,149 @@ ServerEvents.recipes(event => {
   SatelliteStationGetData("ad_astra:earth_globe", "earth", "ad_astra:earth_orbit")
   SatelliteStationGetData("ad_astra:moon_globe", "moon", "ad_astra:moon_orbit")
 
-  SatelliteStationMining("create:crushed_raw_iron", 1, 8, [
+  SatelliteStationMining("kubejs:aluminite", 4, 64, [
     SatelliteStationBiome,
-    SatelliteStationItem("create:crushed_raw_iron", 72, "output"),
-    SatelliteStationItemChance("create:crushed_raw_iron", 56, "output", 0.5),
-    SatelliteStationItem("minecraft:andesite", 24, "output"),
-    SatelliteStationItemChance("minecraft:redstone", 64, "output", 0.75)
+    SatelliteStationItem("kubejs:aluminum_meteorite", 48, "output"),
+    SatelliteStationItem("kubejs:salt", 32, "output"),
+    SatelliteStationItem("minecraft:tuff", 32, "output")
   ])
-  SatelliteStationMining("create:crushed_raw_copper", 1, 8, [
+  event.custom({
+    "type": "create:pressing",
+    "ingredients": [
+      { "item": "kubejs:aluminum_meteorite" }
+    ],
+    "results": [
+      { "item": "kubejs:aluminite", "count": 8 }
+    ]
+  }).id("dut_create:pressing_meteorite/aluminum_meteorite")
+
+  SatelliteStationMining("kubejs:metal_meteorite", 1, 8, [
     SatelliteStationBiome,
-    SatelliteStationItem("create:crushed_raw_copper", 56, "output"),
-    SatelliteStationItemChance("create:crushed_raw_copper", 36, "output", 0.5),
-    SatelliteStationItem("minecraft:calcite", 24, "output"),
-    SatelliteStationItemChance("kubejs:sulphur", 48, "output", 0.5)
+    SatelliteStationItem("kubejs:metal_meteorite", 96, "output"),
+    SatelliteStationItemChance("ad_astra:sky_stone", 1, "output", 0.01)
   ])
-  SatelliteStationMining("create:crushed_raw_gold", 1, 8, [
-    SatelliteStationBiome,
-    SatelliteStationItem("create:crushed_raw_gold", 56, "output"),
-    SatelliteStationItemChance("create:crushed_raw_gold", 36, "output", 0.5),
-    SatelliteStationItem("minecraft:diorite", 24, "output"),
-    SatelliteStationItemChance("minecraft:quartz", 48, "output", 0.5)
-  ])
-  SatelliteStationMining("create:crushed_raw_tin", 1, 8, [
-    SatelliteStationBiome,
-    SatelliteStationItem("create:crushed_raw_tin", 52, "output"),
-    SatelliteStationItemChance("create:crushed_raw_tin", 36, "output", 0.5),
-    SatelliteStationItem("minecraft:granite", 24, "output"),
-    SatelliteStationItemChance("minecraft:glowstone_dust", 48, "output", 0.5)
-  ])
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:metal_meteorite" }],
+    "processingTime": 20,
+    "results": [
+      { "fluid": "kubejs:tin", "amount": IngotFluid * 10 },
+      { "item": "minecraft:glowstone_dust", "count": 1 }
+    ]
+  }).id("dut_create:melting_meteorite/tin")
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:metal_meteorite" }],
+    "processingTime": 20,
+    "results": [
+      { "fluid": "kubejs:tin", "amount": IngotFluid * 10 },
+      { "item": "kubejs:sulphur", "count": 5 }
+    ]
+  }).id("dut_create:melting_meteorite/tin_1")
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:metal_meteorite" }],
+    "processingTime": 20,
+    "results": [
+      { "fluid": "kubejs:iron", "amount": IngotFluid * 10 },
+      { "item": "minecraft:redstone", "count": 1 }
+    ]
+  }).id("dut_create:melting_meteorite/iron")
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:metal_meteorite" }],
+    "processingTime": 20,
+    "results": [
+      { "fluid": "kubejs:copper", "amount": IngotFluid * 10 },
+      { "item": "minecraft:amethyst_shard", "count": 16 }
+    ]
+  }).id("dut_create:melting_meteorite/copper")
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:metal_meteorite" }],
+    "processingTime": 20,
+    "results": [
+      { "fluid": "kubejs:gold", "amount": IngotFluid * 10 },
+      { "item": "create:cinder_flour", "count": 10 }
+    ]
+  }).id("dut_create:melting_meteorite/gold")
+
   SatelliteStationMining("create:brass_ingot", 1, 8, [
     SatelliteStationBiome,
-    SatelliteStationItem("create:brass_ingot", 36, "output"),
-    SatelliteStationItemChance("create:brass_ingot", 24, "output", 0.5),
-    SatelliteStationItem("kubejs:diorite_alloy", 8, "output"),
-    SatelliteStationItem("kubejs:granite_alloy", 36, "output"),
-    SatelliteStationItemChance("create:andesite_alloy", 36, "output", 0.5)
+    SatelliteStationItem("kubejs:alloy_meteorite", 64, "output"),
+    SatelliteStationItemChance("ad_astra:sky_stone", 1, "output", 0.01)
   ])
-  SatelliteStationMining("kubejs:aluminite", 3, 64, [
+  event.custom({
+    "type": "create:compacting",
+    "ingredients": [
+      { "item": "kubejs:alloy_meteorite" }
+    ],
+    "results": [
+      { "item": "create:andesite_alloy", "count": 8 },
+      { "item": "kubejs:granite_alloy", "count": 8 },
+      { "item": "kubejs:diorite_alloy", "count": 8 }
+    ]
+  }).id("dut_create:compacting_meteorite/alloy_meteorite")
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:alloy_meteorite" }],
+    "processingTime": 20,
+    "results": [
+      { "fluid": "kubejs:brass", "amount": IngotFluid * 10 },
+      { "item": "kubejs:salt", "count": 16 }
+    ]
+  }).id("dut_create:melting_meteorite/brass")
+  event.custom({
+    "type": "createbigcannons:melting",
+    "heatRequirement": "heated",
+    "ingredients": [{ "item": "kubejs:alloy_meteorite" }],
+    "processingTime": 20,
+    "results": [
+      { "fluid": "kubejs:industrial_iron", "amount": IngotFluid * 10 },
+      { "item": "kubejs:granite_alloy", "count": 8 }
+    ]
+  }).id("dut_create:melting_meteorite/industrial_iron")
+
+  SatelliteStationMining("kubejs:crushed_coal", 1, 8, [
     SatelliteStationBiome,
-    SatelliteStationItem("kubejs:aluminite", 36, "output"),
-    SatelliteStationItemChance("kubejs:aluminite", 24, "output", 0.5),
-    SatelliteStationItem("kubejs:salt", 16, "output"),
-    SatelliteStationItem("minecraft:tuff", 24, "output")
+    SatelliteStationItem("kubejs:carbon_meteorite", 48, "output"),
+    SatelliteStationItemChance("ad_astra:sky_stone", 1, "output", 0.05)
   ])
-  SatelliteStationMining("kubejs:crushed_coal", 2, 8, [
-    SatelliteStationBiome,
-    SatelliteStationItem("kubejs:crushed_coal", 32, "output"),
-    SatelliteStationItemChance("kubejs:crushed_coal", 24, "output", 0.5),
-    SatelliteStationItem("kubejs:graphite", 24, "output"),
-    SatelliteStationItemChance("ad_astra:sky_stone", 1, "output", 0.05),
-    SatelliteStationItemChance("ad_astra:ice_shard", 24, "output", 0.5)
-  ])
-  SatelliteStationMining("minecraft:ice", 1, 8, [
-    SatelliteStationBiome,
-    SatelliteStationItem("minecraft:ice", 24, "output"),
-    SatelliteStationItemChance("minecraft:packed_ice", 12, "output", 0.5),
-    SatelliteStationItem("minecraft:packed_ice", 16, "output"),
-    SatelliteStationItemChance("minecraft:blue_ice", 4, "output", 0.25),
-    SatelliteStationItemChance("ad_astra:ice_shard", 48, "output", 0.5)
-  ])
+  event.custom({
+    "type": "createdieselgenerators:basin_fermenting",
+    "ingredients": [
+      { "item": "kubejs:peat_protozoa" },
+      { "item": "kubejs:carbon_meteorite" }
+    ],
+    "processingTime": 20,
+    "results": [
+      { "item": "kubejs:peat_protozoa" },
+      { "item": "kubejs:crushed_coal", "count": 24 }
+    ]
+  }).id('dut_create:ferment_meteorite/crushed_coal')
+  event.custom({
+    "type": "createdieselgenerators:basin_fermenting",
+    "ingredients": [
+      { "item": "kubejs:peat_protozoa" },
+      { "item": "kubejs:carbon_meteorite" }
+    ],
+    "processingTime": 20,
+    "results": [
+      { "item": "kubejs:peat_protozoa" },
+      { "item": "kubejs:graphite", "count": 12 }
+    ]
+  }).id('dut_create:ferment_meteorite/graphite')
+
   SatelliteStationMining("createloveandwar:raw_tungsten", 6, 64, [
     SatelliteStationDimension('ad_astra:earth_orbit'),
-    SatelliteStationItem("createloveandwar:raw_tungsten", 12, "output"),
-    SatelliteStationItemChance("createloveandwar:crushed_tungsten", 8, "output", 0.5),
-    SatelliteStationItem("createloveandwar:tungsten_nugget", 4, "output"),
-    SatelliteStationItemChance("createloveandwar:tungsten_nugget", 6, "output", 0.5),
-    SatelliteStationItemChance("create:crushed_raw_tin", 64, "output", 0.25)
+    SatelliteStationItem("createloveandwar:raw_tungsten", 24, "output"),
+    SatelliteStationItem("createloveandwar:tungsten_nugget", 8, "output"),
+    SatelliteStationItemChance("create:crushed_raw_tin", 32, "output", 0.25)
   ])
 })

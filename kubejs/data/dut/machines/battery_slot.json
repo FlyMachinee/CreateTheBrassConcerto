@@ -35,7 +35,10 @@
             ],
             "whitelist": true,
             "mode": "input",
-            "variant": "custommachinery:energy"
+            "variant": "custommachinery:energy",
+            "config": {
+                "default": "both"
+            }
         },
         {
             "type": "custommachinery:item",

@@ -1,29 +1,6 @@
 ServerEvents.recipes(event => {
   //增殖
   event.custom({
-    "type": "create:sequenced_assembly",
-    "ingredient": { "item": "kubejs:blaze_chlamydia" },
-    "results": [
-      { "item": "kubejs:blaze_chlamydia", "count": 2 },
-    ],
-    "loops": 1,
-    "sequence": [
-      {
-        "type": "create:filling",
-        "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
-        { "amount": 1000, "fluidTag": "dut_create:superheated_fuel" }],
-        "results": [{ "item": "kubejs:blaze_chlamydia" }]
-      },
-      {
-        "type": "create:filling",
-        "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
-        { "amount": 250, "fluid": "kubejs:nitric_acid" }],
-        "results": [{ "item": "kubejs:blaze_chlamydia" }]
-      }
-    ],
-    "transitionalItem": { "item": "kubejs:blaze_chlamydia" }
-  }).id("dut_create:blaze_chlamydia")
-  event.custom({
     "type": "create:filling",
     "ingredients": [{ "item": "kubejs:blaze_chlamydia" },
     { "amount": 500, "fluid": "kubejs:superheated_steam" }],

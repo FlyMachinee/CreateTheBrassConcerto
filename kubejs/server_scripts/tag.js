@@ -29,7 +29,6 @@ let multiblock_list=[
 			"kubejs:electron_tube_computer",
 			"kubejs:assembling_machine",
 			"kubejs:infinity_fetching_pool",
-			"kubejs:carbon_electrode",
 			"kubejs:electrolytic_cell",
 			"kubejs:shaft_furnace",
 			"kubejs:construction_station",

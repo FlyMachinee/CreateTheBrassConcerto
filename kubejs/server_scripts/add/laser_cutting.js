@@ -74,19 +74,6 @@ ServerEvents.recipes(event => {
         "energy": 500,
         "maxChargeRate": 80
     }).id("dut_create:laser_cutting/letter_sign")
-    //控制芯片
-    event.remove({ output: 'create_connected:control_chip', not: { mod: 'kubejs' } })
-    event.custom({
-        "type": "vintageimprovements:laser_cutting",
-        "ingredients": [
-            { "item": "kubejs:lime_circuit_board" }
-        ],
-        "results": [
-            { "item": "create_connected:control_chip", "count": 1}
-        ],
-        "energy": 12000,
-        "maxChargeRate": 400
-    }).id("dut_create:laser_cutting/control_chip")
     //光辉石
     event.custom(
     {

@@ -33,7 +33,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:planetary_gear" },
       { "item": "kubejs:optical_device" }
     ],
-    "results": [{ "item": "kubejs:satellite_mining_module", "count": 12 }]
+    "results": [{ "item": "kubejs:satellite_mining_module", "count": 2 }]
   }).id("dut_create:deploying/satellite_mining_module")
   event.custom({
     "type": "minecraft:crafting_shaped",
@@ -101,23 +101,13 @@ ServerEvents.recipes(event => {
     ],
     "sequence": [
       {
-        "type": "vintageimprovements:polishing",
-        "speedLimits": 3,
-        "ingredients": [{ "item": "kubejs:carborundum" }],
-        "results": [
-          { "item": "kubejs:carborundum", }
-        ],
-        "processingTime": 60
-      },
-      {
         "type": "vintageimprovements:pressurizing",
-        "heatRequirement": "superheated",
         "ingredients": [
           { "item": "kubejs:carborundum" },
-          { "fluid": "kubejs:muriatic_acid", "amount": 500 }
+          { "fluid": "kubejs:muriatic_acid", "amount": 250 }
         ],
         "results": [{ "item": "kubejs:carborundum" }],
-        "processingTime": 60
+        "processingTime": 20
       },
       {
         "type": "create:filling",
@@ -130,6 +120,34 @@ ServerEvents.recipes(event => {
       "item": "kubejs:carborundum"
     }
   }).id("dut_create:sequnced_assembly/carborundum_lens")
+  event.custom({
+    "type": "create:sequenced_assembly",
+    "ingredient": { "item": "kubejs:carborundum" },
+    "loops": 1,
+    "results": [
+      { "item": "kubejs:carborundum_lens" }
+    ],
+    "sequence": [
+      {
+        "type": "vintageimprovements:polishing",
+        "speedLimits": 3,
+        "ingredients": [{ "item": "kubejs:carborundum" }],
+        "results": [
+          { "item": "kubejs:carborundum" }
+        ],
+        "processingTime": 20
+      },
+      {
+        "type": "create:filling",
+        "ingredients": [{ "item": "kubejs:carborundum" },
+        { "amount": 250, "fluid": "kubejs:duraplas" }],
+        "results": [{ "item": "kubejs:carborundum" }]
+      }
+    ],
+    "transitionalItem": {
+      "item": "kubejs:carborundum"
+    }
+  }).id("dut_create:sequnced_assembly/carborundum_lens_duraplas")
   //光学设备
   event.custom({
     "type": "create:sequenced_assembly",

@@ -41,7 +41,7 @@ Ponder.registry((event) => {
         scene.idle(30);
 
         scene.addKeyframe();
-        scene.text(60, "而菌盖收割机会消耗合适的液体并自动收割上方的菌柄类方块");
+        scene.text(60, "而菌柄收割机会消耗合适的液体并自动收割上方的菌柄类方块");
         scene.overlay.showOutline("green", { "glue": true }, [2, 3, 4], 30);
         displayBlock("minecraft:mushroom_stem", [2, 3, 4])
         displayBlock("ad_astra:aeronos_stem", [2, 3, 4])

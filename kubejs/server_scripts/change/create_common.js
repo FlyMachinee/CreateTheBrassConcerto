@@ -106,7 +106,7 @@ ServerEvents.recipes(event => {
     "key": {
       "B": { "item": "kubejs:differential" },
       "C": { "item": "minecraft:dried_kelp_block" },
-      "I": { "item": "create_connected:control_chip" }
+      "I": { "item": "kubejs:lime_circuit_board" }
     },
     "pattern": [
       "B",

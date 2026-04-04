@@ -40,7 +40,6 @@
             "type": "custommachinery:item",
             "id": "item1",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -50,7 +49,6 @@
             "type": "custommachinery:item",
             "id": "item2",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -60,7 +58,6 @@
             "type": "custommachinery:item",
             "id": "item3",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -70,7 +67,6 @@
             "type": "custommachinery:item",
             "id": "item4",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -80,7 +76,6 @@
             "type": "custommachinery:item",
             "id": "item5",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -90,7 +85,6 @@
             "type": "custommachinery:item",
             "id": "item6",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -100,7 +94,6 @@
             "type": "custommachinery:item",
             "id": "item7",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -110,7 +103,6 @@
             "type": "custommachinery:item",
             "id": "item8",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -120,7 +112,6 @@
             "type": "custommachinery:item",
             "id": "item9",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -130,7 +121,6 @@
             "type": "custommachinery:item",
             "id": "item10",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
             ],
@@ -140,7 +130,6 @@
             "type": "custommachinery:item",
             "id": "barrel_input",
             "mode": "input",
-            "locked": false,
             "filter": [
                 "minecraft:barrel"
             ],
@@ -150,7 +139,6 @@
             "type": "custommachinery:item",
             "id": "disk_input",
             "mode": "both",
-            "locked": false,
             "filter": [
                 "#dut_create:data_disk"
             ],
@@ -160,7 +148,6 @@
             "type": "custommachinery:item",
             "id": "out1",
             "mode": "output",
-            "locked": false,
             "config": {
                 "default":"output"
             }
@@ -169,7 +156,6 @@
             "type": "custommachinery:item",
             "id": "out2",
             "mode": "output",
-            "locked": false,
             "config": {
                 "default":"output"
             }
@@ -178,7 +164,6 @@
             "type": "custommachinery:item",
             "id": "out3",
             "mode": "output",
-            "locked": false,
             "config": {
                 "default":"output"
             }
@@ -187,7 +172,6 @@
             "type": "custommachinery:item",
             "id": "out4",
             "mode": "output",
-            "locked": false,
             "config": {
                 "default":"output"
             }
@@ -259,13 +243,6 @@
         },
         {
             "type": "custommachinery:slot",
-            "x": 47,
-            "y": 70,
-            "id": "disk_input",
-            "texture": "kubejs:textures/gui/disk_slot.png"
-        },
-        {
-            "type": "custommachinery:slot",
             "x": 65,
             "y": 47,
             "id": "item7",
@@ -273,24 +250,10 @@
         },
         {
             "type": "custommachinery:slot",
-            "x": 65,
-            "y": 70,
-            "id": "barrel_input",
-            "texture": "kubejs:textures/gui/barrel_slot.png"
-        },
-        {
-            "type": "custommachinery:slot",
             "x": 83,
             "y": 47,
             "id": "item8",
             "texture": "custommachinery:textures/gui/base_slot.png"
-        },
-        {
-            "type": "custommachinery:slot",
-            "x": 83,
-            "y": 70,
-            "id": "filter",
-            "texture": "kubejs:textures/gui/filter_slot.png"
         },
         {
             "type": "custommachinery:slot",
@@ -305,6 +268,27 @@
             "y": 47,
             "id": "item10",
             "texture": "custommachinery:textures/gui/base_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 47,
+            "y": 70,
+            "id": "disk_input",
+            "texture": "kubejs:textures/gui/disk_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 65,
+            "y": 70,
+            "id": "barrel_input",
+            "texture": "kubejs:textures/gui/barrel_slot.png"
+        },
+        {
+            "type": "custommachinery:slot",
+            "x": 83,
+            "y": 70,
+            "id": "filter",
+            "texture": "kubejs:textures/gui/filter_slot.png"
         },
         {
             "type": "custommachinery:slot",

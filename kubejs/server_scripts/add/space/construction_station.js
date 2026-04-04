@@ -474,7 +474,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("create:brass_hand", 4, "input"),
       ConstructionStationItem("kubejs:differential", 4, "input"),
       ConstructionStationItem("kubejs:cardan_joint", 4, "input"),
-      ConstructionStationItem("create_connected:control_chip", 4, "input"),
+      ConstructionStationItem("kubejs:lime_circuit_board", 4, "input"),
       ConstructionStationFluid("kubejs:slime_colloid", 500),
       ConstructionStationItem("create:mechanical_arm", 4, "output")
     ],

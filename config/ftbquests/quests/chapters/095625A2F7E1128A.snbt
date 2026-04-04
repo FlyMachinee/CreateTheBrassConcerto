@@ -549,13 +549,13 @@
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_4A04F41BC7C33EBF.desc_01}"]
 			id: "4A04F41BC7C33EBF"
 			rewards: [{
-				id: "56574042B4863D93"
+				id: "05CFE90AD817EAC4"
 				item: {
 					Count: 1
 					id: "createandesiteabound:simple_schematic"
 					tag: {
-						File: "CBC/schematic.infinity_fetching_pool.nbt"
-						Item: "kubejs:infinity_fetching_pool"
+						File: "CBC/schematic.condenser.nbt"
+						Item: "kubejs:condenser"
 					}
 				}
 				type: "item"

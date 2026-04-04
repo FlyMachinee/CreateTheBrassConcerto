@@ -252,7 +252,7 @@ ServerEvents.recipes(event => {
 
     CrusherCommon([{ id: "kubejs:raw_tin", count: 64 }], [{ id: "create:crushed_raw_tin", count: 96 }], "tin")
 
-    CrusherCommon([{ id: "kubejs:aluminite", count: 64 }], [{ id: "kubejs:aluminite_powder", count: 80 }], "aluminite")
+    CrusherCommon([{ id: "kubejs:aluminite", count: 64 }], [{ id: "kubejs:aluminite_powder", count: 96 }], "aluminite")
 
     CrusherCommon([{ id: "minecraft:quartz", count: 64 }], [{ id: "create:experience_nugget", count: 32 }], "quartz")
 

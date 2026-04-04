@@ -11,6 +11,7 @@ ServerEvents.recipes(event => {
   event.remove({id:"ad_astra:oxygen_sensor"})
   event.remove({id:"ad_astra:wrench"})
   event.remove({id:"ad_astra:coal_generator"})
+  event.remove({id:"ad_astra:ostrum_fluid_pipe"})
   event.custom({
     "type": "minecraft:crafting_shapeless",
     "ingredients": [

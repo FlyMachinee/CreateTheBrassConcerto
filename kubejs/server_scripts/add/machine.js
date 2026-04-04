@@ -159,7 +159,7 @@ ServerEvents.recipes(event => {
             "A": { "tag": "forge:plates/brass" },
             "B": { "item": "create:framed_glass_trapdoor" },
             "C": { "tag": "forge:ingots/brass" },
-            "D": { "item": "create_connected:control_chip" },
+            "D": { "item": "kubejs:lime_circuit_board" },
             "E": { "item": "create:encased_fan" }
         },
         "pattern": [

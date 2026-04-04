@@ -8,3 +8,4 @@ itemSlotCycleTime = 1000
 needAdvancedInfoForRecipeID = true
 modelFolders = ["machine", "machines"]
 defaultNewMachinePath = ""
+dontSaveSideConfig = true

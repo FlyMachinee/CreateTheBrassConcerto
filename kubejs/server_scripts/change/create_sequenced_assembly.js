@@ -210,7 +210,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:deploying",
         "ingredients": [{ "item": "kubejs:incomplete_brass_box" },
-        { "item": "create_connected:control_chip" }],
+        { "item": "kubejs:lime_circuit_board" }],
         "results": [{ "item": "kubejs:incomplete_brass_box" }]
       }
     ],

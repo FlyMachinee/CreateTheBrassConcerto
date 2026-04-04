@@ -190,6 +190,12 @@
     },
     {
         "matchItems": [
+            "create_connected:control_chip"
+        ],
+        "resultItems": "kubejs:lime_circuit_board"
+    },
+    {
+        "matchItems": [
             "createloveandwar:propellant_sheet",
             "createloveandwar:pistol_casing",
             "createloveandwar:rifle_casing",
