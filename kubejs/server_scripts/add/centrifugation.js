@@ -134,11 +134,11 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "vintageimprovements:centrifugation",
         "ingredients": [
-            { "fluid": "kubejs:brass", "amount": 810 }
+            { "fluid": "kubejs:brass", "amount": 9*IngotFluid }
         ],
         "results": [
-            { "fluid": "kubejs:gold", "amount": 270 },
-            { "fluid": "kubejs:copper", "amount": 270 }
+            { "fluid": "kubejs:gold", "amount": 3*IngotFluid },
+            { "fluid": "kubejs:copper", "amount": 3*IngotFluid }
         ],
         "processingTime": 60
     }).id("dut_create:centrifugation/brass")

@@ -233,7 +233,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem('iceandfire:fire_dragon_heart', 4, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_flesh', 6, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_blood', 8, "input"),
-      ConstructionStationFluid("kubejs:gold", 810),
+      ConstructionStationFluid("kubejs:gold", IngotBlock*IngotFluid),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 1),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.5)
     ],
@@ -252,7 +252,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem('iceandfire:fire_dragon_flesh', 6, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_blood', 8, "input"),
       ConstructionStationFluid("kubejs:covariant_heat", 250),
-      ConstructionStationFluid("kubejs:gold", 810),
+      ConstructionStationFluid("kubejs:gold", IngotBlock*IngotFluid),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 1),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.5)
     ],
@@ -268,7 +268,7 @@ ServerEvents.recipes(event => {
       ConstructionStationCustomEnergy(720),
       ConstructionStationItem("kubejs:graphene_coil", 3, "input"),
       ConstructionStationFluid("kubejs:electro_hydro", 250),
-      ConstructionStationFluid("kubejs:tin", 500),
+      ConstructionStationFluid("kubejs:tin", 4*IngotFluid),
       ConstructionStationItem("kubejs:carbon_electrode", 48, "output")
     ],
   }).id("dut_create:construction_station/carbon_electrode")
@@ -422,7 +422,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("kubejs:electric_gear", 16, "input"),
       ConstructionStationItem("create:mechanical_pump", 16, "input"),
       ConstructionStationItem("create:sturdy_sheet", 16, "input"),
-      ConstructionStationFluid("kubejs:gold", 900),
+      ConstructionStationFluid("kubejs:gold", 10*IngotFluid),
       ConstructionStationFluid("kubejs:slime_colloid", 1800),
       ConstructionStationItem("create:precision_mechanism", 24, "output")
     ],
@@ -440,7 +440,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("create:sturdy_sheet", 16, "input"),
       ConstructionStationItem("kubejs:fluid_mechanism", 32, "input"),
       ConstructionStationItem("kubejs:circuit_board", 16, "input"),
-      ConstructionStationFluid("kubejs:brass", 4320),
+      ConstructionStationFluid("kubejs:brass", 48*IngotFluid),
       ConstructionStationItem("create:precision_mechanism", 16, "output")
     ],
   }).id("dut_create:construction_station/precision_mechanism_set")
@@ -527,7 +527,7 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationFluid("kubejs:aluminum", 1800),
+      ConstructionStationFluid("kubejs:aluminum", 20*IngotFluid),
       ConstructionStationFluid("kubejs:copper", 720),
       ConstructionStationFluid("kubejs:slime_colloid", 750),
       ConstructionStationItem("kubejs:duraplas_sheet", 4, "input"),

@@ -9,21 +9,21 @@ ServerEvents.recipes(event => {
       "heatRequirement": heatlevel,
       "ingredients": [{ "tag": "forge:storage_blocks/" + item }],
       "processingTime": ingot_time * 3,
-      "results": [{ "amount": 810, "fluid": fluid }]
+      "results": [{ "amount": IngotBlock*IngotFluid, "fluid": fluid }]
     }).id("dut_create:melting/" + item + '_block')
     event.custom({
       "type": "createbigcannons:melting",
       "heatRequirement": heatlevel,
       "ingredients": [{ "tag": "forge:ingots/" + item }],
       "processingTime": ingot_time ,
-      "results": [{ "amount": 90, "fluid": fluid }]
+      "results": [{ "amount": IngotFluid, "fluid": fluid }]
     }).id("dut_create:melting/" + item + '_ingot')
     return 0
   }
   function compacting(item, fluid,item1) {
     event.custom({
       "type": "create:compacting",
-      "ingredients": [{ "amount": 90, "fluid": fluid }],
+      "ingredients": [{ "amount": IngotFluid, "fluid": fluid }],
       "results": [{ "item": item1 }],
     }).id("dut_create:fluid_compacting/" + item)
     return 0
@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
   melting('brass', 'kubejs:brass', 30, "heated")
   melting('iron', 'kubejs:iron', 20, "heated")
   melting('copper', 'kubejs:copper', 20, "heated")
-  melting('gold', 'kubejs:gold', 40, "heated")
+  melting('gold', 'kubejs:gold', 20, "heated")
   melting('tin', 'kubejs:tin', 20, "heated")
   melting('new_zinc', 'kubejs:new_zinc', 20, "heated")
   melting('cast_iron', 'createbigcannons:molten_cast_iron', 20, "heated")

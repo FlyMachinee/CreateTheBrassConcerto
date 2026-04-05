@@ -99,17 +99,6 @@ ServerEvents.recipes(event => {
             { "item": "minecraft:sugar", "count": 6 }
         ]
     }).id('dut_create:ferment/honey_sugar')
-    //加压蒸汽
-    event.custom({
-        "type": "createdieselgenerators:basin_fermenting",
-        "ingredients": [
-            { "fluid": "kubejs:superheated_steam", "amount": 500 }
-        ],
-        "processingTime": 30,
-        "results": [
-            { "fluid": "kubejs:pressurized_steam", "amount": 625 }
-        ]
-    }).id('dut_create:ferment/pressurized_steam')
     //骨头
     event.custom({
         "type": "createdieselgenerators:basin_fermenting",

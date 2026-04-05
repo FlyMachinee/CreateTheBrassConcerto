@@ -22,7 +22,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:duraplas_sheet" },
-        { "amount": 270, "fluid": "kubejs:copper" }],
+        { "amount": 3*IngotFluid, "fluid": "kubejs:copper" }],
         "results": [{ "item": "kubejs:duraplas_sheet" }]
       },
       {
@@ -57,13 +57,13 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:aluminum_sheet" },
-        { "amount": 180, "fluid": "kubejs:aluminum" }],
+        { "amount": 2*IngotFluid, "fluid": "kubejs:aluminum" }],
         "results": [{ "item": "kubejs:aluminum_sheet" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:aluminum_sheet" },
-        { "amount": 180, "fluid": "kubejs:copper" }],
+        { "amount": 2*IngotFluid, "fluid": "kubejs:copper" }],
         "results": [{ "item": "kubejs:aluminum_sheet" }]
       },
       {
@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:aluminum_sheet" },
-        { "amount": 270, "fluid": "kubejs:aluminum" }],
+        { "amount": 3*IngotFluid, "fluid": "kubejs:aluminum" }],
         "results": [{ "item": "kubejs:aluminum_sheet" }]
       },
       {

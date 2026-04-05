@@ -193,7 +193,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("kubejs:io_mechanism", 16, "input"),
       AssemblingMachineItem("kubejs:electric_gear", 16, "input"),
       AssemblingMachineItem("kubejs:rubber", 16, "input"),
-      AssemblingMachineFluid("kubejs:copper", 4320),
+      AssemblingMachineFluid("kubejs:copper", 48*IngotFluid),
       AssemblingMachineItem("kubejs:fluid_mechanism", 16, "output")
     ],
   }).id("dut_create:assembling_machine/fluid_mechanism")
@@ -207,7 +207,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
       AssemblingMachineItem("kubejs:io_mechanism", 6, "input"),
-      AssemblingMachineFluid("kubejs:industrial_iron", 2880),
+      AssemblingMachineFluid("kubejs:industrial_iron", 32*IngotFluid),
       AssemblingMachineItem("kubejs:io_mechanism", 16, "output")
     ],
   }).id("dut_create:assembling_machine/io_mechanism")
@@ -665,7 +665,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("kubejs:industrial_iron_ingot", 3, "input"),
       AssemblingMachineItem("create:brass_sheet", 6, "input"),
       AssemblingMachineItem("kubejs:bearing", 12, "input"),
-      AssemblingMachineFluid("kubejs:copper", 5400),
+      AssemblingMachineFluid("kubejs:copper", 60*IngotFluid),
       AssemblingMachineItem("create:steam_engine", 6, "output")
     ],
   }).id("dut_create:assembling_machine/steam_engine")
@@ -679,7 +679,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
       AssemblingMachineItem("create:brass_casing", 6, "input"),
-      AssemblingMachineFluid("kubejs:industrial_iron", 5000),
+      AssemblingMachineFluid("kubejs:industrial_iron", 54*IngotFluid),
       AssemblingMachineItem("create:railway_casing", 24, "output")
     ],
   }).id("dut_create:assembling_machine/railway_casing")
@@ -710,7 +710,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineEnergy(),
       AssemblingMachineItem("kubejs:mechanical_core", 12, "input"),
       AssemblingMachineItem("create:mechanical_pump", 12, "input"),
-      AssemblingMachineFluid("kubejs:industrial_iron", 3000),
+      AssemblingMachineFluid("kubejs:industrial_iron", 32*IngotFluid),
       AssemblingMachineItem("vintageimprovements:vacuum_chamber", 12, "output")
     ],
   }).id("dut_create:assembling_machine/vacuum_chamber")
@@ -910,7 +910,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("kubejs:empty_parts_box", 16, "input"),
       AssemblingMachineItem("kubejs:planetary_gear", 16, "input"),
       AssemblingMachineItem("kubejs:electric_gear", 16, "input"),
-      AssemblingMachineFluid("kubejs:brass", 1440),
+      AssemblingMachineFluid("kubejs:brass", 16*IngotFluid),
       AssemblingMachineItem("kubejs:brass_parts_box", 16, "output")
     ],
   }).id("dut_create:assembling_machine/brass_parts_box")

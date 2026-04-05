@@ -409,8 +409,8 @@ ServerEvents.recipes(event => {
       ShaftFurnaceItem("#dut_create:shaft_furnace", 3, "input"),
       ShaftFurnaceItem("#dut_create:make_steel", 16, "input"),
       ShaftFurnaceFluid("kubejs:oxygen", 8000, "oxygen", "input"),
-      ShaftFurnaceFluid("kubejs:industrial_iron", 2880, "fluid", "input"),
-      ShaftFurnaceFluid("kubejs:incomplete_steel", 3240, "fluid_output", "output"),
+      ShaftFurnaceFluid("kubejs:industrial_iron", 32*IngotFluid, "fluid", "input"),
+      ShaftFurnaceFluid("kubejs:incomplete_steel", 36*IngotFluid, "fluid_output", "output"),
       ShaftFurnaceItem("kubejs:granite_alloy", 16, "output"),
       ShaftFurnaceItem("kubejs:diorite_alloy", 16, "output")
     ],
@@ -426,8 +426,8 @@ ServerEvents.recipes(event => {
       ShaftFurnaceItem("kubejs:crushed_coal", 36, "input"),
       ShaftFurnaceItemNBT("input", "kubejs:matrix_2", 1, '{matrix:[[[2,3],[3,2]],[[0,-1],[-1,0]]]}'),
       ShaftFurnaceItemNBT("output", "kubejs:matrix_2", 1, '{matrix:[[[0,0],[0,0]]]}'),
-      ShaftFurnaceFluid("kubejs:industrial_iron", 2880, "fluid", "input"),
-      ShaftFurnaceFluid("kubejs:incomplete_steel", 4320, "fluid_output", "output"),
+      ShaftFurnaceFluid("kubejs:industrial_iron", 32*IngotFluid, "fluid", "input"),
+      ShaftFurnaceFluid("kubejs:incomplete_steel", 48*IngotFluid, "fluid_output", "output"),
       ShaftFurnaceItem("kubejs:granite_alloy", 24, "output"),
       ShaftFurnaceItem("kubejs:diorite_alloy", 24, "output")
     ],
@@ -496,8 +496,8 @@ ServerEvents.recipes(event => {
       ShaftFurnaceItem("ad_astra:steel_ingot", 16, "input"),
       ShaftFurnaceItem("ad_astra:cheese", 16, "input"),
       ShaftFurnaceItem("kubejs:cheese_moonalgae", 4, "input"),
-      ShaftFurnaceFluid("kubejs:brass", 2880, "fluid", "input"),
-      ShaftFurnaceFluid("kubejs:desh", 2880, "fluid_output", "output"),
+      ShaftFurnaceFluid("kubejs:brass", 32*IngotFluid, "fluid", "input"),
+      ShaftFurnaceFluid("kubejs:desh", 32*IngotFluid, "fluid_output", "output"),
       ShaftFurnaceItem("kubejs:cheese_moonalgae", 8, "output")
     ],
   }).id("dut_create:shaft_furnace/desh")
@@ -510,7 +510,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       ShaftFurnaceStructure,
       ShaftFurnaceItem("ad_astra:cheese", 16, "input"),
-      ShaftFurnaceFluid("kubejs:desh", 4320, "fluid_output", "output"),
+      ShaftFurnaceFluid("kubejs:desh", 48*IngotFluid, "fluid_output", "output"),
       ShaftFurnaceItemNBT("input", "kubejs:matrix_2", 1, '{matrix:[[[0,3],[0,7]],[[0,0],[1,-2]]]}'),
       ShaftFurnaceItemNBT("output", "kubejs:matrix_2", 1, '{matrix:[[[0,0],[0,0]]]}'),
       ShaftFurnaceItem("kubejs:cheese_moonalgae", 8, "output")

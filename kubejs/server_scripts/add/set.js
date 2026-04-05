@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
             {
                 "type": "create:filling",
                 "ingredients": [{ "item": "kubejs:incomplete_andesite_box" },
-                { "fluid": "kubejs:industrial_iron", "amount": 90 }],
+                { "fluid": "kubejs:industrial_iron", "amount": 1*IngotFluid }],
                 "results": [{ "item": "kubejs:incomplete_andesite_box" }]
             }
         ],
@@ -188,7 +188,7 @@ ServerEvents.recipes(event => {
                 "type": "create:filling",
                 "ingredients": [
                     { "item": "create:incomplete_precision_mechanism" },
-                    { "amount": 270, "fluid": "kubejs:brass" }],
+                    { "amount": 3*IngotFluid, "fluid": "kubejs:brass" }],
                 "results": [
                     { "item": "create:incomplete_precision_mechanism" }
                 ]

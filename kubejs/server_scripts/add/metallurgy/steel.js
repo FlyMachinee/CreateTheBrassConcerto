@@ -10,26 +10,24 @@ ServerEvents.recipes(event => {
     "secondaryFluidInput": 1,
     "heatRequirement": "heated",
     "ingredients": [
-      { "fluid": "kubejs:incomplete_steel", "amount": 500 },
-      { "amount": 500, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" } },
+      { "fluid": "kubejs:incomplete_steel", "amount": 4*IngotFluid },
+      { "amount": 250, "fluid": "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" } },
     ],
     "results": [
-      { "fluid": "createbigcannons:molten_steel", "amount": 250 }
+      { "fluid": "createbigcannons:molten_steel", "amount": 2*IngotFluid }
     ],
-    "processingTime": 45
+    "processingTime": 30
   }).id('dut_create:steel/molten_steel')
   event.custom({
     "type": "vintageimprovements:pressurizing",
     "secondaryFluidInput": 1,
     "heatRequirement": "heated",
     "ingredients": [
-      { "fluid": "kubejs:incomplete_steel", "amount": 500 },
-      {  "item": "kubejs:aluminum_slag"},
-      {  "item": "kubejs:aluminum_slag"},
-      {  "item": "kubejs:aluminum_slag"},
+      { "fluid": "kubejs:incomplete_steel", "amount": 4*IngotFluid },
+      {  "item": "kubejs:aluminum_slag"}
     ],
     "results": [
-      { "fluid": "createbigcannons:molten_steel", "amount": 400 }
+      { "fluid": "createbigcannons:molten_steel", "amount": 3*IngotFluid }
     ],
     "processingTime": 30
   }).id('dut_create:steel/molten_steel_aluminum')

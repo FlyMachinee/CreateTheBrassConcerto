@@ -189,7 +189,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "vintageimprovements:pressurizing",
         "secondaryFluidOutput": 0,
-        "heatRequirement": "superheated",
+        "heatRequirement": "heated",
         "ingredients": [
             { "fluid": "minecraft:water", "amount": 500 },
             { "tag": "forge:plates/tin" }
@@ -199,4 +199,17 @@ ServerEvents.recipes(event => {
         ],
         "processingTime": 15
     }).id('dut_create:advanced_pressurized_steam')
+    event.custom({
+        "type": "vintageimprovements:pressurizing",
+        "secondaryFluidOutput": 0,
+        "heatRequirement": "superheated",
+        "ingredients": [
+            { "fluid": "minecraft:water", "amount": 500 },
+            { "tag": "forge:ingots/tin" }
+        ],
+        "results": [
+            { "fluid": "kubejs:pressurized_steam", "amount": 500 }
+        ],
+        "processingTime": 15
+    }).id('dut_create:advanced_pressurized_steam_superheated')
 })

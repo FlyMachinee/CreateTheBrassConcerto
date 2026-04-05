@@ -6,6 +6,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: "create:mechanical_crafting/crushing_wheel" })
   event.remove({ id: "create_connected:crafting/kinetics/inventory_bridge" })
   event.remove({ id: "create:filling/blaze_cake" })
+  event.remove({ id:"create_connected:sequenced_assembly/control_chip"})
   event.remove({ output: "create_connected:fan_seething_catalyst" })
   event.remove({ output: "create_connected:fan_freezing_catalyst" })
   event.remove({ output: "create_connected:fan_sanding_catalyst" })
@@ -99,7 +100,7 @@ ServerEvents.recipes(event => {
     'create:turntable',
     'kubejs:planetary_gear')
   //升降机
-  event.remove({ output: 'create:elevator_pulley', not: { mod: 'kubejs' } })
+  event.remove({ id:"create:crafting/kinetics/elevator_pulley"})
   event.custom({
     "type": "minecraft:crafting_shaped",
     "category": "misc",

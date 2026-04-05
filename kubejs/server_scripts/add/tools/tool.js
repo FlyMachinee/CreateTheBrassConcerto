@@ -154,7 +154,7 @@ ServerEvents.recipes(event => {
     "heatRequirement": "superheated",
     "secondaryFluidInput": 0,
     "ingredients": [
-      { "fluid": "kubejs:aluminum", "amount": 250 },
+      { "fluid": "kubejs:aluminum", "amount": 3*IngotFluid },
       { "fluid": "createbigcannons:molten_steel", "amount": 1000 },
       { "fluid": "kubejs:slime_colloid", "amount": 250 },
       { "item": "createloveandwar:tungsten" },
@@ -294,7 +294,7 @@ ServerEvents.recipes(event => {
         {
           "type": "create:filling",
           "ingredients": [{ "item": "create:wrench" },
-          { "amount": 250, "fluid": "kubejs:brass" }],
+          { "amount": 3*IngotFluid, "fluid": "kubejs:brass" }],
           "results": [{ "item": "create:wrench" }]
         }
       ],

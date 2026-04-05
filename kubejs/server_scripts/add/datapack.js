@@ -119,11 +119,11 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "create:mixing",
     "ingredients": [
-      { "amount": 270, "fluid": "kubejs:copper" },
-      { "amount": 270, "fluid": "kubejs:gold" }
+      { "amount": 3*IngotFluid, "fluid": "kubejs:copper" },
+      { "amount": 3*IngotFluid, "fluid": "kubejs:gold" }
     ],
     "results": [
-      { "amount": 540, "fluid": "kubejs:brass" }
+      { "amount": 6*IngotFluid, "fluid": "kubejs:brass" }
     ]
   }).id("dut_create:molten_brass")
   //紫金锭

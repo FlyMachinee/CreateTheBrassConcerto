@@ -170,13 +170,13 @@ CreateEvents.spoutHandler((event) => {
     blockFillingBasic(
         "dut_create:copper_transform",
         'minecraft:copper_block',
-        { id: "kubejs:gold", amount: 810 },
+        { id: "kubejs:gold", amount: IngotBlock*IngotFluid },
         ['create:brass_block']
     )
     blockFillingBasic(
         "dut_create:gold_transform",
         'minecraft:gold_block',
-        { id: "kubejs:copper", amount: 810 },
+        { id: "kubejs:copper", amount: IngotBlock*IngotFluid },
         ['create:brass_block']
     )
     blockFillingItem(
@@ -189,14 +189,14 @@ CreateEvents.spoutHandler((event) => {
     blockFillingExtraItem(
         "dut_create:block_filling/andesite_alloy_from_iron",
         "minecraft:andesite",
-        { id: "kubejs:iron", amount: 90 },
+        { id: "kubejs:iron", amount: 1*IngotFluid },
         Item.of('4x create:andesite_alloy')
         //"{Count:4b,id:'create:andesite_alloy'}"
     )
     blockFillingExtraItem(
         "dut_create:block_filling/andesite_alloy_from_industrial_iron",
         "minecraft:andesite",
-        { id: "kubejs:industrial_iron", amount: 90 },
+        { id: "kubejs:industrial_iron", amount: 1*IngotFluid },
         Item.of('9x create:andesite_alloy')
         //"{Count:9b,id:'create:andesite_alloy'}"
     )

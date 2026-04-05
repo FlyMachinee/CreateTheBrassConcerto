@@ -1,7 +1,7 @@
 StartupEvents.registry('item', event => {
     event.create('lamb_kebabs').food(food => {
         food.hunger(6)
-        food.saturation(8)
+        food.saturation(2)
         food.fastToEat()
         food.meat()
         food.eaten(kebabs => {
@@ -11,7 +11,7 @@ StartupEvents.registry('item', event => {
     }).maxStackSize(64)
     event.create('large_fries').food(food => {
         food.hunger(20)
-        food.saturation(20)
+        food.saturation(1)
         food.effect("minecraft:regeneration", 1200, 2, 1)
         food.effect("minecraft:instant_health", 20, 2, 1)
         food.removeEffect("minecraft:slowness")
@@ -22,12 +22,12 @@ StartupEvents.registry('item', event => {
     }).maxStackSize(64)
     event.create('french_fries').food(food => {
         food.hunger(4)
-        food.saturation(4)
+        food.saturation(1)
         food.fastToEat()
     })
     event.create('slime_cola_can').food(food => {
         food.hunger(3)
-        food.saturation(6)
+        food.saturation(4)
         food.fastToEat()
         food.alwaysEdible()
         food.effect("minecraft:haste", 3600, 0, 1)
