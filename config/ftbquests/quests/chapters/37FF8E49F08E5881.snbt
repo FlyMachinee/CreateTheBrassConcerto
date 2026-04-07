@@ -113,11 +113,7 @@
 			y: -0.5d
 		}
 		{
-			description: [
-				"工程集合是一种高效的建设工具——你可以直接将对应的蓝图放出，而不需要收集材料和使用蓝图炮进行打印！"
-				""
-				"&e这种由Apertyotis发明的绝妙工具肯定能帮上你大忙的！&r"
-			]
+			description: ["{ftbquests.chapter_37FF8E49F08E5881.quest_57D0ACEAB22BC554.desc_01}"]
 			id: "57D0ACEAB22BC554"
 			tasks: [{
 				id: "59C406F398B4F1A5"

@@ -1057,7 +1057,7 @@
 			y: -2.0d
 		}
 		{
-			description: ["{ftbquests.chapter_661B548D54269ECF.quest_12791AC9AE74A060.desc_01}"]
+			description: ["{ftbquests.chapter_158AAB195C2FD998.quest_12791AC9AE74A060.desc_01}"]
 			id: "12791AC9AE74A060"
 			rewards: [{
 				count: 8
@@ -1070,7 +1070,7 @@
 				item: "vintageimprovements:laser"
 				type: "item"
 			}]
-			title: "{ftbquests.chapter_661B548D54269ECF.quest_12791AC9AE74A060.title}"
+			title: "{ftbquests.chapter_158AAB195C2FD998.quest_12791AC9AE74A060.title}"
 			x: -3.0d
 			y: -5.0d
 		}

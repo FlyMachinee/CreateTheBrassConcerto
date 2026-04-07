@@ -2,17 +2,7 @@ let $LaunchPadState = Java.loadClass("earth.terrarium.adastra.common.blocks.Laun
 BlockEvents.rightClicked("ad_astra:launch_pad", event => {
     let p = event.player
     if (p.mainHandItem.id !== "kubejs:carrier_rocket" || event.hand !== "MAIN_HAND") { return }
-    let PartsBox = p.inventory.countItem("kubejs:parts_box")
-    let FuelTank = p.inventory.countItem("kubejs:fuel_tank")
-    if (p.isCreative() || (PartsBox >= 3 && FuelTank >= 3)) {
-        if (!p.isCreative()) {
-            p.inventory.clearOrCountMatchingItems(i => i.id === "kubejs:parts_box", 3, p.inventory.asContainer())
-            p.inventory.clearOrCountMatchingItems(i => i.id === "kubejs:fuel_tank", 3, p.inventory.asContainer())
-        }
-    } else {
-        p.setStatusMessage(Text.translate("kubejs.message.hand_control_rocket_need_item"))
-        return
-    }
+    
     let b = event.block
     let pos = [b.x, b.y + 1, b.z]
     let part = b.blockState.getValue($LaunchPadState.PART).toString()
@@ -47,16 +37,27 @@ BlockEvents.rightClicked("ad_astra:launch_pad", event => {
             pos[2] += 1
             break
     }
-    let area = new AABB.of(pos[0] - 0.5, pos[1] - 1, pos[2] - 0.5, pos[0] + 0.5, pos[1] + 0.5, pos[2] + 0.5)
+    let area = new AABB.of(pos[0] - 0.5, pos[1] - 1, pos[2] - 0.5, pos[0] + 0.5, pos[1] + 2.5, pos[2] + 0.5)
     let entities = event.level.getEntitiesWithin(area)
     for (let i of entities) {
         if (i.type !== "minecraft:armor_stand") {
             continue
         }
         if (i.tags.contains("dut_carrier_rocket_byhand")) {
-            p.setStatusMessage("kubejs.message.set_rocket_hasset")
+            p.setStatusMessage(Text.translate("kubejs.message.set_rocket_hasset"))
             return
         }
+    }
+    let PartsBox = p.inventory.countItem("kubejs:parts_box")
+    let FuelTank = p.inventory.countItem("kubejs:fuel_tank")
+    if (p.isCreative() || (PartsBox >= 3 && FuelTank >= 3)) {
+        if (!p.isCreative()) {
+            p.inventory.clearOrCountMatchingItems(i => i.id === "kubejs:parts_box", 3, p.inventory.asContainer())
+            p.inventory.clearOrCountMatchingItems(i => i.id === "kubejs:fuel_tank", 3, p.inventory.asContainer())
+        }
+    } else {
+        p.setStatusMessage(Text.translate("kubejs.message.hand_control_rocket_need_item"))
+        return
     }
     event.level.playSound(null, p.x, p.y, p.z, "minecraft:item.armor.equip_netherite", "players", 1, 1)
     p.swing()
@@ -131,10 +132,14 @@ NativeEvents.onEvent($EntityMountEvent, event => {
     let p = e.entity
     if (e.entityBeingMounted.type !== "minecraft:armor_stand") { return }
     let vehicle = e.entityBeingMounted
+    if (vehicle.tags.contains('dut_carrier_rocket_byhand')&&!e.isMounting()){
+        p.sendData("disHandleRocket")
+    }
     if (!vehicle.tags.contains('dut_carrier_rocket')) { return }
     if (e.isMounting()) {
         p.sendData("setVision", { type: 'thridb' })
     } else {
+        p.sendData("disHandleRocket")
         p.sendData("setVision", { type: 'first' })
     }
 })

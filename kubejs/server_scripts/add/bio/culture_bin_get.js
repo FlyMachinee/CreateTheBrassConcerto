@@ -153,10 +153,7 @@ ServerEvents.recipes(event => {
   CultureBinPlate("blaze_mycoplasma", 100,
     CultureBinPlateInput({ "type": "fuel" }),
     [
-      {
-        "type": "custommachinery:biome",
-        "filter": ["minecraft:the_end", "minecraft:end_midlands", "minecraft:end_highlands", "minecraft:end_barrens", "minecraft:the_void"]
-      },
+      CultureBinDimension("minecraft:the_nether"),
       CultureBinItemChance("kubejs:blaze_mycoplasma", 1, 0.48)
     ],
       CultureBinPlateInput({ "type": "fuel", display: { Name: '{"translate":"kubejs.item.culture.fuel","italic":false}' } }),

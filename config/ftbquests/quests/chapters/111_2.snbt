@@ -139,11 +139,7 @@
 			y: -2.0d
 		}
 		{
-			description: [
-				"铜羽泽鹗——一种奇异的生物，一个文明在大撕裂之后最后的残余。"
-				""
-				"它们曾经并不是什么生物"
-			]
+			description: ["{ftbquests.chapter_111_2.quest_262E7EAC18A82705.desc_01}"]
 			id: "262E7EAC18A82705"
 			tasks: [{
 				id: "4AE8F4F69292332E"
