@@ -297,7 +297,7 @@ ServerEvents.recipes(event => {
             { "item": 'ad_astra:cheese_block' },
             { "fluid": "kubejs:muriatic_acid", "amount": 500 }
         ],
-        "results": [{ "item": 'iceandfire:stymphalian_skull',"count":2 }],
+        "results": [{ "item": 'iceandfire:stymphalian_skull', "count": 2 }],
         "processingTime": 30
     }).id('dut_create:bronze_skull_advanced')
     event.custom({

@@ -1,88 +1,32 @@
 ServerEvents.recipes(event => {
     const CondenserStructure = {
-        "type": "custommachinery:structure",
-        "pattern":
-            [
-                [
-                    "AAAAA",
-                    "AAAAA",
-                    "AAAAA",
-                    "AAAAA",
-                    "ACCCA",
-                    " CHC ",
-                    " CCC "
-                ],
-                [
-                    "BBBBB",
-                    "B   B",
-                    "B   B",
-                    "B   B",
-                    "BBDBB",
-                    " ImI ",
-                    " NIN "
-                ],
-                [
-                    "     ",
-                    "     ",
-                    "     ",
-                    "     ",
-                    "  E  ",
-                    " EJE ",
-                    "  E  "
-                ],
-                [
-                    "     ",
-                    "     ",
-                    "     ",
-                    "     ",
-                    "  F  ",
-                    " FKF ",
-                    "  F  "
-                ],
-                [
-                    "     ",
-                    "     ",
-                    "     ",
-                    "     ",
-                    "  G  ",
-                    " GKG ",
-                    "  G  "
-                ],
-                [
-                    "     ",
-                    "     ",
-                    "     ",
-                    "     ",
-                    "     ",
-                    "  J  ",
-                    "     "
-                ],
-                [
-                    "     ",
-                    "     ",
-                    "     ",
-                    "     ",
-                    "     ",
-                    "  L  ",
-                    "     "
-                ]
-            ],
-        "jei": true,
-        "keys": {
-            "K": "design_decor:copper_boiler",
-            "D": "create:mechanical_pump",
-            "C": "design_decor:brass_boiler_structure",
-            "A": "create:copper_casing",
-            "H": "design_decor:brass_boiler_large",
-            "B": "create:item_drain",
-            "L": "vintageimprovements:vacuum_chamber{Mode:1b,Speed:256.0f}",
-            "G": "design_decor:andesite_floodlight[facing=up]",
-            "N": "design_decor:stepped_lever",
-            "I": "create:smart_fluid_pipe",
-            "F": "design_decor:metal_support",
-            "E": "design_decor:diagonal_metal_support",
-            "J": "design_decor:brass_boiler"
-        }
+        "type": "custommachinery:general_structure",
+        "id": "main"
+    }
+    const CondenserSound = {
+        "type": "custommachinery:sound",
+        "phase": "ending",
+        "sound": "create:steam",
+        "pos": [0, 3.5, 0],
+        "volume": 0.5,
+        "chance": 0.75
+    }
+    const CondenserParticle1 = {
+        "type": "custommachinery:particle",
+        "phase": "crafting_tickable",
+        "particle": "minecraft:snowflake",
+        "pos": [0, 6.5, 0],
+        "delta": [0.3, 1.5, 0.3],
+        "speed": 0,
+        "count": 5,
+        "chance": 0.75
+    }
+    const CondenserParticle2 = {
+        "type": "custommachinery:command",
+        "phase": "crafting_tickable",
+        "command": "/particle minecraft:cloud ~ ~7.5 ~ 0.55 1 0.55 0 4",
+        "log": false,
+        "permissionlevel": 5
     }
     const CondenserReplaceBreakFliter = [
         "minecraft:air",
@@ -164,29 +108,6 @@ ServerEvents.recipes(event => {
         "kubejs:muriatic_acid[level=14]",
         "kubejs:muriatic_acid[level=15]"
     ]
-    const CondenserSound = {
-        "type": "custommachinery:command",
-        "phase": "ending",
-        "command": "/playsound create:steam block @a[distance=..16] ~ ~3.5 ~ 0.5",
-        "log": false,
-        "chance": 0.75,
-        "permissionlevel": 5
-    }
-    const CondenserParticle1 = {
-        "type": "custommachinery:command",
-        "phase": "crafting_tickable",
-        "command": "/particle minecraft:snowflake ~ ~6.5 ~ 0.3 1.5 0.3 0 5",
-        "chance": 0.75,
-        "log": false,
-        "permissionlevel": 5,
-    }
-    const CondenserParticle2 = {
-        "type": "custommachinery:command",
-        "phase": "crafting_tickable",
-        "command": "/particle minecraft:cloud ~ ~7.5 ~ 0.55 1 0.55 0 4",
-        "log": false,
-        "permissionlevel": 5
-    }
     function CondenserCryogen(amount) {
         return ({
             "type": "custommachinery:fluid",
@@ -219,7 +140,7 @@ ServerEvents.recipes(event => {
             "requirements": [
                 CondenserStructure,
                 CondenserDimension(dimension),
-                //CondenserParticle1,
+                CondenserParticle1,
                 //CondenserParticle2,
                 CondenserSound,
                 CondenserCryogen(cryogenAmount),
@@ -253,7 +174,7 @@ ServerEvents.recipes(event => {
                     "amount": 1000
                 }
             ]
-        }).id("dut_create:condenser/" + dimension.split(':')[1]+'/' + outputFluid.split(':')[1] + "_liquefaction")
+        }).id("dut_create:condenser/" + dimension.split(':')[1] + '/' + outputFluid.split(':')[1] + "_liquefaction")
     }
     //
     CondenserDimensionRecipe("minecraft:overworld", 500, "kubejs:air_fluid", 10)

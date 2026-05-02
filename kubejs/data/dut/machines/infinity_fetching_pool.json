@@ -28,38 +28,106 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "AABAA",
+                    "ACCCA",
+                    "BCCCB",
+                    "ACCCA",
+                    "AABAA"
+                ],
+                [
+                    "E J E",
+                    "  M  ",
+                    "KNmOL",
+                    "  I  ",
+                    "E D E"
+                ],
+                [
+                    "  H  ",
+                    " FFF ",
+                    "HFGFH",
+                    " FFF ",
+                    "  H  "
+                ]
+            ],
+            "keys": {
+                "A": "create:industrial_iron_block",
+                "B": "design_decor:industrial_iron_boiler",
+                "C": "createaddition:modular_accumulator",
+                "D": "design_decor:diagonal_girder[facing=north,facing_up=false]",
+                "J": "design_decor:diagonal_girder[facing=south,facing_up=false]",
+                "K": "design_decor:diagonal_girder[facing=east,facing_up=false]",
+                "L": "design_decor:diagonal_girder[facing=west,facing_up=false]",
+                "E": "design_decor:andesite_floodlight[facing=up]",
+                "F": "design_decor:brass_boiler_structure",
+                "G": "design_decor:brass_boiler_large",
+                "H": "#dut_create:container_fluid",
+                "I": "design_decor:diagonal_metal_support[facing=north]",
+                "M": "design_decor:diagonal_metal_support[facing=south]",
+                "N": "design_decor:diagonal_metal_support[facing=east]",
+                "O": "design_decor:diagonal_metal_support[facing=west]"
+            }
+        },
+        {
             "type": "custommachinery:fluid",
             "capacity": 160000,
             "id": "fluid_generate",
             "maxInput": 0,
             "maxOutput": 20000,
-            "config":{
+            "config": {
                 "default": "none"
             }
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [2, 1, 0],
+            "pos": [
+                2,
+                1,
+                0
+            ],
             "mode": "output",
-            "slotID":["fluid_generate"]
+            "slotID": [
+                "fluid_generate"
+            ]
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [-2, 1, 0],
+            "pos": [
+                -2,
+                1,
+                0
+            ],
             "mode": "output",
-            "slotID":["fluid_generate"]
+            "slotID": [
+                "fluid_generate"
+            ]
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [0, 1, 2],
+            "pos": [
+                0,
+                1,
+                2
+            ],
             "mode": "output",
-            "slotID":["fluid_generate"]
+            "slotID": [
+                "fluid_generate"
+            ]
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [0, 1, -2],
+            "pos": [
+                0,
+                1,
+                -2
+            ],
             "mode": "output",
-            "slotID":["fluid_generate"]
+            "slotID": [
+                "fluid_generate"
+            ]
         },
         {
             "type": "custommachinery:energy",

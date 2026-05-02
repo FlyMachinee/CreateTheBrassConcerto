@@ -28,6 +28,340 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "AAAA   AAAA",
+                    "AAAA   AAAA",
+                    "AAAC   CAAA",
+                    "ACCCKKKCCCA",
+                    "ACCCKKKCCCA",
+                    "ACCCKKKCCCA",
+                    "AAACCCCCAAA",
+                    "AAACCCCCAAA",
+                    "AAACCCCCAAA",
+                    "  ACCCCCA  ",
+                    "  ACCCCCA  ",
+                    "  AACCCAA  "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "   D   D   ",
+                    " D  LLL  D ",
+                    "    LLL    ",
+                    " D  LLL  D ",
+                    "   DZ ZD   ",
+                    "    [a[    ",
+                    "   Z]]]Z   ",
+                    "   Z]]]Z   ",
+                    "   Z]]]Z   ",
+                    "    ZZZ    "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "   EFFFE   ",
+                    " MMEAAAEMM ",
+                    " MMEAAAEMM ",
+                    " MMEAAAEMM ",
+                    "   EZ ZE   ",
+                    "    [a[    ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "   bbbbb   ",
+                    "  d  G  B  ",
+                    "  d NNN B  ",
+                    "  STNUNTS  ",
+                    "  d NNN B  ",
+                    "  d Z Z B  ",
+                    "   c[a[c   ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "     H     ",
+                    "    OOO    ",
+                    "  VVOWOVV  ",
+                    "    OOO    ",
+                    "    FXF    ",
+                    "    FXF    ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "     G     ",
+                    "    OOO    ",
+                    "   GOWOG   ",
+                    "    OOO    ",
+                    "     G     ",
+                    "           ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "     D     ",
+                    "    OOO    ",
+                    "   DOWOD   ",
+                    "    OOO    ",
+                    "     D     ",
+                    "           ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "    ]]]    ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "     I     ",
+                    "    NNN    ",
+                    "   INUNI   ",
+                    "    NNN    ",
+                    "     I     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "     J     ",
+                    "    PEP    ",
+                    "   JEXEJ   ",
+                    "    PEP    ",
+                    "     J     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     E     ",
+                    "    EXE    ",
+                    "     E     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "     J     ",
+                    "    QEQ    ",
+                    "     X     ",
+                    "    QEQ    ",
+                    "     J     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "     J     ",
+                    "     E     ",
+                    "    FXF    ",
+                    "     E     ",
+                    "     J     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     F     ",
+                    "    GXG    ",
+                    "     F     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     G     ",
+                    "    DXD    ",
+                    "     G     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     D     ",
+                    "    DXD    ",
+                    "     D     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     D     ",
+                    "    IXI    ",
+                    "     D     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     I     ",
+                    "     X     ",
+                    "     I     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     T     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     R     ",
+                    "    RmR    ",
+                    "     R     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     D     ",
+                    "    DYD    ",
+                    "     D     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ],
+                [
+                    "           ",
+                    "           ",
+                    "           ",
+                    "     I     ",
+                    "    IXI    ",
+                    "     I     ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           ",
+                    "           "
+                ]
+            ],
+            "keys": {
+                "A": "design_decor:ornate_grate",
+                "B": "design_decor:iron_railing[west=true]",
+                "d": "design_decor:iron_railing[east=true]",
+                "b": "design_decor:iron_railing[south=true]",
+                "c": "design_decor:iron_railing[north=true]",
+                "C": "create:railway_casing",
+                "D": "create:metal_girder",
+                "E": "create:industrial_iron_block",
+                "F": "ad_astra:iron_plating_slab",
+                "G": "design_decor:diagonal_metal_support",
+                "H": "design_decor:stepped_lever",
+                "I": "design_decor:diagonal_girder",
+                "J": "design_decor:brass_lamp",
+                "K": "create:encased_fluid_pipe",
+                "L": "createaddition:liquid_blaze_burner[blaze=seething]",
+                "M": "create:copper_casing",
+                "N": "design_decor:brass_boiler_structure",
+                "O": "design_decor:industrial_iron_boiler_structure",
+                "P": "create:andesite_bars",
+                "Q": "#dut_create:funnel",
+                "R": "#dut_create:funnel",
+                "S": "design_decor:copper_boiler",
+                "T": "design_decor:brass_boiler",
+                "U": "design_decor:brass_boiler_large",
+                "V": "create_things_and_misc:brass_brick_slab",
+                "W": "design_decor:industrial_iron_boiler_large",
+                "X": "design_decor:industrial_iron_boiler",
+                "Y": "railways:smokestack_oilburner",
+                "Z": "ad_astra:iron_pillar",
+                "[": "create:andesite_encased_cogwheel",
+                "a": "create:mechanical_pump",
+                "]": "create:fluid_tank"
+            }
+        },
+        {
             "type": "custommachinery:item",
             "id": "1",
             "mode": "input"
@@ -89,15 +423,27 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [4, -15, 0],
+            "pos": [
+                4,
+                -15,
+                0
+            ],
             "mode": "input",
-            "slotID":["oxygen"]
+            "slotID": [
+                "oxygen"
+            ]
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [-4, -15, 0],
+            "pos": [
+                -4,
+                -15,
+                0
+            ],
             "mode": "input",
-            "slotID":["oxygen"]
+            "slotID": [
+                "oxygen"
+            ]
         },
         {
             "type": "custommachinery:fluid",
@@ -111,15 +457,27 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [1, -8, 0],
+            "pos": [
+                1,
+                -8,
+                0
+            ],
             "mode": "input",
-            "slotID":["fluid"]
+            "slotID": [
+                "fluid"
+            ]
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [-1, -8, 0],
+            "pos": [
+                -1,
+                -8,
+                0
+            ],
             "mode": "input",
-            "slotID":["fluid"]
+            "slotID": [
+                "fluid"
+            ]
         },
         {
             "type": "custommachinery:fluid",
@@ -130,9 +488,15 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [0, -17, 4],
+            "pos": [
+                0,
+                -17,
+                4
+            ],
             "mode": "output",
-            "slotID":["fluid_output"]
+            "slotID": [
+                "fluid_output"
+            ]
         },
         {
             "type": "custommachinery:item",
@@ -141,7 +505,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -153,7 +517,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -165,7 +529,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }

@@ -1,108 +1,7 @@
 ServerEvents.recipes(event => {
-  const SpaceELevatorStructure =
-  {
-    "type": "custommachinery:structure",
-    "pattern": [
-      [
-        "  ABBBA  ",
-        "  ABFBA  ",
-        "AAHBBBHAA",
-        "BBBQQQBBB",
-        "BFBQXQBFB",
-        "BBBQQQBBB",
-        "AAHBBBHAA",
-        "  ABFBA  ",
-        "  ABBBA  "
-      ],
-      [
-        "    D    ",
-        "    I    ",
-        "  JKKKJ  ",
-        "  KCCCK  ",
-        "DIKCECKID",
-        "  KCCCK  ",
-        "  JKKKJ  ",
-        "    I    ",
-        "    D    "
-      ],
-      [
-        "         ",
-        "         ",
-        "  L   L  ",
-        "   CCC   ",
-        "   CEC   ",
-        "   CCC   ",
-        "  L   L  ",
-        "    m    ",
-        "         "
-      ],
-      [
-        "         ",
-        "         ",
-        "  L   L  ",
-        "         ",
-        "    G    ",
-        "         ",
-        "  L   L  ",
-        "         ",
-        "         "
-      ],
-      [
-        "         ",
-        "         ",
-        "  JM MJ  ",
-        "  MSSSM  ",
-        "   SSS   ",
-        "  MSSSM  ",
-        "  JM MJ  ",
-        "         ",
-        "         "
-      ],
-      [
-        "         ",
-        "         ",
-        "  GNNNG  ",
-        "  NVVVN  ",
-        "  NVVVN  ",
-        "  NVVVN  ",
-        "  GNNNG  ",
-        "         ",
-        "         "
-      ],
-      [
-        "         ",
-        "         ",
-        "  OM MO  ",
-        "  M   M  ",
-        "         ",
-        "  M   M  ",
-        "  OM MO  ",
-        "         ",
-        "         "
-      ]
-    ],
-    "keys": {
-      "H": "ad_astra:steel_panel",
-      "A": "design_decor:industrial_plating_block",
-      "N": "ad_astra:steel_plateblock",
-      "G": "design_decor:cast_iron_boiler",
-      "B": "design_decor:cast_iron_boiler_structure",
-      "F": "design_decor:cast_iron_boiler_large",
-      "M": "ad_astra:steel_plating_slab",
-      "L": "kubejs:carbon_electrode",
-      "K": "create_things_and_misc:brass_bricks",
-      "S": "create_connected:item_silo",
-      "D": "design_decor:metal_support",
-      "X": "design_decor:industrial_iron_boiler_large",
-      "Q": "design_decor:industrial_iron_boiler_structure",
-      "I": "design_decor:copper_boiler",
-      "O": "design_decor:brass_boiler",
-      "C": "design_decor:brass_boiler_structure",
-      "E": "design_decor:brass_boiler_large",
-      "V": "design_decor:ornate_grate",
-      "J": "create:chute",
-    },
-    "jei": true
+  const SpaceELevatorStructure ={
+    "type": "custommachinery:general_structure",
+    "id": "main"
   }
   const SpaceELevatorDataOut = {
     "type": "custommachinery:item",
@@ -111,11 +10,11 @@ ServerEvents.recipes(event => {
     "amount": 1
   }
   const SpaceELevatorSound = {
-    "type": "custommachinery:command",
+    "type": "custommachinery:sound",
     "phase": "ending",
-    "command": "/playsound create:steam block @a[distance=..48] ~ ~2.5 ~ 0.3",
-    "log": false,
-    "permissionlevel": 5
+    "sound": "create:steam",
+    "pos": [0.5, 2.5, 0.5],
+    "volume": 0.3
   }
   const SpaceELevatorRedstone = {
     "type": "custommachinery:redstone",

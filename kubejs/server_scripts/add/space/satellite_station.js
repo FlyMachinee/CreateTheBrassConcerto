@@ -1,55 +1,7 @@
 ServerEvents.recipes(event => {
-  const SatelliteStationStructure =
-  {
-    "type": "custommachinery:structure",
-    "pattern": [
-      [
-        "ABBBA",
-        "ABBBA",
-        "ABBBA",
-        "ABBBA",
-        "BBBBB",
-        "BNNNB",
-        "BNONB",
-        " NNN "
-      ],
-      [
-        "CDDDC",
-        "CFFFC",
-        "CFFFC",
-        "CFFFC",
-        "CDDDC",
-        "MLLLM",
-        " BPB ",
-        "  m  "
-      ],
-      [
-        "EDDDE",
-        "G   H",
-        "G   H",
-        "G   H",
-        "EDDDE",
-        "     ",
-        " BPB ",
-        "     "
-      ]
-    ],
-    "keys": {
-      "C": "ad_astra:steel_pillar",
-      "N": "design_decor:cast_iron_boiler_structure",
-      "G": "design_decor:iron_railing[east=true]",
-      "H": "design_decor:iron_railing[west=true]",
-      "M": "design_decor:cast_iron_boiler",
-      "B": "create:industrial_iron_block",
-      "L": "design_decor:industrial_iron_boiler",
-      "P": "create:metal_girder",
-      "D": "design_decor:ornate_grate",
-      "E": "design_decor:andesite_floodlight",
-      "F": "create:depot",
-      "A": "ad_astra:steel_plating_slab",
-      "O": "design_decor:cast_iron_boiler_large"
-    },
-    "jei": true
+  const SatelliteStationStructure ={
+    "type": "custommachinery:general_structure",
+    "id": "main"
   }
   const SatelliteStationUp = {
     "type": "custommachinery:command",

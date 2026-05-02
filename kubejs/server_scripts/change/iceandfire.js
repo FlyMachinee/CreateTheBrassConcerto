@@ -1,4 +1,5 @@
 ServerEvents.recipes(event => {
+  event.remove({ id: "iceandfire:pixie_wand" })
   event.remove({ id: "iceandfire:lightning_lily_mixture" })
   event.remove({ id: "iceandfire:frost_stew" })
   event.remove({ id: "iceandfire:fire_stew" })

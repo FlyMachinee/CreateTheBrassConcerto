@@ -672,6 +672,7 @@
 			y: -7.0d
 		}
 		{
+			description: ["驯龙的技艺早已失传——你购买的龙蛋主要作用是用于巨龙加工的相关产业！"]
 			icon: "iceandfire:dragonegg_blue"
 			id: "7629531E00AF09CA"
 			rewards: [{
@@ -1094,6 +1095,7 @@
 			y: 1.5d
 		}
 		{
+			description: ["驯龙的技艺早已失传——你购买的龙蛋主要作用是用于巨龙加工的相关产业！"]
 			icon: "iceandfire:dragonegg_green"
 			id: "40C14FFEBA2165F4"
 			rewards: [{

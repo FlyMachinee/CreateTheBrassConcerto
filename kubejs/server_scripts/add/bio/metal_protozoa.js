@@ -43,38 +43,6 @@ ServerEvents.recipes(event => {
   getOre("create:ochrum", 20, 12)
   getOre("create:veridium", 20, 12)
   getOre("kubejs:raw_tin", 20, 12)
-  //金属流体转化
-  /*
-  const metalFluid = [
-    ["kubejs:iron", "kubejs:copper", "kubejs:tin"],
-    ["kubejs:copper", "kubejs:gold", "kubejs:zinc"],
-    ["kubejs:gold", "kubejs:silver", "kubejs:iron"],
-    ["kubejs:silver", "kubejs:tin", "kubejs:copper"],
-    ["kubejs:tin", "kubejs:zinc", "kubejs:gold"],
-    ["kubejs:zinc", "kubejs:iron", "kubejs:silver"]
-  ]
-  function FluidTransform(fluid) {
-    event.custom({
-      "type": "vintageimprovements:pressurizing",
-      "secondaryFluidInput": 0,
-      "ingredients": [
-        { "fluid": "minecraft:lava", "amount": 125 },
-        { "item": "kubejs:metal_protozoa" },
-        { "fluid": fluid[0], "amount": 450 }
-      ],
-      "processingTime": 60,
-      "results": [
-        { "fluid": fluid[1], "amount": 300 },
-        { "fluid": fluid[2], "amount": 300 },
-        { "item": "kubejs:metal_protozoa" },
-        { "item": "create:limestone", "chance": 0.5 }
-      ]
-    }).id("dut_create:metal/fluid/" + fluid[0].split(":")[1])
-  }
-  for (let i of metalFluid) {
-    FluidTransform(i)
-  }
-  */
   //铁板
   event.custom({
     "type": "vintageimprovements:pressurizing",

@@ -28,6 +28,90 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "AAAAA",
+                    "AAAAA",
+                    "AAAAA",
+                    "AAAAA",
+                    "ACCCA",
+                    " CHC ",
+                    " CCC "
+                ],
+                [
+                    "BBBBB",
+                    "B   B",
+                    "B   B",
+                    "B   B",
+                    "BBDBB",
+                    " ImI ",
+                    " NIN "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  E  ",
+                    " EJE ",
+                    "  E  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  F  ",
+                    " FKF ",
+                    "  F  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  G  ",
+                    " GKG ",
+                    "  G  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  J  ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  L  ",
+                    "     "
+                ]
+            ],
+            "keys": {
+                "K": "design_decor:copper_boiler",
+                "D": "create:mechanical_pump",
+                "C": "design_decor:brass_boiler_structure",
+                "A": "create:copper_casing",
+                "H": "design_decor:brass_boiler_large",
+                "B": "create:item_drain",
+                "L": "vintageimprovements:vacuum_chamber{Mode:1b,Speed:256.0f}",
+                "G": "design_decor:andesite_floodlight[facing=up]",
+                "N": "design_decor:stepped_lever",
+                "I": "create:smart_fluid_pipe",
+                "F": "design_decor:metal_support",
+                "E": "design_decor:diagonal_metal_support",
+                "J": "design_decor:brass_boiler"
+            }
+        },
+        {
             "type": "custommachinery:fluid",
             "capacity": 4000,
             "id": "cryogen_tank",
@@ -43,7 +127,13 @@
             "maxInput": 0,
             "maxOutput": 0,
             "mode": "output",
-            "filter": ["kubejs:air_fluid","kubejs:nether_air_fluid","kubejs:end_air_fluid","kubejs:slimeria_air_fluid","kubejs:muriatic_acid"],
+            "filter": [
+                "kubejs:air_fluid",
+                "kubejs:nether_air_fluid",
+                "kubejs:end_air_fluid",
+                "kubejs:slimeria_air_fluid",
+                "kubejs:muriatic_acid"
+            ],
             "whitelist": true
         }
     ],

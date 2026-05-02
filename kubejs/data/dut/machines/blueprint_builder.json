@@ -28,6 +28,160 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "ABCBBBCBA",
+                    "BBBBBBBBB",
+                    "CBBBBBBBC",
+                    "BBBBBBBBB",
+                    "BBBBBBBBB",
+                    "BBBBBBBBB",
+                    "CBBBBBBBC",
+                    "BBBBBBBBB",
+                    "ABBBBBBBA",
+                    "  GBBBG  ",
+                    "  GBBBG  ",
+                    "  GBBBG  "
+                ],
+                [
+                    "AAAAAAAAA",
+                    "A       A",
+                    "A       A",
+                    "A       A",
+                    "A       A",
+                    "A       A",
+                    "A       A",
+                    "A       A",
+                    "AAAAAAAAA",
+                    "  G   G  ",
+                    "  G   G  ",
+                    "  G H G  "
+                ],
+                [
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "    m    "
+                ],
+                [
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "DDDDDDDDD",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "DDDDDDDDD",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "D       D",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "DDDDDDDDD",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "DDDDDDDDD",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "DDDDDDDDD",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "         ",
+                    "DDDDDDDDD",
+                    "         ",
+                    "         ",
+                    "         "
+                ]
+            ],
+            "keys": {
+                "H": "create:gearbox",
+                "D": "create:andesite_scaffolding",
+                "A": "create:linear_chassis",
+                "G": "create:secondary_linear_chassis",
+                "B": "create:andesite_casing",
+                "C": "create:metal_girder"
+            }
+        },
+        {
             "type": "custommachinery:item",
             "id": "filter",
             "mode": "item",
@@ -41,7 +195,9 @@
             "id": "item1",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -50,7 +206,9 @@
             "id": "item2",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -59,7 +217,9 @@
             "id": "item3",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -68,7 +228,9 @@
             "id": "item4",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -77,7 +239,9 @@
             "id": "item5",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -86,7 +250,9 @@
             "id": "item6",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -95,7 +261,9 @@
             "id": "item7",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -104,7 +272,9 @@
             "id": "item8",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -113,7 +283,9 @@
             "id": "item9",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -122,7 +294,9 @@
             "id": "item10",
             "mode": "input",
             "filter": [
-                "minecraft:barrel","#dut_create:data_disk","#dut_create:multiblock"
+                "minecraft:barrel",
+                "#dut_create:data_disk",
+                "#dut_create:multiblock"
             ],
             "whitelist": false
         },
@@ -149,7 +323,7 @@
             "id": "out1",
             "mode": "output",
             "config": {
-                "default":"output"
+                "default": "output"
             }
         },
         {
@@ -157,7 +331,7 @@
             "id": "out2",
             "mode": "output",
             "config": {
-                "default":"output"
+                "default": "output"
             }
         },
         {
@@ -165,7 +339,7 @@
             "id": "out3",
             "mode": "output",
             "config": {
-                "default":"output"
+                "default": "output"
             }
         },
         {
@@ -173,7 +347,7 @@
             "id": "out4",
             "mode": "output",
             "config": {
-                "default":"output"
+                "default": "output"
             }
         },
         {
@@ -184,7 +358,7 @@
                 "input": true,
                 "output": false
             },
-            "stress_impact":0
+            "stress_impact": 0
         }
     ],
     "gui": [

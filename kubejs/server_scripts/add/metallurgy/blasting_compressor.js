@@ -1,72 +1,32 @@
 ServerEvents.recipes(event => {
   const BlastingCompressorStructure =
   {
-    "type": "custommachinery:structure",
-    "pattern":
-      [
-        [
-          "  A  ",
-          " GGG ",
-          "AGOGA",
-          " GGG ",
-          "  A  "
-        ],
-        [
-          "  A  ",
-          "     ",
-          "A P A",
-          "     ",
-          "  A  "
-        ],
-        [
-          "  B  ",
-          "     ",
-          "B P B",
-          "     ",
-          "  B  "
-        ],
-        [
-          " CAC ",
-          "     ",
-          "A P A",
-          "     ",
-          " CAC "
-        ],
-        [
-          " B B ",
-          "CGGGC",
-          "AGOGA",
-          "CGGGC",
-          " B B "
-        ],
-        [
-          " A A ",
-          "BBKBB",
-          "SSmSS",
-          "BBKBB",
-          " A A "
-        ],
-        [
-          " BBB ",
-          "BLLLB",
-          "PLVLP",
-          "BLLLB",
-          " BBB "
-        ]
-      ],
-    "keys": {
-      "S": "#dut_create:shaft",
-      "G": "design_decor:brass_boiler_structure",
-      "O": "design_decor:brass_boiler_large",
-      "P": "design_decor:industrial_iron_boiler",
-      "A": "create:industrial_iron_block",
-      "C": "design_decor:diagonal_metal_support",
-      "L": "design_decor:cast_iron_boiler_structure",
-      "K": "#dut_create:container",
-      "B": "create:metal_girder",
-      "V": "design_decor:cast_iron_boiler_large",
-    },
-    "jei": true
+    "type": "custommachinery:general_structure",
+    "id": "main"
+  }
+  const BlastingCompressorSound = {
+    "type": "custommachinery:sound",
+    "phase": "starting",
+    "sound": "createbigcannons:shell_explosion",
+    "pos": [0, 3.5, 0]
+  }
+  const BlastingCompressorParticle1 = {
+    "type": "custommachinery:particle",
+    "phase": "starting",
+    "particle": "minecraft:explosion_emitter",
+    "pos": [0, 3.5, 0],
+    "delta": [0, 0, 0],
+    "speed": 0,
+    "count": 1
+  }
+  const BlastingCompressorParticle2 = {
+    "type": "custommachinery:particle",
+    "phase": "starting",
+    "particle": "minecraft:smoke",
+    "pos": [0, 3.5, 0],
+    "delta": [0.8, 0.3, 0.8],
+    "speed": 0.3,
+    "count": 32
   }
   const BlastingCompressorTNT = {
     "type": "custommachinery:entity",
@@ -85,13 +45,6 @@ ServerEvents.recipes(event => {
     "action": "kill",
     "filter": ["createbigcannons:primed_propellant", "minecraft:end_crystal"],
     "whitelist": true
-  }
-  const BlastingCompressorSound = {
-    "type": "custommachinery:command",
-    "phase": "starting",
-    "command": "/function dut:particle/blasting_compressor",
-    "log": false,
-    "permissionlevel": 5
   }
   const BlastingCompressorStress = {
     "type": "custommachinery:contraption",
@@ -140,12 +93,21 @@ ServerEvents.recipes(event => {
     event.custom({
       "type": "custommachinery:custom_machine",
       "machine": "dut:blasting_compressor",
-      "time": 20,
+      "time": 10,
       "priority": 1,
       "error": true,
       "requirements": [
         BlastingCompressorStructure,
         BlastingCompressorTNT,
+        {
+          "type": "custommachinery:command",
+          "phase": "starting",
+          "command": "/function dut:particle/blasting_compressor",
+          "log": false,
+          "permissionlevel": 5
+        },
+        BlastingCompressorParticle1,
+        BlastingCompressorParticle2,
         BlastingCompressorSound,
         BlastingCompressorStress,
         BlastingCompressorInput(item),
@@ -163,12 +125,21 @@ ServerEvents.recipes(event => {
     event.custom({
       "type": "custommachinery:custom_machine",
       "machine": "dut:blasting_compressor",
-      "time": 20,
+      "time": 10,
       "error": true,
       "hidden": true,
       "priority": 1,
       "requirements": [
         BlastingCompressorStructure,
+        {
+          "type": "custommachinery:command",
+          "phase": "starting",
+          "command": "/function dut:particle/blasting_compressor",
+          "log": false,
+          "permissionlevel": 5
+        },
+        BlastingCompressorParticle1,
+        BlastingCompressorParticle2,
         BlastingCompressorShell,
         BlastingCompressorSound,
         BlastingCompressorStress,
@@ -186,16 +157,35 @@ ServerEvents.recipes(event => {
     }).id("dut_create:blasting_compressor/powder_charge/" + item.split(':')[1])
   }
 
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:blasting_compressor",
+    "time": 5,
+    "error": true,
+    "priority": 0,
+    "requirements": [
+      BlastingCompressorStructure
+    ]
+  }).id("dut_create:blasting_compressor/empty")
   function BlastingCompressorIngot(input, output) {
     event.custom({
       "type": "custommachinery:custom_machine",
       "machine": "dut:blasting_compressor",
-      "time": 20,
+      "time": 10,
       "error": true,
-      "priority": 1,
+      "priority": 2,
       "requirements": [
         BlastingCompressorStructure,
         BlastingCompressorTNT,
+        {
+          "type": "custommachinery:command",
+          "phase": "starting",
+          "command": "/function dut:particle/blasting_compressor",
+          "log": false,
+          "permissionlevel": 5
+        },
+        BlastingCompressorParticle1,
+        BlastingCompressorParticle2,
         BlastingCompressorSound,
         BlastingCompressorStress,
         BlastingCompressorInput(input + "[level=0]"),
@@ -213,12 +203,21 @@ ServerEvents.recipes(event => {
     event.custom({
       "type": "custommachinery:custom_machine",
       "machine": "dut:blasting_compressor",
-      "time": 20,
-      "priority": 1,
+      "time": 10,
+      "priority": 2,
       "error": true,
       "requirements": [
         BlastingCompressorStructure,
         BlastingCompressorShell,
+        {
+          "type": "custommachinery:command",
+          "phase": "starting",
+          "command": "/function dut:particle/blasting_compressor",
+          "log": false,
+          "permissionlevel": 5
+        },
+        BlastingCompressorParticle1,
+        BlastingCompressorParticle2,
         BlastingCompressorSound,
         BlastingCompressorStress,
         BlastingCompressorInput(input + "[level=0]"),
@@ -234,8 +233,6 @@ ServerEvents.recipes(event => {
       ]
     }).id("dut_create:blasting_compressor/powder_charge/" + output.split(':')[1])
   }
-  
-  BlastingCompressorPlate("create:shadow_steel_casing", "vintageimprovements:shadow_steel_sheet", 9)
 
   BlastingCompressorPlate("create:industrial_iron_block", "kubejs:industrial_iron_sheet", 81)
 

@@ -80,10 +80,6 @@
 				"{image:kubejs:textures/ftb/offhand.png width:130 height:100 align:center}"
 				"{image:kubejs:textures/ftb/goggles.png width:130 height:88 align:center}"
 				"{@pagebreak}"
-				"{ftbquests.chapter_37FF8E49F08E5881.quest_44BB55331CD79D87.desc_02}"
-				"{image:kubejs:textures/ftb/structure.png width:100 height:120 align:center}"
-				"{image:kubejs:textures/ftb/shadow.png width:100 height:100 align:center}"
-				"{@pagebreak}"
 				"{ftbquests.chapter_37FF8E49F08E5881.quest_44BB55331CD79D87.desc_03}"
 				"{image:kubejs:textures/ftb/empty_recipe.png width:140 height:100 align:center}"
 			]

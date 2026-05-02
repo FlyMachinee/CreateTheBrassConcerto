@@ -1,363 +1,25 @@
 ServerEvents.recipes(event => {
-  const ResonantTowerStructure =
-  {
-    "type": "custommachinery:structure",
-    "pattern": [
-      [
-        "     A     ",
-        "     B     ",
-        "    FFF    ",
-        "   HHHHH   ",
-        "  FHJJJHF  ",
-        "ABFHJPJHFBA",
-        "  FHJJJHF  ",
-        "   HHHHH   ",
-        "    FFF    ",
-        "     B     ",
-        "     A     "
-      ],
-      [
-        "           ",
-        "     B     ",
-        "     A     ",
-        "           ",
-        "           ",
-        " BA     AB ",
-        "           ",
-        "           ",
-        "     A     ",
-        "     B     ",
-        "           "
-      ],
-      [
-        "           ",
-        "     C     ",
-        "           ",
-        "           ",
-        "           ",
-        " C   m   C ",
-        "           ",
-        "           ",
-        "           ",
-        "     C     ",
-        "           "
-      ],
-      [
-        "           ",
-        "     D     ",
-        "           ",
-        "           ",
-        "     C     ",
-        " D  CBC  D ",
-        "     C     ",
-        "           ",
-        "           ",
-        "     D     ",
-        "           "
-      ],
-      [
-        "           ",
-        "     C     ",
-        "     D     ",
-        "     C     ",
-        "    JJJ    ",
-        " CDCJPJCDC ",
-        "    JJJ    ",
-        "     C     ",
-        "     D     ",
-        "     C     ",
-        "           "
-      ],
-      [
-        "           ",
-        "     B     ",
-        "     B     ",
-        "    CBC    ",
-        "   CJJJC   ",
-        " BBBJPJBBB ",
-        "   CJJJC   ",
-        "    CBC    ",
-        "     B     ",
-        "     B     ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "     D     ",
-        "     F     ",
-        "    JJJ    ",
-        "  DFJPJFD  ",
-        "    JJJ    ",
-        "     F     ",
-        "     D     ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "     A     ",
-        "     C     ",
-        "     D     ",
-        "  ACDUDCA  ",
-        "     D     ",
-        "     C     ",
-        "     A     ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "     I     ",
-        "           ",
-        "   I U I   ",
-        "           ",
-        "     I     ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "     I     ",
-        "           ",
-        "   I U I   ",
-        "           ",
-        "     I     ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "     I     ",
-        "           ",
-        "   I U I   ",
-        "           ",
-        "     I     ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "     C     ",
-        "     L     ",
-        "   CLULC   ",
-        "     L     ",
-        "     C     ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "     A     ",
-        "    JJJ    ",
-        "   AJPJA   ",
-        "    JJJ    ",
-        "     A     ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     C     ",
-        "     U     ",
-        "     C     ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     D     ",
-        "    LUL    ",
-        "     D     ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     D     ",
-        "    DUD    ",
-        "     D     ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     A     ",
-        "    DUD    ",
-        "     A     ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "    DUD    ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "    DUD    ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "    AUA    ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     M     ",
-        "    MYM    ",
-        "     M     ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     Y     ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     I     ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     I     ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     I     ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ],
-      [
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "     I     ",
-        "           ",
-        "           ",
-        "           ",
-        "           ",
-        "           "
-      ]
-    ],
-    "keys": {
-      "J": "design_decor:brass_boiler_structure",
-      "M": "design_decor:copper_lamp",
-      "I": "kubejs:carbon_electrode",
-      "B": "design_decor:industrial_iron_boiler",
-      "C": "create:chute",
-      "P": "design_decor:brass_boiler_large",
-      "F": "design_decor:industrial_plating_block",
-      "H": "create_things_and_misc:brass_bricks",
-      "Y": "create:fluid_tank",
-      "L": "design_decor:diagonal_metal_support",
-      "U": "design_decor:copper_boiler",
-      "D": "create:metal_girder",
-      "A": "design_decor:diagonal_girder"
-    },
-    "jei": true
+  const ResonantTowerStructure = {
+    "type": "custommachinery:general_structure",
+    "id": "main"
+  }
+  const ResonantTowerSound = {
+    "type": "custommachinery:sound",
+    "phase": "starting",
+    "sound": "createaddition:electric_motor_buzz",
+    "pos": [0, 3.5, 0],
+    "volume": 0.3,
+    "pitch": 0.8
+  }
+  const ResonantTowerParticle = {
+    "type": "custommachinery:particle",
+    "phase": "crafting_tickable",
+    "particle": "minecraft:electric_spark",
+    "pos": [0, 12.5, 0],
+    "delta": [1.5, 3.5, 1.5],
+    "speed": 0.1,
+    "count": 24,
+    "chance": 0.75
   }
   const ResonantTowerLightning = {
     "type": "custommachinery:command",
@@ -374,28 +36,6 @@ ServerEvents.recipes(event => {
     "action": "kill",
     "filter": ["minecraft:lightning_bolt"],
     "whitelist": true
-  }
-  const ResonantTowerSound = {
-    "type": "custommachinery:command",
-    "phase": "starting",
-    "command": "/playsound createaddition:electric_motor_buzz block @a[distance=..36] ~ ~ ~ 0.3 0.8 0.3",
-    "log": false,
-    "permissionlevel": 5
-  }
-  const ResonantTowerBird = {
-    "type": "custommachinery:command",
-    "phase": "ending",
-    "command": "/execute as @e[type=iceandfire:stymphalian_bird,distance=..32] at @s run summon item ~ ~ ~ {Item:{id:'iceandfire:stymphalian_bird_feather',Count:3b}}",
-    "log": false,
-    "permissionlevel": 5
-  }
-  const ResonantTowerParticle = {
-    "type": "custommachinery:command",
-    "phase": "crafting_tickable",
-    "command": "/particle minecraft:electric_spark ~ ~12 ~ 1.5 3.5 1.5 0.1 24",
-    "chance": 0.75,
-    "log": false,
-    "permissionlevel": 5
   }
   function ResonantTowerFluid(fluid, amount, mode) {
     return ({
@@ -453,8 +93,7 @@ ServerEvents.recipes(event => {
         ResonantTowerStructure,
         ResonantTowerLightning,
         ResonantTowerSound,
-        //ResonantTowerBird,
-        //ResonantTowerParticle,
+        ResonantTowerParticle,
       ].concat(RequirementList),
       "jei": [
         ResonantTowerStructure,
@@ -472,8 +111,7 @@ ServerEvents.recipes(event => {
         ResonantTowerStructure,
         ResonantTowerLightning,
         ResonantTowerSound,
-        //ResonantTowerBird,
-        //ResonantTowerParticle,
+        ResonantTowerParticle,
         ResonantTowerLightningcheck,
       ].concat(RequirementList),
       "jei": [

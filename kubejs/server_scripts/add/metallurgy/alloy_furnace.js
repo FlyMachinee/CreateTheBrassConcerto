@@ -1,125 +1,25 @@
 ServerEvents.recipes(event => {
     //
     const AlloyFurnaceCommand1 = {
-        "type": "custommachinery:command",
+        "type": "custommachinery:sound",
         "phase": "ending",
-        "command": "/playsound minecraft:block.lava.extinguish block @a[distance=..24] ~ ~-5 ~ 0.5",
-        "log": false,
-        "chance": 0.5,
-        "permissionlevel": 5
+        "sound": "minecraft:block.lava.extinguish",
+        "pos": [0, -5, 0],
+        "volume": 0.5,
+        "chance": 0.5
     }
     const AlloyFurnaceCommand2 = {
-        "type": "custommachinery:command",
+        "type": "custommachinery:sound",
         "phase": "ending",
-        "command": "/playsound minecraft:block.lava.ambient block @a[distance=..24] ~ ~-5 ~ 0.5",
-        "log": false,
-        "chance": 0.75,
-        "permissionlevel": 5
+        "sound": "minecraft:block.lava.ambient",
+        "pos": [0, -5, 0],
+        "volume": 0.5,
+        "chance": 0.75
     }
     const AlloyFurnaceStructure =
     {
-        "type": "custommachinery:structure",
-        "pattern":
-            [
-                [
-                    " C C ",
-                    "CGGGC",
-                    " GGG ",
-                    "CGGGC",
-                    " C C "
-                ],
-                [
-                    " DDD ",
-                    "DHHHD",
-                    "DHHHD",
-                    "DHHHD",
-                    " DDD "
-                ],
-                [
-                    " QEP ",
-                    "QIIIP",
-                    "FIMIF",
-                    "AIIIR",
-                    " AFR ",
-                ],
-                [
-                    "     ",
-                    " III ",
-                    "FIMIF",
-                    " III ",
-                    "  O  "
-                ],
-                [
-                    "  F  ",
-                    " III ",
-                    "CIMIC",
-                    " III ",
-                    "  C  "
-                ],
-                [
-                    "  C  ",
-                    " III ",
-                    "CIMIC",
-                    " III ",
-                    "  C  "
-                ],
-                [
-                    "  B  ",
-                    " JDJ ",
-                    "BDEDB",
-                    " JDJ ",
-                    "  B  "
-                ],
-                [
-                    "     ",
-                    "     ",
-                    "  E  ",
-                    "     ",
-                    "     "
-                ],
-                [
-                    "     ",
-                    "  K  ",
-                    " KmK ",
-                    "  K  ",
-                    "     "
-                ],
-                [
-                    "     ",
-                    "  L  ",
-                    " LNL ",
-                    "  L  ",
-                    "     "
-                ],
-                [
-                    "     ",
-                    "  B  ",
-                    " BEB ",
-                    "  B  ",
-                    "     "
-                ]
-            ],
-        "keys": {
-            "O": "design_decor:stepped_lever",
-            "K": "#dut_create:funnel",
-            "B": "design_decor:diagonal_girder",
-            "N": "railways:smokestack_oilburner",
-            "J": "design_decor:andesite_floodlight[facing=up]",
-            "M": "design_decor:industrial_iron_boiler_large",
-            "E": "design_decor:industrial_iron_boiler",
-            "I": "design_decor:industrial_iron_boiler_structure",
-            "C": "create:metal_girder",
-            "L": "design_decor:metal_support",
-            "G": "createaddition:liquid_blaze_burner{fuelLevel:1}",
-            "D": "create:industrial_iron_block",
-            "F": "design_decor:diagonal_metal_support",
-            "A": "design_decor:iron_railing[south=true,west=true]",
-            "R": "design_decor:iron_railing[east=true,south=true]",
-            "P": "design_decor:iron_railing[east=true,north=true]",
-            "Q": "design_decor:iron_railing[north=true,west=true]",
-            "H": "design_decor:ornate_grate"
-        },
-        "jei": true
+        "type": "custommachinery:general_structure",
+        "id": "main"
     }
     const AlloyFurnaceReplaceFliter = [
         "minecraft:air",
@@ -230,21 +130,6 @@ ServerEvents.recipes(event => {
         "kubejs:gold[level=13]",
         "kubejs:gold[level=14]",
         "kubejs:gold[level=15]",
-        "kubejs:silver[level=1]",
-        "kubejs:silver[level=2]",
-        "kubejs:silver[level=3]",
-        "kubejs:silver[level=4]",
-        "kubejs:silver[level=5]",
-        "kubejs:silver[level=6]",
-        "kubejs:silver[level=7]",
-        "kubejs:silver[level=8]",
-        "kubejs:silver[level=9]",
-        "kubejs:silver[level=10]",
-        "kubejs:silver[level=11]",
-        "kubejs:silver[level=12]",
-        "kubejs:silver[level=13]",
-        "kubejs:silver[level=14]",
-        "kubejs:silver[level=15]",
         "kubejs:desh[level=1]",
         "kubejs:desh[level=2]",
         "kubejs:desh[level=3]",

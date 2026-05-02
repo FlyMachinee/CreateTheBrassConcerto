@@ -28,6 +28,110 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "AACCCAA",
+                    " AEEEA ",
+                    " AEEEA ",
+                    " AEEEA ",
+                    "AAAAAAA",
+                    " AbbbA "
+                ],
+                [
+                    "BD   DB",
+                    "NFHHHRN",
+                    "NFHQHRN",
+                    "NFHHHRN",
+                    "lACCCAl",
+                    " A   A "
+                ],
+                [
+                    "       ",
+                    "   I   ",
+                    "S MUK S",
+                    "   J   ",
+                    " D   D ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "   k   ",
+                    "WJAYAJW",
+                    "       ",
+                    "       ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "       ",
+                    "WJAYAJW",
+                    "       ",
+                    "       ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "       ",
+                    "W  Y  W",
+                    "   L   ",
+                    "       ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "       ",
+                    "  ama  ",
+                    "       ",
+                    "       ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "       ",
+                    "G  U  G",
+                    "       ",
+                    "       ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "       ",
+                    "G  D  G",
+                    "       ",
+                    "       ",
+                    "       "
+                ]
+            ],
+            "keys": {
+                "A": "create:copper_casing",
+                "B": "design_decor:copper_railing[south=true]",
+                "C": "create:item_drain",
+                "D": "design_decor:andesite_floodlight[facing=up]",
+                "E": "create:railway_casing",
+                "F": "create:mechanical_pump[facing=west]",
+                "G": "createaddition:modular_accumulator",
+                "H": "design_decor:brass_boiler_structure",
+                "Q": "design_decor:brass_boiler_large",
+                "U": "design_decor:brass_boiler",
+                "Y": "design_decor:copper_boiler",
+                "R": "create:mechanical_pump[facing=east]",
+                "k": "design_decor:stepped_lever",
+                "W": "create:fluid_tank",
+                "l": "design_decor:copper_railing[north=true]",
+                "J": "create:smart_fluid_pipe",
+                "S": "create_things_and_misc:brass_brick_slab[type=top]",
+                "L": "design_decor:diagonal_metal_support[facing=south]",
+                "I": "design_decor:diagonal_metal_support[facing=north]",
+                "K": "design_decor:diagonal_metal_support[facing=east]",
+                "M": "design_decor:diagonal_metal_support[facing=west]",
+                "N": "create_connected:fluid_vessel[axis=z]",
+                "b": "create_connected:fluid_vessel[axis=x]",
+                "a": "#dut_create:funnel"
+            }
+        },
+        {
             "type": "custommachinery:item",
             "id": "item_input1",
             "mode": "input",
@@ -93,9 +197,15 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [3, -1, 0],
+            "pos": [
+                3,
+                -1,
+                0
+            ],
             "mode": "input",
-            "slotID":["fluidInput1"]
+            "slotID": [
+                "fluidInput1"
+            ]
         },
         {
             "type": "custommachinery:fluid",
@@ -114,9 +224,15 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [-3, -1, 0],
+            "pos": [
+                -3,
+                -1,
+                0
+            ],
             "mode": "input",
-            "slotID":["fluidInput2"]
+            "slotID": [
+                "fluidInput2"
+            ]
         },
         {
             "type": "custommachinery:energy",
@@ -126,12 +242,20 @@
         },
         {
             "type": "custommachinery:remote_energy",
-            "pos": [3, 1, 0],
+            "pos": [
+                3,
+                1,
+                0
+            ],
             "mode": "input"
         },
         {
             "type": "custommachinery:remote_energy",
-            "pos": [-3, 1, 0],
+            "pos": [
+                -3,
+                1,
+                0
+            ],
             "mode": "input"
         },
         {
@@ -142,9 +266,15 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [3, -5, 0],
+            "pos": [
+                3,
+                -5,
+                0
+            ],
             "mode": "output",
-            "slotID":["fluidOutput1"]
+            "slotID": [
+                "fluidOutput1"
+            ]
         },
         {
             "type": "custommachinery:fluid",
@@ -154,9 +284,15 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [-3, -5, 0],
+            "pos": [
+                -3,
+                -5,
+                0
+            ],
             "mode": "output",
-            "slotID":["fluidOutput2"]
+            "slotID": [
+                "fluidOutput2"
+            ]
         },
         {
             "type": "custommachinery:fluid",
@@ -166,9 +302,15 @@
         },
         {
             "type": "custommachinery:remote_fluid",
-            "pos": [0, -6, 3],
+            "pos": [
+                0,
+                -6,
+                3
+            ],
             "mode": "output",
-            "slotID":["fluidOutput3"]
+            "slotID": [
+                "fluidOutput3"
+            ]
         },
         {
             "type": "custommachinery:item",
@@ -177,7 +319,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none"
+                "default": "none"
             }
         },
         {
@@ -187,7 +329,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none"
+                "default": "none"
             }
         },
         {
@@ -197,7 +339,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none"
+                "default": "none"
             }
         }
     ],

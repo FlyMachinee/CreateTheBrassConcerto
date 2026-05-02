@@ -28,6 +28,141 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    " AAA ",
+                    "CAEAC",
+                    "CAAAC",
+                    "TUUUT",
+                    "GUUUG",
+                    "GUUUG",
+                    "GUUUG",
+                    "[UUU[",
+                    "CAAAC",
+                    "CAEAC",
+                    " AAA "
+                ],
+                [
+                    "     ",
+                    "FCGCF",
+                    "LONOL",
+                    "VUNUW",
+                    "VUNUW",
+                    "VUNUW",
+                    "VUNUW",
+                    "VXXXW",
+                    "L]]]L",
+                    "FC]CF",
+                    "  m  "
+                ],
+                [
+                    "     ",
+                    " FHF ",
+                    " HQH ",
+                    " XXX ",
+                    " HQH ",
+                    " XXX ",
+                    " HQH ",
+                    "  H  ",
+                    " ]]] ",
+                    " CCC ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  I  ",
+                    " IQI ",
+                    " Y Y ",
+                    " IQI ",
+                    " Y Y ",
+                    " IQI ",
+                    "  I  ",
+                    " ]]] ",
+                    " Y^Y ",
+                    " ]]] "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "  Q  ",
+                    " Y Y ",
+                    "  Q  ",
+                    " Y Y ",
+                    "  Q  ",
+                    "     ",
+                    " ]]] ",
+                    " ^Y^ ",
+                    " ]]] "
+                ],
+                [
+                    "     ",
+                    "  I  ",
+                    " IQI ",
+                    " Y Y ",
+                    " IQI ",
+                    " Y Y ",
+                    " IQI ",
+                    "  I  ",
+                    " ]]] ",
+                    " Y^Y ",
+                    " ]]] "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "  R  ",
+                    " Z Z ",
+                    "  R  ",
+                    " Z Z ",
+                    "  R  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "  S  ",
+                    "     ",
+                    "  S  ",
+                    "     ",
+                    "  S  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ]
+            ],
+            "keys": {
+                "A": "design_decor:brass_boiler_structure",
+                "E": "design_decor:brass_boiler_large",
+                "H": "create:depot",
+                "U": "create:brass_casing",
+                "X": "create_connected:encased_chain_cogwheel",
+                "[": "create_things_and_misc:brass_brick_stairs[facing=south,half=top]",
+                "T": "create_things_and_misc:brass_brick_stairs[facing=north,half=top]",
+                "O": "design_decor:industrial_iron_boiler",
+                "L": "design_decor:brass_boiler",
+                "N": "create:gearbox",
+                "W": "design_decor:copper_railing[east=true]",
+                "V": "design_decor:copper_railing[west=true]",
+                "F": "create_things_and_misc:brass_brick_slab[type=bottom]",
+                "G": "create_things_and_misc:brass_brick_slab[type=top]",
+                "C": "create_things_and_misc:brass_bricks",
+                "Y": "create:cogwheel",
+                "^": "create:shaft",
+                "S": "design_decor:andesite_floodlight[facing=up]",
+                "Q": "design_decor:ochrum_crushing_wheel",
+                "I": "#dut_create:brass_funnel",
+                "Z": "design_decor:industrial_gear",
+                "R": "design_decor:industrial_gear_large",
+                "]": "create:encased_chain_drive"
+            }
+        },
+        {
             "type": "custommachinery:fluid",
             "capacity": 4096,
             "id": "data_gibibyte",
@@ -125,7 +260,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -137,7 +272,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -149,7 +284,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }

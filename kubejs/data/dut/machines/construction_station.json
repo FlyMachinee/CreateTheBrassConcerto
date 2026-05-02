@@ -28,6 +28,86 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "AAAAA  ",
+                    "AAAAAA ",
+                    "AAAATTT",
+                    "AAAATUT",
+                    "AAAATTT",
+                    "AAAAAA "
+                ],
+                [
+                    "BCCC   ",
+                    "BFGGC  ",
+                    "BF OCC ",
+                    "BF VCWC",
+                    "BCJCCC ",
+                    "  J    "
+                ],
+                [
+                    " CDD   ",
+                    " H  D  ",
+                    " HG DP ",
+                    " HX DWP",
+                    " CXCCP ",
+                    "  m    "
+                ],
+                [
+                    "SAAA   ",
+                    "IJKLA  ",
+                    "IJQRAY ",
+                    "JJJLAWY",
+                    "SAAAAY ",
+                    "       "
+                ],
+                [
+                    " EEE   ",
+                    " EEEE  ",
+                    " EEEE  ",
+                    " EEEEW ",
+                    " EEEE  ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "       ",
+                    "       ",
+                    "     Z ",
+                    "       ",
+                    "       "
+                ]
+            ],
+            "keys": {
+                "P": "create:brass_funnel",
+                "F": "create:andesite_casing",
+                "A": "create:copper_casing",
+                "Z": "create:millstone",
+                "D": "design_decor:tinted_framed_glass",
+                "C": "create:secondary_linear_chassis",
+                "G": "create:depot",
+                "V": "create:basin",
+                "I": "design_decor:industrial_gear",
+                "K": "create:deployer",
+                "O": "create:mechanical_arm",
+                "E": "minecraft:smooth_stone_slab",
+                "L": "create:mechanical_press",
+                "W": "design_decor:industrial_iron_boiler",
+                "Q": "create:mechanical_saw",
+                "U": "design_decor:brass_boiler_large",
+                "T": "design_decor:brass_boiler_structure",
+                "B": "create:item_drain",
+                "J": "create:gearbox",
+                "S": "create:spout",
+                "X": "create:encased_chain_drive",
+                "H": "design_decor:industrial_gear_large",
+                "R": "vintageimprovements:laser",
+                "Y": "design_decor:diagonal_girder"
+            }
+        },
+        {
             "type": "custommachinery:item",
             "id": "item1",
             "mode": "input",
@@ -85,7 +165,7 @@
             "mode": "output",
             "locked": false,
             "config": {
-                "default":"output",
+                "default": "output",
                 "input": false,
                 "output": true
             }
@@ -96,7 +176,7 @@
             "mode": "output",
             "locked": false,
             "config": {
-                "default":"output",
+                "default": "output",
                 "input": false,
                 "output": true
             }
@@ -107,7 +187,7 @@
             "mode": "output",
             "locked": false,
             "config": {
-                "default":"output",
+                "default": "output",
                 "input": false,
                 "output": true
             }
@@ -118,7 +198,7 @@
             "mode": "output",
             "locked": false,
             "config": {
-                "default":"output",
+                "default": "output",
                 "input": false,
                 "output": true
             }
@@ -148,7 +228,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -160,7 +240,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -172,7 +252,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }

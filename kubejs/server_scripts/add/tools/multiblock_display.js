@@ -18,7 +18,7 @@ NetworkEvents.dataReceived("multiblockDisplay", event => {
     let xPos = d.pos.x
     let yPos = d.pos.y
     let zPos = d.pos.z
-    let map = $CustomMachineStructureCheck.checkStructureById(l.getBlock(xPos, yPos, zPos).entity, d.id, false)
+    let map = $CustomMachineStructureCheck.checkGeneralStructureById(l.getBlock(xPos, yPos, zPos).entity, d.id)
 
     let mapsize = map.size()
 

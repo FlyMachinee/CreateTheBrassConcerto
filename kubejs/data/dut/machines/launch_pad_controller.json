@@ -32,6 +32,130 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "   MMM   ",
+                    "  IMKMI  ",
+                    " IIMMMII ",
+                    "MMMXIXMMM",
+                    "MKMIIIMKM",
+                    "MMMXIXMMM",
+                    " IIMMMII ",
+                    "  IMKMI  ",
+                    "  DMMMD  "
+                ],
+                [
+                    "         ",
+                    "  I   I  ",
+                    " II   II ",
+                    "  I   I  ",
+                    "  X   X  ",
+                    "  I   I  ",
+                    " IINNNII ",
+                    "  IL LI  ",
+                    "  EE EE  "
+                ],
+                [
+                    "         ",
+                    "         ",
+                    "  V   V  ",
+                    "  V   V  ",
+                    "         ",
+                    "  V   V  ",
+                    "  Q m Q  ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "         ",
+                    "         ",
+                    "  RA AR  ",
+                    "  V   V  ",
+                    "         ",
+                    "  V   V  ",
+                    "  Q   Q  ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "         ",
+                    "         ",
+                    "   SHS   ",
+                    "  SZZZS  ",
+                    " ]HZZZH] ",
+                    "  SZZZS  ",
+                    "  RSHSR  ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "         ",
+                    "         ",
+                    "   VVV   ",
+                    "  V   V  ",
+                    "         ",
+                    "  V   V  ",
+                    "   VVV   ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "         ",
+                    "         ",
+                    "         ",
+                    "  [   [  ",
+                    "  [   [  ",
+                    "  [   [  ",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "         ",
+                    "         ",
+                    "         ",
+                    "  [   [  ",
+                    "  [   [  ",
+                    "  [   [  ",
+                    "         ",
+                    "         ",
+                    "         "
+                ],
+                [
+                    "         ",
+                    "         ",
+                    "         ",
+                    "  [   [  ",
+                    "  [   [  ",
+                    "  [   [  ",
+                    "         ",
+                    "         ",
+                    "         "
+                ]
+            ],
+            "keys": {
+                "M": "design_decor:brass_boiler_structure",
+                "V": "create:metal_girder",
+                "Q": "create:gantry_shaft",
+                "H": "design_decor:industrial_iron_boiler",
+                "E": "create:fluid_pipe",
+                "X": "design_decor:brass_boiler",
+                "K": "design_decor:brass_boiler_large",
+                "Z": "create:depot",
+                "N": "create:encased_fluid_pipe",
+                "]": "design_decor:cast_iron_boiler",
+                "A": "design_decor:diagonal_metal_support",
+                "L": "create:smart_fluid_pipe",
+                "R": "design_decor:diagonal_girder",
+                "S": "create:industrial_iron_block",
+                "I": "create_things_and_misc:brass_bricks",
+                "D": "create:mechanical_pump",
+                "[": "design_decor:ornate_grate"
+            }
+        },
+        {
             "type": "custommachinery:chunkload",
             "radius": 2
         },
@@ -134,8 +258,8 @@
             "id": "player",
             "texture": "kubejs:textures/gui/rocket_button.png",
             "texture_hovered": "kubejs:textures/gui/rocket_button_hovered.png",
-            "texture_toogle":"kubejs:textures/gui/rocket_button_toogle.png",
-            "texture_toogle_hovered":"kubejs:textures/gui/rocket_button_toogle_hovered.png",
+            "texture_toogle": "kubejs:textures/gui/rocket_button_toogle.png",
+            "texture_toogle_hovered": "kubejs:textures/gui/rocket_button_toogle_hovered.png",
             "toggle": true,
             "tooltips": {
                 "text": "kubejs.tooltip.launcher_pad_controller_buttom_tooltips",

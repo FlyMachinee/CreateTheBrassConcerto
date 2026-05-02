@@ -196,6 +196,12 @@
     },
     {
         "matchItems": [
+            "minecraft:ender_pearl"
+        ],
+        "resultItems": "kubejs:electric_gear"
+    },
+    {
+        "matchItems": [
             "createloveandwar:propellant_sheet",
             "createloveandwar:pistol_casing",
             "createloveandwar:rifle_casing",

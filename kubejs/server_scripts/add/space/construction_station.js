@@ -1,84 +1,7 @@
 ServerEvents.recipes(event => {
-  const ConstructionStationStructure =
-  {
-    "type": "custommachinery:structure",
-    "pattern": [
-      [
-        "AAAAA  ",
-        "AAAAAA ",
-        "AAAATTT",
-        "AAAATUT",
-        "AAAATTT",
-        "AAAAAA "
-      ],
-      [
-        "BCCC   ",
-        "BFGGC  ",
-        "BF OCC ",
-        "BF VCWC",
-        "BCJCCC ",
-        "  J    "
-      ],
-      [
-        " CDD   ",
-        " H  D  ",
-        " HG DP ",
-        " HX DWP",
-        " CXCCP ",
-        "  m    "
-      ],
-      [
-        "SAAA   ",
-        "IJKLA  ",
-        "IJQRAY ",
-        "JJJLAWY",
-        "SAAAAY ",
-        "       "
-      ],
-      [
-        " EEE   ",
-        " EEEE  ",
-        " EEEE  ",
-        " EEEEW ",
-        " EEEE  ",
-        "       "
-      ],
-      [
-        "       ",
-        "       ",
-        "       ",
-        "     Z ",
-        "       ",
-        "       "
-      ]
-    ],
-    "keys": {
-      "P": "create:brass_funnel",
-      "F": "create:andesite_casing",
-      "A": "create:copper_casing",
-      "Z": "create:millstone",
-      "D": "design_decor:tinted_framed_glass",
-      "C": "create:secondary_linear_chassis",
-      "G": "create:depot",
-      "V": "create:basin",
-      "I": "design_decor:industrial_gear",
-      "K": "create:deployer",
-      "O": "create:mechanical_arm",
-      "E": "minecraft:smooth_stone_slab",
-      "L": "create:mechanical_press",
-      "W": "design_decor:industrial_iron_boiler",
-      "Q": "create:mechanical_saw",
-      "U": "design_decor:brass_boiler_large",
-      "T": "design_decor:brass_boiler_structure",
-      "B": "create:item_drain",
-      "J": "create:gearbox",
-      "S": "create:spout",
-      "X": "create:encased_chain_drive",
-      "H": "design_decor:industrial_gear_large",
-      "R": "vintageimprovements:laser",
-      "Y": "design_decor:diagonal_girder"
-    },
-    "jei": true
+  const ConstructionStationStructure = {
+    "type": "custommachinery:general_structure",
+    "id": "main"
   }
   const ConstructionStationStress = {
     "type": "custommachinery:contraption",
@@ -132,7 +55,7 @@ ServerEvents.recipes(event => {
       "amount": amount
     })
   }
-  function ConstructionStationItemNbt(item, amount,nbt, mode) {
+  function ConstructionStationItemNbt(item, amount, nbt, mode) {
     return ({
       "type": "custommachinery:item",
       "mode": mode,
@@ -148,7 +71,7 @@ ServerEvents.recipes(event => {
       "blacklist": false
     })
   }
-  
+
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -233,7 +156,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem('iceandfire:fire_dragon_heart', 4, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_flesh', 6, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_blood', 8, "input"),
-      ConstructionStationFluid("kubejs:gold", IngotBlock*IngotFluid),
+      ConstructionStationFluid("kubejs:gold", IngotBlock * IngotFluid),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 1),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.5)
     ],
@@ -252,7 +175,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem('iceandfire:fire_dragon_flesh', 6, "input"),
       ConstructionStationItem('iceandfire:fire_dragon_blood', 8, "input"),
       ConstructionStationFluid("kubejs:covariant_heat", 250),
-      ConstructionStationFluid("kubejs:gold", IngotBlock*IngotFluid),
+      ConstructionStationFluid("kubejs:gold", IngotBlock * IngotFluid),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 1),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.5)
     ],
@@ -268,7 +191,7 @@ ServerEvents.recipes(event => {
       ConstructionStationCustomEnergy(720),
       ConstructionStationItem("kubejs:graphene_coil", 3, "input"),
       ConstructionStationFluid("kubejs:electro_hydro", 250),
-      ConstructionStationFluid("kubejs:tin", 4*IngotFluid),
+      ConstructionStationFluid("kubejs:tin", 4 * IngotFluid),
       ConstructionStationItem("kubejs:carbon_electrode", 48, "output")
     ],
   }).id("dut_create:construction_station/carbon_electrode")
@@ -422,7 +345,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("kubejs:electric_gear", 16, "input"),
       ConstructionStationItem("create:mechanical_pump", 16, "input"),
       ConstructionStationItem("create:sturdy_sheet", 16, "input"),
-      ConstructionStationFluid("kubejs:gold", 10*IngotFluid),
+      ConstructionStationFluid("kubejs:gold", 10 * IngotFluid),
       ConstructionStationFluid("kubejs:slime_colloid", 1800),
       ConstructionStationItem("create:precision_mechanism", 24, "output")
     ],
@@ -440,7 +363,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("create:sturdy_sheet", 16, "input"),
       ConstructionStationItem("kubejs:fluid_mechanism", 32, "input"),
       ConstructionStationItem("kubejs:circuit_board", 16, "input"),
-      ConstructionStationFluid("kubejs:brass", 48*IngotFluid),
+      ConstructionStationFluid("kubejs:brass", 48 * IngotFluid),
       ConstructionStationItem("create:precision_mechanism", 16, "output")
     ],
   }).id("dut_create:construction_station/precision_mechanism_set")
@@ -527,7 +450,7 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationFluid("kubejs:aluminum", 20*IngotFluid),
+      ConstructionStationFluid("kubejs:aluminum", 20 * IngotFluid),
       ConstructionStationFluid("kubejs:copper", 720),
       ConstructionStationFluid("kubejs:slime_colloid", 750),
       ConstructionStationItem("kubejs:duraplas_sheet", 4, "input"),
@@ -799,8 +722,8 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationEnergy(),
-      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:0}", "input"),
-      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:1024}", "output"),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1, "{Damage:0}", "input"),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1, "{Damage:1024}", "output"),
       ConstructionStationItem("kubejs:productivity_module_2", 3, "input"),
       ConstructionStationItem("createdieselgenerators:distillation_controller", 3, "input"),
       ConstructionStationItem("createloveandwar:thermostat", 3, "output")
@@ -816,8 +739,8 @@ ServerEvents.recipes(event => {
       ConstructionStationStructure,
       ConstructionStationStress,
       ConstructionStationCustomEnergy(16384),
-      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:0}", "input"),
-      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1,"{Damage:1024}", "output"),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1, "{Damage:0}", "input"),
+      ConstructionStationItemNbt("kubejs:brass_hard_disk", 1, "{Damage:1024}", "output"),
       ConstructionStationItem("kubejs:mycetozoan", 1, "input"),
       ConstructionStationItem("create:empty_schematic", 1, "input"),
       ConstructionStationItem("kubejs:creative_motor_blueprint", 1, "input"),

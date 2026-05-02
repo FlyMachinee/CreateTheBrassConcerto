@@ -1,60 +1,7 @@
 ServerEvents.recipes(event => {
-  const ElectronTubeComputerStructure =
-  {
-    "type": "custommachinery:structure",
-    "pattern": [
-      [
-        "AAAAAA",
-        "AAAAAA",
-        "AAAAAA",
-        "AAAAAA"
-      ],
-      [
-        "ET  TE",
-        "EFGGFE",
-        "EFGGFE",
-        "ETmDTE"
-      ],
-      [
-        "      ",
-        "IQPQPI",
-        "ILLLLI",
-        "      "
-      ],
-      [
-        "      ",
-        "ITSTSI",
-        "ILLLLI",
-        "      "
-      ],
-      [
-        "      ",
-        "ITSTSI",
-        "ILLLLI",
-        "      "
-      ],
-      [
-        "      ",
-        " MMMM ",
-        " MMMM ",
-        "      "
-      ]
-    ],
-    "keys": {
-      "S": "create:nixie_tube",
-      "I": "create:framed_glass_trapdoor",
-      "P": "create:stressometer",
-      "E": "create:controls",
-      "Q": "create:smart_fluid_pipe",
-      "T": "create:display_link",
-      "L": "create:display_board",
-      "F": "create:railway_casing",
-      "M": "create:item_drain",
-      "A": "design_decor:ornate_grate",
-      "G": "createaddition:modular_accumulator",
-      "D": "design_decor:stepped_lever",
-    },
-    "jei": true
+  const ElectronTubeComputerStructure = {
+    "type": "custommachinery:general_structure",
+    "id": "main"
   }
   function ElectronTubeComputerFluid(fluid, amount, mode) {
     return ({

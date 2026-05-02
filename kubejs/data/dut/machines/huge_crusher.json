@@ -28,151 +28,248 @@
     ],
     "components": [
         {
-            "type": "custommachinery:fluid",
-            "capacity": 4000,
-            "id": "tank",
-            "filter": ["minecraft:water"],
-            "whitelist": true
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "  AAA  ",
+                    " BACAB ",
+                    "HHAAAHH",
+                    "   B   ",
+                    "   B   ",
+                    "   B   ",
+                    "   B   ",
+                    "   B   ",
+                    "HHAAAHH",
+                    " BACAB ",
+                    "  AAA  "
+                ],
+                [
+                    "  AAA  ",
+                    " BACAB ",
+                    "HHAAAHH",
+                    "   B   ",
+                    "   B   ",
+                    "   B   ",
+                    "   B   ",
+                    "   B   ",
+                    "HHAAAHH",
+                    " BACAB ",
+                    "  AAA  "
+                ],
+                [
+                    "       ",
+                    " B D B ",
+                    "HHIDIHH",
+                    "   D   ",
+                    "   D   ",
+                    "  Mmg  ",
+                    "   R   ",
+                    "   R   ",
+                    "HHSqSHH",
+                    " B   B ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    " B E B ",
+                    "JBAAABJ",
+                    "JB   BJ",
+                    "JB P BJ",
+                    "JB Q BJ",
+                    "JB R BJ",
+                    "JB P BJ",
+                    "JBAAABJ",
+                    " B E B ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    " FEGEF ",
+                    " KACAK ",
+                    " KN OK ",
+                    " KO NK ",
+                    " KN OK ",
+                    " KO NK ",
+                    " KN OK ",
+                    " KACAK ",
+                    " FEGEF ",
+                    "       "
+                ],
+                [
+                    "       ",
+                    "       ",
+                    " LAAAL ",
+                    "       ",
+                    "       ",
+                    "       ",
+                    "       ",
+                    "       ",
+                    " LAAAL ",
+                    "       ",
+                    "       "
+                ]
+            ],
+            "keys": {
+                "E": "design_decor:diagonal_metal_support",
+                "P": "design_decor:industrial_gear",
+                "O": "create:crushing_wheel",
+                "R": "create:encased_chain_drive",
+                "G": "design_decor:industrial_iron_boiler",
+                "J": "minecraft:smooth_stone_slab",
+                "L": "design_decor:andesite_floodlight[facing=up]",
+                "B": "ad_astra:iron_pillar",
+                "Q": "create:gearbox",
+                "q": "create:gearbox[axis=y]",
+                "K": "create_things_and_misc:brass_bricks",
+                "F": "create_things_and_misc:brass_brick_stairs",
+                "N": "design_decor:industrial_gear_large",
+                "H": "design_decor:industrial_plating_block",
+                "M": "#dut_create:red_container",
+                "g": "#dut_create:green_container",
+                "A": "design_decor:industrial_iron_boiler_structure",
+                "I": "create:display_board",
+                "C": "design_decor:industrial_iron_boiler_large",
+                "S": "create:andesite_casing",
+                "D": "create:encased_fluid_pipe"
+            }
         },
         {
             "type": "custommachinery:fluid",
-            "capacity": 1000,
-            "id": "fluid",
-            "maxInput": 0,
-            "maxOutput": 0,
-            "filter": [ "kubejs:hydrofluid"],
-            "whitelist": true,
-            "config":{
-                "default": "none"
-            }
+            "capacity": 4000,
+            "id": "tank",
+            "filter": [
+                "minecraft:water"
+            ],
+            "whitelist": true
         },
         {
             "type": "custommachinery:item",
             "id": "5",
             "mode": "output",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "none",
                 "left": "output",
-                "input":false,
-                "output":true
+                "input": false,
+                "output": true
             }
         },
         {
             "type": "custommachinery:item",
             "id": "6",
             "mode": "output",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "none",
                 "left": "output",
-                "input":false,
-                "output":true
+                "input": false,
+                "output": true
             }
         },
         {
             "type": "custommachinery:item",
             "id": "7",
             "mode": "output",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "none",
                 "left": "output",
-                "input":false,
-                "output":true
+                "input": false,
+                "output": true
             }
         },
         {
             "type": "custommachinery:item",
             "id": "51",
             "mode": "output",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "none",
                 "left": "output",
-                "input":false,
-                "output":true
+                "input": false,
+                "output": true
             }
         },
         {
             "type": "custommachinery:item",
             "id": "61",
             "mode": "output",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "none",
                 "left": "output",
-                "input":false,
-                "output":true
+                "input": false,
+                "output": true
             }
         },
         {
             "type": "custommachinery:item",
             "id": "71",
             "mode": "output",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "none",
                 "left": "output",
-                "input":false,
-                "output":true
+                "input": false,
+                "output": true
             }
         },
         {
             "type": "custommachinery:item",
             "id": "1",
             "mode": "input",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "input",
                 "left": "none",
-                "input":true,
-                "output":false
+                "input": true,
+                "output": false
             }
         },
         {
             "type": "custommachinery:item",
             "id": "2",
             "mode": "input",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "input",
                 "left": "none",
-                "input":true,
-                "output":false
+                "input": true,
+                "output": false
             }
         },
         {
             "type": "custommachinery:item",
             "id": "3",
             "mode": "input",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "input",
                 "left": "none",
-                "input":true,
-                "output":false
+                "input": true,
+                "output": false
             }
         },
         {
             "type": "custommachinery:item",
             "id": "4",
             "mode": "input",
-            "config":{
+            "config": {
                 "default": "both",
                 "right": "input",
                 "left": "none",
-                "input":true,
-                "output":false
+                "input": true,
+                "output": false
             }
         },
         {
             "type": "custommachinery:contraption",
             "config": {
                 "default": "none",
-                "top":"input",
-                "input":true,
-                "output":false
+                "top": "input",
+                "input": true,
+                "output": false
             },
             "stress_impact": 0
         }
@@ -224,17 +321,9 @@
         },
         {
             "type": "custommachinery:fluid",
-            "x": 110,
+            "x": 119,
             "y": 21,
             "id": "tank",
-            "width": 18,
-            "height": 18
-        },
-        {
-            "type": "custommachinery:fluid",
-            "x": 128,
-            "y": 21,
-            "id": "fluid",
             "width": 18,
             "height": 18
         },

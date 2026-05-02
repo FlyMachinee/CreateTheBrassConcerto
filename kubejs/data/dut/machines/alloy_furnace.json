@@ -28,6 +28,109 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    " C C ",
+                    "CGGGC",
+                    " GGG ",
+                    "CGGGC",
+                    " C C "
+                ],
+                [
+                    " DDD ",
+                    "DHHHD",
+                    "DHHHD",
+                    "DHHHD",
+                    " DDD "
+                ],
+                [
+                    " QEP ",
+                    "QIIIP",
+                    "FIMIF",
+                    "AIIIR",
+                    " AFR "
+                ],
+                [
+                    "     ",
+                    " III ",
+                    "FIMIF",
+                    " III ",
+                    "  O  "
+                ],
+                [
+                    "  F  ",
+                    " III ",
+                    "CIMIC",
+                    " III ",
+                    "  C  "
+                ],
+                [
+                    "  C  ",
+                    " III ",
+                    "CIMIC",
+                    " III ",
+                    "  C  "
+                ],
+                [
+                    "  B  ",
+                    " JDJ ",
+                    "BDEDB",
+                    " JDJ ",
+                    "  B  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "  E  ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  K  ",
+                    " KmK ",
+                    "  K  ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  L  ",
+                    " LNL ",
+                    "  L  ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  B  ",
+                    " BEB ",
+                    "  B  ",
+                    "     "
+                ]
+            ],
+            "keys": {
+                "O": "design_decor:stepped_lever",
+                "K": "#dut_create:funnel",
+                "B": "design_decor:diagonal_girder",
+                "N": "railways:smokestack_oilburner",
+                "J": "design_decor:andesite_floodlight[facing=up]",
+                "M": "design_decor:industrial_iron_boiler_large",
+                "E": "design_decor:industrial_iron_boiler",
+                "I": "design_decor:industrial_iron_boiler_structure",
+                "C": "create:metal_girder",
+                "L": "design_decor:metal_support",
+                "G": "createaddition:liquid_blaze_burner[blaze=kindled]",
+                "D": "create:industrial_iron_block",
+                "F": "design_decor:diagonal_metal_support",
+                "A": "design_decor:iron_railing[south=true,west=true]",
+                "R": "design_decor:iron_railing[east=true,south=true]",
+                "P": "design_decor:iron_railing[east=true,north=true]",
+                "Q": "design_decor:iron_railing[north=true,west=true]",
+                "H": "design_decor:ornate_grate"
+            }
+        },
+        {
             "type": "custommachinery:item",
             "id": "1",
             "mode": "input",
@@ -106,7 +209,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -118,7 +221,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -130,7 +233,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }
@@ -142,7 +245,7 @@
             "capacity": 1,
             "variant": "custommachinery:upgrade",
             "config": {
-                "default":"none",
+                "default": "none",
                 "input": false,
                 "output": false
             }

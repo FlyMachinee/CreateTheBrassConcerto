@@ -8,127 +8,33 @@ ServerEvents.recipes(event => {
             "amount": amount
         })
     }
-    const CrusherStructure =
-    {
-        "type": "custommachinery:structure",
-        "pattern": [
-            [
-                "  AAA  ",
-                " BACAB ",
-                "HHAAAHH",
-                "   B   ",
-                "   B   ",
-                "   B   ",
-                "   B   ",
-                "   B   ",
-                "HHAAAHH",
-                " BACAB ",
-                "  AAA  "
-            ],
-            [
-                "  AAA  ",
-                " BACAB ",
-                "HHAAAHH",
-                "   B   ",
-                "   B   ",
-                "   B   ",
-                "   B   ",
-                "   B   ",
-                "HHAAAHH",
-                " BACAB ",
-                "  AAA  "
-            ],
-            [
-                "       ",
-                " B D B ",
-                "HHIDIHH",
-                "   D   ",
-                "   D   ",
-                "  Mmg  ",
-                "   R   ",
-                "   R   ",
-                "HHSqSHH",
-                " B   B ",
-                "       "
-            ],
-            [
-                "       ",
-                " B E B ",
-                "JBAAABJ",
-                "JB   BJ",
-                "JB P BJ",
-                "JB Q BJ",
-                "JB R BJ",
-                "JB P BJ",
-                "JBAAABJ",
-                " B E B ",
-                "       "
-            ],
-            [
-                "       ",
-                " FEGEF ",
-                " KACAK ",
-                " KN OK ",
-                " KO NK ",
-                " KN OK ",
-                " KO NK ",
-                " KN OK ",
-                " KACAK ",
-                " FEGEF ",
-                "       "
-            ],
-            [
-                "       ",
-                "       ",
-                " LAAAL ",
-                "       ",
-                "       ",
-                "       ",
-                "       ",
-                "       ",
-                " LAAAL ",
-                "       ",
-                "       "
-            ]
-        ],
-        "keys":
-        {
-            "E": "design_decor:diagonal_metal_support",
-            "P": "design_decor:industrial_gear",
-            "O": "create:crushing_wheel",
-            "R": "create:encased_chain_drive",
-            "G": "design_decor:industrial_iron_boiler",
-            "J": "minecraft:smooth_stone_slab",
-            "L": "design_decor:andesite_floodlight[facing=up]",
-            "B": "ad_astra:iron_pillar",
-            "Q": "create:gearbox",
-            "q": "create:gearbox[axis=y]",
-            "K": "create_things_and_misc:brass_bricks",
-            "F": "create_things_and_misc:brass_brick_stairs",
-            "N": "design_decor:industrial_gear_large",
-            "H": "design_decor:industrial_plating_block",
-            "M": "#dut_create:red_container",
-            "g": "#dut_create:green_container",
-            "A": "design_decor:industrial_iron_boiler_structure",
-            "I": "create:display_board",
-            "C": "design_decor:industrial_iron_boiler_large",
-            "S": "create:andesite_casing",
-            "D": "create:encased_fluid_pipe"
-        }
+    const CrusherStructure = {
+        "type": "custommachinery:general_structure",
+        "id": "main"
     }
     const CrusherSound = {
-        "type": "custommachinery:command",
+        "type": "custommachinery:sound",
         "phase": "crafting_tickable",
-        "command": "/playsound create:crushing_1 block @a[distance=..24] ~ ~2 ~",
-        "log": false,
-        "permissionlevel": 5
+        "sound": "create:crushing_1",
+        "pos": [0.5, 2.5, 0.5]
     }
-    const CrusherParticle = {
-        "type": "custommachinery:command",
+    const CrusherParticle1 = {
+        "type": "custommachinery:particle",
         "phase": "crafting_tickable",
-        "command": "/function dut:particle/crusher",
-        "log": false,
-        "permissionlevel": 5
+        "particle": "minecraft:crit",
+        "pos": [0.5, 3.5, 0.5],
+        "delta": [1, 0.5, 1],
+        "speed": 0.1,
+        "count": 6
+    }
+    const CrusherParticle2 = {
+        "type": "custommachinery:particle",
+        "phase": "crafting_tickable",
+        "particle": "minecraft:smoke",
+        "pos": [0.5, 3.5, 0.5],
+        "delta": [1, 0.5, 1],
+        "speed": 0.1,
+        "count": 8
     }
     const CrusherStress = {
         "type": "custommachinery:contraption",
@@ -138,78 +44,27 @@ ServerEvents.recipes(event => {
     const CrusherFluid = {
         "type": "custommachinery:fluid",
         "mode": "input",
-        "fluid": "kubejs:hydrofluid",
-        "amount": 1
-    }
-    const CrusherFluid1 = {
-        "type": "custommachinery:fluid",
-        "mode": "input",
         "fluid": "minecraft:water",
         "amount": 50
     }
-    
-    event.custom({
-        "type": "custommachinery:custom_machine",
-        "machine": "dut:huge_crusher",
-        "time": 10,
-        "error": true,
-        "hidden": true,
-        "priority": 0,
-        "requirements": [
-            CrusherStructure,
-            {
-                "type": "custommachinery:fluid_per_tick",
-                "mode": "input",
-                "fluid": "minecraft:water",
-                "amount": 50
-            },
-            {
-                "type": "custommachinery:fluid_per_tick",
-                "mode": "output",
-                "fluid": "kubejs:hydrofluid",
-                "amount": 50
-            }
-        ]
-    }).id("dut_create:huge_crusher/empty")
-    event.custom({
-        "type": "custommachinery:custom_machine",
-        "machine": "dut:huge_crusher",
-        "time": 1,
-        "error": true,
-        "hidden": true,
-        "priority": 1,
-        "requirements": [
-            CrusherStructure,
-            CrusherFluid1,
-            CrusherStress,
-            {
-                "type": "custommachinery:fluid",
-                "mode": "output",
-                "fluid": "kubejs:hydrofluid",
-                "amount": 1000
-            }
-        ]
-    }).id("dut_create:huge_crusher/fluid")
+
     function CrusherCommon(InputList, OutputList, id) {
         let List = InputList.map(i => CrusherItem("input", i.id, i.count)).concat(OutputList.map(i => CrusherItem("output", i.id, i.count)))
-        let List1 = InputList.map(i => CrusherItem("input", i.id, 2*i.count)).concat(OutputList.map(i => CrusherItem("output", i.id, 2*i.count)))
+        let List1 = InputList.map(i => CrusherItem("input", i.id, 2 * i.count)).concat(OutputList.map(i => CrusherItem("output", i.id, 2 * i.count)))
         event.custom({
             "type": "custommachinery:custom_machine",
             "machine": "dut:huge_crusher",
             "time": 1,
             "error": true,
-            "hidden":false,
+            "hidden": false,
             "priority": 10,
             "requirements": [
-                CrusherStress,
-                CrusherFluid,
-                CrusherFluid1
-            ].concat(List),
-            "jei": [
                 CrusherStructure,
                 CrusherStress,
                 CrusherFluid,
-                CrusherFluid1
+                CrusherSound,
+                CrusherParticle1,
+                CrusherParticle2
             ].concat(List)
         }).id("dut_create:huge_crusher/" + id)
         event.custom({
@@ -217,12 +72,15 @@ ServerEvents.recipes(event => {
             "machine": "dut:huge_crusher",
             "time": 1,
             "error": true,
-            "hidden":true,
+            "hidden": true,
             "priority": 20,
             "requirements": [
+                CrusherStructure,
                 CrusherStress,
                 CrusherFluid,
-                CrusherFluid1
+                CrusherSound,
+                CrusherParticle1,
+                CrusherParticle2
             ].concat(List1)
         }).id("dut_create:huge_crusher/fast/" + id)
     }

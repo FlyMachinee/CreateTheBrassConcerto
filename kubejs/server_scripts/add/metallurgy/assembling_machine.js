@@ -1,74 +1,8 @@
 ServerEvents.recipes(event => {
   const AssemblingMachineStructure =
   {
-    "type": "custommachinery:structure",
-    "pattern":
-      [
-        [
-          "     ",
-          " BBB ",
-          " BII ",
-          " BII ",
-          " BIN ",
-          " BBB ",
-          " BBB ",
-          "  VY "
-        ],
-        [
-          " AAA ",
-          "A D A",
-          "A   A",
-          "A   A",
-          "AO  A",
-          "ARSTA",
-          " RVY ",
-          "  m  "
-        ],
-        [
-          " AAA ",
-          "AFGFA",
-          "AGJKA",
-          "AGLMA",
-          "AGPQA",
-          "AUUUA",
-          " UUU ",
-          "     "
-        ],
-        [
-          "     ",
-          " HHH ",
-          " HHH ",
-          " HHH ",
-          " HHH ",
-          " HHH ",
-          " HHH ",
-          "     "
-        ]
-      ],
-    "keys": {
-      "O": "vintageimprovements:spring_coiling_machine",
-      "T": "createaddition:rolling_mill",
-      "F": "create:mechanical_arm",
-      "B": "create:copper_casing",
-      "Y": "create:mechanical_pump",
-      "A": "create:framed_glass_trapdoor",
-      "U": "create:secondary_linear_chassis",
-      "D": "create:millstone",
-      "I": "create:depot",
-      "N": "create:basin",
-      "V": "create:encased_fluid_pipe",
-      "H": "minecraft:smooth_stone_slab",
-      "G": "create:nixie_tube",
-      "P": "create:mechanical_press",
-      "J": "create:spout",
-      "L": "create:deployer",
-      "M": "vintageimprovements:laser",
-      "K": "createaddition:tesla_coil",
-      "S": "create:mechanical_saw",
-      "Q": "create:mechanical_mixer",
-      "R": "design_decor:industrial_gear_large"
-    },
-    "jei": true
+    "type": "custommachinery:general_structure",
+    "id": "main"
   }
   function AssemblingMachineFluid(fluid, amount) {
     return ({

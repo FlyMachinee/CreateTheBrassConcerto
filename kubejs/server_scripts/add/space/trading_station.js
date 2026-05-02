@@ -1,66 +1,7 @@
 ServerEvents.recipes(event => {
   const TradingStationStructure = {
-    "type": "custommachinery:structure",
-    "pattern": [
-      [
-        " AAA ",
-        "FAHAF",
-        " AAA "
-      ],
-      [
-        "  F  ",
-        "IJKJI",
-        " C C "
-      ],
-      [
-        "  V  ",
-        " JmJ ",
-        " DED "
-      ],
-      [
-        "  Q  ",
-        " QRQ ",
-        "     "
-      ],
-      [
-        "     ",
-        "  R  ",
-        "     "
-      ],
-      [
-        "     ",
-        "  K  ",
-        "     "
-      ],
-      [
-        "     ",
-        "  T  ",
-        "     "
-      ]
-    ],
-    "keys": {
-      "V": "#dut_create:storage",
-      "I": "create:mechanical_pump",
-      "A": "design_decor:gold_boiler_structure",
-      "H": "design_decor:gold_boiler_large",
-      "K": "design_decor:gold_boiler",
-      "F": "design_decor:industrial_gold_block",
-      "Q": "design_decor:diagonal_girder",
-      "D": "design_decor:brass_lamp",
-      "J": "create:encased_fluid_pipe",
-      "T": "design_decor:andesite_floodlight",
-      "R": "design_decor:copper_boiler",
-      "C": "design_decor:stepped_lever",
-      "E": "#dut_create:brass_funnel"
-    },
-    "jei": true
-  }
-  const TradingStationCommon = {
-    "type": "custommachinery:fluid",
-    "mode": "input",
-    "tank": "fluid",
-    "fluid": "kubejs:hydrofluid",
-    "amount": 1
+    "type": "custommachinery:general_structure",
+    "id": "main"
   }
   function TradingStationFluid(fluid, amount, mode) {
     return ({
@@ -70,12 +11,12 @@ ServerEvents.recipes(event => {
       "amount": amount
     })
   }
-  function TradingStationFluidJEI(fluid, amount, mode,tank) {
+  function TradingStationFluidJEI(fluid, amount, mode, tank) {
     return ({
       "type": "custommachinery:fluid",
       "mode": mode,
       "fluid": fluid,
-      "tank":tank,
+      "tank": tank,
       "amount": amount
     })
   }
@@ -95,23 +36,6 @@ ServerEvents.recipes(event => {
     })
   }
 
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:trading_station",
-    "time": 1,
-    "error": true,
-    "hidden": true,
-    "priority": 1,
-    "requirements": [
-      TradingStationStructure,
-      {
-        "type": "custommachinery:fluid",
-        "mode": "output",
-        "fluid": "kubejs:hydrofluid",
-        "amount": 1000
-      }
-    ]
-  }).id("dut_create:trading_station/fluid")
   //硬币存入与取出
   function TradingStationCoin(i) {
     event.custom({
@@ -122,12 +46,12 @@ ServerEvents.recipes(event => {
       "hidden": false,
       "priority": 1,
       "requirements": [
-        TradingStationCommon,
+        TradingStationStructure,
         TradingStationFluid("kubejs:slime_coin", i.value, "output"),
         TradingStationItem(i.id, 1, "input")
       ],
-      "jei":[
-        TradingStationFluidJEI("kubejs:slime_coin", i.value, "output","coin_output"),
+      "jei": [
+        TradingStationFluidJEI("kubejs:slime_coin", i.value, "output", "coin_output"),
         TradingStationItem(i.id, 1, "input")
       ]
     }).id("dut_create:trading_station/coin/in/" + i.id.split(":")[1])
@@ -139,7 +63,7 @@ ServerEvents.recipes(event => {
       "hidden": true,
       "priority": 2,
       "requirements": [
-        TradingStationCommon,
+        TradingStationStructure,
         TradingStationFluid("kubejs:slime_coin", i.value * 64, "output"),
         TradingStationItem(i.id, 64, "input")
       ]
@@ -152,13 +76,13 @@ ServerEvents.recipes(event => {
       "hidden": false,
       "priority": 3,
       "requirements": [
-        TradingStationCommon,
+        TradingStationStructure,
         TradingStationFliter(i.id),
         TradingStationFluid("kubejs:slime_coin", i.value, "input"),
         TradingStationItem(i.id, 1, "output")
       ],
-      "jei":[
-        TradingStationFluidJEI("kubejs:slime_coin", i.value, "input","coin_input"),
+      "jei": [
+        TradingStationFluidJEI("kubejs:slime_coin", i.value, "input", "coin_input"),
         TradingStationItem(i.id, 1, "output")
       ]
     }).id("dut_create:trading_station/coin/out/" + i.id.split(":")[1])
@@ -170,7 +94,7 @@ ServerEvents.recipes(event => {
       "hidden": true,
       "priority": 4,
       "requirements": [
-        TradingStationCommon,
+        TradingStationStructure,
         TradingStationFliter(i.id),
         TradingStationFluid("kubejs:slime_coin", i.value * 64, "input"),
         TradingStationItem(i.id, 64, "output")
@@ -197,12 +121,12 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 1,
       "requirements": [
-        TradingStationCommon,
+        TradingStationStructure,
         TradingStationFluid("kubejs:slime_coin", inputItem.value, "output"),
         TradingStationItem(inputItem.id, inputItem.amount, "input")
       ],
-      "jei":[
-        TradingStationFluidJEI("kubejs:slime_coin", inputItem.value, "output","coin_output"),
+      "jei": [
+        TradingStationFluidJEI("kubejs:slime_coin", inputItem.value, "output", "coin_output"),
         TradingStationItem(inputItem.id, inputItem.amount, "input")
       ]
     }).id("dut_create:trading_station/selling/item/" + inputItem.id.split(":")[1])
@@ -215,11 +139,11 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 1,
       "requirements": [
-        TradingStationCommon,
-        TradingStationFluid("kubejs:slime_coin", inputFluid.value, "output"),TradingStationFluid(inputFluid.id, inputFluid.amount, "input")
+        TradingStationStructure,
+        TradingStationFluid("kubejs:slime_coin", inputFluid.value, "output"), TradingStationFluid(inputFluid.id, inputFluid.amount, "input")
       ],
-      "jei":[
-        TradingStationFluidJEI("kubejs:slime_coin", inputFluid.value, "output","coin_output"),TradingStationFluid(inputFluid.id, inputFluid.amount, "input")
+      "jei": [
+        TradingStationFluidJEI("kubejs:slime_coin", inputFluid.value, "output", "coin_output"), TradingStationFluid(inputFluid.id, inputFluid.amount, "input")
       ]
     }).id("dut_create:trading_station/selling/fluid/" + inputFluid.id.split(":")[1])
   }
@@ -285,14 +209,14 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 3,
       "requirements": [
-        TradingStationCommon,
+        TradingStationStructure,
         TradingStationFliter(inputItem.id),
         TradingStationFluid("kubejs:slime_coin", inputItem.value, "input"),
         TradingStationItem(inputItem.id, inputItem.amount, "output")
       ],
-      "jei":[
+      "jei": [
         TradingStationFliter(inputItem.id),
-        TradingStationFluidJEI("kubejs:slime_coin", inputItem.value, "input","coin_input"),
+        TradingStationFluidJEI("kubejs:slime_coin", inputItem.value, "input", "coin_input"),
         TradingStationItem(inputItem.id, inputItem.amount, "output")
       ]
     }).id("dut_create:trading_station/buying/item/" + inputItem.id.split(":")[1])
@@ -305,14 +229,14 @@ ServerEvents.recipes(event => {
       "error": true,
       "priority": 3,
       "requirements": [
-        TradingStationCommon,
+        TradingStationStructure,
         TradingStationFliter(inputFluid.bucket),
         TradingStationFluid("kubejs:slime_coin", inputFluid.value, "input"),
         TradingStationFluid(inputFluid.id, inputFluid.amount, "output")
       ],
-      "jei":[
+      "jei": [
         TradingStationFliter(inputFluid.bucket),
-        TradingStationFluidJEI("kubejs:slime_coin", inputFluid.value, "input","coin_input"),
+        TradingStationFluidJEI("kubejs:slime_coin", inputFluid.value, "input", "coin_input"),
         TradingStationFluid(inputFluid.id, inputFluid.amount, "output")
       ]
     }).id("dut_create:trading_station/buying/fluid/" + inputFluid.id.split(":")[1])

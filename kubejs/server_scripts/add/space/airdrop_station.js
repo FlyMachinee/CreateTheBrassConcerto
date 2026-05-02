@@ -1,78 +1,8 @@
 ServerEvents.recipes(event => {
   const AirdropStationStructure =
   {
-    "type": "custommachinery:structure",
-    "pattern": [
-      [
-        "     ",
-        "  A  ",
-        " AIA ",
-        "  A  ",
-        "     "
-      ],
-      [
-        "  A  ",
-        "     ",
-        "A J A",
-        "     ",
-        "  A  "
-      ],
-      [
-        "  B  ",
-        " DDD ",
-        "BDLDB",
-        " DDD ",
-        "  B  "
-      ],
-      [
-        "     ",
-        " B B ",
-        "  J  ",
-        " B B ",
-        "     "
-      ],
-      [
-        "     ",
-        " A A ",
-        "  m  ",
-        " A A ",
-        "     "
-      ],
-      [
-        "  B  ",
-        " DDD ",
-        "BDLDB",
-        " DDD ",
-        "  B  "
-      ],
-      [
-        "  B  ",
-        " HHH ",
-        "BHNHB",
-        " HHH ",
-        "  B  "
-      ],
-      [
-        "  C  ",
-        "     ",
-        "C O C",
-        "     ",
-        "  C  "
-      ]
-    ],
-    "keys": {
-      "A": "create:chute",
-      "N": "design_decor:brass_boiler_large",
-      "O": "design_decor:brass_boiler",
-      "J": "design_decor:copper_boiler",
-      "D": "design_decor:cast_iron_boiler_structure",
-      "I": "design_decor:cast_iron_boiler",
-      "C": "design_decor:andesite_floodlight",
-      "B": "#dut_create:metal_girder",
-      "L": "design_decor:cast_iron_boiler_large",
-      "H": "design_decor:brass_boiler_structure"
-    },
-    "jei": true
+    "type": "custommachinery:general_structure",
+    "id": "main"
   }
   const AirdropStationRedstone =
   {
@@ -115,7 +45,7 @@ ServerEvents.recipes(event => {
     "error": true,
     "requirements": [
       AirdropStationStructure,
-      AirdropStationRedstone, 
+      AirdropStationRedstone,
       {
         "type": "custommachinery:fluid",
         "mode": "output",

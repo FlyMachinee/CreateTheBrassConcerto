@@ -18,15 +18,59 @@
     },
     "components": [
         {
-            "type": "custommachinery:fluid",
-            "capacity": 1000,
-            "id": "fluid",
-            "maxInput": 0,
-            "maxOutput": 0,
-            "filter": [ "kubejs:hydrofluid"],
-            "whitelist": true,
-            "config":{
-                "default": "none"
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    " AAA ",
+                    "FAHAF",
+                    " AAA "
+                ],
+                [
+                    "  F  ",
+                    "IJKJI",
+                    " C C "
+                ],
+                [
+                    "  V  ",
+                    " JmJ ",
+                    " DED "
+                ],
+                [
+                    "  Q  ",
+                    " QRQ ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  R  ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  K  ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  T  ",
+                    "     "
+                ]
+            ],
+            "keys": {
+                "V": "#dut_create:storage",
+                "I": "create:mechanical_pump",
+                "A": "design_decor:gold_boiler_structure",
+                "H": "design_decor:gold_boiler_large",
+                "K": "design_decor:gold_boiler",
+                "F": "design_decor:industrial_gold_block",
+                "Q": "design_decor:diagonal_girder",
+                "D": "design_decor:brass_lamp",
+                "J": "create:encased_fluid_pipe",
+                "T": "design_decor:andesite_floodlight",
+                "R": "design_decor:copper_boiler",
+                "C": "design_decor:stepped_lever",
+                "E": "#dut_create:brass_funnel"
             }
         },
         {
@@ -59,7 +103,7 @@
             "maxOutput": 0,
             "unique": true,
             "filter": [
-                "kubejs:slime_coin","kubejs:hydrofluid"
+                "kubejs:slime_coin"
             ],
             "whitelist": false
         },
@@ -71,7 +115,7 @@
             "maxOutput": 0,
             "unique": true,
             "filter": [
-                "kubejs:slime_coin","kubejs:hydrofluid"
+                "kubejs:slime_coin"
             ],
             "whitelist": false
         },
@@ -82,7 +126,7 @@
             "mode": "output",
             "maxInput": 0,
             "filter": [
-                "kubejs:slime_coin","kubejs:hydrofluid"
+                "kubejs:slime_coin"
             ],
             "whitelist": false
         },

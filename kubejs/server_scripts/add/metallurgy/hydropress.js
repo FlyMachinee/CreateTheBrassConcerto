@@ -1,288 +1,16 @@
 ServerEvents.recipes(event => {
     //
-    const HydropressStructure =
-    {
-        "type": "custommachinery:structure",
-        "pattern": [
-            [
-                "A   A",
-                "     ",
-                "     ",
-                "     ",
-                "A   A",
-                " BBB ",
-                " BGB ",
-                " BBB "
-            ],
-            [
-                "AAAAA",
-                "     ",
-                "     ",
-                "     ",
-                "AAAAA",
-                " CDC ",
-                " RIQ ",
-                "     "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                " JmK ",
-                "  P  "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  F  ",
-                "  L  ",
-                "     "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  F  ",
-                " TIU ",
-                "  M  "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  F  ",
-                " NIN ",
-                "  N  "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  F  ",
-                " NIN ",
-                "  N  "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  S  ",
-                " RIQ ",
-                "  H  "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  L  ",
-                "     "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  O  ",
-                "     "
-            ]
-        ],
-        "keys":
-        {
-            "A": "create:copper_casing",
-            "B": "design_decor:brass_boiler_structure",
-            "G": "design_decor:brass_boiler_large",
-            "C": "design_decor:industrial_gear_large[axis=x]",
-            "D": "create:gearbox[axis=z]",
-            "F": "create:gantry_shaft",
-            "I": "design_decor:industrial_iron_boiler",
-            "J": "create:mechanical_pump[facing=east]",
-            "K": "create:mechanical_pump[facing=west]",
-            "L": "design_decor:brass_boiler",
-            "N": "create:metal_girder",
-            "O": "design_decor:andesite_floodlight[facing=up]",
-            "P": "#dut_create:brass_funnel",
-            "H": "design_decor:diagonal_girder[facing=north]",
-            "Q": "design_decor:diagonal_girder[facing=west]",
-            "R": "design_decor:diagonal_girder[facing=east]",
-            "S": "design_decor:diagonal_girder[facing=south]",
-            "M": "design_decor:diagonal_metal_support[facing=south]",
-            "T": "design_decor:diagonal_metal_support[facing=west]",
-            "U": "design_decor:diagonal_metal_support[facing=east]",
-        },
-        "jei": true
+    const HydropressStructure = {
+        "type": "custommachinery:general_structure",
+        "id": "main"
     }
-    const HydropressStructure1 =
-    {
-        "type": "custommachinery:structure",
-        "pattern": [
-            [
-                " AAA ",
-                " AAA ",
-                " AAA ",
-                "     ",
-                "     ",
-                "  m  "
-            ],
-            [
-                "  A  ",
-                " ABA ",
-                "  A  ",
-                "  C  ",
-                "     ",
-                "     "
-            ],
-            [
-                "  S  ",
-                " RBQ ",
-                "  H  ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "     ",
-                "  B  ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "     ",
-                "  B  ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "     ",
-                "  B  ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ]
-        ],
-        "keys":
-        {
-            "A": "#dut_create:hydropress_piston",
-            "B": "design_decor:industrial_iron_boiler",
-            "H": "design_decor:diagonal_girder[facing=north]",
-            "Q": "design_decor:diagonal_girder[facing=west]",
-            "R": "design_decor:diagonal_girder[facing=east]",
-            "S": "design_decor:diagonal_girder[facing=south]",
-            "C": "create:gantry_carriage"
-        },
-        "jei": true
+    const HydropressStructure1 = {
+        "type": "custommachinery:general_structure",
+        "id": "piston_down"
     }
-    const HydropressStructure2 =
-    {
-        "type": "custommachinery:structure",
-        "pattern": [
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "  m  "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                " AAA ",
-                " AAA ",
-                " AAA ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "  A  ",
-                " ABA ",
-                "  A  ",
-                "  C  ",
-                "     ",
-                "     "
-            ],
-            [
-                "  S  ",
-                " RBQ ",
-                "  H  ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "     ",
-                "  B  ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "     ",
-                "  B  ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ],
-            [
-                "     ",
-                "  B  ",
-                "     ",
-                "     ",
-                "     ",
-                "     "
-            ]
-        ],
-        "keys":
-        {
-            "A": "#dut_create:hydropress_piston",
-            "B": "design_decor:industrial_iron_boiler",
-            "C": "create:gantry_carriage",
-            "H": "design_decor:diagonal_girder[facing=north]",
-            "Q": "design_decor:diagonal_girder[facing=west]",
-            "R": "design_decor:diagonal_girder[facing=east]",
-            "S": "design_decor:diagonal_girder[facing=south]",
-        },
-        "jei": true
+    const HydropressStructure2 = {
+        "type": "custommachinery:general_structure",
+        "id": "piston_up"
     }
     const HydropressCommon3 = {
         "type": "custommachinery:fluid",
@@ -299,11 +27,9 @@ ServerEvents.recipes(event => {
         "amount": 1000
     }
     const HydropressCommon0 = {
-        "type": "custommachinery:command",
+        "type": "custommachinery:sound",
         "phase": "ending",
-        "command": "/playsound create:mechanical_press_activation block @a",
-        "log": false,
-        "permissionlevel": 5
+        "sound": "create:mechanical_press_activation",
     }
     function hydropressInput(block, mode, count) {
         return ({
@@ -317,44 +43,6 @@ ServerEvents.recipes(event => {
             "block": "minecraft:air"
         })
     }
-    function checkBlock(pos, block, amount, mode) {
-        return (
-            {
-                "type": "custommachinery:block",
-                "mode": mode,
-                "action": "check",
-                "amount": amount,
-                "pos": pos,
-                "filter": block,
-                "whitelist": true
-            }
-        )
-    }
-    function checkPiston(mode, posmodify) {
-        return (
-            checkBlock([-1, 3 - posmodify, -3, 1, 3 - posmodify, -5], ['create:railway_casing', 'design_decor:industrial_plating_block'], 9, mode),
-            checkBlock([0, 5 - posmodify, -3,], ["design_decor:diagonal_girder"], 2, mode),
-            checkBlock([0, 5 - posmodify, -5,], ["design_decor:diagonal_girder"], 2, mode),
-            checkBlock([1, 5 - posmodify, -4,], ["design_decor:diagonal_girder"], 2, mode),
-            checkBlock([-1, 5 - posmodify, -4,], ["design_decor:diagonal_girder"], 2, mode),
-
-            checkBlock([0, 4 - posmodify, -3,], ["design_decor:industrial_plating_block"], 2, mode),
-            checkBlock([0, 4 - posmodify, -5,], ["design_decor:industrial_plating_block"], 2, mode),
-            checkBlock([1, 4 - posmodify, -4,], ["design_decor:industrial_plating_block"], 2, mode),
-            checkBlock([-1, 4 - posmodify, -4,], ["design_decor:industrial_plating_block"], 2, mode),
-            checkBlock([0, 4 - posmodify, -4, 0, 8 - posmodify, -4], ['design_decor:industrial_iron_boiler'], 5, mode)
-        )
-    }
-    function checkPiston1(posmodify) {
-        return (
-            checkBlock([-1, 3 - posmodify, -3, 1, 3 - posmodify, -5], ['create:railway_casing', 'design_decor:industrial_plating_block'], 9, "input")
-        )
-    }
-    function checkPiston2(posmodify) {
-        return (
-            checkBlock([0, 4 - posmodify, -4, 0, 8 - posmodify, -4], ['design_decor:industrial_iron_boiler'], 5, "input")
-        )
-    }
     function PlatePress(input, output, count) {
         event.custom({
             "type": "custommachinery:custom_machine",
@@ -363,6 +51,7 @@ ServerEvents.recipes(event => {
             "error": true,
             "priority": 3,
             "requirements": [
+                HydropressStructure,
                 HydropressStructure1,
                 HydropressCommon3,
                 HydropressCommon0,
@@ -403,6 +92,7 @@ ServerEvents.recipes(event => {
             "error": true,
             "hidden": jei,
             "requirements": [
+                HydropressStructure,
                 HydropressStructure1,
                 HydropressCommon3,
                 HydropressCommon0,
@@ -444,6 +134,7 @@ ServerEvents.recipes(event => {
             "error": true,
             "hidden": jei,
             "requirements": [
+                HydropressStructure,
                 HydropressStructure1,
                 HydropressCommon3,
                 HydropressCommon0,
@@ -537,6 +228,7 @@ ServerEvents.recipes(event => {
         "hidden": true,
         "priority": 0,
         "requirements": [
+            HydropressStructure
         ]
     }).id("dut_create:hydropress/empty")
 
@@ -579,4 +271,42 @@ ServerEvents.recipes(event => {
 })
 /*
   
+    function checkBlock(pos, block, amount, mode) {
+        return (
+            {
+                "type": "custommachinery:block",
+                "mode": mode,
+                "action": "check",
+                "amount": amount,
+                "pos": pos,
+                "filter": block,
+                "whitelist": true
+            }
+        )
+    }
+    function checkPiston(mode, posmodify) {
+        return (
+            checkBlock([-1, 3 - posmodify, -3, 1, 3 - posmodify, -5], ['create:railway_casing', 'design_decor:industrial_plating_block'], 9, mode),
+            checkBlock([0, 5 - posmodify, -3,], ["design_decor:diagonal_girder"], 2, mode),
+            checkBlock([0, 5 - posmodify, -5,], ["design_decor:diagonal_girder"], 2, mode),
+            checkBlock([1, 5 - posmodify, -4,], ["design_decor:diagonal_girder"], 2, mode),
+            checkBlock([-1, 5 - posmodify, -4,], ["design_decor:diagonal_girder"], 2, mode),
+
+            checkBlock([0, 4 - posmodify, -3,], ["design_decor:industrial_plating_block"], 2, mode),
+            checkBlock([0, 4 - posmodify, -5,], ["design_decor:industrial_plating_block"], 2, mode),
+            checkBlock([1, 4 - posmodify, -4,], ["design_decor:industrial_plating_block"], 2, mode),
+            checkBlock([-1, 4 - posmodify, -4,], ["design_decor:industrial_plating_block"], 2, mode),
+            checkBlock([0, 4 - posmodify, -4, 0, 8 - posmodify, -4], ['design_decor:industrial_iron_boiler'], 5, mode)
+        )
+    }
+    function checkPiston1(posmodify) {
+        return (
+            checkBlock([-1, 3 - posmodify, -3, 1, 3 - posmodify, -5], ['create:railway_casing', 'design_decor:industrial_plating_block'], 9, "input")
+        )
+    }
+    function checkPiston2(posmodify) {
+        return (
+            checkBlock([0, 4 - posmodify, -4, 0, 8 - posmodify, -4], ['design_decor:industrial_iron_boiler'], 5, "input")
+        )
+    }
     */

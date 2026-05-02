@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
             { "item": "createdieselgenerators:wood_chip" },
             { "item": "createdieselgenerators:wood_chip" }
         ],
-        "processingTime": 600,
+        "processingTime": 300,
         "results": [
             { "fluid": "createdieselgenerators:ethanol", "amount": 200 }
         ]
@@ -38,7 +38,7 @@ ServerEvents.recipes(event => {
             { "item": "createdieselgenerators:wood_chip" },
             { "item": "createdieselgenerators:wood_chip" }
         ],
-        "processingTime": 600,
+        "processingTime": 200,
         "results": [
             { "fluid": "createdieselgenerators:ethanol", "amount": 50 }
         ]
@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
             { "fluid": "minecraft:water", "amount": 100 },
             { "item": "createdieselgenerators:wood_chip" }
         ],
-        "processingTime": 500,
+        "processingTime": 200,
         "results": [
             { "fluid": "createdieselgenerators:ethanol", "amount": 200 }
         ]

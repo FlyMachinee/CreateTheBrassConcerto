@@ -28,10 +28,292 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "A   A",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "A   A",
+                    " BBB ",
+                    " BGB ",
+                    " BBB "
+                ],
+                [
+                    "AAAAA",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "AAAAA",
+                    " CDC ",
+                    " RIQ ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    " JmK ",
+                    "  P  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  F  ",
+                    "  L  ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  F  ",
+                    " TIU ",
+                    "  M  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  F  ",
+                    " NIN ",
+                    "  N  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  F  ",
+                    " NIN ",
+                    "  N  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  S  ",
+                    " RIQ ",
+                    "  H  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  L  ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  O  ",
+                    "     "
+                ]
+            ],
+            "keys": {
+                "A": "create:copper_casing",
+                "B": "design_decor:brass_boiler_structure",
+                "G": "design_decor:brass_boiler_large",
+                "C": "design_decor:industrial_gear_large[axis=x]",
+                "D": "create:gearbox[axis=z]",
+                "F": "create:gantry_shaft",
+                "I": "design_decor:industrial_iron_boiler",
+                "J": "create:mechanical_pump[facing=east]",
+                "K": "create:mechanical_pump[facing=west]",
+                "L": "design_decor:brass_boiler",
+                "N": "create:metal_girder",
+                "O": "design_decor:andesite_floodlight[facing=up]",
+                "P": "#dut_create:brass_funnel",
+                "H": "design_decor:diagonal_girder[facing=north]",
+                "Q": "design_decor:diagonal_girder[facing=west]",
+                "R": "design_decor:diagonal_girder[facing=east]",
+                "S": "design_decor:diagonal_girder[facing=south]",
+                "M": "design_decor:diagonal_metal_support[facing=south]",
+                "T": "design_decor:diagonal_metal_support[facing=west]",
+                "U": "design_decor:diagonal_metal_support[facing=east]"
+            }
+        },
+        {
+            "type": "custommachinery:general_structure",
+            "id": "piston_down",
+            "cooldown":1,
+            "pattern": [
+                [
+                    " AAA ",
+                    " AAA ",
+                    " AAA ",
+                    "     ",
+                    "     ",
+                    "  m  "
+                ],
+                [
+                    "  A  ",
+                    " ABA ",
+                    "  A  ",
+                    "  C  ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "  S  ",
+                    " RBQ ",
+                    "  H  ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  B  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  B  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  B  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ]
+            ],
+            "keys": {
+                "A": "#dut_create:hydropress_piston",
+                "B": "design_decor:industrial_iron_boiler",
+                "H": "design_decor:diagonal_girder[facing=north]",
+                "Q": "design_decor:diagonal_girder[facing=west]",
+                "R": "design_decor:diagonal_girder[facing=east]",
+                "S": "design_decor:diagonal_girder[facing=south]",
+                "C": "create:gantry_carriage"
+            }
+        },
+        {
+            "type": "custommachinery:general_structure",
+            "id": "piston_up",
+            "cooldown":1,
+            "pattern": [
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "  m  "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    " AAA ",
+                    " AAA ",
+                    " AAA ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "  A  ",
+                    " ABA ",
+                    "  A  ",
+                    "  C  ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "  S  ",
+                    " RBQ ",
+                    "  H  ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  B  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  B  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ],
+                [
+                    "     ",
+                    "  B  ",
+                    "     ",
+                    "     ",
+                    "     ",
+                    "     "
+                ]
+            ],
+            "keys": {
+                "A": "#dut_create:hydropress_piston",
+                "B": "design_decor:industrial_iron_boiler",
+                "C": "create:gantry_carriage",
+                "H": "design_decor:diagonal_girder[facing=north]",
+                "Q": "design_decor:diagonal_girder[facing=west]",
+                "R": "design_decor:diagonal_girder[facing=east]",
+                "S": "design_decor:diagonal_girder[facing=south]"
+            }
+        },
+        {
             "type": "custommachinery:fluid",
             "capacity": 4000,
             "id": "fluid_input",
-            "filter": [  "minecraft:water" ],
+            "filter": [
+                "minecraft:water"
+            ],
             "whitelist": true
         },
         {
@@ -40,17 +322,19 @@
             "id": "sim_fluid",
             "maxInput": 0,
             "maxOutput": 0,
-            "filter": [ "kubejs:hydrofluid"],
+            "filter": [
+                "kubejs:hydrofluid"
+            ],
             "whitelist": true
         },
         {
             "type": "custommachinery:item",
             "id": "1",
             "mode": "input",
-            "config":{
+            "config": {
                 "default": "none",
-                "input":false,
-                "output":false
+                "input": false,
+                "output": false
             }
         },
         {

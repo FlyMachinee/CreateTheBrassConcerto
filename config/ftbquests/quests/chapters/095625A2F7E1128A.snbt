@@ -578,7 +578,8 @@
 			]
 			description: [
 				"{ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_01}"
-				"[\"\", {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_01\"}, {\"underlined\": \"true\", \"clickEvent\": {\"action\": \"change_page\", \"value\": \"2D3DBC1B834A5513\"}, \"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_02\"}, {\"translate\": \"ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_03\"}]"
+				"{ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_01}"
+				"{ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_02}"
 			]
 			id: "1186909E719A2320"
 			rewards: [{

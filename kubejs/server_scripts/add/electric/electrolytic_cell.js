@@ -33,117 +33,16 @@ ServerEvents.recipes(event => {
             "amount": amount
         })
     }
-    const ElectrolyzeStructure =
-    {
-        "type": "custommachinery:structure",
-        "pattern": [
-            [
-                "AACCCAA",
-                " AEEEA ",
-                " AEEEA ",
-                " AEEEA ",
-                "AAAAAAA",
-                " AbbbA "
-            ],
-            [
-                "BD   DB",
-                "NFHHHRN",
-                "NFHQHRN",
-                "NFHHHRN",
-                "lACCCAl",
-                " A   A "
-            ],
-            [
-                "       ",
-                "   I   ",
-                "S MUK S",
-                "   J   ",
-                " D   D ",
-                "       "
-            ],
-            [
-                "       ",
-                "   k   ",
-                "WJAYAJW",
-                "       ",
-                "       ",
-                "       "
-            ],
-            [
-                "       ",
-                "       ",
-                "WJAYAJW",
-                "       ",
-                "       ",
-                "       "
-            ],
-            [
-                "       ",
-                "       ",
-                "W  Y  W",
-                "   L   ",
-                "       ",
-                "       "
-            ],
-            [
-                "       ",
-                "       ",
-                "  ama  ",
-                "       ",
-                "       ",
-                "       "
-            ],
-            [
-                "       ",
-                "       ",
-                "G  U  G",
-                "       ",
-                "       ",
-                "       "
-            ],
-            [
-                "       ",
-                "       ",
-                "G  D  G",
-                "       ",
-                "       ",
-                "       "
-            ]
-        ],
-        "keys":
-        {
-            "A": "create:copper_casing",
-            "B": "design_decor:copper_railing[south=true]",
-            "C": "create:item_drain",
-            "D": "design_decor:andesite_floodlight[facing=up]",
-            "E": "create:railway_casing",
-            "F": "create:mechanical_pump[facing=west]",
-            "G": "createaddition:modular_accumulator",
-            "H": "design_decor:brass_boiler_structure",
-            "Q": "design_decor:brass_boiler_large",
-            "U": "design_decor:brass_boiler",
-            "Y": "design_decor:copper_boiler",
-            "R": "create:mechanical_pump[facing=east]",
-            "k": "design_decor:stepped_lever",
-            "W": "create:fluid_tank",
-            "l": "design_decor:copper_railing[north=true]",
-            "J": "create:smart_fluid_pipe",
-            "S": "create_things_and_misc:brass_brick_slab[type=top]",
-            "L": "design_decor:diagonal_metal_support[facing=south]",
-            "I": "design_decor:diagonal_metal_support[facing=north]",
-            "K": "design_decor:diagonal_metal_support[facing=east]",
-            "M": "design_decor:diagonal_metal_support[facing=west]",
-            "N": "create_connected:fluid_vessel[axis=z]",
-            "b": "create_connected:fluid_vessel[axis=x]",
-            "a": "#dut_create:funnel",
-        }
+    const ElectrolyzeStructure = {
+        "type": "custommachinery:general_structure",
+        "id": "main"
     }
     const ElectrolyzeSound = {
-        "type": "custommachinery:command",
+        "type": "custommachinery:sound",
         "phase": "ending",
-        "command": "/playsound create:steam block @a[distance=..24] ~ ~-3.5 ~ 0.3",
-        "log": false,
-        "permissionlevel": 5
+        "sound": "create:steam",
+        "pos": [0.5, -3.5, 0.5],
+        "volume": 0.3
     }
     function ElectrolyzeElectrodePositive(chance) {
         if (chance === 0) {
@@ -256,48 +155,48 @@ ServerEvents.recipes(event => {
     ], [], 40, "salt")
 
     ElectrolyzeCommonRecipe(1800, 1, 1, [
-            ElectrolyzeFluidInput1("kubejs:nitrogen", 3000),
-            ElectrolyzeFluidInput2("kubejs:oxygen", 6000),
-            ElectrolyzeFluidOutput3("kubejs:nitrogen_dioxide", 6000)
+        ElectrolyzeFluidInput1("kubejs:nitrogen", 3000),
+        ElectrolyzeFluidInput2("kubejs:oxygen", 6000),
+        ElectrolyzeFluidOutput3("kubejs:nitrogen_dioxide", 6000)
     ], [], 60, "nitrogen_dioxide")
 
     ElectrolyzeCommonRecipe(720, 1, 1, [
-            ElectrolyzeFluidInput1("kubejs:ammonia", 2000),
-            ElectrolyzeFluidInput2("kubejs:oxygen", 4000),
-            ElectrolyzeFluidOutput1("kubejs:nitrogen_dioxide", 1000),
-            ElectrolyzeFluidOutput3("kubejs:nitric_acid", 1000)
+        ElectrolyzeFluidInput1("kubejs:ammonia", 2000),
+        ElectrolyzeFluidInput2("kubejs:oxygen", 4000),
+        ElectrolyzeFluidOutput1("kubejs:nitrogen_dioxide", 1000),
+        ElectrolyzeFluidOutput3("kubejs:nitric_acid", 1000)
     ], [], 20, "nitric_acid")
 
     ElectrolyzeCommonRecipe(2880, 1, 0, [
-            ElectrolyzeFluidInput1("kubejs:muriatic_acid", 6000),
-            ElectrolyzeFluidOutput1("kubejs:hydrogen", 3000),
-            ElectrolyzeFluidOutput3("kubejs:chlorine", 3000)
+        ElectrolyzeFluidInput1("kubejs:muriatic_acid", 6000),
+        ElectrolyzeFluidOutput1("kubejs:hydrogen", 3000),
+        ElectrolyzeFluidOutput3("kubejs:chlorine", 3000)
     ], [], 20, "muriatic_acid")
 
     ElectrolyzeCommonRecipe(2880, 0, 1, [
-            ElectrolyzeFluidInput2("kubejs:fused_alumina", 2880),
-            ElectrolyzeItem("output", "kubejs:aluminum_slag", 32)
+        ElectrolyzeFluidInput2("kubejs:fused_alumina", 2880),
+        ElectrolyzeItem("output", "kubejs:aluminum_slag", 32)
     ], [], 60, "aluminum_slag")
 
     ElectrolyzeCommonRecipe(2880, 0, 0, [
-            ElectrolyzeBiome("ad_astra:orbit"),
-            ElectrolyzeItem("input", "kubejs:granite_alloy", 24),
-            ElectrolyzeItem("output", "kubejs:diorite_alloy", 24),
-            ElectrolyzeFluidOutput3("kubejs:nitrogen", 1000)
+        ElectrolyzeBiome("ad_astra:orbit"),
+        ElectrolyzeItem("input", "kubejs:granite_alloy", 24),
+        ElectrolyzeItem("output", "kubejs:diorite_alloy", 24),
+        ElectrolyzeFluidOutput3("kubejs:nitrogen", 1000)
     ], [], 20, "granite_alloy")
 
     ElectrolyzeCommonRecipe(360, 1, 1, [
-            ElectrolyzeDimension("ad_astra:moon"),
-            ElectrolyzeFluidInput1("#forge:hydrogen", 500),
-            ElectrolyzeFluidInput2("kubejs:chlorine", 500),
-            ElectrolyzeItem("input", "minecraft:packed_mud", 8),
-            ElectrolyzeItem("input", "ad_astra:cheese", 4),
-            ElectrolyzeItem("output", "ad_astra:moon_sand", 24),
+        ElectrolyzeDimension("ad_astra:moon"),
+        ElectrolyzeFluidInput1("#forge:hydrogen", 500),
+        ElectrolyzeFluidInput2("kubejs:chlorine", 500),
+        ElectrolyzeItem("input", "minecraft:packed_mud", 8),
+        ElectrolyzeItem("input", "ad_astra:cheese", 4),
+        ElectrolyzeItem("output", "ad_astra:moon_sand", 24),
     ], [], 30, "moon_solid")
 
     ElectrolyzeCommonRecipe(24576, 0, 1, [
-            ElectrolyzeFluidInput2("createbigcannons:molten_steel", 1500),
-            ElectrolyzeItem("input", "iceandfire:lightning_dragon_blood", 4),
-            ElectrolyzeItem("output", "iceandfire:dragonsteel_lightning_ingot", 4)
+        ElectrolyzeFluidInput2("createbigcannons:molten_steel", 1500),
+        ElectrolyzeItem("input", "iceandfire:lightning_dragon_blood", 4),
+        ElectrolyzeItem("output", "iceandfire:dragonsteel_lightning_ingot", 4)
     ], [], 60, "dragonsteel_lightning_ingot")
 })

@@ -76,7 +76,26 @@ ServerEvents.recipes(event => {
   event.remove({ id: "create:filling/gunpowder" })
   event.remove({ id: "create:mixing/andesite_alloy" })
   event.remove({ id: "create:mixing/andesite_alloy_from_zinc" })
+  event.remove({ id: "minecraft:sugar_from_sugar_cane" })
+  event.remove({ id: "create:milling/sugar_cane" })
+  event.remove({ id: "minecraft:sugar_from_honey_bottle" })
+  event.remove({ id: "create:crushing/amethyst_cluster" })
   
+  //小麦
+  event.remove({ id: "create:milling/wheat" })
+  event.custom({
+    "type": "create:crushing",
+    "ingredients": [
+      { "item": "minecraft:wheat" }
+    ],
+    "processingTime": 80,
+    "results": [
+      { "item": "create:wheat_flour" },
+      { "chance": 0.5, "item": "create:wheat_flour" },
+      { "item": "minecraft:wheat_seeds" }
+    ]
+  }).id("dut_create:wheat")
+
   //黄铜板
   event.custom({
     "type": "create:compacting",
@@ -168,7 +187,7 @@ ServerEvents.recipes(event => {
       { "item": "createdieselgenerators:wood_chip" },
       { "item": "createdieselgenerators:wood_chip" },
       { "item": "createdieselgenerators:wood_chip" },
-      { "amount": 75, "fluid": "minecraft:water" }
+      { "amount": 50, "fluid": "minecraft:water" }
     ],
     "results": [
       { "item": "minecraft:paper" }

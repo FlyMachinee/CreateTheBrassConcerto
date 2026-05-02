@@ -28,12 +28,79 @@
     ],
     "components": [
         {
+            "type": "custommachinery:general_structure",
+            "id": "main",
+            "pattern": [
+                [
+                    "  A  ",
+                    " GGG ",
+                    "AGOGA",
+                    " GGG ",
+                    "  A  "
+                ],
+                [
+                    "  A  ",
+                    "     ",
+                    "A P A",
+                    "     ",
+                    "  A  "
+                ],
+                [
+                    "  B  ",
+                    "     ",
+                    "B P B",
+                    "     ",
+                    "  B  "
+                ],
+                [
+                    " CAC ",
+                    "     ",
+                    "A P A",
+                    "     ",
+                    " CAC "
+                ],
+                [
+                    " B B ",
+                    "CGGGC",
+                    "AGOGA",
+                    "CGGGC",
+                    " B B "
+                ],
+                [
+                    " A A ",
+                    "BBKBB",
+                    "SSmSS",
+                    "BBKBB",
+                    " A A "
+                ],
+                [
+                    " BBB ",
+                    "BLLLB",
+                    "PLVLP",
+                    "BLLLB",
+                    " BBB "
+                ]
+            ],
+            "keys": {
+                "S": "#dut_create:shaft",
+                "G": "design_decor:brass_boiler_structure",
+                "O": "design_decor:brass_boiler_large",
+                "P": "design_decor:industrial_iron_boiler",
+                "A": "create:industrial_iron_block",
+                "C": "design_decor:diagonal_metal_support",
+                "L": "design_decor:cast_iron_boiler_structure",
+                "K": "#dut_create:container",
+                "B": "create:metal_girder",
+                "V": "design_decor:cast_iron_boiler_large"
+            }
+        },
+        {
             "type": "custommachinery:item",
             "id": "4",
             "mode": "output",
             "locked": false,
             "config": {
-                "default":"output",
+                "default": "output",
                 "input": false,
                 "output": true
             }
@@ -44,7 +111,7 @@
             "mode": "output",
             "locked": false,
             "config": {
-                "default":"output",
+                "default": "output",
                 "input": false,
                 "output": true
             }
@@ -55,7 +122,7 @@
             "mode": "output",
             "locked": false,
             "config": {
-                "default":"output",
+                "default": "output",
                 "input": false,
                 "output": true
             }
@@ -64,8 +131,8 @@
             "type": "custommachinery:contraption",
             "config": {
                 "default": "input",
-                "input":true,
-                "output":false
+                "input": true,
+                "output": false
             },
             "stress_impact": 0
         }
