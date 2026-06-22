@@ -89,6 +89,7 @@ ServerEvents.recipes(event => {
             "hidden": true,
             "priority": 6,
             "requirements": [
+                PlatformHeight,
                 {
                     "type": "custommachinery:command",
                     "phase": "ending",
@@ -117,6 +118,7 @@ ServerEvents.recipes(event => {
             "hidden": true,
             "priority": 5,
             "requirements": [
+                PlatformHeight,
                 PlatformFill4,
                 PlatformCommon,
                 Platform1,
@@ -146,6 +148,7 @@ ServerEvents.recipes(event => {
             "hidden": true,
             "priority": 4,
             "requirements": [
+                PlatformHeight,
                 PlatformFill3,
                 PlatformCommon,
                 Platform1,
@@ -175,6 +178,7 @@ ServerEvents.recipes(event => {
             "hidden": true,
             "priority": 3,
             "requirements": [
+                PlatformHeight,
                 PlatformCommon,
                 PlatformFill2,
                 Platform1,
@@ -204,6 +208,7 @@ ServerEvents.recipes(event => {
             "hidden": true,
             "priority": 2,
             "requirements": [
+                PlatformHeight,
                 PlatformCommon,
                 PlatformFill1,
                 Platform1,

@@ -95,6 +95,43 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:wheat_seeds" }
     ]
   }).id("dut_create:wheat")
+  //圆石
+  event.remove({ id: "create:milling/cobblestone" })
+  event.custom({
+    "type": "create:milling",
+    "ingredients": [
+      { "item": "minecraft:cobblestone" }
+    ],
+    "results": [
+      { "item": "minecraft:gravel" }
+    ],
+    "processingTime": 80
+  }).id("dut_create:milling/cobblestone")
+  //砂砾
+  event.remove({ id: "create:milling/gravel" })
+  event.remove({ id: "create:crushing/gravel" })
+  event.custom({
+    "type": "create:milling",
+    "ingredients": [
+      { "item": "minecraft:gravel" }
+    ],
+    "results": [
+      { "item": "minecraft:flint" }
+    ],
+    "processingTime": 80
+  }).id("dut_create:milling/flint")
+  event.custom({
+    "type": "create:crushing",
+    "ingredients": [
+      { "item": "minecraft:gravel" }
+    ],
+    "results": [
+      { "item": "minecraft:sand" },
+      { "item": "minecraft:flint","chance":0.1 },
+      { "item": "minecraft:clay_ball","chance":0.05 }
+    ],
+    "processingTime": 80
+  }).id("dut_create:crushing/flint")
 
   //黄铜板
   event.custom({
@@ -324,29 +361,9 @@ ServerEvents.recipes(event => {
     "results": [{ "item": "kubejs:silicon_plate" }],
     "processingTime": 5
   }).id("dut_create:pressurizing/silicon_plate")
-  //甘蔗产糖
+
   event.remove({ output: "minecraft:sugar", mod: 'create' })
   event.remove({ id: "minecraft:sugar_from_sugar_cane" })
-  event.custom({
-    "type": "create:milling",
-    "ingredients": [{ "item": "minecraft:sugar_cane" }],
-    "results": [{ "item": "minecraft:sugar" }],
-    "processingTime": 20
-  }).id("dut_create:milling/sugar_cane")
-  //碳化硅打磨玫瑰石英
-  event.custom({
-    "type": "create:mixing",
-    "ingredients": [
-      { "item": "create:rose_quartz" },
-      { "item": "create:rose_quartz" },
-      { "item": "kubejs:carborundum" }
-    ],
-    "results": [
-      { "item": "create:polished_rose_quartz" },
-      { "item": "create:polished_rose_quartz" },
-      { "item": "kubejs:carborundum" }
-    ]
-  }).id("dut_create:mixing/rose_quartz_mixing")
   //泥巴
   event.remove({ id: "create:mixing/mud_by_mixing" })
   event.custom({

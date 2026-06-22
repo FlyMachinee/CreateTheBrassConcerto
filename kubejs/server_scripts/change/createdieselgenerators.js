@@ -47,10 +47,10 @@ ServerEvents.recipes(event => {
     "heatRequirement": "heated",
     "ingredients": [
       { "fluidTag": "forge:ethanol", "amount": 200 },
-      { "fluidTag": "forge:gasoline", "amount": 160 }
+      { "fluidTag": "forge:gasoline", "amount": 150 }
     ],
     "results": [
-      { "fluid": "createdieselgenerators:biodiesel", "amount": 450 },
+      { "fluid": "createdieselgenerators:biodiesel", "amount": 500 },
     ],
     "processingTime": 45
   }).id('dut_create:pressurizing/biodiesel_from_gasoline')
@@ -63,7 +63,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "dut_create:plantoil", "amount": 200 }
     ],
     "results": [
-      { "fluid": "createdieselgenerators:biodiesel", "amount": 450 },
+      { "fluid": "createdieselgenerators:biodiesel", "amount": 500 },
     ],
     "processingTime": 30
   }).id('dut_create:pressurizing/biodiesel_0')
@@ -76,7 +76,7 @@ ServerEvents.recipes(event => {
       { "fluidTag": "forge:ethanol", "amount": 200 }
     ],
     "results": [
-      { "fluid": "createdieselgenerators:biodiesel", "amount": 450 },
+      { "fluid": "createdieselgenerators:biodiesel", "amount": 500 },
     ],
     "processingTime": 30
   }).id('dut_create:pressurizing/biodiesel_1')
@@ -137,25 +137,6 @@ ServerEvents.recipes(event => {
   }).id("dut_create:wood_chip_split")
   //原油探测器
   event.remove({ output: 'createdieselgenerators:oil_scanner', not: { mod: 'kubejs' } })
-  event.custom({
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-      "ACA",
-      "SIS",
-      " B "
-    ],
-    "key": {
-      "A": { "item": "create:andesite_alloy" },
-      "B": { "tag": "dut_create:buckets/crude_oil" },
-      "S": { "tag": "forge:plates/iron" },
-      "I": { "tag": "forge:ingots/iron" },
-      "C": { "item": "minecraft:clock" }
-    },
-    "result": {
-      "item": "createdieselgenerators:oil_scanner",
-      "count": 1
-    }
-  }).id('dut_create:oil_scanner')
   event.remove({ id: 'createdieselgenerators:mechanical_crafting/pumpjack_crank' })
   event.remove({ id: 'createdieselgenerators:crafting/pumpjack_bearing' })
   event.remove({ id: 'createdieselgenerators:crafting/pumpjack_head' })
@@ -328,7 +309,7 @@ ServerEvents.recipes(event => {
       "B",
       "A"
     ],
-    "result": { "item": "createdieselgenerators:engine_piston"},
+    "result": { "item": "createdieselgenerators:engine_piston" },
     "show_notification": true
   }).id("dut_create:engine_piston")
 

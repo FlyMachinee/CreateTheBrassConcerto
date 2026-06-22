@@ -144,13 +144,13 @@ CreateEvents.spoutHandler((event) => {
         })
     }
     blockFillingBasic(
-        "dut_create:brown_mushroom",
+        "dut_create:brown_mushroom_grown",
         "minecraft:brown_mushroom",
         { id: "kubejs:nitrogen_fertilizer", amount: 1 },
         ['minecraft:brown_mushroom_block', 'minecraft:mushroom_stem']
     )
     blockFillingBasic(
-        "dut_create:red_mushroom",
+        "dut_create:red_mushroom_grown",
         "minecraft:red_mushroom",
         { id: "kubejs:nitrogen_fertilizer", amount: 1 },
         ['minecraft:red_mushroom_block', 'minecraft:mushroom_stem']

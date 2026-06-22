@@ -111,8 +111,9 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["7E616A7217320035"]
+			dependencies: ["0AF55D7B3176FC98"]
 			description: ["{ftbquests.chapter_6509F8EE3B2C05A1.quest_2118158984C96E2D.desc_01}"]
+			hide_dependency_lines: true
 			id: "2118158984C96E2D"
 			size: 1.25d
 			tasks: [{

@@ -1,7 +1,16 @@
 {
     "item": "kubejs:speed_module_3",
     "machines": [
-        "dut:electron_tube_computer","dut:large_difference_engine","dut:alloy_furnace","dut:assembling_machine","dut:condenser","dut:construction_station","dut:culture_bin","dut:electrolytic_cell","dut:launch_pad_controller","dut:shaft_furnace"
+        "dut:electron_tube_computer",
+        "dut:large_difference_engine",
+        "dut:alloy_furnace",
+        "dut:assembling_machine",
+        "dut:condenser",
+        "dut:construction_station",
+        "dut:culture_bin",
+        "dut:electrolytic_cell",
+        "dut:launch_pad_controller",
+        "dut:shaft_furnace"
     ],
     "modifiers": [
         {
@@ -9,21 +18,21 @@
             "mode": "input",
             "min": 5,
             "operation": "multiplication",
-            "modifier": 0.5
+            "modifier": 0.875
         },
         {
             "requirement": "custommachinery:energy_per_tick",
             "mode": "input",
-            "min": 1,
+            "min": 60,
             "operation": "multiplication",
-            "modifier": 1.4
+            "modifier": 1.5
         },
         {
             "requirement": "custommachinery:energy",
             "mode": "input",
-            "min": 1,
+            "min": 60,
             "operation": "multiplication",
-            "modifier": 1.4
+            "modifier": 1.5
         }
     ]
 }

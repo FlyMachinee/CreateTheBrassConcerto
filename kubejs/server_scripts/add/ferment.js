@@ -119,6 +119,19 @@ ServerEvents.recipes(event => {
         "type": "createdieselgenerators:basin_fermenting",
         "heatRequirement": "heated",
         "ingredients": [
+            { "fluidTag": "forge:biodiesel", "amount": 500 },
+            { "item": "createaddition:biomass" },
+            { "item": "createaddition:biomass" }
+        ],
+        "processingTime": 60,
+        "results": [
+            { "fluid": "createdieselgenerators:crude_oil", "amount": 500 }
+        ]
+    }).id('dut_create:ferment/crude_oil')
+    event.custom({
+        "type": "createdieselgenerators:basin_fermenting",
+        "heatRequirement": "heated",
+        "ingredients": [
             { "item": "kubejs:peat_protozoa" },
             { "fluidTag": "forge:crude_oil", "amount": 500 }
         ],

@@ -110,8 +110,7 @@ ServerEvents.recipes(event => {
     ],
     "processingTime": 80,
     "results": [
-      { "item": "create:crushed_raw_iron" },
-      { "chance": 0.25, "item": "create:crushed_raw_iron" }
+      { "item": "create:crushed_raw_iron" }
     ]
   }).id("dut_create:ore_production/crimsite")
   //赭金砂粉碎
@@ -124,8 +123,7 @@ ServerEvents.recipes(event => {
     ],
     "processingTime": 80,
     "results": [
-      { "item": "create:crushed_raw_gold" },
-      { "chance": 0.25, "item": "create:crushed_raw_gold" }
+      { "item": "create:crushed_raw_gold" }
     ]
   }).id("dut_create:ore_production/ochrum")
   //辉绿岩粉碎
@@ -138,8 +136,7 @@ ServerEvents.recipes(event => {
     ],
     "processingTime": 80,
     "results": [
-      { "item": "create:crushed_raw_copper" },
-      { "chance": 0.25, "item": "create:crushed_raw_copper" }
+      { "item": "create:crushed_raw_copper" }
     ]
   }).id("dut_create:ore_production/veridium")
   //石灰岩粉碎
@@ -205,8 +202,7 @@ ServerEvents.recipes(event => {
       { "item": "kubejs:raw_tin" }
     ],
     "results": [
-      { "item": "create:crushed_raw_tin" },
-      { "item": "create:crushed_raw_tin", "chance": 0.25 }
+      { "item": "create:crushed_raw_tin" }
     ],
     "processingTime": 80
   }).id("dut_create:ore_production/crushed_tin")
@@ -353,4 +349,26 @@ ServerEvents.recipes(event => {
     "processingTime": 20,
     "results": [{ "item": "kubejs:tin_ingot", "count": 2 }]
   }).id("dut_create:melting_ore_rack/tin_ingot")
+  
+  event.custom({
+    "type": "minecraft:blasting",
+    "ingredient": {"item": "create:crushed_raw_iron"},
+    "result": "minecraft:iron_ingot",
+    "experience": 0.1,
+    "cookingtime": 100
+  }).id("dut_create:iron/blast")
+  event.custom({
+    "type": "minecraft:blasting",
+    "ingredient": {"item": "create:crushed_raw_gold"},
+    "result": "minecraft:gold_ingot",
+    "experience": 0.1,
+    "cookingtime": 100
+  }).id("dut_create:gold/blast")
+  event.custom({
+    "type": "minecraft:blasting",
+    "ingredient": {"item": "create:crushed_raw_copper"},
+    "result": "minecraft:copper_ingot",
+    "experience": 0.1,
+    "cookingtime": 100
+  }).id("dut_create:copper/blast")
 })

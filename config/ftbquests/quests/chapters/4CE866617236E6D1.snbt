@@ -631,7 +631,7 @@
 		}
 		{
 			description: ["{ftbquests.chapter_4CE866617236E6D1.quest_097C1BD738A9716F.desc_01}"]
-			icon: "minecraft:ender_pearl"
+			icon: "kubejs:electric_gear"
 			id: "097C1BD738A9716F"
 			tasks: [{
 				id: "058C87046F1F3EE8"

@@ -436,11 +436,11 @@
 		}
 		{
 			description: ["{ftbquests.chapter_4782F3447E61EA13.quest_3A9B35FC790ED34C.desc_01}"]
+			icon: "minecraft:moss_block"
 			id: "3A9B35FC790ED34C"
 			tasks: [{
-				id: "35135A39AFC0513F"
-				item: "minecraft:moss_block"
-				type: "item"
+				id: "6942B8018B7C4ABF"
+				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_4782F3447E61EA13.quest_3A9B35FC790ED34C.title}"
 			x: -1.5d
@@ -448,11 +448,11 @@
 		}
 		{
 			description: ["{ftbquests.chapter_4782F3447E61EA13.quest_4452D69FC8460DAE.desc_01}"]
+			icon: "minecraft:packed_mud"
 			id: "4452D69FC8460DAE"
 			tasks: [{
-				id: "74C4C0BFAE6D279A"
-				item: "minecraft:packed_mud"
-				type: "item"
+				id: "5F6F15D5F5856617"
+				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_4782F3447E61EA13.quest_4452D69FC8460DAE.title}"
 			x: 1.5d

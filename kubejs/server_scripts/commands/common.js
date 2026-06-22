@@ -123,6 +123,7 @@ ServerEvents.commandRegistry(event => {
             let p = result.source.player
             if (p == null) { return 0 }
             //存储当前坐标点
+            //p.addItemCooldown(,)
             orCreateData(p.persistentData, "teleport", {})
             let pdata = p.persistentData.teleport
             orCreateData(pdata, "lastpoint", {})
@@ -147,7 +148,6 @@ ServerEvents.commandRegistry(event => {
             /**@type {Internal.ServerPlayer} */
             let p = result.source.player
             if (p == null) { return 0 }
-            if (p.persistentData.needRespawn) { return 0 }
             orCreateData(p.persistentData, "teleport", {})
             let pdata = p.persistentData.teleport
             //存储当前坐标点

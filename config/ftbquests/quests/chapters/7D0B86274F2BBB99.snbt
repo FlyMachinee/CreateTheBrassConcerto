@@ -9,7 +9,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["12791AC9AE74A060"]
 			description: ["{ftbquests.chapter_7D0B86274F2BBB99.quest_3456E20C70FA102A.desc_01}"]
 			id: "3456E20C70FA102A"
 			shape: "gear"
@@ -24,8 +23,8 @@
 		}
 		{
 			dependencies: [
-				"12791AC9AE74A060"
 				"223775466012800D"
+				"6E7FC2ED970229C2"
 			]
 			description: [
 				"{ftbquests.chapter_7D0B86274F2BBB99.quest_2BDD1C7FA08793B2.desc_01}"

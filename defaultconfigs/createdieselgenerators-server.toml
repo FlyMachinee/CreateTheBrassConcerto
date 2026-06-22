@@ -38,10 +38,10 @@
 		"Max Oil Scanner Level" = 10000
 		#Normal oil chunks percentage
 		#Range: 0.0 ~ 100.0
-		"Normal oil chunks percentage" = 10.0
+		"Normal oil chunks percentage" = 0.0
 		#High oil chunks percentage
 		#Range: 0.0 ~ 100.0
-		"High oil chunks percentage" = 10.0
+		"High oil chunks percentage" = 0.0
 		#Whenever crude oil deposits are infinite
 		"Infinite oil deposits" = false
 

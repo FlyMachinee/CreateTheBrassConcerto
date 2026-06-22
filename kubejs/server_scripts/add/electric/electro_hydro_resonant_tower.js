@@ -132,7 +132,7 @@ ServerEvents.recipes(event => {
     ResonantTowerDimension('ad_astra:moon'),
     ResonantTowerEnergyInput(8640),
     ResonantTowerItem("kubejs:carbon_electrode", 4, "input"),
-    ResonantTowerFluid("kubejs:tin", 500, "input"),
+    ResonantTowerFluid("kubejs:covariant_heat", 500, "input"),
     ResonantTowerFluid("kubejs:electro_hydro", 500, "output"),
   ], "electro_hydro", 60)
   ResonantTowerRecipe([

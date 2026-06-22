@@ -126,7 +126,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "fluidTag": "forge:hydrogen", "amount": 300 },
       { "fluid": "kubejs:nitrogen", "amount": 100 },
-      { "tag": "forge:plates/iron" }
+      [{ "item": "create:iron_sheet" },{ "item": "kubejs:industrial_iron_ingot" }]
     ],
     "results": [
       { "fluid": "kubejs:ammonia", "amount": 200 }

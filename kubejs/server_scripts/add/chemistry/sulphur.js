@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
     "ingredients": [
       { "fluid": "vintageimprovements:sulfur_dioxide", "amount": 500 },
       { "fluid": "minecraft:water", "amount": 500 },
-      { "tag": "forge:plates/iron" }
+      [{ "item": "create:iron_sheet" },{ "item": "kubejs:industrial_iron_ingot" }]
     ],
     "processingTime": 45,
     "results": [

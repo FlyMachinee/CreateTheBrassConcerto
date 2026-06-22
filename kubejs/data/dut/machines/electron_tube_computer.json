@@ -85,18 +85,7 @@
         },
         {
             "type": "custommachinery:fluid",
-            "capacity": 4096,
-            "id": "data_mebibyte",
-            "maxInput": 0,
-            "maxOutput": 0,
-            "filter": [
-                "kubejs:mebibyte"
-            ],
-            "whitelist": true
-        },
-        {
-            "type": "custommachinery:fluid",
-            "capacity": 4096,
+            "capacity": 4198400,
             "id": "data_kibibyte",
             "maxInput": 0,
             "maxOutput": 0,
@@ -230,14 +219,6 @@
         {
             "type": "custommachinery:fluid",
             "x": 47,
-            "y": 20,
-            "id": "data_mebibyte",
-            "width": 18,
-            "height": 72
-        },
-        {
-            "type": "custommachinery:fluid",
-            "x": 65,
             "y": 20,
             "id": "data_kibibyte",
             "width": 18,

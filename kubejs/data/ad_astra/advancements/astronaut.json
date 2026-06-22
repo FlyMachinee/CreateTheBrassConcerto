@@ -1,5 +1,5 @@
 {
-  "parent": "ad_astra:ocean_cleanup",
+  "parent": "ad_astra:carbon_footprint",
   "criteria": {
     "has_astronaut": {
       "conditions": {

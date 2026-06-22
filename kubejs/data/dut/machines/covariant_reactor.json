@@ -25,10 +25,6 @@
         {
             "text": "kubejs.tooltip.multiblock_mech",
             "color": "green"
-        },
-        {
-            "text": "kubejs.tooltip.multiblock_mech1",
-            "color": "green"
         }
     ],
     "components": [

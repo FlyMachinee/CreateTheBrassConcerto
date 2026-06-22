@@ -174,7 +174,7 @@ Ponder.registry((event) => {
         scene.showControls(15, [4, 3, 4], "up").withItem("kubejs:radiator")
         scene.idle(80)
 
-        scene.text(60, "反应堆会每40 tick进行一次散热，单次消耗6个散热元件...").attachKeyFrame()
+        scene.text(60, "反应堆会每5 tick进行一次散热，单次消耗6个散热元件...").attachKeyFrame()
         scene.overlay.showOutline("blue", {}, [4, 3, 4], 30)
         scene.idle(80)
 

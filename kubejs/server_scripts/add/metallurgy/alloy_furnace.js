@@ -745,6 +745,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceCommand2,
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(3, "kubejs:desh"),
+            AlloyFurnaceItem("#forge:ingots/brass", 54, "input"),
             AlloyFurnaceItem("ad_astra:raw_desh", 27, "input"),
             AlloyFurnaceItem("ad_astra:moon_sand", 9, "input"),
             AlloyFurnaceItem("kubejs:salt", 3, "output")
@@ -753,38 +754,13 @@ ServerEvents.recipes(event => {
             AlloyFurnaceDimension(["ad_astra:moon", "ad_astra:moon_orbit"]),
             AlloyFurnaceStructure,
             AlloyFurnaceReplace(3, "kubejs:desh"),
+            AlloyFurnaceItem("#forge:ingots/brass", 54, "input"),
             AlloyFurnaceItem("ad_astra:raw_desh", 27, "input"),
             AlloyFurnaceItem("ad_astra:moon_sand", 9, "input"),
             AlloyFurnaceItem("kubejs:salt", 3, "output"),
             AlloyFurnaceFluid("kubejs:desh", 3)
         ]
     }).id("dut_create:alloy_furnace/desh_from_ore")
-    event.custom({
-        "type": "custommachinery:custom_machine",
-        "machine": "dut:alloy_furnace",
-        "time": 90,
-        "error": true,
-        "priority": 1,
-        "requirements": [
-            AlloyFurnaceDimension(["ad_astra:moon", "ad_astra:moon_orbit"]),
-            AlloyFurnaceCommand1,
-            AlloyFurnaceCommand2,
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(6, "kubejs:desh"),
-            AlloyFurnaceItem("ad_astra:raw_desh", 18, "input"),
-            AlloyFurnaceItemNBT("input", "kubejs:matrix_2", 1, '{matrix:[[[0,3],[0,7]],[[0,0],[1,-2]]]}'),
-            AlloyFurnaceItemNBT("output", "kubejs:matrix_2", 1, '{matrix:[[[0,0],[0,0]],[[0,0],[0,0]]]}')
-        ],
-        "jei": [
-            AlloyFurnaceDimension(["ad_astra:moon", "ad_astra:moon_orbit"]),
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(5, "kubejs:desh"),
-            AlloyFurnaceItem("ad_astra:raw_desh", 18, "input"),
-            AlloyFurnaceItemNBT("input", "kubejs:matrix_2", 1, '{matrix:[[[0,3],[0,7]],[[0,0],[1,-2]]]}'),
-            AlloyFurnaceItemNBT("output", "kubejs:matrix_2", 1, '{matrix:[[[0,0],[0,0]],[[0,0],[0,0]]]}'),
-            AlloyFurnaceFluid("kubejs:desh", 6)
-        ]
-    }).id("dut_create:alloy_furnace/desh_from_ore/matrix")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",

@@ -155,6 +155,13 @@ ServerEvents.recipes(event => {
     ], [], 40, "salt")
 
     ElectrolyzeCommonRecipe(1800, 1, 1, [
+        ElectrolyzeFluidInput1("#forge:biodiesel", 4000),
+        ElectrolyzeFluidOutput2("kubejs:ethylene", 2000),
+        ElectrolyzeFluidOutput1("kubejs:hydrogen", 2000)
+    ], [], 40, "ethylene")
+
+
+    ElectrolyzeCommonRecipe(1800, 1, 1, [
         ElectrolyzeFluidInput1("kubejs:nitrogen", 3000),
         ElectrolyzeFluidInput2("kubejs:oxygen", 6000),
         ElectrolyzeFluidOutput3("kubejs:nitrogen_dioxide", 6000)

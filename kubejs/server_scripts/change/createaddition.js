@@ -156,94 +156,6 @@ ServerEvents.recipes(event => {
     "result": { "item": "createaddition:capacitor", "count": 2 },
     "show_notification": true
   }).id("dut_create:capacitor")
-  //诡异菌/下界疣
-  event.custom({
-    "type": "create:mixing",
-    "ingredients": [
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      {
-        "fluidTag": "dut_create:plantoil",
-        "amount": 400
-      }
-    ],
-    "results": [
-      {
-        "item": "createaddition:biomass",
-        "count": 4
-      }
-    ],
-    "heatRequirement": "heated"
-  }).id("dut_create:efficient_biomass_from_wart_block")
-  //诡异菌/下界疣
-  event.custom({
-    "type": "create:mixing",
-    "ingredients": [
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      [
-        { "item": "minecraft:warped_wart_block" },
-        { "item": "minecraft:nether_wart_block" }
-      ],
-      { "fluidTag": "dut_create:plantoil", "amount": 100 }
-    ],
-    "results": [
-      { "item": "createaddition:biomass" }
-    ],
-    "heatRequirement": "heated"
-  }).id("dut_create:biomass_from_wart_block")
   //生物质高速产出
   event.remove({ id: 'createaddition:mixing/biomass_from_honeycomb' })
   event.remove({ id: 'createaddition:mixing/biomass_from_saplings' })
@@ -255,7 +167,7 @@ ServerEvents.recipes(event => {
       { "tag": "dut_create:microbio" },
       { "tag": "dut_create:microbio" },
       { "tag": "dut_create:microbio" },
-      { "fluidTag": "dut_create:plantoil", "amount": 200 }
+      { "fluidTag": "dut_create:plantoil", "amount": 400 }
     ],
     "results": [
       { "item": "createaddition:biomass", "count": 4 }

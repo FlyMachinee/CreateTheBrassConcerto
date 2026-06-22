@@ -84,7 +84,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:ender_pearl",
+          "name": "kubejs:coin_copper",
           "weight": 10
         },
         {

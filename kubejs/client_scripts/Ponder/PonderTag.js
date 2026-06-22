@@ -30,24 +30,6 @@ Ponder.tags((event) => {
       "通过方块注液令菌类生长"
     );
     event.createTag(
-      "kubejs:block_filling_basic",
-      "create:spout",
-      "方块注液-方块转化",
-      "通过方块注液将方块转化为其它种类的方块"
-    );
-    event.createTag(
-      "kubejs:block_filling_item",
-      "create:spout",
-      "方块注液-物品转化",
-      "通过方块注液将方块转化为物品"
-    );
-    event.createTag(
-      "kubejs:block_filling_extra_item",
-      "create:spout",
-      "方块注液-物品生产",
-      "通过方块注液让方块额外产出物品"
-    );
-    event.createTag(
       "kubejs:entity_filling",
       "create:spout",
       "生物注液",

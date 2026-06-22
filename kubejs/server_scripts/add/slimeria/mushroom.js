@@ -1,4 +1,86 @@
 ServerEvents.recipes(event => {   
+    //蘑菇块
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" },
+            { "item": "minecraft:red_mushroom" }
+        ],
+        "result": { "item": "minecraft:red_mushroom_block" }
+    }).id("dut_create:red_mushroom_block")
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" },
+            { "item": "minecraft:brown_mushroom" }
+        ],
+        "result": { "item": "minecraft:brown_mushroom_block" }
+    }).id("dut_create:brown_mushroom_block")
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            [{ "item": "minecraft:red_mushroom_block" },{ "item": "minecraft:brown_mushroom_block" }]
+        ],
+        "result": { "item": "minecraft:mushroom_stem" }
+    }).id("dut_create:stem")
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" },
+            { "item": "ad_astra:aeronos_mushroom" }
+        ],
+        "result": { "item": "ad_astra:aeronos_cap" }
+    }).id("dut_create:aeronos_cap")
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "ad_astra:aeronos_cap" }
+        ],
+        "result": { "item": "ad_astra:aeronos_stem" }
+    }).id("dut_create:aeronos_stem")
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" },
+            { "item": "ad_astra:strophar_mushroom" }
+        ],
+        "result": { "item": "ad_astra:strophar_cap" }
+    }).id("dut_create:strophar_cap")
+    event.custom({
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "ad_astra:strophar_cap" }
+        ],
+        "result": { "item": "ad_astra:strophar_stem" }
+    }).id("dut_create:strophar_stem")
     //孢子提取
     event.custom({
         "type": "createdieselgenerators:basin_fermenting",
@@ -73,19 +155,6 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:oxygen", "amount": 100 }
         ]
     }).id('dut_create:oxygen_fermentable')
-    //分离盐水
-    event.custom({
-        "type": "createdieselgenerators:basin_fermenting",
-        "ingredients": [
-            { "item": "kubejs:red_mushroom_cap_piece" },
-            { "fluid": "kubejs:saline_water", "amount": 500 }
-        ],
-        "processingTime": 20,
-        "results": [
-            { "item": "kubejs:salt", "count": 4 },
-            { "fluid": "minecraft:water", "amount": 500 }
-        ]
-    }).id('dut_create:salt_fermentable')
     //产硫
     event.custom({
         "type": "createdieselgenerators:basin_fermenting",

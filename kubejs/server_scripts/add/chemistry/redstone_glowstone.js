@@ -72,6 +72,16 @@ ServerEvents.recipes(event => {
     ]
   }).id("dut_create:filling/glowstone_dust")
   event.custom({
+    "type": "create:filling",
+    "ingredients": [
+      { "item": "minecraft:redstone" },
+      { "amount": 50, "fluid": "kubejs:ammonia" }
+    ],
+    "results": [
+      { "item": "minecraft:glowstone_dust" }
+    ]
+  }).id("dut_create:filling/glowstone_dust_ammonia")
+  event.custom({
     "type": "vintageimprovements:pressurizing",
     "secondaryFluidInput": 0,
     "ingredients": [
@@ -86,4 +96,19 @@ ServerEvents.recipes(event => {
     ],
     "processingTime": 45
   }).id("dut_create:pressurizing/glowstone_dust")
+  event.custom({
+    "type": "vintageimprovements:pressurizing",
+    "secondaryFluidInput": 0,
+    "ingredients": [
+      { "amount": 200, "fluid": "kubejs:ammonia" },
+      { "item": "minecraft:redstone" },
+      { "item": "minecraft:redstone" },
+      { "item": "minecraft:redstone" },
+      { "item": "minecraft:redstone" }
+    ],
+    "results": [
+      { "item": "minecraft:glowstone_dust", "count": 4 }
+    ],
+    "processingTime": 40
+  }).id("dut_create:pressurizing/glowstone_dust_ammonia")
 })

@@ -196,7 +196,7 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:covariant_reactor",
-        "time": 40,
+        "time": 5,
         "error": true,
         "hidden": true,
         "priority": 10,
@@ -214,14 +214,14 @@ ServerEvents.recipes(event => {
                 "mode": "output",
                 "tank": "steam",
                 "fluid": "kubejs:superheated_steam",
-                "amount": 6000
+                "amount": 20000
             },
             {
                 "type": "custommachinery:fluid",
                 "mode": "input",
                 "tank": "heat",
                 "fluid": "kubejs:covariant_heat",
-                "amount": 46080
+                "amount": 23040
             }
         ]
     }).id("dut_create:covariant_reactor/freeze")

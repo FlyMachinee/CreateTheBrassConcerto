@@ -1,4 +1,18 @@
 ServerEvents.recipes(event => {
+    event.remove({ id: "vintageimprovements:centrifugation/ender_eye" })
+    //岩浆膏
+    event.remove({ id: "vintageimprovements:centrifugation/magma_cream" })
+    event.custom({
+        "type": "vintageimprovements:centrifugation",
+        "ingredients": [
+            { "item": "minecraft:magma_cream" }
+        ],
+        "results": [
+            { "item": "minecraft:slime_ball" },
+            { "item": "minecraft:blaze_powder" }
+        ],
+        "processingTime": 20
+    }).id("dut_create:centrifugation/magma_cream")
     //染料
     event.remove({ id: "vintageimprovements:centrifugation/orange_dye" })
     event.custom({

@@ -38,6 +38,12 @@
 			description: ["{ftbquests.chapter_30B81675C3809613.quest_2B7B012E95B79C82.desc_01}"]
 			icon: "design_decor:cardboard_box"
 			id: "2B7B012E95B79C82"
+			rewards: [{
+				count: 81
+				id: "3627976DF5FD8CE8"
+				item: "create:item_vault"
+				type: "item"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "740F9703F3D33F6C"
@@ -51,6 +57,12 @@
 			description: ["{ftbquests.chapter_30B81675C3809613.quest_59EC882B083BE3F4.desc_01}"]
 			icon: "design_decor:copper_gas_tank"
 			id: "59EC882B083BE3F4"
+			rewards: [{
+				count: 8
+				id: "690DC2ADA358B17A"
+				item: "createdieselgenerators:canister"
+				type: "item"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "15725298D440E142"

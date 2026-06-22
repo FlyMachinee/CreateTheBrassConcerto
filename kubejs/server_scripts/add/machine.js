@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
         "key": {
             "A": { "item": "kubejs:resonant_bacteria" },
             "B": { "item": "kubejs:productivity_module" },
-            "D": { "item": "kubejs:electro_hydro_capacitor" },
+            "D": { "item": "kubejs:aluminum_ingot" },
             "C": { "item": "kubejs:bronze_triangle" }
         },
         "pattern": [

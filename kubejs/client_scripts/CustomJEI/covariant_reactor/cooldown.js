@@ -25,7 +25,7 @@ function CovariantReactorCooldown(pCategory) {
   let lastTick = Timer.getGlobalTick();
 
   const recipeTime1 = 5;
-  const recipeTime2 = 40;
+  const recipeTime2 = 5;
   const recipeArrow1 = guiHelper.createAnimatedRecipeArrow(recipeTime1);
   const recipeArrow2 = guiHelper.createAnimatedRecipeArrow(recipeTime2);
 
@@ -96,7 +96,7 @@ function CovariantReactorCooldown(pCategory) {
           const cryogenCount = Math.floor((Timer.getGlobalTick() % 80) / 20) + 1;
           tooltip.set(index, Text.literal(`${cryogenCount},000 mB`).color(0xa8a8a8));
         } else {
-          tooltip.set(index, Text.literal('6,000 mB').color(0xa8a8a8));
+          tooltip.set(index, Text.literal('20,000 mB').color(0xa8a8a8));
         }
       });
   };
@@ -175,7 +175,7 @@ function CovariantReactorCooldown(pCategory) {
       Text.translate(
         'kubejs.jeiaddition.covariant_reactor.convert_ratio',
         addThousandSeparator(data.heatCallback(1)),
-        data.subtype === 1 ? '1,000' : '6,000'
+        data.subtype === 1 ? '1,000' : '20,000'
       )
     );
 

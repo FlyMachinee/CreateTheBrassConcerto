@@ -115,7 +115,7 @@ ServerEvents.recipes(event => {
             event.custom({
                 "type": "custommachinery:custom_machine",
                 "machine": "dut:steam_generator",
-                "time": 60,
+                "time": 30,
                 "hidden": true,
                 "error": true,
                 "priority": 1000 * amount1,

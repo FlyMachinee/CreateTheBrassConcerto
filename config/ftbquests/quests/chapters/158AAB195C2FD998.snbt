@@ -77,6 +77,12 @@
 		{
 			description: ["{ftbquests.chapter_158AAB195C2FD998.quest_2EA1F89222316AAE.desc_01}"]
 			id: "2EA1F89222316AAE"
+			rewards: [{
+				count: 8
+				id: "69DDD7B7EB66CF18"
+				item: "kubejs:magenta_circuit_board"
+				type: "item"
+			}]
 			tasks: [{
 				id: "047D3765A43EC29C"
 				item: "vintageimprovements:laser"
@@ -101,7 +107,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["12791AC9AE74A060"]
 			description: ["{ftbquests.chapter_158AAB195C2FD998.quest_60FCB2079415FD71.desc_01}"]
 			id: "60FCB2079415FD71"
 			tasks: [{
@@ -1055,24 +1060,6 @@
 			}]
 			x: 3.0d
 			y: -2.0d
-		}
-		{
-			description: ["{ftbquests.chapter_158AAB195C2FD998.quest_12791AC9AE74A060.desc_01}"]
-			id: "12791AC9AE74A060"
-			rewards: [{
-				count: 8
-				id: "72DD5A229EB2E884"
-				item: "kubejs:magenta_circuit_board"
-				type: "item"
-			}]
-			tasks: [{
-				id: "2A498C2A2D543E98"
-				item: "vintageimprovements:laser"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_158AAB195C2FD998.quest_12791AC9AE74A060.title}"
-			x: -3.0d
-			y: -5.0d
 		}
 	]
 	title: "{ftbquests.chapter_158AAB195C2FD998.title}"

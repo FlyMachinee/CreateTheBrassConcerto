@@ -106,7 +106,7 @@
 			size: 1.0d
 			tasks: [{
 				consume_items: true
-				count: 512L
+				count: 256L
 				id: "395F3539235258CC"
 				item: "minecraft:wheat_seeds"
 				type: "item"
@@ -826,11 +826,19 @@
 			]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7E7AE206A66030D8.desc_01}"]
 			id: "7E7AE206A66030D8"
-			rewards: [{
-				id: "591467E0979C03D6"
-				item: "minecraft:sugar_cane"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "591467E0979C03D6"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "1C09F04DEA1D3D12"
+					item: "kubejs:io_mechanism"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			tasks: [{
 				id: "0CA0A30FD2795877"

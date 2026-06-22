@@ -133,7 +133,7 @@ ServerEvents.recipes(event => {
       {
         "type": "create:deploying",
         "ingredients": [{ "item": "minecraft:gold_ingot" },
-        { "item": "createaddition:electrum_sheet" }],
+        { "item": "create:golden_sheet" }],
         "results": [{ "item": "minecraft:gold_ingot" }]
       },
       {

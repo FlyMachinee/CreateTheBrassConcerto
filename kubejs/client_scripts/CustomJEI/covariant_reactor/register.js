@@ -54,8 +54,8 @@ JEIAddedEvents.registerRecipes((event) => {
   recipeBuilder.add({
     type: 2, // 冷却模式
     subtype: 2, // 元件冷却
-    heatCallback: () => 46080,
-    heatFormula: 'ΔH = -46080 mB',
+    heatCallback: () => 23040,
+    heatFormula: 'ΔH = -23040 mB',
   });
   recipeBuilder.add({
     type: 3, // 反应堆熔毁

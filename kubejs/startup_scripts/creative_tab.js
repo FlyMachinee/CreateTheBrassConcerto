@@ -219,6 +219,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 	tab.create("cbc:aaa_bucket")
 		.icon(() => Item.of("kubejs:slime_colloid_bucket"))
 		.content(() => [
+			'create:creative_fluid_tank',
 			Item.of('create:creative_fluid_tank', '{BlockEntityTag:{TankContent:{Amount:32000,FluidName:"create_things_and_misc:diluted_bonemeal"}},display:{Name:\'{"translate":"fluid.create_things_and_misc.diluted_bonemeal","italic":false}\'}}'),
 			Item.of('create:creative_fluid_tank', '{BlockEntityTag:{TankContent:{Amount:32000,FluidName:"vintageimprovements:sulfur_dioxide"}},display:{Name:\'{"translate":"fluid.vintageimprovements.sulfur_dioxide","italic":false}\'}}'),
 			Item.of('create:creative_fluid_tank', '{BlockEntityTag:{TankContent:{Amount:32000,FluidName:"vintageimprovements:sulfur_trioxide"}},display:{Name:\'{"translate":"fluid.vintageimprovements.sulfur_trioxide","italic":false}\'}}'),

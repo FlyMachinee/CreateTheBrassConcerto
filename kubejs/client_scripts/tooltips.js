@@ -84,20 +84,17 @@ ItemEvents.tooltip(event => {
       return
     }
   })
+  event.add(['design_decor:industrial_plating_block'], Text.translate("kubejs.tooltip.industrial_plating_block"))
 })
 //插件
 ItemEvents.tooltip(event => {
-  event.add(['design_decor:industrial_plating_block'], Text.translate("kubejs.tooltip.industrial_plating_block"))
-  event.add(['kubejs:productivity_module'], Text.translate("kubejs.tooltip.productivity_module_item"))
-  event.add(['kubejs:productivity_module'], Text.translate("kubejs.tooltip.productivity_module_speed"))
-  event.add(['kubejs:productivity_module'], Text.translate("kubejs.tooltip.productivity_module_energy"))
+  event.add(['kubejs:productivity_module'], Text.translate("kubejs.tooltip.productivity_module"))
 
-  event.add(['kubejs:productivity_module_2'], Text.translate("kubejs.tooltip.productivity_module_2_item"))
-  event.add(['kubejs:productivity_module_2'], Text.translate("kubejs.tooltip.productivity_module_2_speed"))
-  event.add(['kubejs:productivity_module_2'], Text.translate("kubejs.tooltip.productivity_module_2_energy"))
+  event.add(['kubejs:productivity_module_2'], Text.translate("kubejs.tooltip.productivity_module_2"))
 
   event.add(['kubejs:productivity_module_3'], Text.translate("kubejs.tooltip.productivity_module_3_item"))
-  event.add(['kubejs:productivity_module_3'], Text.translate("kubejs.tooltip.productivity_module_3_speed"))
+  event.add(['kubejs:productivity_module_3'], Text.translate("kubejs.tooltip.productivity_module_3_fluid"))
+  event.add(['kubejs:productivity_module_3'], Text.translate("kubejs.tooltip.productivity_module_3_block"))
   event.add(['kubejs:productivity_module_3'], Text.translate("kubejs.tooltip.productivity_module_3_energy"))
 
   event.add(['kubejs:speed_module'], Text.translate("kubejs.tooltip.speed_module_speed"))
@@ -113,7 +110,6 @@ ItemEvents.tooltip(event => {
   event.add(['kubejs:efficiency_module'], Text.translate("kubejs.tooltip.efficiency_module_out"))
 
   event.add(['kubejs:efficiency_module_2'], Text.translate("kubejs.tooltip.efficiency_module_2"))
-  event.add(['kubejs:efficiency_module_2'], Text.translate("kubejs.tooltip.efficiency_module_2_out"))
 
   event.add(['kubejs:efficiency_module_3'], Text.translate("kubejs.tooltip.efficiency_module_3"))
   event.add(['kubejs:efficiency_module_3'], Text.translate("kubejs.tooltip.efficiency_module_3_out"))

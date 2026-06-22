@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
     "results": [
       { "item": "kubejs:sulphur" }
     ],
-    "processingTime": 300
+    "processingTime": 80
   }).id("dut_create:milling/sulphur")
   //油石
   event.remove({ output: 'createloveandwar:tar_clump', not: { mod: 'kubejs' } })

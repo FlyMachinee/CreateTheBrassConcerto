@@ -149,13 +149,11 @@ ServerEvents.recipes(event => {
     "machine": "dut:culture_bin",
     "time": 60,
     "requirements": [
-      CultureBinItemInput("minecraft:charcoal", 4),
       CultureBinItemInput("#dut_create:moon_solid", 1),
       CultureBinFluid("kubejs:carbon_dioxide", "input", 2000),
       CultureBinFluid("kubejs:oxygen", "output", 2000),
       CultureBinItemInput("kubejs:peat_protozoa", 1),
       CultureBinItemChance("minecraft:coal", 8, 1),
-      CultureBinItemChance("minecraft:mud", 4, 1),
       CultureBinItemChance("kubejs:peat_protozoa", 1, 1)
     ]
   }).id("dut_create:culture_bin/peat/coal_from_co2")
@@ -165,12 +163,10 @@ ServerEvents.recipes(event => {
     "time": 60,
     "requirements": [
       CultureBinDimension("ad_astra:moon"),
-      CultureBinItemInput("minecraft:charcoal", 4),
       CultureBinFluid("kubejs:carbon_dioxide", "input", 2000),
       CultureBinFluid("kubejs:oxygen", "output", 2000),
       CultureBinItemInput("kubejs:peat_protozoa", 1),
       CultureBinItemChance("minecraft:coal", 8, 1),
-      CultureBinItemChance("minecraft:mud", 4, 1),
       CultureBinItemChance("kubejs:peat_protozoa", 1, 1)
     ]
   }).id("dut_create:culture_bin/peat/coal_from_co2_moon")
