@@ -44,7 +44,7 @@ SchematicStructure.prototype.loadFromFile = function (pathToRoot) {
   /** @type {Internal.CompoundTag} */
   let nbt = $NbtIo.read(stream, new $NbtAccounter(0x20000000));
 
-  let sizeList = nbt.getList('size', 3);
+  let sizeList = nbt.getList('size', $Tag.TAG_INT);
   this._size = new Vec3i(sizeList.getInt(0), sizeList.getInt(1), sizeList.getInt(2));
   // y x z
   this._blocksTensor = new Array(this._size.y)
@@ -52,15 +52,15 @@ SchematicStructure.prototype.loadFromFile = function (pathToRoot) {
     .map((_) => new Array(this._size.x).fill(0).map((_) => new Array(this._size.z)));
   this._blocksList = [];
 
-  let blocksList = nbt.getList('blocks', 10);
-  if (nbt.contains('palettes', 9)) {
-    let palettesList = nbt.getList('palettes', 9);
+  let blocksList = nbt.getList('blocks', $Tag.TAG_COMPOUND);
+  if (nbt.contains('palettes', $Tag.TAG_LIST)) {
+    let palettesList = nbt.getList('palettes', $Tag.TAG_LIST);
 
     for (let i = 0; i < palettesList.size(); ++i) {
       this._loadPalette(palettesList.getList(i), blocksList);
     }
   } else {
-    this._loadPalette(nbt.getList('palette', 10), blocksList);
+    this._loadPalette(nbt.getList('palette', $Tag.TAG_COMPOUND), blocksList);
   }
 
   this._isLoad = true;
@@ -79,7 +79,7 @@ SchematicStructure.prototype._loadPalette = function (paletteList, blocksList) {
 
   for (let j = 0; j < blocksList.size(); ++j) {
     let blocksEntry = blocksList.getCompound(j);
-    let posList = blocksEntry.getList('pos', 3);
+    let posList = blocksEntry.getList('pos', $Tag.TAG_INT);
     let blockpos = new BlockPos(posList.getInt(0), posList.getInt(1), posList.getInt(2));
     let blockstate = tempPalette[blocksEntry.getInt('state')];
     let nbt = blocksEntry.contains('nbt') ? blocksEntry.getCompound('nbt') : null;

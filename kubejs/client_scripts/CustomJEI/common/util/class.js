@@ -1,4 +1,4 @@
-// priority: 8192
+// priority: 10000
 
 function inheritPrototype(child, parent) {
   // 创建父类原型的副本

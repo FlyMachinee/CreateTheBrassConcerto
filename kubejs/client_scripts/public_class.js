@@ -74,3 +74,47 @@ const $NbtAccounter = Java.loadClass('net.minecraft.nbt.NbtAccounter');
 const $NbtUtils = Java.loadClass('net.minecraft.nbt.NbtUtils');
 const $Registries = Java.loadClass('net.minecraft.core.registries.Registries');
 const $AllKeys = Java.loadClass('com.simibubi.create.AllKeys');
+const $SuperByteBufferCache$Compartment = Java.loadClass('com.simibubi.create.foundation.render.SuperByteBufferCache$Compartment');
+const $ModelData = Java.loadClass('net.minecraftforge.client.model.data.ModelData');
+const $CachedBufferer = Java.loadClass('com.simibubi.create.foundation.render.CachedBufferer');
+const $Direction$AxisDirection = Java.loadClass('net.minecraft.core.Direction$AxisDirection');
+const $CreateColor = Java.loadClass('com.simibubi.create.foundation.utility.Color');
+const $ICogWheel = Java.loadClass('com.simibubi.create.content.kinetics.simpleRelays.ICogWheel');
+const $Direction$Axis = Java.loadClass('net.minecraft.core.Direction$Axis');
+const $RenderTypeHelper = Java.loadClass('net.minecraftforge.client.RenderTypeHelper');
+const $SourceFactor = Java.loadClass('com.mojang.blaze3d.platform.GlStateManager$SourceFactor');
+const $DestFactor = Java.loadClass('com.mojang.blaze3d.platform.GlStateManager$DestFactor');
+const $InventoryMenu = Java.loadClass('net.minecraft.world.inventory.InventoryMenu');
+const $HashMap = Java.loadClass('java.util.HashMap');
+const $KineticBlockEntityRenderer = Java.loadClass('com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer');
+const getSheets = (() => {
+  let __$Sheets = null;
+  return () => {
+    if (__$Sheets === null)
+      __$Sheets = Java.loadClass(
+        'net.minecraft.client.renderer.Sheets'
+      );
+    return __$Sheets;
+  };
+})();
+const getModelUtil = (() => {
+  let __$ModelUtil = null;
+  return () => {
+    if (__$ModelUtil === null)
+      __$ModelUtil = Java.loadClass(
+        'com.jozufozu.flywheel.core.model.ModelUtil'
+      );
+    return __$ModelUtil;
+  };
+})();
+const $Tag = Java.loadClass('net.minecraft.nbt.Tag');
+const $DirectionalAxisKineticBlock = Java.loadClass('com.simibubi.create.content.kinetics.base.DirectionalAxisKineticBlock');
+const $IRotate = Java.loadClass('com.simibubi.create.content.kinetics.base.IRotate');
+const $CreateIterate = Java.loadClass('com.simibubi.create.foundation.utility.Iterate');
+const $ItemStack = Java.loadClass('net.minecraft.world.item.ItemStack');
+const $AbstractFunnelBlock = Java.loadClass('com.simibubi.create.content.logistics.funnel.AbstractFunnelBlock');
+const $FunnelBlock = Java.loadClass('com.simibubi.create.content.logistics.funnel.FunnelBlock');
+const $BeltFunnelBlock = Java.loadClass('com.simibubi.create.content.logistics.funnel.BeltFunnelBlock');
+const $BeltFunnelBlock$Shape = Java.loadClass('com.simibubi.create.content.logistics.funnel.BeltFunnelBlock$Shape');
+const $BlockItem = Java.loadClass('net.minecraft.world.item.BlockItem');
+const $CompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag');
