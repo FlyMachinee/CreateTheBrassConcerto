@@ -191,7 +191,8 @@
                 "kubejs:ammonia",
                 "kubejs:saline_water",
                 "kubejs:muriatic_acid",
-                "kubejs:desh"
+                "kubejs:desh",
+                "#forge:biodiesel"
             ],
             "whitelist": true
         },

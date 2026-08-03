@@ -108,6 +108,7 @@ ServerEvents.recipes(event => {
     "results": [{ "item": "minecraft:tnt" }]
   }).id("dut_create:deploying/tnt")
   //电子管
+  /*
   event.custom({
     "type": "create:deploying",
     "ingredients": [
@@ -116,6 +117,7 @@ ServerEvents.recipes(event => {
     ],
     "results": [{ "item": "create:electron_tube" }]
   }).id("dut_create:deploying/electron_tube")
+  */
   //暗影机壳
   event.custom({
     "type": "create:item_application",

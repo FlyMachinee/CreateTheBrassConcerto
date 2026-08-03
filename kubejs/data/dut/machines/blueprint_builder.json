@@ -186,7 +186,10 @@
             "id": "filter",
             "mode": "item",
             "filter": [
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": true
         },
@@ -197,7 +200,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -208,7 +214,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -219,7 +228,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -230,7 +242,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -241,7 +256,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -252,7 +270,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -263,7 +284,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -274,7 +298,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -285,7 +312,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },
@@ -296,7 +326,10 @@
             "filter": [
                 "minecraft:barrel",
                 "#dut_create:data_disk",
-                "#dut_create:multiblock"
+                "#dut_create:multiblock",
+                "railways:track_create_andesite_narrow",
+                "railways:track_tieless_narrow",
+                "design_decor:metal_support"
             ],
             "whitelist": false
         },

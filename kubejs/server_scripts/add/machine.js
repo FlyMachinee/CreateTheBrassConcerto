@@ -238,7 +238,7 @@ ServerEvents.recipes(event => {
         "EAE"
     ], {
         C: "#forge:plates/brass",
-        B: "createaddition:capacitor",
+        B: "kubejs:polymer_ingot",
         A: Item.of("kubejs:tin_hard_disk", { Damage: 0 }).weakNBT(),
         D: "kubejs:magenta_circuit_board",
         E: "#forge:ingots/industrial_iron"

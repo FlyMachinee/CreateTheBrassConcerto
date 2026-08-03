@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "key": {
-      "A": { "item": "createaddition:capacitor" },
+      "A": { "item": "kubejs:polymer_ingot" },
       "B": { "item": "createaddition:copper_spool" },
       "C": { "item": "create:precision_mechanism" },
       "D": { "item": "kubejs:electric_gear" }
@@ -123,7 +123,7 @@ ServerEvents.recipes(event => {
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "key": {
-      "A": { "item": "createaddition:capacitor" },
+      "A": { "item": "kubejs:polymer_ingot" },
       "B": { "item": "createaddition:copper_spool" },
       "C": { "item": "kubejs:circuit_board" },
       "D": { "item": "create:brass_casing" },
@@ -140,22 +140,6 @@ ServerEvents.recipes(event => {
   //电容
   event.remove({ id: 'createaddition:crafting/capacitor_1' })
   event.remove({ id: 'createaddition:crafting/capacitor_2' })
-  event.custom({
-    "type": "minecraft:crafting_shaped",
-    "category": "misc",
-    "key": {
-      "A": { "tag": "forge:plates/gold" },
-      "B": { "tag": "dut_create:ingots/polymer" },
-      "C": { "tag": "forge:plates/copper" }
-    },
-    "pattern": [
-      "A",
-      "B",
-      "C"
-    ],
-    "result": { "item": "createaddition:capacitor", "count": 2 },
-    "show_notification": true
-  }).id("dut_create:capacitor")
   //生物质高速产出
   event.remove({ id: 'createaddition:mixing/biomass_from_honeycomb' })
   event.remove({ id: 'createaddition:mixing/biomass_from_saplings' })

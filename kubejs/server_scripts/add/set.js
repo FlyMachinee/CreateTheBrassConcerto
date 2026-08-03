@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
         "type": "create:sequenced_assembly",
         "ingredient": { "item": "kubejs:mechanical_core" },
         "results": [
-            { "item": "kubejs:io_mechanism" }
+            { "item": "kubejs:io_mechanism","count":2 }
         ],
         "loops": 1,
         "sequence": [
@@ -17,15 +17,7 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "kubejs:incomplete_andesite_box" },
-                    { "item": "design_decor:industrial_gear_large" }
-                ],
-                "results": [{ "item": "kubejs:incomplete_andesite_box" }]
-            },
-            {
-                "type": "create:deploying",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_andesite_box" },
-                    { "item": "design_decor:industrial_gear_large" }
+                    { "item": "kubejs:bearing" }
                 ],
                 "results": [{ "item": "kubejs:incomplete_andesite_box" }]
             },
@@ -58,9 +50,12 @@ ServerEvents.recipes(event => {
     }
     io("create:basin", 1)
     io("createbigcannons:basin_foundry_lid", 1)
-    io("create:whisk", 1)
-    io("create:propeller", 1)
-    io("kubejs:iron_hand", 1)
+    //
+    event.remove({id:"create:crafting/kinetics/whisk"})
+    event.remove({id:"create:crafting/kinetics/mechanical_mixer"})
+    io("create:mechanical_mixer", 2)
+    event.remove({id:"create:crafting/kinetics/encased_fan"})
+    io("create:encased_fan", 2)
     io("supplementaries:faucet", 3)
     io("create:gearbox", 3)
     io("create_connected:parallel_gearbox", 3)
@@ -79,12 +74,12 @@ ServerEvents.recipes(event => {
     io("design_decor:industrial_gear", 12)
     io("create:cogwheel", 12)
     io("create:shaft", 16)
+    //机械手
+    ioShapeless("create:polished_rose_quartz", "create:deployer", 3)
     ioShapeless("minecraft:clock", "createdieselgenerators:basin_lid", 3)
     ioShapeless("kubejs:industrial_iron_ingot", "create:mechanical_drill", 3)
     ioShapeless("kubejs:industrial_iron_sheet", "create:mechanical_saw", 3)
     ioShapeless("create:industrial_iron_block", "create:mechanical_press", 3)
-    ioShapeless("create:propeller", "create:encased_fan", 3)
-    ioShapeless("create:whisk", "create:mechanical_mixer", 3)
     ioShapeless("minecraft:stone", "create:millstone", 3)
     ioShapeless("minecraft:netherrack", "create:empty_blaze_burner", 3)
     ioShapeless("kubejs:rubber", "create:andesite_funnel", 8)

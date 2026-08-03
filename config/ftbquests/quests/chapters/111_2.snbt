@@ -139,6 +139,7 @@
 			y: -2.0d
 		}
 		{
+			dependencies: ["617FBB00C4E99579"]
 			description: ["{ftbquests.chapter_111_2.quest_262E7EAC18A82705.desc_01}"]
 			id: "262E7EAC18A82705"
 			tasks: [{

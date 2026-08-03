@@ -9,7 +9,13 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["{ftbquests.chapter_1195AD8273EB5C3B.quest_6CAB9C160B07BE4F.desc_01}"]
+			description: [
+				"{ftbquests.chapter_1195AD8273EB5C3B.quest_6CAB9C160B07BE4F.desc_01}"
+				""
+				"在经过技术改进后，现在传送带的旋转不再需要输入应力，你可以自由配置其旋转速度！同时，其应力传递功能仍然保留，不过与其转速不再相关！"
+				""
+				"{image:kubejs:textures/ftb/belt.png width:140 height:100 align:center}"
+			]
 			id: "6CAB9C160B07BE4F"
 			tasks: [{
 				id: "5641CED45C16B7DE"

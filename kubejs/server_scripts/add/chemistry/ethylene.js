@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "fluid": "kubejs:polymer", "amount": 200 }
         ],
-        "processingTime": 35
+        "processingTime": 30
     }).id('dut_create:polymer')
     event.custom({
         "type": "create:compacting",
@@ -109,7 +109,7 @@ ServerEvents.recipes(event => {
             { "fluid": "kubejs:duraplas", "amount": 125 },
             { "fluid": "kubejs:muriatic_acid", "amount": 500 }
         ],
-        "processingTime": 70
+        "processingTime": 15
     }).id('dut_create:duraplas')
     event.custom({
         "type": "create:compacting",

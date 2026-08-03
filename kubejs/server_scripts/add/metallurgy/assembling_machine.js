@@ -140,9 +140,9 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:io_mechanism", 6, "input"),
-      AssemblingMachineFluid("kubejs:industrial_iron", 32*IngotFluid),
-      AssemblingMachineItem("kubejs:io_mechanism", 16, "output")
+      AssemblingMachineItem("kubejs:bearing", 8, "input"),
+      AssemblingMachineFluid("kubejs:industrial_iron", 16*IngotFluid),
+      AssemblingMachineItem("kubejs:io_mechanism", 24, "output")
     ],
   }).id("dut_create:assembling_machine/io_mechanism")
 
@@ -245,8 +245,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:industrial_iron_sheet", 8, "input"),
-      AssemblingMachineItem("kubejs:industrial_iron_ingot", 12, "input"),
+      AssemblingMachineItem("kubejs:industrial_iron_ingot", 16, "input"),
       AssemblingMachineItem("kubejs:graphene_coil", 3, "input"),
       AssemblingMachineItem("kubejs:bearing", 64, "output")
     ],
@@ -260,8 +259,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("create:electron_tube", 16, "input"),
-      AssemblingMachineItem("kubejs:bearing", 16, "input"),
+      AssemblingMachineItem("create:polished_rose_quartz", 16, "input"),
       AssemblingMachineItem("design_decor:industrial_gear_large", 32, "input"),
       AssemblingMachineItem("kubejs:electric_gear", 16, "output")
     ],
@@ -307,8 +305,7 @@ ServerEvents.recipes(event => {
     "requirements": [
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:industrial_iron_sheet", 8, "input"),
-      AssemblingMachineItem("kubejs:industrial_iron_ingot", 12, "input"),
+      AssemblingMachineItem("kubejs:industrial_iron_ingot", 16, "input"),
       AssemblingMachineFluid("kubejs:lube_oil", 1500),
       AssemblingMachineItem("kubejs:bearing", 48, "output")
     ],
@@ -371,21 +368,6 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
-    "time": 30,
-    "error": true,
-    "priority": 1,
-    "requirements": [
-      AssemblingMachineStructure,
-      AssemblingMachineEnergy(),
-      AssemblingMachineItem("create:copper_sheet", 16, "input"),
-      AssemblingMachineItem("kubejs:polymer_ingot", 16, "input"),
-      AssemblingMachineItem("#forge:plates/gold", 16, "input"),
-      AssemblingMachineItem("createaddition:capacitor", 32, "output")
-    ],
-  }).id("dut_create:assembling_machine/capacitor")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:assembling_machine",
     "time": 20,
     "error": true,
     "priority": 1,
@@ -409,12 +391,13 @@ ServerEvents.recipes(event => {
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
       AssemblingMachineItem("kubejs:electric_gear", 8, "input"),
-      AssemblingMachineItem("createaddition:capacitor", 6, "input"),
+      AssemblingMachineItem("kubejs:polymer_ingot", 6, "input"),
       AssemblingMachineItem("createaddition:gold_spool", 6, "input"),
       AssemblingMachineFluid("kubejs:slime_colloid", 250),
       AssemblingMachineItem("createaddition:tesla_coil", 6, "output")
     ],
   }).id("dut_create:assembling_machine/tesla_coil")
+  /*
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -429,6 +412,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("create:electron_tube", 32, "output")
     ],
   }).id("dut_create:assembling_machine/electron_tube")
+  */
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -581,7 +565,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineStructure,
       AssemblingMachineEnergy(),
       AssemblingMachineItem("create:brass_ingot", 4, "input"),
-      AssemblingMachineItem("kubejs:industrial_iron_ingot", 4, "input"),
+      AssemblingMachineItem("kubejs:industrial_iron_sheet", 4, "input"),
       AssemblingMachineItem("kubejs:bearing", 6, "input"),
       AssemblingMachineFluid("kubejs:lube_oil", 500),
       AssemblingMachineItem("kubejs:cardan_joint", 1, "output")
@@ -848,6 +832,22 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("kubejs:brass_parts_box", 16, "output")
     ],
   }).id("dut_create:assembling_machine/brass_parts_box")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:assembling_machine",
+    "time": 80,
+    "error": true,
+    "priority": 1,
+    "requirements": [
+      AssemblingMachineStructure,
+      AssemblingMachineEnergy(),
+      AssemblingMachineItem("kubejs:empty_parts_box", 16, "input"),
+      AssemblingMachineItem("kubejs:io_mechanism", 16, "input"),
+      AssemblingMachineItem("create:polished_rose_quartz", 16, "input"),
+      AssemblingMachineFluid("kubejs:brass", 16*IngotFluid),
+      AssemblingMachineItem("kubejs:brass_parts_box", 16, "output")
+    ],
+  }).id("dut_create:assembling_machine/brass_parts_box_1")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",

@@ -119,32 +119,6 @@ ServerEvents.recipes(event => {
   }).id("dut_create:elevator_pulley")
   //制动器
   event.replaceInput({ output: 'create_connected:brake' }, 'minecraft:obsidian', 'create:sturdy_sheet')
-  //机械手
-  event.remove({ output: 'create:deployer', not: { mod: 'kubejs' } })
-  event.custom({
-    "type": "minecraft:crafting_shaped",
-    "category": "misc",
-    "key": {
-      "C": {
-        "item": "kubejs:iron_hand"
-      },
-      "R": {
-        "item": "kubejs:mechanical_core"
-      },
-      "T": {
-        "item": "create:piston_extension_pole"
-      }
-    },
-    "pattern": [
-      "T",
-      "R",
-      "C"
-    ],
-    "result": {
-      "item": "create:deployer"
-    },
-    "show_notification": true
-  }).id("dut_create:deployer")
   //显示连接器
   event.remove({ output: 'create:display_link', not: { mod: 'kubejs' } })
   event.custom({

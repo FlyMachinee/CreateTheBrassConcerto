@@ -248,19 +248,20 @@
 		}
 		{
 			dependencies: ["300DE2D659186A4B"]
-			description: ["{ftbquests.chapter_661B548D54269ECF.quest_352EAAE5E2400827.desc_01}"]
+			description: ["聚乙烯块是重要的电路原料，可以用于制作各种各样的电子元件！"]
 			id: "352EAAE5E2400827"
 			rewards: [{
 				count: 11
 				id: "19EF6A6CFB58D7A5"
-				item: "createaddition:capacitor"
+				item: "kubejs:polymer_ingot"
 				type: "item"
 			}]
 			tasks: [{
-				id: "6A4B21D061391E23"
-				item: "createaddition:capacitor"
+				id: "4F6091C0DDE0A5E3"
+				item: "kubejs:polymer_ingot"
 				type: "item"
 			}]
+			title: "塑料电容"
 			x: 0.0d
 			y: 3.0d
 		}

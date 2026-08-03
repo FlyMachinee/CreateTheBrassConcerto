@@ -1,0 +1,38 @@
+{
+	id: "14B5AFA050E311F4"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{
+			item: {
+				Count: 1
+				id: "createandesiteabound:simple_schematic"
+				tag: {
+					File: "CBC/schematic.train.narrow.nbt"
+					Item: "railways:track_create_andesite_narrow"
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "createandesiteabound:simple_schematic"
+				tag: {
+					File: "CBC/schematic.train.tieless_narrow.nbt"
+					Item: "railways:track_tieless_narrow"
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "createandesiteabound:simple_schematic"
+				tag: {
+					File: "CBC/schematic.train.overhead.tieless_narrow.nbt"
+					Item: "design_decor:metal_support"
+				}
+			}
+		}
+	]
+	title: "铁路集合"
+}

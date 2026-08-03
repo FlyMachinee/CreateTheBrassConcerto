@@ -84,8 +84,12 @@ function syncConfigFiles(sourceDir, targetDir) {
     }
     return { processed: totalProcessed, updated: totalUpdated }
 }
-
+let disableServerConfigAutoUpdate=false
 StartupEvents.init(event => {
+    if (disableServerConfigAutoUpdate){
+        console.log("[Slimeli]自动同步已禁用" + e)
+        return
+    }
     // 获取游戏根目录
     let gameDir = $RootPath.GAMEDIR.get().toFile()
     let results = []

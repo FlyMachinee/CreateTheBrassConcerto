@@ -169,7 +169,7 @@ ServerEvents.recipes(event => {
       "B": { "item": "create:andesite_alloy" },
       "C": { "item": "create:minecart_coupling"},
       "D": { "item": "kubejs:electric_gear" },
-      "E": { "item": "create:whisk" }
+      "E": { "item": "create:mechanical_mixer" }
     },
     "pattern": [
       "ABA",

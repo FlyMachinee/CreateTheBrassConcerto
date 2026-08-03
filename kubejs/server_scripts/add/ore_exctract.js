@@ -115,28 +115,27 @@ ServerEvents.recipes(event => {
     "drill": { "item": "create:mechanical_arm" },
     "fluid": { "amount": 100, "fluid": "minecraft:milk" },
     "output": [
-      { "item": "kubejs:scrap", "count": 3 },
-      { "item": "kubejs:scrap", "count": 3, "chance": 0.5 },
-      { "item": "kubejs:scrap_2", "count": 3, "chance": 0.5 }
+      { "item": "kubejs:scrap", "count": 2 },
+      { "item": "kubejs:scrap_2", "chance": 0.5 }
     ],
     "priority": 0,
     "stress": 384,
     "ticks": 5,
     "vein_id": "createoreexcavation:ore_vein_type/moon/scrap"
   }).id("dut_create:drilling/scrap")
+  //电气废料
   event.custom({
     "type": "createoreexcavation:drilling",
     "drill": { "item": "create:mechanical_arm" },
-    "fluid": { "amount": 100, "fluid": "kubejs:nitrogen" },
+    "fluid": { "amount": 250, "fluid": "kubejs:nitrogen" },
     "output": [
       { "item": "kubejs:scrap_1", "count": 3 },
-      { "item": "kubejs:scrap_1", "count": 3, "chance": 0.5 },
       { "item": "kubejs:scrap_3", "count": 1 },
-      { "item": "kubejs:creative_motor_blueprint", "count": 1, "chance": 0.00001 }
+      { "item": "kubejs:creative_motor_blueprint", "chance": 0.00001 }
     ],
     "priority": 0,
     "stress": 448,
-    "ticks": 5,
+    "ticks": 10,
     "vein_id": "createoreexcavation:ore_vein_type/moon/scrap_1"
   }).id("dut_create:drilling/scrap_1")
   //硫

@@ -28,15 +28,7 @@ ServerEvents.recipes(event => {
                 "type": "create:deploying",
                 "ingredients": [
                     { "item": "kubejs:incomplete_brass_box" },
-                    { "item": "createaddition:capacitor" }
-                ],
-                "results": [{ "item": "kubejs:incomplete_brass_box" }]
-            },
-            {
-                "type": "create:deploying",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_brass_box" },
-                    { "tag": "dut_create:plates/polymer" }
+                    { "item": "kubejs:polymer_ingot" }
                 ],
                 "results": [{ "item": "kubejs:incomplete_brass_box" }]
             },
@@ -94,7 +86,7 @@ ServerEvents.recipes(event => {
         ],
         "key": {
             "A": { "item": "createaddition:copper_spool" },
-            "B": { "item": "createaddition:capacitor" },
+            "B": { "item": "kubejs:polymer_ingot" },
             "C": { "item": "create:andesite_casing" },
             "D": { "item": "kubejs:circuit_board" }
         },

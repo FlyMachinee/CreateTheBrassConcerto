@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
   }).id("dut_create:advanced_laser_turret")
   event.custom({
     "type": "createaddition:charging",
-    "input": { "item": "create:electron_tube" },
+    "input": { "item": "create:polished_rose_quartz" },
     "result": { "item": "creategbd:guardian_beam_capacitor" },
     "energy": 40000,
     "maxChargeRate": 4000

@@ -59,15 +59,8 @@
 				}
 			]
 			tasks: [{
-				count: 512L
-				id: "0CAF98102168DB55"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "create:tracks"
-					}
-				}
+				id: "2BE46B57F511B36E"
+				item: "create:controls"
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_5DF8A114869675D1.quest_7289B09C6D6747BA.title}"
@@ -103,11 +96,31 @@
 				"{image:kubejs:textures/ftb/manhattan.png width:180 height:120 align:center}"
 			]
 			id: "5EAEBB91ED71BE7B"
-			rewards: [{
-				id: "4C3B9F880FE7E32A"
-				item: "kubejs:coin_gold"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "4C3B9F880FE7E32A"
+					item: "kubejs:coin_gold"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0F0DB118385D0CFF"
+					table_id: 1492291954629874164L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "567CE011EBD059D2"
+					table_id: 1492291954629874164L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "45C161F81EC2095C"
+					table_id: 1492291954629874164L
+					type: "choice"
+				}
+			]
 			tasks: [{
 				id: "58FAD2DB01763FE8"
 				title: "{ftbquests.chapter_5DF8A114869675D1.quest_5EAEBB91ED71BE7B.task_58FAD2DB01763FE8.title}"

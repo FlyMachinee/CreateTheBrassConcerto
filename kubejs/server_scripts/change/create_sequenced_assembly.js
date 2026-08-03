@@ -183,8 +183,6 @@ ServerEvents.recipes(event => {
     ],
     "transitionalItem": { "item": "minecraft:golden_apple" }
   }).id("dut_create:sequenced_assembly/enchanted_golden_apple")
-  //电子管
-  event.replaceOutput({ output: 'create:electron_tube', mod: 'create' }, 'create:electron_tube', '2x create:electron_tube')
   //动力臂
   event.remove({ output: 'create:mechanical_arm', not: { mod: 'kubejs' } })
   event.custom({

@@ -111,6 +111,11 @@
 		{
 			description: ["{ftbquests.chapter_37FF8E49F08E5881.quest_57D0ACEAB22BC554.desc_01}"]
 			id: "57D0ACEAB22BC554"
+			rewards: [{
+				id: "5AA513BE5DD6C8B2"
+				item: "createandesiteabound:simple_packer"
+				type: "item"
+			}]
 			tasks: [{
 				id: "59C406F398B4F1A5"
 				item: "createandesiteabound:simple_schematic"

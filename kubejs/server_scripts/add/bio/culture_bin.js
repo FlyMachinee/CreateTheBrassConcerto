@@ -4,6 +4,17 @@ ServerEvents.recipes(event => {
   //event.custom().id("dut_create:")
   //event.custom().id("dut_create:")
   //event.custom().id("dut_create:")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:culture_bin",
+    "time": 30,
+    "requirements": [
+      CultureBinItemInput("iceandfire:stymphalian_bird_feather", 2),
+      CultureBinItemInput("ad_astra:cheese_block", 1),
+      CultureBinItemChance("iceandfire:stymphalian_skull", 2, 1),
+      CultureBinFluid("kubejs:muriatic_acid", "input", 500),
+    ]
+  }).id("dut_create:culture_bin/stymphalian_skull")
   //冰
   event.custom({
     "type": "custommachinery:custom_machine",

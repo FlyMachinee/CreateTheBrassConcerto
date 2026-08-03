@@ -144,6 +144,7 @@ serverconfig应当会自己更新自己！
 实数是完备的！
 Quod Erat Demonstrandum
 Quod Erat Faciendum
+Per aspera ad astra!
 任意一个包含一阶谓词逻辑与初等数论的形式系统，都存在一个在这个系统中不可判定的命题
 如果任意一个形式系统含有初等数论，当这个系统一致时，它的一致性不可能在系统内证明
 若非空偏序集P中的任何全序子集均在P中有上界，那么P必有极大元

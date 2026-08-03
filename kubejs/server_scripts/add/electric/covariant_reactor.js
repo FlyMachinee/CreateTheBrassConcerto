@@ -289,18 +289,6 @@ ServerEvents.recipes(event => {
         "processingTime": 30
     }).id('dut_create:bronze_skull')
     event.custom({
-        "type": "vintageimprovements:vacuumizing",
-        "secondaryFluidInput": 0,
-        "ingredients": [
-            { "item": 'iceandfire:stymphalian_bird_feather' },
-            { "item": 'iceandfire:stymphalian_bird_feather' },
-            { "item": 'ad_astra:cheese_block' },
-            { "fluid": "kubejs:muriatic_acid", "amount": 500 }
-        ],
-        "results": [{ "item": 'iceandfire:stymphalian_skull', "count": 2 }],
-        "processingTime": 30
-    }).id('dut_create:bronze_skull_advanced')
-    event.custom({
         "type": "createbigcannons:melting",
         "heatRequirement": "superheated",
         "ingredients": [

@@ -128,7 +128,7 @@ ServerEvents.recipes(event => {
         "type": "create:deploying",
         "ingredients": [
           { "item": "kubejs:substrate" },
-          { "item": "create:polished_rose_quartz" }
+          { "item": "create:rose_quartz" }
         ],
         "results": [{ "item": "kubejs:substrate" }]
       },
@@ -161,7 +161,7 @@ ServerEvents.recipes(event => {
         "type": "create:deploying",
         "ingredients": [
           { "item": "kubejs:substrate" },
-          { "item": "create:electron_tube" }
+          { "item": "create:polished_rose_quartz" }
         ],
         "results": [{ "item": "kubejs:substrate" }]
       },
@@ -175,7 +175,9 @@ ServerEvents.recipes(event => {
     "transitionalItem": { "item": "kubejs:substrate" }
   }).id("dut_create:sequnced_assembly/circuit_board_fast")
   //铁质手部零件 100%
-  event.replaceInput({ output: 'create:deployer' }, 'create:brass_hand', 'kubejs:iron_hand')
+  event.remove({id:"create:crafting/kinetics/deployer"})
+  event.remove({id:"create:crafting/materials/electron_tube"})
+  /*
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "create:andesite_alloy" },
@@ -204,7 +206,6 @@ ServerEvents.recipes(event => {
     "transitionalItem": { "item": "kubejs:incomplete_iron_hand" }
   }).id("dut_create:sequnced_assembly/iron_hand")
   //桥式整流器
-  /*
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": { "tag": "forge:plates/iron" },
@@ -390,7 +391,7 @@ ServerEvents.recipes(event => {
     "transitionalItem": { "item": "kubejs:incomplete_planetary_gear" }
   }).id("dut_create:sequnced_assembly/planetary_gear_advanced")
   //电气齿轮组
-  event.replaceInput({ input: 'create:electron_tube', not: { output: 'create:nixie_tube' } }, 'create:electron_tube', 'kubejs:electric_gear')
+  event.replaceInput({ input: 'create:electron_tube' }, 'create:electron_tube', 'kubejs:electric_gear')
   event.custom({
     "type": "create:sequenced_assembly",
     "ingredient": [{ "item": "create:large_cogwheel" }, { "item": "design_decor:industrial_gear_large" }],
@@ -403,7 +404,7 @@ ServerEvents.recipes(event => {
         "type": "create:deploying",
         "ingredients": [
           { "item": "kubejs:incomplete_electric_gear" },
-          { "item": "kubejs:bearing" }
+          { "item": "create:polished_rose_quartz" }
         ],
         "results": [{ "item": "kubejs:incomplete_electric_gear" }]
       },
@@ -414,14 +415,6 @@ ServerEvents.recipes(event => {
           [{ "item": "create:large_cogwheel" }, { "item": "design_decor:industrial_gear_large" }]
         ],
         "results": [{ "item": "kubejs:incomplete_electric_gear" }]
-      },
-      {
-        "type": "create:deploying",
-        "ingredients": [
-          { "item": "kubejs:incomplete_electric_gear" },
-          { "item": "create:electron_tube" }
-        ],
-        "results": [{ "item": "kubejs:incomplete_electric_gear" }]
       }
     ],
     "transitionalItem": { "item": "kubejs:incomplete_electric_gear" }
@@ -429,55 +422,7 @@ ServerEvents.recipes(event => {
   //轴承
   event.custom({
     "type": "create:sequenced_assembly",
-    "ingredient": { "tag": "forge:plates/iron" },
-    "results": [
-      { "item": "kubejs:incomplete_bearing", "count": 1 }
-    ],
-    "loops": 1,
-    "sequence": [
-      {
-        "type": "create:deploying",
-        "ingredients": [
-          { "item": "create:iron_sheet" },
-          { "item": "create:andesite_alloy" }
-        ],
-        "results": [{ "item": "create:iron_sheet" }]
-      },
-      {
-        "type": "create:pressing",
-        "ingredients": [{ "item": "create:iron_sheet" }],
-        "results": [{ "item": "create:iron_sheet" }]
-      }
-    ],
-    "transitionalItem": { "item": "create:iron_sheet" }
-  }).id("dut_create:sequnced_assembly/incomplete_bearing")
-  event.custom({
-    "type": "create:sequenced_assembly",
-    "ingredient": { "tag": "forge:plates/industrial_iron" },
-    "results": [
-      { "item": "kubejs:incomplete_bearing", "count": 3 }
-    ],
-    "loops": 1,
-    "sequence": [
-      {
-        "type": "create:deploying",
-        "ingredients": [
-          { "item": "kubejs:incomplete_bearing" },
-          { "tag": "forge:ingots/industrial_iron" }
-        ],
-        "results": [{ "item": "kubejs:incomplete_bearing" }]
-      },
-      {
-        "type": "create:pressing",
-        "ingredients": [{ "item": "kubejs:incomplete_bearing" }],
-        "results": [{ "item": "kubejs:incomplete_bearing" }]
-      }
-    ],
-    "transitionalItem": { "item": "kubejs:incomplete_bearing" }
-  }).id("dut_create:sequnced_assembly/incomplete_bearing_from_industrial_iron")
-  event.custom({
-    "type": "create:sequenced_assembly",
-    "ingredient": { "item": "kubejs:incomplete_bearing" },
+    "ingredient": { "item": "create:andesite_alloy" },
     "results": [
       { "item": "kubejs:bearing", "count": 2 }
     ],
@@ -507,7 +452,7 @@ ServerEvents.recipes(event => {
   }).id("dut_create:sequnced_assembly/bearing")
   event.custom({
     "type": "create:sequenced_assembly",
-    "ingredient": { "item": "kubejs:incomplete_bearing" },
+    "ingredient": { "item": "kubejs:industrial_iron_ingot" },
     "results": [
       { "item": "kubejs:bearing", "count": 4 }
     ],
@@ -538,7 +483,7 @@ ServerEvents.recipes(event => {
   }).id("dut_create:sequnced_assembly/bearing_from_lube_oil")
   event.custom({
     "type": "create:sequenced_assembly",
-    "ingredient": { "item": "kubejs:incomplete_bearing" },
+    "ingredient": { "item": "create:andesite_alloy" },
     "results": [
       { "item": "kubejs:bearing" }
     ],

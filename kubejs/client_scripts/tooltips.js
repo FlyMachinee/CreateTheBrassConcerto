@@ -88,6 +88,8 @@ ItemEvents.tooltip(event => {
 })
 //插件
 ItemEvents.tooltip(event => {
+  event.add(["kubejs:carrier_rocket"], Text.translate("kubejs.tooltip.carrier_rocket"))
+  event.add(["kubejs:tin_hard_disk"], Text.translate("kubejs.tooltip.tin_hard_disk"))
   event.add(['kubejs:productivity_module'], Text.translate("kubejs.tooltip.productivity_module"))
 
   event.add(['kubejs:productivity_module_2'], Text.translate("kubejs.tooltip.productivity_module_2"))

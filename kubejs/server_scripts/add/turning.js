@@ -41,17 +41,6 @@ ServerEvents.recipes(event => {
             "processingTime": 240
         }).id("dut_create:turning/" + i.split(':')[1])
     })
-    //铁质手部零件
-    event.custom({
-        "type": "vintageimprovements:turning",
-        "ingredients": [
-            { "item": "design_decor:industrial_plating_block" }
-        ],
-        "results": [
-            { "item": "kubejs:iron_hand" }
-        ],
-        "processingTime": 240
-    }).id("dut_create:turning/iron_hand")
     //钻头
     event.custom({
         "type": "vintageimprovements:turning",
@@ -88,13 +77,13 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "vintageimprovements:turning",
         "ingredients": [
-            { "item": "create:polished_rose_quartz" }
+            { "item": "create:rose_quartz" }
         ],
         "results": [
-            { "item": "create:electron_tube" }
+            { "item": "create:polished_rose_quartz" }
         ],
-        "processingTime": 40
-    }).id("dut_create:turning/electron_tube")
+        "processingTime": 5
+    }).id("dut_create:turning/polished_rose_quartz")
     //密封液罐
     event.custom({
         "type": "vintageimprovements:turning",
@@ -150,17 +139,6 @@ ServerEvents.recipes(event => {
         ],
         "processingTime": 60
     }).id("dut_create:turning/propeller")
-    //搅拌器
-    event.custom({
-        "type": "vintageimprovements:turning",
-        "ingredients": [
-            { "item": "design_decor:industrial_plating_block" }
-        ],
-        "results": [
-            { "item": "create:whisk" }
-        ],
-        "processingTime": 60
-    }).id("dut_create:turning/whisk")
     //工作盆盖板
     event.custom({
         "type": "vintageimprovements:turning",

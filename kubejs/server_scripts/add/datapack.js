@@ -140,6 +140,7 @@ ServerEvents.recipes(event => {
     { "tag": "forge:plates/copper" }],
     "results": [{ "item": "create:brass_sheet", "count": 2 }]
   }).id("dut_create:brass_sheet")
+  /*
   //电子管
   event.custom({
     "type": "create:filling",
@@ -161,6 +162,7 @@ ServerEvents.recipes(event => {
       { "item": "create:electron_tube" }
     ]
   }).id("dut_create:filling/electron_tube/industrial_iron")
+  */
   //腐化鸡蛋
   event.custom({
     "type": "create:haunting",

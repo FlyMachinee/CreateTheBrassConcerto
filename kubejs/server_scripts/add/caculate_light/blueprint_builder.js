@@ -53,6 +53,15 @@ ServerEvents.recipes(event => {
       "amount": 1
     })
   }
+  function BlueprintBuilderSetOutMore(nbt,amount) {
+    return ({
+      "type": "custommachinery:item",
+      "mode": "output",
+      "item": "createandesiteabound:simple_schematic",
+      "nbt": nbt,
+      "amount": amount
+    })
+  }
   function BlueprintBuilderDisk(item, amount) {
     return ({
       "type": "custommachinery:durability",
@@ -93,6 +102,31 @@ ServerEvents.recipes(event => {
 
   BlueprintBuilderRecipe(
     [
+      BlueprintBuilderFliter("railways:track_create_andesite_narrow"),
+      BlueprintBuilderDisk("kubejs:tin_hard_disk", 512),
+      BlueprintBuilderItemIn("kubejs:io_mechanism", 72),
+      BlueprintBuilderItemIn("kubejs:fluid_mechanism", 18),
+      BlueprintBuilderSetOutMore('{File:"CBC/schematic.train.narrow.nbt",Item:"railways:track_create_andesite_narrow"}',9)
+    ], "track_create_andesite_narrow", 120)
+  BlueprintBuilderRecipe(
+    [
+      BlueprintBuilderFliter("railways:track_tieless_narrow"),
+      BlueprintBuilderDisk("kubejs:tin_hard_disk", 512),
+      BlueprintBuilderItemIn("kubejs:io_mechanism", 72),
+      BlueprintBuilderItemIn("kubejs:fluid_mechanism", 18),
+      BlueprintBuilderSetOutMore('{File:"CBC/schematic.train.tieless_narrow.nbt",Item:"railways:track_tieless_narrow"}',9)
+    ], "track_tieless_narrow", 120)
+  BlueprintBuilderRecipe(
+    [
+      BlueprintBuilderFliter("design_decor:metal_support"),
+      BlueprintBuilderDisk("kubejs:tin_hard_disk", 512),
+      BlueprintBuilderItemIn("kubejs:io_mechanism", 72),
+      BlueprintBuilderItemIn("kubejs:fluid_mechanism", 18),
+      BlueprintBuilderSetOutMore('{File:"CBC/schematic.train.overhead.tieless_narrow.nbt",Item:"design_decor:metal_support"}',9)
+    ], "metal_support", 120)
+
+  BlueprintBuilderRecipe(
+    [
       BlueprintBuilderBarrelIn(1),
       BlueprintBuilderFliter("kubejs:hydropress"),
       BlueprintBuilderDisk("kubejs:tin_hard_disk", 512),
@@ -122,7 +156,7 @@ ServerEvents.recipes(event => {
       BlueprintBuilderItemIn("create:brass_block", 32),
       BlueprintBuilderItemIn("create:industrial_iron_block", 32),
       BlueprintBuilderItemIn("minecraft:copper_block", 16),
-      BlueprintBuilderItemIn("createaddition:capacitor", 32),
+      BlueprintBuilderItemIn("kubejs:duraplas_ingot", 32),
       BlueprintBuilderItemIn("kubejs:carbon_electrode", 20),
       BlueprintBuilderSetOut('{File:"CBC/schematic.electro_hydro_resonant_tower.nbt",Item:"kubejs:electro_hydro_resonant_tower"}')
     ], "electro_hydro_resonant_tower", 120)

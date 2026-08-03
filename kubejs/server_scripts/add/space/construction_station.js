@@ -414,7 +414,7 @@ ServerEvents.recipes(event => {
       ConstructionStationEnergy(),
       ConstructionStationItem("create:precision_mechanism", 4, "input"),
       ConstructionStationItem("kubejs:electric_gear", 12, "input"),
-      ConstructionStationItem("createaddition:capacitor", 12, "input"),
+      ConstructionStationItem("kubejs:polymer_ingot", 12, "input"),
       ConstructionStationItem("createaddition:gold_spool", 12, "input"),
       ConstructionStationFluid("kubejs:lube_oil", 500),
       ConstructionStationItem("createaddition:electric_motor", 6, "output")

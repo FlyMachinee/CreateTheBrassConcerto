@@ -168,7 +168,10 @@
 		}
 		{
 			dependencies: ["00B48F1BEA0C0EFF"]
-			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_35DBF77859D890D6.desc_01}"]
+			description: [
+				"{ftbquests.chapter_7BC2309B8F81FB48.quest_35DBF77859D890D6.desc_01}"
+				"{image:kubejs:textures/ftb/belt.png width:140 height:100 align:center}"
+			]
 			id: "35DBF77859D890D6"
 			rewards: [{
 				count: 16
@@ -648,7 +651,7 @@
 				{
 					count: 16
 					id: "324F6C155C43163C"
-					item: "create:electron_tube"
+					item: "create:polished_rose_quartz"
 					type: "item"
 				}
 				{
@@ -805,38 +808,6 @@
 			}]
 			x: 2.0d
 			y: 7.0d
-		}
-		{
-			dependencies: ["41BBAE875EE21525"]
-			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_0BEFDE24534261C5.desc_01}"]
-			id: "0BEFDE24534261C5"
-			rewards: [
-				{
-					count: 8
-					id: "5B63FAC3FACC7302"
-					item: "kubejs:circuit_board"
-					type: "item"
-				}
-				{
-					id: "77AD81B6F93F5455"
-					item: "create:precision_mechanism"
-					team_reward: false
-					type: "item"
-				}
-				{
-					id: "2171A219E455FC4A"
-					item: "create:precision_mechanism"
-					type: "item"
-				}
-			]
-			size: 1.0d
-			tasks: [{
-				id: "1C736601CAC2F294"
-				item: "kubejs:iron_hand"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 12.0d
 		}
 		{
 			dependencies: ["2ECE50D43DDBC159"]
@@ -1074,7 +1045,7 @@
 				{
 					count: 48
 					id: "518536D65F46D8CA"
-					item: "create:electron_tube"
+					item: "create:polished_rose_quartz"
 					type: "item"
 				}
 				{
@@ -1700,6 +1671,12 @@
 					item: "create:track_signal"
 					type: "item"
 				}
+				{
+					exclude_from_claim_all: true
+					id: "447E357ACA762448"
+					table_id: 1492291954629874164L
+					type: "choice"
+				}
 			]
 			tasks: [{
 				advancement: "create:train"
@@ -1731,18 +1708,18 @@
 		}
 		{
 			dependencies: ["35DBF77859D890D6"]
-			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_36140639AA33A37E.desc_01}"]
+			description: ["内部带有红石电路的石英块，可以用于制造一些智能元件"]
 			id: "36140639AA33A37E"
 			rewards: [{
 				count: 32
 				id: "77D704FC7AEE01E0"
-				item: "create:electron_tube"
+				item: "create:polished_rose_quartz"
 				type: "item"
 			}]
 			shape: "hexagon"
 			tasks: [{
 				id: "1C1ED3EB1C3503D8"
-				item: "create:electron_tube"
+				item: "create:polished_rose_quartz"
 				type: "item"
 			}]
 			x: 5.5d
@@ -1962,12 +1939,19 @@
 			dependencies: ["67F7753F65D198FD"]
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_41BBAE875EE21525.desc_01}"]
 			id: "41BBAE875EE21525"
-			rewards: [{
-				count: 32
-				id: "7983E32D3D2C8A76"
-				item: "design_decor:industrial_gear_large"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 32
+					id: "7983E32D3D2C8A76"
+					item: "design_decor:industrial_gear_large"
+					type: "item"
+				}
+				{
+					id: "4661E46BCC3F8D80"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "0562F7EAF26F78F0"
 				item: "createaddition:rolling_mill"
@@ -1980,12 +1964,20 @@
 			dependencies: ["3B6B2FD9BDA523F0"]
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_223775466012800D.desc_01}"]
 			id: "223775466012800D"
-			rewards: [{
-				count: 16
-				id: "3907E617A8194B50"
-				item: "minecraft:bucket"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 16
+					id: "3907E617A8194B50"
+					item: "minecraft:bucket"
+					type: "item"
+				}
+				{
+					id: "574187C0AF802F6D"
+					item: "create:precision_mechanism"
+					team_reward: true
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "7C3C4A0871F73323"
 				item: "vintageimprovements:curving_press"
@@ -2890,15 +2882,23 @@
 				}
 			]
 			tasks: [{
-				id: "24253E455B1D0C93"
-				item: "create:wand_of_symmetry"
+				id: "090BF3254A6CBC36"
+				item: {
+					Count: 1
+					id: "createandesiteabound:simple_packer"
+					tag: {
+						Closure: 1b
+						Variant: 0
+					}
+				}
+				match_nbt: false
 				type: "item"
 			}]
 			x: 1.0d
 			y: -0.5d
 		}
 		{
-			dependencies: ["0BEFDE24534261C5"]
+			dependencies: ["41BBAE875EE21525"]
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_06A285E3B17F83A7.desc_01}"]
 			id: "06A285E3B17F83A7"
 			rewards: [
@@ -2911,6 +2911,12 @@
 					count: 36
 					id: "621B61F0768D7169"
 					item: "create:fluid_tank"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "34D5907522D5AAE9"
+					item: "kubejs:circuit_board"
 					type: "item"
 				}
 			]
@@ -3354,8 +3360,8 @@
 				item: "kubejs:huge_crusher"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 11.5d
+			x: 0.0d
+			y: 12.0d
 		}
 		{
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_115A14D0EFF3C9AC.desc_01}"]

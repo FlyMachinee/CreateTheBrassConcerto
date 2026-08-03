@@ -608,30 +608,6 @@
 		{
 			dependencies: [
 				"4C0F977C66E23537"
-				"16700765BEF18DE8"
-			]
-			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7BA9CFF9B5FC09E0.desc_01}"]
-			id: "7BA9CFF9B5FC09E0"
-			rewards: [{
-				count: 24
-				id: "0CC583CCCFAD12BE"
-				item: "kubejs:fluid_mechanism"
-				type: "item"
-			}]
-			tasks: [{
-				consume_items: true
-				count: 128L
-				id: "6A62DB8FDCAF9C35"
-				item: "create:electron_tube"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 6.5d
-		}
-		{
-			dependencies: [
-				"7BA9CFF9B5FC09E0"
-				"4C0F977C66E23537"
 				"2F4AD170B3648627"
 			]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_7D030EAF311A861E.desc_01}"]
@@ -647,19 +623,24 @@
 		}
 		{
 			dependencies: [
-				"7BA9CFF9B5FC09E0"
 				"7FB10775D5107426"
-				"071CB4D05F53F81F"
+				"4C0F977C66E23537"
 			]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_73D8518A5C102402.desc_01}"]
 			id: "73D8518A5C102402"
+			rewards: [{
+				count: 32
+				id: "26BF382FD31879A2"
+				item: "kubejs:fluid_mechanism"
+				type: "item"
+			}]
 			shape: "rsquare"
 			tasks: [{
 				id: "154A1EDEA393A233"
 				item: "kubejs:electric_gear"
 				type: "item"
 			}]
-			x: -3.0d
+			x: -1.5d
 			y: 8.0d
 		}
 		{
