@@ -172,6 +172,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 	tab.create("cbc:aaa_tool_food")
 		.icon(() => Item.of("kubejs:large_fries"))
 		.content(() => [
+			'createandesiteabound:simple_packer',
 			'kubejs:anti_warden_bomb',
 			'beyonddimensions:net_interface',
 			'beyonddimensions:schematicannon_pathway',
@@ -297,6 +298,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 	tab.create("cbc:aaa_machine")
 		.icon(() => Item.of('kubejs:productivity_module_3'))
 		.content(() => [
+			'createandesiteabound:simple_packer',
 			'kubejs:difference_engine',
 			'kubejs:creative_motor_blueprint',
 			"kubejs:emergency_industrial_platform",

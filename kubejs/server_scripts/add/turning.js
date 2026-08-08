@@ -128,17 +128,6 @@ ServerEvents.recipes(event => {
         ],
         "processingTime": 60
     }).id("dut_create:turning/basin")
-    //扇叶
-    event.custom({
-        "type": "vintageimprovements:turning",
-        "ingredients": [
-            { "item": "design_decor:industrial_plating_block" }
-        ],
-        "results": [
-            { "item": "create:propeller" }
-        ],
-        "processingTime": 60
-    }).id("dut_create:turning/propeller")
     //工作盆盖板
     event.custom({
         "type": "vintageimprovements:turning",

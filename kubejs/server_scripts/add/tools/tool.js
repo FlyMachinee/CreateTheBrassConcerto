@@ -219,6 +219,14 @@ ServerEvents.recipes(event => {
   }
   ).id("dut_create:rocket_sword")
 
+    event.shaped('createandesiteabound:simple_packer', [
+        "C",
+        "B"
+    ], {
+        C: "minecraft:slime_block",
+        B: 'create:schematic_and_quill'
+    }).id("dut_create:simple_packer")
+
 })
 ServerEvents.customCommand('first_vein', e => {
   const { player, level } = e

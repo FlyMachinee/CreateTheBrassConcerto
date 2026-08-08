@@ -7,7 +7,7 @@ ServerEvents.recipes(event => {
             "A": { "item": "create:steam_engine" },
             "B": { "item": "kubejs:mechanical_core" },
             "C": { "item": 'create:white_sail' },
-            "D": { "item": "create:propeller" }
+            "D": { "item": "create:encased_fan" }
         },
         "pattern": [
             " C ",

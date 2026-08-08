@@ -150,7 +150,7 @@ ServerEvents.recipes(event => {
     "key": {
       "A": { "item": "create:andesite_alloy" },
       "B": { "tag": "forge:ingots/tin" },
-      "E": { "item": "create:propeller" }
+      "E": { "item": "create:encased_fan" }
     },
     "result": { "item": "create_sa:fan_component" }
   }).id('dut_create:fan_component')

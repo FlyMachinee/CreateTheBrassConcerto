@@ -266,7 +266,7 @@ ServerEvents.recipes(event => {
   //event.remove({input: ''})
   //event.custom()
   event.remove({ output: ['ad_astra:etrionic_capacitor', 'ad_astra:solar_panel', 'ad_astra:nasa_workbench', 'ad_astra:etrionic_blast_furnace', 'ad_astra:compressor', 'ad_astra:compressing', 'ad_astra:cryo_freezer', "ad_astra:tier_1_rover", "ad_astra:energizer", "ad_astra:water_pump", "ad_astra:fan", "ad_astra:photovolatic_etrium_cell", "ad_astra:wheel", "ad_astra:engine_frame", "ad_astra:rocket_nose_cone", "ad_astra:rocket_fin"] })
-  event.replaceInput({ input: "ad_astra:fan" }, 'ad_astra:fan', 'create:propeller')
+  event.replaceInput({ input: "ad_astra:fan" }, 'ad_astra:fan', 'create:encased_fan')
   event.remove({ output: 'ad_astra:fuel', not: { mod: 'kubejs' } })
   event.remove({ output: 'ad_astra:fuel_refinery' })
   event.remove({ type: "ad_astra:compressing" })

@@ -327,7 +327,7 @@ ServerEvents.recipes(event => {
       "B": { "tag": "forge:ingots/tin" },
       "C": { "item": "create:fluid_pipe" },
       "D": { "tag": "forge:plates/iron" },
-      "E": { "item": "create:propeller" }
+      "E": { "item": "create:encased_fan" }
     },
     "result": { "item": "createdieselgenerators:engine_turbocharger" }
   }).id('dut_create:engine_turbocharger')

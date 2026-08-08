@@ -38,6 +38,11 @@ ServerEvents.recipes(event => {
   event.remove({ id: "dut_create:andesite_alloy_manual_only_using_deployer" })
   */
   //event.recipes.create.item_application("create:andesite_alloy",["minecraft:andesite",["minecraft:iron_nugget", "create:zinc_nugget"]] ).id("dut_create:andesite_alloy_manual_only")
+  event.remove({id:"create:crafting/kinetics/propeller"})
+  event.replaceInput(
+    { input: 'create:propeller' },
+    'create:propeller',
+    'create:encased_fan')
   //玫瑰石英灯
   event.remove({ id: "create:crafting/kinetics/rose_quartz_lamp" })
   event.shapeless("create:rose_quartz_lamp", ["#forge:ingots/tin", "minecraft:redstone", "create:polished_rose_quartz"]).id("dut_create:rose_quartz_lamp")

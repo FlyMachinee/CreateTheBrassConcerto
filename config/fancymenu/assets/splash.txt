@@ -167,6 +167,17 @@ tpa!=teleport accept
 JS String != Java String
 NaN!=NaN
 A={x|x∉A}
+a+0=a
+a+S(b)=S(a+b)
+a+b=b+a
+(a+b)+c=a+(b+c)
+a+(-a)=0
+a-b=a+(-b)
+a*0=0
+a*S(b)=S(a*b)+a
+(-1)*a=-a
+a*(1/a)=1(a≠0)
+a/b=a*(1/b)
 一年又一年
 什么？你付费购买了此整合包？恭喜，你被骗了！
 “亲亲，我们卖的是魔改文件哦，mod需要你自行安装哦”
