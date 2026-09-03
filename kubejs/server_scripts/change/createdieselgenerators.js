@@ -183,17 +183,6 @@ ServerEvents.recipes(event => {
     },
     "result": { "item": "createdieselgenerators:pumpjack_head" }
   }).id('dut_create:pumpjack_head')
-  //密封液罐
-  event.custom({
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-      "A"
-    ],
-    "key": {
-      "A": { "item": "createdieselgenerators:canister" }
-    },
-    "result": { "item": "createdieselgenerators:canister" }
-  }).id('dut_create:canister_emptying')
   //分馏塔控制器
   event.remove({ output: 'createdieselgenerators:distillation_controller', not: { mod: 'kubejs' } })
   event.custom({

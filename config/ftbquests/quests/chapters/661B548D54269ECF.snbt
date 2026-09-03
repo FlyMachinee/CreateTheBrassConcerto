@@ -57,18 +57,19 @@
 		}
 		{
 			description: ["{ftbquests.chapter_661B548D54269ECF.quest_300DE2D659186A4B.desc_01}"]
+			icon: "createaddition:large_connector"
 			id: "300DE2D659186A4B"
 			rewards: [
 				{
 					count: 64
 					id: "2867D97C3E776C9B"
-					item: "createaddition:small_light_connector"
+					item: "createaddition:connector"
 					type: "item"
 				}
 				{
 					count: 64
 					id: "7F2240AC3A532962"
-					item: "createaddition:festive_spool"
+					item: "createaddition:copper_spool"
 					type: "item"
 				}
 				{
@@ -79,18 +80,8 @@
 			]
 			tasks: [
 				{
-					id: "363F3A60397AF024"
-					item: "createaddition:connector"
-					type: "item"
-				}
-				{
 					id: "2584502CE640B3A6"
 					item: "createaddition:large_connector"
-					type: "item"
-				}
-				{
-					id: "5DF09A061D58166F"
-					item: "createaddition:copper_spool"
 					type: "item"
 				}
 				{
@@ -567,7 +558,7 @@
 				}
 			]
 			title: "{ftbquests.chapter_661B548D54269ECF.quest_75E9C57B2B0D8949.title}"
-			x: 0.0d
+			x: -1.5d
 			y: 9.0d
 		}
 		{
@@ -657,12 +648,13 @@
 		{
 			dependencies: ["322ACA6256D0AD6A"]
 			description: ["{ftbquests.chapter_661B548D54269ECF.quest_5D17F3EB50C80731.desc_01}"]
+			icon: "kubejs:chlorine_bucket"
 			id: "5D17F3EB50C80731"
 			tasks: [{
-				id: "5B7787E483AD6F07"
-				item: "kubejs:chlorine_bucket"
-				type: "item"
+				id: "5B7CFD3206A33EF2"
+				type: "checkmark"
 			}]
+			title: "氯气"
 			x: -3.0d
 			y: 7.5d
 		}
@@ -688,23 +680,22 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["6E7FC2ED970229C2"]
+			dependencies: ["15296D819BEF5B05"]
 			description: ["{ftbquests.chapter_661B548D54269ECF.quest_268BF1B548306F39.desc_01}"]
 			id: "268BF1B548306F39"
 			rewards: [{
-				id: "6DE19F030BBC69E4"
-				item: "kubejs:emptying_machine"
+				id: "48C531F7226CCE9A"
+				item: "createandesiteabound:emptying_machine"
 				type: "item"
 			}]
 			tasks: [{
-				id: "05CD26B09D172B1E"
-				item: "kubejs:filling_machine"
-				match_nbt: false
+				id: "3974C945A7C805A8"
+				item: "createandesiteabound:filling_machine"
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_661B548D54269ECF.quest_268BF1B548306F39.title}"
-			x: -1.5d
-			y: 9.0d
+			x: 0.0d
+			y: 7.5d
 		}
 	]
 	subtitle: ["{ftbquests.chapter_661B548D54269ECF.subtitle_1}"]

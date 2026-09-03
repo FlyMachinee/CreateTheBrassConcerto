@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "chance": 0.125, "item": "kubejs:io_mechanism" },
             { "chance": 0.125, "item": "kubejs:salt" },
-            { "chance": 0.5, "item": "kubejs:empty_can" },
+            { "chance": 0.5, "item": "kubejs:empty_can","count":2 },
             { "chance": 0.25, "item": "kubejs:rubber" }
         ],
         "loops": 1,

@@ -59,8 +59,8 @@
 			id: "59EC882B083BE3F4"
 			rewards: [{
 				count: 8
-				id: "690DC2ADA358B17A"
-				item: "createdieselgenerators:canister"
+				id: "2218AF1D54EE345D"
+				item: "create:fluid_tank"
 				type: "item"
 			}]
 			shape: "rsquare"

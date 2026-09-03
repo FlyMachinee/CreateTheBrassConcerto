@@ -197,7 +197,7 @@ ServerEvents.recipes(event => {
         "results": [
             { "fluid": "kubejs:pressurized_steam", "amount": 500 }
         ],
-        "processingTime": 15
+        "processingTime": 10
     }).id('dut_create:advanced_pressurized_steam')
     event.custom({
         "type": "vintageimprovements:pressurizing",

@@ -173,6 +173,8 @@ StartupEvents.registry("creative_mode_tab", tab => {
 		.icon(() => Item.of("kubejs:large_fries"))
 		.content(() => [
 			'createandesiteabound:simple_packer',
+			'createandesiteabound:fluid_vessel',
+			'kubejs:organizer',
 			'kubejs:anti_warden_bomb',
 			'beyonddimensions:net_interface',
 			'beyonddimensions:schematicannon_pathway',
@@ -220,6 +222,9 @@ StartupEvents.registry("creative_mode_tab", tab => {
 	tab.create("cbc:aaa_bucket")
 		.icon(() => Item.of("kubejs:slime_colloid_bucket"))
 		.content(() => [
+			'createandesiteabound:filling_machine',
+			'createandesiteabound:emptying_machine',
+			'createandesiteabound:fluid_vessel',
 			'create:creative_fluid_tank',
 			Item.of('create:creative_fluid_tank', '{BlockEntityTag:{TankContent:{Amount:32000,FluidName:"create_things_and_misc:diluted_bonemeal"}},display:{Name:\'{"translate":"fluid.create_things_and_misc.diluted_bonemeal","italic":false}\'}}'),
 			Item.of('create:creative_fluid_tank', '{BlockEntityTag:{TankContent:{Amount:32000,FluidName:"vintageimprovements:sulfur_dioxide"}},display:{Name:\'{"translate":"fluid.vintageimprovements.sulfur_dioxide","italic":false}\'}}'),
@@ -311,8 +316,9 @@ StartupEvents.registry("creative_mode_tab", tab => {
 			"kubejs:solar_panel",
 			"kubejs:battery_slot",
 			'kubejs:anti_warden_bomb',
-			'kubejs:filling_machine',
-			'kubejs:emptying_machine',
+			'createandesiteabound:filling_machine',
+			'createandesiteabound:emptying_machine',
+			'createandesiteabound:fluid_vessel',
 			'kubejs:culture_bin',
 			'createandesiteabound:redstone_radar',
 			"kubejs:steam_generator",
@@ -363,6 +369,7 @@ StartupEvents.registry("creative_mode_tab", tab => {
 			Item.of('createandesiteabound:simple_schematic', '{File:"CBC/schematic.train.narrow.nbt",Item:"railways:track_create_andesite_narrow"}'),
 			Item.of('createandesiteabound:simple_schematic', '{File:"CBC/schematic.train.tieless_narrow.nbt",Item:"railways:track_tieless_narrow"}'),
 			Item.of('createandesiteabound:simple_schematic', '{File:"CBC/schematic.train.overhead.tieless_narrow.nbt",Item:"design_decor:metal_support"}'),
+			Item.of('createandesiteabound:simple_schematic', '{File:"CBC/schematic.blueprint_builder.nbt",Item:"kubejs:blueprint_builder"}'),
 			Item.of('createandesiteabound:simple_schematic', '{File:"CBC/schematic.alloy_furnace.nbt",Item:"kubejs:alloy_furnace"}'),
 			Item.of('createandesiteabound:simple_schematic', '{File:"CBC/schematic.hydropress.nbt",Item:"kubejs:hydropress"}'),
 			Item.of('createandesiteabound:simple_schematic', '{File:"CBC/schematic.blasting_compressor.nbt",Item:"kubejs:blasting_compressor"}'),

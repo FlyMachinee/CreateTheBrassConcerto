@@ -1,0 +1,13 @@
+#Prevents players from automatically exiting flight mode when touching the ground.
+keep_flying_on_ground = true
+#Ticks the toolbelt hotkey must be held before activating.
+#By the way, this key is blocked while holding a schematic.
+#Range: 0 ~ 100
+toolbelt_hold_delay = 3
+#Duration of the Toolbelt opening animation.
+#Set to 0 to open instantly. (Vanilla: 10)
+#Range: 0 ~ 100
+toolbelt_animation_ticks = 2
+#Short-press the toolbelt hotkey to quickly unequip items without opening the toolbox.
+quick_unequip_items = true
+

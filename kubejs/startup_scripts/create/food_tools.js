@@ -55,6 +55,11 @@ StartupEvents.registry('item', event => {
     event.create('position_data').maxStackSize(1).tooltip(Text.translate("kubejs.tooltip.position_data"))
     event.create('satellite_scanning_data').maxStackSize(1)
     event.create('scanner').maxStackSize(1)
+    //布线器
+    event.create("organizer", "sword")
+        .attackDamageBaseline(0)
+        .speedBaseline(4)
+        .tooltip(Text.translate("kubejs.tooltip.organizer"))
     //塑钢钻头
     event.create("steel_impact_drill")
         .rarity("rare")

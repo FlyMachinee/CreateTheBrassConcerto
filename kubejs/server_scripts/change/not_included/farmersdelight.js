@@ -75,7 +75,6 @@ ServerEvents.recipes(event => {
   }).id("dut_create:compacting/paper_from_bark")
 
   if (Platform.isLoaded('nethersdelight')) {
-    ServerEvents.recipes(event => {
       //枪药珠培育
       event.custom({
         "type": "create:sequenced_assembly",
@@ -116,13 +115,10 @@ ServerEvents.recipes(event => {
         ],
         "heatRequirement": "heated"
       }).id("dut_create:propelpearl_gunpowder")
-    })
   }
   if (Platform.isLoaded('sliceanddice')) {
-    ServerEvents.recipes(event => {
       event.remove({ id: "sliceanddice:mixing/fertilizer/from_compost" })
       event.remove({ id: "sliceanddice:mixing/fertilizer/from_tree_fertilizer" })
-    })
   }
 
   function create2StepRecipe(a, b, c, count1, count2, per) {

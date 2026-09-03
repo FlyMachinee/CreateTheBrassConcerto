@@ -47,14 +47,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "6F30DD17FD6B2B5C"
-					item: "kubejs:filling_machine"
+					id: "1E18FB87E40C237F"
+					item: "createandesiteabound:filling_machine"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "245B6D06DD0402D0"
-					item: "kubejs:emptying_machine"
+					id: "6F649273FCA3BE37"
+					item: "createandesiteabound:emptying_machine"
 					type: "item"
 				}
 			]

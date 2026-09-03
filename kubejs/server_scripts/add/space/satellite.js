@@ -193,14 +193,6 @@ ServerEvents.recipes(event => {
     ],
     "sequence": [
       {
-        "type": "create:deploying",
-        "ingredients": [
-          { "item": "kubejs:resonant_bacteria" },
-          { "tag": "forge:plates/aluminum" }
-        ],
-        "results": [{ "item": "kubejs:resonant_bacteria" },]
-      },
-      {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:resonant_bacteria" },
         { "amount": 250, "fluid": "kubejs:duraplas" }],
@@ -219,7 +211,7 @@ ServerEvents.recipes(event => {
         "ingredients": [
           { "item": "kubejs:resonant_bacteria" },
         ],
-        "energy": 14400,
+        "energy": 7200,
         "maxChargeRate": 1440,
         "results": [
           { "item": "kubejs:resonant_bacteria" },

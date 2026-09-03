@@ -786,6 +786,7 @@
 		{
 			dependencies: ["4E7BFFF65ACABE29"]
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_0CFF70EC1A3F0E19.desc_01}"]
+			icon: "createaddition:seed_oil_bucket"
 			id: "0CFF70EC1A3F0E19"
 			rewards: [
 				{
@@ -802,10 +803,10 @@
 			]
 			shape: "hexagon"
 			tasks: [{
-				id: "0F7C72E65AC7228D"
-				item: "createaddition:seed_oil_bucket"
-				type: "item"
+				id: "021653EDD8D4E330"
+				type: "checkmark"
 			}]
+			title: "种子油"
 			x: 2.0d
 			y: 7.0d
 		}
@@ -1363,14 +1364,14 @@
 					type: "item"
 				}
 				{
-					id: "3FBBE0F2261063E9"
-					item: "kubejs:filling_machine"
+					id: "4741DDCE2C538DF9"
+					item: "createandesiteabound:filling_machine"
 					type: "item"
 				}
 			]
 			tasks: [{
-				id: "7236E220F2B993CF"
-				item: "createdieselgenerators:canister"
+				id: "26B31FEFC6E2E671"
+				item: "createandesiteabound:fluid_vessel"
 				type: "item"
 			}]
 			x: -1.0d
@@ -2305,11 +2306,6 @@
 			id: "14D6DF4D1B698552"
 			rewards: [
 				{
-					id: "3DF3EFF6548900FC"
-					item: "kubejs:emptying_machine"
-					type: "item"
-				}
-				{
 					count: 3
 					id: "4CC536DE98329E39"
 					item: {
@@ -2556,6 +2552,11 @@
 						}
 					}
 					team_reward: false
+					type: "item"
+				}
+				{
+					id: "7D207D574133B541"
+					item: "createandesiteabound:emptying_machine"
 					type: "item"
 				}
 			]
@@ -2902,11 +2903,6 @@
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_06A285E3B17F83A7.desc_01}"]
 			id: "06A285E3B17F83A7"
 			rewards: [
-				{
-					id: "0BBE5EEAC39156BC"
-					item: "createdieselgenerators:canister"
-					type: "item"
-				}
 				{
 					count: 36
 					id: "621B61F0768D7169"
@@ -3366,20 +3362,12 @@
 		{
 			description: ["{ftbquests.chapter_7BC2309B8F81FB48.quest_115A14D0EFF3C9AC.desc_01}"]
 			id: "115A14D0EFF3C9AC"
-			rewards: [
-				{
-					count: 12
-					id: "1B4B1EFF250B30FB"
-					item: "create_connected:fluid_vessel"
-					type: "item"
-				}
-				{
-					count: 4
-					id: "4FEFCB91E7354785"
-					item: "createdieselgenerators:canister"
-					type: "item"
-				}
-			]
+			rewards: [{
+				count: 16
+				id: "1B4B1EFF250B30FB"
+				item: "create_connected:fluid_vessel"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7D6E288256728646"
 				item: "create_connected:fluid_vessel"

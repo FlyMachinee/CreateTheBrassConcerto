@@ -369,7 +369,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:granite_alloy", 18, "output"),
             AlloyFurnaceFluid("kubejs:industrial_iron", 6)
         ]
-    }).id("dut_create:alloy_furnace/industrial_iron")
+    }).id("dut_create:alloy_furnace/production/industrial_iron")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -389,7 +389,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/industrial_iron", 100, "input"),
             AlloyFurnaceFluid("kubejs:industrial_iron", 9)
         ]
-    }).id("dut_create:alloy_furnace/industrial_iron_melt")
+    }).id("dut_create:alloy_furnace/melt/industrial_iron")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -413,27 +413,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:granite_alloy", 18, "output"),
             AlloyFurnaceFluid("kubejs:industrial_iron", 6)
         ]
-    }).id("dut_create:alloy_furnace/industrial_iron_from_block")
-    event.custom({
-        "type": "custommachinery:custom_machine",
-        "machine": "dut:alloy_furnace",
-        "time": 100,
-        "error": true,
-        "priority": 1,
-        "requirements": [
-            AlloyFurnaceCommand1,
-            AlloyFurnaceCommand2,
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(9, "kubejs:brass"),
-            AlloyFurnaceItem("#forge:ingots/brass", 100, "input")
-        ],
-        "jei": [
-            AlloyFurnaceStructure,
-            AlloyFurnaceReplace(9, "kubejs:brass"),
-            AlloyFurnaceItem("#forge:ingots/brass", 100, "input"),
-            AlloyFurnaceFluid("kubejs:brass", 9)
-        ]
-    }).id("dut_create:alloy_furnace/brass_melt")
+    }).id("dut_create:alloy_furnace/production_from_block/industrial_iron")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -457,7 +437,27 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:diorite_alloy", 9, "output"),
             AlloyFurnaceFluid("kubejs:brass", 6)
         ]
-    }).id("dut_create:alloy_furnace/brass")
+    }).id("dut_create:alloy_furnace/production/brass")
+    event.custom({
+        "type": "custommachinery:custom_machine",
+        "machine": "dut:alloy_furnace",
+        "time": 100,
+        "error": true,
+        "priority": 1,
+        "requirements": [
+            AlloyFurnaceCommand1,
+            AlloyFurnaceCommand2,
+            AlloyFurnaceStructure,
+            AlloyFurnaceReplace(9, "kubejs:brass"),
+            AlloyFurnaceItem("#forge:ingots/brass", 100, "input")
+        ],
+        "jei": [
+            AlloyFurnaceStructure,
+            AlloyFurnaceReplace(9, "kubejs:brass"),
+            AlloyFurnaceItem("#forge:ingots/brass", 100, "input"),
+            AlloyFurnaceFluid("kubejs:brass", 9)
+        ]
+    }).id("dut_create:alloy_furnace/melt/brass")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -481,7 +481,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:diorite_alloy", 9, "output"),
             AlloyFurnaceFluid("kubejs:brass", 6)
         ]
-    }).id("dut_create:alloy_furnace/brass_from_block")
+    }).id("dut_create:alloy_furnace/production_from_block/brass")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -501,7 +501,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/copper", 100, "input"),
             AlloyFurnaceFluid("kubejs:copper", 9)
         ]
-    }).id("dut_create:alloy_furnace/copper_melt")
+    }).id("dut_create:alloy_furnace/melt/copper")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -523,7 +523,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("create:andesite_alloy", 6, "output"),
             AlloyFurnaceFluid("kubejs:copper", 6)
         ]
-    }).id("dut_create:alloy_furnace/copper_from_ore")
+    }).id("dut_create:alloy_furnace/from_ore/copper")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -543,7 +543,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:new_zinc_ingot", 100, "input"),
             AlloyFurnaceFluid("kubejs:new_zinc", 9)
         ]
-    }).id("dut_create:alloy_furnace/new_zinc_melt")
+    }).id("dut_create:alloy_furnace/melt/new_zinc")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -565,7 +565,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("create:andesite_alloy", 6, "output"),
             AlloyFurnaceFluid("kubejs:new_zinc", 6)
         ]
-    }).id("dut_create:alloy_furnace/new_zinc_from_ore")
+    }).id("dut_create:alloy_furnace/from_ore/new_zinc")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -585,7 +585,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/iron", 100, "input"),
             AlloyFurnaceFluid("kubejs:iron", 9)
         ]
-    }).id("dut_create:alloy_furnace/iron_melt")
+    }).id("dut_create:alloy_furnace/melt/iron")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -607,7 +607,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("create:andesite_alloy", 9, "output"),
             AlloyFurnaceFluid("kubejs:iron", 9)
         ]
-    }).id("dut_create:alloy_furnace/iron_from_ore")
+    }).id("dut_create:alloy_furnace/from_ore/iron")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -627,7 +627,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/gold", 100, "input"),
             AlloyFurnaceFluid("kubejs:gold", 9)
         ]
-    }).id("dut_create:alloy_furnace/gold_melt")
+    }).id("dut_create:alloy_furnace/melt/gold")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -649,7 +649,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("create:andesite_alloy", 6, "output"),
             AlloyFurnaceFluid("kubejs:gold", 6)
         ]
-    }).id("dut_create:alloy_furnace/gold_from_ore")
+    }).id("dut_create:alloy_furnace/from_ore/gold")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -669,7 +669,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/tin", 100, "input"),
             AlloyFurnaceFluid("kubejs:tin", 9)
         ]
-    }).id("dut_create:alloy_furnace/tin_melt")
+    }).id("dut_create:alloy_furnace/melt/tin")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -691,7 +691,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("create:andesite_alloy", 6, "output"),
             AlloyFurnaceFluid("kubejs:tin", 6)
         ]
-    }).id("dut_create:alloy_furnace/tin_from_ore")
+    }).id("dut_create:alloy_furnace/from_ore/tin")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -732,7 +732,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/desh", 100, "input"),
             AlloyFurnaceFluid("kubejs:desh", 9)
         ]
-    }).id("dut_create:alloy_furnace/desh_melt")
+    }).id("dut_create:alloy_furnace/melt/desh")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -760,7 +760,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:salt", 3, "output"),
             AlloyFurnaceFluid("kubejs:desh", 3)
         ]
-    }).id("dut_create:alloy_furnace/desh_from_ore")
+    }).id("dut_create:alloy_furnace/from_ore/desh")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -786,7 +786,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("create:crushed_raw_tin", 18, "output"),
             AlloyFurnaceFluid("kubejs:ammonia", 2)
         ]
-    }).id("dut_create:alloy_furnace/tungsten")
+    }).id("dut_create:alloy_furnace/from_ore/tungsten")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -814,7 +814,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("create:crushed_raw_tin", 18, "output"),
             AlloyFurnaceFluid("kubejs:ammonia", 3)
         ]
-    }).id("dut_create:alloy_furnace/tungsten/matrix")
+    }).id("dut_create:alloy_furnace/from_ore/tungsten_matrix")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -834,7 +834,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/aluminum", 100, "input"),
             AlloyFurnaceFluid("kubejs:aluminum", 9)
         ]
-    }).id("dut_create:alloy_furnace/aluminum_melt")
+    }).id("dut_create:alloy_furnace/melt/aluminum")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -860,7 +860,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:granite_alloy", 8, "input"),
             AlloyFurnaceItem("kubejs:diorite", 8, "output"),
         ]
-    }).id("dut_create:alloy_furnace/aluminum_from_slag")
+    }).id("dut_create:alloy_furnace/aluminum/from_slag")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -888,7 +888,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("#forge:ingots/brass", 9, "input"),
             AlloyFurnaceItem("kubejs:granite_alloy", 1, "output"),
         ]
-    }).id("dut_create:alloy_furnace/aluminum_orbit")
+    }).id("dut_create:alloy_furnace/aluminum/orbit")
     event.custom({
         "type": "custommachinery:custom_machine",
         "machine": "dut:alloy_furnace",
@@ -911,7 +911,7 @@ ServerEvents.recipes(event => {
             AlloyFurnaceItem("kubejs:industrial_iron_ingot", 18, "input"),
             AlloyFurnaceItem("kubejs:blaze_chlamydia", 6, "output")
         ]
-    }).id("dut_create:alloy_furnace/blaze_chlamydia_aluminum")
+    }).id("dut_create:alloy_furnace/blaze_chlamydia/aluminum")
     let scalesTotal = randomOne(20, 24)
     let heartTotal = randomOne(20, 24)
     let fleshTotal = randomOne(20, 24)
@@ -927,7 +927,7 @@ ServerEvents.recipes(event => {
         AlloyFurnaceItemChance('iceandfire:fire_dragon_flesh', scalesTotal - scales, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
-        "fire_dragon_scales")
+        "fire_dragon/scales")
     AlloyFurnaceRecipe([
         AlloyFurnaceReplace(1, "vintageimprovements:sulfuric_acid"),
         AlloyFurnaceItem("iceandfire:fire_dragon_heart", 12, "input"),
@@ -935,7 +935,7 @@ ServerEvents.recipes(event => {
         AlloyFurnaceItemChance('iceandfire:fire_dragon_blood', heartTotal - heart, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
-        "fire_dragon_heart")
+        "fire_dragon/heart")
     AlloyFurnaceRecipe([
         AlloyFurnaceReplace(1, "vintageimprovements:sulfuric_acid"),
         AlloyFurnaceItem("iceandfire:fire_dragon_flesh", 12, "input"),
@@ -943,7 +943,7 @@ ServerEvents.recipes(event => {
         AlloyFurnaceItemChance('iceandfire:dragonscales_red', fleshTotal - flesh, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
-        "fire_dragon_flesh")
+        "fire_dragon/flesh")
     AlloyFurnaceRecipe([
         AlloyFurnaceReplace(1, "vintageimprovements:sulfuric_acid"),
         AlloyFurnaceItem("iceandfire:fire_dragon_blood", 12, "input"),
@@ -951,6 +951,6 @@ ServerEvents.recipes(event => {
         AlloyFurnaceItemChance('iceandfire:fire_dragon_heart', bloodTotal - blood, 0.25)],
         [AlloyFurnaceFluid("vintageimprovements:sulfuric_acid", 1)],
         20,
-        "fire_dragon_blood")
+        "fire_dragon/blood")
 
 })

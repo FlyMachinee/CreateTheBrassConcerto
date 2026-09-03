@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
       { "item": "minecraft:dragon_egg", "chance": 0.125 },
       { "item": "minecraft:egg", "chance": 0.875 }
     ],
-    "loops": 8,
+    "loops": 1,
     "sequence": [
       {
         "type": "create:deploying",

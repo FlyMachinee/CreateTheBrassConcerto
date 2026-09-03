@@ -14,7 +14,7 @@
             "continentalness": -1.5,
             "erosion": 0.3,
             "weirdness": 0.4,
-            "depth": -1.6,
+            "depth": -1.5,
             "offset": 0.45
           }
         },
@@ -26,7 +26,7 @@
             "continentalness": -1.6,
             "erosion": 0.6,
             "weirdness": 0.8,
-            "depth": -0.8,
+            "depth": -0.75,
             "offset": 0.7
           }
         },
@@ -38,7 +38,7 @@
             "continentalness": -0.5,
             "erosion": 1.6,
             "weirdness": 1.8,
-            "depth": -0.9,
+            "depth": -0.85,
             "offset": 0.7
           }
         },
@@ -50,7 +50,7 @@
             "continentalness": -0.5,
             "erosion": 1.6,
             "weirdness": 1.8,
-            "depth": -1.3,
+            "depth": -1.25,
             "offset": 0.7
           }
         }

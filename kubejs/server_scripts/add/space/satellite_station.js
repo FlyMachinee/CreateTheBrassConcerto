@@ -140,7 +140,7 @@ ServerEvents.recipes(event => {
         SatelliteStationItem("kubejs:brass_parts_box", 1, "input"),
         SatelliteStationItem("kubejs:radiator", 1, "input"),
         SatelliteStationFluid("kubejs:hydrogen", 500),
-        SatelliteStationDurability("kubejs:brass_hard_disk", 64, "input", true),
+        SatelliteStationDurability("kubejs:brass_hard_disk", 64, "input", false),
         SatelliteStationItem("kubejs:navigate_data_" + dataType, 8, "output"),
         SatelliteStationItem("kubejs:navigate_data_" + dataType + "_orbit", 8, "output")
       ],
@@ -152,7 +152,7 @@ ServerEvents.recipes(event => {
         SatelliteStationItem("kubejs:brass_parts_box", 1, "input"),
         SatelliteStationItem("kubejs:radiator", 1, "input"),
         SatelliteStationFluid("kubejs:hydrogen", 500),
-        SatelliteStationDurability("kubejs:brass_hard_disk", 64, "input", true),
+        SatelliteStationDurability("kubejs:brass_hard_disk", 64, "input", false),
         SatelliteStationItem("kubejs:navigate_data_" + dataType, 8, "output"),
         SatelliteStationItem("kubejs:navigate_data_" + dataType + "_orbit", 8, "output")
       ]

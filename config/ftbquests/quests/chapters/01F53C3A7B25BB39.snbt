@@ -268,12 +268,25 @@
 		{
 			dependencies: ["51950D03F6955270"]
 			description: ["{ftbquests.chapter_01F53C3A7B25BB39.quest_56F4799B252FC6AE.desc_01}"]
+			icon: "kubejs:blueprint_builder"
 			id: "56F4799B252FC6AE"
-			tasks: [{
-				id: "1CE0F23A3BB0251C"
-				item: "kubejs:blueprint_builder"
+			rewards: [{
+				id: "764D9EFAB90DD363"
+				item: {
+					Count: 1
+					id: "createandesiteabound:simple_schematic"
+					tag: {
+						File: "CBC/schematic.blueprint_builder.nbt"
+						Item: "kubejs:blueprint_builder"
+					}
+				}
 				type: "item"
 			}]
+			tasks: [{
+				id: "644764B75D4C3902"
+				type: "checkmark"
+			}]
+			title: "工厂的工厂"
 			x: 0.0d
 			y: -1.0d
 		}

@@ -148,8 +148,7 @@ ServerEvents.recipes(event => {
     "processingTime": 80,
     "results": [
       { "item": "minecraft:calcite", "chance": 0.5 },
-      { "item": "minecraft:bone_meal", "chance": 0.5 },
-      { "item": "minecraft:clay_ball", "chance": 0.125 }
+      { "item": "minecraft:clay_ball", "chance": 0.5 }
     ]
   }).id("dut_create:ore_production/limestone")
   //绯红岩

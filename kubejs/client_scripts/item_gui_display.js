@@ -72,7 +72,7 @@ NativeEvents.onEvent($RegisterItemDecorationsEvent, event => {
 NativeEvents.onEvent($RegisterItemDecorationsEvent, event => {
     let method = {}
     method["render"] = function (guiGraphics, font, stack, xOffset, yOffset) {
-        let renderX = xOffset + 6
+        let renderX = xOffset + 1
         let renderY = yOffset + 6
         let nbtItem = stack.getNbt()?.Item || "minecraft:air"
         guiGraphics.pose().pushPose()
@@ -89,6 +89,7 @@ NativeEvents.onEvent($RegisterItemDecorationsEvent, event => {
         ))
 })
 let CanisterDisplay = {
+    'create_enchantment_industry:experience': 'create:experience_nugget',
     'create_things_and_misc:diluted_bonemeal': 'minecraft:bone_meal',
     'vintageimprovements:sulfur_dioxide': 'kubejs:sulphur',
     'vintageimprovements:sulfur_trioxide': 'createloveandwar:sulphur',
@@ -160,7 +161,35 @@ let CanisterDisplay = {
     'createdieselgenerators:biodiesel': 'createdieselgenerators:biodiesel_bucket',
     'create_things_and_misc:slime': 'minecraft:slime_ball'
 }
+//定装液罐
 function getStack(stack) {
+    let stackFluid = stack.getNbt()?.Content?.FluidName
+    if (stackFluid == null) {
+        return 'minecraft:air'
+    } else {
+        return CanisterDisplay[stackFluid] || 'minecraft:air'
+    }
+}
+NativeEvents.onEvent($RegisterItemDecorationsEvent, event => {
+    let method = {}
+    method["render"] = function (guiGraphics, font, stack, xOffset, yOffset) {
+        let renderX = xOffset + 7
+        let renderY = yOffset + 4
+        let nbtItem = getStack(stack)
+        guiGraphics.pose().pushPose()
+        guiGraphics.pose().translate(renderX, renderY, 100)
+        guiGraphics.pose().scale(0.6, 0.6, 0.6)
+        guiGraphics.renderItem(Item.of(nbtItem), 0, 0)
+        guiGraphics.pose().popPose()
+        return true
+    }
+    event.register("createandesiteabound:fluid_vessel",
+        new JavaAdapter(
+            $IItemDecorator,
+            method
+        ))
+})
+function getStack1(stack) {
     let stackTanks = stack.getNbt()?.BlockEntityTag?.Tanks
     if (stackTanks == null) {
         return 'minecraft:air'
@@ -175,7 +204,7 @@ NativeEvents.onEvent($RegisterItemDecorationsEvent, event => {
     method["render"] = function (guiGraphics, font, stack, xOffset, yOffset) {
         let renderX = xOffset + 6
         let renderY = yOffset + 4
-        let nbtItem = getStack(stack)
+        let nbtItem = getStack1(stack)
         guiGraphics.pose().pushPose()
         guiGraphics.pose().translate(renderX, renderY, 100)
         guiGraphics.pose().scale(0.65, 0.65, 0.65)

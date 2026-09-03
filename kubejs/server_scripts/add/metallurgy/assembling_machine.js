@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
         "nbt": '{Damage:1024}'
       }
     ],
-  }).id("dut_create:assembling_machine/disk_translate/tin")
+  }).id("dut_create:assembling_machine/translate_disk/tin")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -90,7 +90,7 @@ ServerEvents.recipes(event => {
         "nbt": '{Damage:1024}'
       }
     ],
-  }).id("dut_create:assembling_machine/disk_translate/aluminum")
+  }).id("dut_create:assembling_machine/translate_disk/aluminum")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -113,7 +113,7 @@ ServerEvents.recipes(event => {
         "nbt": '{Damage:1024}'
       }
     ],
-  }).id("dut_create:assembling_machine/disk_translate/brass")
+  }).id("dut_create:assembling_machine/translate_disk/brass")
   
   event.custom({
     "type": "custommachinery:custom_machine",
@@ -205,7 +205,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineFluid("kubejs:lube_oil", 2400),
       AssemblingMachineItem("kubejs:planetary_gear", 16, "output")
     ],
-  }).id("dut_create:assembling_machine/planetary_gear_io_mechanism")
+  }).id("dut_create:assembling_machine/planetary_gear/io_mechanism")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -220,7 +220,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("kubejs:graphene_coil", 4, "input"),
       AssemblingMachineItem("kubejs:planetary_gear", 16, "output")
     ],
-  }).id("dut_create:assembling_machine/planetary_gear_io_mechanism_graphene_coil")
+  }).id("dut_create:assembling_machine/planetary_gear/io_mechanism_graphene_coil")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -236,6 +236,20 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("kubejs:differential", 32, "output")
     ],
   }).id("dut_create:assembling_machine/differential")
+  event.custom({
+    "type": "custommachinery:custom_machine",
+    "machine": "dut:assembling_machine",
+    "time": 120,
+    "error": true,
+    "priority": 3,
+    "requirements": [
+      AssemblingMachineStructure,
+      AssemblingMachineEnergy(),
+      AssemblingMachineItem("kubejs:industrial_iron_ingot", 16, "input"),
+      AssemblingMachineFluid("kubejs:lube_oil", 1500),
+      AssemblingMachineItem("kubejs:bearing", 48, "output")
+    ],
+  }).id("dut_create:assembling_machine/bearing")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -295,21 +309,8 @@ ServerEvents.recipes(event => {
       AssemblingMachineFluid("kubejs:saline_water", 4000),
       AssemblingMachineItem("kubejs:magenta_circuit_board", 16, "output")
     ],
-  }).id("dut_create:assembling_machine/magenta_circuit_board")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:assembling_machine",
-    "time": 120,
-    "error": true,
-    "priority": 3,
-    "requirements": [
-      AssemblingMachineStructure,
-      AssemblingMachineEnergy(),
-      AssemblingMachineItem("kubejs:industrial_iron_ingot", 16, "input"),
-      AssemblingMachineFluid("kubejs:lube_oil", 1500),
-      AssemblingMachineItem("kubejs:bearing", 48, "output")
-    ],
-  }).id("dut_create:assembling_machine/bearing")
+  }).id("dut_create:assembling_machine/circuit_board/magenta")
+  /*
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -365,6 +366,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("design_decor:industrial_gear", 64, "output")
     ],
   }).id("dut_create:assembling_machine/industrial_gear")
+  */
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -440,7 +442,8 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("minecraft:redstone", 64, "input"),
       AssemblingMachineItem("create:polished_rose_quartz", 32, "output")
     ],
-  }).id("dut_create:assembling_machine/polished_rose_quartz_from_amethyst")
+  }).id("dut_create:assembling_machine/polished_rose_quartz/from_amethyst")
+  /*
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -571,6 +574,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("kubejs:cardan_joint", 1, "output")
     ],
   }).id("dut_create:assembling_machine/cardan_joint")
+  */
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -620,7 +624,7 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
-    "time": 120,
+    "time": 60,
     "error": true,
     "priority": 3,
     "requirements": [
@@ -831,7 +835,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineFluid("kubejs:brass", 16*IngotFluid),
       AssemblingMachineItem("kubejs:brass_parts_box", 16, "output")
     ],
-  }).id("dut_create:assembling_machine/brass_parts_box")
+  }).id("dut_create:assembling_machine/parts_box/brass")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -847,7 +851,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineFluid("kubejs:brass", 16*IngotFluid),
       AssemblingMachineItem("kubejs:brass_parts_box", 16, "output")
     ],
-  }).id("dut_create:assembling_machine/brass_parts_box_1")
+  }).id("dut_create:assembling_machine/parts_box/brass_1")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -862,7 +866,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineFluid("kubejs:nitrogen", 1000),
       AssemblingMachineItem("kubejs:steel_parts_box", 4, "output")
     ],
-  }).id("dut_create:assembling_machine/steel_parts_box")
+  }).id("dut_create:assembling_machine/parts_box/steel")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -878,7 +882,8 @@ ServerEvents.recipes(event => {
       AssemblingMachineFluid("#forge:diesel", 500),
       AssemblingMachineItem("createdieselgenerators:huge_diesel_engine", 1, "output")
     ],
-  }).id("dut_create:assembling_machine/huge_diesel_engine")
+  }).id("dut_create:assembling_machine/diesel_engine/huge")
+  /*
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:assembling_machine",
@@ -966,6 +971,7 @@ ServerEvents.recipes(event => {
       AssemblingMachineItem("create:empty_blaze_burner", 16, "output")
     ],
   }).id("dut_create:assembling_machine/empty_blaze_burner")
+  */
   //硬币处理！
   function CoinMix(coin1, coin2) {
     event.custom({

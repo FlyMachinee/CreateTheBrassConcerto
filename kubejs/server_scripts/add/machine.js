@@ -97,45 +97,48 @@ ServerEvents.recipes(event => {
     }).id("dut_create:redstone_radar")
     //高速装罐机
     event.custom({
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-            "A": { "item": "create:fluid_tank" },
-            "B": { "item": "create:spout" },
-            "C": { "tag": "forge:plates/steel" },
-            "D": { "item": "create:hose_pulley" },
-            "E": { "item": "kubejs:lime_circuit_board" }
-        },
-        "pattern": [
-            "ABA",
-            "EDE",
-            "CCC"
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            { "item": "kubejs:fluid_mechanism" },
+            { "item": "kubejs:magenta_circuit_board" }
         ],
-        "result": { "item": "kubejs:filling_machine" },
+        "result": { "item": "createandesiteabound:filling_machine", "count": 4 },
         "show_notification": true
     }).id("dut_create:filling_machine")
     event.custom({
         "type": "minecraft:crafting_shaped",
         "category": "misc",
         "key": {
-            "A": { "item": "kubejs:filling_machine" }
+            "A": [{ "item": "kubejs:filling_machine" }, { "item": "kubejs:emptying_machine" }],
         },
         "pattern": [
             "A"
         ],
-        "result": { "item": "kubejs:emptying_machine" },
+        "result": { "item": "createandesiteabound:filling_machine" },
+        "show_notification": true
+    }).id("dut_create:filling_machine1")
+    event.custom({
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+            "A": { "item": "createandesiteabound:filling_machine" }
+        },
+        "pattern": [
+            "A"
+        ],
+        "result": { "item": "createandesiteabound:emptying_machine" },
         "show_notification": true
     }).id("dut_create:emptying_machine")
     event.custom({
         "type": "minecraft:crafting_shaped",
         "category": "misc",
         "key": {
-            "A": { "item": "kubejs:emptying_machine" }
+            "A": { "item": "createandesiteabound:emptying_machine" }
         },
         "pattern": [
             "A"
         ],
-        "result": { "item": "kubejs:filling_machine" },
+        "result": { "item": "createandesiteabound:filling_machine" },
         "show_notification": true
     }).id("dut_create:emptying_machine1")
     //恒温器复制
@@ -343,9 +346,9 @@ ServerEvents.recipes(event => {
     Ingredient.of("#dut_create:switchable_platform").itemIds.forEach(i => switchPlatform(i))
     //电子管计算机
     event.shaped("kubejs:electron_tube_computer", [
-            "AAA",
-            "EDE",
-            "FFF"
+        "AAA",
+        "EDE",
+        "FFF"
     ], {
         A: "kubejs:circuit_board",
         E: Item.of("kubejs:tin_hard_disk", { Damage: 0 }).weakNBT(),
@@ -372,9 +375,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:blueprint_builder")
     //大型差分机
     event.shaped("kubejs:large_difference_engine", [
-            "AAA",
-            "EDE",
-            "FFF"
+        "AAA",
+        "EDE",
+        "FFF"
     ], {
         A: "kubejs:light_composite_plate",
         E: "kubejs:differential",
@@ -383,9 +386,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:large_difference_engine")
     //组装机控制器
     event.shaped("kubejs:assembling_machine", [
-            "ABA",
-            "EDE",
-            "FFF"
+        "ABA",
+        "EDE",
+        "FFF"
     ], {
         A: "create:stockpile_switch",
         B: "kubejs:magenta_circuit_board",
@@ -395,9 +398,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:assembling_machine")
     //构筑站控制器
     event.shaped("kubejs:construction_station", [
-            "ABA",
-            "DED",
-            "FFF"
+        "ABA",
+        "DED",
+        "FFF"
     ], {
         A: "kubejs:assembling_machine",
         B: "create:mechanical_arm",
@@ -407,11 +410,11 @@ ServerEvents.recipes(event => {
     }).id("dut_create:construction_station")
     //轨道空投炮
     event.shaped("kubejs:airdrop_station", [
-            "DBD",
-            "EAE",
-            "FFF"
+        "DBD",
+        "EAE",
+        "FFF"
     ], {
-        A: "kubejs:filling_machine",
+        A: "createandesiteabound:filling_machine",
         B: "kubejs:satellite",
         E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
         D: "#forge:storage_blocks/steel",
@@ -419,9 +422,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:airdrop_station")
     //卫星收发站
     event.shaped("kubejs:satellite_station", [
-            "DBD",
-            "EAE",
-            "FFF"
+        "DBD",
+        "EAE",
+        "FFF"
     ], {
         A: "kubejs:electron_tube_computer",
         B: "kubejs:satellite",
@@ -431,9 +434,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:satellite_station")
     //火箭发射台
     event.shaped("kubejs:launch_pad_controller", [
-            "DDD",
-            "EAE",
-            "FFF"
+        "DDD",
+        "EAE",
+        "FFF"
     ], {
         A: "kubejs:carrier_rocket",
         E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
@@ -442,9 +445,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:launch_pad_controller")
     //电流体谐振塔
     event.shaped("kubejs:electro_hydro_resonant_tower", [
-            "DFD",
-            "DAD",
-            "DED"
+        "DFD",
+        "DAD",
+        "DED"
     ], {
         A: "kubejs:efficiency_module_2",
         E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
@@ -453,9 +456,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:electro_hydro_resonant_tower")
     //太空电梯控制台
     event.shaped("kubejs:space_elevator_controller", [
-            "DDD",
-            "EAE",
-            "FFF"
+        "DDD",
+        "EAE",
+        "FFF"
     ], {
         A: "kubejs:efficiency_module_2",
         E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
@@ -464,9 +467,9 @@ ServerEvents.recipes(event => {
     }).id("dut_create:space_elevator_controller")
     //自动化贸易终端
     event.shaped("4x kubejs:trading_station", [
-            "DDD",
-            "EAE",
-            "FFF"
+        "DDD",
+        "EAE",
+        "FFF"
     ], {
         A: "kubejs:carrier_rocket",
         E: Item.of("kubejs:brass_hard_disk", { Damage: 0 }).weakNBT(),
@@ -527,8 +530,8 @@ ServerEvents.recipes(event => {
         "kubejs:emergency_industrial_platform_space",
         "kubejs:battery_slot",
         "kubejs:culture_bin",
-        "kubejs:filling_machine",
-        "kubejs:emptying_machine",
+        "createandesiteabound:filling_machine",
+        "createandesiteabound:emptying_machine",
         "kubejs:anti_warden_bomb",
         "kubejs:cap_reaping_machine",
         "kubejs:stem_reaping_machine"]

@@ -1,10 +1,14 @@
 EntityEvents.spawned("minecraft:slime", event => {
-    if (event.entity.block.getBlockLight() > 0 && event.entity.block.dimension == "dut:slimeria") {
+    if (event.entity.getSpawnType()!="NATURAL"){return}
+    if (event.entity.level.isDay() && event.entity.block.dimension == "dut:slimeria") {
+        event.entity.discard()
         event.cancel()
     }
 })
 EntityEvents.spawned("minecraft:magma_cube", event => {
-    if (event.entity.block.getBlockLight() > 0 && event.entity.block.dimension == "dut:slimeria") {
+    if (event.entity.getSpawnType()!="NATURAL"){return}
+    if (event.entity.level.isDay() && event.entity.block.dimension == "dut:slimeria") {
+        event.entity.discard()
         event.cancel()
     }
 })

@@ -173,13 +173,13 @@
 			id: "1E7965EEBC9E978A"
 			tasks: [
 				{
-					id: "3CAF8C470766EA99"
-					item: "kubejs:filling_machine"
+					id: "0AB509D0660C8A0E"
+					item: "createandesiteabound:filling_machine"
 					type: "item"
 				}
 				{
-					id: "2FE1F7333E36CBEF"
-					item: "kubejs:emptying_machine"
+					id: "3A0F4F6699A1D5C1"
+					item: "createandesiteabound:emptying_machine"
 					type: "item"
 				}
 			]

@@ -3,6 +3,7 @@ ServerEvents.recipes(event => {
   //event.custom().id("dut_create:")
 
   //event.remove({ id:"create:fill_minecraft_bucket_with_ad_astra_oil"})
+  event.remove({ id: "createdieselgenerators:crafting/canister" })
   event.remove({ id: "create:crushing/coal_ore" })
   event.remove({ id: "create:crushing/gold_ore" })
   event.remove({ id: "create:crushing/diamond_ore" })

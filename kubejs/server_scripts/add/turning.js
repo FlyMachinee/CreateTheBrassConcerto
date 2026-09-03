@@ -84,17 +84,6 @@ ServerEvents.recipes(event => {
         ],
         "processingTime": 5
     }).id("dut_create:turning/polished_rose_quartz")
-    //密封液罐
-    event.custom({
-        "type": "vintageimprovements:turning",
-        "ingredients": [
-            { "item": "design_decor:industrial_plating_block" }
-        ],
-        "results": [
-            { "item": "createdieselgenerators:canister" }
-        ],
-        "processingTime": 80
-    }).id("dut_create:turning/canister")
     //金属支架
     event.custom({
         "type": "vintageimprovements:turning",

@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
     //一次性电池
     event.custom({
         "type": "create:sequenced_assembly",
-        "ingredient": { "item": "kubejs:incomplete_disposable_battery", "count": 1 },
+        "ingredient": { "tag": "forge:plates/copper", "count": 1 },
         "results": [
             { "item": "kubejs:disposable_battery" }
         ],
@@ -82,19 +82,10 @@ ServerEvents.recipes(event => {
         "transitionalItem": { "item": "kubejs:incomplete_disposable_battery" }
     }).id("dut_create:disposable_battery_from_gold_tin_saline")
     //一次性电池外壳
-    event.custom({
-        "type": "vintageimprovements:curving",
-        "mode": 1,
-        "ingredients": [{ "tag": "forge:plates/copper" }],
-        "results": [{ "item": "kubejs:incomplete_disposable_battery" }]
-    }).id("dut_create:curving/disposable_battery")
     //电解器安装电池
     event.custom({
         "type": "minecraft:crafting_shapeless",
         "ingredients": [
-            { "item": "kubejs:uncharged_electrolyzer" },
-            { "item": "kubejs:uncharged_electrolyzer" },
-            { "item": "kubejs:uncharged_electrolyzer" },
             { "item": "kubejs:uncharged_electrolyzer" },
             { "item": "kubejs:disposable_battery" }
         ],

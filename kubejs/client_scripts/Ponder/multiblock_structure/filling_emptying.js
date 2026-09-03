@@ -1,6 +1,6 @@
 Ponder.registry((event) => {
   event
-    .create(["kubejs:filling_machine", "kubejs:emptying_machine", "createdieselgenerators:canister"])
+    .create(["kubejs:filling_machine", "kubejs:emptying_machine"])
     .tag("kubejs:machine_and_multiblock")
     .scene(
       "kubejs:filling_emptying",
@@ -60,7 +60,7 @@ Ponder.registry((event) => {
         scene.world.showSection([2, 2, 5, 6, 2, 5], Direction.down)
         scene.idle(30);
         scene.showControls(20, [6.5, 2.5, 5.5], "down").withItem('minecraft:bucket')
-        scene.showControls(20, [2.5, 2.5, 5.5], "down").withItem('createdieselgenerators:canister')
+        scene.showControls(20, [2.5, 2.5, 5.5], "down").withItem('createandesiteabound:fluid_vessel')
         scene.idle(50);
 
         scene.addKeyframe();
@@ -86,7 +86,7 @@ Ponder.registry((event) => {
         scene.world.flapFunnel([2,2,3], false);
         scene.world.createItemEntity([2.5,2,3.5], Direction.north, "minecraft:bucket");
         scene.world.flapFunnel([6,2,3], false);
-        scene.world.createItemEntity([6.5,2,3.5], Direction.north, "createdieselgenerators:canister");
+        scene.world.createItemEntity([6.5,2,3.5], Direction.north, "createandesiteabound:fluid_vessel");
         scene.idle(30);
       }
     );

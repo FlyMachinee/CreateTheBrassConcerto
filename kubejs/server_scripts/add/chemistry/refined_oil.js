@@ -9,38 +9,38 @@ ServerEvents.recipes(event => {
     "type": "create:sequenced_assembly",
     "ingredient": { "item": "kubejs:saline_water_bucket" },
     "results": [
-      { "item": "kubejs:drilling_fluid_bucket"}
+      { "item": "kubejs:drilling_fluid_bucket" }
     ],
     "loops": 1,
     "sequence": [
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 125, "fluid": "kubejs:caustic_soda"}],
+        { "amount": 125, "fluid": "kubejs:caustic_soda" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 25, "fluid": "kubejs:nitric_acid"}],
+        { "amount": 25, "fluid": "kubejs:nitric_acid" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 125, "fluid": "kubejs:carbon_dioxide"}],
+        { "amount": 125, "fluid": "kubejs:carbon_dioxide" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 50, "fluid": "create_enchantment_industry:experience"}],
+        { "amount": 50, "fluid": "create_enchantment_industry:experience" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "vintageimprovements:vacuumizing",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" }],
-        "results": [{ "item": "kubejs:incomplete_fluid" }], 
+        "results": [{ "item": "kubejs:incomplete_fluid" }],
         "processingTime": 10
       }
     ],
@@ -48,40 +48,44 @@ ServerEvents.recipes(event => {
   }).id("dut_create:drilling_fluid")
   event.custom({
     "type": "create:sequenced_assembly",
-    "ingredient": { "item": "createdieselgenerators:canister" },
+    "ingredient": [
+      { "item": "kubejs:industrial_iron_ingot" },
+      { "item": "create:andesite_alloy" },
+      { "item": "createandesiteabound:fluid_vessel" }
+    ],
     "results": [
-      Item.of('createdieselgenerators:canister', '{BlockEntityTag:{Tanks:[{TankContent:{Amount:16000,FluidName:"kubejs:drilling_fluid"}}]}}')
+      Item.of('createandesiteabound:fluid_vessel', '{Content:{Amount:16000,FluidName:"kubejs:drilling_fluid"}}')
     ],
     "loops": 1,
     "sequence": [
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 1000, "fluid": "kubejs:caustic_soda"}],
+        { "amount": 1000, "fluid": "kubejs:caustic_soda" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 1000, "fluid": "kubejs:caustic_soda"}],
+        { "amount": 1000, "fluid": "kubejs:caustic_soda" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 750, "fluid": "kubejs:nitric_acid"}],
+        { "amount": 750, "fluid": "kubejs:nitric_acid" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "create:filling",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" },
-        { "amount": 750, "fluid": "kubejs:brown_mushroom_spore"}],
+        { "amount": 750, "fluid": "kubejs:brown_mushroom_spore" }],
         "results": [{ "item": "kubejs:incomplete_fluid" }]
       },
       {
         "type": "vintageimprovements:vacuumizing",
         "ingredients": [{ "item": "kubejs:incomplete_fluid" }],
-        "results": [{ "item": "kubejs:incomplete_fluid" }], 
+        "results": [{ "item": "kubejs:incomplete_fluid" }],
         "processingTime": 20
       }
     ],

@@ -68,6 +68,7 @@
 				"{@pagebreak}"
 				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_28F4B4206A2C4875.desc_04}"
 			]
+			icon: "minecraft:wheat_seeds"
 			id: "28F4B4206A2C4875"
 			rewards: [
 				{
@@ -105,10 +106,16 @@
 			shape: "gear"
 			size: 1.0d
 			tasks: [{
-				consume_items: true
 				count: 256L
-				id: "395F3539235258CC"
-				item: "minecraft:wheat_seeds"
+				id: "19ADC7337C8A42D3"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "dut_create:seed"
+					}
+				}
+				title: "随便来点种子"
 				type: "item"
 			}]
 			x: -7.5d
@@ -444,24 +451,26 @@
 		{
 			dependencies: ["28F4B4206A2C4875"]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_1D582DE321203330.desc_01}"]
+			icon: "createaddition:seed_oil_bucket"
 			id: "1D582DE321203330"
 			tasks: [{
-				id: "1EEA45148F6DD745"
-				item: "createaddition:seed_oil_bucket"
-				type: "item"
+				id: "37C89D2EC728D2D2"
+				type: "checkmark"
 			}]
+			title: "植物油"
 			x: -6.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["28F4B4206A2C4875"]
 			description: ["{ftbquests.chapter_73C5DB4BEDBD323A.quest_0648CDB30F0B2F70.desc_01}"]
+			icon: "createdieselgenerators:ethanol_bucket"
 			id: "0648CDB30F0B2F70"
 			tasks: [{
-				id: "020BF6A674E7278C"
-				item: "createdieselgenerators:ethanol_bucket"
-				type: "item"
+				id: "290F80C561474BD6"
+				type: "checkmark"
 			}]
+			title: "酒精有害健康"
 			x: -6.0d
 			y: 1.0d
 		}
@@ -475,6 +484,7 @@
 				"{@pagebreak}"
 				"{ftbquests.chapter_73C5DB4BEDBD323A.quest_253A7891D47C41D2.desc_02}"
 			]
+			icon: "createdieselgenerators:biodiesel_bucket"
 			id: "253A7891D47C41D2"
 			rewards: [{
 				count: 64
@@ -483,10 +493,10 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "1FD251F86B786A3B"
-				item: "createdieselgenerators:biodiesel_bucket"
-				type: "item"
+				id: "0554A46E5979D560"
+				type: "checkmark"
 			}]
+			title: "高级生物燃料"
 			x: -4.5d
 			y: -0.5d
 		}
@@ -872,10 +882,9 @@
 			shape: "gear"
 			size: 1.25d
 			tasks: [{
-				advancement: "create:hose_pulley_lava"
-				criterion: ""
-				id: "31BA222CC86B30DD"
-				type: "advancement"
+				id: "4FE07033CD21D267"
+				item: "minecraft:lava_bucket"
+				type: "item"
 			}]
 			x: -1.5d
 			y: 2.5d

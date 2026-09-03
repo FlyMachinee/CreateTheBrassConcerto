@@ -1,59 +1,68 @@
 //需要显示结构的多方块机器
-let multiblock_display_list=[
-    'kubejs:blueprint_builder',
-    'kubejs:trading_station',
-    "kubejs:large_difference_engine",
-    "kubejs:electron_tube_computer",
-    "kubejs:space_elevator_controller",
-    "kubejs:launch_pad_controller",
-    "kubejs:satellite_station",
-    'kubejs:airdrop_station',
-    "kubejs:condenser",
-    "kubejs:hydropress",
-    "kubejs:blasting_compressor",
-    "kubejs:alloy_furnace",
-    "kubejs:huge_crusher",
-    "kubejs:shaft_furnace",
-    "kubejs:infinity_fetching_pool",
-    "kubejs:electrolytic_cell",
-    'kubejs:electro_hydro_resonant_tower',
-    "kubejs:assembling_machine",
-    "kubejs:construction_station"
-  ]
-let multiblock_list=[
-			"kubejs:condenser",
-			"kubejs:hydropress",
-			"kubejs:blasting_compressor",
-			"kubejs:alloy_furnace",
-			"kubejs:huge_crusher",
-			"kubejs:electron_tube_computer",
-			"kubejs:assembling_machine",
-			"kubejs:infinity_fetching_pool",
-			"kubejs:electrolytic_cell",
-			"kubejs:shaft_furnace",
-			"kubejs:construction_station",
-			"kubejs:satellite_station",
-			"kubejs:large_difference_engine",
-			'kubejs:airdrop_station',
-			"kubejs:launch_pad_controller",
-			'kubejs:trading_station',
-			'kubejs:electro_hydro_resonant_tower',
-			"kubejs:space_elevator_controller",
-  ]
+let multiblock_display_list = [
+  'kubejs:blueprint_builder',
+  'kubejs:trading_station',
+  "kubejs:large_difference_engine",
+  "kubejs:electron_tube_computer",
+  "kubejs:space_elevator_controller",
+  "kubejs:launch_pad_controller",
+  "kubejs:satellite_station",
+  'kubejs:airdrop_station',
+  "kubejs:condenser",
+  "kubejs:hydropress",
+  "kubejs:blasting_compressor",
+  "kubejs:alloy_furnace",
+  "kubejs:huge_crusher",
+  "kubejs:shaft_furnace",
+  "kubejs:infinity_fetching_pool",
+  "kubejs:electrolytic_cell",
+  'kubejs:electro_hydro_resonant_tower',
+  "kubejs:assembling_machine",
+  "kubejs:construction_station"
+]
+let multiblock_list = [
+  "kubejs:condenser",
+  "kubejs:hydropress",
+  "kubejs:blasting_compressor",
+  "kubejs:alloy_furnace",
+  "kubejs:huge_crusher",
+  "kubejs:electron_tube_computer",
+  "kubejs:assembling_machine",
+  "kubejs:infinity_fetching_pool",
+  "kubejs:electrolytic_cell",
+  "kubejs:shaft_furnace",
+  "kubejs:construction_station",
+  "kubejs:satellite_station",
+  "kubejs:large_difference_engine",
+  'kubejs:airdrop_station',
+  "kubejs:launch_pad_controller",
+  'kubejs:trading_station',
+  'kubejs:electro_hydro_resonant_tower',
+  "kubejs:space_elevator_controller",
+]
+let switchable_platform_list = [
+  "kubejs:emergency_industrial_platform_lime",
+  "kubejs:emergency_industrial_platform_lime_block",
+  "kubejs:emergency_industrial_platform",
+  "kubejs:emergency_industrial_platform_block",
+  "kubejs:emergency_industrial_platform_dark",
+  "kubejs:emergency_industrial_platform_dark_block"
+]
 ServerEvents.tags('item', event => {
-  event.add('dut_create:switchable_platform', ["kubejs:emergency_industrial_platform_lime", "kubejs:emergency_industrial_platform_lime_block", "kubejs:emergency_industrial_platform", "kubejs:emergency_industrial_platform_block", "kubejs:emergency_industrial_platform_dark", "kubejs:emergency_industrial_platform_dark_block"])
-  event.remove("forge:plates/silver",["vintageimprovements:silver_sheet"])
-  event.remove("forge:storage_blocks/silver",'iceandfire:silver_block')
-  event.remove("forge:nuggets/silver",'iceandfire:silver_nugget')
-  event.remove("forge:ingots/silver",'iceandfire:silver_ingot')
-  event.remove("forge:plates/zinc",['createadditon:zinc_sheet',"vintageimprovements:zinc_sheet"])
-  event.remove("forge:storage_blocks/zinc",'create:zinc_block')
-  event.remove("forge:nuggets/zinc",'create:zinc_nugget')
-  event.remove("forge:ingots/zinc",'create:zinc_ingot')
-  event.remove("create:stone_types/asurine",'create:asurine')
-  event.add("create:stone_types/asurine",["kubejs:new_asurine"])
-  event.remove("railways:internal/nuggets/zinc_nuggets",["create:zinc_nugget"])
-  event.add("railways:internal/nuggets/zinc_nuggets",["kubejs:tin_nugget"])
+  event.add('dut_create:seed', ['minecraft:wheat_seeds','minecraft:beetroot_seeds','minecraft:carrot','minecraft:potato'])
+  event.add('dut_create:switchable_platform', switchable_platform_list)
+  event.remove("forge:plates/silver", ["vintageimprovements:silver_sheet"])
+  event.remove("forge:storage_blocks/silver", 'iceandfire:silver_block')
+  event.remove("forge:nuggets/silver", 'iceandfire:silver_nugget')
+  event.remove("forge:ingots/silver", 'iceandfire:silver_ingot')
+  event.remove("forge:plates/zinc", ['createadditon:zinc_sheet', "vintageimprovements:zinc_sheet"])
+  event.remove("forge:storage_blocks/zinc", 'create:zinc_block')
+  event.remove("forge:nuggets/zinc", 'create:zinc_nugget')
+  event.remove("forge:ingots/zinc", 'create:zinc_ingot')
+  event.remove("create:stone_types/asurine", 'create:asurine')
+  event.add("create:stone_types/asurine", ["kubejs:new_asurine"])
+  event.remove("railways:internal/nuggets/zinc_nuggets", ["create:zinc_nugget"])
+  event.add("railways:internal/nuggets/zinc_nuggets", ["kubejs:tin_nugget"])
   //需要显示结构的多方块机器
   event.add('dut_create:multiblock', multiblock_list)
   event.add('dut_create:multiblock_display', multiblock_display_list)
@@ -67,7 +76,7 @@ ServerEvents.tags('item', event => {
   ])
   //
   event.add("dut_create:drawers", [
-    "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "fluiddrawerslegacy:fluiddrawer", "fluiddrawerslegacy:fluiddrawer_2", "fluiddrawerslegacy:fluiddrawer_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_controller","storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
+    "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "fluiddrawerslegacy:fluiddrawer", "fluiddrawerslegacy:fluiddrawer_2", "fluiddrawerslegacy:fluiddrawer_4", "storagedrawers:framed_compacting_drawers_3", "storagedrawers:framed_controller", "storagedrawers:framed_compacting_drawers_2", "storagedrawers:compacting_drawers_3", "storagedrawers:compacting_drawers_2", "storagedrawers:framed_full_drawers_1", "storagedrawers:framed_full_drawers_2", "storagedrawers:framed_full_drawers_4"
   ])
   //网络操作符
   event.add('dut_create:net_operator', ["beyonddimensions:net_manager_inviter", "beyonddimensions:net_member_inviter", "beyonddimensions:net_destroyer", "beyonddimensions:net_gifter"])
@@ -90,7 +99,7 @@ ServerEvents.tags('item', event => {
   //装卸机
   event.add('dut_create:fluid_container', [
     "minecraft:bucket",
-    "createdieselgenerators:canister",
+    "createandesiteabound:fluid_vessel",
     "ad_astra:gas_tank",
     "ad_astra:large_gas_tank",
     "#ad_astra:space_suit_items"
@@ -103,13 +112,13 @@ ServerEvents.tags('item', event => {
   event.add('dut_create:earth_globe', ["ad_astra:earth_globe", "supplementaries:globe", "supplementaries:globe_sepia"])
   //导航仪
   event.add('dut_create:navigate_data', [
-    'kubejs:navigate_data_earth','kubejs:navigate_data_earth_orbit',
-      'kubejs:navigate_data_moon', 'kubejs:navigate_data_moon_orbit', 
-      //'kubejs:navigate_data_mars', 'kubejs:navigate_data_mars_orbit', 
-      //'kubejs:navigate_data_venus', 'kubejs:navigate_data_venus_orbit', 
-      //'kubejs:navigate_data_mercury', 'kubejs:navigate_data_mercury_orbit', 
-      //'kubejs:navigate_data_glacio', 'kubejs:navigate_data_glacio_orbit', 
-      'kubejs:navigate_data_slimeria', 'kubejs:navigate_data_slimeria_orbit'
+    'kubejs:navigate_data_earth', 'kubejs:navigate_data_earth_orbit',
+    'kubejs:navigate_data_moon', 'kubejs:navigate_data_moon_orbit',
+    //'kubejs:navigate_data_mars', 'kubejs:navigate_data_mars_orbit', 
+    //'kubejs:navigate_data_venus', 'kubejs:navigate_data_venus_orbit', 
+    //'kubejs:navigate_data_mercury', 'kubejs:navigate_data_mercury_orbit', 
+    //'kubejs:navigate_data_glacio', 'kubejs:navigate_data_glacio_orbit', 
+    'kubejs:navigate_data_slimeria', 'kubejs:navigate_data_slimeria_orbit'
   ])
   event.add('dut_create:data_disk', ["kubejs:brass_hard_disk", "kubejs:aluminum_hard_disk", "kubejs:tin_hard_disk"])
   event.add('dut_create:no_enchantment', ["#dut_create:battery", "kubejs:carrier_rocket", "kubejs:scanner", "kubejs:space_elevator", "#dut_create:data_disk"])
@@ -181,6 +190,14 @@ ServerEvents.tags('item', event => {
   event.add('forge:ingots/refined_radiance', ['create:refined_radiance', 'create_dd:refined_radiance'])
   event.add('forge:ingots/shadow_steel', ['create:shadow_steel', 'create_dd:shadow_steel'])
 
+  event.add('forge:plates', [
+    'kubejs:tin_sheet',
+    'kubejs:industrial_iron_sheet',
+    'kubejs:aluminum_sheet',
+    'kubejs:silicon_plate', 
+    'kubejs:polymer_sheet', 
+    'kubejs:duraplas_sheet'
+  ])
   event.add('forge:nuggets/industrial_iron', ['kubejs:industrial_iron_nugget'])
   event.add('forge:ingots/industrial_iron', ['kubejs:industrial_iron_ingot'])
   event.add('forge:plates/industrial_iron', ['kubejs:industrial_iron_sheet'])
@@ -211,12 +228,14 @@ ServerEvents.tags('item', event => {
   event.add('forge:fermentable', ['minecraft:beetroot', 'minecraft:sugar', 'farmersdelight:rice', 'createaddition:biomass', 'minecraft:sweet_berries'])
 })
 ServerEvents.tags('block', event => {
-  
+
   //需要显示结构的多方块机器
+
+  event.add('dut_create:industrial_platform', switchable_platform_list.concat(["kubejs:emergency_industrial_platform_space"]))
   event.add('dut_create:multiblock_display', multiblock_display_list)
 
   event.add('dut_create:hydropress_piston', ["create:railway_casing", "design_decor:industrial_plating_block"])
-  
+
   event.add('dut_create:uncasingable', ["create:brass_encased_shaft", "create:andesite_encased_shaft"])
   event.add('dut_create:encasable', ['create:shaft', 'create:belt'])
   //抽屉
@@ -270,7 +289,7 @@ ServerEvents.tags('block', event => {
     'storagedrawers:framed_compacting_drawers_2', 'storagedrawers:framed_compacting_drawers_3', 'storagedrawers:framed_controller', 'storagedrawers:framed_trim', 'storagedrawers:framed_framed_controller_io', 'storagedrawers:framed_full_drawers_1', 'storagedrawers:framed_full_drawers_2', 'storagedrawers:framed_full_drawers_4',
   ])
   //扳手
-  event.add('create:wrench_pickup', ["#dut_create:drawers1", "#dut_create:minecrafts", "#dut_create:supplemantaries", "enchantinginfuser:enchanting_infuser", "enchantinginfuser:advanced_enchanting_infuser", 'storagedrawers:controller', '#storagedrawers:trim', "ad_astra:desh_fluid_pipe", "ad_astra:fluid_pipe_duct", "ad_astra:cable_duct", "ad_astra:ostrum_fluid_pipe", "ad_astra:oxygen_sensor", "ad_astra:oxygen_distributor", "ad_astra:coal_generator", "ad_astra:desh_cable", "ad_astra:steel_cable", "ad_astra:cryo_freezer", "ad_astra:gravity_normalizer", "design_decor:iron_railing", "design_decor:zinc_railing", "design_decor:copper_railing", "design_decor:brass_railing", "design_decor:copper_lamp", "design_decor:brass_lamp", "design_decor:zinc_lamp", "design_decor:metal_support", "design_decor:diagonal_metal_support", "design_decor:stepped_lever", "design_decor:breaker_switch", "design_decor:copper_light", "design_decor:brass_light", "design_decor:zinc_light", "kubejs:condenser", "kubejs:hydropress", "kubejs:alloy_furnace", "kubejs:huge_crusher", "kubejs:shaft_furnace", "kubejs:infinity_fetching_pool", "kubejs:emergency_industrial_platform", "kubejs:culture_bin", "kubejs:carbon_electrode", "kubejs:electrolytic_cell", "kubejs:steam_generator", 'kubejs:battery_slot', "kubejs:assemblying_machine", "farmersdelight:basket", "create:schematicannon", "create:schematic_table", "create_things_and_misc:sprinkler", "create_things_and_misc:sprinkleron", "beyonddimensions:net_interface","storagedrawers:framed_trim","storagedrawers:framed_controller","storagedrawers:framed_controller_io",'createoreexcavation:sample_drill'
+  event.add('create:wrench_pickup', ["#dut_create:drawers1", "#dut_create:minecrafts", "#dut_create:supplemantaries", "enchantinginfuser:enchanting_infuser", "enchantinginfuser:advanced_enchanting_infuser", 'storagedrawers:controller', '#storagedrawers:trim', "ad_astra:desh_fluid_pipe", "ad_astra:fluid_pipe_duct", "ad_astra:cable_duct", "ad_astra:ostrum_fluid_pipe", "ad_astra:oxygen_sensor", "ad_astra:oxygen_distributor", "ad_astra:coal_generator", "ad_astra:desh_cable", "ad_astra:steel_cable", "ad_astra:cryo_freezer", "ad_astra:gravity_normalizer", "design_decor:iron_railing", "design_decor:zinc_railing", "design_decor:copper_railing", "design_decor:brass_railing", "design_decor:copper_lamp", "design_decor:brass_lamp", "design_decor:zinc_lamp", "design_decor:metal_support", "design_decor:diagonal_metal_support", "design_decor:stepped_lever", "design_decor:breaker_switch", "design_decor:copper_light", "design_decor:brass_light", "design_decor:zinc_light", "kubejs:condenser", "kubejs:hydropress", "kubejs:alloy_furnace", "kubejs:huge_crusher", "kubejs:shaft_furnace", "kubejs:infinity_fetching_pool", "kubejs:emergency_industrial_platform", "kubejs:culture_bin", "kubejs:carbon_electrode", "kubejs:electrolytic_cell", "kubejs:steam_generator", 'kubejs:battery_slot', "kubejs:assemblying_machine", "farmersdelight:basket", "create:schematicannon", "create:schematic_table", "create_things_and_misc:sprinkler", "create_things_and_misc:sprinkleron", "beyonddimensions:net_interface", "storagedrawers:framed_trim", "storagedrawers:framed_controller", "storagedrawers:framed_controller_io", 'createoreexcavation:sample_drill'
   ])
 
 })
@@ -289,7 +308,7 @@ ServerEvents.tags('block', event => {
   //
 })
 //多方块机器
-ServerEvents.tags('block', event => { 
+ServerEvents.tags('block', event => {
   event.add('dut_create:container_fluid', [
     "create:fluid_tank",
     "create_connected:fluid_vessel",
@@ -422,7 +441,7 @@ ServerEvents.tags("item", e => {
 })
 //饰品
 ServerEvents.tags("item", event => {
-  event.add("curios:necklace", ["beyonddimensions:net_feeder_item",'beyonddimensions:net_restocker_item'])
-  event.add("curios:belt", ['create_sa:creative_filling_tank',"beyonddimensions:net_feeder_item",'beyonddimensions:net_restocker_item'])
-  event.add("curios:hands", ["beyonddimensions:net_feeder_item",'beyonddimensions:net_restocker_item'])
+  event.add("curios:necklace", ["beyonddimensions:net_feeder_item", 'beyonddimensions:net_restocker_item'])
+  event.add("curios:belt", ['create_sa:creative_filling_tank', "beyonddimensions:net_feeder_item", 'beyonddimensions:net_restocker_item'])
+  event.add("curios:hands", ["beyonddimensions:net_feeder_item", 'beyonddimensions:net_restocker_item'])
 })

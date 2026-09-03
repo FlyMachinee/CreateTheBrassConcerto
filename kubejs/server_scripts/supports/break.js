@@ -1,4 +1,4 @@
-// priority: 16384
+// priority: 32768
 //代码来自忆然
 let $ClassFilter = Java.loadClass("dev.latvian.mods.kubejs.util.ClassFilter")
 let $ServerScriptManager = Java.loadClass("dev.latvian.mods.kubejs.server.ServerScriptManager")

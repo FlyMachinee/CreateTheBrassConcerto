@@ -44,7 +44,7 @@
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_1F6E2643FD4019A4.title}"
 			x: 0.0d
-			y: -4.0d
+			y: -5.0d
 		}
 		{
 			disable_toast: true
@@ -158,26 +158,7 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_402E27B446213701.title}"
-			x: 1.0d
-			y: -5.0d
-		}
-		{
-			disable_toast: true
-			icon: "sophisticatedbackpacks:netherite_backpack"
-			id: "6945970170027D40"
-			rewards: [{
-				id: "2009F88E9E393154"
-				item: "sophisticatedbackpacks:netherite_backpack"
-				type: "item"
-			}]
-			tasks: [{
-				count: 2L
-				id: "1B0650F7BC009C12"
-				item: "kubejs:coin_emerald"
-				type: "item"
-			}]
-			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_6945970170027D40.title}"
-			x: 2.0d
+			x: -1.0d
 			y: -5.0d
 		}
 		{
@@ -704,8 +685,8 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_250CD20C0C8CA03F.title}"
-			x: 5.0d
-			y: -1.5d
+			x: 6.0d
+			y: 2.5d
 		}
 		{
 			disable_toast: true
@@ -946,7 +927,7 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_7B7B718155FDC618.title}"
-			x: 0.0d
+			x: 1.0d
 			y: -5.0d
 		}
 		{
@@ -1168,8 +1149,54 @@
 				type: "item"
 			}]
 			title: "{ftbquests.chapter_0427CC1C17E74AE4.quest_2565ADC8A615E2CD.title}"
-			x: -1.0d
+			x: 2.0d
 			y: -5.0d
+		}
+		{
+			disable_toast: true
+			icon: "minecraft:egg"
+			id: "0B55005132EFA863"
+			rewards: [{
+				count: 16
+				id: "1465EAAE9A2DE88D"
+				item: "minecraft:egg"
+				type: "item"
+			}]
+			tasks: [{
+				id: "40C5731C7F1708F5"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			title: "鸡蛋"
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			description: [""]
+			disable_toast: true
+			icon: "kubejs:blueprint_builder"
+			id: "0F1EECCAA0322DB8"
+			rewards: [{
+				id: "508CB045F99CF011"
+				item: {
+					Count: 1
+					id: "createandesiteabound:simple_schematic"
+					tag: {
+						File: "CBC/schematic.blueprint_builder.nbt"
+						Item: "kubejs:blueprint_builder"
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				icon: "kubejs:coin_gold"
+				id: "2B5D1658753648B1"
+				item: "kubejs:coin_gold"
+				type: "item"
+			}]
+			title: "工程集合-蓝图构筑站"
+			x: 0.0d
+			y: -4.0d
 		}
 	]
 	title: "{ftbquests.chapter_0427CC1C17E74AE4.title}"

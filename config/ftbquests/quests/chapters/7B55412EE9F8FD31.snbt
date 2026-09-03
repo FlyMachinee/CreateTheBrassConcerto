@@ -178,13 +178,14 @@
 		}
 		{
 			description: ["{ftbquests.chapter_7B55412EE9F8FD31.quest_13A1E51E3BF70F58.desc_01}"]
+			icon: "kubejs:nitrogen_fertilizer_bucket"
 			id: "13A1E51E3BF70F58"
 			subtitle: "{ftbquests.chapter_7B55412EE9F8FD31.quest_13A1E51E3BF70F58.subtitle}"
 			tasks: [{
-				id: "0EB8E4A15F0CE354"
-				item: "kubejs:nitrogen_fertilizer_bucket"
-				type: "item"
+				id: "23ECFF0263F3BD6A"
+				type: "checkmark"
 			}]
+			title: "农业革命"
 			x: -1.0d
 			y: -3.5d
 		}

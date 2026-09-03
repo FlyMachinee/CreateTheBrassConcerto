@@ -1,33 +1,29 @@
 const Platform1 = {
-    "type": "custommachinery:command",
+    "type": "custommachinery:sound",
     "phase": "crafting_tickable",
-    "command": "/playsound minecraft:block.stone.place block @a ~ ~ ~ 0.5",
-    "log": false,
-    "chance": 0.25,
-    "permissionlevel": 5
+    "sound": "minecraft:block.stone.place",
+    "pos": [0, 0, 0],
+    "volume": 0.5,
+    "chance": 0.25
 }
 const Platform2 = {
-    "type": "custommachinery:command",
-    "phase": "crafting_tickable",
-    "command": "/particle minecraft:snowflake ~ ~1 ~ 0.3 1.5 0.3 0 5",
-    "log": false,
-    "permissionlevel": 5
-}
+        "type": "custommachinery:particle",
+        "phase": "crafting_tickable",
+        "particle": "minecraft:snowflake",
+        "pos": [0, 1, 0],
+        "delta": [0.3, 1.5, 0.3],
+        "speed": 0,
+        "count": 5
+    }
 const Platform3 = {
-    "type": "custommachinery:command",
-    "phase": "crafting_tickable",
-    "command": "/particle minecraft:cloud ~ ~1 ~ 0.55 1 0.55 0 4",
-    "log": false,
-    "permissionlevel": 5
-}
-const PlatformCommon = {
-    "type": "custommachinery:command",
-    "phase": "crafting_tickable",
-    "command": "/function dut:platform/check_particle",
-    "log": false,
-    "chance": 0.05,
-    "permissionlevel": 5
-}
+        "type": "custommachinery:particle",
+        "phase": "crafting_tickable",
+        "particle": "minecraft:snowflake",
+        "pos": [0, 1, 0],
+        "delta": [0.55, 1, 0.55],
+        "speed": 0,
+        "count": 4
+    }
 const PlatformFill0 = {
     "type": "custommachinery:command",
     "phase": "ending",
@@ -77,10 +73,8 @@ ServerEvents.recipes(event => {
             "hidden": true,
             "priority": 0,
             "requirements": [
-                PlatformHeight,
-                PlatformCommon
             ]
-        }).id("dut_create:" + platformMachineId.split(":")[1] + "/common")
+        }).id("dut_create:" + platformMachineId.split(":")[1] + "/empty")
         event.custom({
             "type": "custommachinery:custom_machine",
             "machine": platformMachineId,
@@ -97,7 +91,6 @@ ServerEvents.recipes(event => {
                     "log": false,
                     "permissionlevel": 5
                 },
-                PlatformCommon,
                 Platform1,
                 Platform2,
                 Platform3,
@@ -120,7 +113,6 @@ ServerEvents.recipes(event => {
             "requirements": [
                 PlatformHeight,
                 PlatformFill4,
-                PlatformCommon,
                 Platform1,
                 Platform2,
                 Platform3,
@@ -150,7 +142,6 @@ ServerEvents.recipes(event => {
             "requirements": [
                 PlatformHeight,
                 PlatformFill3,
-                PlatformCommon,
                 Platform1,
                 Platform2,
                 Platform3,
@@ -179,7 +170,6 @@ ServerEvents.recipes(event => {
             "priority": 3,
             "requirements": [
                 PlatformHeight,
-                PlatformCommon,
                 PlatformFill2,
                 Platform1,
                 Platform2,
@@ -209,7 +199,6 @@ ServerEvents.recipes(event => {
             "priority": 2,
             "requirements": [
                 PlatformHeight,
-                PlatformCommon,
                 PlatformFill1,
                 Platform1,
                 Platform2,
@@ -239,17 +228,16 @@ ServerEvents.recipes(event => {
             "priority": 1,
             "requirements": [
                 PlatformHeight,
-                PlatformCommon,
                 PlatformFill0,
                 Platform1,
                 Platform2,
+                Platform3,
                 {
                     "type": "custommachinery:item",
                     "mode": "input",
                     "item": "minecraft:stone",
                     "amount": 1
                 },
-                Platform3,
                 {
                     "type": "custommachinery:fluid",
                     "mode": "output",
@@ -268,7 +256,6 @@ ServerEvents.recipes(event => {
             "priority": 1,
             "requirements": [
                 PlatformHeight,
-                PlatformCommon,
                 PlatformFill0,
                 {
                     "type": "custommachinery:drop",

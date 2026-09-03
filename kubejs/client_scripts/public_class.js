@@ -67,3 +67,6 @@ const getSuperRenderTypeBuffer = (() => {
 const $Screen = Java.loadClass('net.minecraft.client.gui.screens.Screen');
 const $AABBOutline = Java.loadClass('com.simibubi.create.foundation.outliner.AABBOutline');
 const $AllSpecialTextures = Java.loadClass('com.simibubi.create.AllSpecialTextures');
+const $BlockStateProperties = Java.loadClass("net.minecraft.world.level.block.state.properties.BlockStateProperties");
+const $CreateClient = Java.loadClass("com.simibubi.create.CreateClient");
+const $HashMap = Java.loadClass("java.util.HashMap");

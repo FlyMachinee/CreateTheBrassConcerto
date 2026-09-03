@@ -34,7 +34,7 @@ Ponder.registry((event) => {
         scene.addKeyframe();
         scene.text(40, "你只需要在它上方放置含有4B水的容器...");
         scene.world.showSection([4,2,4],Direction.down)
-        scene.world.setBlock([4,2,4],"createdieselgenerators:canister",false)
+        scene.world.setBlock([4,2,4],"createandesiteabound:fluid_vessel",false)
         scene.overlay.showOutline("green", {}, [4, 2, 4], 40);
         scene.showControls(15, [4, 3, 4], "down").withItem("minecraft:water_bucket")
         scene.idle(60);

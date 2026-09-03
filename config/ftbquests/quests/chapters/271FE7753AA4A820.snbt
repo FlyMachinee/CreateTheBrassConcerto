@@ -120,6 +120,7 @@
 		{
 			dependencies: ["37DE1583F992DD4B"]
 			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_1D258DC971D88A17.desc_01}"]
+			icon: "minecraft:milk_bucket"
 			id: "1D258DC971D88A17"
 			rewards: [{
 				id: "73EA7F220FD9D021"
@@ -251,9 +252,8 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "4E9B0E65D0C05B62"
-				item: "minecraft:milk_bucket"
-				type: "item"
+				id: "0FD184BCEB653F1B"
+				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_271FE7753AA4A820.quest_1D258DC971D88A17.title}"
 			x: 7.5d
@@ -306,24 +306,26 @@
 		{
 			dependencies: ["62A2FDFE9317F04D"]
 			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_21E9D016536E806A.desc_01}"]
+			icon: "kubejs:industrial_iron_bucket"
 			id: "21E9D016536E806A"
 			tasks: [{
-				id: "01686576AE60912A"
-				item: "kubejs:industrial_iron_bucket"
-				type: "item"
+				id: "1A24210064EFACCC"
+				type: "checkmark"
 			}]
+			title: "工业铁"
 			x: 6.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["62A2FDFE9317F04D"]
 			description: ["{ftbquests.chapter_271FE7753AA4A820.quest_4F6B8069A9E3D02B.desc_01}"]
+			icon: "kubejs:ammonia_bucket"
 			id: "4F6B8069A9E3D02B"
 			tasks: [{
-				id: "1BBCB469509397A9"
-				item: "kubejs:ammonia_bucket"
-				type: "item"
+				id: "0ABC22E1BA071677"
+				type: "checkmark"
 			}]
+			title: "氨气"
 			x: 9.0d
 			y: 1.5d
 		}

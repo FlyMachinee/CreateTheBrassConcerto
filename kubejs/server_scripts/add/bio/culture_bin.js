@@ -21,15 +21,6 @@ ServerEvents.recipes(event => {
     "machine": "dut:culture_bin",
     "time": 10,
     "requirements": [
-      CultureBinItemInput("minecraft:ice", 1),
-      CultureBinFluid("minecraft:water", "output", 1000),
-    ]
-  }).id("dut_create:culture_bin/ice")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:culture_bin",
-    "time": 10,
-    "requirements": [
       CultureBinItemInput("minecraft:packed_ice", 1),
       CultureBinFluid("minecraft:water", "output", 9000)
     ]
@@ -411,14 +402,13 @@ ServerEvents.recipes(event => {
     "time": 60,
     "requirements": [
       CultureBinBiome("ad_astra:orbit"),
-      CultureBinFluid("kubejs:oxygen", "output", 1000),
-      CultureBinItemInput("minecraft:sugar", 4),
+      CultureBinFluid("kubejs:polymer", "output", 250),
+      CultureBinItemInput("minecraft:sugar", 12),
       CultureBinItemInput("kubejs:diorite_alloy", 4),
       CultureBinItemInput("kubejs:mycetozoan", 1),
-      CultureBinItemChance("kubejs:mycetozoan", 1, 1),
-      CultureBinItemChance("create:andesite_alloy", 4, 1)
+      CultureBinItemChance("kubejs:mycetozoan", 1, 1)
     ]
-  }).id("dut_create:culture_bin/mycetozoan/oxygen")
+  }).id("dut_create:culture_bin/mycetozoan/polymer")
   //谐振原虫
   event.custom({
     "type": "custommachinery:custom_machine",

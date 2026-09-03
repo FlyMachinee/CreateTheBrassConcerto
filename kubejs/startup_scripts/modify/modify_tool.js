@@ -1,4 +1,7 @@
 ItemEvents.modification(event => {
+    event.modify('iceandfire:stymphalian_skull', item => {
+        item.setMaxStackSize(16)
+    })
     event.modify('create_sa:portable_drill', item => {
         item.setTier(i=>{
             i.setLevel(3)

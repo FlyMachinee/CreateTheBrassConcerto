@@ -143,6 +143,15 @@ ServerEvents.recipes(event => {
         ElectrolyzeFluidOutput2("kubejs:oxygen", 2000)
     ], [], 20, "water")
 
+    ElectrolyzeCommonRecipe(720, 0, 0, [
+        ElectrolyzeItem("input", "minecraft:packed_ice", 4),
+        ElectrolyzeFluidOutput1("kubejs:hydrogen", 8000)
+    ], [], 20, "hydrogen")
+    ElectrolyzeCommonRecipe(720, 0, 0, [
+        ElectrolyzeItem("input", "minecraft:packed_ice", 4),
+        ElectrolyzeFluidOutput2("kubejs:oxygen", 4000)
+    ], [], 20, "oxygen")
+
     ElectrolyzeCommonRecipe(1440, 1, 0, [
         ElectrolyzeFluidInput1("kubejs:saline_water", 3000),
         ElectrolyzeFluidOutput3("kubejs:caustic_soda", 3000)
@@ -186,7 +195,7 @@ ServerEvents.recipes(event => {
     ], [], 60, "aluminum_slag")
 
     ElectrolyzeCommonRecipe(2880, 0, 0, [
-        ElectrolyzeBiome("ad_astra:orbit"),
+        ElectrolyzeDimension("ad_astra:earth_orbit"),
         ElectrolyzeItem("input", "kubejs:granite_alloy", 24),
         ElectrolyzeItem("output", "kubejs:diorite_alloy", 24),
         ElectrolyzeFluidOutput3("kubejs:nitrogen", 1000)

@@ -410,26 +410,6 @@ ServerEvents.recipes(event => {
     },
     "result": "minecraft:coarse_dirt"
   }).id("dut_create:packed_mud_dirt")
-  event.custom({
-    "type": "minecraft:smelting",
-    "category": "misc",
-    "cookingtime": 200,
-    "experience": 0.7,
-    "ingredient": {
-      "item": "kubejs:incomplete_disposable_battery"
-    },
-    "result": "minecraft:copper_ingot"
-  }).id("dut_create:metal_recycle/copper")
-  event.custom({
-    "type": "minecraft:smelting",
-    "category": "misc",
-    "cookingtime": 200,
-    "experience": 0.7,
-    "ingredient": {
-      "item": "kubejs:incomplete_chargeable_battery"
-    },
-    "result": "create:brass_ingot"
-  }).id("dut_create:metal_recycle/brass")
   //甜菜制糖
   event.custom({
     "type": "create:compacting",

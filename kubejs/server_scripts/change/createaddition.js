@@ -141,6 +141,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'createaddition:crafting/capacitor_1' })
   event.remove({ id: 'createaddition:crafting/capacitor_2' })
   //生物质高速产出
+  event.remove({ id: 'createaddition:mixing/biomass_from_sticks' })
   event.remove({ id: 'createaddition:mixing/biomass_from_honeycomb' })
   event.remove({ id: 'createaddition:mixing/biomass_from_saplings' })
   event.remove({ id: 'createaddition:mixing/biomass_from_crops' })

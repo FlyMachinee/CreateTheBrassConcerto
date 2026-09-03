@@ -1,12 +1,18 @@
 // priority: 512
 ServerEvents.loaded(event => {
-    event.server.runCommandSilent(`/execute in ad_astra:earth_orbit run forceload add 0 0 0 0`)
-    event.server.runCommandSilent(`/execute in ad_astra:moon_orbit run forceload add 0 0 0 0`)
-    event.server.runCommandSilent(`/execute in dut:slimeria_orbit run forceload add 0 0 0 0`)
+    let s = event.server
+    let sdata = s.persistentData
+    orCreateData(sdata, "AllDimensionSpawnLocked", false)
+    orCreateData(sdata, "LockedSpawnDimension", {})
+    orCreateData(sdata, "EntityNotAllowed", {})
 
-    event.server.runCommandSilent(`/execute in ad_astra:earth_orbit run forceload remove 0 0 0 0`)
-    event.server.runCommandSilent(`/execute in ad_astra:moon_orbit run forceload remove 0 0 0 0`)
-    event.server.runCommandSilent(`/execute in dut:slimeria_orbit run forceload remove 0 0 0 0`)
+    s.runCommandSilent(`/execute in ad_astra:earth_orbit run forceload add 0 0 0 0`)
+    s.runCommandSilent(`/execute in ad_astra:moon_orbit run forceload add 0 0 0 0`)
+    s.runCommandSilent(`/execute in dut:slimeria_orbit run forceload add 0 0 0 0`)
+
+    s.runCommandSilent(`/execute in ad_astra:earth_orbit run forceload remove 0 0 0 0`)
+    s.runCommandSilent(`/execute in ad_astra:moon_orbit run forceload remove 0 0 0 0`)
+    s.runCommandSilent(`/execute in dut:slimeria_orbit run forceload remove 0 0 0 0`)
 })
 PlayerEvents.loggedIn(event => {
     let p = event.player

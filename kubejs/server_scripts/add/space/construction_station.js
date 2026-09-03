@@ -94,7 +94,7 @@ ServerEvents.recipes(event => {
         "nbt": '{Damage:1024}'
       }
     ],
-  }).id("dut_create:construction_station/disk_translate/tin")
+  }).id("dut_create:construction_station/translate_disk/tin")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
         "nbt": '{Damage:1024}'
       }
     ],
-  }).id("dut_create:construction_station/disk_translate/aluminum")
+  }).id("dut_create:construction_station/translate_disk/aluminum")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -140,7 +140,7 @@ ServerEvents.recipes(event => {
         "nbt": '{Damage:1024}'
       }
     ],
-  }).id("dut_create:construction_station/disk_translate/brass")
+  }).id("dut_create:construction_station/translate_disk/brass")
 
   event.custom({
     "type": "custommachinery:custom_machine",
@@ -160,7 +160,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 1),
       ConstructionStationItemChance('iceandfire:dragonegg_red', 1, 0.5)
     ],
-  }).id("dut_create:construction_station/fire_dragonegg_nether")
+  }).id("dut_create:construction_station/fire_dragonegg/nether")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -313,7 +313,7 @@ ServerEvents.recipes(event => {
       ConstructionStationFluid("kubejs:slime_colloid", 6000),
       ConstructionStationItem("kubejs:magenta_circuit_board", 64, "output")
     ],
-  }).id("dut_create:construction_station/magenta_circuit_board")
+  }).id("dut_create:construction_station/circuit_board/magenta")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -330,7 +330,7 @@ ServerEvents.recipes(event => {
       ConstructionStationFluid("kubejs:muriatic_acid", 4000),
       ConstructionStationItem("kubejs:lime_circuit_board", 64, "output")
     ],
-  }).id("dut_create:construction_station/lime_circuit_board")
+  }).id("dut_create:construction_station/circuit_board/lime")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -366,7 +366,7 @@ ServerEvents.recipes(event => {
       ConstructionStationFluid("kubejs:brass", 48 * IngotFluid),
       ConstructionStationItem("create:precision_mechanism", 16, "output")
     ],
-  }).id("dut_create:construction_station/precision_mechanism_set")
+  }).id("dut_create:construction_station/precision_mechanism/set")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -508,23 +508,6 @@ ServerEvents.recipes(event => {
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
-    "time": 180,
-    "error": true,
-    "priority": 1,
-    "requirements": [
-      ConstructionStationStructure,
-      ConstructionStationStress,
-      ConstructionStationEnergy(),
-      ConstructionStationItem("kubejs:differential", 4, "input"),
-      ConstructionStationItem("kubejs:productivity_module", 12, "input"),
-      ConstructionStationItem("kubejs:cardan_joint", 12, "input"),
-      ConstructionStationFluid("kubejs:slime_colloid", 3000),
-      ConstructionStationItem("kubejs:rocket_gyro", 6, "output")
-    ],
-  }).id("dut_create:construction_station/rocket_gyro")
-  event.custom({
-    "type": "custommachinery:custom_machine",
-    "machine": "dut:construction_station",
     "time": 80,
     "error": true,
     "priority": 1,
@@ -536,7 +519,7 @@ ServerEvents.recipes(event => {
       ConstructionStationFluid("kubejs:desh", 3600),
       ConstructionStationItem("kubejs:desh_parts_box", 16, "output")
     ],
-  }).id("dut_create:construction_station/desh_parts_box")
+  }).id("dut_create:construction_station/parts_box/desh")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",
@@ -553,7 +536,7 @@ ServerEvents.recipes(event => {
       ConstructionStationItem("kubejs:fiber_fabric", 16, "input"),
       ConstructionStationItem("kubejs:parts_box", 24, "output")
     ],
-  }).id("dut_create:construction_station/parts_box_tungsten")
+  }).id("dut_create:construction_station/parts_box/tungsten")
   event.custom({
     "type": "custommachinery:custom_machine",
     "machine": "dut:construction_station",

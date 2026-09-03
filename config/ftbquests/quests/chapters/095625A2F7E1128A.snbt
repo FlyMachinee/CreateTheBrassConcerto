@@ -53,8 +53,9 @@
 			id: "23FCF6DA7824526A"
 			size: 1.5d
 			tasks: [{
-				id: "6EB72D5FA632E2B9"
-				item: "createdieselgenerators:canister"
+				id: "649E9042FEFF6927"
+				item: "createandesiteabound:fluid_vessel"
+				match_nbt: false
 				type: "item"
 			}]
 			x: 8.5d
@@ -88,12 +89,13 @@
 		{
 			dependencies: ["5495F2B5448CFC5B"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_401F17194C1C062C.desc_01}"]
+			icon: "kubejs:caustic_soda_bucket"
 			id: "401F17194C1C062C"
 			tasks: [{
-				id: "460057353B7EC8FE"
-				item: "kubejs:caustic_soda_bucket"
-				type: "item"
+				id: "2C99FA655D51FDFE"
+				type: "checkmark"
 			}]
+			title: "氢氧化钠"
 			x: 5.5d
 			y: 6.5d
 		}
@@ -184,6 +186,7 @@
 				"76CE21A8B2955AD3"
 			]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.desc_01}"]
+			icon: "kubejs:lube_oil_bucket"
 			id: "7E2194D1F164C71A"
 			rewards: [
 				{
@@ -202,9 +205,8 @@
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
-				id: "7AD554E817C484BA"
-				item: "kubejs:lube_oil_bucket"
-				type: "item"
+				id: "4BEF4C71B6CF8DEC"
+				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_7E2194D1F164C71A.title}"
 			x: -0.5d
@@ -341,24 +343,26 @@
 		{
 			dependencies: ["63F63C5EB6A116A0"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_33C1C18E2D0D3825.desc_01}"]
+			icon: "kubejs:cryogen_bucket"
 			id: "33C1C18E2D0D3825"
 			tasks: [{
-				id: "2319242070FEE33A"
-				item: "kubejs:cryogen_bucket"
-				type: "item"
+				id: "78BD509FF5162664"
+				type: "checkmark"
 			}]
+			title: "冷冻剂"
 			x: 6.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["4A04F41BC7C33EBF"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_368A009A98EDA1EE.desc_01}"]
+			icon: "kubejs:nitrogen_bucket"
 			id: "368A009A98EDA1EE"
 			tasks: [{
-				id: "3AFDFD2D842F1F9E"
-				item: "kubejs:nitrogen_bucket"
-				type: "item"
+				id: "3BDEAEA5522D4BB4"
+				type: "checkmark"
 			}]
+			title: "氮气"
 			x: 7.0d
 			y: 2.5d
 		}
@@ -368,37 +372,40 @@
 				"78E8AD96D10D37D0"
 			]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_7A8EB5759D701AD3.desc_01}"]
+			icon: "kubejs:refined_oil_bucket"
 			id: "7A8EB5759D701AD3"
 			tasks: [{
-				id: "7721BEB85ADD7F79"
-				item: "kubejs:refined_oil_bucket"
-				type: "item"
+				id: "05010AC1E5F875E9"
+				type: "checkmark"
 			}]
+			title: "奇异石油"
 			x: 4.0d
 			y: 10.0d
 		}
 		{
 			dependencies: ["3D6E6E326398C5B6"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_559B386DA7731C89.desc_01}"]
+			icon: "kubejs:nitrogen_fertilizer_bucket"
 			id: "559B386DA7731C89"
 			shape: "hexagon"
 			tasks: [{
-				id: "1E26E393CBA04221"
-				item: "kubejs:nitrogen_fertilizer_bucket"
-				type: "item"
+				id: "712CBE66A883EE73"
+				type: "checkmark"
 			}]
+			title: "氮肥"
 			x: 9.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["401F17194C1C062C"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_78E8AD96D10D37D0.desc_01}"]
+			icon: "kubejs:drilling_fluid_bucket"
 			id: "78E8AD96D10D37D0"
 			tasks: [{
-				id: "4B9BE0C720BAC68D"
-				item: "kubejs:drilling_fluid_bucket"
-				type: "item"
+				id: "0555E2C7F13A5B4C"
+				type: "checkmark"
 			}]
+			title: "复合钻井液"
 			x: 5.5d
 			y: 10.0d
 		}
@@ -581,6 +588,7 @@
 				"{ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_01}"
 				"{ftbquests.chapter_095625A2F7E1128A.quest_1186909E719A2320.desc_02.rich_02}"
 			]
+			icon: "kubejs:ethylene_bucket"
 			id: "1186909E719A2320"
 			rewards: [{
 				id: "0F544ECA43C854C8"
@@ -588,35 +596,36 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "478D4143278C7D61"
-				item: "kubejs:ethylene_bucket"
-				type: "item"
+				id: "202750A2504C4CE5"
+				type: "checkmark"
 			}]
+			title: "乙烯"
 			x: -5.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["497C1131A3DF9662"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0EAAA32F7A3FC7E7.desc_01}"]
+			icon: "vintageimprovements:sulfuric_acid_bucket"
 			id: "0EAAA32F7A3FC7E7"
 			tasks: [{
-				id: "3010F5ED1FF7CE93"
-				item: "vintageimprovements:sulfuric_acid_bucket"
-				type: "item"
+				id: "580EBCF1304018C0"
+				type: "checkmark"
 			}]
+			title: "硫酸"
 			x: -5.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["33B5D92383569018"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.desc_01}"]
+			icon: "createdieselgenerators:crude_oil_bucket"
 			id: "0AD1428EF423B9FF"
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
-				id: "4B324806EECF9C51"
-				item: "createdieselgenerators:crude_oil_bucket"
-				type: "item"
+				id: "7B0B88B19D74B36D"
+				type: "checkmark"
 			}]
 			title: "{ftbquests.chapter_095625A2F7E1128A.quest_0AD1428EF423B9FF.title}"
 			x: -2.0d
@@ -628,13 +637,14 @@
 				"3070A92AD6E4B7FD"
 			]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_26325D9A9EDB84F4.desc_01}"]
+			icon: "kubejs:natural_gas_bucket"
 			id: "26325D9A9EDB84F4"
 			shape: "hexagon"
 			tasks: [{
-				id: "762282782CDAD0C8"
-				item: "kubejs:natural_gas_bucket"
-				type: "item"
+				id: "4BBDD9E66359EA76"
+				type: "checkmark"
 			}]
+			title: "甲烷"
 			x: -5.0d
 			y: 7.0d
 		}
@@ -644,12 +654,13 @@
 				"0AD1428EF423B9FF"
 			]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_36C3A59891538134.desc_01}"]
+			icon: "createdieselgenerators:diesel_bucket"
 			id: "36C3A59891538134"
 			tasks: [{
-				id: "502DDA8CC6246C37"
-				item: "createdieselgenerators:diesel_bucket"
-				type: "item"
+				id: "0F7E9BEE79A305AA"
+				type: "checkmark"
 			}]
+			title: "柴油"
 			x: -2.0d
 			y: 5.0d
 		}
@@ -684,61 +695,66 @@
 		{
 			dependencies: ["0BD2F52F839623A0"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_56336974EAB74B37.desc_01}"]
+			icon: "kubejs:ethylene_bucket"
 			id: "56336974EAB74B37"
 			tasks: [{
-				id: "68E801E742BBED79"
-				item: "kubejs:ethylene_bucket"
-				type: "item"
+				id: "6B440CBD04963B39"
+				type: "checkmark"
 			}]
+			title: "乙烯"
 			x: 7.5d
 			y: 10.0d
 		}
 		{
 			dependencies: ["0BD2F52F839623A0"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_2CF2712E6A65A3D6.desc_01}"]
+			icon: "createdieselgenerators:gasoline_bucket"
 			id: "2CF2712E6A65A3D6"
 			tasks: [{
-				id: "7D8D4A827D361356"
-				item: "createdieselgenerators:gasoline_bucket"
-				type: "item"
+				id: "0EAA877F10C4F033"
+				type: "checkmark"
 			}]
+			title: "汽油"
 			x: 7.5d
 			y: 8.0d
 		}
 		{
 			dependencies: ["0BD2F52F839623A0"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_77D1E17160A3FC61.desc_01}"]
+			icon: "createdieselgenerators:diesel_bucket"
 			id: "77D1E17160A3FC61"
 			tasks: [{
-				id: "086167BDA40F4308"
-				item: "createdieselgenerators:diesel_bucket"
-				type: "item"
+				id: "5FDF1D80C0E6731A"
+				type: "checkmark"
 			}]
+			title: "柴油"
 			x: 9.5d
 			y: 10.0d
 		}
 		{
 			dependencies: ["0BD2F52F839623A0"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_246A98DC83209E94.desc_01}"]
+			icon: "kubejs:lube_oil_bucket"
 			id: "246A98DC83209E94"
 			size: 1.0d
 			tasks: [{
-				id: "16D9A099F311EDDE"
-				item: "kubejs:lube_oil_bucket"
-				type: "item"
+				id: "573130F98B9A5E4D"
+				type: "checkmark"
 			}]
+			title: "润滑油"
 			x: 9.5d
 			y: 8.0d
 		}
 		{
 			dependencies: ["368A009A98EDA1EE"]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_3D6E6E326398C5B6.desc_01}"]
+			icon: "kubejs:ammonia_bucket"
 			id: "3D6E6E326398C5B6"
 			tasks: [{
-				id: "52F700A817DEC7CD"
-				item: "kubejs:ammonia_bucket"
-				type: "item"
+				id: "1E1ABC3F2645B8BB"
+				type: "checkmark"
 			}]
+			title: "氨气"
 			x: 8.0d
 			y: 3.5d
 		}
@@ -748,12 +764,13 @@
 				"368A009A98EDA1EE"
 			]
 			description: ["{ftbquests.chapter_095625A2F7E1128A.quest_42B9F81EA56748F0.desc_01}"]
+			icon: "kubejs:nitric_acid_bucket"
 			id: "42B9F81EA56748F0"
 			tasks: [{
-				id: "52194CD1239DD2C0"
-				item: "kubejs:nitric_acid_bucket"
-				type: "item"
+				id: "5505683C267D51B4"
+				type: "checkmark"
 			}]
+			title: "硝酸"
 			x: 8.0d
 			y: 1.5d
 		}

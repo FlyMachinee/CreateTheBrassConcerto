@@ -88,7 +88,7 @@ ServerEvents.recipes(event => {
 
     CrusherCommon([{ id: "minecraft:gravel", count: 64 }], [{ id: "minecraft:sand", count: 64 }, { id: "minecraft:flint", count: 6 }, { id: "minecraft:clay_ball", count: 4 }], "gravel")
 
-    CrusherCommon([{ id: "#create:stone_types/limestone", count: 64 }], [{ id: "minecraft:calcite", count: 32 }, { id: "minecraft:bone_meal", count: 32 }, { id: "minecraft:clay_ball", count: 8 }], "limestone")
+    CrusherCommon([{ id: "#create:stone_types/limestone", count: 64 }], [{ id: "minecraft:calcite", count: 32 }, { id: "minecraft:clay_ball", count: 32 }], "limestone")
 
     CrusherCommon([{ id: "minecraft:coal", count: 64 }], [{ id: "kubejs:crushed_coal", count: 128 }, { id: "kubejs:graphite", count: 64 }], "coal")
 
